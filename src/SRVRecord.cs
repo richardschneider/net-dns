@@ -56,11 +56,6 @@ namespace Makaretu.Dns
         /// </remarks>
         public string Target { get; set; }
 
-        /// <summary>
-        ///  Minimum TTL field that should be exported with any RR from this zone.
-        /// </summary>
-        public TimeSpan Minimum { get; set; }
-
         /// <inheritdoc />
         protected override void ReadData(DnsReader reader, int length)
         {
