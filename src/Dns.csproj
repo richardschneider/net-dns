@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard14;netstandard2</TargetFrameworks>
+    <AssemblyName>Makaretu.Dns</AssemblyName>
+    <RootNamespace>Makaretu.Dns</RootNamespace>
+    <DocumentationFile>Makaretu.Dns.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    
+    <!-- developer build is always 0.42 -->
+    <AssemblyVersion>0.42</AssemblyVersion>
+    <Version>0.42</Version>
+    
+    <!-- Nuget specs -->
+    <PackageId>Makaretu.Dns</PackageId>
+    <Authors>Richard Schneider</Authors>
+    <Title>DNS Object Model</Title>
+    <Description>DNS data model with serializer/deserializer for the wire format.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <Copyright>© 2018 Richard Schneider</Copyright>
+    <PackageTags>dns</PackageTags>
+    <IncludeSymbols>True</IncludeSymbols>
+    <PackageLicenseUrl>https://github.com/richardschneider/net-dns/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/richardschneider/net-dns</PackageProjectUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard14'">
+    <DefineConstants>NETSTANDARD14</DefineConstants>
+  </PropertyGroup>
+
+</Project>
