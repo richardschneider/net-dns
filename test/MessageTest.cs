@@ -125,5 +125,34 @@ namespace Makaretu.Dns
             Assert.AreEqual(query.Id, response.Id);
             Assert.AreEqual(query.Opcode, response.Opcode);
         }
+
+        [TestMethod]
+        public void Roundtrip()
+        {
+            var expected = new Message
+            {
+                AA = true,
+                QR = true,
+                Id = 1234
+            };
+            expected.Questions.Add(new Question { Name = "emanon.org" });
+            expected.Answers.Add(new ARecord { Name = "emanon.org", Address = IPAddress.Parse("127.0.0.1") });
+            expected.AuthorityRecords.Add(new SOARecord
+            {
+                Name = "emanon.org",
+                PrimaryName = "erehwon",
+                Mailbox = "hostmaster.emanon.org"
+            });
+            expected.AdditionalRecords.Add(new ARecord { Name = "erehwon", Address = IPAddress.Parse("127.0.0.1") });
+            var actual = (Message)new Message().Read(expected.ToByteArray());
+            Assert.AreEqual(expected.AA, actual.AA);
+            Assert.AreEqual(expected.Id, actual.Id);
+            Assert.AreEqual(expected.IsQuery, actual.IsQuery);
+            Assert.AreEqual(expected.IsResponse, actual.IsResponse);
+            Assert.AreEqual(1, actual.Questions.Count);
+            Assert.AreEqual(1, actual.Answers.Count);
+            Assert.AreEqual(1, actual.AuthorityRecords.Count);
+            Assert.AreEqual(1, actual.AdditionalRecords.Count);
+        }
     }
 }
