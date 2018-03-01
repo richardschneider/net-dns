@@ -69,7 +69,6 @@
   <ItemGroup>
     <Content Include="articles\toc.yml" />
     <Content Include="images\docs-latest-green.svg" />
-    <Content Include="images\ipfs-logo.svg" />
     <Content Include="packages.config" />
     <Content Include="template\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="template\styles\main.css" />
@@ -90,8 +89,6 @@
     <Content Include="template\fonts\Lato-Regular.woff2" />
     <Content Include="articles\cancellation.md" />
     <Content Include="articles\async.md" />
-    <Content Include="articles\envvars.md" />
-    <Content Include="articles\repository.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
