@@ -65,7 +65,7 @@ namespace Makaretu.Dns
         {
             using (var ms = new MemoryStream())
             {
-                Write(new DnsWriter(ms));
+                Write(ms);
                 return ms.ToArray();
             }
         }
