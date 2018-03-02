@@ -23,14 +23,14 @@ Published releases are available on [NuGet](https://www.nuget.org/packages/Makar
     
 ## Usage
 
-```
+```csharp
 using Makaretu.Dns
 
 var msg = new Message
 {
-    AA = true,
-    QR = true,
-    Id = 1234
+	AA = true,
+	QR = true,
+	Id = 1234
 };
 msg.Questions.Add(new Question 
 { 
@@ -43,9 +43,9 @@ msg.Answers.Add(new ARecord
 });
 msg.AuthorityRecords.Add(new SOARecord
 {
-    Name = "emanon.org",
-    PrimaryName = "erehwon",
-    Mailbox = "hostmaster.emanon.org"
+	Name = "emanon.org",
+	PrimaryName = "erehwon",
+	Mailbox = "hostmaster.emanon.org"
 });
 msg.AdditionalRecords.Add(new ARecord 
 { 

@@ -1,5 +1,7 @@
 - name: Introduction
   href: intro.md
+- name: Resource Records
+  href: rr
 - name: Class Reference
   href: ../api/Makaretu.Dns.yml
   
