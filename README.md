@@ -4,7 +4,7 @@
 [![travis build](https://travis-ci.org/richardschneider/net-dns.svg?branch=master)](https://travis-ci.org/richardschneider/net-dns)
 [![Coverage Status](https://coveralls.io/repos/richardschneider/net-dns/badge.svg?branch=master&service=github)](https://coveralls.io/github/richardschneider/net-dns?branch=master)
 [![Version](https://img.shields.io/nuget/v/Makaretu.Dns.svg)](https://www.nuget.org/packages/Makaretu.Dns)
-[![docs](https://cdn.rawgit.com/richardschneider/net-dns/master/doc/images/docs-latest-green.svg)](https://richardschneider.github.io/net-dns)
+[![docs](https://cdn.rawgit.com/richardschneider/net-dns/master/doc/images/docs-latest-green.svg)](https://richardschneider.github.io/net-dns/articles/intro.html)
 
 DNS data model with serializer/deserializer for the wire format.
 
@@ -23,7 +23,37 @@ Published releases are available on [NuGet](https://www.nuget.org/packages/Makar
     
 ## Usage
 
-???
+```
+using Makaretu.Dns
+
+var msg = new Message
+{
+    AA = true,
+    QR = true,
+    Id = 1234
+};
+msg.Questions.Add(new Question 
+{ 
+	Name = "emanon.org" 
+});
+msg.Answers.Add(new ARecord 
+{ 
+	Name = "emanon.org",
+	Address = IPAddress.Parse("127.0.0.1") 
+});
+msg.AuthorityRecords.Add(new SOARecord
+{
+    Name = "emanon.org",
+    PrimaryName = "erehwon",
+    Mailbox = "hostmaster.emanon.org"
+});
+msg.AdditionalRecords.Add(new ARecord 
+{ 
+	Name = "erehwon", 
+	Address = IPAddress.Parse("127.0.0.1") 
+});
+
+```
 
 # License
 Copyright © 2018 Richard Schneider (makaretu@gmail.com)
