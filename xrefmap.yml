@@ -271,12 +271,6 @@ references:
   commentId: M:Makaretu.Dns.DnsObject.Read(Makaretu.Dns.DnsReader)
   fullName: Makaretu.Dns.DnsObject.Read(Makaretu.Dns.DnsReader)
   nameWithType: DnsObject.Read(DnsReader)
-- uid: Makaretu.Dns.DnsObject.Read(Stream)
-  name: Read(Stream)
-  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_Stream_
-  commentId: M:Makaretu.Dns.DnsObject.Read(Stream)
-  fullName: Makaretu.Dns.DnsObject.Read(Stream)
-  nameWithType: DnsObject.Read(Stream)
 - uid: Makaretu.Dns.DnsObject.Read(System.Byte[])
   name: Read(Byte[])
   href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_System_Byte___
@@ -295,6 +289,12 @@ references:
   fullName.vb: Makaretu.Dns.DnsObject.Read(System.Byte(), System.Int32, System.Int32)
   nameWithType: DnsObject.Read(Byte[], Int32, Int32)
   nameWithType.vb: DnsObject.Read(Byte(), Int32, Int32)
+- uid: Makaretu.Dns.DnsObject.Read(System.IO.Stream)
+  name: Read(Stream)
+  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_System_IO_Stream_
+  commentId: M:Makaretu.Dns.DnsObject.Read(System.IO.Stream)
+  fullName: Makaretu.Dns.DnsObject.Read(System.IO.Stream)
+  nameWithType: DnsObject.Read(Stream)
 - uid: Makaretu.Dns.DnsObject.Read*
   name: Read
   href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_
@@ -319,11 +319,11 @@ references:
   commentId: M:Makaretu.Dns.DnsObject.Write(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.DnsObject.Write(Makaretu.Dns.DnsWriter)
   nameWithType: DnsObject.Write(DnsWriter)
-- uid: Makaretu.Dns.DnsObject.Write(Stream)
+- uid: Makaretu.Dns.DnsObject.Write(System.IO.Stream)
   name: Write(Stream)
-  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Write_Stream_
-  commentId: M:Makaretu.Dns.DnsObject.Write(Stream)
-  fullName: Makaretu.Dns.DnsObject.Write(Stream)
+  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Write_System_IO_Stream_
+  commentId: M:Makaretu.Dns.DnsObject.Write(System.IO.Stream)
+  fullName: Makaretu.Dns.DnsObject.Write(System.IO.Stream)
   nameWithType: DnsObject.Write(Stream)
 - uid: Makaretu.Dns.DnsObject.Write*
   name: Write
@@ -337,11 +337,11 @@ references:
   commentId: T:Makaretu.Dns.DnsReader
   fullName: Makaretu.Dns.DnsReader
   nameWithType: DnsReader
-- uid: Makaretu.Dns.DnsReader.#ctor(Stream)
+- uid: Makaretu.Dns.DnsReader.#ctor(System.IO.Stream)
   name: DnsReader(Stream)
-  href: api/Makaretu.Dns.DnsReader.html#Makaretu_Dns_DnsReader__ctor_Stream_
-  commentId: M:Makaretu.Dns.DnsReader.#ctor(Stream)
-  fullName: Makaretu.Dns.DnsReader.DnsReader(Stream)
+  href: api/Makaretu.Dns.DnsReader.html#Makaretu_Dns_DnsReader__ctor_System_IO_Stream_
+  commentId: M:Makaretu.Dns.DnsReader.#ctor(System.IO.Stream)
+  fullName: Makaretu.Dns.DnsReader.DnsReader(System.IO.Stream)
   nameWithType: DnsReader.DnsReader(Stream)
 - uid: Makaretu.Dns.DnsReader.#ctor*
   name: DnsReader
@@ -451,11 +451,11 @@ references:
   commentId: T:Makaretu.Dns.DnsWriter
   fullName: Makaretu.Dns.DnsWriter
   nameWithType: DnsWriter
-- uid: Makaretu.Dns.DnsWriter.#ctor(Stream)
+- uid: Makaretu.Dns.DnsWriter.#ctor(System.IO.Stream)
   name: DnsWriter(Stream)
-  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter__ctor_Stream_
-  commentId: M:Makaretu.Dns.DnsWriter.#ctor(Stream)
-  fullName: Makaretu.Dns.DnsWriter.DnsWriter(Stream)
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter__ctor_System_IO_Stream_
+  commentId: M:Makaretu.Dns.DnsWriter.#ctor(System.IO.Stream)
+  fullName: Makaretu.Dns.DnsWriter.DnsWriter(System.IO.Stream)
   nameWithType: DnsWriter.DnsWriter(Stream)
 - uid: Makaretu.Dns.DnsWriter.#ctor*
   name: DnsWriter
@@ -514,11 +514,11 @@ references:
   commentId: Overload:Makaretu.Dns.DnsWriter.WriteDomainName
   fullName: Makaretu.Dns.DnsWriter.WriteDomainName
   nameWithType: DnsWriter.WriteDomainName
-- uid: Makaretu.Dns.DnsWriter.WriteIPAddress(IPAddress)
+- uid: Makaretu.Dns.DnsWriter.WriteIPAddress(System.Net.IPAddress)
   name: WriteIPAddress(IPAddress)
-  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteIPAddress_IPAddress_
-  commentId: M:Makaretu.Dns.DnsWriter.WriteIPAddress(IPAddress)
-  fullName: Makaretu.Dns.DnsWriter.WriteIPAddress(IPAddress)
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteIPAddress_System_Net_IPAddress_
+  commentId: M:Makaretu.Dns.DnsWriter.WriteIPAddress(System.Net.IPAddress)
+  fullName: Makaretu.Dns.DnsWriter.WriteIPAddress(System.Net.IPAddress)
   nameWithType: DnsWriter.WriteIPAddress(IPAddress)
 - uid: Makaretu.Dns.DnsWriter.WriteIPAddress*
   name: WriteIPAddress
@@ -538,11 +538,11 @@ references:
   commentId: Overload:Makaretu.Dns.DnsWriter.WriteString
   fullName: Makaretu.Dns.DnsWriter.WriteString
   nameWithType: DnsWriter.WriteString
-- uid: Makaretu.Dns.DnsWriter.WriteTimeSpan(TimeSpan)
+- uid: Makaretu.Dns.DnsWriter.WriteTimeSpan(System.TimeSpan)
   name: WriteTimeSpan(TimeSpan)
-  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteTimeSpan_TimeSpan_
-  commentId: M:Makaretu.Dns.DnsWriter.WriteTimeSpan(TimeSpan)
-  fullName: Makaretu.Dns.DnsWriter.WriteTimeSpan(TimeSpan)
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteTimeSpan_System_TimeSpan_
+  commentId: M:Makaretu.Dns.DnsWriter.WriteTimeSpan(System.TimeSpan)
+  fullName: Makaretu.Dns.DnsWriter.WriteTimeSpan(System.TimeSpan)
   nameWithType: DnsWriter.WriteTimeSpan(TimeSpan)
 - uid: Makaretu.Dns.DnsWriter.WriteTimeSpan*
   name: WriteTimeSpan

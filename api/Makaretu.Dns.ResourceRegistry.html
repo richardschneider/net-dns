@@ -81,11 +81,35 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ResourceRegistry</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Makaretu.Dns.html">Makaretu.Dns</a></h6>
   <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
   <h5 id="Makaretu_Dns_ResourceRegistry_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class ResourceRegistry : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ResourceRegistry</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -114,7 +138,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <span class="xref">Func</span>&lt;<a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a>&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <span class="xref">System.Func</span>&lt;<a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -153,6 +177,22 @@ The value is a function that returns a new <a class="xref" href="Makaretu.Dns.Re
       <tr>
         <td><span class="parametername">T</span></td>
         <td><p>A derived class of <a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>When RR TYPE is zero.</p>
 </td>
       </tr>
     </tbody>
