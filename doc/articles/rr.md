@@ -1,7 +1,7 @@
 ﻿# Resource Records
 
 A resource record (RR) contains some information on the named resource.  These records are found in the 
-[Answers](xref:Makaretu..Dns.Message.Answers), 
+[Answers](xref:Makaretu.Dns.Message.Answers), 
 [AuthorityRecords](xref:Makaretu.Dns.Message.AuthorityRecords) and
 [AdditionalRecords](xref:Makaretu.Dns.Message.AdditionalRecords) properties of a message.
 
