@@ -25,18 +25,18 @@ references:
   commentId: Overload:Makaretu.Dns.AAAARecord.#ctor
   fullName: Makaretu.Dns.AAAARecord.AAAARecord
   nameWithType: AAAARecord.AAAARecord
-- uid: Makaretu.Dns.AAAARecord.ADDRESS
-  name: ADDRESS
-  href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_ADDRESS
-  commentId: P:Makaretu.Dns.AAAARecord.ADDRESS
-  fullName: Makaretu.Dns.AAAARecord.ADDRESS
-  nameWithType: AAAARecord.ADDRESS
-- uid: Makaretu.Dns.AAAARecord.ADDRESS*
-  name: ADDRESS
-  href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_ADDRESS_
-  commentId: Overload:Makaretu.Dns.AAAARecord.ADDRESS
-  fullName: Makaretu.Dns.AAAARecord.ADDRESS
-  nameWithType: AAAARecord.ADDRESS
+- uid: Makaretu.Dns.AAAARecord.Address
+  name: Address
+  href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_Address
+  commentId: P:Makaretu.Dns.AAAARecord.Address
+  fullName: Makaretu.Dns.AAAARecord.Address
+  nameWithType: AAAARecord.Address
+- uid: Makaretu.Dns.AAAARecord.Address*
+  name: Address
+  href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_Address_
+  commentId: Overload:Makaretu.Dns.AAAARecord.Address
+  fullName: Makaretu.Dns.AAAARecord.Address
+  nameWithType: AAAARecord.Address
 - uid: Makaretu.Dns.AAAARecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   name: ReadData(DnsReader, Int32)
   href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_
@@ -1735,18 +1735,18 @@ references:
   commentId: T:Makaretu.Dns.UnknownRecord
   fullName: Makaretu.Dns.UnknownRecord
   nameWithType: UnknownRecord
-- uid: Makaretu.Dns.UnknownRecord.RDATA
-  name: RDATA
-  href: api/Makaretu.Dns.UnknownRecord.html#Makaretu_Dns_UnknownRecord_RDATA
-  commentId: P:Makaretu.Dns.UnknownRecord.RDATA
-  fullName: Makaretu.Dns.UnknownRecord.RDATA
-  nameWithType: UnknownRecord.RDATA
-- uid: Makaretu.Dns.UnknownRecord.RDATA*
-  name: RDATA
-  href: api/Makaretu.Dns.UnknownRecord.html#Makaretu_Dns_UnknownRecord_RDATA_
-  commentId: Overload:Makaretu.Dns.UnknownRecord.RDATA
-  fullName: Makaretu.Dns.UnknownRecord.RDATA
-  nameWithType: UnknownRecord.RDATA
+- uid: Makaretu.Dns.UnknownRecord.Data
+  name: Data
+  href: api/Makaretu.Dns.UnknownRecord.html#Makaretu_Dns_UnknownRecord_Data
+  commentId: P:Makaretu.Dns.UnknownRecord.Data
+  fullName: Makaretu.Dns.UnknownRecord.Data
+  nameWithType: UnknownRecord.Data
+- uid: Makaretu.Dns.UnknownRecord.Data*
+  name: Data
+  href: api/Makaretu.Dns.UnknownRecord.html#Makaretu_Dns_UnknownRecord_Data_
+  commentId: Overload:Makaretu.Dns.UnknownRecord.Data
+  fullName: Makaretu.Dns.UnknownRecord.Data
+  nameWithType: UnknownRecord.Data
 - uid: Makaretu.Dns.UnknownRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   name: ReadData(DnsReader, Int32)
   href: api/Makaretu.Dns.UnknownRecord.html#Makaretu_Dns_UnknownRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_
