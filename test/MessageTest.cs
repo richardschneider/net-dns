@@ -80,7 +80,7 @@ namespace Makaretu.Dns
             Assert.AreEqual(0x1C, aaaa.Type);
             Assert.AreEqual(0x8001, (ushort)aaaa.Class);
             Assert.AreEqual(TimeSpan.FromSeconds(30720), aaaa.TTL);
-            Assert.AreEqual(IPAddress.Parse("fe80::223:32ff:feb1:2152"), aaaa.ADDRESS);
+            Assert.AreEqual(IPAddress.Parse("fe80::223:32ff:feb1:2152"), aaaa.Address);
 
             var nsec = (NSECRecord)msg.AdditionalRecords[1];
             Assert.AreEqual("appletv.local", nsec.Name);
