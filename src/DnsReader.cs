@@ -30,7 +30,12 @@ namespace Makaretu.Dns
         /// <summary>
         ///   Read a byte.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        ///   The next byte in the stream.
+        /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
         public byte ReadByte()
         {
             var value = stream.ReadByte();
@@ -39,12 +44,19 @@ namespace Makaretu.Dns
             ++position;
             return (byte)value;
         }
-        
+
         /// <summary>
         ///   Read the specified number of bytes.
         /// </summary>
-        /// <param name="length"></param>
-        /// <returns></returns>
+        /// <param name="length">
+        ///   The number of bytes to read.
+        /// </param>
+        /// <returns>
+        ///   The next <paramref name="length"/> bytes in the stream.
+        /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
         public byte[] ReadBytes(int length)
         {
             var buffer = new byte[length];
@@ -60,12 +72,16 @@ namespace Makaretu.Dns
             
             return buffer;
         }
+
         /// <summary>
         ///   Read an unsigned short.
         /// </summary>
         /// <returns>
         ///   The two byte little-endian value as an unsigned short.
         /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
         public ushort ReadUInt16()
         {
             int value = ReadByte();
@@ -79,6 +95,9 @@ namespace Makaretu.Dns
         /// <returns>
         ///   The four byte little-endian value as an unsigned int.
         /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
         public uint ReadUInt32()
         {
             int value = ReadByte();
@@ -94,13 +113,17 @@ namespace Makaretu.Dns
         /// <returns>
         ///   The domain name as a string.
         /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
         /// <remarks>
         ///   A domain name is represented as a sequence of labels, where
         ///   each label consists of a length octet followed by that
-        ///   number of octets.The domain name terminates with the
-        ///   zero length octet for the null label of the root.Note
-        ///   that this field may be an odd number of octets; no
-        ///   padding is used.
+        ///   number of octets. The domain name terminates with the
+        ///   zero length octet for the null label of the root.
+        ///   <note>
+        ///   Compressed domain names are also supported.
+        ///   </note>
         /// </remarks>
         public string ReadDomainName()
         {
@@ -141,6 +164,12 @@ namespace Makaretu.Dns
         ///   Strings are encoded with a length prefixed byte.  All strings are treated
         ///   as UTF-8.
         /// </remarks>
+        /// <returns>
+        ///   The string.
+        /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
         public string ReadString()
         {
             var length = ReadByte();
@@ -154,6 +183,12 @@ namespace Makaretu.Dns
         /// <returns>
         ///   A <see cref="TimeSpan"/> with second resolution.
         /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
+        /// <remarks>
+        ///   The interval is represented as the number of seconds in two bytes.
+        /// </remarks>
         public TimeSpan ReadTimeSpan()
         {
             return TimeSpan.FromSeconds(ReadUInt32());
@@ -165,6 +200,13 @@ namespace Makaretu.Dns
         /// <returns>
         ///   An <see cref="IPAddress"/>.
         /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
+        /// <remarks>
+        ///   Use a <paramref name="length"/> of 4 to read an IPv4 address and
+        ///   16 to read an IPv6 address.
+        /// </remarks>
         public IPAddress ReadIPAddress(int length = 4)
         {
             var address = ReadBytes(length);
