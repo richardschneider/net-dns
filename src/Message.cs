@@ -11,6 +11,21 @@ namespace Makaretu.Dns
     public class Message : DnsObject
     {
         /// <summary>
+        ///   Maximum bytes in a message.
+        /// </summary>
+        /// <value>
+        ///   9000 bytes.
+        /// </value>
+        /// <remarks>
+        ///   In reality the max length is dictated by the network MTU.  For legacy IPv4 systems,
+        ///   512 bytes should be used.  For DNSSEC, at least 4096 bytes are needed.
+        ///   <para>
+        ///   9000 bytes (less IP and UPD header lengths) is specified by Multicast DNS.
+        ///   </para>
+        /// </remarks>
+        public const int MaxLength = 9000;
+
+        /// <summary>
         /// A 16 bit identifier assigned by the program that
         /// generates any kind of query. This identifier is copied
         /// the corresponding reply and can be used by the requester
