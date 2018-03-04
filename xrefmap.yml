@@ -265,6 +265,18 @@ references:
   commentId: T:Makaretu.Dns.DnsObject
   fullName: Makaretu.Dns.DnsObject
   nameWithType: DnsObject
+- uid: Makaretu.Dns.DnsObject.NamesEquals(System.String,System.String)
+  name: NamesEquals(String, String)
+  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_NamesEquals_System_String_System_String_
+  commentId: M:Makaretu.Dns.DnsObject.NamesEquals(System.String,System.String)
+  fullName: Makaretu.Dns.DnsObject.NamesEquals(System.String, System.String)
+  nameWithType: DnsObject.NamesEquals(String, String)
+- uid: Makaretu.Dns.DnsObject.NamesEquals*
+  name: NamesEquals
+  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_NamesEquals_
+  commentId: Overload:Makaretu.Dns.DnsObject.NamesEquals
+  fullName: Makaretu.Dns.DnsObject.NamesEquals
+  nameWithType: DnsObject.NamesEquals
 - uid: Makaretu.Dns.DnsObject.Read(Makaretu.Dns.DnsReader)
   name: Read(DnsReader)
   href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_Makaretu_Dns_DnsReader_
@@ -772,6 +784,12 @@ references:
   commentId: Overload:Makaretu.Dns.Message.IsResponse
   fullName: Makaretu.Dns.Message.IsResponse
   nameWithType: Message.IsResponse
+- uid: Makaretu.Dns.Message.MaxLength
+  name: MaxLength
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_MaxLength
+  commentId: F:Makaretu.Dns.Message.MaxLength
+  fullName: Makaretu.Dns.Message.MaxLength
+  nameWithType: Message.MaxLength
 - uid: Makaretu.Dns.Message.Opcode
   name: Opcode
   href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_Opcode
