@@ -83,5 +83,26 @@ namespace Makaretu.Dns
 
         /// <inheritdoc />
         public abstract void Write(DnsWriter writer);
+
+        /// <summary>
+        ///   Determines if the two domain names are equal.
+        /// </summary>
+        /// <param name="a">A domain name</param>
+        /// <param name="b">A domain name</param>
+        /// <returns>
+        ///   <b>true</b> if <paramref name="a"/> and <paramref name="b"/> are
+        ///   considered equal.
+        /// </returns>
+        /// <remarks>
+        ///   Uses a case-insenstive algorithm, where 'A-Z' are equivalent to 'a-z'.
+        /// </remarks>
+        public static bool NamesEquals(string a, string b)
+        {
+#if NETSTANDARD14
+            return a.ToLowerInvariant() == b.ToLowerInvariant();
+#else
+            return 0 == StringComparer.InvariantCultureIgnoreCase.Compare(a, b);
+#endif
+        }
     }
 }
