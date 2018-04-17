@@ -42,6 +42,32 @@ namespace Makaretu.Dns
         ///    policy reasons. 
         /// </summary>
         Refused = 5,
+
+        /// <summary>
+        ///    Some name that ought not to exist, does exist.
+        /// </summary>
+        YXDomain = 6,
+
+        /// <summary>
+        ///   Some RRset that ought not to exist, does exist.
+        /// </summary>
+        YXRRSet = 7,
+
+        /// <summary>
+        ///   Some RRset that ought not to exist, does exist.
+        /// </summary>
+        NXRRSet = 8,
+
+        /// <summary>
+        ///   The server is not authoritative for the zone named in the Zone Section.
+        /// </summary>
+        NotAuthoritative = 9,
+
+        /// <summary>
+        ///   A name used in the Prerequisite or Update Section is not within the
+        ///   zone denoted by the Zone Section.
+        /// </summary>
+        NotZone = 10,
     }
 
 }
