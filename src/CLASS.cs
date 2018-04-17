@@ -30,6 +30,11 @@ namespace Makaretu.Dns
         HS = 4,
 
         /// <summary>
+        ///   Used in UPDATE message to signify no class.
+        /// </summary>
+        None = 254,
+
+        /// <summary>
         ///   Only used in QCLASS.
         /// </summary>
         /// <seealso cref="Question.Class"/>
