@@ -16,5 +16,13 @@ namespace Makaretu.Dns
             Assert.IsTrue(DnsObject.NamesEquals("fOo", "FoO"));
             Assert.IsFalse(DnsObject.NamesEquals("foo", "bar"));
         }
+
+        [TestMethod]
+        public void NamesCanBeNull()
+        {
+            Assert.IsTrue(DnsObject.NamesEquals(null, null));
+            Assert.IsFalse(DnsObject.NamesEquals("foo", null));
+            Assert.IsFalse(DnsObject.NamesEquals(null, "foo"));
+        }
     }
 }
