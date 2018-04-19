@@ -102,5 +102,35 @@ namespace Makaretu.Dns
             writer.WriteTimeSpan(Expire);
             writer.WriteTimeSpan(Minimum);
         }
+
+        /// <inheritdoc />
+        public override bool Equals(object obj)
+        {
+            var that = obj as SOARecord;
+            if (that == null) return false;
+
+            return base.Equals(obj)
+                && this.PrimaryName == that.PrimaryName
+                && this.Mailbox == that.Mailbox
+                && this.SerialNumber == that.SerialNumber
+                && this.Refresh == that.Refresh
+                && this.Retry == that.Retry
+                && this.Expire == that.Expire
+                && this.Minimum == that.Minimum;
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            return base.GetHashCode()
+                ^ PrimaryName?.GetHashCode() ?? 0
+                ^ Mailbox?.GetHashCode() ?? 0
+                ^ SerialNumber.GetHashCode()
+                ^ Refresh.GetHashCode()
+                ^ Retry.GetHashCode()
+                ^ Expire.GetHashCode()
+                ^ Minimum.GetHashCode();
+        }
+
     }
 }

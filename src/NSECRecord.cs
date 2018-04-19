@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net;
+using System.Linq;
 using System.Text;
 
 namespace Makaretu.Dns
@@ -45,5 +45,26 @@ namespace Makaretu.Dns
             writer.WriteUInt16((ushort)TypeBitmaps.Length);
             writer.WriteBytes(TypeBitmaps);
         }
+
+        /// <inheritdoc />
+        public override bool Equals(object obj)
+        {
+            var that = obj as NSECRecord;
+            if (that == null) return false;
+
+            return base.Equals(obj)
+                && this.NextOwnerName == that.NextOwnerName
+                && this.TypeBitmaps.SequenceEqual(that.TypeBitmaps);
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            return base.GetHashCode()
+                ^ NextOwnerName?.GetHashCode() ?? 0
+                ^ TypeBitmaps?.Sum(b => b).GetHashCode() ?? 0;
+        }
+
+
     }
 }

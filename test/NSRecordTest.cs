@@ -25,5 +25,23 @@ namespace Makaretu.Dns
             Assert.AreEqual(a.TTL, b.TTL);
             Assert.AreEqual(a.Authority, b.Authority);
         }
+
+        [TestMethod]
+        public void Equality()
+        {
+            var a = new NSRecord
+            {
+                Name = "emanon.org",
+                Authority = "mydomain.name"
+            };
+            var b = new NSRecord
+            {
+                Name = "emanon.org",
+                Authority = "mydomainx.name"
+            };
+            Assert.IsTrue(a.Equals(a));
+            Assert.IsFalse(a.Equals(b));
+        }
+
     }
 }

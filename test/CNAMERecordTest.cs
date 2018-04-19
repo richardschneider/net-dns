@@ -25,5 +25,27 @@ namespace Makaretu.Dns
             Assert.AreEqual(a.TTL, b.TTL);
             Assert.AreEqual(a.Target, b.Target);
         }
+
+        [TestMethod]
+        public void Equality()
+        {
+            var a = new CNAMERecord
+            {
+                Name = "emanon.org",
+                Target = "somewhere.else.org"
+            };
+            var b = new CNAMERecord
+            {
+                Name = "emanon.org",
+                Target = "somewhere.org"
+            };
+            var e = new CNAMERecord();
+            Assert.IsTrue(a.Equals(a));
+            Assert.IsFalse(a.Equals(b));
+            Assert.IsTrue(e.Equals(e));
+            Assert.IsFalse(e.Equals(a));
+            Assert.AreEqual(e.GetHashCode(), e.GetHashCode());
+        }
+
     }
 }

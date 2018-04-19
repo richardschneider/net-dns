@@ -25,5 +25,23 @@ namespace Makaretu.Dns
             Assert.AreEqual(a.TTL, b.TTL);
             Assert.AreEqual(a.DomainName, b.DomainName);
         }
+
+        [TestMethod]
+        public void Equality()
+        {
+            var a = new PTRRecord
+            {
+                Name = "emanon.org",
+                DomainName = "somewhere.else.org"
+            };
+            var b = new PTRRecord
+            {
+                Name = "emanon.org",
+                DomainName = "somewhere.org"
+            };
+            Assert.IsTrue(a.Equals(a));
+            Assert.IsFalse(a.Equals(b));
+        }
+
     }
 }

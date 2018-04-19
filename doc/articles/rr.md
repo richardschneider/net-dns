@@ -1,6 +1,6 @@
 ﻿# Resource Records
 
-A resource record (RR) contains some information on the named resource.  These records are found in the 
+A [resource record](xref:Makaretu.Dns.ResourceRecord) (RR) contains some information on the named resource.  These records are found in the 
 [Answers](xref:Makaretu.Dns.Message.Answers), 
 [AuthorityRecords](xref:Makaretu.Dns.Message.AuthorityRecords) and
 [AdditionalRecords](xref:Makaretu.Dns.Message.AdditionalRecords) properties of a message.
@@ -23,3 +23,12 @@ A resource record (RR) contains some information on the named resource.  These r
 ## Unknown
 
 For all other resource records an [UnknownRecord](xref:Makaretu.Dns.UnknownRecord) can be used.
+
+## Equality
+
+Two Resource Records are considered equal if their [Name](xref:Makaretu.Dns.ResourceRecord.Name), 
+[Class](xref:Makaretu.Dns.ResourceRecord.Class), [Type](xref:Makaretu.Dns.ResourceRecord.Type) 
+and resource specific data fields are equal.
+
+> [!NOTE]
+> The [TTL](xref:Makaretu.Dns.ResourceRecord.TTL) field is explicitly excluded from the comparison.

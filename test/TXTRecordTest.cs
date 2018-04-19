@@ -29,5 +29,31 @@ namespace Makaretu.Dns
             Assert.AreEqual(a.TTL, b.TTL);
             CollectionAssert.AreEqual(a.Strings, b.Strings);
         }
+
+        [TestMethod]
+        public void Equality()
+        {
+            var a = new TXTRecord
+            {
+                Name = "the.printer.local",
+                Strings = new List<string>
+                {
+                    "paper=A4",
+                    "colour=false"
+                }
+            };
+            var b = new TXTRecord
+            {
+                Name = "the.printer.local",
+                Strings = new List<string>
+                {
+                    "paper=A4",
+                    "colour=true"
+                }
+            };
+            Assert.IsTrue(a.Equals(a));
+            Assert.IsFalse(a.Equals(b));
+        }
+
     }
 }

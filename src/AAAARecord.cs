@@ -36,5 +36,23 @@ namespace Makaretu.Dns
         {
             writer.WriteIPAddress(Address);
         }
+
+        /// <inheritdoc />
+        public override bool Equals(object obj)
+        {
+            var that = obj as AAAARecord;
+            if (that == null) return false;
+
+            return base.Equals(obj)
+                && this.Address == that.Address;
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            return base.GetHashCode() 
+                ^ Address.GetHashCode();
+        }
+
     }
 }

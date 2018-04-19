@@ -50,5 +50,25 @@ namespace Makaretu.Dns
             writer.WriteString(Cpu);
             writer.WriteString(OS);
         }
+
+        /// <inheritdoc />
+        public override bool Equals(object obj)
+        {
+            var that = obj as HINFORecord;
+            if (that == null) return false;
+
+            return base.Equals(obj)
+                && this.Cpu == that.Cpu
+                && this.OS == that.OS;
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            return base.GetHashCode()
+                ^ Cpu?.GetHashCode() ?? 0
+                ^ OS?.GetHashCode() ?? 0;
+        }
+
     }
 }

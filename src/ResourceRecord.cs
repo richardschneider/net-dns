@@ -143,5 +143,78 @@ namespace Makaretu.Dns
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        ///   Determines if the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">
+        ///   The object to compare.
+        /// </param>
+        /// <returns>
+        ///   <b>true</b> if the specified object is equal to the current object; otherwise, <b>false</b>.
+        /// </returns>
+        /// <remarks>
+        ///   Two Resource Records are considered equal if their <see cref="Name"/>, 
+        ///   <see cref="Class"/>, <see cref="Type"/> and data fields
+        ///   are equal. Note that the <see cref="TTL"/> field is explicitly 
+        ///   excluded from the comparison.
+        /// </remarks>
+        public override bool Equals(object obj)
+        {
+            var that = obj as ResourceRecord;
+            if (that == null) return false;
+
+            if (!DnsObject.NamesEquals(this.Name, that.Name)) return false;
+            if (this.Class != that.Class) return false;
+            if (this.Type != that.Type) return false;
+
+            return true;
+        }
+
+        /// <summary>
+        ///   Value equality.
+        /// </summary>
+        /// <remarks>
+        ///   Two Resource Records are considered equal if their <see cref="Name"/>, 
+        ///   <see cref="Class"/>, <see cref="Type"/> and data fields
+        ///   are equal. Note that the <see cref="TTL"/> field is explicitly 
+        ///   excluded from the comparison.
+        /// </remarks>
+        public static bool operator ==(ResourceRecord a, ResourceRecord b)
+        {
+            if (object.ReferenceEquals(a, b)) return true;
+            if (object.ReferenceEquals(a, null)) return false;
+            if (object.ReferenceEquals(b, null)) return false;
+
+            return a.Equals(b);
+        }
+
+        /// <summary>
+        ///   Value inequality.
+        /// </summary>
+        /// <remarks>
+        ///   Two Resource Records are considered equal if their <see cref="Name"/>, 
+        ///   <see cref="Class"/>, <see cref="Type"/> and data fields
+        ///   are equal. Note that the <see cref="TTL"/> field is explicitly 
+        ///   excluded from the comparison.
+        /// </remarks>
+        public static bool operator !=(ResourceRecord a, ResourceRecord b)
+        {
+            if (object.ReferenceEquals(a, b)) return false;
+            if (object.ReferenceEquals(a, null)) return true;
+            if (object.ReferenceEquals(b, null)) return true;
+
+            return !a.Equals(b);
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            return 
+                Name?.ToLowerInvariant().GetHashCode() ?? 0
+                ^ Class.GetHashCode()
+                ^ Type.GetHashCode();
+        }
+
     }
 }

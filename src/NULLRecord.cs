@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Makaretu.Dns
@@ -39,5 +40,23 @@ namespace Makaretu.Dns
         {
             writer.WriteBytes(Data);
         }
+
+        /// <inheritdoc />
+        public override bool Equals(object obj)
+        {
+            var that = obj as NULLRecord;
+            if (that == null) return false;
+
+            return base.Equals(obj) 
+                && this.Data.SequenceEqual(that.Data);
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            return base.GetHashCode()
+                ^ Data?.Sum(b => b).GetHashCode() ?? 0;
+        }
+
     }
 }

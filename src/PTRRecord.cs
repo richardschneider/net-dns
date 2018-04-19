@@ -43,5 +43,24 @@ namespace Makaretu.Dns
         {
             writer.WriteDomainName(DomainName);
         }
+
+        /// <inheritdoc />
+        public override bool Equals(object obj)
+        {
+            var that = obj as PTRRecord;
+            if (that == null) return false;
+
+            return base.Equals(obj) 
+                && this.DomainName == that.DomainName;
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            return base.GetHashCode()
+                ^ DomainName?.GetHashCode() ?? 0;
+        }
+
+
     }
 }

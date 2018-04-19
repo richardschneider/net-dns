@@ -31,5 +31,30 @@ namespace Makaretu.Dns
             Assert.AreEqual(a.Port, b.Port);
             Assert.AreEqual(a.Target, b.Target);
         }
+
+        [TestMethod]
+        public void Equality()
+        {
+            var a = new SRVRecord
+            {
+                Name = "_foobar._tcp",
+                Priority = 1,
+                Weight = 2,
+                Port = 9,
+                Target = "foobar.example.com"
+            };
+            var b = new SRVRecord
+            {
+                Name = "_foobar._tcp",
+                Priority = 1,
+                Weight = 2,
+                Port = 9,
+                Target = "foobar-x.example.com"
+            };
+            Assert.IsTrue(a.Equals(a));
+            Assert.IsFalse(a.Equals(b));
+        }
+
+
     }
 }

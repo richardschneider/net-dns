@@ -25,5 +25,23 @@ namespace Makaretu.Dns
             Assert.AreEqual(a.TTL, b.TTL);
             CollectionAssert.AreEqual(a.Data, b.Data);
         }
+
+        [TestMethod]
+        public void Equality()
+        {
+            var a = new NULLRecord
+            {
+                Name = "emanon.org",
+                Data = new byte[] { 1, 2, 3, 4 }
+            };
+            var b = new NULLRecord
+            {
+                Name = "emanon.org",
+                Data = new byte[] { 1, 2, 3, 40 }
+            };
+            Assert.IsTrue(a.Equals(a));
+            Assert.IsFalse(a.Equals(b));
+        }
+
     }
 }
