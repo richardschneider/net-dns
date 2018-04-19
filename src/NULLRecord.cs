@@ -55,7 +55,7 @@ namespace Makaretu.Dns
         public override int GetHashCode()
         {
             return base.GetHashCode()
-                ^ Data?.Sum(b => b).GetHashCode() ?? 0;
+                ^ Data?.Aggregate(0, (r, b) => r ^ b.GetHashCode()) ?? 0;
         }
 
     }

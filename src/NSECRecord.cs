@@ -62,7 +62,7 @@ namespace Makaretu.Dns
         {
             return base.GetHashCode()
                 ^ NextOwnerName?.GetHashCode() ?? 0
-                ^ TypeBitmaps?.Sum(b => b).GetHashCode() ?? 0;
+                ^ TypeBitmaps?.Aggregate(0, (r, b) => r ^ b.GetHashCode()) ?? 0;
         }
 
 
