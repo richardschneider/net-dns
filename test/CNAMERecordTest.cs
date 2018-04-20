@@ -39,12 +39,8 @@ namespace Makaretu.Dns
                 Name = "emanon.org",
                 Target = "somewhere.org"
             };
-            var e = new CNAMERecord();
             Assert.IsTrue(a.Equals(a));
             Assert.IsFalse(a.Equals(b));
-            Assert.IsTrue(e.Equals(e));
-            Assert.IsFalse(e.Equals(a));
-            Assert.AreEqual(e.GetHashCode(), e.GetHashCode());
         }
 
     }

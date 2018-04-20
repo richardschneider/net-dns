@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace Makaretu.Dns
@@ -189,7 +190,7 @@ namespace Makaretu.Dns
         /// </returns>
         /// <remarks>
         ///   Two Resource Records are considered equal if their <see cref="Name"/>, 
-        ///   <see cref="Class"/>, <see cref="Type"/> and data fields
+        ///   <see cref="Class"/>, <see cref="Type"/> and <see cref="GetData">data fields</see>
         ///   are equal. Note that the <see cref="TTL"/> field is explicitly 
         ///   excluded from the comparison.
         /// </remarks>
@@ -202,7 +203,7 @@ namespace Makaretu.Dns
             if (this.Class != that.Class) return false;
             if (this.Type != that.Type) return false;
 
-            return true;
+            return this.GetData().SequenceEqual(that.GetData());
         }
 
         /// <summary>
@@ -247,7 +248,9 @@ namespace Makaretu.Dns
             return 
                 Name?.ToLowerInvariant().GetHashCode() ?? 0
                 ^ Class.GetHashCode()
-                ^ Type.GetHashCode();
+                ^ Type.GetHashCode()
+                ^ GetData().Aggregate(0, (r, b) => r ^ b.GetHashCode());
+
         }
 
     }

@@ -47,22 +47,5 @@ namespace Makaretu.Dns
             }
         }
 
-        /// <inheritdoc />
-        public override bool Equals(object obj)
-        {
-            var that = obj as TXTRecord;
-            if (that == null) return false;
-
-            return base.Equals(obj)
-                && this.Strings.SequenceEqual(that.Strings);
-        }
-
-        /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            return base.GetHashCode()
-                ^ Strings?.Aggregate(0, (r, e) => r ^ e.GetHashCode()) ?? 0;
-        }
-
     }
 }

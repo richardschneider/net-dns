@@ -46,25 +46,5 @@ namespace Makaretu.Dns
             writer.WriteBytes(TypeBitmaps);
         }
 
-        /// <inheritdoc />
-        public override bool Equals(object obj)
-        {
-            var that = obj as NSECRecord;
-            if (that == null) return false;
-
-            return base.Equals(obj)
-                && this.NextOwnerName == that.NextOwnerName
-                && this.TypeBitmaps.SequenceEqual(that.TypeBitmaps);
-        }
-
-        /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            return base.GetHashCode()
-                ^ NextOwnerName?.GetHashCode() ?? 0
-                ^ TypeBitmaps?.Aggregate(0, (r, b) => r ^ b.GetHashCode()) ?? 0;
-        }
-
-
     }
 }

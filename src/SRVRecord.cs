@@ -74,28 +74,5 @@ namespace Makaretu.Dns
             writer.WriteDomainName(Target);
         }
 
-        /// <inheritdoc />
-        public override bool Equals(object obj)
-        {
-            var that = obj as SRVRecord;
-            if (that == null) return false;
-
-            return base.Equals(obj)
-                && this.Priority == that.Priority
-                && this.Weight == that.Weight
-                && this.Port == that.Port
-                && this.Target == that.Target;
-        }
-
-        /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            return base.GetHashCode()
-                ^ Priority.GetHashCode()
-                ^ Weight.GetHashCode()
-                ^ Port.GetHashCode()
-                ^ Target?.GetHashCode() ?? 0;
-        }
-
     }
 }

@@ -51,24 +51,5 @@ namespace Makaretu.Dns
             writer.WriteDomainName(Exchange);
         }
 
-        /// <inheritdoc />
-        public override bool Equals(object obj)
-        {
-            var that = obj as MXRecord;
-            if (that == null) return false;
-
-            return base.Equals(obj)
-                && this.Preference == that.Preference
-                && this.Exchange == that.Exchange;
-        }
-
-        /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            return base.GetHashCode()
-                ^ Preference.GetHashCode()
-                ^ Exchange?.GetHashCode() ?? 0;
-        }
-
     }
 }

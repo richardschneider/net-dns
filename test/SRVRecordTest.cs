@@ -54,7 +54,6 @@ namespace Makaretu.Dns
             Assert.IsTrue(a.Equals(a));
             Assert.IsFalse(a.Equals(b));
             Assert.IsFalse(a.Equals(null));
-            Assert.AreNotEqual(a.GetHashCode(), new SRVRecord().GetHashCode());
         }
 
     }

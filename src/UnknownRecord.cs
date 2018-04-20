@@ -28,22 +28,5 @@ namespace Makaretu.Dns
             writer.WriteBytes(Data);
         }
 
-        /// <inheritdoc />
-        public override bool Equals(object obj)
-        {
-            var that = obj as UnknownRecord;
-            if (that == null) return false;
-
-            return base.Equals(obj)
-                && this.Data.SequenceEqual(that.Data);
-        }
-
-        /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            return base.GetHashCode()
-                ^ Data?.Aggregate(0, (r, b) => r ^ b.GetHashCode()) ?? 0;
-        }
-
     }
 }

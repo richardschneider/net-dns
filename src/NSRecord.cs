@@ -49,22 +49,5 @@ namespace Makaretu.Dns
             writer.WriteDomainName(Authority);
         }
 
-        /// <inheritdoc />
-        public override bool Equals(object obj)
-        {
-            var that = obj as NSRecord;
-            if (that == null) return false;
-
-            return base.Equals(obj) 
-                && this.Authority == that.Authority;
-        }
-
-        /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            return base.GetHashCode()
-                ^ Authority?.GetHashCode() ?? 0;
-        }
-
     }
 }
