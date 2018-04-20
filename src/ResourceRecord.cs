@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Makaretu.Dns
@@ -68,6 +69,41 @@ namespace Makaretu.Dns
         /// <seealso cref="DefaultTTL"/>
         public TimeSpan TTL { get; set; } = DefaultTTL;
 
+        /// <summary>
+        ///   The length of the resource specific data.
+        /// </summary>
+        /// <returns>
+        ///   Number of bytes to represent the resource specific data.
+        /// </returns>
+        /// <remarks>
+        ///   This is referred to as the <c>RDLENGTH</c> in the DNS spec.
+        /// </remarks>
+        public int GetDataLength()
+        {
+            using (var ms = new MemoryStream())
+            {
+                var writer = new DnsWriter(ms);
+                this.WriteData(writer);
+                return (int) ms.Length;
+            }
+        }
+
+        /// <summary>
+        ///   The resource specific data.
+        /// </summary>
+        /// <returns>
+        ///   A byte array, never <b>null</b>.
+        /// </returns>
+        public byte[] GetData()
+        {
+            using (var ms = new MemoryStream())
+            {
+                var writer = new DnsWriter(ms);
+                this.WriteData(writer);
+                return ms.ToArray();
+            }
+        }
+
         /// <inheritdoc />
         public override IDnsSerialiser Read(DnsReader reader)
         {
@@ -114,7 +150,6 @@ namespace Makaretu.Dns
         /// </remarks>
         protected virtual void ReadData(DnsReader reader, int length)
         {
-            throw new NotImplementedException();
         }
 
         /// <inheritdoc />
@@ -141,7 +176,6 @@ namespace Makaretu.Dns
         /// </remarks>
         protected virtual void WriteData(DnsWriter writer)
         {
-            throw new NotImplementedException();
         }
 
         /// <summary>

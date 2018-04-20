@@ -19,6 +19,53 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void DataLength()
+        {
+            var rr = new ResourceRecord();
+            Assert.AreEqual(0, rr.GetDataLength());
+        }
+
+        [TestMethod]
+        public void DataLength_DerivedClass()
+        {
+            var a = new ARecord { Address = IPAddress.Parse("127.0.0.1") };
+            Assert.AreEqual(4, a.GetDataLength());
+        }
+
+        [TestMethod]
+        public void Data()
+        {
+            var rr = new ResourceRecord();
+            Assert.AreEqual(0, rr.GetData().Length);
+        }
+
+        [TestMethod]
+        public void Data_DerivedClass()
+        {
+            var a = new ARecord { Address = IPAddress.Parse("127.0.0.1") };
+            Assert.AreNotEqual(0, a.GetData().Length);
+        }
+
+        [TestMethod]
+        public void RoundTrip()
+        {
+            var a = new ResourceRecord
+            {
+                Name = "emanon.org",
+                Class = Class.CH,
+                Type = 123,
+                TTL = TimeSpan.FromDays(2)
+            };
+            var b = (ResourceRecord)new ResourceRecord().Read(a.ToByteArray());
+            Assert.AreEqual(a.Name, b.Name);
+            Assert.AreEqual(a.Class, b.Class);
+            Assert.AreEqual(a.Type, b.Type);
+            Assert.AreEqual(a.TTL, b.TTL);
+            Assert.AreEqual(a.GetDataLength(), b.GetDataLength());
+            Assert.AreEqual(a.GetHashCode(), b.GetHashCode());
+        }
+
+        [TestMethod]
         public void Value_Equality()
         {
             var a0 = new ResourceRecord
