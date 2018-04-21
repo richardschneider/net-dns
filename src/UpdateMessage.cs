@@ -28,13 +28,16 @@ namespace Makaretu.Dns
     public class UpdateMessage : DnsObject
     {
         /// <summary>
-        /// A 16 bit identifier assigned by the program that
-        /// generates any kind of update. 
+        ///   A 16 bit identifier assigned by the program that
+        ///   generates any kind of update. 
         /// </summary>
+        /// <value>
+        ///   A unique identifier assigned by the requestor.
+        /// </value>
         /// <remarks>
-        /// This identifier is copied to
-        /// the corresponding response and can be used by the requestor
-        /// to match up replies to outstanding queries.
+        ///   This identifier is copied to
+        ///   the corresponding response and can be used by the requestor
+        ///   to match up replies to outstanding queries.
         /// </remarks>
         public ushort Id { get; set; }
 
@@ -105,12 +108,12 @@ namespace Makaretu.Dns
         };
 
         /// <summary>
-        ///   RRs or RRsets which must (not) preexist.
+        ///   Resource records which must (not) preexist.
         /// </summary>
         /// <value>
         ///   Defaults to an empty list.
         /// </value>
-        public List<ResourceRecord> Prerequisites { get; } = new List<ResourceRecord>();
+        public UpdatePrerequisiteList Prerequisites { get; } = new UpdatePrerequisiteList();
 
         /// <summary>
         ///   RRs or RRsets to be added or deleted.
