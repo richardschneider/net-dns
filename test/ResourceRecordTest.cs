@@ -53,7 +53,7 @@ namespace Makaretu.Dns
             {
                 Name = "emanon.org",
                 Class = Class.CH,
-                Type = 123,
+                Type = 6,
                 TTL = TimeSpan.FromDays(2)
             };
             var b = (ResourceRecord)new ResourceRecord().Read(a.ToByteArray());
@@ -63,6 +63,7 @@ namespace Makaretu.Dns
             Assert.AreEqual(a.TTL, b.TTL);
             Assert.AreEqual(a.GetDataLength(), b.GetDataLength());
             Assert.AreEqual(a.GetHashCode(), b.GetHashCode());
+            Assert.IsInstanceOfType(b, typeof(ResourceRecord));
         }
 
         [TestMethod]

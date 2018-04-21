@@ -33,7 +33,7 @@ namespace Makaretu.Dns
 
         /// <summary>
         ///   An owner name, i.e., the name of the node to which this
-        ///   resource record pertains
+        ///   resource record pertains.
         /// </summary>
         public string Name { get; set; }
 
@@ -114,6 +114,10 @@ namespace Makaretu.Dns
             Class = (Class)reader.ReadUInt16();
             TTL = reader.ReadTimeSpan();
             int length = reader.ReadUInt16();
+
+            // If zero length, then just return a ResourceRecord.
+            if (length == 0)
+                return this;
 
             // Find a specific class for the TYPE or default
             // to UnknownRecord.

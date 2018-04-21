@@ -20,7 +20,8 @@ namespace Makaretu.Dns
         /// </returns>
         /// <remarks>
         ///   Reading a <see cref="ResourceRecord"/> will return a new instance that
-        ///   is type specific.
+        ///   is type specific unless the <see cref="ResourceRecord.GetDataLength">RDLENGTH</see>
+        ///   is zero.
         /// </remarks>
         IDnsSerialiser Read(DnsReader reader);
 
