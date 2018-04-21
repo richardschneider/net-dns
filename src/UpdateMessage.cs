@@ -116,14 +116,29 @@ namespace Makaretu.Dns
         public UpdatePrerequisiteList Prerequisites { get; } = new UpdatePrerequisiteList();
 
         /// <summary>
-        ///   RRs or RRsets to be added or deleted.
+        ///   Resource records to be added or deleted.
         /// </summary>
-        public List<ResourceRecord> Updates { get; } = new List<ResourceRecord>();
+        /// <value>
+        ///   Defaults to an empty list.
+        /// </value>
+        public UpdateResourceList Updates { get; } = new UpdateResourceList();
 
         /// <summary>
-        ///   The list of additional records.
+        ///   The list of additional resource records.
         /// </summary>
-        public List<ResourceRecord> AdditionalRecords { get; } = new List<ResourceRecord>();
+        /// <value>
+        ///   Defaults to an empty list.
+        /// </value>
+        /// <remarks>
+        ///   The resources which are related to the update itself, or
+        ///   to new resources being added by the update. For example, out of zone glue
+        ///   (A RRs referred to by new NS RRs) should be presented here.
+        ///   <para>
+        ///   The  server can use or ignore out of zone glue, at the discretion of the
+        ///   server implementor.
+        ///   </para>
+        /// </remarks>
+        public List<ResourceRecord> AdditionalResources { get; } = new List<ResourceRecord>();
 
         /// <summary>
         ///   Create a response for the update message.
@@ -169,7 +184,7 @@ namespace Makaretu.Dns
             for (var i = 0; i < arcount; ++i)
             {
                 var rr = (ResourceRecord)new ResourceRecord().Read(reader);
-                AdditionalRecords.Add(rr);
+                AdditionalResources.Add(rr);
             }
 
             return this;
@@ -188,11 +203,11 @@ namespace Makaretu.Dns
             writer.WriteUInt16((ushort)1);
             writer.WriteUInt16((ushort)Prerequisites.Count);
             writer.WriteUInt16((ushort)Updates.Count);
-            writer.WriteUInt16((ushort)AdditionalRecords.Count);
+            writer.WriteUInt16((ushort)AdditionalResources.Count);
             Zone.Write(writer);
             foreach (var r in Prerequisites) r.Write(writer);
             foreach (var r in Updates) r.Write(writer);
-            foreach (var r in AdditionalRecords) r.Write(writer);
+            foreach (var r in AdditionalResources) r.Write(writer);
         }
     }
 }

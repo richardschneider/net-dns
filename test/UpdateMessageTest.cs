@@ -14,7 +14,7 @@ namespace Makaretu.Dns
         public void Defaults()
         {
             var m = new UpdateMessage();
-            Assert.AreEqual(0, m.AdditionalRecords.Count);
+            Assert.AreEqual(0, m.AdditionalResources.Count);
             Assert.AreEqual(0, m.Id);
             Assert.AreEqual(false, m.IsResponse);
             Assert.AreEqual(true, m.IsUpdate);
@@ -82,7 +82,7 @@ namespace Makaretu.Dns
             Assert.AreEqual(expected.Zone.Type, actual.Zone.Type);
             Assert.IsTrue(expected.Prerequisites.SequenceEqual(actual.Prerequisites));
             Assert.IsTrue(expected.Updates.SequenceEqual(actual.Updates));
-            Assert.IsTrue(expected.AdditionalRecords.SequenceEqual(actual.AdditionalRecords));
+            Assert.IsTrue(expected.AdditionalResources.SequenceEqual(actual.AdditionalResources));
         }
     }
 }
