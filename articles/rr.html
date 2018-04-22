@@ -8,7 +8,7 @@
     <title>Resource Records | DNS Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Resource Records | DNS Model ">
-    <meta name="generator" content="docfx 2.32.0.0">
+    <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -69,11 +69,11 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="resource-records">Resource Records</h1>
 
-<p>A resource record (RR) contains some information on the named resource.  These records are found in the 
+<p>A <a class="xref" href="../api/Makaretu.Dns.ResourceRecord.html">resource record</a> (RR) contains some information on the named resource.  These records are found in the 
 <a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_Answers">Answers</a>, 
 <a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AuthorityRecords">AuthorityRecords</a> and
 <a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AdditionalRecords">AdditionalRecords</a> properties of a message.</p>
-<h2 id="supported">Supported</h2>
+<p>The following resource records are implemented</p>
 <ul>
 <li><a class="xref" href="../api/Makaretu.Dns.ARecord.html">A</a></li>
 <li><a class="xref" href="../api/Makaretu.Dns.AAAARecord.html">AAAA</a></li>
@@ -88,8 +88,13 @@
 <li><a class="xref" href="../api/Makaretu.Dns.SRVRecord.html">SRV</a></li>
 <li><a class="xref" href="../api/Makaretu.Dns.TXTRecord.html">TXT</a></li>
 </ul>
-<h2 id="unknown">Unknown</h2>
-<p>For all other resource records an <a class="xref" href="../api/Makaretu.Dns.UnknownRecord.html">UnknownRecord</a> can be used.</p>
+<p>For all other resource records an <a class="xref" href="../api/Makaretu.Dns.UnknownRecord.html">UnknownRecord</a> is used.</p>
+<h2 id="equality">Equality</h2>
+<p>Two <a class="xref" href="../api/Makaretu.Dns.ResourceRecord.html">resource records</a> are considered equal if their <a class="xref" href="../api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Name">Name</a>, 
+<a class="xref" href="../api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Class">Class</a>, <a class="xref" href="../api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Type">Type</a> 
+and resource specific data fields are equal.</p>
+<div class="NOTE"><h5>Note</h5><p>The <a class="xref" href="../api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_TTL">TTL</a> field is explicitly excluded from the comparison.</p>
+</div>
 </article>
           </div>
           

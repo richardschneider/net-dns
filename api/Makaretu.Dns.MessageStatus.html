@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum MessageStatus
    | DNS Model ">
-    <meta name="generator" content="docfx 2.32.0.0">
+    <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -110,8 +110,24 @@ referenced in the query does not exist.</p>
 </td>
       </tr>
       <tr>
+        <td id="Makaretu_Dns_MessageStatus_NotAuthoritative">NotAuthoritative</td>
+        <td><p>The server is not authoritative for the zone named in the Zone Section.</p>
+</td>
+      </tr>
+      <tr>
         <td id="Makaretu_Dns_MessageStatus_NotImplemented">NotImplemented</td>
         <td><p>The name server does not support the requested kind of query.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Makaretu_Dns_MessageStatus_NotZone">NotZone</td>
+        <td><p>A name used in the Prerequisite or Update Section is not within the
+zone denoted by the Zone Section.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Makaretu_Dns_MessageStatus_NXRRSet">NXRRSet</td>
+        <td><p>Some RRset that ought not to exist, does exist.</p>
 </td>
       </tr>
       <tr>
@@ -124,6 +140,16 @@ policy reasons. </p>
         <td id="Makaretu_Dns_MessageStatus_ServerFailure">ServerFailure</td>
         <td><p>The name server was unable to process this query due to a
 problem with the name server.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Makaretu_Dns_MessageStatus_YXDomain">YXDomain</td>
+        <td><p>Some name that ought not to exist, does exist.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Makaretu_Dns_MessageStatus_YXRRSet">YXRRSet</td>
+        <td><p>Some RRset that ought not to exist, does exist.</p>
 </td>
       </tr>
     </tbody>

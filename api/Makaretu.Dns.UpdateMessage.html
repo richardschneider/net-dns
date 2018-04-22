@@ -1,0 +1,706 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UpdateMessage
+   | DNS Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UpdateMessage
+   | DNS Model ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Makaretu.Dns.UpdateMessage">
+  
+  
+  <h1 id="Makaretu_Dns_UpdateMessage" data-uid="Makaretu.Dns.UpdateMessage" class="text-break">Class UpdateMessage
+  </h1>
+  <div class="markdown level0 summary"><p>Dynamic updates in the Domain Name System.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="Makaretu.Dns.DnsObject.html">DnsObject</a></div>
+    <div class="level2"><span class="xref">UpdateMessage</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Makaretu.Dns.IDnsSerialiser.html">IDnsSerialiser</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_System_Byte___">DnsObject.Read(Byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_System_Byte___System_Int32_System_Int32_">DnsObject.Read(Byte[], Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_System_IO_Stream_">DnsObject.Read(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_ToByteArray">DnsObject.ToByteArray()</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Write_System_IO_Stream_">DnsObject.Write(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_NamesEquals_System_String_System_String_">DnsObject.NamesEquals(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Makaretu.Dns.html">Makaretu.Dns</a></h6>
+  <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
+  <h5 id="Makaretu_Dns_UpdateMessage_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UpdateMessage : DnsObject, IDnsSerialiser</code></pre>
+  </div>
+  <h5 id="Makaretu_Dns_UpdateMessage_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+<a href="https://tools.ietf.org/html/rfc2136">RFC 2136</a> allows adding or 
+deleting resource records from a specified zone.
+</p>
+<p>
+<a class="xref" href="Makaretu.Dns.UpdateMessage.html#Makaretu_Dns_UpdateMessage_Prerequisites">Prerequisites</a> are  specified separately from 
+<a class="xref" href="Makaretu.Dns.UpdateMessage.html#Makaretu_Dns_UpdateMessage_Updates">Updates</a>, and can specify a
+dependency upon either the previous existence or nonexistence of an
+RRset, or the existence of a single RR.
+</p>
+<p>
+  An update is atomic, i.e., all prerequisites must be satisfied or else
+  no update operations will take place. There are no data dependent
+  error conditions defined after the prerequisites have been met.
+</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_AdditionalResources.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.AdditionalResources%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L141">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_AdditionalResources_" data-uid="Makaretu.Dns.UpdateMessage.AdditionalResources*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_AdditionalResources" data-uid="Makaretu.Dns.UpdateMessage.AdditionalResources">AdditionalResources</h4>
+  <div class="markdown level1 summary"><p>The list of additional resource records.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ResourceRecord&gt; AdditionalResources { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a>&gt;</td>
+        <td><p>Defaults to an empty list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_UpdateMessage_AdditionalResources_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The resources which are related to the update itself, or
+to new resources being added by the update. For example, out of zone glue
+(A RRs referred to by new NS RRs) should be presented here.
+<p>
+The  server can use or ignore out of zone glue, at the discretion of the
+server implementor.
+</p></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_Id.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L42">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_Id_" data-uid="Makaretu.Dns.UpdateMessage.Id*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_Id" data-uid="Makaretu.Dns.UpdateMessage.Id">Id</h4>
+  <div class="markdown level1 summary"><p>A 16 bit identifier assigned by the program that
+generates any kind of update. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort Id { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><p>A unique identifier assigned by the requestor.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_UpdateMessage_Id_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This identifier is copied to
+the corresponding response and can be used by the requestor
+to match up replies to outstanding queries.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_IsResponse.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.IsResponse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L68">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_IsResponse_" data-uid="Makaretu.Dns.UpdateMessage.IsResponse*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_IsResponse" data-uid="Makaretu.Dns.UpdateMessage.IsResponse">IsResponse</h4>
+  <div class="markdown level1 summary"><p>Determines if the message is a response to an update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsResponse { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><strong>true</strong> if <a class="xref" href="Makaretu.Dns.UpdateMessage.html#Makaretu_Dns_UpdateMessage_QR">QR</a> is <strong>true</strong>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_IsUpdate.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.IsUpdate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L60">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_IsUpdate_" data-uid="Makaretu.Dns.UpdateMessage.IsUpdate*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_IsUpdate" data-uid="Makaretu.Dns.UpdateMessage.IsUpdate">IsUpdate</h4>
+  <div class="markdown level1 summary"><p>Determines if the message is an update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUpdate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><strong>true</strong> if <a class="xref" href="Makaretu.Dns.UpdateMessage.html#Makaretu_Dns_UpdateMessage_QR">QR</a> is <strong>false</strong>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_Opcode.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.Opcode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L77">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_Opcode_" data-uid="Makaretu.Dns.UpdateMessage.Opcode*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_Opcode" data-uid="Makaretu.Dns.UpdateMessage.Opcode">Opcode</h4>
+  <div class="markdown level1 summary"><p>The kind of message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MessageOperation Opcode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.MessageOperation.html">MessageOperation</a></td>
+        <td><p>Defaults to <a class="xref" href="Makaretu.Dns.MessageOperation.html#Makaretu_Dns_MessageOperation_Update">Update</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_Prerequisites.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.Prerequisites%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L116">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_Prerequisites_" data-uid="Makaretu.Dns.UpdateMessage.Prerequisites*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_Prerequisites" data-uid="Makaretu.Dns.UpdateMessage.Prerequisites">Prerequisites</h4>
+  <div class="markdown level1 summary"><p>Resource records which must (not) preexist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdatePrerequisiteList Prerequisites { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.UpdatePrerequisiteList.html">UpdatePrerequisiteList</a></td>
+        <td><p>Defaults to an empty list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_QR.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.QR%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L52">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_QR_" data-uid="Makaretu.Dns.UpdateMessage.QR*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_QR" data-uid="Makaretu.Dns.UpdateMessage.QR">QR</h4>
+  <div class="markdown level1 summary"><p>Determines if the message is a request or a response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool QR { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>0 if the message is a request or 1 if the message is a response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_UpdateMessage_QR_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Makaretu.Dns.UpdateMessage.html#Makaretu_Dns_UpdateMessage_IsUpdate">IsUpdate</a></div>
+      <div><a class="xref" href="Makaretu.Dns.UpdateMessage.html#Makaretu_Dns_UpdateMessage_IsResponse">IsResponse</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_Status.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.Status%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L94">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_Status_" data-uid="Makaretu.Dns.UpdateMessage.Status*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_Status" data-uid="Makaretu.Dns.UpdateMessage.Status">Status</h4>
+  <div class="markdown level1 summary"><p>Response code - this 4 bit field is set as part of responses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MessageStatus Status { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.MessageStatus.html">MessageStatus</a></td>
+        <td><p>One of the <a class="xref" href="Makaretu.Dns.MessageStatus.html">MessageStatus</a> values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_Updates.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.Updates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L124">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_Updates_" data-uid="Makaretu.Dns.UpdateMessage.Updates*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_Updates" data-uid="Makaretu.Dns.UpdateMessage.Updates">Updates</h4>
+  <div class="markdown level1 summary"><p>Resource records to be added or deleted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdateResourceList Updates { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.UpdateResourceList.html">UpdateResourceList</a></td>
+        <td><p>Defaults to an empty list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_Z.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.Z%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L86">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_Z_" data-uid="Makaretu.Dns.UpdateMessage.Z*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_Z" data-uid="Makaretu.Dns.UpdateMessage.Z">Z</h4>
+  <div class="markdown level1 summary"><p>Reserved for future use.  Must be zero in all updates
+and responses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Z { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>Must be zero.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_Zone.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.Zone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L104">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_Zone_" data-uid="Makaretu.Dns.UpdateMessage.Zone*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_Zone" data-uid="Makaretu.Dns.UpdateMessage.Zone">Zone</h4>
+  <div class="markdown level1 summary"><p>The zone to update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Question Zone { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.Question.html">Question</a></td>
+        <td><p>Defaults to the empty zone.  <a class="xref" href="Makaretu.Dns.Question.html#Makaretu_Dns_Question_Name">Name</a> is <strong>null</strong>,
+<a class="xref" href="Makaretu.Dns.Question.html#Makaretu_Dns_Question_Class">Class</a> is <a class="xref" href="Makaretu.Dns.Class.html#Makaretu_Dns_Class_IN">IN</a> and
+<a class="xref" href="Makaretu.Dns.Question.html#Makaretu_Dns_Question_Type">Type</a> is SOA (6).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_CreateResponse.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.CreateResponse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L147">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_CreateResponse_" data-uid="Makaretu.Dns.UpdateMessage.CreateResponse*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_CreateResponse" data-uid="Makaretu.Dns.UpdateMessage.CreateResponse">CreateResponse()</h4>
+  <div class="markdown level1 summary"><p>Create a response for the update message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdateMessage CreateResponse()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.UpdateMessage.html">UpdateMessage</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_Read_Makaretu_Dns_DnsReader_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.Read(Makaretu.Dns.DnsReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L158">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_Read_" data-uid="Makaretu.Dns.UpdateMessage.Read*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_Read_Makaretu_Dns_DnsReader_" data-uid="Makaretu.Dns.UpdateMessage.Read(Makaretu.Dns.DnsReader)">Read(DnsReader)</h4>
+  <div class="markdown level1 summary"><p>Reads the DNS object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IDnsSerialiser Read(DnsReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DnsReader.html">DnsReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td><p>The source of the DNS object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.IDnsSerialiser.html">IDnsSerialiser</a></td>
+        <td><p>The final DNS object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_Makaretu_Dns_DnsReader_">DnsObject.Read(DnsReader)</a></div>
+  <h5 id="Makaretu_Dns_UpdateMessage_Read_Makaretu_Dns_DnsReader__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Reading a <a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a> will return a new instance that
+is type specific unless the <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_GetDataLength">GetDataLength()</a>
+is zero.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage_Write_Makaretu_Dns_DnsWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage.Write(Makaretu.Dns.DnsWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L194">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_UpdateMessage_Write_" data-uid="Makaretu.Dns.UpdateMessage.Write*"></a>
+  <h4 id="Makaretu_Dns_UpdateMessage_Write_Makaretu_Dns_DnsWriter_" data-uid="Makaretu.Dns.UpdateMessage.Write(Makaretu.Dns.DnsWriter)">Write(DnsWriter)</h4>
+  <div class="markdown level1 summary"><p>Writes the DNS object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Write(DnsWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DnsWriter.html">DnsWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>The destination of the DNS object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Write_Makaretu_Dns_DnsWriter_">DnsObject.Write(DnsWriter)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Makaretu.Dns.IDnsSerialiser.html">IDnsSerialiser</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><span><a href="https://tools.ietf.org/html/rfc2136">https://tools.ietf.org/html/rfc2136</a></span></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_UpdateMessage.md&amp;value=---%0Auid%3A%20Makaretu.Dns.UpdateMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/UpdateMessage.cs/#L28" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

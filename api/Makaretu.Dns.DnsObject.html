@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DnsObject
    | DNS Model ">
-    <meta name="generator" content="docfx 2.32.0.0">
+    <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,6 +83,7 @@
       <div class="level2"><a class="xref" href="Makaretu.Dns.Message.html">Message</a></div>
       <div class="level2"><a class="xref" href="Makaretu.Dns.Question.html">Question</a></div>
       <div class="level2"><a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a></div>
+      <div class="level2"><a class="xref" href="Makaretu.Dns.UpdateMessage.html">UpdateMessage</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -91,25 +92,25 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Makaretu.Dns.html">Makaretu.Dns</a></h6>
@@ -232,7 +233,8 @@ considered equal.</p>
   </table>
   <h5 id="Makaretu_Dns_DnsObject_Read_Makaretu_Dns_DnsReader__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Reading a <a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a> will return a new instance that
-is type specific.</p>
+is type specific unless the <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_GetDataLength">GetDataLength()</a>
+is zero.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
