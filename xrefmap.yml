@@ -65,6 +65,77 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.AAAARecord.WriteData
   nameWithType: AAAARecord.WriteData
+- uid: Makaretu.Dns.AFSDBRecord
+  name: AFSDBRecord
+  href: api/Makaretu.Dns.AFSDBRecord.html
+  commentId: T:Makaretu.Dns.AFSDBRecord
+  fullName: Makaretu.Dns.AFSDBRecord
+  nameWithType: AFSDBRecord
+- uid: Makaretu.Dns.AFSDBRecord.#ctor
+  name: AFSDBRecord()
+  href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord__ctor
+  commentId: M:Makaretu.Dns.AFSDBRecord.#ctor
+  fullName: Makaretu.Dns.AFSDBRecord.AFSDBRecord()
+  nameWithType: AFSDBRecord.AFSDBRecord()
+- uid: Makaretu.Dns.AFSDBRecord.#ctor*
+  name: AFSDBRecord
+  href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord__ctor_
+  commentId: Overload:Makaretu.Dns.AFSDBRecord.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Dns.AFSDBRecord.AFSDBRecord
+  nameWithType: AFSDBRecord.AFSDBRecord
+- uid: Makaretu.Dns.AFSDBRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  name: ReadData(DnsReader, Int32)
+  href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_
+  commentId: M:Makaretu.Dns.AFSDBRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  fullName: Makaretu.Dns.AFSDBRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
+  nameWithType: AFSDBRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.AFSDBRecord.ReadData*
+  name: ReadData
+  href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord_ReadData_
+  commentId: Overload:Makaretu.Dns.AFSDBRecord.ReadData
+  isSpec: "True"
+  fullName: Makaretu.Dns.AFSDBRecord.ReadData
+  nameWithType: AFSDBRecord.ReadData
+- uid: Makaretu.Dns.AFSDBRecord.Subtype
+  name: Subtype
+  href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord_Subtype
+  commentId: P:Makaretu.Dns.AFSDBRecord.Subtype
+  fullName: Makaretu.Dns.AFSDBRecord.Subtype
+  nameWithType: AFSDBRecord.Subtype
+- uid: Makaretu.Dns.AFSDBRecord.Subtype*
+  name: Subtype
+  href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord_Subtype_
+  commentId: Overload:Makaretu.Dns.AFSDBRecord.Subtype
+  isSpec: "True"
+  fullName: Makaretu.Dns.AFSDBRecord.Subtype
+  nameWithType: AFSDBRecord.Subtype
+- uid: Makaretu.Dns.AFSDBRecord.Target
+  name: Target
+  href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord_Target
+  commentId: P:Makaretu.Dns.AFSDBRecord.Target
+  fullName: Makaretu.Dns.AFSDBRecord.Target
+  nameWithType: AFSDBRecord.Target
+- uid: Makaretu.Dns.AFSDBRecord.Target*
+  name: Target
+  href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord_Target_
+  commentId: Overload:Makaretu.Dns.AFSDBRecord.Target
+  isSpec: "True"
+  fullName: Makaretu.Dns.AFSDBRecord.Target
+  nameWithType: AFSDBRecord.Target
+- uid: Makaretu.Dns.AFSDBRecord.WriteData(Makaretu.Dns.DnsWriter)
+  name: WriteData(DnsWriter)
+  href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord_WriteData_Makaretu_Dns_DnsWriter_
+  commentId: M:Makaretu.Dns.AFSDBRecord.WriteData(Makaretu.Dns.DnsWriter)
+  fullName: Makaretu.Dns.AFSDBRecord.WriteData(Makaretu.Dns.DnsWriter)
+  nameWithType: AFSDBRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.AFSDBRecord.WriteData*
+  name: WriteData
+  href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord_WriteData_
+  commentId: Overload:Makaretu.Dns.AFSDBRecord.WriteData
+  isSpec: "True"
+  fullName: Makaretu.Dns.AFSDBRecord.WriteData
+  nameWithType: AFSDBRecord.WriteData
 - uid: Makaretu.Dns.ARecord
   name: ARecord
   href: api/Makaretu.Dns.ARecord.html
