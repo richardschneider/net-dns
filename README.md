@@ -14,6 +14,9 @@ DNS data model with serializer/deserializer for the wire format.
 - CI on Travis (Ubuntu Trusty) and AppVeyor (Windows Server 2016)
 - Supports compressed domain names
 - Supports multiple strings in TXT records
+- Data models for
+  - [RFC 1035](https://tools.ietf.org/html/rfc1035) Domain Names (DNS)
+  - [RFC 2136](https://tools.ietf.org/html/rfc2136) Dynamic Updates (DNS UPDATE)
 
 ## Getting started
 
