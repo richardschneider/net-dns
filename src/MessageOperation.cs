@@ -16,7 +16,7 @@ namespace Makaretu.Dns
         Query = 0,
 
         /// <summary>
-        ///   Inverse query.
+        ///   Inverse query (obsolete), see <see href="https://tools.ietf.org/html/rfc3425"/>.
         /// </summary>
         InverseQuery = 1,
 
