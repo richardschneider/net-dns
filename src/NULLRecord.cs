@@ -10,7 +10,7 @@ namespace Makaretu.Dns
     /// </summary>
     /// <remarks>
     ///  NULL records cause no additional section processing.  NULL RRs are not
-    ///  allowed in master files.NULLs are used as placeholders in some
+    ///  allowed in master files. NULLs are used as placeholders in some
     ///  experimental extensions of the DNS.
     /// </remarks>
     public class NULLRecord : ResourceRecord

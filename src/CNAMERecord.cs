@@ -10,7 +10,7 @@ namespace Makaretu.Dns
     /// </summary>
     /// <remarks>
     ///  CNAME RRs cause no additional section processing, but name servers may
-    ///  choose to restart the query at the canonical name in certain cases.See
+    ///  choose to restart the query at the canonical name in certain cases. See
     ///  the description of name server logic in [RFC - 1034] for details.
     /// </remarks>
     public class CNAMERecord : ResourceRecord

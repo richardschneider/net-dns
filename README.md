@@ -16,7 +16,10 @@ DNS data model with serializer/deserializer for the wire format.
 - Supports multiple strings in TXT records
 - Data models for
   - [RFC 1035](https://tools.ietf.org/html/rfc1035) Domain Names (DNS)
+  - [RFC 1183](https://tools.ietf.org/html/rfc1183) New DNS RR Definitions
   - [RFC 2136](https://tools.ietf.org/html/rfc2136) Dynamic Updates (DNS UPDATE)
+  - [RFC 3599](https://tools.ietf.org/html/rfc3596) DNS Extensions to Support IPv6
+  - [RFC 6672](https://tools.ietf.org/html/rfc6672) DNAME Redirection in the DNS
 
 ## Getting started
 

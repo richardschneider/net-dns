@@ -6,7 +6,7 @@ using System.Text;
 namespace Makaretu.Dns
 {
     /// <summary>
-    ///   Text strings
+    ///   Text strings.
     /// </summary>
     /// <remarks>
     ///   TXT RRs are used to hold descriptive text.  The semantics of the text

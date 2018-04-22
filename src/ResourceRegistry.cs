@@ -34,6 +34,7 @@ namespace Makaretu.Dns
             Register<NSRecord>();
             Register<NULLRecord>();
             Register<PTRRecord>();
+            Register<RPRecord>();
             Register<SOARecord>();
             Register<SRVRecord>();
             Register<TXTRecord>();

@@ -7,18 +7,19 @@ A [resource record](xref:Makaretu.Dns.ResourceRecord) (RR) contains some informa
 
 The following resource records are implemented
 
-- [A](xref:Makaretu.Dns.ARecord)
-- [AAAA](xref:Makaretu.Dns.AAAARecord)
-- [CNAME](xref:Makaretu.Dns.CNAMERecord)
-- [DNAME](xref:Makaretu.Dns.DNAMERecord)
-- [HINFO](xref:Makaretu.Dns.HINFORecord)
-- [MX](xref:Makaretu.Dns.MXRecord)
-- [NS](xref:Makaretu.Dns.NSRecord)
-- [NULL](xref:Makaretu.Dns.NULLRecord)
-- [PTR](xref:Makaretu.Dns.PTRRecord)
-- [SOA](xref:Makaretu.Dns.SOARecord)
-- [SRV](xref:Makaretu.Dns.SRVRecord)
-- [TXT](xref:Makaretu.Dns.TXTRecord)
+- [A](xref:Makaretu.Dns.ARecord) IPv4
+- [AAAA](xref:Makaretu.Dns.AAAARecord) IPv6
+- [CNAME](xref:Makaretu.Dns.CNAMERecord) Alias
+- [DNAME](xref:Makaretu.Dns.DNAMERecord) Alias for a name and all its subnames
+- [HINFO](xref:Makaretu.Dns.HINFORecord) Host Info
+- [MX](xref:Makaretu.Dns.MXRecord) Mail Exchange
+- [NS](xref:Makaretu.Dns.NSRecord) Name Server
+- [NULL](xref:Makaretu.Dns.NULLRecord) EXPERIMENTAL
+- [PTR](xref:Makaretu.Dns.PTRRecord) Domain Name Pointer
+- [RP](xref:Makaretu.Dns.RPRecord) Responsible Person
+- [SOA](xref:Makaretu.Dns.SOARecord) Start Of Authority
+- [SRV](xref:Makaretu.Dns.SRVRecord) Servers
+- [TXT](xref:Makaretu.Dns.TXTRecord) Freeform text
 
 For all other resource records an [UnknownRecord](xref:Makaretu.Dns.UnknownRecord) is used.
 

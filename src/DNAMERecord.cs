@@ -6,12 +6,12 @@ using System.Text;
 namespace Makaretu.Dns
 {
     /// <summary>
-    ///   The canonical name for an alias.
+    ///   Alias for a name and all its subnames.
     /// </summary>
     /// <remarks>
-    ///  CNAME RRs cause no additional section processing, but name servers may
-    ///  choose to restart the query at the canonical name in certain cases.See
-    ///  the description of name server logic in [RFC - 1034] for details.
+    ///  Alias for a name and all its subnames, unlike <see cref="CNAMERecord"/>, which is an 
+    ///  alias for only the exact name. Like a CNAME record, the DNS lookup will continue by 
+    ///  retrying the lookup with the new name.
     /// </remarks>
     public class DNAMERecord : ResourceRecord
     {
