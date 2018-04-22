@@ -70,6 +70,12 @@ namespace Makaretu.Dns
                 Id = 1234
             };
             expected.Zone.Name = "emanon.org";
+            expected.Prerequisites
+                .MustExist("foo.emanon.org")
+                .MustNotExist("bar.emanon.org");
+            expected.Updates
+                .AddResource(new ARecord { Name = "bar.emanon.org", Address = IPAddress.Parse("127.0.0.1") })
+                .DeleteResource("foo.emanon.org");
             var actual = (UpdateMessage)new UpdateMessage().Read(expected.ToByteArray());
             Assert.AreEqual(expected.Id, actual.Id);
             Assert.AreEqual(expected.IsUpdate, actual.IsUpdate);
