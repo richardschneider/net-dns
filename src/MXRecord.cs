@@ -20,7 +20,7 @@ namespace Makaretu.Dns
         /// </summary>
         public MXRecord() : base()
         {
-            Type = 18;
+            Type = 15;
         }
 
         /// <summary>
