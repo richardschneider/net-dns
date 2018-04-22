@@ -9,6 +9,7 @@ The following resource records are implemented
 
 - [A](xref:Makaretu.Dns.ARecord) IPv4
 - [AAAA](xref:Makaretu.Dns.AAAARecord) IPv6
+- [AFSDB](xref:Makaretu.Dns.AFSDBRecord) AFS Database
 - [CNAME](xref:Makaretu.Dns.CNAMERecord) Alias
 - [DNAME](xref:Makaretu.Dns.DNAMERecord) Alias for a name and all its subnames
 - [HINFO](xref:Makaretu.Dns.HINFORecord) Host Info

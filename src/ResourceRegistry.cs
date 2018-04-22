@@ -26,6 +26,7 @@ namespace Makaretu.Dns
             Records = new Dictionary<int, Func<ResourceRecord>>();
             Register<ARecord>();
             Register<AAAARecord>();
+            Register<AFSDBRecord>();
             Register<CNAMERecord>();
             Register<DNAMERecord>();
             Register<HINFORecord>();

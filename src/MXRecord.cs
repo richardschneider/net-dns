@@ -20,20 +20,24 @@ namespace Makaretu.Dns
         /// </summary>
         public MXRecord() : base()
         {
-            Type = 15;
+            Type = 18;
         }
 
         /// <summary>
-        ///  A 16 bit integer which specifies the preference given to
-        ///  this RR among others at the same owner.Lower values
-        ///  are preferred.
+        ///  The preference given to this RR among others at the same owner. 
         /// </summary>
+        /// <value>
+        ///   Lower values are preferred.
+        /// </value>
         public ushort Preference { get; set; }
 
         /// <summary>
         ///  A domain-name which specifies a host willing to act as
         ///  a mail exchange for the owner name.
         /// </summary>
+        /// <value>
+        ///   The name of an mail exchange.
+        /// </value>
         public string Exchange { get; set; }
 
 
