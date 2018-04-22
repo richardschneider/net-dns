@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net;
+using System.Linq;
 using System.Text;
 
 namespace Makaretu.Dns
@@ -45,5 +45,6 @@ namespace Makaretu.Dns
             writer.WriteUInt16((ushort)TypeBitmaps.Length);
             writer.WriteBytes(TypeBitmaps);
         }
+
     }
 }

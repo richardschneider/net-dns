@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Makaretu.Dns
@@ -26,5 +27,6 @@ namespace Makaretu.Dns
         {
             writer.WriteBytes(Data);
         }
+
     }
 }

@@ -50,5 +50,6 @@ namespace Makaretu.Dns
             writer.WriteUInt16(Preference);
             writer.WriteDomainName(Exchange);
         }
+
     }
 }

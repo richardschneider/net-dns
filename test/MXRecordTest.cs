@@ -27,5 +27,26 @@ namespace Makaretu.Dns
             Assert.AreEqual(a.Preference, b.Preference);
             Assert.AreEqual(a.Exchange, b.Exchange);
         }
+
+        [TestMethod]
+        public void Equality()
+        {
+            var a = new MXRecord
+            {
+                Name = "emanon.org",
+                Preference = 10,
+                Exchange = "mail.emanon.org"
+            };
+            var b = new MXRecord
+            {
+                Name = "emanon.org",
+                Preference = 11,
+                Exchange = "mailx.emanon.org"
+            };
+            Assert.IsTrue(a.Equals(a));
+            Assert.IsFalse(a.Equals(b));
+            Assert.IsFalse(a.Equals(null));
+        }
+
     }
 }

@@ -50,5 +50,6 @@ namespace Makaretu.Dns
             writer.WriteString(Cpu);
             writer.WriteString(OS);
         }
+
     }
 }

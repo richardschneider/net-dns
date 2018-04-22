@@ -25,5 +25,23 @@ namespace Makaretu.Dns
             Assert.AreEqual(a.TTL, b.TTL);
             Assert.AreEqual(a.Address, b.Address);
         }
+
+        [TestMethod]
+        public void Equality()
+        {
+            var a = new AAAARecord
+            {
+                Name = "emanon.org",
+                Address = IPAddress.Parse("2406:e001:13c7:1:7173:ef8:852f:25cb")
+            };
+            var b = new AAAARecord
+            {
+                Name = "emanon.org",
+                Address = IPAddress.Parse("2406:e001:13c7:1:7173:ef8:852f:25ce")
+            };
+            Assert.IsTrue(a.Equals(a));
+            Assert.IsFalse(a.Equals(b));
+            Assert.IsFalse(a.Equals(null));
+        }
     }
 }

@@ -41,5 +41,6 @@ namespace Makaretu.Dns
         {
             writer.WriteDomainName(Target, uncompressed: true);
         }
+
     }
 }

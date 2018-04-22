@@ -73,5 +73,6 @@ namespace Makaretu.Dns
             writer.WriteUInt16(Port);
             writer.WriteDomainName(Target);
         }
+
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 namespace Makaretu.Dns
 {
     /// <summary>
-    ///   The type of query.
+    ///   The type of <see cref="Message"/>.
     /// </summary>
     /// <seealso cref="Message.Opcode"/>
     public enum MessageOperation : byte
@@ -23,6 +23,11 @@ namespace Makaretu.Dns
         /// <summary>
         ///   A server status request.
         /// </summary>
-        Status = 2
+        Status = 2,
+
+        /// <summary>
+        ///   Update message, see <see href="https://tools.ietf.org/html/rfc2136"/>.
+        /// </summary>
+        Update = 5
     }
 }

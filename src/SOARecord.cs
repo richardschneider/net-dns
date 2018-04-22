@@ -102,5 +102,6 @@ namespace Makaretu.Dns
             writer.WriteTimeSpan(Expire);
             writer.WriteTimeSpan(Minimum);
         }
+
     }
 }

@@ -99,7 +99,7 @@ namespace Makaretu.Dns
         public static bool NamesEquals(string a, string b)
         {
 #if NETSTANDARD14
-            return a.ToLowerInvariant() == b.ToLowerInvariant();
+            return a?.ToLowerInvariant() == b?.ToLowerInvariant();
 #else
             return 0 == StringComparer.InvariantCultureIgnoreCase.Compare(a, b);
 #endif

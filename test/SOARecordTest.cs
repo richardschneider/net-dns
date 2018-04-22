@@ -37,5 +37,37 @@ namespace Makaretu.Dns
             Assert.AreEqual(a.Refresh, b.Refresh);
             Assert.AreEqual(a.Minimum, b.Minimum);
         }
+
+        [TestMethod]
+        public void Equality()
+        {
+            var a = new SOARecord
+            {
+                Name = "owner-name",
+                PrimaryName = "emanaon.org",
+                Mailbox = "hostmaster.emanon.org",
+                SerialNumber = 1,
+                Refresh = TimeSpan.FromDays(1),
+                Retry = TimeSpan.FromMinutes(20),
+                Expire = TimeSpan.FromDays(7 * 3),
+                Minimum = TimeSpan.FromHours(2)
+            };
+            var b = new SOARecord
+            {
+                Name = "owner-name",
+                PrimaryName = "emanaon.org",
+                Mailbox = "hostmaster-x.emanon.org",
+                SerialNumber = 1,
+                Refresh = TimeSpan.FromDays(1),
+                Retry = TimeSpan.FromMinutes(20),
+                Expire = TimeSpan.FromDays(7 * 3),
+                Minimum = TimeSpan.FromHours(2)
+            };
+            Assert.IsTrue(a.Equals(a));
+            Assert.IsFalse(a.Equals(b));
+            Assert.IsFalse(a.Equals(null));
+        }
+
+
     }
 }

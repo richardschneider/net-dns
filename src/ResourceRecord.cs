@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace Makaretu.Dns
@@ -31,7 +33,7 @@ namespace Makaretu.Dns
 
         /// <summary>
         ///   An owner name, i.e., the name of the node to which this
-        ///   resource record pertains
+        ///   resource record pertains.
         /// </summary>
         public string Name { get; set; }
 
@@ -68,6 +70,41 @@ namespace Makaretu.Dns
         /// <seealso cref="DefaultTTL"/>
         public TimeSpan TTL { get; set; } = DefaultTTL;
 
+        /// <summary>
+        ///   The length of the resource specific data.
+        /// </summary>
+        /// <returns>
+        ///   Number of bytes to represent the resource specific data.
+        /// </returns>
+        /// <remarks>
+        ///   This is referred to as the <c>RDLENGTH</c> in the DNS spec.
+        /// </remarks>
+        public int GetDataLength()
+        {
+            using (var ms = new MemoryStream())
+            {
+                var writer = new DnsWriter(ms);
+                this.WriteData(writer);
+                return (int) ms.Length;
+            }
+        }
+
+        /// <summary>
+        ///   The resource specific data.
+        /// </summary>
+        /// <returns>
+        ///   A byte array, never <b>null</b>.
+        /// </returns>
+        public byte[] GetData()
+        {
+            using (var ms = new MemoryStream())
+            {
+                var writer = new DnsWriter(ms);
+                this.WriteData(writer);
+                return ms.ToArray();
+            }
+        }
+
         /// <inheritdoc />
         public override IDnsSerialiser Read(DnsReader reader)
         {
@@ -77,6 +114,10 @@ namespace Makaretu.Dns
             Class = (Class)reader.ReadUInt16();
             TTL = reader.ReadTimeSpan();
             int length = reader.ReadUInt16();
+
+            // If zero length, then just return a ResourceRecord.
+            if (length == 0)
+                return this;
 
             // Find a specific class for the TYPE or default
             // to UnknownRecord.
@@ -114,7 +155,6 @@ namespace Makaretu.Dns
         /// </remarks>
         protected virtual void ReadData(DnsReader reader, int length)
         {
-            throw new NotImplementedException();
         }
 
         /// <inheritdoc />
@@ -141,7 +181,81 @@ namespace Makaretu.Dns
         /// </remarks>
         protected virtual void WriteData(DnsWriter writer)
         {
-            throw new NotImplementedException();
         }
+
+        /// <summary>
+        ///   Determines if the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">
+        ///   The object to compare.
+        /// </param>
+        /// <returns>
+        ///   <b>true</b> if the specified object is equal to the current object; otherwise, <b>false</b>.
+        /// </returns>
+        /// <remarks>
+        ///   Two Resource Records are considered equal if their <see cref="Name"/>, 
+        ///   <see cref="Class"/>, <see cref="Type"/> and <see cref="GetData">data fields</see>
+        ///   are equal. Note that the <see cref="TTL"/> field is explicitly 
+        ///   excluded from the comparison.
+        /// </remarks>
+        public override bool Equals(object obj)
+        {
+            var that = obj as ResourceRecord;
+            if (that == null) return false;
+
+            if (!DnsObject.NamesEquals(this.Name, that.Name)) return false;
+            if (this.Class != that.Class) return false;
+            if (this.Type != that.Type) return false;
+
+            return this.GetData().SequenceEqual(that.GetData());
+        }
+
+        /// <summary>
+        ///   Value equality.
+        /// </summary>
+        /// <remarks>
+        ///   Two Resource Records are considered equal if their <see cref="Name"/>, 
+        ///   <see cref="Class"/>, <see cref="Type"/> and data fields
+        ///   are equal. Note that the <see cref="TTL"/> field is explicitly 
+        ///   excluded from the comparison.
+        /// </remarks>
+        public static bool operator ==(ResourceRecord a, ResourceRecord b)
+        {
+            if (object.ReferenceEquals(a, b)) return true;
+            if (object.ReferenceEquals(a, null)) return false;
+            if (object.ReferenceEquals(b, null)) return false;
+
+            return a.Equals(b);
+        }
+
+        /// <summary>
+        ///   Value inequality.
+        /// </summary>
+        /// <remarks>
+        ///   Two Resource Records are considered equal if their <see cref="Name"/>, 
+        ///   <see cref="Class"/>, <see cref="Type"/> and data fields
+        ///   are equal. Note that the <see cref="TTL"/> field is explicitly 
+        ///   excluded from the comparison.
+        /// </remarks>
+        public static bool operator !=(ResourceRecord a, ResourceRecord b)
+        {
+            if (object.ReferenceEquals(a, b)) return false;
+            if (object.ReferenceEquals(a, null)) return true;
+            if (object.ReferenceEquals(b, null)) return true;
+
+            return !a.Equals(b);
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            return 
+                Name?.ToLowerInvariant().GetHashCode() ?? 0
+                ^ Class.GetHashCode()
+                ^ Type.GetHashCode()
+                ^ GetData().Aggregate(0, (r, b) => r ^ b.GetHashCode());
+
+        }
+
     }
 }

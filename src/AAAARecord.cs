@@ -36,5 +36,6 @@ namespace Makaretu.Dns
         {
             writer.WriteIPAddress(Address);
         }
+
     }
 }

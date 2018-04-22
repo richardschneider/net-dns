@@ -27,5 +27,26 @@ namespace Makaretu.Dns
             Assert.AreEqual(a.Cpu, b.Cpu);
             Assert.AreEqual(a.OS, b.OS);
         }
+
+        [TestMethod]
+        public void Equality()
+        {
+            var a = new HINFORecord
+            {
+                Name = "emanaon.org",
+                Cpu = "DEC-2020",
+                OS = "TOPS20"
+            };
+            var b = new HINFORecord
+            {
+                Name = "emanaon.org",
+                Cpu = "DEC-2040",
+                OS = "TOPS20"
+            };
+            Assert.IsTrue(a.Equals(a));
+            Assert.IsFalse(a.Equals(b));
+            Assert.IsFalse(a.Equals(null));
+        }
+
     }
 }
