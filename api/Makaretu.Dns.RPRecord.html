@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class TXTRecord
+    <title>Class RPRecord
    | DNS Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class TXTRecord
+    <meta name="title" content="Class RPRecord
    | DNS Model ">
     <meta name="generator" content="docfx 2.34.0.0">
     
@@ -68,12 +68,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Makaretu.Dns.TXTRecord">
+            <article class="content wrap" id="_content" data-uid="Makaretu.Dns.RPRecord">
   
   
-  <h1 id="Makaretu_Dns_TXTRecord" data-uid="Makaretu.Dns.TXTRecord" class="text-break">Class TXTRecord
+  <h1 id="Makaretu_Dns_RPRecord" data-uid="Makaretu.Dns.RPRecord" class="text-break">Class RPRecord
   </h1>
-  <div class="markdown level0 summary"><p>Text strings.</p>
+  <div class="markdown level0 summary"><p>The person responsible for a name.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -81,7 +81,7 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="Makaretu.Dns.DnsObject.html">DnsObject</a></div>
     <div class="level2"><a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a></div>
-    <div class="level3"><span class="xref">TXTRecord</span></div>
+    <div class="level3"><span class="xref">RPRecord</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -161,49 +161,48 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Makaretu.Dns.html">Makaretu.Dns</a></h6>
   <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
-  <h5 id="Makaretu_Dns_TXTRecord_syntax">Syntax</h5>
+  <h5 id="Makaretu_Dns_RPRecord_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TXTRecord : ResourceRecord, IDnsSerialiser</code></pre>
+    <pre><code class="lang-csharp hljs">public class RPRecord : ResourceRecord, IDnsSerialiser</code></pre>
   </div>
-  <h5 id="Makaretu_Dns_TXTRecord_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>TXT RRs are used to hold descriptive text.  The semantics of the text
-depends on the domain where it is found.</p>
+  <h5 id="Makaretu_Dns_RPRecord_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The responsible person identification to any name in the DNS.</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_TXTRecord__ctor.md&amp;value=---%0Auid%3A%20Makaretu.Dns.TXTRecord.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_RPRecord__ctor.md&amp;value=---%0Auid%3A%20Makaretu.Dns.RPRecord.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/TXTRecord.cs/#L20">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/RPRecord.cs/#L20">View Source</a>
   </span>
-  <a id="Makaretu_Dns_TXTRecord__ctor_" data-uid="Makaretu.Dns.TXTRecord.#ctor*"></a>
-  <h4 id="Makaretu_Dns_TXTRecord__ctor" data-uid="Makaretu.Dns.TXTRecord.#ctor">TXTRecord()</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Makaretu.Dns.TXTRecord.html">TXTRecord</a> class.</p>
+  <a id="Makaretu_Dns_RPRecord__ctor_" data-uid="Makaretu.Dns.RPRecord.#ctor*"></a>
+  <h4 id="Makaretu_Dns_RPRecord__ctor" data-uid="Makaretu.Dns.RPRecord.#ctor">RPRecord()</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Makaretu.Dns.RPRecord.html">RPRecord</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TXTRecord()</code></pre>
+    <pre><code class="lang-csharp hljs">public RPRecord()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_TXTRecord_Strings.md&amp;value=---%0Auid%3A%20Makaretu.Dns.TXTRecord.Strings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_RPRecord_Mailbox.md&amp;value=---%0Auid%3A%20Makaretu.Dns.RPRecord.Mailbox%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/TXTRecord.cs/#L28">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/RPRecord.cs/#L31">View Source</a>
   </span>
-  <a id="Makaretu_Dns_TXTRecord_Strings_" data-uid="Makaretu.Dns.TXTRecord.Strings*"></a>
-  <h4 id="Makaretu_Dns_TXTRecord_Strings" data-uid="Makaretu.Dns.TXTRecord.Strings">Strings</h4>
-  <div class="markdown level1 summary"><p>The sequence of strings.</p>
+  <a id="Makaretu_Dns_RPRecord_Mailbox_" data-uid="Makaretu.Dns.RPRecord.Mailbox*"></a>
+  <h4 id="Makaretu_Dns_RPRecord_Mailbox" data-uid="Makaretu.Dns.RPRecord.Mailbox">Mailbox</h4>
+  <div class="markdown level1 summary"><p>The mailbox for the responsible person.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Strings { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Mailbox { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -215,8 +214,41 @@ depends on the domain where it is found.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Defaults to &quot;&quot;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_RPRecord_TextName.md&amp;value=---%0Auid%3A%20Makaretu.Dns.RPRecord.TextName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/RPRecord.cs/#L39">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_RPRecord_TextName_" data-uid="Makaretu.Dns.RPRecord.TextName*"></a>
+  <h4 id="Makaretu_Dns_RPRecord_TextName" data-uid="Makaretu.Dns.RPRecord.TextName">TextName</h4>
+  <div class="markdown level1 summary"><p>The name of TXT records for the responsible person.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TextName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Defaults to &quot;&quot;.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -224,13 +256,13 @@ depends on the domain where it is found.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_TXTRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.TXTRecord.ReadData(Makaretu.Dns.DnsReader%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_RPRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.RPRecord.ReadData(Makaretu.Dns.DnsReader%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/TXTRecord.cs/#L31">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/RPRecord.cs/#L42">View Source</a>
   </span>
-  <a id="Makaretu_Dns_TXTRecord_ReadData_" data-uid="Makaretu.Dns.TXTRecord.ReadData*"></a>
-  <h4 id="Makaretu_Dns_TXTRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_" data-uid="Makaretu.Dns.TXTRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)">ReadData(DnsReader, Int32)</h4>
+  <a id="Makaretu_Dns_RPRecord_ReadData_" data-uid="Makaretu.Dns.RPRecord.ReadData*"></a>
+  <h4 id="Makaretu_Dns_RPRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_" data-uid="Makaretu.Dns.RPRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)">ReadData(DnsReader, Int32)</h4>
   <div class="markdown level1 summary"><p>Read the data that is specific to the resource record <span class="xref">System.Type</span>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -264,18 +296,18 @@ depends on the domain where it is found.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_">ResourceRecord.ReadData(DnsReader, Int32)</a></div>
-  <h5 id="Makaretu_Dns_TXTRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32__remarks">Remarks</h5>
+  <h5 id="Makaretu_Dns_RPRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Derived classes must implement this method.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_TXTRecord_WriteData_Makaretu_Dns_DnsWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.TXTRecord.WriteData(Makaretu.Dns.DnsWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_RPRecord_WriteData_Makaretu_Dns_DnsWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.RPRecord.WriteData(Makaretu.Dns.DnsWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/TXTRecord.cs/#L42">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/RPRecord.cs/#L49">View Source</a>
   </span>
-  <a id="Makaretu_Dns_TXTRecord_WriteData_" data-uid="Makaretu.Dns.TXTRecord.WriteData*"></a>
-  <h4 id="Makaretu_Dns_TXTRecord_WriteData_Makaretu_Dns_DnsWriter_" data-uid="Makaretu.Dns.TXTRecord.WriteData(Makaretu.Dns.DnsWriter)">WriteData(DnsWriter)</h4>
+  <a id="Makaretu_Dns_RPRecord_WriteData_" data-uid="Makaretu.Dns.RPRecord.WriteData*"></a>
+  <h4 id="Makaretu_Dns_RPRecord_WriteData_Makaretu_Dns_DnsWriter_" data-uid="Makaretu.Dns.RPRecord.WriteData(Makaretu.Dns.DnsWriter)">WriteData(DnsWriter)</h4>
   <div class="markdown level1 summary"><p>Write the data that is specific to the resource record <span class="xref">System.Type</span>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -303,12 +335,16 @@ depends on the domain where it is found.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_WriteData_Makaretu_Dns_DnsWriter_">ResourceRecord.WriteData(DnsWriter)</a></div>
-  <h5 id="Makaretu_Dns_TXTRecord_WriteData_Makaretu_Dns_DnsWriter__remarks">Remarks</h5>
+  <h5 id="Makaretu_Dns_RPRecord_WriteData_Makaretu_Dns_DnsWriter__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Derived classes must implement this method.</p>
 </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Makaretu.Dns.IDnsSerialiser.html">IDnsSerialiser</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><span><a href="https://tools.ietf.org/html/rfc1183">https://tools.ietf.org/html/rfc1183</a></span></div>
   </div>
 </article>
           </div>
@@ -318,10 +354,10 @@ depends on the domain where it is found.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_TXTRecord.md&amp;value=---%0Auid%3A%20Makaretu.Dns.TXTRecord%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_RPRecord.md&amp;value=---%0Auid%3A%20Makaretu.Dns.RPRecord%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/TXTRecord.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/RPRecord.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
