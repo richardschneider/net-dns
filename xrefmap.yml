@@ -1063,6 +1063,12 @@ references:
   commentId: F:Makaretu.Dns.MessageOperation.InverseQuery
   fullName: Makaretu.Dns.MessageOperation.InverseQuery
   nameWithType: MessageOperation.InverseQuery
+- uid: Makaretu.Dns.MessageOperation.Notify
+  name: Notify
+  href: api/Makaretu.Dns.MessageOperation.html#Makaretu_Dns_MessageOperation_Notify
+  commentId: F:Makaretu.Dns.MessageOperation.Notify
+  fullName: Makaretu.Dns.MessageOperation.Notify
+  nameWithType: MessageOperation.Notify
 - uid: Makaretu.Dns.MessageOperation.Query
   name: Query
   href: api/Makaretu.Dns.MessageOperation.html#Makaretu_Dns_MessageOperation_Query
