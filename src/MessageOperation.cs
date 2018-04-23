@@ -26,6 +26,11 @@ namespace Makaretu.Dns
         Status = 2,
 
         /// <summary>
+        ///   Zone change, see <see href="https://tools.ietf.org/html/rfc1996"/>
+        /// </summary>
+        Notify = 4,
+
+        /// <summary>
         ///   Update message, see <see href="https://tools.ietf.org/html/rfc2136"/>.
         /// </summary>
         Update = 5
