@@ -62,6 +62,11 @@ msg.AdditionalRecords.Add(new ARecord
 
 ```
 
+# Related projects
+
+- [net-mdns](https://github.com/richardschneider/net-mdns) - client and server for multicast DNS
+- [net-udns](https://github.com/richardschneider/net-udns) - client for unicast DNS
+
 # License
 Copyright © 2018 Richard Schneider (makaretu@gmail.com)
 
