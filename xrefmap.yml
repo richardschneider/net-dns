@@ -563,6 +563,192 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DnsReader.ReadUInt32
   nameWithType: DnsReader.ReadUInt32
+- uid: Makaretu.Dns.DnsType
+  name: DnsType
+  href: api/Makaretu.Dns.DnsType.html
+  commentId: T:Makaretu.Dns.DnsType
+  fullName: Makaretu.Dns.DnsType
+  nameWithType: DnsType
+- uid: Makaretu.Dns.DnsType.A
+  name: A
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_A
+  commentId: F:Makaretu.Dns.DnsType.A
+  fullName: Makaretu.Dns.DnsType.A
+  nameWithType: DnsType.A
+- uid: Makaretu.Dns.DnsType.AAAA
+  name: AAAA
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_AAAA
+  commentId: F:Makaretu.Dns.DnsType.AAAA
+  fullName: Makaretu.Dns.DnsType.AAAA
+  nameWithType: DnsType.AAAA
+- uid: Makaretu.Dns.DnsType.AFSDB
+  name: AFSDB
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_AFSDB
+  commentId: F:Makaretu.Dns.DnsType.AFSDB
+  fullName: Makaretu.Dns.DnsType.AFSDB
+  nameWithType: DnsType.AFSDB
+- uid: Makaretu.Dns.DnsType.ANY
+  name: ANY
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_ANY
+  commentId: F:Makaretu.Dns.DnsType.ANY
+  fullName: Makaretu.Dns.DnsType.ANY
+  nameWithType: DnsType.ANY
+- uid: Makaretu.Dns.DnsType.AXFR
+  name: AXFR
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_AXFR
+  commentId: F:Makaretu.Dns.DnsType.AXFR
+  fullName: Makaretu.Dns.DnsType.AXFR
+  nameWithType: DnsType.AXFR
+- uid: Makaretu.Dns.DnsType.CAA
+  name: CAA
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_CAA
+  commentId: F:Makaretu.Dns.DnsType.CAA
+  fullName: Makaretu.Dns.DnsType.CAA
+  nameWithType: DnsType.CAA
+- uid: Makaretu.Dns.DnsType.CNAME
+  name: CNAME
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_CNAME
+  commentId: F:Makaretu.Dns.DnsType.CNAME
+  fullName: Makaretu.Dns.DnsType.CNAME
+  nameWithType: DnsType.CNAME
+- uid: Makaretu.Dns.DnsType.DNAME
+  name: DNAME
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_DNAME
+  commentId: F:Makaretu.Dns.DnsType.DNAME
+  fullName: Makaretu.Dns.DnsType.DNAME
+  nameWithType: DnsType.DNAME
+- uid: Makaretu.Dns.DnsType.HINFO
+  name: HINFO
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_HINFO
+  commentId: F:Makaretu.Dns.DnsType.HINFO
+  fullName: Makaretu.Dns.DnsType.HINFO
+  nameWithType: DnsType.HINFO
+- uid: Makaretu.Dns.DnsType.MAILA
+  name: MAILA
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_MAILA
+  commentId: F:Makaretu.Dns.DnsType.MAILA
+  fullName: Makaretu.Dns.DnsType.MAILA
+  nameWithType: DnsType.MAILA
+- uid: Makaretu.Dns.DnsType.MAILB
+  name: MAILB
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_MAILB
+  commentId: F:Makaretu.Dns.DnsType.MAILB
+  fullName: Makaretu.Dns.DnsType.MAILB
+  nameWithType: DnsType.MAILB
+- uid: Makaretu.Dns.DnsType.MB
+  name: MB
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_MB
+  commentId: F:Makaretu.Dns.DnsType.MB
+  fullName: Makaretu.Dns.DnsType.MB
+  nameWithType: DnsType.MB
+- uid: Makaretu.Dns.DnsType.MD
+  name: MD
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_MD
+  commentId: F:Makaretu.Dns.DnsType.MD
+  fullName: Makaretu.Dns.DnsType.MD
+  nameWithType: DnsType.MD
+- uid: Makaretu.Dns.DnsType.MF
+  name: MF
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_MF
+  commentId: F:Makaretu.Dns.DnsType.MF
+  fullName: Makaretu.Dns.DnsType.MF
+  nameWithType: DnsType.MF
+- uid: Makaretu.Dns.DnsType.MG
+  name: MG
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_MG
+  commentId: F:Makaretu.Dns.DnsType.MG
+  fullName: Makaretu.Dns.DnsType.MG
+  nameWithType: DnsType.MG
+- uid: Makaretu.Dns.DnsType.MINFO
+  name: MINFO
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_MINFO
+  commentId: F:Makaretu.Dns.DnsType.MINFO
+  fullName: Makaretu.Dns.DnsType.MINFO
+  nameWithType: DnsType.MINFO
+- uid: Makaretu.Dns.DnsType.MR
+  name: MR
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_MR
+  commentId: F:Makaretu.Dns.DnsType.MR
+  fullName: Makaretu.Dns.DnsType.MR
+  nameWithType: DnsType.MR
+- uid: Makaretu.Dns.DnsType.MX
+  name: MX
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_MX
+  commentId: F:Makaretu.Dns.DnsType.MX
+  fullName: Makaretu.Dns.DnsType.MX
+  nameWithType: DnsType.MX
+- uid: Makaretu.Dns.DnsType.NS
+  name: NS
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_NS
+  commentId: F:Makaretu.Dns.DnsType.NS
+  fullName: Makaretu.Dns.DnsType.NS
+  nameWithType: DnsType.NS
+- uid: Makaretu.Dns.DnsType.NSEC
+  name: NSEC
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_NSEC
+  commentId: F:Makaretu.Dns.DnsType.NSEC
+  fullName: Makaretu.Dns.DnsType.NSEC
+  nameWithType: DnsType.NSEC
+- uid: Makaretu.Dns.DnsType.NULL
+  name: "NULL"
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_NULL
+  commentId: F:Makaretu.Dns.DnsType.NULL
+  fullName: Makaretu.Dns.DnsType.NULL
+  nameWithType: DnsType.NULL
+- uid: Makaretu.Dns.DnsType.OPT
+  name: OPT
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_OPT
+  commentId: F:Makaretu.Dns.DnsType.OPT
+  fullName: Makaretu.Dns.DnsType.OPT
+  nameWithType: DnsType.OPT
+- uid: Makaretu.Dns.DnsType.PTR
+  name: PTR
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_PTR
+  commentId: F:Makaretu.Dns.DnsType.PTR
+  fullName: Makaretu.Dns.DnsType.PTR
+  nameWithType: DnsType.PTR
+- uid: Makaretu.Dns.DnsType.RP
+  name: RP
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_RP
+  commentId: F:Makaretu.Dns.DnsType.RP
+  fullName: Makaretu.Dns.DnsType.RP
+  nameWithType: DnsType.RP
+- uid: Makaretu.Dns.DnsType.RRSIG
+  name: RRSIG
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_RRSIG
+  commentId: F:Makaretu.Dns.DnsType.RRSIG
+  fullName: Makaretu.Dns.DnsType.RRSIG
+  nameWithType: DnsType.RRSIG
+- uid: Makaretu.Dns.DnsType.SOA
+  name: SOA
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_SOA
+  commentId: F:Makaretu.Dns.DnsType.SOA
+  fullName: Makaretu.Dns.DnsType.SOA
+  nameWithType: DnsType.SOA
+- uid: Makaretu.Dns.DnsType.SRV
+  name: SRV
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_SRV
+  commentId: F:Makaretu.Dns.DnsType.SRV
+  fullName: Makaretu.Dns.DnsType.SRV
+  nameWithType: DnsType.SRV
+- uid: Makaretu.Dns.DnsType.TXT
+  name: TXT
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_TXT
+  commentId: F:Makaretu.Dns.DnsType.TXT
+  fullName: Makaretu.Dns.DnsType.TXT
+  nameWithType: DnsType.TXT
+- uid: Makaretu.Dns.DnsType.URI
+  name: URI
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_URI
+  commentId: F:Makaretu.Dns.DnsType.URI
+  fullName: Makaretu.Dns.DnsType.URI
+  nameWithType: DnsType.URI
+- uid: Makaretu.Dns.DnsType.WKS
+  name: WKS
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_WKS
+  commentId: F:Makaretu.Dns.DnsType.WKS
+  fullName: Makaretu.Dns.DnsType.WKS
+  nameWithType: DnsType.WKS
 - uid: Makaretu.Dns.DnsWriter
   name: DnsWriter
   href: api/Makaretu.Dns.DnsWriter.html
@@ -2387,12 +2573,12 @@ references:
   commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String)
   fullName: Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String)
   nameWithType: UpdatePrerequisiteList.MustExist(String)
-- uid: Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String,System.UInt16)
-  name: MustExist(String, UInt16)
-  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustExist_System_String_System_UInt16_
-  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String,System.UInt16)
-  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String, System.UInt16)
-  nameWithType: UpdatePrerequisiteList.MustExist(String, UInt16)
+- uid: Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String,Makaretu.Dns.DnsType)
+  name: MustExist(String, DnsType)
+  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustExist_System_String_Makaretu_Dns_DnsType_
+  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String,Makaretu.Dns.DnsType)
+  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String, Makaretu.Dns.DnsType)
+  nameWithType: UpdatePrerequisiteList.MustExist(String, DnsType)
 - uid: Makaretu.Dns.UpdatePrerequisiteList.MustExist*
   name: MustExist
   href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustExist_
@@ -2415,12 +2601,12 @@ references:
   commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String)
   fullName: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String)
   nameWithType: UpdatePrerequisiteList.MustNotExist(String)
-- uid: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String,System.UInt16)
-  name: MustNotExist(String, UInt16)
-  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustNotExist_System_String_System_UInt16_
-  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String,System.UInt16)
-  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String, System.UInt16)
-  nameWithType: UpdatePrerequisiteList.MustNotExist(String, UInt16)
+- uid: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String,Makaretu.Dns.DnsType)
+  name: MustNotExist(String, DnsType)
+  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustNotExist_System_String_Makaretu_Dns_DnsType_
+  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String,Makaretu.Dns.DnsType)
+  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String, Makaretu.Dns.DnsType)
+  nameWithType: UpdatePrerequisiteList.MustNotExist(String, DnsType)
 - uid: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist*
   name: MustNotExist
   href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustNotExist_
@@ -2468,12 +2654,12 @@ references:
   commentId: M:Makaretu.Dns.UpdateResourceList.DeleteResource(System.String)
   fullName: Makaretu.Dns.UpdateResourceList.DeleteResource(System.String)
   nameWithType: UpdateResourceList.DeleteResource(String)
-- uid: Makaretu.Dns.UpdateResourceList.DeleteResource(System.String,System.UInt16)
-  name: DeleteResource(String, UInt16)
-  href: api/Makaretu.Dns.UpdateResourceList.html#Makaretu_Dns_UpdateResourceList_DeleteResource_System_String_System_UInt16_
-  commentId: M:Makaretu.Dns.UpdateResourceList.DeleteResource(System.String,System.UInt16)
-  fullName: Makaretu.Dns.UpdateResourceList.DeleteResource(System.String, System.UInt16)
-  nameWithType: UpdateResourceList.DeleteResource(String, UInt16)
+- uid: Makaretu.Dns.UpdateResourceList.DeleteResource(System.String,Makaretu.Dns.DnsType)
+  name: DeleteResource(String, DnsType)
+  href: api/Makaretu.Dns.UpdateResourceList.html#Makaretu_Dns_UpdateResourceList_DeleteResource_System_String_Makaretu_Dns_DnsType_
+  commentId: M:Makaretu.Dns.UpdateResourceList.DeleteResource(System.String,Makaretu.Dns.DnsType)
+  fullName: Makaretu.Dns.UpdateResourceList.DeleteResource(System.String, Makaretu.Dns.DnsType)
+  nameWithType: UpdateResourceList.DeleteResource(String, DnsType)
 - uid: Makaretu.Dns.UpdateResourceList.DeleteResource*
   name: DeleteResource
   href: api/Makaretu.Dns.UpdateResourceList.html#Makaretu_Dns_UpdateResourceList_DeleteResource_
