@@ -22,7 +22,7 @@ namespace Makaretu.Dns
         /// </summary>
         public HINFORecord() : base()
         {
-            Type = 13;
+            Type = DnsType.HINFO;
             TTL = ResourceRecord.DefaultHostTTL;
         }
 

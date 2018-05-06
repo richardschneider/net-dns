@@ -27,7 +27,7 @@ namespace Makaretu.Dns
         /// </summary>
         public NSRecord() : base()
         {
-            Type = 2;
+            Type = DnsType.NS;
         }
 
         /// <summary>

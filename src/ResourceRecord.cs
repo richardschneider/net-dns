@@ -40,7 +40,7 @@ namespace Makaretu.Dns
         /// <summary>
         ///    One of the RR TYPE codes.
         /// </summary>
-        public ushort Type { get; set; }
+        public DnsType Type { get; set; }
 
         /// <summary>
         ///    One of the RR CLASS codes.
@@ -110,7 +110,7 @@ namespace Makaretu.Dns
         {
             // Read standard properties of a resource record.
             Name = reader.ReadDomainName();
-            Type = reader.ReadUInt16();
+            Type = (DnsType)reader.ReadUInt16();
             Class = (Class)reader.ReadUInt16();
             TTL = reader.ReadTimeSpan();
             int length = reader.ReadUInt16();
@@ -161,7 +161,7 @@ namespace Makaretu.Dns
         public override void Write(DnsWriter writer)
         {
             writer.WriteDomainName(Name);
-            writer.WriteUInt16(Type);
+            writer.WriteUInt16((ushort)Type);
             writer.WriteUInt16((ushort)Class);
             writer.WriteTimeSpan(TTL);
 

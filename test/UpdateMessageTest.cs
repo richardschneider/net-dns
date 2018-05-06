@@ -25,7 +25,7 @@ namespace Makaretu.Dns
             Assert.AreEqual(0, m.Updates.Count);
             Assert.AreEqual(0, m.Z);
             Assert.AreNotEqual(null, m.Zone);
-            Assert.AreEqual(6, m.Zone.Type, "must be SOA");
+            Assert.AreEqual(DnsType.SOA, m.Zone.Type, "must be SOA");
             Assert.AreEqual(Class.IN, m.Zone.Class);
         }
 

@@ -20,7 +20,7 @@ namespace Makaretu.Dns
         /// </summary>
         public NULLRecord() : base()
         {
-            Type = 10;
+            Type = DnsType.NULL;
         }
 
         /// <summary>

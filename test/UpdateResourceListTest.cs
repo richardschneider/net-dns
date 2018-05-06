@@ -41,7 +41,7 @@ namespace Makaretu.Dns
             Assert.AreEqual(Class.ANY, p.Class);
             Assert.AreEqual("www.example.org", p.Name);
             Assert.AreEqual(TimeSpan.Zero, p.TTL);
-            Assert.AreEqual(255, p.Type);
+            Assert.AreEqual(DnsType.ANY, p.Type);
             Assert.AreEqual(0, p.GetDataLength());
         }
 
@@ -49,13 +49,13 @@ namespace Makaretu.Dns
         public void DeleteResource_Name_Type()
         {
             var updates = new UpdateResourceList()
-                .DeleteResource("www.example.org", 1);
+                .DeleteResource("www.example.org", DnsType.A);
             var p = updates.First() as ResourceRecord;
             Assert.IsNotNull(p);
             Assert.AreEqual(Class.ANY, p.Class);
             Assert.AreEqual("www.example.org", p.Name);
             Assert.AreEqual(TimeSpan.Zero, p.TTL);
-            Assert.AreEqual(1, p.Type);
+            Assert.AreEqual(DnsType.A, p.Type);
             Assert.AreEqual(0, p.GetDataLength());
         }
 
@@ -69,7 +69,7 @@ namespace Makaretu.Dns
             Assert.AreEqual(Class.ANY, p.Class);
             Assert.AreEqual("www.example.org", p.Name);
             Assert.AreEqual(TimeSpan.Zero, p.TTL);
-            Assert.AreEqual(1, p.Type);
+            Assert.AreEqual(DnsType.A, p.Type);
             Assert.AreEqual(0, p.GetDataLength());
         }
 

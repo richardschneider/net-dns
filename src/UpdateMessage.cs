@@ -104,7 +104,7 @@ namespace Makaretu.Dns
         public Question Zone { get; set; } = new Question
         {
             Class = Class.IN,
-            Type = new SOARecord().Type
+            Type = DnsType.SOA
         };
 
         /// <summary>

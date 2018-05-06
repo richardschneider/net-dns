@@ -18,8 +18,6 @@ namespace Makaretu.Dns
     /// <seealso href="https://tools.ietf.org/html/rfc2136"/>
     public class UpdateResourceList : List<ResourceRecord>
     {
-        const ushort TypeAny = 255;
-
         /// <summary>
         ///   Add the resource to the zone.
         /// </summary>
@@ -92,7 +90,7 @@ namespace Makaretu.Dns
             {
                 Name = name,
                 Class = Class.ANY,
-                Type = TypeAny,
+                Type = DnsType.ANY,
                 TTL = TimeSpan.Zero
             };
             this.Add(resource);
@@ -117,7 +115,7 @@ namespace Makaretu.Dns
         ///   </para>
         /// </remarks>
         /// <seealso cref="DeleteResource{T}(string)"/>
-        public UpdateResourceList DeleteResource(string name, ushort type)
+        public UpdateResourceList DeleteResource(string name, DnsType type)
         {
             var resource = new ResourceRecord
             {
@@ -149,7 +147,7 @@ namespace Makaretu.Dns
         ///   this Update RR will be silently ignored by the primary master.
         ///   </para>
         /// </remarks>
-        /// <seealso cref="DeleteResource(string, ushort)"/>
+        /// <seealso cref="DeleteResource(string, DnsType)"/>
         public UpdateResourceList DeleteResource<T>(string name)
              where T : ResourceRecord, new()
         {

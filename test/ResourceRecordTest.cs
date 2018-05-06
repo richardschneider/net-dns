@@ -53,7 +53,7 @@ namespace Makaretu.Dns
             {
                 Name = "emanon.org",
                 Class = Class.CH,
-                Type = 6,
+                Type = DnsType.SOA,
                 TTL = TimeSpan.FromDays(2)
             };
             var b = (ResourceRecord)new ResourceRecord().Read(a.ToByteArray());
@@ -73,21 +73,21 @@ namespace Makaretu.Dns
             {
                 Name = "alpha",
                 Class = Class.IN,
-                Type = 1,
+                Type = DnsType.A,
                 TTL = TimeSpan.FromSeconds(1)
             };
             var a1 = new ResourceRecord
             {
                 Name = "alpha",
                 Class = Class.IN,
-                Type = 1,
+                Type = DnsType.A,
                 TTL = TimeSpan.FromSeconds(2)
             };
             var b = new ResourceRecord
             {
                 Name = "beta",
                 Class = Class.IN,
-                Type = 1,
+                Type = DnsType.A,
                 TTL = TimeSpan.FromSeconds(1)
             };
             ResourceRecord c = null;

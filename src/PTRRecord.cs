@@ -22,7 +22,7 @@ namespace Makaretu.Dns
         /// </summary>
         public PTRRecord() : base()
         {
-            Type = 12;
+            Type = DnsType.PTR;
         }
 
         /// <summary>

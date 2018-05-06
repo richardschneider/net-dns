@@ -39,7 +39,7 @@ namespace Makaretu.Dns
             Assert.AreEqual(0, msg.AdditionalRecords.Count);
             var question = msg.Questions.First();
             Assert.AreEqual("appletv.local", question.Name);
-            Assert.AreEqual(1, question.Type);
+            Assert.AreEqual(DnsType.A, question.Type);
             Assert.AreEqual(Class.IN, question.Class);
         }
 
@@ -69,7 +69,7 @@ namespace Makaretu.Dns
             Assert.AreEqual(2, msg.AdditionalRecords.Count);
 
             Assert.AreEqual("appletv.local", msg.Answers[0].Name);
-            Assert.AreEqual(1, msg.Answers[0].Type);
+            Assert.AreEqual(DnsType.A, msg.Answers[0].Type);
             Assert.AreEqual(0x8001, (ushort)msg.Answers[0].Class);
             Assert.AreEqual(TimeSpan.FromSeconds(30720), msg.Answers[0].TTL);
             Assert.IsInstanceOfType(msg.Answers[0], typeof(ARecord));
@@ -77,14 +77,14 @@ namespace Makaretu.Dns
 
             var aaaa = (AAAARecord)msg.AdditionalRecords[0];
             Assert.AreEqual("appletv.local", aaaa.Name);
-            Assert.AreEqual(0x1C, aaaa.Type);
+            Assert.AreEqual(DnsType.AAAA, aaaa.Type);
             Assert.AreEqual(0x8001, (ushort)aaaa.Class);
             Assert.AreEqual(TimeSpan.FromSeconds(30720), aaaa.TTL);
             Assert.AreEqual(IPAddress.Parse("fe80::223:32ff:feb1:2152"), aaaa.Address);
 
             var nsec = (NSECRecord)msg.AdditionalRecords[1];
             Assert.AreEqual("appletv.local", nsec.Name);
-            Assert.AreEqual(47, nsec.Type);
+            Assert.AreEqual(DnsType.NSEC, nsec.Type);
             Assert.AreEqual(0x8001, (ushort)nsec.Class);
             Assert.AreEqual(TimeSpan.FromSeconds(30720), nsec.TTL);
             Assert.AreEqual("appletv.local", nsec.NextOwnerName);

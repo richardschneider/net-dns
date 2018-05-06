@@ -19,7 +19,7 @@ namespace Makaretu.Dns
         /// </summary>
         public AFSDBRecord() : base()
         {
-            Type = 18;
+            Type = DnsType.AFSDB;
         }
 
         /// <summary>

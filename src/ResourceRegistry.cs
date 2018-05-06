@@ -19,11 +19,11 @@ namespace Makaretu.Dns
         ///   The key is the DNS Resource Record TYPE.
         ///   The value is a function that returns a new <see cref="ResourceRecord"/>.
         /// </remarks>
-        public static Dictionary<int, Func<ResourceRecord>> Records;
+        public static Dictionary<DnsType, Func<ResourceRecord>> Records;
 
         static ResourceRegistry()
         {
-            Records = new Dictionary<int, Func<ResourceRecord>>();
+            Records = new Dictionary<DnsType, Func<ResourceRecord>>();
             Register<ARecord>();
             Register<AAAARecord>();
             Register<AFSDBRecord>();

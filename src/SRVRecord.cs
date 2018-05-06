@@ -15,9 +15,8 @@ namespace Makaretu.Dns
         /// </summary>
         public SRVRecord() : base()
         {
-            Type = 33;
+            Type = DnsType.SRV;
         }
-
 
         /// <summary>
         ///  The priority of this target host.

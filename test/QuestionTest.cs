@@ -17,7 +17,7 @@ namespace Makaretu.Dns
             {
                 Name = "emanon.org",
                 Class = Class.CH,
-                Type = 15
+                Type = DnsType.MX
             };
             var b = (Question)new Question().Read(a.ToByteArray());
             Assert.AreEqual(a.Name, b.Name);

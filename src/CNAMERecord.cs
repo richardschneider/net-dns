@@ -20,7 +20,7 @@ namespace Makaretu.Dns
         /// </summary>
         public CNAMERecord() : base()
         {
-            Type = 5;
+            Type = DnsType.CNAME;
         }
 
         /// <summary>

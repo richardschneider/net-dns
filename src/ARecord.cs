@@ -15,7 +15,7 @@ namespace Makaretu.Dns
         /// </summary>
         public ARecord() : base()
         {
-            Type = 1;
+            Type = DnsType.A;
             TTL = ResourceRecord.DefaultHostTTL;
         }
 

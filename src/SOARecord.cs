@@ -30,7 +30,7 @@ namespace Makaretu.Dns
         /// </remarks>
         public SOARecord() : base()
         {
-            Type = 6;
+            Type = DnsType.SOA;
             TTL = TimeSpan.FromSeconds(0);
         }
 

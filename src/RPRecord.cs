@@ -19,7 +19,7 @@ namespace Makaretu.Dns
         /// </summary>
         public RPRecord() : base()
         {
-            Type = 17;
+            Type = DnsType.RP;
         }
 
         /// <summary>

@@ -18,8 +18,6 @@ namespace Makaretu.Dns
     /// <seealso href="https://tools.ietf.org/html/rfc2136"/>
     public class UpdatePrerequisiteList : List<ResourceRecord>
     {
-        const ushort TypeAny = 255;
-
         /// <summary>
         ///   At least one resource record with the specified name and type must exist
         ///   in the <see cref="UpdateMessage.Zone"/>.
@@ -37,7 +35,7 @@ namespace Makaretu.Dns
         ///   condition from that of an actual RR whose RDLENGTH is naturally zero
         ///   (0) (e.g., NULL).  TTL is specified as zero(0).
         /// </remarks>
-        public UpdatePrerequisiteList MustExist(string name, ushort type)
+        public UpdatePrerequisiteList MustExist(string name, DnsType type)
         {
             var rr = new ResourceRecord
             {
@@ -69,7 +67,7 @@ namespace Makaretu.Dns
         /// </remarks>
         public UpdatePrerequisiteList MustExist(string name)
         {
-            return MustExist(name, TypeAny);
+            return MustExist(name, DnsType.ANY);
         }
 
         /// <summary>
@@ -137,7 +135,7 @@ namespace Makaretu.Dns
         ///   naturally zero (0) (for example, the NULL RR).  TTL must be specified
         ///   as zero(0).
         /// </remarks>
-        public UpdatePrerequisiteList MustNotExist(string name, ushort type)
+        public UpdatePrerequisiteList MustNotExist(string name, DnsType type)
         {
             var rr = new ResourceRecord
             {
@@ -167,7 +165,7 @@ namespace Makaretu.Dns
         /// </remarks>
         public UpdatePrerequisiteList MustNotExist(string name)
         {
-            return MustNotExist(name, TypeAny);
+            return MustNotExist(name, DnsType.ANY);
         }
 
         /// <summary>
