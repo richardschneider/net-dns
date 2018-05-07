@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 
 namespace Makaretu.Dns
 {
@@ -29,6 +30,28 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void Writing_Labels()
+        {
+            var ms = new MemoryStream();
+            var writer = new DnsWriter(ms);
+            writer.WriteDomainName("a.b.c");
+            writer.WriteDomainName("a.b.c");
+            writer.WriteDomainName("b.c");
+            writer.WriteDomainName("c");
+            writer.WriteDomainName("x.b.c");
+            var bytes = ms.ToArray();
+            var expected = new byte[]
+            {
+                0x01, (byte)'a', 0x01, (byte)'b', 0x01, (byte)'c', 00,
+                0xC0, 0x00,
+                0xC0, 0x02,
+                0xC0, 0x04,
+                0x01, (byte)'x', 0xC0, 0x02,
+            };
+            CollectionAssert.AreEqual(expected, bytes);
+        }
+
+        [TestMethod]
         public void Writing_Past_MaxPointer()
         {
             var ms = new MemoryStream();
@@ -44,6 +67,26 @@ namespace Makaretu.Dns
             Assert.AreEqual("a", reader.ReadDomainName());
             Assert.AreEqual("b", reader.ReadDomainName());
             Assert.AreEqual("b", reader.ReadDomainName());
+        }
+
+        [TestMethod]
+        public void Reading_Labels()
+        {
+            var bytes = new byte[]
+            {
+                0x01, (byte)'a', 0x01, (byte)'b', 0x01, (byte)'c', 00,
+                0xC0, 0x00,
+                0xC0, 0x02,
+                0xC0, 0x04,
+                0x01, (byte)'x', 0xC0, 0x02,
+            };
+            var ms = new MemoryStream(bytes);
+            var reader = new DnsReader(ms);
+            Assert.AreEqual("a.b.c", reader.ReadDomainName());
+            Assert.AreEqual("a.b.c", reader.ReadDomainName());
+            Assert.AreEqual("b.c", reader.ReadDomainName());
+            Assert.AreEqual("c", reader.ReadDomainName());
+            Assert.AreEqual("x.b.c", reader.ReadDomainName());
         }
 
         [TestMethod]

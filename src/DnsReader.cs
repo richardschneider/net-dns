@@ -127,7 +127,6 @@ namespace Makaretu.Dns
         /// </remarks>
         public string ReadDomainName()
         {
-            var s = new StringBuilder();
             var pointer = position;
             var length = ReadByte();
 
@@ -138,20 +137,22 @@ namespace Makaretu.Dns
                 return names[pointer];
             }
 
-            while (length != 0)
+            // End of labels?
+            if (length == 0)
             {
-                var label = ReadBytes(length);
-                s.Append(Encoding.UTF8.GetString(label, 0, length));
-                s.Append('.');
-                length = ReadByte();
+                return string.Empty;
             }
 
-            // Remove trailing '.'
-            if (s.Length > 0)
-                s.Length = s.Length - 1;
+            // Read current label and remaining labels.
+            var buffer = ReadBytes(length);
+            var name = Encoding.UTF8.GetString(buffer, 0, length);
+            var remainingLabels = ReadDomainName();
+            if (remainingLabels != string.Empty)
+            {
+                name = name + "." + remainingLabels;
+            }
 
             // Add to compressed names
-            var name = s.ToString();
             names[pointer] = name;
 
             return name;

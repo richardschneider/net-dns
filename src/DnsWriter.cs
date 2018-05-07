@@ -117,26 +117,33 @@ namespace Makaretu.Dns
         /// </remarks>
         public void WriteDomainName(string name, bool uncompressed = false)
         {
-            // Check for name already used.
-            if (!uncompressed && pointers.TryGetValue(name, out int pointer))
-            {
-                WriteUInt16((ushort)(0xC000 | pointer));
-                return;
-            }
-            if (position <= maxPointer)
-            {
-                pointers[name] = position;
-            }
 
-            foreach (var label in name.Split('.'))
+            var labels = name.Split('.');
+            for (var i = 0; i < labels.Length; ++i)
             {
+                var label = labels[i];
                 var bytes = Encoding.UTF8.GetBytes(label);
                 if (bytes.Length > 63)
                     throw new InvalidDataException($"Label '{label}' cannot exceed 63 octets.");
+
+                // Check for qualified name already used.
+                var qn = string.Join(".", labels, i, labels.Length - i);
+                if (!uncompressed && pointers.TryGetValue(qn, out int pointer))
+                {
+                    WriteUInt16((ushort)(0xC000 | pointer));
+                    return;
+                }
+                if (position <= maxPointer)
+                {
+                    pointers[qn] = position;
+                }
+
+                // Add the label
                 stream.WriteByte((byte)bytes.Length);
                 stream.Write(bytes, 0, bytes.Length);
                 position += bytes.Length + 1;
             }
+
             stream.WriteByte(0); // terminating byte
             ++position;
         }
