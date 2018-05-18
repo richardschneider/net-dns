@@ -111,12 +111,18 @@ namespace Makaretu.Dns
         ///   A domain name is represented as a sequence of labels, where
         ///   each label consists of a length octet followed by that
         ///   number of octets.The domain name terminates with the
-        ///   zero length octet for the null label of the root.Note
+        ///   zero length octet for the null label of the root. Note
         ///   that this field may be an odd number of octets; no
         ///   padding is used.
         /// </remarks>
         public void WriteDomainName(string name, bool uncompressed = false)
         {
+            if (string.IsNullOrEmpty(name))
+            {
+                stream.WriteByte(0); // terminating byte
+                ++position;
+                return;
+            }
 
             var labels = name.Split('.');
             for (var i = 0; i < labels.Length; ++i)

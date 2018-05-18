@@ -88,5 +88,33 @@ namespace Makaretu.Dns
             Assert.AreEqual("a", reader.ReadDomainName());
             Assert.AreEqual("a", reader.ReadDomainName());
         }
+
+        [TestMethod]
+        public void EmptyDomainName()
+        {
+            var ms = new MemoryStream();
+            var writer = new DnsWriter(ms);
+            writer.WriteDomainName("");
+            writer.WriteString("abc");
+
+            ms.Position = 0;
+            var reader = new DnsReader(ms);
+            Assert.AreEqual("", reader.ReadDomainName());
+            Assert.AreEqual("abc", reader.ReadString());
+        }
+
+        [TestMethod]
+        public void NullDomainName()
+        {
+            var ms = new MemoryStream();
+            var writer = new DnsWriter(ms);
+            writer.WriteDomainName(null);
+            writer.WriteString("abc");
+
+            ms.Position = 0;
+            var reader = new DnsReader(ms);
+            Assert.AreEqual("", reader.ReadDomainName());
+            Assert.AreEqual("abc", reader.ReadString());
+        }
     }
 }
