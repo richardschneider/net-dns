@@ -53,7 +53,7 @@ namespace Makaretu.Dns
             {
                 Name = "emanon.org",
                 Class = Class.CH,
-                Type = DnsType.SOA,
+                Type = (DnsType)0xFFFF,
                 TTL = TimeSpan.FromDays(2)
             };
             var b = (ResourceRecord)new ResourceRecord().Read(a.ToByteArray());

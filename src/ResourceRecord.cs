@@ -9,6 +9,11 @@ namespace Makaretu.Dns
     /// <summary>
     ///   Contains some information on the named resource.
     /// </summary>
+    /// <remarks>
+    ///   The <see cref="ResourceRegistry"/> contains the metadata on known
+    ///   resource records. When reading, if the registry does not contain
+    ///   the record, then an <see cref="UnknownRecord"/> is used.
+    /// </remarks>
     public class ResourceRecord : DnsObject
     {
         /// <summary>
@@ -114,10 +119,6 @@ namespace Makaretu.Dns
             Class = (Class)reader.ReadUInt16();
             TTL = reader.ReadTimeSpan();
             int length = reader.ReadUInt16();
-
-            // If zero length, then just return a ResourceRecord.
-            if (length == 0)
-                return this;
 
             // Find a specific class for the TYPE or default
             // to UnknownRecord.
