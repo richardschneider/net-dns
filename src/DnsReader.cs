@@ -12,8 +12,12 @@ namespace Makaretu.Dns
     public class DnsReader
     {
         Stream stream;
-        int position;
         Dictionary<int, string> names = new Dictionary<int, string>();
+
+        /// <summary>
+        ///   The reader relative position within the stream.
+        /// </summary>
+        public int Position;
 
         /// <summary>
         ///   Creates a new instance of the <see cref="DnsReader"/> on the
@@ -41,7 +45,7 @@ namespace Makaretu.Dns
             var value = stream.ReadByte();
             if (value < 0)
                 throw new EndOfStreamException();
-            ++position;
+            ++Position;
             return (byte)value;
         }
 
@@ -67,7 +71,7 @@ namespace Makaretu.Dns
                     throw new EndOfStreamException();
                 offset += n;
                 length -= n;
-                position += n;
+                Position += n;
             }
             
             return buffer;
@@ -127,7 +131,7 @@ namespace Makaretu.Dns
         /// </remarks>
         public string ReadDomainName()
         {
-            var pointer = position;
+            var pointer = Position;
             var length = ReadByte();
 
             // Do we have a compressed pointer?
