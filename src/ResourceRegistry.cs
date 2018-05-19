@@ -34,6 +34,7 @@ namespace Makaretu.Dns
             Register<NSECRecord>();
             Register<NSRecord>();
             Register<NULLRecord>();
+            Register<OPTRecord>();
             Register<PTRRecord>();
             Register<RPRecord>();
             Register<SOARecord>();
@@ -55,7 +56,7 @@ namespace Makaretu.Dns
             var rr = new T();
             if (rr.Type == 0)
             {
-                throw new ArgumentException("The RR TYPE is not defined", "TYPE");
+                throw new ArgumentException("The RR TYPE is not defined.", "TYPE");
             }
             Records.Add(rr.Type, () => new T());
         }

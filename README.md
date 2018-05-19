@@ -19,8 +19,10 @@ DNS data model with serializer/deserializer for the wire format.
   - [RFC 1183](https://tools.ietf.org/html/rfc1183) New DNS RR Definitions
   - [RFC 1996](https://tools.ietf.org/html/rfc1996) Zone Changes (DNS NOTIFY)
   - [RFC 2136](https://tools.ietf.org/html/rfc2136) Dynamic Updates (DNS UPDATE)
+  - [RFC 3225](https://tools.ietf.org/html/rfc3225) Indicating Resolver Support of DNSSEC
   - [RFC 3599](https://tools.ietf.org/html/rfc3596) DNS Extensions to Support IPv6
   - [RFC 6672](https://tools.ietf.org/html/rfc6672) DNAME Redirection in the DNS
+  - [RFC 6891](https://tools.ietf.org/html/rfc6891) Extension Mechanisms for DNS (EDNS(0))
 
 ## Getting started
 

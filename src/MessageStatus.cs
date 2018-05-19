@@ -68,6 +68,11 @@ namespace Makaretu.Dns
         ///   zone denoted by the Zone Section.
         /// </summary>
         NotZone = 10,
+
+        /// <summary>
+        ///   Invalid version.
+        /// </summary>
+        BadVersion = 16,
     }
 
 }

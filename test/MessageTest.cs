@@ -154,5 +154,16 @@ namespace Makaretu.Dns
             Assert.AreEqual(1, actual.AuthorityRecords.Count);
             Assert.AreEqual(1, actual.AdditionalRecords.Count);
         }
+
+        [TestMethod]
+        public void ExtendedOpcode()
+        {
+            var expected = new Message { Opcode = (MessageOperation)0xfff };
+            Assert.AreEqual((MessageOperation)0xfff, expected.Opcode);
+            Assert.AreEqual(1, expected.AdditionalRecords.OfType<OPTRecord>().Count());
+
+            var actual = (Message)new Message().Read(expected.ToByteArray());
+            Assert.AreEqual(expected.Opcode, actual.Opcode);
+        }
     }
 }

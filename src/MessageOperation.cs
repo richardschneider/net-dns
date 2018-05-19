@@ -5,10 +5,15 @@ using System.Text;
 namespace Makaretu.Dns
 {
     /// <summary>
-    ///   The type of <see cref="Message"/>.
+    ///   The requested operation of a <see cref="Message"/>.
     /// </summary>
+    /// <remarks>
+    ///   Defines the standard and extended (EDNS(0)) operations.  Standard
+    ///   values are between 0 and 15 (0xF). Extended values are between 16 and
+    ///   4095 (0xFFF).
+    /// </remarks>
     /// <seealso cref="Message.Opcode"/>
-    public enum MessageOperation : byte
+    public enum MessageOperation : ushort
     {
         /// <summary>
         ///   Standard query.
@@ -33,6 +38,7 @@ namespace Makaretu.Dns
         /// <summary>
         ///   Update message, see <see href="https://tools.ietf.org/html/rfc2136"/>.
         /// </summary>
-        Update = 5
+        Update = 5,
+
     }
 }

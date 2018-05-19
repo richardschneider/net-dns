@@ -61,7 +61,7 @@ namespace Makaretu.Dns
         ///    of the information should again be consulted. 
         /// </summary>
         /// <value>
-        ///    Defaults to 1 day.
+        ///    The resolution is 1 second. Defaults to 1 day.
         /// </value>
         /// <remarks>
         ///    Zero values are interpreted to mean that the RR can only be

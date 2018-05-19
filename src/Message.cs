@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Makaretu.Dns
@@ -10,6 +11,11 @@ namespace Makaretu.Dns
     /// </summary>
     public class Message : DnsObject
     {
+        /// <summary>
+        ///   The least significant 4 bits of the opcode.
+        /// </summary>
+        byte opcode4;
+
         /// <summary>
         ///   Maximum bytes in a message.
         /// </summary>
@@ -50,17 +56,57 @@ namespace Makaretu.Dns
 
 
         /// <summary>
-        ///   The kind of query in this message. 
+        ///   The requested operation. 
         /// </summary>
         /// <value>
-        ///   One of the <see cref="MessageOperation"/> values.
+        ///   One of the <see cref="MessageOperation"/> values. Both standard
+        ///   and extended values are supported.
         /// </value>
         /// <remarks>
-        ///    This value is set by the originator of a query
+        ///   This value is set by the originator of a query
         ///   and copied into the response.
+        ///   <para>
+        ///   Extended opcodes (values requiring more than 4 bits) are split between
+        ///   the message header and the <see cref="OPTRecord"/> in the
+        ///   <see cref="AdditionalRecords"/> section.  When setting an extended opcode,
+        ///   the <see cref="OPTRecord"/> will be created if it does not already
+        ///   exist.
+        ///   </para>
         /// </remarks>
         /// <seealso cref="Message.CreateResponse"/>
-        public MessageOperation Opcode { get; set; }
+        public MessageOperation Opcode
+        {
+            get
+            {
+                var opt = AdditionalRecords.OfType<OPTRecord>().FirstOrDefault();
+                if (opt == null)
+                    return (MessageOperation)opcode4;
+                return (MessageOperation)(((ushort)opt.Opcode8 << 4) | opcode4);
+            }
+            set
+            {
+                var opt = AdditionalRecords.OfType<OPTRecord>().FirstOrDefault();
+
+                // Is standard opcode?
+                var extendedOpcode = (int)value;
+                if ((extendedOpcode & 0xff0) == 0)
+                {
+                    opcode4 = (byte)extendedOpcode;
+                    if (opt != null)
+                        opt.Opcode8 = 0;
+                    return;
+                }
+
+                // Extended opcode, needs an OPT resource record.
+                if (opt == null)
+                {
+                    opt = new OPTRecord();
+                    AdditionalRecords.Add(opt);
+                }
+                opcode4 = (byte)(extendedOpcode & 0xf);
+                opt.Opcode8 = (byte)((extendedOpcode >> 4) & 0xff);
+            }
+        }
 
         /// <summary>
         ///    Authoritative Answer - this bit is valid in responses,
@@ -154,7 +200,7 @@ namespace Makaretu.Dns
             TC = (flags & 0x0200) == 0x0200;
             RD = (flags & 0x0100) == 0x0100;
             RA = (flags & 0x0080) == 0x0080;
-            Opcode = (MessageOperation)((flags & 0x7800) >> 11);
+            opcode4 = (byte)((flags & 0x7800) >> 11);
             Z = (flags & 0x0070) >> 4;
             Status = (MessageStatus)(flags & 0x000F);
             var qdcount = reader.ReadUInt16();
@@ -191,7 +237,7 @@ namespace Makaretu.Dns
             writer.WriteUInt16(Id);
             var flags =
                 (Convert.ToInt32(QR) << 15) |
-                (((ushort)Opcode & 0xf)<< 11) |
+                (((ushort)opcode4 & 0xf)<< 11) |
                 (Convert.ToInt32(AA) << 10) |
                 (Convert.ToInt32(TC) << 9) |
                 (Convert.ToInt32(RD) << 8) |

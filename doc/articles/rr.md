@@ -16,6 +16,7 @@ The following resource records are implemented
 - [MX](xref:Makaretu.Dns.MXRecord) Mail Exchange
 - [NS](xref:Makaretu.Dns.NSRecord) Name Server
 - [NULL](xref:Makaretu.Dns.NULLRecord) EXPERIMENTAL
+- [OPT](xref:Makaretu.Dns.OPTRecord) Extension mechanism for DNS
 - [PTR](xref:Makaretu.Dns.PTRRecord) Domain Name Pointer
 - [RP](xref:Makaretu.Dns.RPRecord) Responsible Person
 - [SOA](xref:Makaretu.Dns.SOARecord) Start Of Authority
