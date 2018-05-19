@@ -461,6 +461,42 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/edns.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/edns.html",
+          "hash": "YKqY09y5HI4CupwE3eKhLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/eopcode.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/eopcode.html",
+          "hash": "kf032EIAnYjhLYkXUKqO6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/eoption.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/eoption.html",
+          "hash": "F5fV0q1PHgYzLTl9kt4Rpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/intro.md",
       "output": {
         ".html": {
@@ -489,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "cn6hICBjv50I8KM32XTU3A=="
+          "hash": "IybW1Exwrd8o8b878HkXgA=="
         }
       },
       "is_incremental": false,
