@@ -20,6 +20,7 @@ namespace Makaretu.Dns
             Assert.AreEqual(0, opt.Opcode8);
             Assert.AreEqual(0, opt.Version);
             Assert.AreEqual(false, opt.DO);
+            Assert.AreEqual(0, opt.Options.Count);
         }
 
         [TestMethod]

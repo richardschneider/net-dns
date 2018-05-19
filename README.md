@@ -10,10 +10,10 @@ DNS data model with serializer/deserializer for the wire format.
 
 ## Features
 
-- Targets .NET Standard 1.4 and 2.0
-- CI on Travis (Ubuntu Trusty) and AppVeyor (Windows Server 2016)
 - Supports compressed domain names
 - Supports multiple strings in TXT records
+- Supports the extended 12-bit RCODE
+- Future proof: handles unknown resource records and EDNS options
 - Data models for
   - [RFC 1035](https://tools.ietf.org/html/rfc1035) Domain Names (DNS)
   - [RFC 1183](https://tools.ietf.org/html/rfc1183) New DNS RR Definitions
@@ -23,6 +23,8 @@ DNS data model with serializer/deserializer for the wire format.
   - [RFC 3599](https://tools.ietf.org/html/rfc3596) DNS Extensions to Support IPv6
   - [RFC 6672](https://tools.ietf.org/html/rfc6672) DNAME Redirection in the DNS
   - [RFC 6891](https://tools.ietf.org/html/rfc6891) Extension Mechanisms for DNS (EDNS(0))
+- Targets .NET Standard 1.4 and 2.0
+- CI on Travis (Ubuntu Trusty) and AppVeyor (Windows Server 2016)
 
 ## Getting started
 

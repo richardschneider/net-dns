@@ -113,7 +113,7 @@ namespace Makaretu.Dns
         ///   The <see cref="ResourceRecord.TTL"/> property is repurposed to specify
         ///   the version.
         /// </remarks>
-        /// <seealso href="https://tools.ietf.org/html/rfc3225">
+        /// <seealso href="https://tools.ietf.org/html/rfc3225"/>
         public bool DO
         {
             get { return (TTL.Ticks / TimeSpan.TicksPerSecond) == 0x8000L; }
@@ -126,16 +126,48 @@ namespace Makaretu.Dns
             }
         }
 
+        /// <summary>
+        ///   The extended DNS options.
+        /// </summary>
+        /// <value>
+        ///   The EDNS option sequence.
+        /// </value>
+        public List<EdnsOption> Options { get; set; } = new List<EdnsOption>();
+
         /// <inheritdoc />
         protected override void ReadData(DnsReader reader, int length)
         {
-            // TODO: EDNS options
+            var end = reader.Position + length;
+            while (reader.Position < end)
+            {
+                var type = (EdnsOptionType)reader.ReadUInt16();
+                int olength = reader.ReadUInt16();
+
+                EdnsOption option;
+                if (EdnsOptionRegistry.Options.TryGetValue(type, out Func<EdnsOption> maker))
+                {
+                    option = maker();
+                }
+                else
+                {
+                    option = new UnknownEdnsOption { Type = type };
+                }
+                Options.Add(option);
+                option.ReadData(reader, olength);
+            }
         }
 
         /// <inheritdoc />
         protected override void WriteData(DnsWriter writer)
         {
-            // TODO: EDNS options
+            foreach (var option in Options)
+            {
+                writer.WriteUInt16((ushort)option.Type);
+
+                writer.PushLengthPrefixedScope();
+                option.WriteData(writer);
+                writer.PopLengthPrefixedScope();
+            }
         }
 
     }

@@ -5,7 +5,7 @@ namespace Makaretu.Dns
 {
 
     /// <summary>
-    /// A resource record or query types. 
+    /// A resource record or query type. 
     /// </summary>
     /// <seealso cref="Question.Type"/>
     /// <seealso cref="ResourceRecord.Type"/>
