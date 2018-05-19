@@ -2,6 +2,13 @@
   href: intro.md
 - name: Resource Records
   href: rr.md
+- name: Extended DNS
+  href: edns.md
+  items:
+    - name: Options
+      href: eoption.md
+    - name: Opcode
+      href: eopcode.md
 - name: Class Reference
   href: ../api/Makaretu.Dns.yml
   
