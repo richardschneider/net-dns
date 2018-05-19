@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DnsWriter
    | DNS Model ">
-    <meta name="generator" content="docfx 2.35.4.0">
+    <meta name="generator" content="docfx 2.36.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,49 +81,25 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">DnsWriter</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Makaretu.Dns.html">Makaretu.Dns</a></h6>
   <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
   <h5 id="Makaretu_Dns_DnsWriter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DnsWriter</code></pre>
+    <pre><code class="lang-csharp hljs">public class DnsWriter : object</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DnsWriter__ctor_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DnsWriter.%23ctor(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DnsWriter__ctor_Stream_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DnsWriter.%23ctor(Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/richardschneider/net-dns/blob/master/src/DnsWriter.cs/#L27">View Source</a>
   </span>
   <a id="Makaretu_Dns_DnsWriter__ctor_" data-uid="Makaretu.Dns.DnsWriter.#ctor*"></a>
-  <h4 id="Makaretu_Dns_DnsWriter__ctor_System_IO_Stream_" data-uid="Makaretu.Dns.DnsWriter.#ctor(System.IO.Stream)">DnsWriter(Stream)</h4>
+  <h4 id="Makaretu_Dns_DnsWriter__ctor_Stream_" data-uid="Makaretu.Dns.DnsWriter.#ctor(Stream)">DnsWriter(Stream)</h4>
   <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Makaretu.Dns.DnsWriter.html">DnsWriter</a> on the
-specified <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a>.</p>
+specified <see cref="!:Stream"></see>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -141,7 +117,7 @@ specified <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="xref">Stream</span></td>
         <td><span class="parametername">stream</span></td>
         <td><p>The destination for data items.</p>
 </td>
@@ -285,19 +261,19 @@ defaultl is false (allow compression).</p>
   <div class="markdown level1 remarks"><p>A domain name is represented as a sequence of labels, where
 each label consists of a length octet followed by that
 number of octets.The domain name terminates with the
-zero length octet for the null label of the root.Note
+zero length octet for the null label of the root. Note
 that this field may be an odd number of octets; no
 padding is used.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DnsWriter_WriteIPAddress_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DnsWriter.WriteIPAddress(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DnsWriter_WriteIPAddress_IPAddress_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DnsWriter.WriteIPAddress(IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DnsWriter.cs/#L181">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DnsWriter.cs/#L187">View Source</a>
   </span>
   <a id="Makaretu_Dns_DnsWriter_WriteIPAddress_" data-uid="Makaretu.Dns.DnsWriter.WriteIPAddress*"></a>
-  <h4 id="Makaretu_Dns_DnsWriter_WriteIPAddress_System_Net_IPAddress_" data-uid="Makaretu.Dns.DnsWriter.WriteIPAddress(System.Net.IPAddress)">WriteIPAddress(IPAddress)</h4>
+  <h4 id="Makaretu_Dns_DnsWriter_WriteIPAddress_IPAddress_" data-uid="Makaretu.Dns.DnsWriter.WriteIPAddress(IPAddress)">WriteIPAddress(IPAddress)</h4>
   <div class="markdown level1 summary"><p>Write an IP address.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -316,7 +292,7 @@ padding is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="xref">IPAddress</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -327,7 +303,7 @@ padding is used.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DnsWriter_WriteString_System_String_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DnsWriter.WriteString(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DnsWriter.cs/#L158">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DnsWriter.cs/#L164">View Source</a>
   </span>
   <a id="Makaretu_Dns_DnsWriter_WriteString_" data-uid="Makaretu.Dns.DnsWriter.WriteString*"></a>
   <h4 id="Makaretu_Dns_DnsWriter_WriteString_System_String_" data-uid="Makaretu.Dns.DnsWriter.WriteString(System.String)">WriteString(String)</h4>
@@ -361,13 +337,13 @@ as UTF-8.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DnsWriter_WriteTimeSpan_System_TimeSpan_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DnsWriter.WriteTimeSpan(System.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DnsWriter_WriteTimeSpan_TimeSpan_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DnsWriter.WriteTimeSpan(TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DnsWriter.cs/#L172">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DnsWriter.cs/#L178">View Source</a>
   </span>
   <a id="Makaretu_Dns_DnsWriter_WriteTimeSpan_" data-uid="Makaretu.Dns.DnsWriter.WriteTimeSpan*"></a>
-  <h4 id="Makaretu_Dns_DnsWriter_WriteTimeSpan_System_TimeSpan_" data-uid="Makaretu.Dns.DnsWriter.WriteTimeSpan(System.TimeSpan)">WriteTimeSpan(TimeSpan)</h4>
+  <h4 id="Makaretu_Dns_DnsWriter_WriteTimeSpan_TimeSpan_" data-uid="Makaretu.Dns.DnsWriter.WriteTimeSpan(TimeSpan)">WriteTimeSpan(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Write a time span.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -386,13 +362,13 @@ as UTF-8.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Makaretu_Dns_DnsWriter_WriteTimeSpan_System_TimeSpan__remarks">Remarks</h5>
+  <h5 id="Makaretu_Dns_DnsWriter_WriteTimeSpan_TimeSpan__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Represented as 32-bit unsigned int (in seconds).</p>
 </div>
   <span class="small pull-right mobile-hide">
