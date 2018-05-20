@@ -5,6 +5,7 @@ required from the server.
 
 The following EDNS options are implemented
 
+- [Keepalive](xref:Makaretu.Dns.EdnsKeepaliveOption) - [RFC 7828](https://tools.ietf.org/html/rfc7828)
 - [NSID](xref:Makaretu.Dns.EdnsNSIDOption) - [RFC 5001](https://tools.ietf.org/html/rfc5001)
 - [Padding](xref:Makaretu.Dns.EdnsPaddingOption) - [RFC 7830](https://tools.ietf.org/html/rfc7830)
 

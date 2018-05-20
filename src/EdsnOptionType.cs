@@ -62,6 +62,7 @@ namespace Makaretu.Dns
         /// <summary>
         ///   The edns-tcp-keepalive EDNS0 Option.
         /// </summary>
+        /// <seealso cref="EdnsKeepaliveOption"/>
         /// <seealso href="https://tools.ietf.org/html/rfc7828"/>
         Keepalive = 11,
 
