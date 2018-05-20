@@ -894,6 +894,64 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DnsWriter.WriteUInt32
   nameWithType: DnsWriter.WriteUInt32
+- uid: Makaretu.Dns.EdnsNSIDOption
+  name: EdnsNSIDOption
+  href: api/Makaretu.Dns.EdnsNSIDOption.html
+  commentId: T:Makaretu.Dns.EdnsNSIDOption
+  fullName: Makaretu.Dns.EdnsNSIDOption
+  nameWithType: EdnsNSIDOption
+- uid: Makaretu.Dns.EdnsNSIDOption.#ctor
+  name: EdnsNSIDOption()
+  href: api/Makaretu.Dns.EdnsNSIDOption.html#Makaretu_Dns_EdnsNSIDOption__ctor
+  commentId: M:Makaretu.Dns.EdnsNSIDOption.#ctor
+  fullName: Makaretu.Dns.EdnsNSIDOption.EdnsNSIDOption()
+  nameWithType: EdnsNSIDOption.EdnsNSIDOption()
+- uid: Makaretu.Dns.EdnsNSIDOption.#ctor*
+  name: EdnsNSIDOption
+  href: api/Makaretu.Dns.EdnsNSIDOption.html#Makaretu_Dns_EdnsNSIDOption__ctor_
+  commentId: Overload:Makaretu.Dns.EdnsNSIDOption.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Dns.EdnsNSIDOption.EdnsNSIDOption
+  nameWithType: EdnsNSIDOption.EdnsNSIDOption
+- uid: Makaretu.Dns.EdnsNSIDOption.Id
+  name: Id
+  href: api/Makaretu.Dns.EdnsNSIDOption.html#Makaretu_Dns_EdnsNSIDOption_Id
+  commentId: P:Makaretu.Dns.EdnsNSIDOption.Id
+  fullName: Makaretu.Dns.EdnsNSIDOption.Id
+  nameWithType: EdnsNSIDOption.Id
+- uid: Makaretu.Dns.EdnsNSIDOption.Id*
+  name: Id
+  href: api/Makaretu.Dns.EdnsNSIDOption.html#Makaretu_Dns_EdnsNSIDOption_Id_
+  commentId: Overload:Makaretu.Dns.EdnsNSIDOption.Id
+  isSpec: "True"
+  fullName: Makaretu.Dns.EdnsNSIDOption.Id
+  nameWithType: EdnsNSIDOption.Id
+- uid: Makaretu.Dns.EdnsNSIDOption.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  name: ReadData(DnsReader, Int32)
+  href: api/Makaretu.Dns.EdnsNSIDOption.html#Makaretu_Dns_EdnsNSIDOption_ReadData_Makaretu_Dns_DnsReader_System_Int32_
+  commentId: M:Makaretu.Dns.EdnsNSIDOption.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  fullName: Makaretu.Dns.EdnsNSIDOption.ReadData(Makaretu.Dns.DnsReader, System.Int32)
+  nameWithType: EdnsNSIDOption.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.EdnsNSIDOption.ReadData*
+  name: ReadData
+  href: api/Makaretu.Dns.EdnsNSIDOption.html#Makaretu_Dns_EdnsNSIDOption_ReadData_
+  commentId: Overload:Makaretu.Dns.EdnsNSIDOption.ReadData
+  isSpec: "True"
+  fullName: Makaretu.Dns.EdnsNSIDOption.ReadData
+  nameWithType: EdnsNSIDOption.ReadData
+- uid: Makaretu.Dns.EdnsNSIDOption.WriteData(Makaretu.Dns.DnsWriter)
+  name: WriteData(DnsWriter)
+  href: api/Makaretu.Dns.EdnsNSIDOption.html#Makaretu_Dns_EdnsNSIDOption_WriteData_Makaretu_Dns_DnsWriter_
+  commentId: M:Makaretu.Dns.EdnsNSIDOption.WriteData(Makaretu.Dns.DnsWriter)
+  fullName: Makaretu.Dns.EdnsNSIDOption.WriteData(Makaretu.Dns.DnsWriter)
+  nameWithType: EdnsNSIDOption.WriteData(DnsWriter)
+- uid: Makaretu.Dns.EdnsNSIDOption.WriteData*
+  name: WriteData
+  href: api/Makaretu.Dns.EdnsNSIDOption.html#Makaretu_Dns_EdnsNSIDOption_WriteData_
+  commentId: Overload:Makaretu.Dns.EdnsNSIDOption.WriteData
+  isSpec: "True"
+  fullName: Makaretu.Dns.EdnsNSIDOption.WriteData
+  nameWithType: EdnsNSIDOption.WriteData
 - uid: Makaretu.Dns.EdnsOption
   name: EdnsOption
   href: api/Makaretu.Dns.EdnsOption.html
