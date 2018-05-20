@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class EdnsOption
+    <title>Class EdnsPaddingOption
    | DNS Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class EdnsOption
+    <meta name="title" content="Class EdnsPaddingOption
    | DNS Model ">
     <meta name="generator" content="docfx 2.36.0.0">
     
@@ -68,52 +68,70 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Makaretu.Dns.EdnsOption">
+            <article class="content wrap" id="_content" data-uid="Makaretu.Dns.EdnsPaddingOption">
   
   
-  <h1 id="Makaretu_Dns_EdnsOption" data-uid="Makaretu.Dns.EdnsOption" class="text-break">Class EdnsOption
+  <h1 id="Makaretu_Dns_EdnsPaddingOption" data-uid="Makaretu.Dns.EdnsPaddingOption" class="text-break">Class EdnsPaddingOption
   </h1>
-  <div class="markdown level0 summary"><p>Contains some information on an EDNS option.</p>
+  <div class="markdown level0 summary"><p>Padding for a <a class="xref" href="Makaretu.Dns.Message.html">Message</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">EdnsOption</span></div>
-      <div class="level2"><a class="xref" href="Makaretu.Dns.EdnsPaddingOption.html">EdnsPaddingOption</a></div>
-      <div class="level2"><a class="xref" href="Makaretu.Dns.UnknownEdnsOption.html">UnknownEdnsOption</a></div>
+    <div class="level1"><a class="xref" href="Makaretu.Dns.EdnsOption.html">EdnsOption</a></div>
+    <div class="level2"><span class="xref">EdnsPaddingOption</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Makaretu.Dns.EdnsOption.html#Makaretu_Dns_EdnsOption_Type">EdnsOption.Type</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Makaretu.Dns.html">Makaretu.Dns</a></h6>
   <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
-  <h5 id="Makaretu_Dns_EdnsOption_syntax">Syntax</h5>
+  <h5 id="Makaretu_Dns_EdnsPaddingOption_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class EdnsOption : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class EdnsPaddingOption : EdnsOption</code></pre>
   </div>
-  <h5 id="Makaretu_Dns_EdnsOption_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>EdnsOptions are found in the <a class="xref" href="Makaretu.Dns.OPTRecord.html">OPTRecord</a>.
-<p>
-The <a class="xref" href="Makaretu.Dns.EdnsOptionRegistry.html">EdnsOptionRegistry</a> contains the metadata on known
-resource records. When reading, if the registry does not contain
-the record, then an <a class="xref" href="Makaretu.Dns.UnknownEdnsOption.html">UnknownEdnsOption</a> is used.
-</p></p>
+  <h5 id="Makaretu_Dns_EdnsPaddingOption_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Padding is used to frustrate size-based correlation of the encrypted message.</p>
 </div>
-  <h3 id="properties">Properties
+  <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_EdnsOption_Type.md&amp;value=---%0Auid%3A%20Makaretu.Dns.EdnsOption.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_EdnsPaddingOption__ctor.md&amp;value=---%0Auid%3A%20Makaretu.Dns.EdnsPaddingOption.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/EdnsOption.cs/#L34">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/EdnsPaddingOption.cs/#L20">View Source</a>
   </span>
-  <a id="Makaretu_Dns_EdnsOption_Type_" data-uid="Makaretu.Dns.EdnsOption.Type*"></a>
-  <h4 id="Makaretu_Dns_EdnsOption_Type" data-uid="Makaretu.Dns.EdnsOption.Type">Type</h4>
-  <div class="markdown level1 summary"><p>The option type.</p>
+  <a id="Makaretu_Dns_EdnsPaddingOption__ctor_" data-uid="Makaretu.Dns.EdnsPaddingOption.#ctor*"></a>
+  <h4 id="Makaretu_Dns_EdnsPaddingOption__ctor" data-uid="Makaretu.Dns.EdnsPaddingOption.#ctor">EdnsPaddingOption()</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Makaretu.Dns.EdnsPaddingOption.html">EdnsPaddingOption</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EdnsOptionType Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public EdnsPaddingOption()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_EdnsPaddingOption_Padding.md&amp;value=---%0Auid%3A%20Makaretu.Dns.EdnsPaddingOption.Padding%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/EdnsPaddingOption.cs/#L31">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_EdnsPaddingOption_Padding_" data-uid="Makaretu.Dns.EdnsPaddingOption.Padding*"></a>
+  <h4 id="Makaretu_Dns_EdnsPaddingOption_Padding" data-uid="Makaretu.Dns.EdnsPaddingOption.Padding">Padding</h4>
+  <div class="markdown level1 summary"><p>The padding bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] Padding { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,32 +143,29 @@ the record, then an <a class="xref" href="Makaretu.Dns.UnknownEdnsOption.html">U
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Makaretu.Dns.EdnsOptionType.html">EdnsOptionType</a></td>
-        <td><p>A code to specify the type of EDNS option.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><p>The bytes used for padding.  Normally all bytes are zero.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Makaretu_Dns_EdnsOption_Type_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Codes are specified in <a href="https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-11">IANA - DNS EDNS0 Option Codes</a>.</p>
-</div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_EdnsOption_ReadData_Makaretu_Dns_DnsReader_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.EdnsOption.ReadData(Makaretu.Dns.DnsReader%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_EdnsPaddingOption_ReadData_Makaretu_Dns_DnsReader_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.EdnsPaddingOption.ReadData(Makaretu.Dns.DnsReader%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/EdnsOption.cs/#L48">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/EdnsPaddingOption.cs/#L34">View Source</a>
   </span>
-  <a id="Makaretu_Dns_EdnsOption_ReadData_" data-uid="Makaretu.Dns.EdnsOption.ReadData*"></a>
-  <h4 id="Makaretu_Dns_EdnsOption_ReadData_Makaretu_Dns_DnsReader_System_Int32_" data-uid="Makaretu.Dns.EdnsOption.ReadData(Makaretu.Dns.DnsReader,System.Int32)">ReadData(DnsReader, Int32)</h4>
+  <a id="Makaretu_Dns_EdnsPaddingOption_ReadData_" data-uid="Makaretu.Dns.EdnsPaddingOption.ReadData*"></a>
+  <h4 id="Makaretu_Dns_EdnsPaddingOption_ReadData_Makaretu_Dns_DnsReader_System_Int32_" data-uid="Makaretu.Dns.EdnsPaddingOption.ReadData(Makaretu.Dns.DnsReader,System.Int32)">ReadData(DnsReader, Int32)</h4>
   <div class="markdown level1 summary"><p>Read the data that is specific to the option <a class="xref" href="Makaretu.Dns.EdnsOption.html#Makaretu_Dns_EdnsOption_Type">Type</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void ReadData(DnsReader reader, int length)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void ReadData(DnsReader reader, int length)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,24 +191,26 @@ the record, then an <a class="xref" href="Makaretu.Dns.UnknownEdnsOption.html">U
       </tr>
     </tbody>
   </table>
-  <h5 id="Makaretu_Dns_EdnsOption_ReadData_Makaretu_Dns_DnsReader_System_Int32__remarks">Remarks</h5>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Makaretu.Dns.EdnsOption.html#Makaretu_Dns_EdnsOption_ReadData_Makaretu_Dns_DnsReader_System_Int32_">EdnsOption.ReadData(DnsReader, Int32)</a></div>
+  <h5 id="Makaretu_Dns_EdnsPaddingOption_ReadData_Makaretu_Dns_DnsReader_System_Int32__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Derived classes must implement this method.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_EdnsOption_WriteData_Makaretu_Dns_DnsWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.EdnsOption.WriteData(Makaretu.Dns.DnsWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_EdnsPaddingOption_WriteData_Makaretu_Dns_DnsWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.EdnsPaddingOption.WriteData(Makaretu.Dns.DnsWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/EdnsOption.cs/#L59">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/EdnsPaddingOption.cs/#L40">View Source</a>
   </span>
-  <a id="Makaretu_Dns_EdnsOption_WriteData_" data-uid="Makaretu.Dns.EdnsOption.WriteData*"></a>
-  <h4 id="Makaretu_Dns_EdnsOption_WriteData_Makaretu_Dns_DnsWriter_" data-uid="Makaretu.Dns.EdnsOption.WriteData(Makaretu.Dns.DnsWriter)">WriteData(DnsWriter)</h4>
+  <a id="Makaretu_Dns_EdnsPaddingOption_WriteData_" data-uid="Makaretu.Dns.EdnsPaddingOption.WriteData*"></a>
+  <h4 id="Makaretu_Dns_EdnsPaddingOption_WriteData_Makaretu_Dns_DnsWriter_" data-uid="Makaretu.Dns.EdnsPaddingOption.WriteData(Makaretu.Dns.DnsWriter)">WriteData(DnsWriter)</h4>
   <div class="markdown level1 summary"><p>Write the data that is specific to the resource record <a class="xref" href="Makaretu.Dns.EdnsOption.html#Makaretu_Dns_EdnsOption_Type">Type</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void WriteData(DnsWriter writer)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void WriteData(DnsWriter writer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,13 +230,14 @@ the record, then an <a class="xref" href="Makaretu.Dns.UnknownEdnsOption.html">U
       </tr>
     </tbody>
   </table>
-  <h5 id="Makaretu_Dns_EdnsOption_WriteData_Makaretu_Dns_DnsWriter__remarks">Remarks</h5>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Makaretu.Dns.EdnsOption.html#Makaretu_Dns_EdnsOption_WriteData_Makaretu_Dns_DnsWriter_">EdnsOption.WriteData(DnsWriter)</a></div>
+  <h5 id="Makaretu_Dns_EdnsPaddingOption_WriteData_Makaretu_Dns_DnsWriter__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Derived classes must implement this method.</p>
 </div>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">
-      <div><a class="xref" href="Makaretu.Dns.OPTRecord.html">OPTRecord</a></div>
-      <div><span><a href="https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-11">IANA - DNS EDNS0 Option Codes</a></span></div>
+      <div><span><a href="https://tools.ietf.org/html/rfc7830">https://tools.ietf.org/html/rfc7830</a></span></div>
   </div>
 </article>
           </div>
@@ -229,10 +247,10 @@ the record, then an <a class="xref" href="Makaretu.Dns.UnknownEdnsOption.html">U
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_EdnsOption.md&amp;value=---%0Auid%3A%20Makaretu.Dns.EdnsOption%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_EdnsPaddingOption.md&amp;value=---%0Auid%3A%20Makaretu.Dns.EdnsPaddingOption%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/EdnsOption.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/EdnsPaddingOption.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
