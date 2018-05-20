@@ -71,8 +71,11 @@ namespace Makaretu.Dns
         /// <param name="bytes"></param>
         public void WriteBytes(byte[] bytes)
         {
-            stream.Write(bytes, 0, bytes.Length);
-            position += bytes.Length;
+            if (bytes != null)
+            {
+                stream.Write(bytes, 0, bytes.Length);
+                position += bytes.Length;
+            }
         }
 
         /// <summary>
