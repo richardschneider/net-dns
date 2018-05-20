@@ -24,6 +24,7 @@ namespace Makaretu.Dns
         static EdnsOptionRegistry()
         {
             Options = new Dictionary<EdnsOptionType, Func<EdnsOption>>();
+            Register<EdnsPaddingOption>();
         }
 
         /// <summary>

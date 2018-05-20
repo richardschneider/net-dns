@@ -67,6 +67,7 @@ namespace Makaretu.Dns
         /// <summary>
         ///   The EDNS(0) Padding Option.
         /// </summary>
+        /// <seealso cref="EdnsPaddingOption"/>
         /// <seealso href="https://tools.ietf.org/html/rfc7830"/>
         Padding = 12,
 

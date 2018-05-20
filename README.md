@@ -23,6 +23,7 @@ DNS data model with serializer/deserializer for the wire format.
   - [RFC 3599](https://tools.ietf.org/html/rfc3596) DNS Extensions to Support IPv6
   - [RFC 6672](https://tools.ietf.org/html/rfc6672) DNAME Redirection in the DNS
   - [RFC 6891](https://tools.ietf.org/html/rfc6891) Extension Mechanisms for DNS (EDNS(0))
+  - [RFC 7830](https://tools.ietf.org/html/rfc7830) The EDNS(0) Padding Option
 - Targets .NET Standard 1.4 and 2.0
 - CI on Travis (Ubuntu Trusty) and AppVeyor (Windows Server 2016)
 
