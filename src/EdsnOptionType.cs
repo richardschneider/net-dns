@@ -19,6 +19,7 @@ namespace Makaretu.Dns
         /// <summary>
         ///   DNS Name Server Identifier (NSID) Option.
         /// </summary>
+        /// <seealso cref="EdnsNSIDOption"/>
         /// <seealso href="https://tools.ietf.org/html/rfc5001"/>
         NSID = 3,
 
