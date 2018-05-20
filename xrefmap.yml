@@ -973,6 +973,36 @@ references:
   commentId: T:Makaretu.Dns.EdnsOptionType
   fullName: Makaretu.Dns.EdnsOptionType
   nameWithType: EdnsOptionType
+- uid: Makaretu.Dns.EdnsOptionType.Chain
+  name: Chain
+  href: api/Makaretu.Dns.EdnsOptionType.html#Makaretu_Dns_EdnsOptionType_Chain
+  commentId: F:Makaretu.Dns.EdnsOptionType.Chain
+  fullName: Makaretu.Dns.EdnsOptionType.Chain
+  nameWithType: EdnsOptionType.Chain
+- uid: Makaretu.Dns.EdnsOptionType.ClientSubnet
+  name: ClientSubnet
+  href: api/Makaretu.Dns.EdnsOptionType.html#Makaretu_Dns_EdnsOptionType_ClientSubnet
+  commentId: F:Makaretu.Dns.EdnsOptionType.ClientSubnet
+  fullName: Makaretu.Dns.EdnsOptionType.ClientSubnet
+  nameWithType: EdnsOptionType.ClientSubnet
+- uid: Makaretu.Dns.EdnsOptionType.Cookie
+  name: Cookie
+  href: api/Makaretu.Dns.EdnsOptionType.html#Makaretu_Dns_EdnsOptionType_Cookie
+  commentId: F:Makaretu.Dns.EdnsOptionType.Cookie
+  fullName: Makaretu.Dns.EdnsOptionType.Cookie
+  nameWithType: EdnsOptionType.Cookie
+- uid: Makaretu.Dns.EdnsOptionType.DAU
+  name: DAU
+  href: api/Makaretu.Dns.EdnsOptionType.html#Makaretu_Dns_EdnsOptionType_DAU
+  commentId: F:Makaretu.Dns.EdnsOptionType.DAU
+  fullName: Makaretu.Dns.EdnsOptionType.DAU
+  nameWithType: EdnsOptionType.DAU
+- uid: Makaretu.Dns.EdnsOptionType.DHU
+  name: DHU
+  href: api/Makaretu.Dns.EdnsOptionType.html#Makaretu_Dns_EdnsOptionType_DHU
+  commentId: F:Makaretu.Dns.EdnsOptionType.DHU
+  fullName: Makaretu.Dns.EdnsOptionType.DHU
+  nameWithType: EdnsOptionType.DHU
 - uid: Makaretu.Dns.EdnsOptionType.ExperimentalMax
   name: ExperimentalMax
   href: api/Makaretu.Dns.EdnsOptionType.html#Makaretu_Dns_EdnsOptionType_ExperimentalMax
@@ -985,12 +1015,48 @@ references:
   commentId: F:Makaretu.Dns.EdnsOptionType.ExperimentalMin
   fullName: Makaretu.Dns.EdnsOptionType.ExperimentalMin
   nameWithType: EdnsOptionType.ExperimentalMin
+- uid: Makaretu.Dns.EdnsOptionType.Expire
+  name: Expire
+  href: api/Makaretu.Dns.EdnsOptionType.html#Makaretu_Dns_EdnsOptionType_Expire
+  commentId: F:Makaretu.Dns.EdnsOptionType.Expire
+  fullName: Makaretu.Dns.EdnsOptionType.Expire
+  nameWithType: EdnsOptionType.Expire
 - uid: Makaretu.Dns.EdnsOptionType.FutureExpansion
   name: FutureExpansion
   href: api/Makaretu.Dns.EdnsOptionType.html#Makaretu_Dns_EdnsOptionType_FutureExpansion
   commentId: F:Makaretu.Dns.EdnsOptionType.FutureExpansion
   fullName: Makaretu.Dns.EdnsOptionType.FutureExpansion
   nameWithType: EdnsOptionType.FutureExpansion
+- uid: Makaretu.Dns.EdnsOptionType.Keepalive
+  name: Keepalive
+  href: api/Makaretu.Dns.EdnsOptionType.html#Makaretu_Dns_EdnsOptionType_Keepalive
+  commentId: F:Makaretu.Dns.EdnsOptionType.Keepalive
+  fullName: Makaretu.Dns.EdnsOptionType.Keepalive
+  nameWithType: EdnsOptionType.Keepalive
+- uid: Makaretu.Dns.EdnsOptionType.KeyTag
+  name: KeyTag
+  href: api/Makaretu.Dns.EdnsOptionType.html#Makaretu_Dns_EdnsOptionType_KeyTag
+  commentId: F:Makaretu.Dns.EdnsOptionType.KeyTag
+  fullName: Makaretu.Dns.EdnsOptionType.KeyTag
+  nameWithType: EdnsOptionType.KeyTag
+- uid: Makaretu.Dns.EdnsOptionType.N3U
+  name: N3U
+  href: api/Makaretu.Dns.EdnsOptionType.html#Makaretu_Dns_EdnsOptionType_N3U
+  commentId: F:Makaretu.Dns.EdnsOptionType.N3U
+  fullName: Makaretu.Dns.EdnsOptionType.N3U
+  nameWithType: EdnsOptionType.N3U
+- uid: Makaretu.Dns.EdnsOptionType.NSID
+  name: NSID
+  href: api/Makaretu.Dns.EdnsOptionType.html#Makaretu_Dns_EdnsOptionType_NSID
+  commentId: F:Makaretu.Dns.EdnsOptionType.NSID
+  fullName: Makaretu.Dns.EdnsOptionType.NSID
+  nameWithType: EdnsOptionType.NSID
+- uid: Makaretu.Dns.EdnsOptionType.Padding
+  name: Padding
+  href: api/Makaretu.Dns.EdnsOptionType.html#Makaretu_Dns_EdnsOptionType_Padding
+  commentId: F:Makaretu.Dns.EdnsOptionType.Padding
+  fullName: Makaretu.Dns.EdnsOptionType.Padding
+  nameWithType: EdnsOptionType.Padding
 - uid: Makaretu.Dns.HINFORecord
   name: HINFORecord
   href: api/Makaretu.Dns.HINFORecord.html
