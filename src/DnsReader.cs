@@ -137,8 +137,10 @@ namespace Makaretu.Dns
             // Do we have a compressed pointer?
             if ((length & 0xC0) == 0xC0)
             {
-                pointer = (length ^ 0xC0) << 8 | ReadByte();
-                return names[pointer];
+                var cpointer = (length ^ 0xC0) << 8 | ReadByte();
+                var cname = names[cpointer];
+                names[pointer] = cname;
+                return cname;
             }
 
             // End of labels?
