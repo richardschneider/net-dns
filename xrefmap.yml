@@ -1450,6 +1450,12 @@ references:
   commentId: F:Makaretu.Dns.Message.MaxLength
   fullName: Makaretu.Dns.Message.MaxLength
   nameWithType: Message.MaxLength
+- uid: Makaretu.Dns.Message.MinLength
+  name: MinLength
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_MinLength
+  commentId: F:Makaretu.Dns.Message.MinLength
+  fullName: Makaretu.Dns.Message.MinLength
+  nameWithType: Message.MinLength
 - uid: Makaretu.Dns.Message.Opcode
   name: Opcode
   href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_Opcode
