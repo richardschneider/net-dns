@@ -17,7 +17,7 @@ namespace Makaretu.Dns
         byte opcode4;
 
         /// <summary>
-        ///   Maximum bytes in a message.
+        ///   Maximum bytes of a message.
         /// </summary>
         /// <value>
         ///   9000 bytes.
@@ -30,6 +30,14 @@ namespace Makaretu.Dns
         ///   </para>
         /// </remarks>
         public const int MaxLength = 9000;
+
+        /// <summary>
+        ///   Minimum bytes of a messages
+        /// </summary>
+        /// <value>
+        ///   12 bytes.
+        /// </value>
+        public const int MinLength = 12;
 
         /// <summary>
         /// A 16 bit identifier assigned by the program that
