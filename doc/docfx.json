@@ -15,7 +15,7 @@
         }
       ],
       "properties": {
-        "TargetFramework": "net46"
+        "TargetFramework": "net45"
       },
 
       "dest": "api"

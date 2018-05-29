@@ -26,7 +26,7 @@ DNS data model with serializer/deserializer for the wire format.
   - [RFC 6891](https://tools.ietf.org/html/rfc6891) Extension Mechanisms for DNS (EDNS(0))
   - [RFC 7828](https://tools.ietf.org/html/rfc7828) The edns-tcp-keepalive EDNS0 Option
   - [RFC 7830](https://tools.ietf.org/html/rfc7830) The EDNS(0) Padding Option
-- Targets .Net Framework 4.6 and .NET Standard 1.4 and 2.0
+- Targets .Net Framework 4.5 and .NET Standard 1.4 and 2.0
 - CI on Travis (Ubuntu Trusty) and AppVeyor (Windows Server 2016)
 
 ## Getting started.

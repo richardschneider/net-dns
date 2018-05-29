@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net46;netstandard14;netstandard2</TargetFrameworks>
+    <TargetFrameworks>net45;netstandard14;netstandard2</TargetFrameworks>
     <AssemblyName>Makaretu.Dns</AssemblyName>
     <RootNamespace>Makaretu.Dns</RootNamespace>
     <DocumentationFile>Makaretu.Dns.xml</DocumentationFile>
