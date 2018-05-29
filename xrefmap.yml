@@ -358,6 +358,19 @@ references:
   commentId: T:Makaretu.Dns.DnsObject
   fullName: Makaretu.Dns.DnsObject
   nameWithType: DnsObject
+- uid: Makaretu.Dns.DnsObject.Length
+  name: Length()
+  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Length
+  commentId: M:Makaretu.Dns.DnsObject.Length
+  fullName: Makaretu.Dns.DnsObject.Length()
+  nameWithType: DnsObject.Length()
+- uid: Makaretu.Dns.DnsObject.Length*
+  name: Length
+  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Length_
+  commentId: Overload:Makaretu.Dns.DnsObject.Length
+  isSpec: "True"
+  fullName: Makaretu.Dns.DnsObject.Length
+  nameWithType: DnsObject.Length
 - uid: Makaretu.Dns.DnsObject.NamesEquals(System.String,System.String)
   name: NamesEquals(String, String)
   href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_NamesEquals_System_String_System_String_
@@ -787,6 +800,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DnsWriter.PopLengthPrefixedScope
   nameWithType: DnsWriter.PopLengthPrefixedScope
+- uid: Makaretu.Dns.DnsWriter.Position
+  name: Position
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_Position
+  commentId: F:Makaretu.Dns.DnsWriter.Position
+  fullName: Makaretu.Dns.DnsWriter.Position
+  nameWithType: DnsWriter.Position
 - uid: Makaretu.Dns.DnsWriter.PushLengthPrefixedScope
   name: PushLengthPrefixedScope()
   href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_PushLengthPrefixedScope
