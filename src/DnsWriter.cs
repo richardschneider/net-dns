@@ -13,9 +13,13 @@ namespace Makaretu.Dns
     {
         const int maxPointer = 0x3FFF; 
         Stream stream;
-        int position;
         Dictionary<string, int> pointers = new Dictionary<string, int>();
         Stack<Stream> scopes = new Stack<Stream>();
+
+        /// <summary>
+        ///   The writer relative position within the stream.
+        /// </summary>
+        public int Position;
 
         /// <summary>
         ///   Creates a new instance of the <see cref="DnsWriter"/> on the
@@ -41,7 +45,7 @@ namespace Makaretu.Dns
         {
             scopes.Push(stream);
             stream = new MemoryStream();
-            position += 2; // count the length prefix
+            Position += 2; // count the length prefix
         }
 
         /// <summary>
@@ -58,7 +62,7 @@ namespace Makaretu.Dns
             var length = (ushort)lp.Position;
             stream = scopes.Pop();
             WriteUInt16(length);
-            position -= 2;
+            Position -= 2;
             lp.Position = 0;
             lp.CopyTo(stream);
 
@@ -74,7 +78,7 @@ namespace Makaretu.Dns
             if (bytes != null)
             {
                 stream.Write(bytes, 0, bytes.Length);
-                position += bytes.Length;
+                Position += bytes.Length;
             }
         }
 
@@ -85,7 +89,7 @@ namespace Makaretu.Dns
         {
             stream.WriteByte((byte)(value >> 8));
             stream.WriteByte((byte)value);
-            position += 2;
+            Position += 2;
         }
 
         /// <summary>
@@ -97,7 +101,7 @@ namespace Makaretu.Dns
             stream.WriteByte((byte)(value >> 16));
             stream.WriteByte((byte)(value >> 8));
             stream.WriteByte((byte)value);
-            position += 4;
+            Position += 4;
         }
 
         /// <summary>
@@ -123,7 +127,7 @@ namespace Makaretu.Dns
             if (string.IsNullOrEmpty(name))
             {
                 stream.WriteByte(0); // terminating byte
-                ++position;
+                ++Position;
                 return;
             }
 
@@ -142,19 +146,19 @@ namespace Makaretu.Dns
                     WriteUInt16((ushort)(0xC000 | pointer));
                     return;
                 }
-                if (position <= maxPointer)
+                if (Position <= maxPointer)
                 {
-                    pointers[qn] = position;
+                    pointers[qn] = Position;
                 }
 
                 // Add the label
                 stream.WriteByte((byte)bytes.Length);
                 stream.Write(bytes, 0, bytes.Length);
-                position += bytes.Length + 1;
+                Position += bytes.Length + 1;
             }
 
             stream.WriteByte(0); // terminating byte
-            ++position;
+            ++Position;
         }
 
         /// <summary>
@@ -169,7 +173,7 @@ namespace Makaretu.Dns
             var bytes = Encoding.UTF8.GetBytes(value);
             stream.WriteByte((byte)bytes.Length);
             stream.Write(bytes, 0, bytes.Length);
-            position += bytes.Length + 1;
+            Position += bytes.Length + 1;
         }
 
         /// <summary>

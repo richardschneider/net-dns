@@ -11,6 +11,20 @@ namespace Makaretu.Dns
     public abstract class DnsObject : IDnsSerialiser
     {
         /// <summary>
+        ///   Length in bytes of the object when serialised.
+        /// </summary>
+        /// <returns>
+        ///   Numbers of bytes when serialised.
+        /// </returns>
+        public int Length()
+        {
+            var writer = new DnsWriter(Stream.Null);
+            Write(writer);
+
+            return writer.Position;
+        }
+
+        /// <summary>
         ///   Reads the DNS object from a byte array.
         /// </summary>
         /// <param name="buffer">

@@ -24,5 +24,12 @@ namespace Makaretu.Dns
             Assert.IsFalse(DnsObject.NamesEquals("foo", null));
             Assert.IsFalse(DnsObject.NamesEquals(null, "foo"));
         }
+
+        [TestMethod]
+        public void Length_EmptyMessage()
+        {
+            var message = new Message();
+            Assert.AreEqual(Message.MinLength, message.Length());
+        }
     }
 }
