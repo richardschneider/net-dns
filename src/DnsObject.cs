@@ -9,6 +9,9 @@ namespace Makaretu.Dns
     ///   Base class for all DNS objects.
     /// </summary>
     public abstract class DnsObject : IDnsSerialiser
+#if !NETSTANDARD14
+        , ICloneable
+#endif
     {
         /// <summary>
         ///   Length in bytes of the object when serialised.
@@ -22,6 +25,42 @@ namespace Makaretu.Dns
             Write(writer);
 
             return writer.Position;
+        }
+
+        /// <summary>
+        ///   Makes a deep copy of the object.
+        /// </summary>
+        /// <returns>
+        ///   A deep copy of the dns object.
+        /// </returns>
+        /// <remarks>
+        ///   Use serialisation to make a copy.
+        /// </remarks>
+        public object Clone()
+        {
+            using (var ms = new MemoryStream())
+            {
+                Write(ms);
+                ms.Position = 0;
+                return Read(ms);
+            }
+        }
+
+        /// <summary>
+        ///   Makes a deep copy of the object.
+        /// </summary>
+        /// <typeparam name="T">
+        ///   Some type derived from <see cref="DnsObject"/>.
+        /// </typeparam>
+        /// <returns>
+        ///   A deep copy of the dns object.
+        /// </returns>
+        /// <remarks>
+        ///   Use serialisation to make a copy.
+        /// </remarks>
+        public T Clone<T>() where T : DnsObject
+        {
+            return (T)Clone();
         }
 
         /// <summary>
