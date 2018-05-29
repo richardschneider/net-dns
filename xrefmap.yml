@@ -358,6 +358,28 @@ references:
   commentId: T:Makaretu.Dns.DnsObject
   fullName: Makaretu.Dns.DnsObject
   nameWithType: DnsObject
+- uid: Makaretu.Dns.DnsObject.Clone
+  name: Clone()
+  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Clone
+  commentId: M:Makaretu.Dns.DnsObject.Clone
+  fullName: Makaretu.Dns.DnsObject.Clone()
+  nameWithType: DnsObject.Clone()
+- uid: Makaretu.Dns.DnsObject.Clone*
+  name: Clone
+  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Clone_
+  commentId: Overload:Makaretu.Dns.DnsObject.Clone
+  isSpec: "True"
+  fullName: Makaretu.Dns.DnsObject.Clone
+  nameWithType: DnsObject.Clone
+- uid: Makaretu.Dns.DnsObject.Clone``1
+  name: Clone<T>()
+  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Clone__1
+  commentId: M:Makaretu.Dns.DnsObject.Clone``1
+  name.vb: Clone(Of T)()
+  fullName: Makaretu.Dns.DnsObject.Clone<T>()
+  fullName.vb: Makaretu.Dns.DnsObject.Clone(Of T)()
+  nameWithType: DnsObject.Clone<T>()
+  nameWithType.vb: DnsObject.Clone(Of T)()
 - uid: Makaretu.Dns.DnsObject.Length
   name: Length()
   href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Length

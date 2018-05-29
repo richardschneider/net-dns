@@ -86,6 +86,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Makaretu.Dns.IDnsSerialiser.html">IDnsSerialiser</a></div>
+    <div><span class="xref">ICloneable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -129,6 +130,12 @@
       <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Length">DnsObject.Length()</a>
     </div>
     <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Clone">DnsObject.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Clone__1">DnsObject.Clone&lt;T&gt;()</a>
+    </div>
+    <div>
       <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_System_Byte___">DnsObject.Read(Byte[])</a>
     </div>
     <div>
@@ -151,7 +158,7 @@
   <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
   <h5 id="Makaretu_Dns_HINFORecord_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HINFORecord : ResourceRecord, IDnsSerialiser</code></pre>
+    <pre><code class="lang-csharp hljs">public class HINFORecord : ResourceRecord, IDnsSerialiser, ICloneable</code></pre>
   </div>
   <h5 id="Makaretu_Dns_HINFORecord_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Standard values for CPU and OS can be found in [RFC-1010].</p>
@@ -330,6 +337,9 @@ when talking between machines or operating systems of the same type.</p>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Makaretu.Dns.IDnsSerialiser.html">IDnsSerialiser</a>
+  </div>
+  <div>
+      <span class="xref">ICloneable</span>
   </div>
 </article>
           </div>

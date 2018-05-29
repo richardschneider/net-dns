@@ -87,6 +87,7 @@ types present at the NSEC RR&apos;s owner name [RFC3845].  T</p>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Makaretu.Dns.IDnsSerialiser.html">IDnsSerialiser</a></div>
+    <div><span class="xref">ICloneable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -130,6 +131,12 @@ types present at the NSEC RR&apos;s owner name [RFC3845].  T</p>
       <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Length">DnsObject.Length()</a>
     </div>
     <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Clone">DnsObject.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Clone__1">DnsObject.Clone&lt;T&gt;()</a>
+    </div>
+    <div>
       <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_System_Byte___">DnsObject.Read(Byte[])</a>
     </div>
     <div>
@@ -152,7 +159,7 @@ types present at the NSEC RR&apos;s owner name [RFC3845].  T</p>
   <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
   <h5 id="Makaretu_Dns_NSECRecord_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class NSECRecord : ResourceRecord, IDnsSerialiser</code></pre>
+    <pre><code class="lang-csharp hljs">public class NSECRecord : ResourceRecord, IDnsSerialiser, ICloneable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -326,6 +333,9 @@ delegation point NS RRset</p>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Makaretu.Dns.IDnsSerialiser.html">IDnsSerialiser</a>
+  </div>
+  <div>
+      <span class="xref">ICloneable</span>
   </div>
 </article>
           </div>
