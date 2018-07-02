@@ -6,7 +6,7 @@ sudo: required
 os:
   - linux
   - osx
-  s
+
 install:
   - dotnet restore
 
