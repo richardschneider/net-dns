@@ -27,7 +27,7 @@ DNS data model with serializer/deserializer for the wire format.
   - [RFC 7828](https://tools.ietf.org/html/rfc7828) The edns-tcp-keepalive EDNS0 Option
   - [RFC 7830](https://tools.ietf.org/html/rfc7830) The EDNS(0) Padding Option
 - Targets .Net Framework 4.5 and .NET Standard 1.4 and 2.0
-- CI on Travis (Ubuntu Trusty) and AppVeyor (Windows Server 2016)
+- CI on Travis (Ubuntu Trusty and OSX) and AppVeyor (Windows Server 2016)
 
 ## Getting started.
 
@@ -72,7 +72,7 @@ msg.AdditionalRecords.Add(new ARecord
 # Related projects
 
 - [net-mdns](https://github.com/richardschneider/net-mdns) - client and server for multicast DNS
-- [net-udns](https://github.com/richardschneider/net-udns) - client for unicast DNS
+- [net-udns](https://github.com/richardschneider/net-udns) - client for unicast DNS, DNS over HTTPS (DOH) and DNS over TLS (DOT)
 
 # License
 Copyright © 2018 Richard Schneider (makaretu@gmail.com)
