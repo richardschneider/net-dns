@@ -31,6 +31,21 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void NoStrings()
+        {
+            var a = new TXTRecord
+            {
+                Name = "the.printer.local",
+            };
+            var b = (TXTRecord)new ResourceRecord().Read(a.ToByteArray());
+            Assert.AreEqual(a.Name, b.Name);
+            Assert.AreEqual(a.Class, b.Class);
+            Assert.AreEqual(a.Type, b.Type);
+            Assert.AreEqual(a.TTL, b.TTL);
+            CollectionAssert.AreEqual(a.Strings, b.Strings);
+        }
+
+        [TestMethod]
         public void Equality()
         {
             var a = new TXTRecord

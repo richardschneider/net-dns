@@ -30,12 +30,12 @@ namespace Makaretu.Dns
         /// <inheritdoc />
         protected override void ReadData(DnsReader reader, int length)
         {
-            do
+            while (length > 0)
             {
                 var s = reader.ReadString();
                 Strings.Add(s);
                 length -= Encoding.UTF8.GetByteCount(s) + 1;
-            } while (length > 0);
+            }
         }
 
         /// <inheritdoc />
