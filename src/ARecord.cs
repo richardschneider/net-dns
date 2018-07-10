@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Text;
 
@@ -37,5 +38,10 @@ namespace Makaretu.Dns
             writer.WriteIPAddress(Address);
         }
 
+        /// <inheritdoc />
+        protected override void WriteData(TextWriter writer)
+        {
+            writer.Write(Address.ToString());
+        }
     }
 }

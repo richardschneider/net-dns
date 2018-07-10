@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Makaretu.Dns
 {
     /// <summary>
-    ///   Wire format serialisation of a DNS object.
+    ///   Master file serialisation of a resource record.
     /// </summary>
-    public interface IDnsSerialiser
+    /// <remarks>
+    ///   The "mater file format" is the text representation of a <see cref="ResourceRecord"/>.
+    /// </remarks>
+    public interface IMasterSerialiser
     {
+#if false // TODO
         /// <summary>
-        ///   Reads the DNS object that is encoded in the wire format.
+        ///   Reads the text representation of a resource record.
         /// </summary>
         /// <param name="reader">
         ///   The source of the DNS object.
@@ -24,13 +29,14 @@ namespace Makaretu.Dns
         ///   is zero.
         /// </remarks>
         IDnsSerialiser Read(DnsReader reader);
+#endif
 
         /// <summary>
-        ///   Writes the DNS object encoded in the wire format.
+        ///  Writes the text representation of a resource record.
         /// </summary>
         /// <param name="writer">
-        ///   The destination of the DNS object.
+        ///   The destination of the <see cref="ResourceRecord"/>.
         /// </param>
-        void Write(DnsWriter writer);
+        void Write(TextWriter writer);
     }
 }

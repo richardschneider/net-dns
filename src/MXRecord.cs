@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Text;
 
@@ -53,6 +54,14 @@ namespace Makaretu.Dns
         {
             writer.WriteUInt16(Preference);
             writer.WriteDomainName(Exchange);
+        }
+
+        /// <inheritdoc />
+        protected override void WriteData(TextWriter writer)
+        {
+            writer.Write(Preference);
+            writer.Write(' ');
+            writer.Write(Exchange);
         }
 
     }

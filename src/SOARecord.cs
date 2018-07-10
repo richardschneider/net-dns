@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Text;
 
@@ -101,6 +102,24 @@ namespace Makaretu.Dns
             writer.WriteTimeSpan(Retry);
             writer.WriteTimeSpan(Expire);
             writer.WriteTimeSpan(Minimum);
+        }
+
+        /// <inheritdoc />
+        protected override void WriteData(TextWriter writer)
+        {
+            writer.Write(PrimaryName);
+            writer.Write(' ');
+            writer.Write(Mailbox);
+            writer.Write(' ');
+            writer.Write(SerialNumber);
+            writer.Write(' ');
+            writer.Write((int)Refresh.TotalSeconds);
+            writer.Write(' ');
+            writer.Write((int)Retry.TotalSeconds);
+            writer.Write(' ');
+            writer.Write((int)Expire.TotalSeconds);
+            writer.Write(' ');
+            writer.Write((int)Minimum.TotalSeconds);
         }
 
     }
