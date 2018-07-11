@@ -33,6 +33,12 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
+        internal override void ReadData(MasterReader reader)
+        {
+            Address = reader.ReadIPAddress();
+        }
+
+        /// <inheritdoc />
         protected override void WriteData(DnsWriter writer)
         {
             writer.WriteIPAddress(Address);

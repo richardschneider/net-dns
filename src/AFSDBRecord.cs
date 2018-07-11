@@ -48,6 +48,13 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
+        internal override void ReadData(MasterReader reader)
+        {
+            Subtype = reader.ReadUInt16();
+            Target = reader.ReadDomainName();
+        }
+
+        /// <inheritdoc />
         protected override void WriteData(DnsWriter writer)
         {
             writer.WriteUInt16(Subtype);

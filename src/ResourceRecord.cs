@@ -322,5 +322,10 @@ namespace Makaretu.Dns
             writer.Write(Convert.ToBase64String(GetData()));
         }
 
+        internal virtual void ReadData(MasterReader reader)
+        {
+            // TODO
+        }
+
     }
 }

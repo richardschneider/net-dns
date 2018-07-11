@@ -93,6 +93,18 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
+        internal override void ReadData(MasterReader reader)
+        {
+            PrimaryName = reader.ReadDomainName();
+            Mailbox = reader.ReadDomainName();
+            SerialNumber = reader.ReadUInt32();
+            Refresh = reader.ReadTimeSpan();
+            Retry = reader.ReadTimeSpan();
+            Expire = reader.ReadTimeSpan();
+            Minimum = reader.ReadTimeSpan();
+        }
+
+        /// <inheritdoc />
         protected override void WriteData(DnsWriter writer)
         {
             writer.WriteDomainName(PrimaryName);

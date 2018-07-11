@@ -66,6 +66,15 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
+        internal override void ReadData(MasterReader reader)
+        {
+            Priority = reader.ReadUInt16();
+            Weight = reader.ReadUInt16();
+            Port = reader.ReadUInt16();
+            Target = reader.ReadDomainName();
+        }
+
+        /// <inheritdoc />
         protected override void WriteData(DnsWriter writer)
         {
             writer.WriteUInt16(Priority);

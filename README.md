@@ -10,6 +10,7 @@ DNS data model with serializer/deserializer for the wire format.
 
 ## Features
 
+- Serialization for the wire and master file formats
 - Supports compressed domain names
 - Supports multiple strings in TXT records
 - Supports the extended 12-bit RCODE

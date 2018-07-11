@@ -47,6 +47,13 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
+        internal override void ReadData(MasterReader reader)
+        {
+            Mailbox = reader.ReadDomainName();
+            TextName = reader.ReadDomainName();
+        }
+
+        /// <inheritdoc />
         protected override void WriteData(DnsWriter writer)
         {
             writer.WriteDomainName(Mailbox);

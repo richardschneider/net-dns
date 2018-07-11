@@ -40,6 +40,14 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
+        internal override void ReadData(MasterReader reader)
+        {
+            // TODO
+        }
+
+
+
+        /// <inheritdoc />
         protected override void WriteData(DnsWriter writer)
         {
             foreach (var s in Strings)
