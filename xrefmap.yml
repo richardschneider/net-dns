@@ -58,6 +58,12 @@ references:
   commentId: M:Makaretu.Dns.AAAARecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.AAAARecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: AAAARecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.AAAARecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.AAAARecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.AAAARecord.WriteData(System.IO.TextWriter)
+  nameWithType: AAAARecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.AAAARecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_WriteData_
@@ -129,6 +135,12 @@ references:
   commentId: M:Makaretu.Dns.AFSDBRecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.AFSDBRecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: AFSDBRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.AFSDBRecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.AFSDBRecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.AFSDBRecord.WriteData(System.IO.TextWriter)
+  nameWithType: AFSDBRecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.AFSDBRecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord_WriteData_
@@ -187,6 +199,12 @@ references:
   commentId: M:Makaretu.Dns.ARecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.ARecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: ARecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.ARecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.ARecord.html#Makaretu_Dns_ARecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.ARecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.ARecord.WriteData(System.IO.TextWriter)
+  nameWithType: ARecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.ARecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.ARecord.html#Makaretu_Dns_ARecord_WriteData_
@@ -287,6 +305,12 @@ references:
   commentId: M:Makaretu.Dns.CNAMERecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.CNAMERecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: CNAMERecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.CNAMERecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.CNAMERecord.html#Makaretu_Dns_CNAMERecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.CNAMERecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.CNAMERecord.WriteData(System.IO.TextWriter)
+  nameWithType: CNAMERecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.CNAMERecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.CNAMERecord.html#Makaretu_Dns_CNAMERecord_WriteData_
@@ -345,6 +369,12 @@ references:
   commentId: M:Makaretu.Dns.DNAMERecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.DNAMERecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: DNAMERecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.DNAMERecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.DNAMERecord.html#Makaretu_Dns_DNAMERecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.DNAMERecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.DNAMERecord.WriteData(System.IO.TextWriter)
+  nameWithType: DNAMERecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.DNAMERecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.DNAMERecord.html#Makaretu_Dns_DNAMERecord_WriteData_
@@ -1336,6 +1366,12 @@ references:
   commentId: M:Makaretu.Dns.HINFORecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.HINFORecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: HINFORecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.HINFORecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.HINFORecord.html#Makaretu_Dns_HINFORecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.HINFORecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.HINFORecord.WriteData(System.IO.TextWriter)
+  nameWithType: HINFORecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.HINFORecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.HINFORecord.html#Makaretu_Dns_HINFORecord_WriteData_
@@ -1375,6 +1411,180 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.IDnsSerialiser.Write
   nameWithType: IDnsSerialiser.Write
+- uid: Makaretu.Dns.IMasterSerialiser
+  name: IMasterSerialiser
+  href: api/Makaretu.Dns.IMasterSerialiser.html
+  commentId: T:Makaretu.Dns.IMasterSerialiser
+  fullName: Makaretu.Dns.IMasterSerialiser
+  nameWithType: IMasterSerialiser
+- uid: Makaretu.Dns.IMasterSerialiser.Read(Makaretu.Dns.MasterReader)
+  name: Read(MasterReader)
+  href: api/Makaretu.Dns.IMasterSerialiser.html#Makaretu_Dns_IMasterSerialiser_Read_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.IMasterSerialiser.Read(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.IMasterSerialiser.Read(Makaretu.Dns.MasterReader)
+  nameWithType: IMasterSerialiser.Read(MasterReader)
+- uid: Makaretu.Dns.IMasterSerialiser.Read*
+  name: Read
+  href: api/Makaretu.Dns.IMasterSerialiser.html#Makaretu_Dns_IMasterSerialiser_Read_
+  commentId: Overload:Makaretu.Dns.IMasterSerialiser.Read
+  isSpec: "True"
+  fullName: Makaretu.Dns.IMasterSerialiser.Read
+  nameWithType: IMasterSerialiser.Read
+- uid: Makaretu.Dns.IMasterSerialiser.Write(System.IO.TextWriter)
+  name: Write(TextWriter)
+  href: api/Makaretu.Dns.IMasterSerialiser.html#Makaretu_Dns_IMasterSerialiser_Write_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.IMasterSerialiser.Write(System.IO.TextWriter)
+  fullName: Makaretu.Dns.IMasterSerialiser.Write(System.IO.TextWriter)
+  nameWithType: IMasterSerialiser.Write(TextWriter)
+- uid: Makaretu.Dns.IMasterSerialiser.Write*
+  name: Write
+  href: api/Makaretu.Dns.IMasterSerialiser.html#Makaretu_Dns_IMasterSerialiser_Write_
+  commentId: Overload:Makaretu.Dns.IMasterSerialiser.Write
+  isSpec: "True"
+  fullName: Makaretu.Dns.IMasterSerialiser.Write
+  nameWithType: IMasterSerialiser.Write
+- uid: Makaretu.Dns.MasterReader
+  name: MasterReader
+  href: api/Makaretu.Dns.MasterReader.html
+  commentId: T:Makaretu.Dns.MasterReader
+  fullName: Makaretu.Dns.MasterReader
+  nameWithType: MasterReader
+- uid: Makaretu.Dns.MasterReader.#ctor(System.IO.TextReader)
+  name: MasterReader(TextReader)
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader__ctor_System_IO_TextReader_
+  commentId: M:Makaretu.Dns.MasterReader.#ctor(System.IO.TextReader)
+  fullName: Makaretu.Dns.MasterReader.MasterReader(System.IO.TextReader)
+  nameWithType: MasterReader.MasterReader(TextReader)
+- uid: Makaretu.Dns.MasterReader.#ctor*
+  name: MasterReader
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader__ctor_
+  commentId: Overload:Makaretu.Dns.MasterReader.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.MasterReader
+  nameWithType: MasterReader.MasterReader
+- uid: Makaretu.Dns.MasterReader.IsEndOfLine
+  name: IsEndOfLine()
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_IsEndOfLine
+  commentId: M:Makaretu.Dns.MasterReader.IsEndOfLine
+  fullName: Makaretu.Dns.MasterReader.IsEndOfLine()
+  nameWithType: MasterReader.IsEndOfLine()
+- uid: Makaretu.Dns.MasterReader.IsEndOfLine*
+  name: IsEndOfLine
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_IsEndOfLine_
+  commentId: Overload:Makaretu.Dns.MasterReader.IsEndOfLine
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.IsEndOfLine
+  nameWithType: MasterReader.IsEndOfLine
+- uid: Makaretu.Dns.MasterReader.Origin
+  name: Origin
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_Origin
+  commentId: P:Makaretu.Dns.MasterReader.Origin
+  fullName: Makaretu.Dns.MasterReader.Origin
+  nameWithType: MasterReader.Origin
+- uid: Makaretu.Dns.MasterReader.Origin*
+  name: Origin
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_Origin_
+  commentId: Overload:Makaretu.Dns.MasterReader.Origin
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.Origin
+  nameWithType: MasterReader.Origin
+- uid: Makaretu.Dns.MasterReader.Position
+  name: Position
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_Position
+  commentId: F:Makaretu.Dns.MasterReader.Position
+  fullName: Makaretu.Dns.MasterReader.Position
+  nameWithType: MasterReader.Position
+- uid: Makaretu.Dns.MasterReader.ReadDomainName
+  name: ReadDomainName()
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadDomainName
+  commentId: M:Makaretu.Dns.MasterReader.ReadDomainName
+  fullName: Makaretu.Dns.MasterReader.ReadDomainName()
+  nameWithType: MasterReader.ReadDomainName()
+- uid: Makaretu.Dns.MasterReader.ReadDomainName*
+  name: ReadDomainName
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadDomainName_
+  commentId: Overload:Makaretu.Dns.MasterReader.ReadDomainName
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.ReadDomainName
+  nameWithType: MasterReader.ReadDomainName
+- uid: Makaretu.Dns.MasterReader.ReadIPAddress(System.Int32)
+  name: ReadIPAddress(Int32)
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadIPAddress_System_Int32_
+  commentId: M:Makaretu.Dns.MasterReader.ReadIPAddress(System.Int32)
+  fullName: Makaretu.Dns.MasterReader.ReadIPAddress(System.Int32)
+  nameWithType: MasterReader.ReadIPAddress(Int32)
+- uid: Makaretu.Dns.MasterReader.ReadIPAddress*
+  name: ReadIPAddress
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadIPAddress_
+  commentId: Overload:Makaretu.Dns.MasterReader.ReadIPAddress
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.ReadIPAddress
+  nameWithType: MasterReader.ReadIPAddress
+- uid: Makaretu.Dns.MasterReader.ReadResourceRecord
+  name: ReadResourceRecord()
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadResourceRecord
+  commentId: M:Makaretu.Dns.MasterReader.ReadResourceRecord
+  fullName: Makaretu.Dns.MasterReader.ReadResourceRecord()
+  nameWithType: MasterReader.ReadResourceRecord()
+- uid: Makaretu.Dns.MasterReader.ReadResourceRecord*
+  name: ReadResourceRecord
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadResourceRecord_
+  commentId: Overload:Makaretu.Dns.MasterReader.ReadResourceRecord
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.ReadResourceRecord
+  nameWithType: MasterReader.ReadResourceRecord
+- uid: Makaretu.Dns.MasterReader.ReadString
+  name: ReadString()
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadString
+  commentId: M:Makaretu.Dns.MasterReader.ReadString
+  fullName: Makaretu.Dns.MasterReader.ReadString()
+  nameWithType: MasterReader.ReadString()
+- uid: Makaretu.Dns.MasterReader.ReadString*
+  name: ReadString
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadString_
+  commentId: Overload:Makaretu.Dns.MasterReader.ReadString
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.ReadString
+  nameWithType: MasterReader.ReadString
+- uid: Makaretu.Dns.MasterReader.ReadTimeSpan
+  name: ReadTimeSpan()
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadTimeSpan
+  commentId: M:Makaretu.Dns.MasterReader.ReadTimeSpan
+  fullName: Makaretu.Dns.MasterReader.ReadTimeSpan()
+  nameWithType: MasterReader.ReadTimeSpan()
+- uid: Makaretu.Dns.MasterReader.ReadTimeSpan*
+  name: ReadTimeSpan
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadTimeSpan_
+  commentId: Overload:Makaretu.Dns.MasterReader.ReadTimeSpan
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.ReadTimeSpan
+  nameWithType: MasterReader.ReadTimeSpan
+- uid: Makaretu.Dns.MasterReader.ReadUInt16
+  name: ReadUInt16()
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadUInt16
+  commentId: M:Makaretu.Dns.MasterReader.ReadUInt16
+  fullName: Makaretu.Dns.MasterReader.ReadUInt16()
+  nameWithType: MasterReader.ReadUInt16()
+- uid: Makaretu.Dns.MasterReader.ReadUInt16*
+  name: ReadUInt16
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadUInt16_
+  commentId: Overload:Makaretu.Dns.MasterReader.ReadUInt16
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.ReadUInt16
+  nameWithType: MasterReader.ReadUInt16
+- uid: Makaretu.Dns.MasterReader.ReadUInt32
+  name: ReadUInt32()
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadUInt32
+  commentId: M:Makaretu.Dns.MasterReader.ReadUInt32
+  fullName: Makaretu.Dns.MasterReader.ReadUInt32()
+  nameWithType: MasterReader.ReadUInt32()
+- uid: Makaretu.Dns.MasterReader.ReadUInt32*
+  name: ReadUInt32
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadUInt32_
+  commentId: Overload:Makaretu.Dns.MasterReader.ReadUInt32
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.ReadUInt32
+  nameWithType: MasterReader.ReadUInt32
 - uid: Makaretu.Dns.Message
   name: Message
   href: api/Makaretu.Dns.Message.html
@@ -1805,6 +2015,12 @@ references:
   commentId: M:Makaretu.Dns.MXRecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.MXRecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: MXRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.MXRecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.MXRecord.html#Makaretu_Dns_MXRecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.MXRecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.MXRecord.WriteData(System.IO.TextWriter)
+  nameWithType: MXRecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.MXRecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.MXRecord.html#Makaretu_Dns_MXRecord_WriteData_
@@ -1934,6 +2150,12 @@ references:
   commentId: M:Makaretu.Dns.NSRecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.NSRecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: NSRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.NSRecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.NSRecord.html#Makaretu_Dns_NSRecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.NSRecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.NSRecord.WriteData(System.IO.TextWriter)
+  nameWithType: NSRecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.NSRecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.NSRecord.html#Makaretu_Dns_NSRecord_WriteData_
@@ -2160,6 +2382,12 @@ references:
   commentId: M:Makaretu.Dns.PTRRecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.PTRRecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: PTRRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.PTRRecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.PTRRecord.html#Makaretu_Dns_PTRRecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.PTRRecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.PTRRecord.WriteData(System.IO.TextWriter)
+  nameWithType: PTRRecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.PTRRecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.PTRRecord.html#Makaretu_Dns_PTRRecord_WriteData_
@@ -2366,6 +2594,18 @@ references:
   commentId: M:Makaretu.Dns.ResourceRecord.Read(Makaretu.Dns.DnsReader)
   fullName: Makaretu.Dns.ResourceRecord.Read(Makaretu.Dns.DnsReader)
   nameWithType: ResourceRecord.Read(DnsReader)
+- uid: Makaretu.Dns.ResourceRecord.Read(Makaretu.Dns.MasterReader)
+  name: Read(MasterReader)
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.ResourceRecord.Read(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.ResourceRecord.Read(Makaretu.Dns.MasterReader)
+  nameWithType: ResourceRecord.Read(MasterReader)
+- uid: Makaretu.Dns.ResourceRecord.Read(System.String)
+  name: Read(String)
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Read_System_String_
+  commentId: M:Makaretu.Dns.ResourceRecord.Read(System.String)
+  fullName: Makaretu.Dns.ResourceRecord.Read(System.String)
+  nameWithType: ResourceRecord.Read(String)
 - uid: Makaretu.Dns.ResourceRecord.Read*
   name: Read
   href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Read_
@@ -2386,6 +2626,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.ResourceRecord.ReadData
   nameWithType: ResourceRecord.ReadData
+- uid: Makaretu.Dns.ResourceRecord.ToString
+  name: ToString()
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_ToString
+  commentId: M:Makaretu.Dns.ResourceRecord.ToString
+  fullName: Makaretu.Dns.ResourceRecord.ToString()
+  nameWithType: ResourceRecord.ToString()
+- uid: Makaretu.Dns.ResourceRecord.ToString*
+  name: ToString
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_ToString_
+  commentId: Overload:Makaretu.Dns.ResourceRecord.ToString
+  isSpec: "True"
+  fullName: Makaretu.Dns.ResourceRecord.ToString
+  nameWithType: ResourceRecord.ToString
 - uid: Makaretu.Dns.ResourceRecord.TTL
   name: TTL
   href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_TTL
@@ -2418,6 +2671,12 @@ references:
   commentId: M:Makaretu.Dns.ResourceRecord.Write(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.ResourceRecord.Write(Makaretu.Dns.DnsWriter)
   nameWithType: ResourceRecord.Write(DnsWriter)
+- uid: Makaretu.Dns.ResourceRecord.Write(System.IO.TextWriter)
+  name: Write(TextWriter)
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Write_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.ResourceRecord.Write(System.IO.TextWriter)
+  fullName: Makaretu.Dns.ResourceRecord.Write(System.IO.TextWriter)
+  nameWithType: ResourceRecord.Write(TextWriter)
 - uid: Makaretu.Dns.ResourceRecord.Write*
   name: Write
   href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Write_
@@ -2431,6 +2690,12 @@ references:
   commentId: M:Makaretu.Dns.ResourceRecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.ResourceRecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: ResourceRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.ResourceRecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.ResourceRecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.ResourceRecord.WriteData(System.IO.TextWriter)
+  nameWithType: ResourceRecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.ResourceRecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_WriteData_
@@ -2530,6 +2795,12 @@ references:
   commentId: M:Makaretu.Dns.RPRecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.RPRecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: RPRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.RPRecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.RPRecord.html#Makaretu_Dns_RPRecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.RPRecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.RPRecord.WriteData(System.IO.TextWriter)
+  nameWithType: RPRecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.RPRecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.RPRecord.html#Makaretu_Dns_RPRecord_WriteData_
@@ -2666,6 +2937,12 @@ references:
   commentId: M:Makaretu.Dns.SOARecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.SOARecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: SOARecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.SOARecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.SOARecord.html#Makaretu_Dns_SOARecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.SOARecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.SOARecord.WriteData(System.IO.TextWriter)
+  nameWithType: SOARecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.SOARecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.SOARecord.html#Makaretu_Dns_SOARecord_WriteData_
@@ -2763,6 +3040,12 @@ references:
   commentId: M:Makaretu.Dns.SRVRecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.SRVRecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: SRVRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.SRVRecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.SRVRecord.html#Makaretu_Dns_SRVRecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.SRVRecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.SRVRecord.WriteData(System.IO.TextWriter)
+  nameWithType: SRVRecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.SRVRecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.SRVRecord.html#Makaretu_Dns_SRVRecord_WriteData_
@@ -2821,6 +3104,12 @@ references:
   commentId: M:Makaretu.Dns.TXTRecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.TXTRecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: TXTRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.TXTRecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.TXTRecord.html#Makaretu_Dns_TXTRecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.TXTRecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.TXTRecord.WriteData(System.IO.TextWriter)
+  nameWithType: TXTRecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.TXTRecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.TXTRecord.html#Makaretu_Dns_TXTRecord_WriteData_

@@ -87,6 +87,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Makaretu.Dns.IDnsSerialiser.html">IDnsSerialiser</a></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
+    <div><a class="xref" href="Makaretu.Dns.IMasterSerialiser.html">IMasterSerialiser</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -127,6 +128,21 @@
       <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_GetHashCode">ResourceRecord.GetHashCode()</a>
     </div>
     <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_ToString">ResourceRecord.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Write_System_IO_TextWriter_">ResourceRecord.Write(TextWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_WriteData_System_IO_TextWriter_">ResourceRecord.WriteData(TextWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Read_System_String_">ResourceRecord.Read(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_MasterReader_">ResourceRecord.Read(MasterReader)</a>
+    </div>
+    <div>
       <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Length">DnsObject.Length()</a>
     </div>
     <div>
@@ -154,9 +170,6 @@
       <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_NamesEquals_System_String_System_String_">DnsObject.NamesEquals(String, String)</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
-    </div>
-    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
     </div>
     <div>
@@ -173,7 +186,7 @@
   <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
   <h5 id="Makaretu_Dns_OPTRecord_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OPTRecord : ResourceRecord, IDnsSerialiser, ICloneable</code></pre>
+    <pre><code class="lang-csharp hljs">public class OPTRecord : ResourceRecord, IDnsSerialiser, ICloneable, IMasterSerialiser</code></pre>
   </div>
   <h5 id="Makaretu_Dns_OPTRecord_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>An OPT record does not carry any DNS data. It is used only to
@@ -200,7 +213,7 @@ the <a class="xref" href="Makaretu.Dns.OPTRecord.html#Makaretu_Dns_OPTRecord_Opc
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_OPTRecord__ctor.md&amp;value=---%0Auid%3A%20Makaretu.Dns.OPTRecord.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L36">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L37">View Source</a>
   </span>
   <a id="Makaretu_Dns_OPTRecord__ctor_" data-uid="Makaretu.Dns.OPTRecord.#ctor*"></a>
   <h4 id="Makaretu_Dns_OPTRecord__ctor" data-uid="Makaretu.Dns.OPTRecord.#ctor">OPTRecord()</h4>
@@ -218,7 +231,7 @@ the <a class="xref" href="Makaretu.Dns.OPTRecord.html#Makaretu_Dns_OPTRecord_Opc
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_OPTRecord_DO.md&amp;value=---%0Auid%3A%20Makaretu.Dns.OPTRecord.DO%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L117">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L118">View Source</a>
   </span>
   <a id="Makaretu_Dns_OPTRecord_DO_" data-uid="Makaretu.Dns.OPTRecord.DO*"></a>
   <h4 id="Makaretu_Dns_OPTRecord_DO" data-uid="Makaretu.Dns.OPTRecord.DO">DO</h4>
@@ -258,7 +271,7 @@ the version.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_OPTRecord_Opcode8.md&amp;value=---%0Auid%3A%20Makaretu.Dns.OPTRecord.Opcode8%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L72">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L73">View Source</a>
   </span>
   <a id="Makaretu_Dns_OPTRecord_Opcode8_" data-uid="Makaretu.Dns.OPTRecord.Opcode8*"></a>
   <h4 id="Makaretu_Dns_OPTRecord_Opcode8" data-uid="Makaretu.Dns.OPTRecord.Opcode8">Opcode8</h4>
@@ -298,7 +311,7 @@ the opcode&apos;s most significant bits.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_OPTRecord_Options.md&amp;value=---%0Auid%3A%20Makaretu.Dns.OPTRecord.Options%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L135">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L136">View Source</a>
   </span>
   <a id="Makaretu_Dns_OPTRecord_Options_" data-uid="Makaretu.Dns.OPTRecord.Options*"></a>
   <h4 id="Makaretu_Dns_OPTRecord_Options" data-uid="Makaretu.Dns.OPTRecord.Options">Options</h4>
@@ -330,7 +343,7 @@ the opcode&apos;s most significant bits.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_OPTRecord_RequestorPayloadSize.md&amp;value=---%0Auid%3A%20Makaretu.Dns.OPTRecord.RequestorPayloadSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L55">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L56">View Source</a>
   </span>
   <a id="Makaretu_Dns_OPTRecord_RequestorPayloadSize_" data-uid="Makaretu.Dns.OPTRecord.RequestorPayloadSize*"></a>
   <h4 id="Makaretu_Dns_OPTRecord_RequestorPayloadSize" data-uid="Makaretu.Dns.OPTRecord.RequestorPayloadSize">RequestorPayloadSize</h4>
@@ -370,7 +383,7 @@ the requestor&apos;s payload size.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_OPTRecord_Version.md&amp;value=---%0Auid%3A%20Makaretu.Dns.OPTRecord.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L94">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L95">View Source</a>
   </span>
   <a id="Makaretu_Dns_OPTRecord_Version_" data-uid="Makaretu.Dns.OPTRecord.Version*"></a>
   <h4 id="Makaretu_Dns_OPTRecord_Version" data-uid="Makaretu.Dns.OPTRecord.Version">Version</h4>
@@ -408,11 +421,11 @@ the version.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_OPTRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.OPTRecord.ReadData(Makaretu.Dns.DnsReader%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L138">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L139">View Source</a>
   </span>
   <a id="Makaretu_Dns_OPTRecord_ReadData_" data-uid="Makaretu.Dns.OPTRecord.ReadData*"></a>
   <h4 id="Makaretu_Dns_OPTRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_" data-uid="Makaretu.Dns.OPTRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)">ReadData(DnsReader, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read the data that is specific to the resource record <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+  <div class="markdown level1 summary"><p>Read the data that is specific to the resource record <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Type">Type</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -432,7 +445,7 @@ the version.</p>
       <tr>
         <td><a class="xref" href="Makaretu.Dns.DnsReader.html">DnsReader</a></td>
         <td><span class="parametername">reader</span></td>
-        <td><p>The source of the DNS object&apos;s data.</p>
+        <td><p>The source of the resource record&apos;s data.</p>
 </td>
       </tr>
       <tr>
@@ -453,7 +466,7 @@ the version.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_OPTRecord_WriteData_Makaretu_Dns_DnsWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.OPTRecord.WriteData(Makaretu.Dns.DnsWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L161">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L162">View Source</a>
   </span>
   <a id="Makaretu_Dns_OPTRecord_WriteData_" data-uid="Makaretu.Dns.OPTRecord.WriteData*"></a>
   <h4 id="Makaretu_Dns_OPTRecord_WriteData_Makaretu_Dns_DnsWriter_" data-uid="Makaretu.Dns.OPTRecord.WriteData(Makaretu.Dns.DnsWriter)">WriteData(DnsWriter)</h4>
@@ -494,6 +507,9 @@ the version.</p>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icloneable">System.ICloneable</a>
   </div>
+  <div>
+      <a class="xref" href="Makaretu.Dns.IMasterSerialiser.html">IMasterSerialiser</a>
+  </div>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">
       <div><span><a href="https://tools.ietf.org/html/rfc6891">https://tools.ietf.org/html/rfc6891</a></span></div>
@@ -509,7 +525,7 @@ the version.</p>
                     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_OPTRecord.md&amp;value=---%0Auid%3A%20Makaretu.Dns.OPTRecord%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L30" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/OPTRecord.cs/#L31" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

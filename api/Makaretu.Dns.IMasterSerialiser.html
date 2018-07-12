@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IDnsSerialiser
+    <title>Interface IMasterSerialiser
    | DNS Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IDnsSerialiser
+    <meta name="title" content="Interface IMasterSerialiser
    | DNS Model ">
     <meta name="generator" content="docfx 2.37.0.0">
     
@@ -68,37 +68,40 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Makaretu.Dns.IDnsSerialiser">
+            <article class="content wrap" id="_content" data-uid="Makaretu.Dns.IMasterSerialiser">
   
   
-  <h1 id="Makaretu_Dns_IDnsSerialiser" data-uid="Makaretu.Dns.IDnsSerialiser" class="text-break">Interface IDnsSerialiser
+  <h1 id="Makaretu_Dns_IMasterSerialiser" data-uid="Makaretu.Dns.IMasterSerialiser" class="text-break">Interface IMasterSerialiser
   </h1>
-  <div class="markdown level0 summary"><p>Wire format serialisation of a DNS object.</p>
+  <div class="markdown level0 summary"><p>Master file serialisation of a resource record.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Makaretu.Dns.html">Makaretu.Dns</a></h6>
   <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
-  <h5 id="Makaretu_Dns_IDnsSerialiser_syntax">Syntax</h5>
+  <h5 id="Makaretu_Dns_IMasterSerialiser_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IDnsSerialiser</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IMasterSerialiser</code></pre>
   </div>
+  <h5 id="Makaretu_Dns_IMasterSerialiser_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The &quot;mater file format&quot; is the text representation of a <a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a>.</p>
+</div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_IDnsSerialiser_Read_Makaretu_Dns_DnsReader_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.IDnsSerialiser.Read(Makaretu.Dns.DnsReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_IMasterSerialiser_Read_Makaretu_Dns_MasterReader_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.IMasterSerialiser.Read(Makaretu.Dns.MasterReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/IDnsSerialiser.cs/#L26">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/IMasterSerialiser.cs/#L30">View Source</a>
   </span>
-  <a id="Makaretu_Dns_IDnsSerialiser_Read_" data-uid="Makaretu.Dns.IDnsSerialiser.Read*"></a>
-  <h4 id="Makaretu_Dns_IDnsSerialiser_Read_Makaretu_Dns_DnsReader_" data-uid="Makaretu.Dns.IDnsSerialiser.Read(Makaretu.Dns.DnsReader)">Read(DnsReader)</h4>
-  <div class="markdown level1 summary"><p>Reads the DNS object that is encoded in the wire format.</p>
+  <a id="Makaretu_Dns_IMasterSerialiser_Read_" data-uid="Makaretu.Dns.IMasterSerialiser.Read*"></a>
+  <h4 id="Makaretu_Dns_IMasterSerialiser_Read_Makaretu_Dns_MasterReader_" data-uid="Makaretu.Dns.IMasterSerialiser.Read(Makaretu.Dns.MasterReader)">Read(MasterReader)</h4>
+  <div class="markdown level1 summary"><p>Reads the text representation of a resource record.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IDnsSerialiser Read(DnsReader reader)</code></pre>
+    <pre><code class="lang-csharp hljs">ResourceRecord Read(MasterReader reader)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -111,9 +114,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Makaretu.Dns.DnsReader.html">DnsReader</a></td>
+        <td><a class="xref" href="Makaretu.Dns.MasterReader.html">MasterReader</a></td>
         <td><span class="parametername">reader</span></td>
-        <td><p>The source of the DNS object.</p>
+        <td><p>The source of the <a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -128,32 +131,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Makaretu.Dns.IDnsSerialiser.html">IDnsSerialiser</a></td>
-        <td><p>The final DNS object.</p>
+        <td><a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a></td>
+        <td><p>The final resource record.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Makaretu_Dns_IDnsSerialiser_Read_Makaretu_Dns_DnsReader__remarks">Remarks</h5>
+  <h5 id="Makaretu_Dns_IMasterSerialiser_Read_Makaretu_Dns_MasterReader__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Reading a <a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a> will return a new instance that
-is type specific unless the <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_GetDataLength">GetDataLength()</a>
-is zero.</p>
+is type specific</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_IDnsSerialiser_Write_Makaretu_Dns_DnsWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.IDnsSerialiser.Write(Makaretu.Dns.DnsWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_IMasterSerialiser_Write_System_IO_TextWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.IMasterSerialiser.Write(System.IO.TextWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/IDnsSerialiser.cs/#L34">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/IMasterSerialiser.cs/#L38">View Source</a>
   </span>
-  <a id="Makaretu_Dns_IDnsSerialiser_Write_" data-uid="Makaretu.Dns.IDnsSerialiser.Write*"></a>
-  <h4 id="Makaretu_Dns_IDnsSerialiser_Write_Makaretu_Dns_DnsWriter_" data-uid="Makaretu.Dns.IDnsSerialiser.Write(Makaretu.Dns.DnsWriter)">Write(DnsWriter)</h4>
-  <div class="markdown level1 summary"><p>Writes the DNS object encoded in the wire format.</p>
+  <a id="Makaretu_Dns_IMasterSerialiser_Write_" data-uid="Makaretu.Dns.IMasterSerialiser.Write*"></a>
+  <h4 id="Makaretu_Dns_IMasterSerialiser_Write_System_IO_TextWriter_" data-uid="Makaretu.Dns.IMasterSerialiser.Write(System.IO.TextWriter)">Write(TextWriter)</h4>
+  <div class="markdown level1 summary"><p>Writes the text representation of a resource record.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Write(DnsWriter writer)</code></pre>
+    <pre><code class="lang-csharp hljs">void Write(TextWriter writer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,9 +168,9 @@ is zero.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Makaretu.Dns.DnsWriter.html">DnsWriter</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></td>
         <td><span class="parametername">writer</span></td>
-        <td><p>The destination of the DNS object.</p>
+        <td><p>The destination of the <a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -181,10 +183,10 @@ is zero.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_IDnsSerialiser.md&amp;value=---%0Auid%3A%20Makaretu.Dns.IDnsSerialiser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_IMasterSerialiser.md&amp;value=---%0Auid%3A%20Makaretu.Dns.IMasterSerialiser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/IDnsSerialiser.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/IMasterSerialiser.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

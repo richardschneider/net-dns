@@ -88,6 +88,7 @@ types present at the NSEC RR&apos;s owner name [RFC3845].  T</p>
     <h5>Implements</h5>
     <div><a class="xref" href="Makaretu.Dns.IDnsSerialiser.html">IDnsSerialiser</a></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
+    <div><a class="xref" href="Makaretu.Dns.IMasterSerialiser.html">IMasterSerialiser</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -128,6 +129,21 @@ types present at the NSEC RR&apos;s owner name [RFC3845].  T</p>
       <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_GetHashCode">ResourceRecord.GetHashCode()</a>
     </div>
     <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_ToString">ResourceRecord.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Write_System_IO_TextWriter_">ResourceRecord.Write(TextWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_WriteData_System_IO_TextWriter_">ResourceRecord.WriteData(TextWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Read_System_String_">ResourceRecord.Read(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_MasterReader_">ResourceRecord.Read(MasterReader)</a>
+    </div>
+    <div>
       <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Length">DnsObject.Length()</a>
     </div>
     <div>
@@ -155,9 +171,6 @@ types present at the NSEC RR&apos;s owner name [RFC3845].  T</p>
       <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_NamesEquals_System_String_System_String_">DnsObject.NamesEquals(String, String)</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
-    </div>
-    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
     </div>
     <div>
@@ -174,7 +187,7 @@ types present at the NSEC RR&apos;s owner name [RFC3845].  T</p>
   <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
   <h5 id="Makaretu_Dns_NSECRecord_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class NSECRecord : ResourceRecord, IDnsSerialiser, ICloneable</code></pre>
+    <pre><code class="lang-csharp hljs">public class NSECRecord : ResourceRecord, IDnsSerialiser, ICloneable, IMasterSerialiser</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -183,7 +196,7 @@ types present at the NSEC RR&apos;s owner name [RFC3845].  T</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_NSECRecord__ctor.md&amp;value=---%0Auid%3A%20Makaretu.Dns.NSECRecord.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/NSECRecord.cs/#L17">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/NSECRecord.cs/#L18">View Source</a>
   </span>
   <a id="Makaretu_Dns_NSECRecord__ctor_" data-uid="Makaretu.Dns.NSECRecord.#ctor*"></a>
   <h4 id="Makaretu_Dns_NSECRecord__ctor" data-uid="Makaretu.Dns.NSECRecord.#ctor">NSECRecord()</h4>
@@ -201,7 +214,7 @@ types present at the NSEC RR&apos;s owner name [RFC3845].  T</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_NSECRecord_NextOwnerName.md&amp;value=---%0Auid%3A%20Makaretu.Dns.NSECRecord.NextOwnerName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/NSECRecord.cs/#L26">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/NSECRecord.cs/#L27">View Source</a>
   </span>
   <a id="Makaretu_Dns_NSECRecord_NextOwnerName_" data-uid="Makaretu.Dns.NSECRecord.NextOwnerName*"></a>
   <h4 id="Makaretu_Dns_NSECRecord_NextOwnerName" data-uid="Makaretu.Dns.NSECRecord.NextOwnerName">NextOwnerName</h4>
@@ -233,7 +246,7 @@ delegation point NS RRset</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_NSECRecord_TypeBitmaps.md&amp;value=---%0Auid%3A%20Makaretu.Dns.NSECRecord.TypeBitmaps%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/NSECRecord.cs/#L31">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/NSECRecord.cs/#L32">View Source</a>
   </span>
   <a id="Makaretu_Dns_NSECRecord_TypeBitmaps_" data-uid="Makaretu.Dns.NSECRecord.TypeBitmaps*"></a>
   <h4 id="Makaretu_Dns_NSECRecord_TypeBitmaps" data-uid="Makaretu.Dns.NSECRecord.TypeBitmaps">TypeBitmaps</h4>
@@ -266,11 +279,11 @@ delegation point NS RRset</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_NSECRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.NSECRecord.ReadData(Makaretu.Dns.DnsReader%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/NSECRecord.cs/#L34">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/NSECRecord.cs/#L35">View Source</a>
   </span>
   <a id="Makaretu_Dns_NSECRecord_ReadData_" data-uid="Makaretu.Dns.NSECRecord.ReadData*"></a>
   <h4 id="Makaretu_Dns_NSECRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_" data-uid="Makaretu.Dns.NSECRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)">ReadData(DnsReader, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read the data that is specific to the resource record <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+  <div class="markdown level1 summary"><p>Read the data that is specific to the resource record <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Type">Type</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -290,7 +303,7 @@ delegation point NS RRset</p>
       <tr>
         <td><a class="xref" href="Makaretu.Dns.DnsReader.html">DnsReader</a></td>
         <td><span class="parametername">reader</span></td>
-        <td><p>The source of the DNS object&apos;s data.</p>
+        <td><p>The source of the resource record&apos;s data.</p>
 </td>
       </tr>
       <tr>
@@ -311,7 +324,7 @@ delegation point NS RRset</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_NSECRecord_WriteData_Makaretu_Dns_DnsWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.NSECRecord.WriteData(Makaretu.Dns.DnsWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/NSECRecord.cs/#L42">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/NSECRecord.cs/#L43">View Source</a>
   </span>
   <a id="Makaretu_Dns_NSECRecord_WriteData_" data-uid="Makaretu.Dns.NSECRecord.WriteData*"></a>
   <h4 id="Makaretu_Dns_NSECRecord_WriteData_Makaretu_Dns_DnsWriter_" data-uid="Makaretu.Dns.NSECRecord.WriteData(Makaretu.Dns.DnsWriter)">WriteData(DnsWriter)</h4>
@@ -352,6 +365,9 @@ delegation point NS RRset</p>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icloneable">System.ICloneable</a>
   </div>
+  <div>
+      <a class="xref" href="Makaretu.Dns.IMasterSerialiser.html">IMasterSerialiser</a>
+  </div>
 </article>
           </div>
           
@@ -363,7 +379,7 @@ delegation point NS RRset</p>
                     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_NSECRecord.md&amp;value=---%0Auid%3A%20Makaretu.Dns.NSECRecord%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/NSECRecord.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/NSECRecord.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

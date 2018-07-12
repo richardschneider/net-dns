@@ -87,6 +87,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Makaretu.Dns.IDnsSerialiser.html">IDnsSerialiser</a></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
+    <div><a class="xref" href="Makaretu.Dns.IMasterSerialiser.html">IMasterSerialiser</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -127,6 +128,21 @@
       <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_GetHashCode">ResourceRecord.GetHashCode()</a>
     </div>
     <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_ToString">ResourceRecord.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Write_System_IO_TextWriter_">ResourceRecord.Write(TextWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_WriteData_System_IO_TextWriter_">ResourceRecord.WriteData(TextWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Read_System_String_">ResourceRecord.Read(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_MasterReader_">ResourceRecord.Read(MasterReader)</a>
+    </div>
+    <div>
       <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Length">DnsObject.Length()</a>
     </div>
     <div>
@@ -154,9 +170,6 @@
       <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_NamesEquals_System_String_System_String_">DnsObject.NamesEquals(String, String)</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
-    </div>
-    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
     </div>
     <div>
@@ -173,7 +186,7 @@
   <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
   <h5 id="Makaretu_Dns_UnknownRecord_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UnknownRecord : ResourceRecord, IDnsSerialiser, ICloneable</code></pre>
+    <pre><code class="lang-csharp hljs">public class UnknownRecord : ResourceRecord, IDnsSerialiser, ICloneable, IMasterSerialiser</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -219,7 +232,7 @@
   </span>
   <a id="Makaretu_Dns_UnknownRecord_ReadData_" data-uid="Makaretu.Dns.UnknownRecord.ReadData*"></a>
   <h4 id="Makaretu_Dns_UnknownRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_" data-uid="Makaretu.Dns.UnknownRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)">ReadData(DnsReader, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read the data that is specific to the resource record <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+  <div class="markdown level1 summary"><p>Read the data that is specific to the resource record <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Type">Type</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -239,7 +252,7 @@
       <tr>
         <td><a class="xref" href="Makaretu.Dns.DnsReader.html">DnsReader</a></td>
         <td><span class="parametername">reader</span></td>
-        <td><p>The source of the DNS object&apos;s data.</p>
+        <td><p>The source of the resource record&apos;s data.</p>
 </td>
       </tr>
       <tr>
@@ -300,6 +313,9 @@
   </div>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icloneable">System.ICloneable</a>
+  </div>
+  <div>
+      <a class="xref" href="Makaretu.Dns.IMasterSerialiser.html">IMasterSerialiser</a>
   </div>
 </article>
           </div>
