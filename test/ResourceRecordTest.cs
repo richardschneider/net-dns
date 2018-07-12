@@ -132,5 +132,31 @@ namespace Makaretu.Dns
             Assert.AreEqual(e.GetHashCode(), e.GetHashCode());
         }
 
+        [TestMethod]
+        public void Stringing()
+        {
+            var a = new ResourceRecord
+            {
+                Name = "x.emanon.org",
+                Type = DnsType.A
+            };
+            Assert.AreEqual("x.emanon.org IN A", a.ToString());
+
+            a = new ResourceRecord
+            {
+                Name = "x.emanon.org",
+                Type = DnsType.A,
+                Class = Class.CH
+            };
+            Assert.AreEqual("x.emanon.org CH A", a.ToString());
+
+            a = new ResourceRecord
+            {
+                Name = "x.emanon.org",
+                Type = DnsType.A,
+                TTL = TimeSpan.FromSeconds(123)
+            };
+            Assert.AreEqual("x.emanon.org 123 IN A", a.ToString());
+        }
     }
 }

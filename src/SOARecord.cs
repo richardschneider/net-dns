@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Text;
 
@@ -92,6 +93,18 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
+        internal override void ReadData(MasterReader reader)
+        {
+            PrimaryName = reader.ReadDomainName();
+            Mailbox = reader.ReadDomainName();
+            SerialNumber = reader.ReadUInt32();
+            Refresh = reader.ReadTimeSpan();
+            Retry = reader.ReadTimeSpan();
+            Expire = reader.ReadTimeSpan();
+            Minimum = reader.ReadTimeSpan();
+        }
+
+        /// <inheritdoc />
         protected override void WriteData(DnsWriter writer)
         {
             writer.WriteDomainName(PrimaryName);
@@ -101,6 +114,24 @@ namespace Makaretu.Dns
             writer.WriteTimeSpan(Retry);
             writer.WriteTimeSpan(Expire);
             writer.WriteTimeSpan(Minimum);
+        }
+
+        /// <inheritdoc />
+        protected override void WriteData(TextWriter writer)
+        {
+            writer.Write(PrimaryName);
+            writer.Write(' ');
+            writer.Write(Mailbox);
+            writer.Write(' ');
+            writer.Write(SerialNumber);
+            writer.Write(' ');
+            writer.Write((int)Refresh.TotalSeconds);
+            writer.Write(' ');
+            writer.Write((int)Retry.TotalSeconds);
+            writer.Write(' ');
+            writer.Write((int)Expire.TotalSeconds);
+            writer.Write(' ');
+            writer.Write((int)Minimum.TotalSeconds);
         }
 
     }

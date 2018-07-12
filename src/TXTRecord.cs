@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -39,11 +40,39 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
+        internal override void ReadData(MasterReader reader)
+        {
+            while (!reader.IsEndOfLine())
+            {
+                Strings.Add(reader.ReadString());
+            }
+        }
+
+
+
+        /// <inheritdoc />
         protected override void WriteData(DnsWriter writer)
         {
             foreach (var s in Strings)
             {
                 writer.WriteString(s);
+            }
+        }
+
+        /// <inheritdoc />
+        protected override void WriteData(TextWriter writer)
+        {
+            bool next = false;
+            foreach (var s in Strings)
+            {
+                if (next)
+                {
+                    writer.Write(' ');
+                }
+                writer.Write('"');
+                writer.Write(s);
+                writer.Write('"');
+                next = true;
             }
         }
 

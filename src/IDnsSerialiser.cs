@@ -5,12 +5,12 @@ using System.Text;
 namespace Makaretu.Dns
 {
     /// <summary>
-    ///   Defines the serialisation of DNS objects.
+    ///   Wire format serialisation of a DNS object.
     /// </summary>
     public interface IDnsSerialiser
     {
         /// <summary>
-        ///   Reads the DNS object.
+        ///   Reads the DNS object that is encoded in the wire format.
         /// </summary>
         /// <param name="reader">
         ///   The source of the DNS object.
@@ -26,7 +26,7 @@ namespace Makaretu.Dns
         IDnsSerialiser Read(DnsReader reader);
 
         /// <summary>
-        ///   Writes the DNS object.
+        ///   Writes the DNS object encoded in the wire format.
         /// </summary>
         /// <param name="writer">
         ///   The destination of the DNS object.

@@ -28,6 +28,23 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void Roundtrip_Master()
+        {
+            var a = new RPRecord
+            {
+                Name = "emanon.org",
+                Mailbox = "nowon.emanon.org"
+            };
+            var b = (RPRecord)new ResourceRecord().Read(a.ToString());
+            Assert.AreEqual(a.Name, b.Name);
+            Assert.AreEqual(a.Class, b.Class);
+            Assert.AreEqual(a.Type, b.Type);
+            Assert.AreEqual(a.TTL, b.TTL);
+            Assert.AreEqual(a.Mailbox, b.Mailbox);
+            Assert.AreEqual(a.TextName, b.TextName);
+        }
+
+        [TestMethod]
         public void Equality()
         {
             var a = new RPRecord

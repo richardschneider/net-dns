@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Text;
 
@@ -65,12 +66,33 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
+        internal override void ReadData(MasterReader reader)
+        {
+            Priority = reader.ReadUInt16();
+            Weight = reader.ReadUInt16();
+            Port = reader.ReadUInt16();
+            Target = reader.ReadDomainName();
+        }
+
+        /// <inheritdoc />
         protected override void WriteData(DnsWriter writer)
         {
             writer.WriteUInt16(Priority);
             writer.WriteUInt16(Weight);
             writer.WriteUInt16(Port);
             writer.WriteDomainName(Target);
+        }
+
+        /// <inheritdoc />
+        protected override void WriteData(TextWriter writer)
+        {
+            writer.Write(Priority);
+            writer.Write(' ');
+            writer.Write(Weight);
+            writer.Write(' ');
+            writer.Write(Port);
+            writer.Write(' ');
+            writer.Write(Target);
         }
 
     }

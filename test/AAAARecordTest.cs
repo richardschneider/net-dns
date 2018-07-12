@@ -27,6 +27,22 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void Roundtrip_Master()
+        {
+            var a = new AAAARecord
+            {
+                Name = "emanon.org",
+                Address = IPAddress.Parse("2406:e001:13c7:1:7173:ef8:852f:25cb")
+            };
+            var b = (AAAARecord)new ResourceRecord().Read(a.ToString());
+            Assert.AreEqual(a.Name, b.Name);
+            Assert.AreEqual(a.Class, b.Class);
+            Assert.AreEqual(a.Type, b.Type);
+            Assert.AreEqual(a.TTL, b.TTL);
+            Assert.AreEqual(a.Address, b.Address);
+        }
+
+        [TestMethod]
         public void Equality()
         {
             var a = new AAAARecord

@@ -14,7 +14,7 @@ namespace Makaretu.Dns
     ///   resource records. When reading, if the registry does not contain
     ///   the record, then an <see cref="UnknownRecord"/> is used.
     /// </remarks>
-    public class ResourceRecord : DnsObject
+    public class ResourceRecord : DnsObject, IMasterSerialiser
     {
         /// <summary>
         ///   The default time interval that a resource record maybe cached.
@@ -100,6 +100,9 @@ namespace Makaretu.Dns
         /// <returns>
         ///   A byte array, never <b>null</b>.
         /// </returns>
+        /// <remarks>
+        ///   This is referred to as the <c>RDATA</c> in the DNS spec.
+        /// </remarks>
         public byte[] GetData()
         {
             using (var ms = new MemoryStream())
@@ -143,10 +146,10 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
-        ///   Read the data that is specific to the resource record <see cref="System.Type"/>.
+        ///   Read the data that is specific to the resource record <see cref="Type"/>.
         /// </summary>
         /// <param name="reader">
-        ///   The source of the DNS object's data.
+        ///   The source of the resource record's data.
         /// </param>
         /// <param name="length">
         ///   The length, in bytes, of the data.
@@ -256,6 +259,95 @@ namespace Makaretu.Dns
                 ^ Type.GetHashCode()
                 ^ GetData().Aggregate(0, (r, b) => r ^ b.GetHashCode());
 
+        }
+
+        /// <summary>
+        ///   Returns the textual representation.
+        /// </summary>
+        /// <returns>
+        ///   The "master file format" of this resource record. 
+        /// </returns>
+        public override string ToString()
+        {
+            using (var writer = new StringWriter())
+            {
+                Write(writer);
+
+                // Trim trailing whitespaces (tab, space, cr, lf, ...)
+                var sb = writer.GetStringBuilder();
+                while (sb.Length > 0 && Char.IsWhiteSpace(sb[sb.Length-1]))
+                {
+                    --sb.Length;
+                }
+
+                return sb.ToString();
+            }
+        }
+
+        /// <inheritdoc />
+        public void Write(TextWriter writer)
+        {
+            writer.Write(Name);
+            writer.Write(' ');
+            if (TTL != DefaultTTL)
+            {
+                writer.Write((int)TTL.TotalSeconds);
+                writer.Write(' ');
+            }
+            writer.Write(Class);
+            writer.Write(' ');
+            writer.Write(Type);
+            writer.Write(' ');
+            WriteData(writer);
+            writer.Write("\r\n");
+        }
+
+        /// <summary>
+        ///   Write the textual representation of the data that is specific to 
+        ///   the resource record.
+        /// </summary>
+        /// <param name="writer">
+        ///   The destination for the resource record's data.
+        /// </param>
+        /// <remarks>
+        ///   Derived classes should implement this method.
+        ///   <para>
+        ///   By default, this will write the base64 encoding of
+        ///   the <see cref="GetData">RDATA</see>.
+        ///   </para>
+        /// </remarks>
+        protected virtual void WriteData(TextWriter writer)
+        {
+            writer.Write(Convert.ToBase64String(GetData()));
+        }
+
+        /// <summary>
+        ///   Create a new <see cref="ResourceRecord"/> from the
+        ///   master file format.
+        /// </summary>
+        public ResourceRecord Read(string masterText)
+        {
+            return Read(new MasterReader(new StringReader(masterText)));
+        }
+
+        /// <inheritdoc />
+        public ResourceRecord Read(MasterReader reader)
+        {
+            return reader.ReadResourceRecord();
+        }
+
+        /// <summary>
+        ///   Read the textual representation of the data that is specific to 
+        ///   the resource record <see cref="Type"/>.
+        /// </summary>
+        /// <param name="reader">
+        ///   The source of the resource record's data.
+        /// </param>
+        /// <remarks>
+        ///   Derived classes must implement this method.
+        /// </remarks>
+        internal virtual void ReadData(MasterReader reader)
+        {
         }
 
     }
