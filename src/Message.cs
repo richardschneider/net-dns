@@ -45,21 +45,33 @@ namespace Makaretu.Dns
         /// the corresponding reply and can be used by the requester
         /// to match up replies to outstanding queries.
         /// </summary>
+        /// <value>
+        ///   A unique identifier.
+        /// </value>
         public ushort Id { get; set; }
 
         /// <summary>
         ///   A one bit field that specifies whether this message is a query(0), or a response(1).
         /// </summary>
+        /// <value>
+        ///   <b>false</b> for a query; otherwise, <b>true</b> for a response.
+        /// </value>
         public bool QR { get; set; }
 
         /// <summary>
         ///   Determines if the message is query.
         /// </summary>
+        /// <value>
+        ///   <b>true</b> for a query; otherwise, <b>false</b> for a response.
+        /// </value>
         public bool IsQuery { get { return !QR; } }
 
         /// <summary>
         ///   Determines if the message is a response to a query.
         /// </summary>
+        /// <value>
+        ///   <b>false</b> for a query; otherwise, <b>true</b> for a response.
+        /// </value>
         public bool IsResponse { get { return QR; } }
 
 
@@ -126,6 +138,9 @@ namespace Makaretu.Dns
         ///    corresponds to the name which matches the query name, or
         ///    the first owner name in the answer section.
         /// </summary>
+        /// <value>
+        ///   <b>true</b> for an authoritative answer; otherwise, <b>false</b>.
+        /// </value>
         public bool AA { get; set; }
 
         /// <summary>
@@ -133,6 +148,9 @@ namespace Makaretu.Dns
         ///   due to length greater than that permitted on the
         ///   transmission channel.
         /// </summary>
+        /// <value>
+        ///   <b>true</b> for a truncated message; otherwise, <b>false</b>.
+        /// </value>
         public bool TC { get; set; }
 
         /// <summary>
@@ -142,6 +160,9 @@ namespace Makaretu.Dns
         ///    
         ///    Recursive query support is optional.
         /// </summary>
+        /// <value>
+        ///   <b>true</b> if recursion is desired; otherwise, <b>false</b>.
+        /// </value>
         public bool RD { get; set; }
 
         /// <summary>
@@ -149,12 +170,17 @@ namespace Makaretu.Dns
         ///    response, and denotes whether recursive query support is
         ///    available in the name server.
         /// </summary>
+        /// <value>
+        ///   <b>true</b> if recursion is available; otherwise, <b>false</b>.
+        /// </value>
         public bool RA { get; set; }
 
         /// <summary>
-        ///    Reserved for future use.  Must be zero in all queries
-        ///    and responses.
+        ///    Reserved for future use. 
         /// </summary>
+        /// <value>
+        ///    Must be zero in all queries and responses.
+        /// </value>
         public int Z { get; set; }
 
         /// <summary>
@@ -168,27 +194,41 @@ namespace Makaretu.Dns
         /// <summary>
         ///   The list of question.
         /// </summary>
+        /// <value>
+        ///   A list of questions.
+        /// </value>
         public List<Question> Questions { get; } = new List<Question>();
 
         /// <summary>
         ///   The list of answers.
         /// </summary>
+        /// <value>
+        ///   A list of answers.
+        /// </value>
         public List<ResourceRecord> Answers { get; } = new List<ResourceRecord>();
 
         /// <summary>
         ///   The list of authority records.
         /// </summary>
+        /// <value>
+        ///   A list of authority resource records.
+        /// </value>
         public List<ResourceRecord> AuthorityRecords { get; } = new List<ResourceRecord>();
 
         /// <summary>
         ///   The list of additional records.
         /// </summary>
+        /// <value>
+        ///   A list of additional resource records.
+        /// </value>
         public List<ResourceRecord> AdditionalRecords { get; } = new List<ResourceRecord>();
 
         /// <summary>
         ///   Create a response for the query message.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        ///   A new response for the query message.
+        /// </returns>
         public Message CreateResponse()
         {
             return new Message
