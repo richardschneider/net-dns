@@ -146,10 +146,10 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
-        ///   Read the data that is specific to the resource record <see cref="System.Type"/>.
+        ///   Read the data that is specific to the resource record <see cref="Type"/>.
         /// </summary>
         /// <param name="reader">
-        ///   The source of the DNS object's data.
+        ///   The source of the resource record's data.
         /// </param>
         /// <param name="length">
         ///   The length, in bytes, of the data.
@@ -261,7 +261,6 @@ namespace Makaretu.Dns
 
         }
 
-
         /// <summary>
         ///   Returns the textual representation.
         /// </summary>
@@ -322,9 +321,33 @@ namespace Makaretu.Dns
             writer.Write(Convert.ToBase64String(GetData()));
         }
 
+        /// <summary>
+        ///   Create a new <see cref="ResourceRecord"/> from the
+        ///   master file format.
+        /// </summary>
+        public ResourceRecord Read(string masterText)
+        {
+            return Read(new MasterReader(new StringReader(masterText)));
+        }
+
+        /// <inheritdoc />
+        public ResourceRecord Read(MasterReader reader)
+        {
+            return reader.ReadResourceRecord();
+        }
+
+        /// <summary>
+        ///   Read the textual representation of the data that is specific to 
+        ///   the resource record <see cref="Type"/>.
+        /// </summary>
+        /// <param name="reader">
+        ///   The source of the resource record's data.
+        /// </param>
+        /// <remarks>
+        ///   Derived classes must implement this method.
+        /// </remarks>
         internal virtual void ReadData(MasterReader reader)
         {
-            // TODO
         }
 
     }

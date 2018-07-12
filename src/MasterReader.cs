@@ -220,6 +220,30 @@ namespace Makaretu.Dns
 
         }
 
+        /// <summary>
+        ///   Determines if the reader is at the end of a line.
+        /// </summary>
+        public bool IsEndOfLine()
+        {
+            // TODO: Handle parens
+            int c;
+            while ((c = text.Peek()) >= 0)
+            {
+                if (c == ' ' || c == '\t')
+                {
+                    text.Read();
+                    continue;
+                }
+
+                if (c == '\r' || c == '\n' || c == ';')
+                {
+                    return true;
+                }
+                return false;
+            }
+            return true;
+        }
+
         string ReadToken()
         {
             var sb = new StringBuilder();

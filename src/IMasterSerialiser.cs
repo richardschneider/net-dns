@@ -13,23 +13,21 @@ namespace Makaretu.Dns
     /// </remarks>
     public interface IMasterSerialiser
     {
-#if false // TODO
+
         /// <summary>
         ///   Reads the text representation of a resource record.
         /// </summary>
         /// <param name="reader">
-        ///   The source of the DNS object.
+        ///   The source of the <see cref="ResourceRecord"/>.
         /// </param>
         /// <returns>
-        ///   The final DNS object.
+        ///   The final resource record.
         /// </returns>
         /// <remarks>
         ///   Reading a <see cref="ResourceRecord"/> will return a new instance that
-        ///   is type specific unless the <see cref="ResourceRecord.GetDataLength">RDLENGTH</see>
-        ///   is zero.
+        ///   is type specific
         /// </remarks>
-        IDnsSerialiser Read(DnsReader reader);
-#endif
+        ResourceRecord Read(MasterReader reader);
 
         /// <summary>
         ///  Writes the text representation of a resource record.

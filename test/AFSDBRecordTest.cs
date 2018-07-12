@@ -29,6 +29,24 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void Roundtrip_Master()
+        {
+            var a = new AFSDBRecord
+            {
+                Name = "emanon.org",
+                Subtype = 1,
+                Target = "afs.emanon.org"
+            };
+            var b = (AFSDBRecord)new ResourceRecord().Read(a.ToString());
+            Assert.AreEqual(a.Name, b.Name);
+            Assert.AreEqual(a.Class, b.Class);
+            Assert.AreEqual(a.Type, b.Type);
+            Assert.AreEqual(a.TTL, b.TTL);
+            Assert.AreEqual(a.Subtype, b.Subtype);
+            Assert.AreEqual(a.Target, b.Target);
+        }
+
+        [TestMethod]
         public void Equality()
         {
             var a = new AFSDBRecord

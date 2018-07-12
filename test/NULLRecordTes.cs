@@ -27,6 +27,22 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void Roundtrip_Master()
+        {
+            var a = new NULLRecord
+            {
+                Name = "emanon.org",
+                Data = new byte[] { 1, 2, 3, 4 }
+            };
+            var b = (NULLRecord)new ResourceRecord().Read(a.ToString());
+            Assert.AreEqual(a.Name, b.Name);
+            Assert.AreEqual(a.Class, b.Class);
+            Assert.AreEqual(a.Type, b.Type);
+            Assert.AreEqual(a.TTL, b.TTL);
+            CollectionAssert.AreEqual(a.Data, b.Data);
+        }
+
+        [TestMethod]
         public void Equality()
         {
             var a = new NULLRecord

@@ -42,7 +42,10 @@ namespace Makaretu.Dns
         /// <inheritdoc />
         internal override void ReadData(MasterReader reader)
         {
-            // TODO
+            while (!reader.IsEndOfLine())
+            {
+                Strings.Add(reader.ReadString());
+            }
         }
 
 
