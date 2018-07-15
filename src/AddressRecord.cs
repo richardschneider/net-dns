@@ -13,7 +13,7 @@ namespace Makaretu.Dns
     public abstract class AddressRecord : ResourceRecord
     {
         /// <summary>
-        ///   Creates a new instance of the <see cref="ARecord"/> class.
+        ///   Creates a new instance of the <see cref="AddressRecord"/> class.
         /// </summary>
         public AddressRecord() : base()
         {
