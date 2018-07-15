@@ -2485,6 +2485,32 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.ResourceRecord.Class
   nameWithType: ResourceRecord.Class
+- uid: Makaretu.Dns.ResourceRecord.Clone
+  name: Clone()
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Clone
+  commentId: M:Makaretu.Dns.ResourceRecord.Clone
+  fullName: Makaretu.Dns.ResourceRecord.Clone()
+  nameWithType: ResourceRecord.Clone()
+- uid: Makaretu.Dns.ResourceRecord.Clone*
+  name: Clone
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Clone_
+  commentId: Overload:Makaretu.Dns.ResourceRecord.Clone
+  isSpec: "True"
+  fullName: Makaretu.Dns.ResourceRecord.Clone
+  nameWithType: ResourceRecord.Clone
+- uid: Makaretu.Dns.ResourceRecord.CreationTime
+  name: CreationTime
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_CreationTime
+  commentId: P:Makaretu.Dns.ResourceRecord.CreationTime
+  fullName: Makaretu.Dns.ResourceRecord.CreationTime
+  nameWithType: ResourceRecord.CreationTime
+- uid: Makaretu.Dns.ResourceRecord.CreationTime*
+  name: CreationTime
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_CreationTime_
+  commentId: Overload:Makaretu.Dns.ResourceRecord.CreationTime
+  isSpec: "True"
+  fullName: Makaretu.Dns.ResourceRecord.CreationTime
+  nameWithType: ResourceRecord.CreationTime
 - uid: Makaretu.Dns.ResourceRecord.DefaultHostTTL
   name: DefaultHostTTL
   href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_DefaultHostTTL
@@ -2549,6 +2575,22 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.ResourceRecord.GetHashCode
   nameWithType: ResourceRecord.GetHashCode
+- uid: Makaretu.Dns.ResourceRecord.IsExpired(System.Nullable{System.DateTime})
+  name: IsExpired(Nullable<DateTime>)
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_IsExpired_System_Nullable_System_DateTime__
+  commentId: M:Makaretu.Dns.ResourceRecord.IsExpired(System.Nullable{System.DateTime})
+  name.vb: IsExpired(Nullable(Of DateTime))
+  fullName: Makaretu.Dns.ResourceRecord.IsExpired(System.Nullable<System.DateTime>)
+  fullName.vb: Makaretu.Dns.ResourceRecord.IsExpired(System.Nullable(Of System.DateTime))
+  nameWithType: ResourceRecord.IsExpired(Nullable<DateTime>)
+  nameWithType.vb: ResourceRecord.IsExpired(Nullable(Of DateTime))
+- uid: Makaretu.Dns.ResourceRecord.IsExpired*
+  name: IsExpired
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_IsExpired_
+  commentId: Overload:Makaretu.Dns.ResourceRecord.IsExpired
+  isSpec: "True"
+  fullName: Makaretu.Dns.ResourceRecord.IsExpired
+  nameWithType: ResourceRecord.IsExpired
 - uid: Makaretu.Dns.ResourceRecord.Name
   name: Name
   href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Name
