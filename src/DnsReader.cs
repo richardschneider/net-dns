@@ -12,7 +12,7 @@ namespace Makaretu.Dns
     public class DnsReader
     {
         Stream stream;
-        Dictionary<int, string> names = new Dictionary<int, string>();
+        readonly Dictionary<int, string> names = new Dictionary<int, string>();
 
         /// <summary>
         ///   The reader relative position within the stream.

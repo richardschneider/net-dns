@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace Makaretu.Dns
 {
@@ -157,6 +158,29 @@ namespace Makaretu.Dns
                 TTL = TimeSpan.FromSeconds(123)
             };
             Assert.AreEqual("x.emanon.org 123 IN A", a.ToString());
+        }
+
+        [TestMethod]
+        public void CreationTime()
+        {
+            var now = DateTime.Now;
+            var rr = new ResourceRecord();
+            Assert.AreEqual(DateTimeKind.Local, rr.CreationTime.Kind);
+            Assert.IsTrue(rr.CreationTime >= now);
+
+            Task.Delay(50).Wait();
+            var clone = rr.Clone<ResourceRecord>();
+            Assert.AreEqual(rr.CreationTime, clone.CreationTime);
+        }
+
+        [TestMethod]
+        public void IsExpired()
+        {
+            var rr = new ResourceRecord { TTL = TimeSpan.FromSeconds(2) };
+
+            Assert.IsFalse(rr.IsExpired());
+            Assert.IsFalse(rr.IsExpired(DateTime.Now + TimeSpan.FromSeconds(-3)));
+            Assert.IsTrue(rr.IsExpired(DateTime.Now + TimeSpan.FromSeconds(3)));
         }
     }
 }

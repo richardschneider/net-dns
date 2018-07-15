@@ -34,9 +34,9 @@ namespace Makaretu.Dns
         ///   A deep copy of the dns object.
         /// </returns>
         /// <remarks>
-        ///   Use serialisation to make a copy.
+        ///   Uses serialisation to make a copy.
         /// </remarks>
-        public object Clone()
+        public virtual object Clone()
         {
             using (var ms = new MemoryStream())
             {
