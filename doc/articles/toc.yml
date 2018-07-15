@@ -2,6 +2,9 @@
   href: intro.md
 - name: Resource Records
   href: rr.md
+  items:
+    - name: Equality
+      href: rr-equality.md
 - name: Extended DNS
   href: edns.md
   items:
@@ -9,6 +12,8 @@
       href: eoption.md
     - name: Opcode
       href: eopcode.md
+- name: Message Truncation
+  href: truncate.md
 - name: Class Reference
   href: ../api/Makaretu.Dns.yml
   

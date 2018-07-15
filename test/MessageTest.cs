@@ -179,5 +179,60 @@ namespace Makaretu.Dns
             var bytes = Convert.FromBase64String("AASBgAABAAQAAAABA3d3dwxvcGluaW9uc3RhZ2UDY29tAAABAAHADAAFAAEAAAA8AALAEMAQAAEAAQAAADwABCLAkCrANAABAAEAAAA8AAQ0NgUNwDQAAQABAAAAPAAEaxUAqgAAKQYAAAAAAAFlAAwBYQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
             var msg = (Message)(new Message().Read(bytes));
         }
+
+        [TestMethod]
+        public void Truncation_NotRequired()
+        {
+            var msg = new Message();
+            var originalLength = msg.Length();
+            msg.Truncate(int.MaxValue);
+            Assert.AreEqual(originalLength, msg.Length());
+            Assert.IsFalse(msg.TC);
+        }
+
+        [TestMethod]
+        public void Truncation_Fails()
+        {
+            var msg = new Message();
+            var originalLength = msg.Length();
+            msg.Truncate(originalLength - 1);
+            Assert.AreEqual(originalLength, msg.Length());
+            Assert.IsTrue(msg.TC);
+        }
+
+        [TestMethod]
+        public void Truncation_AdditionalRecords()
+        {
+            var msg = new Message();
+            msg.AdditionalRecords.Add(AddressRecord.Create("foo", IPAddress.Loopback));
+            msg.AuthorityRecords.Add(AddressRecord.Create("foo", IPAddress.Loopback));
+            var originalLength = msg.Length();
+            msg.AdditionalRecords.Add(AddressRecord.Create("foo", IPAddress.Loopback));
+            msg.AdditionalRecords.Add(AddressRecord.Create("foo", IPAddress.Loopback));
+            msg.AdditionalRecords.Add(AddressRecord.Create("foo", IPAddress.Loopback));
+
+            msg.Truncate(originalLength);
+            Assert.AreEqual(originalLength, msg.Length());
+            Assert.AreEqual(1, msg.AdditionalRecords.Count);
+            Assert.AreEqual(1, msg.AuthorityRecords.Count);
+            Assert.IsFalse(msg.TC);
+        }
+
+        [TestMethod]
+        public void AuthorityRecords()
+        {
+            var msg = new Message();
+            msg.AuthorityRecords.Add(AddressRecord.Create("foo", IPAddress.Loopback));
+            var originalLength = msg.Length();
+            msg.AuthorityRecords.Add(AddressRecord.Create("foo", IPAddress.Loopback));
+            msg.AdditionalRecords.Add(AddressRecord.Create("foo", IPAddress.Loopback));
+            msg.AdditionalRecords.Add(AddressRecord.Create("foo", IPAddress.Loopback));
+
+            msg.Truncate(originalLength);
+            Assert.AreEqual(originalLength, msg.Length());
+            Assert.AreEqual(0, msg.AdditionalRecords.Count);
+            Assert.AreEqual(1, msg.AuthorityRecords.Count);
+            Assert.IsFalse(msg.TC);
+        }
     }
 }

@@ -25,11 +25,3 @@ The following resource records are implemented
 
 For all other resource records an [UnknownRecord](xref:Makaretu.Dns.UnknownRecord) is used.
 
-## Equality
-
-Two [resource records](xref:Makaretu.Dns.ResourceRecord) are considered equal if their [Name](xref:Makaretu.Dns.ResourceRecord.Name), 
-[Class](xref:Makaretu.Dns.ResourceRecord.Class), [Type](xref:Makaretu.Dns.ResourceRecord.Type) 
-and resource specific data fields are equal.
-
-> [!NOTE]
-> The [TTL](xref:Makaretu.Dns.ResourceRecord.TTL) field is explicitly excluded from the comparison.

@@ -151,6 +151,7 @@ namespace Makaretu.Dns
         /// <value>
         ///   <b>true</b> for a truncated message; otherwise, <b>false</b>.
         /// </value>
+        /// <seealso cref="Truncate(int)"/>
         public bool TC { get; set; }
 
         /// <summary>
@@ -238,6 +239,42 @@ namespace Makaretu.Dns
                 QR = true
             };
         }
+
+        /// <summary>
+        ///   Make the message not exceed the specified length.
+        /// </summary>
+        /// <param name="length">
+        ///   The maximum number bytes for the message.
+        /// </param>
+        /// <remarks>
+        ///   If the message does not fit into <paramref name="length"/> bytes, then <see cref="AdditionalRecords"/>
+        ///   are removed and then <see cref="AuthorityRecords"/> are removed.  
+        ///   <para>
+        ///   If it is still too big, then the <see cref="TC"/> bit is set.
+        ///   </para>
+        /// </remarks>
+        public void Truncate(int length)
+        {
+            while (Length() > length)
+            {
+                // Remove records.
+                if (AdditionalRecords.Count > 0)
+                {
+                    AdditionalRecords.RemoveAt(AdditionalRecords.Count - 1);
+                }
+                else if (AuthorityRecords.Count > 0)
+                {
+                    AuthorityRecords.RemoveAt(AuthorityRecords.Count - 1);
+                }
+                else
+                {
+                    // Nothing more can be done to reduce the message length.
+                    TC = true;
+                    return;
+                }
+            }
+        }
+
         /// <inheritdoc />
         public override IDnsSerialiser Read(DnsReader reader)
         {

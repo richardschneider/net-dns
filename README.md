@@ -15,6 +15,7 @@ DNS data model with serializer/deserializer for the wire format.
 - Supports multiple strings in TXT records
 - Supports the extended 12-bit RCODE
 - Future proof: handles unknown resource records and EDNS options
+- Graceful truncation of messages
 - Data models for
   - [RFC 1035](https://tools.ietf.org/html/rfc1035) Domain Names (DNS)
   - [RFC 1183](https://tools.ietf.org/html/rfc1183) New DNS RR Definitions
