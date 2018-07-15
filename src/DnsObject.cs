@@ -14,6 +14,17 @@ namespace Makaretu.Dns
 #endif
     {
         /// <summary>
+        ///   When the object was created.
+        /// </summary>
+        /// <value>
+        ///   Local time.
+        /// </value>
+        /// <remarks>
+        ///   Cloning does not alter the value.
+        /// </remarks>
+        public DateTime CreationTime { get; private set; } = DateTime.Now;
+
+        /// <summary>
         ///   Length in bytes of the object when serialised.
         /// </summary>
         /// <returns>
@@ -42,7 +53,9 @@ namespace Makaretu.Dns
             {
                 Write(ms);
                 ms.Position = 0;
-                return Read(ms);
+                var clone = (DnsObject)Read(ms);
+                clone.CreationTime = CreationTime;
+                return clone;
             }
         }
 

@@ -36,15 +36,6 @@ namespace Makaretu.Dns
         /// </remarks>
         public static TimeSpan DefaultHostTTL = TimeSpan.FromDays(1);
 
-        /// <inheritdoc />
-        public override object Clone()
-        {
-            var clone = (ResourceRecord)base.Clone();
-            clone.CreationTime = CreationTime;
-
-            return clone;
-        }
-
         /// <summary>
         ///   An owner name, i.e., the name of the node to which this
         ///   resource record pertains.
@@ -83,17 +74,6 @@ namespace Makaretu.Dns
         /// </remarks>
         /// <seealso cref="DefaultTTL"/>
         public TimeSpan TTL { get; set; } = DefaultTTL;
-
-        /// <summary>
-        ///   When the resource was created.
-        /// </summary>
-        /// <value>
-        ///   Local time.
-        /// </value>
-        /// <remarks>
-        ///   Cloning does not alter the value.
-        /// </remarks>
-        public DateTime CreationTime { get; private set; } = DateTime.Now;
 
         /// <summary>
         ///   Determines if the <see cref="TTL"/> has expired.
