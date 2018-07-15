@@ -410,6 +410,19 @@ references:
   fullName.vb: Makaretu.Dns.DnsObject.Clone(Of T)()
   nameWithType: DnsObject.Clone<T>()
   nameWithType.vb: DnsObject.Clone(Of T)()
+- uid: Makaretu.Dns.DnsObject.CreationTime
+  name: CreationTime
+  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_CreationTime
+  commentId: P:Makaretu.Dns.DnsObject.CreationTime
+  fullName: Makaretu.Dns.DnsObject.CreationTime
+  nameWithType: DnsObject.CreationTime
+- uid: Makaretu.Dns.DnsObject.CreationTime*
+  name: CreationTime
+  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_CreationTime_
+  commentId: Overload:Makaretu.Dns.DnsObject.CreationTime
+  isSpec: "True"
+  fullName: Makaretu.Dns.DnsObject.CreationTime
+  nameWithType: DnsObject.CreationTime
 - uid: Makaretu.Dns.DnsObject.Length
   name: Length()
   href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Length
@@ -2485,32 +2498,6 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.ResourceRecord.Class
   nameWithType: ResourceRecord.Class
-- uid: Makaretu.Dns.ResourceRecord.Clone
-  name: Clone()
-  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Clone
-  commentId: M:Makaretu.Dns.ResourceRecord.Clone
-  fullName: Makaretu.Dns.ResourceRecord.Clone()
-  nameWithType: ResourceRecord.Clone()
-- uid: Makaretu.Dns.ResourceRecord.Clone*
-  name: Clone
-  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Clone_
-  commentId: Overload:Makaretu.Dns.ResourceRecord.Clone
-  isSpec: "True"
-  fullName: Makaretu.Dns.ResourceRecord.Clone
-  nameWithType: ResourceRecord.Clone
-- uid: Makaretu.Dns.ResourceRecord.CreationTime
-  name: CreationTime
-  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_CreationTime
-  commentId: P:Makaretu.Dns.ResourceRecord.CreationTime
-  fullName: Makaretu.Dns.ResourceRecord.CreationTime
-  nameWithType: ResourceRecord.CreationTime
-- uid: Makaretu.Dns.ResourceRecord.CreationTime*
-  name: CreationTime
-  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_CreationTime_
-  commentId: Overload:Makaretu.Dns.ResourceRecord.CreationTime
-  isSpec: "True"
-  fullName: Makaretu.Dns.ResourceRecord.CreationTime
-  nameWithType: ResourceRecord.CreationTime
 - uid: Makaretu.Dns.ResourceRecord.DefaultHostTTL
   name: DefaultHostTTL
   href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_DefaultHostTTL
