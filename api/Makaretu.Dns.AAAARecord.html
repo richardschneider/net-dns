@@ -81,7 +81,8 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="Makaretu.Dns.DnsObject.html">DnsObject</a></div>
     <div class="level2"><a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a></div>
-    <div class="level3"><span class="xref">AAAARecord</span></div>
+    <div class="level3"><a class="xref" href="Makaretu.Dns.AddressRecord.html">AddressRecord</a></div>
+    <div class="level4"><span class="xref">AAAARecord</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -91,6 +92,21 @@
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_Address">AddressRecord.Address</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_Create_System_String_System_Net_IPAddress_">AddressRecord.Create(String, IPAddress)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_">AddressRecord.ReadData(DnsReader, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_WriteData_Makaretu_Dns_DnsWriter_">AddressRecord.WriteData(DnsWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_WriteData_System_IO_TextWriter_">AddressRecord.WriteData(TextWriter)</a>
+    </div>
     <div>
       <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_DefaultTTL">ResourceRecord.DefaultTTL</a>
     </div>
@@ -189,7 +205,7 @@
   <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
   <h5 id="Makaretu_Dns_AAAARecord_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AAAARecord : ResourceRecord, IDnsSerialiser, ICloneable, IMasterSerialiser</code></pre>
+    <pre><code class="lang-csharp hljs">public class AAAARecord : AddressRecord, IDnsSerialiser, ICloneable, IMasterSerialiser</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -209,169 +225,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public AAAARecord()</code></pre>
   </div>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_AAAARecord_Address.md&amp;value=---%0Auid%3A%20Makaretu.Dns.AAAARecord.Address%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/AAAARecord.cs/#L26">View Source</a>
-  </span>
-  <a id="Makaretu_Dns_AAAARecord_Address_" data-uid="Makaretu.Dns.AAAARecord.Address*"></a>
-  <h4 id="Makaretu_Dns_AAAARecord_Address" data-uid="Makaretu.Dns.AAAARecord.Address">Address</h4>
-  <div class="markdown level1 summary"><p>An IPv6 adresss.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IPAddress Address { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_AAAARecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.AAAARecord.ReadData(Makaretu.Dns.DnsReader%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/AAAARecord.cs/#L30">View Source</a>
-  </span>
-  <a id="Makaretu_Dns_AAAARecord_ReadData_" data-uid="Makaretu.Dns.AAAARecord.ReadData*"></a>
-  <h4 id="Makaretu_Dns_AAAARecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_" data-uid="Makaretu.Dns.AAAARecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)">ReadData(DnsReader, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read the data that is specific to the resource record <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Type">Type</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void ReadData(DnsReader reader, int length)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Makaretu.Dns.DnsReader.html">DnsReader</a></td>
-        <td><span class="parametername">reader</span></td>
-        <td><p>The source of the resource record&apos;s data.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">length</span></td>
-        <td><p>The length, in bytes, of the data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_">ResourceRecord.ReadData(DnsReader, Int32)</a></div>
-  <h5 id="Makaretu_Dns_AAAARecord_ReadData_Makaretu_Dns_DnsReader_System_Int32__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Derived classes must implement this method.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_AAAARecord_WriteData_Makaretu_Dns_DnsWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.AAAARecord.WriteData(Makaretu.Dns.DnsWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/AAAARecord.cs/#L42">View Source</a>
-  </span>
-  <a id="Makaretu_Dns_AAAARecord_WriteData_" data-uid="Makaretu.Dns.AAAARecord.WriteData*"></a>
-  <h4 id="Makaretu_Dns_AAAARecord_WriteData_Makaretu_Dns_DnsWriter_" data-uid="Makaretu.Dns.AAAARecord.WriteData(Makaretu.Dns.DnsWriter)">WriteData(DnsWriter)</h4>
-  <div class="markdown level1 summary"><p>Write the data that is specific to the resource record <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void WriteData(DnsWriter writer)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Makaretu.Dns.DnsWriter.html">DnsWriter</a></td>
-        <td><span class="parametername">writer</span></td>
-        <td><p>The destination for the DNS object&apos;s data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_WriteData_Makaretu_Dns_DnsWriter_">ResourceRecord.WriteData(DnsWriter)</a></div>
-  <h5 id="Makaretu_Dns_AAAARecord_WriteData_Makaretu_Dns_DnsWriter__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Derived classes must implement this method.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_AAAARecord_WriteData_System_IO_TextWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.AAAARecord.WriteData(System.IO.TextWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/AAAARecord.cs/#L48">View Source</a>
-  </span>
-  <a id="Makaretu_Dns_AAAARecord_WriteData_" data-uid="Makaretu.Dns.AAAARecord.WriteData*"></a>
-  <h4 id="Makaretu_Dns_AAAARecord_WriteData_System_IO_TextWriter_" data-uid="Makaretu.Dns.AAAARecord.WriteData(System.IO.TextWriter)">WriteData(TextWriter)</h4>
-  <div class="markdown level1 summary"><p>Write the textual representation of the data that is specific to 
-the resource record.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void WriteData(TextWriter writer)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></td>
-        <td><span class="parametername">writer</span></td>
-        <td><p>The destination for the resource record&apos;s data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_WriteData_System_IO_TextWriter_">ResourceRecord.WriteData(TextWriter)</a></div>
-  <h5 id="Makaretu_Dns_AAAARecord_WriteData_System_IO_TextWriter__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Derived classes should implement this method.
-<p>
-By default, this will write the base64 encoding of
-the <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_GetData">GetData()</a>.
-</p></p>
-</div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Makaretu.Dns.IDnsSerialiser.html">IDnsSerialiser</a>

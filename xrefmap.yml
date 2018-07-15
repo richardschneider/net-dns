@@ -26,51 +26,83 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.AAAARecord.AAAARecord
   nameWithType: AAAARecord.AAAARecord
-- uid: Makaretu.Dns.AAAARecord.Address
-  name: Address
-  href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_Address
-  commentId: P:Makaretu.Dns.AAAARecord.Address
-  fullName: Makaretu.Dns.AAAARecord.Address
-  nameWithType: AAAARecord.Address
-- uid: Makaretu.Dns.AAAARecord.Address*
-  name: Address
-  href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_Address_
-  commentId: Overload:Makaretu.Dns.AAAARecord.Address
+- uid: Makaretu.Dns.AddressRecord
+  name: AddressRecord
+  href: api/Makaretu.Dns.AddressRecord.html
+  commentId: T:Makaretu.Dns.AddressRecord
+  fullName: Makaretu.Dns.AddressRecord
+  nameWithType: AddressRecord
+- uid: Makaretu.Dns.AddressRecord.#ctor
+  name: AddressRecord()
+  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord__ctor
+  commentId: M:Makaretu.Dns.AddressRecord.#ctor
+  fullName: Makaretu.Dns.AddressRecord.AddressRecord()
+  nameWithType: AddressRecord.AddressRecord()
+- uid: Makaretu.Dns.AddressRecord.#ctor*
+  name: AddressRecord
+  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord__ctor_
+  commentId: Overload:Makaretu.Dns.AddressRecord.#ctor
   isSpec: "True"
-  fullName: Makaretu.Dns.AAAARecord.Address
-  nameWithType: AAAARecord.Address
-- uid: Makaretu.Dns.AAAARecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  fullName: Makaretu.Dns.AddressRecord.AddressRecord
+  nameWithType: AddressRecord.AddressRecord
+- uid: Makaretu.Dns.AddressRecord.Address
+  name: Address
+  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_Address
+  commentId: P:Makaretu.Dns.AddressRecord.Address
+  fullName: Makaretu.Dns.AddressRecord.Address
+  nameWithType: AddressRecord.Address
+- uid: Makaretu.Dns.AddressRecord.Address*
+  name: Address
+  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_Address_
+  commentId: Overload:Makaretu.Dns.AddressRecord.Address
+  isSpec: "True"
+  fullName: Makaretu.Dns.AddressRecord.Address
+  nameWithType: AddressRecord.Address
+- uid: Makaretu.Dns.AddressRecord.Create(System.String,System.Net.IPAddress)
+  name: Create(String, IPAddress)
+  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_Create_System_String_System_Net_IPAddress_
+  commentId: M:Makaretu.Dns.AddressRecord.Create(System.String,System.Net.IPAddress)
+  fullName: Makaretu.Dns.AddressRecord.Create(System.String, System.Net.IPAddress)
+  nameWithType: AddressRecord.Create(String, IPAddress)
+- uid: Makaretu.Dns.AddressRecord.Create*
+  name: Create
+  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_Create_
+  commentId: Overload:Makaretu.Dns.AddressRecord.Create
+  isSpec: "True"
+  fullName: Makaretu.Dns.AddressRecord.Create
+  nameWithType: AddressRecord.Create
+- uid: Makaretu.Dns.AddressRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   name: ReadData(DnsReader, Int32)
-  href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_
-  commentId: M:Makaretu.Dns.AAAARecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
-  fullName: Makaretu.Dns.AAAARecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
-  nameWithType: AAAARecord.ReadData(DnsReader, Int32)
-- uid: Makaretu.Dns.AAAARecord.ReadData*
+  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_
+  commentId: M:Makaretu.Dns.AddressRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  fullName: Makaretu.Dns.AddressRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
+  nameWithType: AddressRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.AddressRecord.ReadData*
   name: ReadData
-  href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_ReadData_
-  commentId: Overload:Makaretu.Dns.AAAARecord.ReadData
+  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_ReadData_
+  commentId: Overload:Makaretu.Dns.AddressRecord.ReadData
   isSpec: "True"
-  fullName: Makaretu.Dns.AAAARecord.ReadData
-  nameWithType: AAAARecord.ReadData
-- uid: Makaretu.Dns.AAAARecord.WriteData(Makaretu.Dns.DnsWriter)
+  fullName: Makaretu.Dns.AddressRecord.ReadData
+  nameWithType: AddressRecord.ReadData
+- uid: Makaretu.Dns.AddressRecord.WriteData(Makaretu.Dns.DnsWriter)
   name: WriteData(DnsWriter)
-  href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_WriteData_Makaretu_Dns_DnsWriter_
-  commentId: M:Makaretu.Dns.AAAARecord.WriteData(Makaretu.Dns.DnsWriter)
-  fullName: Makaretu.Dns.AAAARecord.WriteData(Makaretu.Dns.DnsWriter)
-  nameWithType: AAAARecord.WriteData(DnsWriter)
-- uid: Makaretu.Dns.AAAARecord.WriteData(System.IO.TextWriter)
+  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_WriteData_Makaretu_Dns_DnsWriter_
+  commentId: M:Makaretu.Dns.AddressRecord.WriteData(Makaretu.Dns.DnsWriter)
+  fullName: Makaretu.Dns.AddressRecord.WriteData(Makaretu.Dns.DnsWriter)
+  nameWithType: AddressRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.AddressRecord.WriteData(System.IO.TextWriter)
   name: WriteData(TextWriter)
-  href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_WriteData_System_IO_TextWriter_
-  commentId: M:Makaretu.Dns.AAAARecord.WriteData(System.IO.TextWriter)
-  fullName: Makaretu.Dns.AAAARecord.WriteData(System.IO.TextWriter)
-  nameWithType: AAAARecord.WriteData(TextWriter)
-- uid: Makaretu.Dns.AAAARecord.WriteData*
+  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.AddressRecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.AddressRecord.WriteData(System.IO.TextWriter)
+  nameWithType: AddressRecord.WriteData(TextWriter)
+- uid: Makaretu.Dns.AddressRecord.WriteData*
   name: WriteData
-  href: api/Makaretu.Dns.AAAARecord.html#Makaretu_Dns_AAAARecord_WriteData_
-  commentId: Overload:Makaretu.Dns.AAAARecord.WriteData
+  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_WriteData_
+  commentId: Overload:Makaretu.Dns.AddressRecord.WriteData
   isSpec: "True"
-  fullName: Makaretu.Dns.AAAARecord.WriteData
-  nameWithType: AAAARecord.WriteData
+  fullName: Makaretu.Dns.AddressRecord.WriteData
+  nameWithType: AddressRecord.WriteData
 - uid: Makaretu.Dns.AFSDBRecord
   name: AFSDBRecord
   href: api/Makaretu.Dns.AFSDBRecord.html
@@ -167,51 +199,6 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.ARecord.ARecord
   nameWithType: ARecord.ARecord
-- uid: Makaretu.Dns.ARecord.Address
-  name: Address
-  href: api/Makaretu.Dns.ARecord.html#Makaretu_Dns_ARecord_Address
-  commentId: P:Makaretu.Dns.ARecord.Address
-  fullName: Makaretu.Dns.ARecord.Address
-  nameWithType: ARecord.Address
-- uid: Makaretu.Dns.ARecord.Address*
-  name: Address
-  href: api/Makaretu.Dns.ARecord.html#Makaretu_Dns_ARecord_Address_
-  commentId: Overload:Makaretu.Dns.ARecord.Address
-  isSpec: "True"
-  fullName: Makaretu.Dns.ARecord.Address
-  nameWithType: ARecord.Address
-- uid: Makaretu.Dns.ARecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
-  name: ReadData(DnsReader, Int32)
-  href: api/Makaretu.Dns.ARecord.html#Makaretu_Dns_ARecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_
-  commentId: M:Makaretu.Dns.ARecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
-  fullName: Makaretu.Dns.ARecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
-  nameWithType: ARecord.ReadData(DnsReader, Int32)
-- uid: Makaretu.Dns.ARecord.ReadData*
-  name: ReadData
-  href: api/Makaretu.Dns.ARecord.html#Makaretu_Dns_ARecord_ReadData_
-  commentId: Overload:Makaretu.Dns.ARecord.ReadData
-  isSpec: "True"
-  fullName: Makaretu.Dns.ARecord.ReadData
-  nameWithType: ARecord.ReadData
-- uid: Makaretu.Dns.ARecord.WriteData(Makaretu.Dns.DnsWriter)
-  name: WriteData(DnsWriter)
-  href: api/Makaretu.Dns.ARecord.html#Makaretu_Dns_ARecord_WriteData_Makaretu_Dns_DnsWriter_
-  commentId: M:Makaretu.Dns.ARecord.WriteData(Makaretu.Dns.DnsWriter)
-  fullName: Makaretu.Dns.ARecord.WriteData(Makaretu.Dns.DnsWriter)
-  nameWithType: ARecord.WriteData(DnsWriter)
-- uid: Makaretu.Dns.ARecord.WriteData(System.IO.TextWriter)
-  name: WriteData(TextWriter)
-  href: api/Makaretu.Dns.ARecord.html#Makaretu_Dns_ARecord_WriteData_System_IO_TextWriter_
-  commentId: M:Makaretu.Dns.ARecord.WriteData(System.IO.TextWriter)
-  fullName: Makaretu.Dns.ARecord.WriteData(System.IO.TextWriter)
-  nameWithType: ARecord.WriteData(TextWriter)
-- uid: Makaretu.Dns.ARecord.WriteData*
-  name: WriteData
-  href: api/Makaretu.Dns.ARecord.html#Makaretu_Dns_ARecord_WriteData_
-  commentId: Overload:Makaretu.Dns.ARecord.WriteData
-  isSpec: "True"
-  fullName: Makaretu.Dns.ARecord.WriteData
-  nameWithType: ARecord.WriteData
 - uid: Makaretu.Dns.Class
   name: Class
   href: api/Makaretu.Dns.Class.html
