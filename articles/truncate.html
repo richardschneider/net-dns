@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Resource Records | DNS Model </title>
+    <title>Message Trucation | DNS Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Resource Records | DNS Model ">
+    <meta name="title" content="Message Trucation | DNS Model ">
     <meta name="generator" content="docfx 2.37.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,31 +67,13 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="resource-records">Resource Records</h1>
+<h1 id="message-trucation">Message Trucation</h1>
 
-<p>A <a class="xref" href="../api/Makaretu.Dns.ResourceRecord.html">resource record</a> (RR) contains some information on the named resource.  These records are found in the 
-<a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_Answers">Answers</a>, 
-<a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AuthorityRecords">AuthorityRecords</a> and
-<a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AdditionalRecords">AdditionalRecords</a> properties of a message.</p>
-<p>The following resource records are implemented</p>
-<ul>
-<li><a class="xref" href="../api/Makaretu.Dns.ARecord.html">A</a> IPv4</li>
-<li><a class="xref" href="../api/Makaretu.Dns.AAAARecord.html">AAAA</a> IPv6</li>
-<li><a class="xref" href="../api/Makaretu.Dns.AFSDBRecord.html">AFSDB</a> AFS Database</li>
-<li><a class="xref" href="../api/Makaretu.Dns.CNAMERecord.html">CNAME</a> Alias</li>
-<li><a class="xref" href="../api/Makaretu.Dns.DNAMERecord.html">DNAME</a> Alias for a name and all its subnames</li>
-<li><a class="xref" href="../api/Makaretu.Dns.HINFORecord.html">HINFO</a> Host Info</li>
-<li><a class="xref" href="../api/Makaretu.Dns.MXRecord.html">MX</a> Mail Exchange</li>
-<li><a class="xref" href="../api/Makaretu.Dns.NSRecord.html">NS</a> Name Server</li>
-<li><a class="xref" href="../api/Makaretu.Dns.NULLRecord.html">NULL</a> EXPERIMENTAL</li>
-<li><a class="xref" href="../api/Makaretu.Dns.OPTRecord.html">OPT</a> Extension mechanism for DNS</li>
-<li><a class="xref" href="../api/Makaretu.Dns.PTRRecord.html">PTR</a> Domain Name Pointer</li>
-<li><a class="xref" href="../api/Makaretu.Dns.RPRecord.html">RP</a> Responsible Person</li>
-<li><a class="xref" href="../api/Makaretu.Dns.SOARecord.html">SOA</a> Start Of Authority</li>
-<li><a class="xref" href="../api/Makaretu.Dns.SRVRecord.html">SRV</a> Servers</li>
-<li><a class="xref" href="../api/Makaretu.Dns.TXTRecord.html">TXT</a> Freeform text</li>
-</ul>
-<p>For all other resource records an <a class="xref" href="../api/Makaretu.Dns.UnknownRecord.html">UnknownRecord</a> is used.</p>
+<p>A <a class="xref" href="../api/Makaretu.Dns.Message.html">DNS message</a> is typically sent over UDP which has a maximum packet size. 
+<a href="xref:Makaretu.Dns.Message.Truncate">Truncate(length)</a> is used to adjust the message to fit into the packet size, 
+by removing <a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AdditionalRecords">additional records</a> and then 
+<a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AuthorityRecords">authority records</a>.</p>
+<p>If it is still too big, then the <a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_TC">TC</a> bit is set.</p>
 </article>
           </div>
           
@@ -100,7 +82,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-dns/blob/master/doc/articles/rr.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/doc/articles/truncate.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

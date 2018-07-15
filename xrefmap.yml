@@ -1811,6 +1811,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Message.TC
   nameWithType: Message.TC
+- uid: Makaretu.Dns.Message.Truncate(System.Int32)
+  name: Truncate(Int32)
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_Truncate_System_Int32_
+  commentId: M:Makaretu.Dns.Message.Truncate(System.Int32)
+  fullName: Makaretu.Dns.Message.Truncate(System.Int32)
+  nameWithType: Message.Truncate(Int32)
+- uid: Makaretu.Dns.Message.Truncate*
+  name: Truncate
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_Truncate_
+  commentId: Overload:Makaretu.Dns.Message.Truncate
+  isSpec: "True"
+  fullName: Makaretu.Dns.Message.Truncate
+  nameWithType: Message.Truncate
 - uid: Makaretu.Dns.Message.Write(Makaretu.Dns.DnsWriter)
   name: Write(DnsWriter)
   href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_Write_Makaretu_Dns_DnsWriter_
