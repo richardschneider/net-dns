@@ -153,5 +153,35 @@ namespace Makaretu.Dns.Resolving
 
             Assert.AreEqual(0, response.AuthorityRecords.Count);
         }
+
+        [TestMethod]
+        public async Task MultipleQuestions_AnswerAny()
+        {
+            var resolver = new LocalResolver { Catalog = dotcom };
+            var request = new Message();
+            request.Questions.Add(new Question { Name = "ns.example.com", Type = DnsType.A });
+            request.Questions.Add(new Question { Name = "ns.example.com", Type = DnsType.AAAA });
+            var response = await resolver.ResolveAsync(request);
+
+            Assert.IsTrue(response.IsResponse);
+            Assert.AreEqual(MessageStatus.NoError, response.Status);
+            Assert.IsTrue(response.AA);
+            Assert.AreEqual(1, response.Answers.Count);
+        }
+
+        [TestMethod]
+        public async Task MultipleQuestions_AnswerAll()
+        {
+            var resolver = new LocalResolver { Catalog = dotcom, AnswerAllQuestions = true};
+            var request = new Message();
+            request.Questions.Add(new Question { Name = "ns.example.com", Type = DnsType.A });
+            request.Questions.Add(new Question { Name = "ns.example.com", Type = DnsType.AAAA });
+            var response = await resolver.ResolveAsync(request);
+
+            Assert.IsTrue(response.IsResponse);
+            Assert.AreEqual(MessageStatus.NoError, response.Status);
+            Assert.IsTrue(response.AA);
+            Assert.AreEqual(2, response.Answers.Count);
+        }
     }
 }

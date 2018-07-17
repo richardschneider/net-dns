@@ -21,6 +21,20 @@ namespace Makaretu.Dns.Resolving
         /// </value>
         public Catalog Catalog { get; set; }
 
+        /// <summary>
+        ///   Determines how multiple questions are answered.
+        /// </summary>
+        /// <value>
+        ///   <b>false</b> to answer <b>any</b> of the questions. 
+        ///   <b>false</b> to answer <b>all</b> of the questions.
+        ///   The default is <b>false</b>.
+        /// </value>
+        /// <remarks>
+        ///   Standard DNS specifies that only one of the questions need to be answered.
+        ///   Multicast DNS specifies that all the questions need to be answered.
+        /// </remarks>
+        public bool AnswerAllQuestions { get; set; }
+
         /// <inheritdoc />
         public async Task<Message> ResolveAsync(
             Message request,
@@ -28,11 +42,12 @@ namespace Makaretu.Dns.Resolving
         {
             var response = request.CreateResponse();
 
-            // TODO: Unicast DNS only requires one question to be answer.
             // TODO: Run all questions in parallel.
             foreach (var question in request.Questions)
             {
                 await ResolveAsync(question, response, cancel);
+                if (response.Answers.Count > 0 && !AnswerAllQuestions)
+                    break;
             }
 
             return response;
