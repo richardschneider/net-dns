@@ -11,7 +11,7 @@ namespace Makaretu.Dns.Resolving
     [TestClass]
     public class CatalogTest
     {
-        const string exampleDotOrgZoneText = @"
+        public const string exampleDotOrgZoneText = @"
  $ORIGIN example.org.
  $TTL 3600
  @    SOA   ns1 username.example.org. ( 2007120710 1 2 4 1 )
@@ -23,7 +23,7 @@ namespace Makaretu.Dns.Resolving
  mail A     192.0.2.3
 ";
 
-        const string exampleDotComZoneText = @"
+        public const string exampleDotComZoneText = @"
  $ORIGIN example.com.     ; designates the start of this zone file in the namespace
  $TTL 3600                  ; default expiration time of all resource records without their own TTL value
  ; example.com.  IN  SOA   ns.example.com. username.example.com. ( 2007120710 1d 2h 4w 1h )
