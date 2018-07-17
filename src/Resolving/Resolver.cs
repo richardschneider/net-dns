@@ -16,28 +16,26 @@ namespace Makaretu.Dns.Resolving
         public Catalog Catalog { get; set; }
 
         /// <summary>
-        ///   The question to answer.
-        /// </summary>
-        public Question Question { get; private set; }
-
-        /// <summary>
         ///   The result of answering the <see cref="Question"/>.
         /// </summary>
         public Message Response { get; private set; }
 
         /// <inheritdoc />
+        /// <remarks>
+        ///   If question's domain does not exist, then the closest authority
+        ///   (<see cref="SOARecord"/>) is added to the <see cref="Message.AuthorityRecords"/>.
+        /// </remarks>
         public async Task<Message> ResolveAsync(Question question, Message response = null, CancellationToken cancel = default(CancellationToken))
         {
-            Question = question;
             Response = response ?? new Message { QR = true };
-            bool found = await FindAnswerAsync(cancel);
+            bool found = await FindAnswerAsync(question, cancel);
             if (!found && Response.Status == MessageStatus.NoError)
                 Response.Status = MessageStatus.NameError;
 
             // If a name error, then add the domain authority.
             if (Response.Status == MessageStatus.NameError)
             {
-                SOARecord soa = FindAuthority(Question.Name);
+                SOARecord soa = FindAuthority(question.Name);
                 if (soa != null)
                 {
                     Response.AuthorityRecords.Add(soa);
@@ -49,6 +47,9 @@ namespace Makaretu.Dns.Resolving
         /// <summary>
         ///   Find an answer to the <see cref="Question"/>.
         /// </summary>
+        /// <param name="question">
+        ///   The question to answer.
+        /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
@@ -59,7 +60,7 @@ namespace Makaretu.Dns.Resolving
         /// <remarks>
         ///   Derived classes must implement this method.
         /// </remarks>
-        protected abstract Task<bool> FindAnswerAsync(CancellationToken cancel);
+        protected abstract Task<bool> FindAnswerAsync(Question question, CancellationToken cancel);
 
         SOARecord FindAuthority(string domainName)
         {

@@ -13,31 +13,49 @@ namespace Makaretu.Dns.Resolving
     public class LocalResolver : Resolver
     {
         /// <inheritdoc />
-        protected override Task<bool> FindAnswerAsync(CancellationToken cancel)
+        protected override Task<bool> FindAnswerAsync(Question question, CancellationToken cancel)
         {
             // Find a node for the question name.
             var node = Catalog
-                .Where(c => c.Key == Question.Name)
+                .Where(c => c.Key == question.Name)
                 .Select(c => c.Value)
                 .FirstOrDefault();
             if (node == null)
             {
                 return Task.FromResult(false);
             }
-            Response.AA = node.Authoritative;
 
-            //  Find the resources that match question.
+            // https://tools.ietf.org/html/rfc1034#section-3.7.1
+            Response.AA |= node.Authoritative && question.Class != Class.ANY;
+
+            //  Find the resources that match the question.
             var resources = node.Resources
-                .Where(r => Question.Class == Class.ANY || r.Class == Question.Class)
-                .Where(r => Question.Type == DnsType.ANY || r.Type == Question.Type)
-                .Where(r => node.Authoritative || !r.IsExpired(Question.CreationTime))
+                .Where(r => question.Class == Class.ANY || r.Class == question.Class)
+                .Where(r => question.Type == DnsType.ANY || r.Type == question.Type)
+                .Where(r => node.Authoritative || !r.IsExpired(question.CreationTime))
                 .ToArray();
-            if (resources.Length == 0)
+            if (resources.Length > 0)
             {
-                return Task.FromResult(false);
+                Response.Answers.AddRange(resources);
+                return Task.FromResult(true);
             }
-            Response.Answers.AddRange(resources);
-            return Task.FromResult(true);
+
+            // If node is alias (CNAME), then find answers for the alias' target.
+            // The CNAME is added to the answers.
+            var cname = node.Resources.OfType<CNAMERecord>().FirstOrDefault();
+            if (cname != null)
+            {
+                Response.Answers.Add(cname);
+                question = question.Clone<Question>();
+                question.Name = cname.Target;
+                return FindAnswerAsync(question, cancel);
+            }
+
+            // TODO: https://tools.ietf.org/html/rfc1034#section-4.3.3 Wildcards
+
+
+            // Nothing more can be done.
+            return Task.FromResult(false);
         }
     }
 }

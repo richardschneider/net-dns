@@ -24,7 +24,7 @@ namespace Makaretu.Dns.Resolving
         ///   Get an answer to a question.
         /// </summary>
         /// <param name="question">
-        ///   The question to resolve.
+        ///   The question to answer.
         /// </param>
         /// <param name="response">
         ///   Where the answers are added.  If <b>null</b>, then a new <see cref="Message"/> is
