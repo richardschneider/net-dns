@@ -12,7 +12,13 @@ namespace Makaretu.Dns.Resolving
     /// </summary>
     public abstract class Resolver : IResolver
     {
-        /// <inheritdoc />
+        /// <summary>
+        ///   Information about some portion of the DNS database.
+        /// </summary>
+        /// <value>
+        ///   A subset of the DNS database. Typically (1) one or more zones or (2) a cache received
+        ///   responses.
+        /// </value>
         public Catalog Catalog { get; set; }
 
         /// <summary>
@@ -21,8 +27,41 @@ namespace Makaretu.Dns.Resolving
         public Message Response { get; private set; }
 
         /// <inheritdoc />
+        public async Task<Message> ResolveAsync(
+            Message request,
+            CancellationToken cancel = default(CancellationToken))
+        {
+            var response = request.CreateResponse();
+
+            // TODO: Unicast DNS only requires one question to be answer.
+            // TODO: Run all questions in parallel.
+            foreach (var question in request.Questions)
+            {
+                await ResolveAsync(question, response, cancel);
+            }
+
+            return response;
+        }
+
+        /// <summary>
+        ///   Get an answer to a question.
+        /// </summary>
+        /// <param name="question">
+        ///   The question to answer.
+        /// </param>
+        /// <param name="response">
+        ///   Where the answers are added.  If <b>null</b>, then a new <see cref="Message"/> is
+        ///   created.
+        /// </param>
+        /// <param name="cancel">
+        ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
+        /// </param>
+        /// <returns>
+        ///   A task that represents the asynchronous operation. The task's value is
+        ///   a <see cref="Message"/> response to the <paramref name="question"/>.
+        /// </returns>
         /// <remarks>
-        ///   If question's domain does not exist, then the closest authority
+        ///   If the question's domain does not exist, then the closest authority
         ///   (<see cref="SOARecord"/>) is added to the <see cref="Message.AuthorityRecords"/>.
         /// </remarks>
         public async Task<Message> ResolveAsync(Question question, Message response = null, CancellationToken cancel = default(CancellationToken))
@@ -41,6 +80,8 @@ namespace Makaretu.Dns.Resolving
                     Response.AuthorityRecords.Add(soa);
                 }
             }
+
+            // TODO: Add additonal records.
             return Response;
         }
 

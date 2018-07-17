@@ -13,33 +13,22 @@ namespace Makaretu.Dns.Resolving
     public interface IResolver
     {
         /// <summary>
-        ///   Information about some portion of the DNS database.
-        /// </summary>
-        /// <value>
-        ///   A subset of the DNS database.
-        /// </value>
-        Catalog Catalog { get; set; }
-
-        /// <summary>
         ///   Get an answer to a question.
         /// </summary>
-        /// <param name="question">
-        ///   The question to answer.
-        /// </param>
-        /// <param name="response">
-        ///   Where the answers are added.  If <b>null</b>, then a new <see cref="Message"/> is
-        ///   created.
+        /// <param name="request">
+        ///   A <see cref="Message"/> containing a <see cref="Question"/> that
+        ///   needs to be answered.
         /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
         /// </param>
         /// <returns>
         ///   A task that represents the asynchronous operation. The task's value is
-        ///   a <see cref="Message"/> response to the <paramref name="question"/>.
+        ///   the <see cref="Message"/> response to the <paramref name="request"/>.
         /// </returns>
         Task<Message> ResolveAsync(
-            Question question, 
-            Message response = null,
-            CancellationToken cancel = default(CancellationToken));
+            Message request,
+            CancellationToken cancel = default(CancellationToken)
+            );
     }
 }
