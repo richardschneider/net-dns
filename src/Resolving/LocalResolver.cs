@@ -13,7 +13,7 @@ namespace Makaretu.Dns.Resolving
     public class LocalResolver : Resolver
     {
         /// <inheritdoc />
-        protected override Task<bool> FindAnswerAsync(Question question, CancellationToken cancel)
+        protected override Task<bool> FindAnswerAsync(Question question, Message response, CancellationToken cancel)
         {
             // Find a node for the question name.
             var node = Catalog
@@ -26,7 +26,7 @@ namespace Makaretu.Dns.Resolving
             }
 
             // https://tools.ietf.org/html/rfc1034#section-3.7.1
-            Response.AA |= node.Authoritative && question.Class != Class.ANY;
+            response.AA |= node.Authoritative && question.Class != Class.ANY;
 
             //  Find the resources that match the question.
             var resources = node.Resources
@@ -36,7 +36,7 @@ namespace Makaretu.Dns.Resolving
                 .ToArray();
             if (resources.Length > 0)
             {
-                Response.Answers.AddRange(resources);
+                response.Answers.AddRange(resources);
                 return Task.FromResult(true);
             }
 
@@ -45,10 +45,10 @@ namespace Makaretu.Dns.Resolving
             var cname = node.Resources.OfType<CNAMERecord>().FirstOrDefault();
             if (cname != null)
             {
-                Response.Answers.Add(cname);
+                response.Answers.Add(cname);
                 question = question.Clone<Question>();
                 question.Name = cname.Target;
-                return FindAnswerAsync(question, cancel);
+                return FindAnswerAsync(question, response, cancel);
             }
 
             // TODO: https://tools.ietf.org/html/rfc1034#section-4.3.3 Wildcards

@@ -21,11 +21,6 @@ namespace Makaretu.Dns.Resolving
         /// </value>
         public Catalog Catalog { get; set; }
 
-        /// <summary>
-        ///   The result of answering the <see cref="Question"/>.
-        /// </summary>
-        public Message Response { get; private set; }
-
         /// <inheritdoc />
         public async Task<Message> ResolveAsync(
             Message request,
@@ -66,23 +61,24 @@ namespace Makaretu.Dns.Resolving
         /// </remarks>
         public async Task<Message> ResolveAsync(Question question, Message response = null, CancellationToken cancel = default(CancellationToken))
         {
-            Response = response ?? new Message { QR = true };
-            bool found = await FindAnswerAsync(question, cancel);
-            if (!found && Response.Status == MessageStatus.NoError)
-                Response.Status = MessageStatus.NameError;
+            response = response ?? new Message { QR = true };
+            bool found = await FindAnswerAsync(question, response, cancel);
+            if (!found && response.Status == MessageStatus.NoError)
+                response.Status = MessageStatus.NameError;
 
             // If a name error, then add the domain authority.
-            if (Response.Status == MessageStatus.NameError)
+            if (response.Status == MessageStatus.NameError)
             {
                 SOARecord soa = FindAuthority(question.Name);
                 if (soa != null)
                 {
-                    Response.AuthorityRecords.Add(soa);
+                    response.AuthorityRecords.Add(soa);
                 }
             }
 
             // TODO: Add additonal records.
-            return Response;
+
+            return response;
         }
 
         /// <summary>
@@ -90,6 +86,9 @@ namespace Makaretu.Dns.Resolving
         /// </summary>
         /// <param name="question">
         ///   The question to answer.
+        /// </param>
+        /// <param name="response">
+        ///   Where the answers are added.
         /// </param>
         /// <param name="cancel">
         ///   Is used to stop the task.  When cancelled, the <see cref="TaskCanceledException"/> is raised.
@@ -101,7 +100,7 @@ namespace Makaretu.Dns.Resolving
         /// <remarks>
         ///   Derived classes must implement this method.
         /// </remarks>
-        protected abstract Task<bool> FindAnswerAsync(Question question, CancellationToken cancel);
+        protected abstract Task<bool> FindAnswerAsync(Question question, Message response, CancellationToken cancel);
 
         SOARecord FindAuthority(string domainName)
         {
