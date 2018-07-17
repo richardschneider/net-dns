@@ -75,7 +75,17 @@ namespace Makaretu.Dns
         /// </returns>
         public string ReadDomainName()
         {
-            return ReadToken();
+            return MakeAbsoluteDomainName(ReadToken());
+        }
+
+        string MakeAbsoluteDomainName(string name)
+        {
+            // If an absolute name.
+            if (name.EndsWith("."))
+                return name.Substring(0, name.Length - 1);
+
+            // Then its a relative name.
+            return (name + "." + Origin).TrimEnd('.');
         }
 
         /// <summary>
@@ -187,7 +197,7 @@ namespace Makaretu.Dns
                     continue;
                 }
 
-                // Must be domain name
+                // Must be domain name.
                 domainName = token;
             }
 
@@ -205,7 +215,7 @@ namespace Makaretu.Dns
             {
                 resource = new UnknownRecord();
             }
-            resource.Name = domainName;
+            resource.Name = MakeAbsoluteDomainName(domainName);
             resource.Type = type.Value;
             resource.Class = klass;
             if (ttl.HasValue)
