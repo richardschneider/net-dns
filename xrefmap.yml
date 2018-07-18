@@ -1443,6 +1443,25 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.IMasterSerialiser.Write
   nameWithType: IMasterSerialiser.Write
+- uid: Makaretu.Dns.IResolver
+  name: IResolver
+  href: api/Makaretu.Dns.IResolver.html
+  commentId: T:Makaretu.Dns.IResolver
+  fullName: Makaretu.Dns.IResolver
+  nameWithType: IResolver
+- uid: Makaretu.Dns.IResolver.ResolveAsync(Makaretu.Dns.Message,System.Threading.CancellationToken)
+  name: ResolveAsync(Message, CancellationToken)
+  href: api/Makaretu.Dns.IResolver.html#Makaretu_Dns_IResolver_ResolveAsync_Makaretu_Dns_Message_System_Threading_CancellationToken_
+  commentId: M:Makaretu.Dns.IResolver.ResolveAsync(Makaretu.Dns.Message,System.Threading.CancellationToken)
+  fullName: Makaretu.Dns.IResolver.ResolveAsync(Makaretu.Dns.Message, System.Threading.CancellationToken)
+  nameWithType: IResolver.ResolveAsync(Message, CancellationToken)
+- uid: Makaretu.Dns.IResolver.ResolveAsync*
+  name: ResolveAsync
+  href: api/Makaretu.Dns.IResolver.html#Makaretu_Dns_IResolver_ResolveAsync_
+  commentId: Overload:Makaretu.Dns.IResolver.ResolveAsync
+  isSpec: "True"
+  fullName: Makaretu.Dns.IResolver.ResolveAsync
+  nameWithType: IResolver.ResolveAsync
 - uid: Makaretu.Dns.MasterReader
   name: MasterReader
   href: api/Makaretu.Dns.MasterReader.html
@@ -2479,6 +2498,179 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Question.Write
   nameWithType: Question.Write
+- uid: Makaretu.Dns.Resolving
+  name: Makaretu.Dns.Resolving
+  href: api/Makaretu.Dns.Resolving.html
+  commentId: N:Makaretu.Dns.Resolving
+  fullName: Makaretu.Dns.Resolving
+  nameWithType: Makaretu.Dns.Resolving
+- uid: Makaretu.Dns.Resolving.Catalog
+  name: Catalog
+  href: api/Makaretu.Dns.Resolving.Catalog.html
+  commentId: T:Makaretu.Dns.Resolving.Catalog
+  fullName: Makaretu.Dns.Resolving.Catalog
+  nameWithType: Catalog
+- uid: Makaretu.Dns.Resolving.Catalog.#ctor
+  name: Catalog()
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog__ctor
+  commentId: M:Makaretu.Dns.Resolving.Catalog.#ctor
+  fullName: Makaretu.Dns.Resolving.Catalog.Catalog()
+  nameWithType: Catalog.Catalog()
+- uid: Makaretu.Dns.Resolving.Catalog.#ctor*
+  name: Catalog
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog__ctor_
+  commentId: Overload:Makaretu.Dns.Resolving.Catalog.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.Catalog.Catalog
+  nameWithType: Catalog.Catalog
+- uid: Makaretu.Dns.Resolving.Catalog.IncludeZone(Makaretu.Dns.MasterReader)
+  name: IncludeZone(MasterReader)
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeZone_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.Resolving.Catalog.IncludeZone(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.Resolving.Catalog.IncludeZone(Makaretu.Dns.MasterReader)
+  nameWithType: Catalog.IncludeZone(MasterReader)
+- uid: Makaretu.Dns.Resolving.Catalog.IncludeZone*
+  name: IncludeZone
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeZone_
+  commentId: Overload:Makaretu.Dns.Resolving.Catalog.IncludeZone
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.Catalog.IncludeZone
+  nameWithType: Catalog.IncludeZone
+- uid: Makaretu.Dns.Resolving.Catalog.RemoveZone(System.String)
+  name: RemoveZone(String)
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_RemoveZone_System_String_
+  commentId: M:Makaretu.Dns.Resolving.Catalog.RemoveZone(System.String)
+  fullName: Makaretu.Dns.Resolving.Catalog.RemoveZone(System.String)
+  nameWithType: Catalog.RemoveZone(String)
+- uid: Makaretu.Dns.Resolving.Catalog.RemoveZone*
+  name: RemoveZone
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_RemoveZone_
+  commentId: Overload:Makaretu.Dns.Resolving.Catalog.RemoveZone
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.Catalog.RemoveZone
+  nameWithType: Catalog.RemoveZone
+- uid: Makaretu.Dns.Resolving.NameServer
+  name: NameServer
+  href: api/Makaretu.Dns.Resolving.NameServer.html
+  commentId: T:Makaretu.Dns.Resolving.NameServer
+  fullName: Makaretu.Dns.Resolving.NameServer
+  nameWithType: NameServer
+- uid: Makaretu.Dns.Resolving.NameServer.AnswerAllQuestions
+  name: AnswerAllQuestions
+  href: api/Makaretu.Dns.Resolving.NameServer.html#Makaretu_Dns_Resolving_NameServer_AnswerAllQuestions
+  commentId: P:Makaretu.Dns.Resolving.NameServer.AnswerAllQuestions
+  fullName: Makaretu.Dns.Resolving.NameServer.AnswerAllQuestions
+  nameWithType: NameServer.AnswerAllQuestions
+- uid: Makaretu.Dns.Resolving.NameServer.AnswerAllQuestions*
+  name: AnswerAllQuestions
+  href: api/Makaretu.Dns.Resolving.NameServer.html#Makaretu_Dns_Resolving_NameServer_AnswerAllQuestions_
+  commentId: Overload:Makaretu.Dns.Resolving.NameServer.AnswerAllQuestions
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.NameServer.AnswerAllQuestions
+  nameWithType: NameServer.AnswerAllQuestions
+- uid: Makaretu.Dns.Resolving.NameServer.Catalog
+  name: Catalog
+  href: api/Makaretu.Dns.Resolving.NameServer.html#Makaretu_Dns_Resolving_NameServer_Catalog
+  commentId: P:Makaretu.Dns.Resolving.NameServer.Catalog
+  fullName: Makaretu.Dns.Resolving.NameServer.Catalog
+  nameWithType: NameServer.Catalog
+- uid: Makaretu.Dns.Resolving.NameServer.Catalog*
+  name: Catalog
+  href: api/Makaretu.Dns.Resolving.NameServer.html#Makaretu_Dns_Resolving_NameServer_Catalog_
+  commentId: Overload:Makaretu.Dns.Resolving.NameServer.Catalog
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.NameServer.Catalog
+  nameWithType: NameServer.Catalog
+- uid: Makaretu.Dns.Resolving.NameServer.FindAnswerAsync(Makaretu.Dns.Question,Makaretu.Dns.Message,System.Threading.CancellationToken)
+  name: FindAnswerAsync(Question, Message, CancellationToken)
+  href: api/Makaretu.Dns.Resolving.NameServer.html#Makaretu_Dns_Resolving_NameServer_FindAnswerAsync_Makaretu_Dns_Question_Makaretu_Dns_Message_System_Threading_CancellationToken_
+  commentId: M:Makaretu.Dns.Resolving.NameServer.FindAnswerAsync(Makaretu.Dns.Question,Makaretu.Dns.Message,System.Threading.CancellationToken)
+  fullName: Makaretu.Dns.Resolving.NameServer.FindAnswerAsync(Makaretu.Dns.Question, Makaretu.Dns.Message, System.Threading.CancellationToken)
+  nameWithType: NameServer.FindAnswerAsync(Question, Message, CancellationToken)
+- uid: Makaretu.Dns.Resolving.NameServer.FindAnswerAsync*
+  name: FindAnswerAsync
+  href: api/Makaretu.Dns.Resolving.NameServer.html#Makaretu_Dns_Resolving_NameServer_FindAnswerAsync_
+  commentId: Overload:Makaretu.Dns.Resolving.NameServer.FindAnswerAsync
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.NameServer.FindAnswerAsync
+  nameWithType: NameServer.FindAnswerAsync
+- uid: Makaretu.Dns.Resolving.NameServer.ResolveAsync(Makaretu.Dns.Message,System.Threading.CancellationToken)
+  name: ResolveAsync(Message, CancellationToken)
+  href: api/Makaretu.Dns.Resolving.NameServer.html#Makaretu_Dns_Resolving_NameServer_ResolveAsync_Makaretu_Dns_Message_System_Threading_CancellationToken_
+  commentId: M:Makaretu.Dns.Resolving.NameServer.ResolveAsync(Makaretu.Dns.Message,System.Threading.CancellationToken)
+  fullName: Makaretu.Dns.Resolving.NameServer.ResolveAsync(Makaretu.Dns.Message, System.Threading.CancellationToken)
+  nameWithType: NameServer.ResolveAsync(Message, CancellationToken)
+- uid: Makaretu.Dns.Resolving.NameServer.ResolveAsync(Makaretu.Dns.Question,Makaretu.Dns.Message,System.Threading.CancellationToken)
+  name: ResolveAsync(Question, Message, CancellationToken)
+  href: api/Makaretu.Dns.Resolving.NameServer.html#Makaretu_Dns_Resolving_NameServer_ResolveAsync_Makaretu_Dns_Question_Makaretu_Dns_Message_System_Threading_CancellationToken_
+  commentId: M:Makaretu.Dns.Resolving.NameServer.ResolveAsync(Makaretu.Dns.Question,Makaretu.Dns.Message,System.Threading.CancellationToken)
+  fullName: Makaretu.Dns.Resolving.NameServer.ResolveAsync(Makaretu.Dns.Question, Makaretu.Dns.Message, System.Threading.CancellationToken)
+  nameWithType: NameServer.ResolveAsync(Question, Message, CancellationToken)
+- uid: Makaretu.Dns.Resolving.NameServer.ResolveAsync*
+  name: ResolveAsync
+  href: api/Makaretu.Dns.Resolving.NameServer.html#Makaretu_Dns_Resolving_NameServer_ResolveAsync_
+  commentId: Overload:Makaretu.Dns.Resolving.NameServer.ResolveAsync
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.NameServer.ResolveAsync
+  nameWithType: NameServer.ResolveAsync
+- uid: Makaretu.Dns.Resolving.Node
+  name: Node
+  href: api/Makaretu.Dns.Resolving.Node.html
+  commentId: T:Makaretu.Dns.Resolving.Node
+  fullName: Makaretu.Dns.Resolving.Node
+  nameWithType: Node
+- uid: Makaretu.Dns.Resolving.Node.Authoritative
+  name: Authoritative
+  href: api/Makaretu.Dns.Resolving.Node.html#Makaretu_Dns_Resolving_Node_Authoritative
+  commentId: P:Makaretu.Dns.Resolving.Node.Authoritative
+  fullName: Makaretu.Dns.Resolving.Node.Authoritative
+  nameWithType: Node.Authoritative
+- uid: Makaretu.Dns.Resolving.Node.Authoritative*
+  name: Authoritative
+  href: api/Makaretu.Dns.Resolving.Node.html#Makaretu_Dns_Resolving_Node_Authoritative_
+  commentId: Overload:Makaretu.Dns.Resolving.Node.Authoritative
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.Node.Authoritative
+  nameWithType: Node.Authoritative
+- uid: Makaretu.Dns.Resolving.Node.Name
+  name: Name
+  href: api/Makaretu.Dns.Resolving.Node.html#Makaretu_Dns_Resolving_Node_Name
+  commentId: P:Makaretu.Dns.Resolving.Node.Name
+  fullName: Makaretu.Dns.Resolving.Node.Name
+  nameWithType: Node.Name
+- uid: Makaretu.Dns.Resolving.Node.Name*
+  name: Name
+  href: api/Makaretu.Dns.Resolving.Node.html#Makaretu_Dns_Resolving_Node_Name_
+  commentId: Overload:Makaretu.Dns.Resolving.Node.Name
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.Node.Name
+  nameWithType: Node.Name
+- uid: Makaretu.Dns.Resolving.Node.Resources
+  name: Resources
+  href: api/Makaretu.Dns.Resolving.Node.html#Makaretu_Dns_Resolving_Node_Resources
+  commentId: P:Makaretu.Dns.Resolving.Node.Resources
+  fullName: Makaretu.Dns.Resolving.Node.Resources
+  nameWithType: Node.Resources
+- uid: Makaretu.Dns.Resolving.Node.Resources*
+  name: Resources
+  href: api/Makaretu.Dns.Resolving.Node.html#Makaretu_Dns_Resolving_Node_Resources_
+  commentId: Overload:Makaretu.Dns.Resolving.Node.Resources
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.Node.Resources
+  nameWithType: Node.Resources
+- uid: Makaretu.Dns.Resolving.Node.ToString
+  name: ToString()
+  href: api/Makaretu.Dns.Resolving.Node.html#Makaretu_Dns_Resolving_Node_ToString
+  commentId: M:Makaretu.Dns.Resolving.Node.ToString
+  fullName: Makaretu.Dns.Resolving.Node.ToString()
+  nameWithType: Node.ToString()
+- uid: Makaretu.Dns.Resolving.Node.ToString*
+  name: ToString
+  href: api/Makaretu.Dns.Resolving.Node.html#Makaretu_Dns_Resolving_Node_ToString_
+  commentId: Overload:Makaretu.Dns.Resolving.Node.ToString
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.Node.ToString
+  nameWithType: Node.ToString
 - uid: Makaretu.Dns.ResourceRecord
   name: ResourceRecord
   href: api/Makaretu.Dns.ResourceRecord.html
