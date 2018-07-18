@@ -15,6 +15,7 @@ namespace Makaretu
             try
             {
                 action();
+                return null;
             }
             catch (AggregateException e)
             {
@@ -34,10 +35,11 @@ namespace Makaretu
                     Assert.AreEqual(expectedMessage, e.Message);
                 return e;
             }
-            Assert.Fail("Exception of type {0} should be thrown.", typeof(T));
-
-            //  The compiler doesn't know that Assert.Fail will always throw an exception
-            return null;
+            catch (Exception e)
+            {
+                Assert.Fail("Exception of type {0} should be thrown not {1}.", typeof(T), e.GetType());
+                return null;
+            }
         }
 
         public static Exception Throws(Action action, string expectedMessage = null)
