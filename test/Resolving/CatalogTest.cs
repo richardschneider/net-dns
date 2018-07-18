@@ -23,8 +23,7 @@ namespace Makaretu.Dns.Resolving
  mail A     192.0.2.3
  x    PTR   ns1
 _http._tcp SRV 0 5 80 mail
-           TXT needhttps=false needcredential=true \r\n
-";
+           TXT needhttps=false needcredential=true" + "\r\n";
 
         public const string exampleDotComZoneText = @"
  $ORIGIN example.com.     ; designates the start of this zone file in the namespace
