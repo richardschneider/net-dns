@@ -2523,6 +2523,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Resolving.Catalog.Catalog
   nameWithType: Catalog.Catalog
+- uid: Makaretu.Dns.Resolving.Catalog.Add(Makaretu.Dns.ResourceRecord,System.Boolean)
+  name: Add(ResourceRecord, Boolean)
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_Add_Makaretu_Dns_ResourceRecord_System_Boolean_
+  commentId: M:Makaretu.Dns.Resolving.Catalog.Add(Makaretu.Dns.ResourceRecord,System.Boolean)
+  fullName: Makaretu.Dns.Resolving.Catalog.Add(Makaretu.Dns.ResourceRecord, System.Boolean)
+  nameWithType: Catalog.Add(ResourceRecord, Boolean)
+- uid: Makaretu.Dns.Resolving.Catalog.Add*
+  name: Add
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_Add_
+  commentId: Overload:Makaretu.Dns.Resolving.Catalog.Add
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.Catalog.Add
+  nameWithType: Catalog.Add
 - uid: Makaretu.Dns.Resolving.Catalog.IncludeZone(Makaretu.Dns.MasterReader)
   name: IncludeZone(MasterReader)
   href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeZone_Makaretu_Dns_MasterReader_
