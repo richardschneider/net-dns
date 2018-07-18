@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -124,6 +125,35 @@ namespace Makaretu.Dns.Resolving
             node.Resources.Add(resource);
 
             return node;
+        }
+
+        /// <summary>
+        ///   Include the root name servers.
+        /// </summary>
+        /// <returns>
+        ///   The <see cref="Node"/> that represents the "root".
+        /// </returns>
+        /// <remarks>
+        ///   A DNS recursive resolver typically needs a "root hints file". This file 
+        ///   contains the names and IP addresses of the authoritative name servers for the root zone, 
+        ///   so the software can bootstrap the DNS resolution process.
+        /// </remarks>
+        public Node IncludeRootHints()
+        {
+            var assembly = typeof(Catalog).GetTypeInfo().Assembly;
+            using (var hints = assembly.GetManifestResourceStream("Makaretu.Dns.Resolving.RootHints"))
+            {
+                var reader = new MasterReader(new StreamReader(hints));
+                ResourceRecord r;
+                while (null != (r = reader.ReadResourceRecord()))
+                {
+                    Add(r);
+                }
+            }
+
+            var root = this[""];
+            root.Authoritative = true;
+            return root;
         }
     }
 }

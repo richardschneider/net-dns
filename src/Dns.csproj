@@ -15,7 +15,7 @@
     <PackageId>Makaretu.Dns</PackageId>
     <Authors>Richard Schneider</Authors>
     <Title>DNS Object Model</Title>
-    <Description>DNS data model with serializer/deserializer for the wire format.</Description>
+    <Description>DNS data model with serializer/deserializer for the wire and master file format.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes></PackageReleaseNotes>
     <Copyright>© 2018 Richard Schneider</Copyright>
@@ -30,9 +30,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="db.cache">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <EmbeddedResource Include="Resolving/RootHints" />
   </ItemGroup>
 
 </Project>

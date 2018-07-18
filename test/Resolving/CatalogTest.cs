@@ -174,5 +174,15 @@ _http._tcp SRV 0 5 80 mail
             Assert.IsTrue(n1.Resources.Contains(a));
             Assert.IsTrue(n1.Resources.Contains(aaaa));
         }
+
+        [TestMethod]
+        public void RootHints()
+        {
+            var catalog = new Catalog();
+            var root = catalog.IncludeRootHints();
+            Assert.AreEqual("", root.Name);
+            Assert.IsTrue(root.Authoritative);
+            Assert.IsTrue(root.Resources.OfType<NSRecord>().Any());
+        }
     }
 }
