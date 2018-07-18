@@ -13,10 +13,12 @@ namespace Makaretu.Dns.Resolving
     public class LocalResolverTest
     {
         Catalog dotcom = new Catalog();
+        Catalog dotorg = new Catalog();
 
         public LocalResolverTest()
         {
             dotcom.IncludeZone(new MasterReader(new StringReader(CatalogTest.exampleDotComZoneText)));
+            dotorg.IncludeZone(new MasterReader(new StringReader(CatalogTest.exampleDotOrgZoneText)));
         }
 
         [TestMethod]
@@ -183,5 +185,77 @@ namespace Makaretu.Dns.Resolving
             Assert.IsTrue(response.AA);
             Assert.AreEqual(2, response.Answers.Count);
         }
+
+        [TestMethod]
+        public async Task AdditionalRecords_PTR()
+        {
+            var resolver = new LocalResolver { Catalog = dotorg };
+            var request = new Message();
+            request.Questions.Add(new Question { Name = "x.example.org", Type = DnsType.PTR });
+            var response = await resolver.ResolveAsync(request);
+
+            Assert.IsTrue(response.IsResponse);
+            Assert.AreEqual(MessageStatus.NoError, response.Status);
+            Assert.IsTrue(response.AA);
+            Assert.AreEqual(1, response.Answers.Count);
+
+            Assert.AreEqual(1, response.AdditionalRecords.Count);
+            Assert.AreEqual(DnsType.A, response.AdditionalRecords[0].Type);
+            Assert.AreEqual("ns1.example.org", response.AdditionalRecords[0].Name);
+        }
+
+        [TestMethod]
+        public async Task AdditionalRecords_NS()
+        {
+            var resolver = new LocalResolver { Catalog = dotorg };
+            var request = new Message();
+            request.Questions.Add(new Question { Name = "example.org", Type = DnsType.NS });
+            var response = await resolver.ResolveAsync(request);
+
+            Assert.IsTrue(response.IsResponse);
+            Assert.AreEqual(MessageStatus.NoError, response.Status);
+            Assert.IsTrue(response.AA);
+            Assert.AreEqual(2, response.Answers.Count);
+
+            Assert.AreEqual(2, response.AdditionalRecords.Count);
+            Assert.IsTrue(response.AdditionalRecords.All(r => r.Type == DnsType.A));
+        }
+
+        [TestMethod]
+        public async Task AdditionalRecords_SOA()
+        {
+            var resolver = new LocalResolver { Catalog = dotorg };
+            var request = new Message();
+            request.Questions.Add(new Question { Name = "example.org", Type = DnsType.SOA });
+            var response = await resolver.ResolveAsync(request);
+
+            Assert.IsTrue(response.IsResponse);
+            Assert.AreEqual(MessageStatus.NoError, response.Status);
+            Assert.IsTrue(response.AA);
+            Assert.AreEqual(1, response.Answers.Count);
+
+            Assert.AreEqual(1, response.AdditionalRecords.Count);
+            Assert.AreEqual(DnsType.A, response.AdditionalRecords[0].Type);
+            Assert.AreEqual("ns1.example.org", response.AdditionalRecords[0].Name);
+        }
+
+        [TestMethod]
+        public async Task AdditionalRecords_SRV()
+        {
+            var resolver = new LocalResolver { Catalog = dotorg };
+            var request = new Message();
+            request.Questions.Add(new Question { Name = "_http._tcp.example.org", Type = DnsType.SRV });
+            var response = await resolver.ResolveAsync(request);
+
+            Assert.IsTrue(response.IsResponse);
+            Assert.AreEqual(MessageStatus.NoError, response.Status);
+            Assert.IsTrue(response.AA);
+            Assert.AreEqual(1, response.Answers.Count);
+
+            Assert.AreEqual(2, response.AdditionalRecords.Count);
+            Assert.IsTrue(response.AdditionalRecords.OfType<TXTRecord>().Any());
+            Assert.IsTrue(response.AdditionalRecords.OfType<ARecord>().Any());
+        }
+
     }
 }

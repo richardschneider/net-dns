@@ -21,6 +21,9 @@ namespace Makaretu.Dns.Resolving
  ns1  A     192.0.2.1
  ns2  A     192.0.2.2
  mail A     192.0.2.3
+ x    PTR   ns1
+_http._tcp SRV 0 5 80 mail
+           TXT needhttps=false needcredential=true
 ";
 
         public const string exampleDotComZoneText = @"
@@ -130,7 +133,7 @@ namespace Makaretu.Dns.Resolving
             reader = new MasterReader(new StringReader(exampleDotOrgZoneText));
             zone = catalog.IncludeZone(reader);
             Assert.AreEqual("example.org", zone.Name);
-            Assert.AreEqual(7 + 4, catalog.Count);
+            Assert.AreEqual(7 + 6, catalog.Count);
 
             catalog.RemoveZone("example.org");
             Assert.AreEqual(7, catalog.Count);

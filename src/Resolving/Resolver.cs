@@ -91,7 +91,8 @@ namespace Makaretu.Dns.Resolving
                 }
             }
 
-            // TODO: Add additonal records.
+            // Add additonal records.
+            AddAdditionalRecords(response);
 
             return response;
         }
@@ -133,6 +134,58 @@ namespace Makaretu.Dns.Resolving
             }
 
             return null;
+        }
+
+        void AddAdditionalRecords(Message response)
+        {
+            var extras = new Message();
+            var resources = response.Answers.Concat(response.AuthorityRecords);
+            var question = new Question();
+            bool _;
+            foreach (var resource in resources)
+            {
+                switch (resource.Type)
+                {
+                    case DnsType.NS:
+                        FindAddresses(((NSRecord)resource).Authority, resource.Class, extras);
+                        break;
+
+                    case DnsType.PTR:
+                        FindAddresses(((PTRRecord)resource).DomainName, resource.Class, extras);
+                        break;
+
+                    case DnsType.SOA:
+                        FindAddresses(((SOARecord)resource).PrimaryName, resource.Class, extras);
+                        break;
+
+                    case DnsType.SRV:
+                        question.Class = resource.Class;
+                        question.Name = resource.Name;
+                        question.Type = DnsType.TXT;
+                        _ = FindAnswerAsync(question, extras, default(CancellationToken)).Result;
+
+                        FindAddresses(((SRVRecord)resource).Target, resource.Class, extras);
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+
+            response.AdditionalRecords.AddRange(extras.Answers);
+        }
+
+        void FindAddresses(string name, Class klass, Message response)
+        {
+            var question = new Question();
+
+            question.Name = name;
+            question.Class = klass;
+            question.Type = DnsType.A;
+            var _ = FindAnswerAsync(question, response, default(CancellationToken)).Result;
+
+            question.Type = DnsType.AAAA;
+            _ = FindAnswerAsync(question, response, default(CancellationToken)).Result;
         }
     }
 }

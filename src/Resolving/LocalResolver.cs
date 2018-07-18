@@ -16,11 +16,7 @@ namespace Makaretu.Dns.Resolving
         protected override Task<bool> FindAnswerAsync(Question question, Message response, CancellationToken cancel)
         {
             // Find a node for the question name.
-            var node = Catalog
-                .Where(c => c.Key == question.Name)
-                .Select(c => c.Value)
-                .FirstOrDefault();
-            if (node == null)
+            if (!Catalog.TryGetValue(question.Name, out Node node))
             {
                 return Task.FromResult(false);
             }
