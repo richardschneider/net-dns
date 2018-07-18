@@ -76,7 +76,7 @@ namespace Makaretu.Dns.Resolving
                 {
                     Name = key,
                     Authoritative = true,
-                    Resources = new ConcurrentBag<ResourceRecord>(results)
+                    Resources = new ConcurrentSet<ResourceRecord>(results)
                 }
             );
             foreach (var node in nodes)

@@ -37,8 +37,10 @@ namespace Makaretu.Dns.Resolving
         /// <value>
         ///   Commonly called the RRSET (resource record set).
         /// </value>
-        public ConcurrentBag<ResourceRecord> Resources { get; set;  } = new ConcurrentBag<ResourceRecord>();
-
+        /// <remarks>
+        ///   Duplicate resources are silently ignored.
+        /// </remarks>
+        public ConcurrentSet<ResourceRecord> Resources { get; set;  } = new ConcurrentSet<ResourceRecord>();
 
         /// <summary>
         ///   Indicates that the node's resources contains the complete information for
