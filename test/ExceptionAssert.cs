@@ -15,7 +15,6 @@ namespace Makaretu
             try
             {
                 action();
-                Assert.Fail("Exception of type {0} was not thrown.", typeof(T));
             }
             catch (AggregateException e)
             {
@@ -39,6 +38,8 @@ namespace Makaretu
             {
                 Assert.Fail("Exception of type {0} should be thrown not {1}.", typeof(T), e.GetType());
             }
+
+            Assert.Fail("Expected Exception of type {0} but nothing was thrown.", typeof(T));
             return null;
         }
 
