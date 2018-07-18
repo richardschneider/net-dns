@@ -6,7 +6,7 @@
 [![Version](https://img.shields.io/nuget/v/Makaretu.Dns.svg)](https://www.nuget.org/packages/Makaretu.Dns)
 [![docs](https://cdn.rawgit.com/richardschneider/net-dns/master/doc/images/docs-latest-green.svg)](https://richardschneider.github.io/net-dns/articles/intro.html)
 
-DNS data model with serializer/deserializer for the wire format.
+DNS data model with serializer/deserializer for the wire and "master file" format.
 
 ## Features
 
@@ -16,6 +16,7 @@ DNS data model with serializer/deserializer for the wire format.
 - Supports the extended 12-bit RCODE
 - Future proof: handles unknown resource records and EDNS options
 - Graceful truncation of messages
+- A name server that answeres DNS questions
 - Data models for
   - [RFC 1035](https://tools.ietf.org/html/rfc1035) Domain Names (DNS)
   - [RFC 1183](https://tools.ietf.org/html/rfc1183) New DNS RR Definitions
@@ -38,6 +39,29 @@ Published releases are available on [NuGet](https://www.nuget.org/packages/Makar
     PM> Install-Package Makaretu.Dns
     
 ## Usage
+
+### Name Server
+
+Create a name server that can answer questions for a zone.
+
+```csharp
+using Makaretu.Dns.Resolving;
+
+var catalog = new Catalog();
+catalog.IncludeZone(...);
+catalog.IncludeRootHints();
+var resolver = new NameServer { Catalog = catalog };
+```
+
+Answer a question
+
+```csharp
+var request = new Message();
+request.Questions.Add(new Question { Name = "ns.example.com", Type = DnsType.AAAA });
+var response = await resolver.ResolveAsync(request);
+```
+
+### Data Model
 
 ```csharp
 using Makaretu.Dns
