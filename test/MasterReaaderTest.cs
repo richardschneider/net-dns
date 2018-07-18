@@ -76,7 +76,7 @@ namespace Makaretu.Dns
         public void ReadResourceWithOrigin()
         {
             var text = @"
-$ORIGIN emanon.org ; no such place\r\n
+$ORIGIN emanon.org. ; no such place\r\n
 @ PTR localhost
 ";
             var reader = new MasterReader(new StringReader(text));

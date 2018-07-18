@@ -29,4 +29,10 @@
     <DefineConstants>NETSTANDARD14</DefineConstants>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="db.cache">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

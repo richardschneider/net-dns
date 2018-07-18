@@ -34,9 +34,12 @@ namespace Makaretu
                     Assert.AreEqual(expectedMessage, e.Message);
                 return e;
             }
-            Assert.Fail("Exception of type {0} should be thrown.", typeof(T));
+            catch (Exception e)
+            {
+                Assert.Fail("Exception of type {0} should be thrown not {1}.", typeof(T), e.GetType());
+            }
 
-            //  The compiler doesn't know that Assert.Fail will always throw an exception
+            Assert.Fail("Expected Exception of type {0} but nothing was thrown.", typeof(T));
             return null;
         }
 
