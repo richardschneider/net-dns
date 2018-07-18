@@ -156,5 +156,23 @@ _http._tcp SRV 0 5 80 mail
             Assert.IsTrue(catalog.ContainsKey("MAIL2.EXAMPLE.COM"));
             Assert.IsTrue(catalog.ContainsKey("MAIL3.EXAMPLE.COM"));
         }
+
+        [TestMethod]
+        public void AddResource()
+        {
+            var a = AddressRecord.Create("foo", IPAddress.Loopback);
+            var aaaa = AddressRecord.Create("foo", IPAddress.IPv6Loopback);
+            var catalog = new Catalog();
+
+            var n1 = catalog.Add(a, true);
+            Assert.IsTrue(n1.Authoritative);
+            Assert.IsTrue(n1.Resources.Contains(a));
+
+            var n2 = catalog.Add(aaaa, false);
+            Assert.AreSame(n1, n2);
+            Assert.IsTrue(n1.Authoritative);
+            Assert.IsTrue(n1.Resources.Contains(a));
+            Assert.IsTrue(n1.Resources.Contains(aaaa));
+        }
     }
 }

@@ -101,5 +101,29 @@ namespace Makaretu.Dns.Resolving
                 TryRemove(key, out Node _);
             }
         }
+
+        /// <summary>
+        ///   Adds the resource record to the catalog. 
+        /// </summary>
+        /// <param name="resource">
+        ///   The <see cref="ResourceRecord.Name"/> is also the name of the node.
+        /// </param>
+        /// <param name="authoritative">
+        ///   Indicates if the <paramref name="resource"/> is authoritative or cached.
+        /// </param>
+        /// <returns>
+        ///   The <see cref="Node"/> that was created or update.
+        /// </returns>
+        public Node Add(ResourceRecord resource, bool authoritative = false)
+        {
+            var node = this.AddOrUpdate(
+                resource.Name,
+                (k) => new Node { Name = k, Authoritative = authoritative },
+                (k, n) => n
+            );
+            node.Resources.Add(resource);
+
+            return node;
+        }
     }
 }
