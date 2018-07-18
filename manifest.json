@@ -413,6 +413,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Makaretu.Dns.Resolving.ConcurrentSet-1.KeyEnumerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Makaretu.Dns.Resolving.ConcurrentSet-1.KeyEnumerator.html",
+          "hash": "3ZNxBJKs7l9qTlYUKhIxHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Makaretu.Dns.Resolving.ConcurrentSet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Makaretu.Dns.Resolving.ConcurrentSet-1.html",
+          "hash": "jwSCU/bBxBhOoIcMxYjobg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Makaretu.Dns.Resolving.NameServer.yml",
       "output": {
         ".html": {
@@ -429,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.Resolving.Node.html",
-          "hash": "CdRUOm4flv3VZ3iKlr1a4w=="
+          "hash": "Xg17rAslmnyw1Ol22Fzl7w=="
         }
       },
       "is_incremental": false,
@@ -441,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.Resolving.html",
-          "hash": "KR5NVyHwHQHVmq6jiBlN9Q=="
+          "hash": "kd93qwXRSpFO1Q7nzbBYDg=="
         }
       },
       "is_incremental": false,
@@ -585,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "F/FXBmCcp6u4vyKhMyrCZg=="
+          "hash": "btA1BryuZ6cjOP90agg+lQ=="
         }
       },
       "is_incremental": false,
@@ -745,17 +769,17 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ResourceDocumentProcessor": {

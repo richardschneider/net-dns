@@ -2575,6 +2575,339 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Resolving.Catalog.RemoveZone
   nameWithType: Catalog.RemoveZone
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1
+  name: ConcurrentSet<T>
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html
+  commentId: T:Makaretu.Dns.Resolving.ConcurrentSet`1
+  name.vb: ConcurrentSet(Of T)
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T)
+  nameWithType: ConcurrentSet<T>
+  nameWithType.vb: ConcurrentSet(Of T)
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.#ctor
+  name: ConcurrentSet()
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1__ctor
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.#ctor
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.ConcurrentSet()
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).ConcurrentSet()
+  nameWithType: ConcurrentSet<T>.ConcurrentSet()
+  nameWithType.vb: ConcurrentSet(Of T).ConcurrentSet()
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.#ctor(System.Collections.Generic.IEnumerable{`0})
+  name: ConcurrentSet(IEnumerable<T>)
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1__ctor_System_Collections_Generic_IEnumerable__0__
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.#ctor(System.Collections.Generic.IEnumerable{`0})
+  name.vb: ConcurrentSet(IEnumerable(Of T))
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.ConcurrentSet(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).ConcurrentSet(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: ConcurrentSet<T>.ConcurrentSet(IEnumerable<T>)
+  nameWithType.vb: ConcurrentSet(Of T).ConcurrentSet(IEnumerable(Of T))
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.#ctor(System.Collections.Generic.IEqualityComparer{`0})
+  name: ConcurrentSet(IEqualityComparer<T>)
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1__ctor_System_Collections_Generic_IEqualityComparer__0__
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.#ctor(System.Collections.Generic.IEqualityComparer{`0})
+  name.vb: ConcurrentSet(IEqualityComparer(Of T))
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.ConcurrentSet(System.Collections.Generic.IEqualityComparer<T>)
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).ConcurrentSet(System.Collections.Generic.IEqualityComparer(Of T))
+  nameWithType: ConcurrentSet<T>.ConcurrentSet(IEqualityComparer<T>)
+  nameWithType.vb: ConcurrentSet(Of T).ConcurrentSet(IEqualityComparer(Of T))
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.#ctor*
+  name: ConcurrentSet
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1__ctor_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.ConcurrentSet
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).ConcurrentSet
+  nameWithType: ConcurrentSet<T>.ConcurrentSet
+  nameWithType.vb: ConcurrentSet(Of T).ConcurrentSet
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.Add(`0)
+  name: Add(T)
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_Add__0_
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.Add(`0)
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.Add(T)
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).Add(T)
+  nameWithType: ConcurrentSet<T>.Add(T)
+  nameWithType.vb: ConcurrentSet(Of T).Add(T)
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.Add*
+  name: Add
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_Add_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.Add
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.Add
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).Add
+  nameWithType: ConcurrentSet<T>.Add
+  nameWithType.vb: ConcurrentSet(Of T).Add
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.AddRange(System.Collections.Generic.IEnumerable{`0})
+  name: AddRange(IEnumerable<T>)
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_AddRange_System_Collections_Generic_IEnumerable__0__
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.AddRange(System.Collections.Generic.IEnumerable{`0})
+  name.vb: AddRange(IEnumerable(Of T))
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.AddRange(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).AddRange(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: ConcurrentSet<T>.AddRange(IEnumerable<T>)
+  nameWithType.vb: ConcurrentSet(Of T).AddRange(IEnumerable(Of T))
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.AddRange*
+  name: AddRange
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_AddRange_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.AddRange
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.AddRange
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).AddRange
+  nameWithType: ConcurrentSet<T>.AddRange
+  nameWithType.vb: ConcurrentSet(Of T).AddRange
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.Clear
+  name: Clear()
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_Clear
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.Clear
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.Clear()
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).Clear()
+  nameWithType: ConcurrentSet<T>.Clear()
+  nameWithType.vb: ConcurrentSet(Of T).Clear()
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.Clear*
+  name: Clear
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_Clear_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.Clear
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.Clear
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).Clear
+  nameWithType: ConcurrentSet<T>.Clear
+  nameWithType.vb: ConcurrentSet(Of T).Clear
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.Contains(`0)
+  name: Contains(T)
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_Contains__0_
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.Contains(`0)
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.Contains(T)
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).Contains(T)
+  nameWithType: ConcurrentSet<T>.Contains(T)
+  nameWithType.vb: ConcurrentSet(Of T).Contains(T)
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.Contains*
+  name: Contains
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_Contains_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.Contains
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.Contains
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).Contains
+  nameWithType: ConcurrentSet<T>.Contains
+  nameWithType.vb: ConcurrentSet(Of T).Contains
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.CopyTo(`0[],System.Int32)
+  name: CopyTo(T[], Int32)
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_CopyTo__0___System_Int32_
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.CopyTo(`0[],System.Int32)
+  name.vb: CopyTo(T(), Int32)
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.CopyTo(T[], System.Int32)
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).CopyTo(T(), System.Int32)
+  nameWithType: ConcurrentSet<T>.CopyTo(T[], Int32)
+  nameWithType.vb: ConcurrentSet(Of T).CopyTo(T(), Int32)
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.CopyTo*
+  name: CopyTo
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_CopyTo_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.CopyTo
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.CopyTo
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).CopyTo
+  nameWithType: ConcurrentSet<T>.CopyTo
+  nameWithType.vb: ConcurrentSet(Of T).CopyTo
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.Count
+  name: Count
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_Count
+  commentId: P:Makaretu.Dns.Resolving.ConcurrentSet`1.Count
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.Count
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).Count
+  nameWithType: ConcurrentSet<T>.Count
+  nameWithType.vb: ConcurrentSet(Of T).Count
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.Count*
+  name: Count
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_Count_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.Count
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.Count
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).Count
+  nameWithType: ConcurrentSet<T>.Count
+  nameWithType.vb: ConcurrentSet(Of T).Count
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.GetEnumerator
+  name: GetEnumerator()
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_GetEnumerator
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.GetEnumerator
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.GetEnumerator()
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).GetEnumerator()
+  nameWithType: ConcurrentSet<T>.GetEnumerator()
+  nameWithType.vb: ConcurrentSet(Of T).GetEnumerator()
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.GetEnumerator*
+  name: GetEnumerator
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_GetEnumerator_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.GetEnumerator
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.GetEnumerator
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).GetEnumerator
+  nameWithType: ConcurrentSet<T>.GetEnumerator
+  nameWithType.vb: ConcurrentSet(Of T).GetEnumerator
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.IsEmpty
+  name: IsEmpty
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_IsEmpty
+  commentId: P:Makaretu.Dns.Resolving.ConcurrentSet`1.IsEmpty
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.IsEmpty
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).IsEmpty
+  nameWithType: ConcurrentSet<T>.IsEmpty
+  nameWithType.vb: ConcurrentSet(Of T).IsEmpty
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.IsEmpty*
+  name: IsEmpty
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_IsEmpty_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.IsEmpty
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.IsEmpty
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).IsEmpty
+  nameWithType: ConcurrentSet<T>.IsEmpty
+  nameWithType.vb: ConcurrentSet(Of T).IsEmpty
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.IsReadOnly
+  name: IsReadOnly
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_IsReadOnly
+  commentId: P:Makaretu.Dns.Resolving.ConcurrentSet`1.IsReadOnly
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.IsReadOnly
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).IsReadOnly
+  nameWithType: ConcurrentSet<T>.IsReadOnly
+  nameWithType.vb: ConcurrentSet(Of T).IsReadOnly
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.IsReadOnly*
+  name: IsReadOnly
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_IsReadOnly_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.IsReadOnly
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.IsReadOnly
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).IsReadOnly
+  nameWithType: ConcurrentSet<T>.IsReadOnly
+  nameWithType.vb: ConcurrentSet(Of T).IsReadOnly
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator
+  name: ConcurrentSet<T>.KeyEnumerator
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.KeyEnumerator.html
+  commentId: T:Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator
+  name.vb: ConcurrentSet(Of T).KeyEnumerator
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.KeyEnumerator
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).KeyEnumerator
+  nameWithType: ConcurrentSet<T>.KeyEnumerator
+  nameWithType.vb: ConcurrentSet(Of T).KeyEnumerator
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator.Current
+  name: Current
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.KeyEnumerator.html#Makaretu_Dns_Resolving_ConcurrentSet_1_KeyEnumerator_Current
+  commentId: P:Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator.Current
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.KeyEnumerator.Current
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).KeyEnumerator.Current
+  nameWithType: ConcurrentSet<T>.KeyEnumerator.Current
+  nameWithType.vb: ConcurrentSet(Of T).KeyEnumerator.Current
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator.Current*
+  name: Current
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.KeyEnumerator.html#Makaretu_Dns_Resolving_ConcurrentSet_1_KeyEnumerator_Current_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator.Current
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.KeyEnumerator.Current
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).KeyEnumerator.Current
+  nameWithType: ConcurrentSet<T>.KeyEnumerator.Current
+  nameWithType.vb: ConcurrentSet(Of T).KeyEnumerator.Current
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator.MoveNext
+  name: MoveNext()
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.KeyEnumerator.html#Makaretu_Dns_Resolving_ConcurrentSet_1_KeyEnumerator_MoveNext
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator.MoveNext
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.KeyEnumerator.MoveNext()
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).KeyEnumerator.MoveNext()
+  nameWithType: ConcurrentSet<T>.KeyEnumerator.MoveNext()
+  nameWithType.vb: ConcurrentSet(Of T).KeyEnumerator.MoveNext()
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator.MoveNext*
+  name: MoveNext
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.KeyEnumerator.html#Makaretu_Dns_Resolving_ConcurrentSet_1_KeyEnumerator_MoveNext_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator.MoveNext
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.KeyEnumerator.MoveNext
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).KeyEnumerator.MoveNext
+  nameWithType: ConcurrentSet<T>.KeyEnumerator.MoveNext
+  nameWithType.vb: ConcurrentSet(Of T).KeyEnumerator.MoveNext
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator.Reset
+  name: Reset()
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.KeyEnumerator.html#Makaretu_Dns_Resolving_ConcurrentSet_1_KeyEnumerator_Reset
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator.Reset
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.KeyEnumerator.Reset()
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).KeyEnumerator.Reset()
+  nameWithType: ConcurrentSet<T>.KeyEnumerator.Reset()
+  nameWithType.vb: ConcurrentSet(Of T).KeyEnumerator.Reset()
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator.Reset*
+  name: Reset
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.KeyEnumerator.html#Makaretu_Dns_Resolving_ConcurrentSet_1_KeyEnumerator_Reset_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.KeyEnumerator.Reset
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.KeyEnumerator.Reset
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).KeyEnumerator.Reset
+  nameWithType: ConcurrentSet<T>.KeyEnumerator.Reset
+  nameWithType.vb: ConcurrentSet(Of T).KeyEnumerator.Reset
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.Remove(`0)
+  name: Remove(T)
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_Remove__0_
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.Remove(`0)
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.Remove(T)
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).Remove(T)
+  nameWithType: ConcurrentSet<T>.Remove(T)
+  nameWithType.vb: ConcurrentSet(Of T).Remove(T)
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.Remove*
+  name: Remove
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_Remove_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.Remove
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.Remove
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).Remove
+  nameWithType: ConcurrentSet<T>.Remove
+  nameWithType.vb: ConcurrentSet(Of T).Remove
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.System#Collections#Generic#ICollection{T}#Add(`0)
+  name: ICollection<T>.Add(T)
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_System_Collections_Generic_ICollection_T__Add__0_
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.System#Collections#Generic#ICollection{T}#Add(`0)
+  name.vb: System.Collections.Generic.ICollection<T>.Add(T)
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.System.Collections.Generic.ICollection<T>.Add(T)
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).System.Collections.Generic.ICollection<T>.Add(T)
+  nameWithType: ConcurrentSet<T>.ICollection<T>.Add(T)
+  nameWithType.vb: ConcurrentSet(Of T).System.Collections.Generic.ICollection<T>.Add(T)
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.System#Collections#Generic#ICollection{T}#Add*
+  name: ICollection<T>.Add
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_System_Collections_Generic_ICollection_T__Add_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.System#Collections#Generic#ICollection{T}#Add
+  isSpec: "True"
+  name.vb: System.Collections.Generic.ICollection<T>.Add
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.System.Collections.Generic.ICollection<T>.Add
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).System.Collections.Generic.ICollection<T>.Add
+  nameWithType: ConcurrentSet<T>.ICollection<T>.Add
+  nameWithType.vb: ConcurrentSet(Of T).System.Collections.Generic.ICollection<T>.Add
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator
+  name: IEnumerable<T>.GetEnumerator()
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_System_Collections_Generic_IEnumerable_T__GetEnumerator
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator
+  name.vb: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType: ConcurrentSet<T>.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: ConcurrentSet(Of T).System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator*
+  name: IEnumerable<T>.GetEnumerator
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_System_Collections_Generic_IEnumerable_T__GetEnumerator_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.Generic.IEnumerable<T>.GetEnumerator
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.System.Collections.Generic.IEnumerable<T>.GetEnumerator
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).System.Collections.Generic.IEnumerable<T>.GetEnumerator
+  nameWithType: ConcurrentSet<T>.IEnumerable<T>.GetEnumerator
+  nameWithType.vb: ConcurrentSet(Of T).System.Collections.Generic.IEnumerable<T>.GetEnumerator
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Makaretu.Dns.Resolving.ConcurrentSet`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: ConcurrentSet<T>.IEnumerable.GetEnumerator()
+  nameWithType.vb: ConcurrentSet(Of T).System.Collections.IEnumerable.GetEnumerator()
+- uid: Makaretu.Dns.Resolving.ConcurrentSet`1.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/Makaretu.Dns.Resolving.ConcurrentSet-1.html#Makaretu_Dns_Resolving_ConcurrentSet_1_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Makaretu.Dns.Resolving.ConcurrentSet`1.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Makaretu.Dns.Resolving.ConcurrentSet<T>.System.Collections.IEnumerable.GetEnumerator
+  fullName.vb: Makaretu.Dns.Resolving.ConcurrentSet(Of T).System.Collections.IEnumerable.GetEnumerator
+  nameWithType: ConcurrentSet<T>.IEnumerable.GetEnumerator
+  nameWithType.vb: ConcurrentSet(Of T).System.Collections.IEnumerable.GetEnumerator
 - uid: Makaretu.Dns.Resolving.NameServer
   name: NameServer
   href: api/Makaretu.Dns.Resolving.NameServer.html
