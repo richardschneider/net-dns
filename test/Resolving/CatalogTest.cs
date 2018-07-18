@@ -100,7 +100,7 @@ _http._tcp SRV 0 5 80 mail
         [TestMethod]
         public void IncludeZone_InvalidName()
         {
-            var text = exampleDotOrgZoneText + " not.in.zone. A 127.0.0.1";
+            var text = exampleDotOrgZoneText + " not.in.zone. A 127.0.0.1 ; bad";
             var catalog = new Catalog();
             var reader = new MasterReader(new StringReader(text));
             ExceptionAssert.Throws<InvalidDataException>(() => catalog.IncludeZone(reader));
