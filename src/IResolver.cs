@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Makaretu.Dns.Resolving
+namespace Makaretu.Dns
 {
     /// <summary>
     ///   Answers a question.

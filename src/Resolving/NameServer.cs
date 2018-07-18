@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 namespace Makaretu.Dns.Resolving
 {
     /// <summary>
-    ///   An abstract base class for a Resolver.
+    ///   Anwsers questions from the local <see cref="Catalog"/>.
     /// </summary>
-    public abstract class Resolver : IResolver
+    public class NameServer : IResolver
     {
         /// <summary>
         ///   Information about some portion of the DNS database.
         /// </summary>
         /// <value>
-        ///   A subset of the DNS database. Typically (1) one or more zones or (2) a cache received
+        ///   A subset of the DNS database. Typically (1) one or more zones or (2) a cache of received
         ///   responses.
         /// </value>
         public Catalog Catalog { get; set; }
@@ -116,7 +116,45 @@ namespace Makaretu.Dns.Resolving
         /// <remarks>
         ///   Derived classes must implement this method.
         /// </remarks>
-        protected abstract Task<bool> FindAnswerAsync(Question question, Message response, CancellationToken cancel);
+        protected Task<bool> FindAnswerAsync(Question question, Message response, CancellationToken cancel)
+        {
+            // Find a node for the question name.
+            if (!Catalog.TryGetValue(question.Name, out Node node))
+            {
+                return Task.FromResult(false);
+            }
+
+            // https://tools.ietf.org/html/rfc1034#section-3.7.1
+            response.AA |= node.Authoritative && question.Class != Class.ANY;
+
+            //  Find the resources that match the question.
+            var resources = node.Resources
+                .Where(r => question.Class == Class.ANY || r.Class == question.Class)
+                .Where(r => question.Type == DnsType.ANY || r.Type == question.Type)
+                .Where(r => node.Authoritative || !r.IsExpired(question.CreationTime))
+                .ToArray();
+            if (resources.Length > 0)
+            {
+                response.Answers.AddRange(resources);
+                return Task.FromResult(true);
+            }
+
+            // If node is alias (CNAME), then find answers for the alias' target.
+            // The CNAME is added to the answers.
+            var cname = node.Resources.OfType<CNAMERecord>().FirstOrDefault();
+            if (cname != null)
+            {
+                response.Answers.Add(cname);
+                question = question.Clone<Question>();
+                question.Name = cname.Target;
+                return FindAnswerAsync(question, response, cancel);
+            }
+
+            // TODO: https://tools.ietf.org/html/rfc1034#section-4.3.3 Wildcards
+
+            // Nothing more can be done.
+            return Task.FromResult(false);
+        }
 
         SOARecord FindAuthority(string domainName)
         {
