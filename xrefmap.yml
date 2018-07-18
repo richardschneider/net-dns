@@ -2536,6 +2536,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Resolving.Catalog.Add
   nameWithType: Catalog.Add
+- uid: Makaretu.Dns.Resolving.Catalog.IncludeRootHints
+  name: IncludeRootHints()
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeRootHints
+  commentId: M:Makaretu.Dns.Resolving.Catalog.IncludeRootHints
+  fullName: Makaretu.Dns.Resolving.Catalog.IncludeRootHints()
+  nameWithType: Catalog.IncludeRootHints()
+- uid: Makaretu.Dns.Resolving.Catalog.IncludeRootHints*
+  name: IncludeRootHints
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeRootHints_
+  commentId: Overload:Makaretu.Dns.Resolving.Catalog.IncludeRootHints
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.Catalog.IncludeRootHints
+  nameWithType: Catalog.IncludeRootHints
 - uid: Makaretu.Dns.Resolving.Catalog.IncludeZone(Makaretu.Dns.MasterReader)
   name: IncludeZone(MasterReader)
   href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeZone_Makaretu_Dns_MasterReader_
