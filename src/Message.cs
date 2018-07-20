@@ -206,7 +206,7 @@ namespace Makaretu.Dns
         /// <value>
         ///   A list of answers.
         /// </value>
-        public List<ResourceRecord> Answers { get; } = new List<ResourceRecord>();
+        public List<ResourceRecord> Answers { get; set; } = new List<ResourceRecord>();
 
         /// <summary>
         ///   The list of authority records.
@@ -222,7 +222,7 @@ namespace Makaretu.Dns
         /// <value>
         ///   A list of additional resource records.
         /// </value>
-        public List<ResourceRecord> AdditionalRecords { get; } = new List<ResourceRecord>();
+        public List<ResourceRecord> AdditionalRecords { get; set;  } = new List<ResourceRecord>();
 
         /// <summary>
         ///   Create a response for the query message.

@@ -50,6 +50,20 @@ namespace Makaretu.Dns.Resolving
                     break;
             }
 
+            // Remove duplicate answers.
+            if (response.Answers.Count > 1)
+            {
+                response.Answers = response.Answers.Distinct().ToList();
+            }
+
+            // Remove additional records that are also answers.
+            if (response.AdditionalRecords.Count > 0)
+            {
+                response.AdditionalRecords = response.AdditionalRecords
+                    .Where(a => !response.Answers.Contains(a))
+                    .ToList();
+            }
+
             return response;
         }
 
@@ -210,7 +224,12 @@ namespace Makaretu.Dns.Resolving
                 }
             }
 
-            response.AdditionalRecords.AddRange(extras.Answers);
+            // Add additional record with no duplication.
+            var records = extras.Answers
+                .Where(a => !response.Answers.Contains(a))
+                .Where(a => !response.AdditionalRecords.Contains(a))
+                .Distinct();
+            response.AdditionalRecords.AddRange(records);
         }
 
         void FindAddresses(string name, Class klass, Message response)

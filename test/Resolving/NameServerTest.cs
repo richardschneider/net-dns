@@ -257,5 +257,22 @@ namespace Makaretu.Dns.Resolving
             Assert.IsTrue(response.AdditionalRecords.OfType<ARecord>().Any());
         }
 
+        [TestMethod]
+        public async Task AdditionalRecords_NoDuplicates()
+        {
+            var resolver = new NameServer { Catalog = dotorg,  AnswerAllQuestions = true };
+            var request = new Message();
+            request.Questions.Add(new Question { Name = "example.org", Type = DnsType.NS });
+            request.Questions.Add(new Question { Name = "ns1.example.org", Type = DnsType.A });
+            request.Questions.Add(new Question { Name = "ns2.example.org", Type = DnsType.A });
+            var response = await resolver.ResolveAsync(request);
+
+            Assert.IsTrue(response.IsResponse);
+            Assert.AreEqual(MessageStatus.NoError, response.Status);
+            Assert.IsTrue(response.AA);
+            Assert.AreEqual(4, response.Answers.Count);
+
+            Assert.AreEqual(0, response.AdditionalRecords.Count);
+        }
     }
 }
