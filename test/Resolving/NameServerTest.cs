@@ -187,7 +187,7 @@ namespace Makaretu.Dns.Resolving
         }
 
         [TestMethod]
-        public async Task AdditionalRecords_PTR()
+        public async Task AdditionalRecords_PTR_WithAddresses()
         {
             var resolver = new NameServer { Catalog = dotorg };
             var request = new Message();
@@ -202,6 +202,24 @@ namespace Makaretu.Dns.Resolving
             Assert.AreEqual(1, response.AdditionalRecords.Count);
             Assert.AreEqual(DnsType.A, response.AdditionalRecords[0].Type);
             Assert.AreEqual("ns1.example.org", response.AdditionalRecords[0].Name);
+        }
+
+        [TestMethod]
+        public async Task AdditionalRecords_PTR_WithSRV()
+        {
+            var resolver = new NameServer { Catalog = dotorg };
+            var request = new Message();
+            request.Questions.Add(new Question { Name = "_http._tcp.example.org", Type = DnsType.PTR });
+            var response = await resolver.ResolveAsync(request);
+
+            Assert.IsTrue(response.IsResponse);
+            Assert.AreEqual(MessageStatus.NoError, response.Status);
+            Assert.IsTrue(response.AA);
+            Assert.AreEqual(1, response.Answers.Count);
+
+            Assert.AreEqual(2, response.AdditionalRecords.Count);
+            Assert.IsTrue(response.AdditionalRecords.Any(a => a.Type == DnsType.SRV));
+            Assert.IsTrue(response.AdditionalRecords.Any(a => a.Type == DnsType.TXT));
         }
 
         [TestMethod]
@@ -244,7 +262,7 @@ namespace Makaretu.Dns.Resolving
         {
             var resolver = new NameServer { Catalog = dotorg };
             var request = new Message();
-            request.Questions.Add(new Question { Name = "_http._tcp.example.org", Type = DnsType.SRV });
+            request.Questions.Add(new Question { Name = "a._http._tcp.example.org", Type = DnsType.SRV });
             var response = await resolver.ResolveAsync(request);
 
             Assert.IsTrue(response.IsResponse);

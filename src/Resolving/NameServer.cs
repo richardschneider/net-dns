@@ -217,7 +217,12 @@ namespace Makaretu.Dns.Resolving
                         break;
 
                     case DnsType.PTR:
-                        FindAddresses(((PTRRecord)resource).DomainName, resource.Class, extras);
+                        var ptr = (PTRRecord)resource;
+
+                        question.Class = resource.Class;
+                        question.Name = ptr.DomainName;
+                        question.Type = DnsType.ANY;
+                        _ = FindAnswerAsync(question, extras, default(CancellationToken)).Result;
                         break;
 
                     case DnsType.SOA:

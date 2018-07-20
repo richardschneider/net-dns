@@ -22,8 +22,9 @@ namespace Makaretu.Dns.Resolving
  ns2  A     192.0.2.2
  mail A     192.0.2.3
  x    PTR   ns1
-_http._tcp SRV 0 5 80 mail
-           TXT needhttps=false needcredential=true" + "\r\n";
+_http._tcp   PTR a._http._tcp
+a._http._tcp SRV 0 5 80 mail
+             TXT needhttps=false needcredential=true" + "\r\n";
 
         public const string exampleDotComZoneText = @"
  $ORIGIN example.com.     ; designates the start of this zone file in the namespace
@@ -132,7 +133,7 @@ _http._tcp SRV 0 5 80 mail
             reader = new MasterReader(new StringReader(exampleDotOrgZoneText));
             zone = catalog.IncludeZone(reader);
             Assert.AreEqual("example.org", zone.Name);
-            Assert.AreEqual(7 + 6, catalog.Count);
+            Assert.AreEqual(7 + 7, catalog.Count);
 
             catalog.RemoveZone("example.org");
             Assert.AreEqual(7, catalog.Count);
