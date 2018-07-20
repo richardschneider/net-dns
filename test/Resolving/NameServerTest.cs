@@ -258,6 +258,42 @@ namespace Makaretu.Dns.Resolving
         }
 
         [TestMethod]
+        public async Task AdditionalRecords_A()
+        {
+            var resolver = new NameServer { Catalog = dotcom };
+            var request = new Message();
+            request.Questions.Add(new Question { Name = "example.com", Type = DnsType.A });
+            var response = await resolver.ResolveAsync(request);
+
+            Assert.IsTrue(response.IsResponse);
+            Assert.AreEqual(MessageStatus.NoError, response.Status);
+            Assert.IsTrue(response.AA);
+            Assert.AreEqual(1, response.Answers.Count);
+            Assert.IsTrue(response.Answers.All(r => r.Type == DnsType.A));
+
+            Assert.AreEqual(1, response.AdditionalRecords.Count);
+            Assert.IsTrue(response.AdditionalRecords.All(r => r.Type == DnsType.AAAA));
+        }
+
+        [TestMethod]
+        public async Task AdditionalRecords_AAAA()
+        {
+            var resolver = new NameServer { Catalog = dotcom };
+            var request = new Message();
+            request.Questions.Add(new Question { Name = "example.com", Type = DnsType.AAAA });
+            var response = await resolver.ResolveAsync(request);
+
+            Assert.IsTrue(response.IsResponse);
+            Assert.AreEqual(MessageStatus.NoError, response.Status);
+            Assert.IsTrue(response.AA);
+            Assert.AreEqual(1, response.Answers.Count);
+            Assert.IsTrue(response.Answers.All(r => r.Type == DnsType.AAAA));
+
+            Assert.AreEqual(1, response.AdditionalRecords.Count);
+            Assert.IsTrue(response.AdditionalRecords.All(r => r.Type == DnsType.A));
+        }
+
+        [TestMethod]
         public async Task AdditionalRecords_NoDuplicates()
         {
             var resolver = new NameServer { Catalog = dotorg,  AnswerAllQuestions = true };

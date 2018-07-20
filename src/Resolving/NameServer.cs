@@ -198,6 +198,20 @@ namespace Makaretu.Dns.Resolving
             {
                 switch (resource.Type)
                 {
+                    case DnsType.A:
+                        question.Class = resource.Class;
+                        question.Name = resource.Name;
+                        question.Type = DnsType.AAAA;
+                        _ = FindAnswerAsync(question, extras, default(CancellationToken)).Result;
+                        break;
+
+                    case DnsType.AAAA:
+                        question.Class = resource.Class;
+                        question.Name = resource.Name;
+                        question.Type = DnsType.A;
+                        _ = FindAnswerAsync(question, extras, default(CancellationToken)).Result;
+                        break;
+
                     case DnsType.NS:
                         FindAddresses(((NSRecord)resource).Authority, resource.Class, extras);
                         break;
