@@ -197,7 +197,7 @@ namespace Makaretu.Dns.Resolving
         /// <inheritdoc />
         public void CopyTo(T[] array, int arrayIndex)
         {
-            throw new NotImplementedException();
+            _dictionary.Keys.CopyTo(array, arrayIndex);
         }
     }
 }
