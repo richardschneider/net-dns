@@ -274,6 +274,15 @@ namespace Makaretu.Dns
                     continue;
                 }
 
+                // Handle escaped character.
+                if (c == '\\')
+                {
+                    c = text.Read();
+                    // TODO: \DDD
+                    sb.Append((char)c);
+                    continue;
+                }
+
                 // Handle quoted strings.
                 if (inquote)
                 {
@@ -320,13 +329,6 @@ namespace Makaretu.Dns
                     incomment = true;
                     continue;
 
-                }
-
-                // Handle escaped character.
-                // TODO: \DDD
-                if (c == '\\')
-                {
-                    c = text.Read();
                 }
 
                 sb.Append((char)c);

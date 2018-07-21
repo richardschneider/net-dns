@@ -39,7 +39,10 @@ namespace Makaretu.Dns
                 Strings = new List<string>
                 {
                     "paper=A4",
-                    "colour=false"
+                    "colour=false",
+                    "foo1=a b",
+                    @"foo2=a\b",
+                    "foo3=a\""
                 }
             };
             var b = (TXTRecord)new ResourceRecord().Read(a.ToString());

@@ -70,7 +70,7 @@ namespace Makaretu.Dns
                     writer.Write(' ');
                 }
                 writer.Write('"');
-                writer.Write(s);
+                writer.Write(s.Replace("\\", "\\\\").Replace("\"", "\\\""));
                 writer.Write('"');
                 next = true;
             }
