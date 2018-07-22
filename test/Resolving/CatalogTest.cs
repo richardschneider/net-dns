@@ -177,6 +177,62 @@ a._http._tcp SRV 0 5 80 mail
         }
 
         [TestMethod]
+        public void AddResource_Same()
+        {
+            var a = AddressRecord.Create("foo", IPAddress.Loopback);
+            var catalog = new Catalog();
+
+            var n1 = catalog.Add(a);
+            Assert.IsTrue(n1.Resources.Contains(a));
+
+            var n2 = catalog.Add(a);
+            Assert.AreSame(n1, n2);
+            Assert.IsTrue(n1.Resources.Contains(a));
+            Assert.AreEqual(1, n1.Resources.Count);
+        }
+
+        [TestMethod]
+        public void AddResource_Duplicate()
+        {
+            var a = AddressRecord.Create("foo", IPAddress.Loopback);
+            var b = AddressRecord.Create("foo", IPAddress.Loopback);
+            Assert.AreEqual(a, b);
+            var catalog = new Catalog();
+
+            var n1 = catalog.Add(a);
+            Assert.IsTrue(n1.Resources.Contains(a));
+
+            var n2 = catalog.Add(b);
+            Assert.AreSame(n1, n2);
+            Assert.IsTrue(n1.Resources.Contains(a));
+            Assert.IsTrue(n1.Resources.Contains(b));
+            Assert.AreEqual(1, n1.Resources.Count);
+        }
+
+        [TestMethod]
+        public void AddResource_Latest()
+        {
+            var a = AddressRecord.Create("foo", IPAddress.Loopback);
+            var b = AddressRecord.Create("foo", IPAddress.Loopback);
+            a.TTL = TimeSpan.FromHours(2);
+            b.CreationTime = a.CreationTime + TimeSpan.FromHours(1);
+            b.TTL = TimeSpan.FromHours(3);
+            Assert.AreEqual(a, b);
+            var catalog = new Catalog();
+
+            var n1 = catalog.Add(a);
+            Assert.IsTrue(n1.Resources.Contains(a));
+
+            var n2 = catalog.Add(b);
+            Assert.AreSame(n1, n2);
+            Assert.IsTrue(n1.Resources.Contains(a));
+            Assert.IsTrue(n1.Resources.Contains(b));
+            Assert.AreEqual(1, n1.Resources.Count);
+            Assert.AreEqual(b.CreationTime, n1.Resources.First().CreationTime);
+            Assert.AreEqual(b.TTL, n1.Resources.First().TTL);
+        }
+
+        [TestMethod]
         public void RootHints()
         {
             var catalog = new Catalog();

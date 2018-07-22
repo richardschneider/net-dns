@@ -122,7 +122,15 @@ namespace Makaretu.Dns.Resolving
                 (k) => new Node { Name = k, Authoritative = authoritative },
                 (k, n) => n
             );
-            node.Resources.Add(resource);
+
+            // If the resource already exist, then update the the non-equality
+            // properties TTL and CreationTime.
+            if (!node.Resources.Add(resource))
+            {
+                // TODO: not very efficient.
+                node.Resources.Remove(resource);
+                node.Resources.Add(resource);
+            }
 
             return node;
         }
