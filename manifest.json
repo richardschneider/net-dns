@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.DnsObject.html",
-          "hash": "6wVIGp4NfVuI46LIgCJwIA=="
+          "hash": "TFF/v7uaePifqtzDk/GGvg=="
         }
       },
       "is_incremental": false,
@@ -401,11 +401,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Makaretu.Dns.Resolving.CachedNameServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Makaretu.Dns.Resolving.CachedNameServer.html",
+          "hash": "lFXhtLM/BhhsHB3MlE2vkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Makaretu.Dns.Resolving.Catalog.yml",
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.Resolving.Catalog.html",
-          "hash": "/PG1NkeXUU9XaGpFdaBMqw=="
+          "hash": "vw1S2WyNUDTxz+8dvA0vhg=="
         }
       },
       "is_incremental": false,
@@ -441,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.Resolving.NameServer.html",
-          "hash": "R7gXvfOh5QS3YqYTwNP9pA=="
+          "hash": "aHQ8O+nryxjfC3Cr/KG/UQ=="
         }
       },
       "is_incremental": false,
@@ -465,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.Resolving.html",
-          "hash": "kd93qwXRSpFO1Q7nzbBYDg=="
+          "hash": "Se7pDwn2NeUADJcH4QJTvg=="
         }
       },
       "is_incremental": false,
@@ -609,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "btA1BryuZ6cjOP90agg+lQ=="
+          "hash": "Ql6hezKsP6SSpSWIiVOvRA=="
         }
       },
       "is_incremental": false,
@@ -769,17 +781,17 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ResourceDocumentProcessor": {

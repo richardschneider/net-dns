@@ -2504,6 +2504,54 @@ references:
   commentId: N:Makaretu.Dns.Resolving
   fullName: Makaretu.Dns.Resolving
   nameWithType: Makaretu.Dns.Resolving
+- uid: Makaretu.Dns.Resolving.CachedNameServer
+  name: CachedNameServer
+  href: api/Makaretu.Dns.Resolving.CachedNameServer.html
+  commentId: T:Makaretu.Dns.Resolving.CachedNameServer
+  fullName: Makaretu.Dns.Resolving.CachedNameServer
+  nameWithType: CachedNameServer
+- uid: Makaretu.Dns.Resolving.CachedNameServer.Add(Makaretu.Dns.Message)
+  name: Add(Message)
+  href: api/Makaretu.Dns.Resolving.CachedNameServer.html#Makaretu_Dns_Resolving_CachedNameServer_Add_Makaretu_Dns_Message_
+  commentId: M:Makaretu.Dns.Resolving.CachedNameServer.Add(Makaretu.Dns.Message)
+  fullName: Makaretu.Dns.Resolving.CachedNameServer.Add(Makaretu.Dns.Message)
+  nameWithType: CachedNameServer.Add(Message)
+- uid: Makaretu.Dns.Resolving.CachedNameServer.Add*
+  name: Add
+  href: api/Makaretu.Dns.Resolving.CachedNameServer.html#Makaretu_Dns_Resolving_CachedNameServer_Add_
+  commentId: Overload:Makaretu.Dns.Resolving.CachedNameServer.Add
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.CachedNameServer.Add
+  nameWithType: CachedNameServer.Add
+- uid: Makaretu.Dns.Resolving.CachedNameServer.Prune(System.Nullable{System.DateTime})
+  name: Prune(Nullable<DateTime>)
+  href: api/Makaretu.Dns.Resolving.CachedNameServer.html#Makaretu_Dns_Resolving_CachedNameServer_Prune_System_Nullable_System_DateTime__
+  commentId: M:Makaretu.Dns.Resolving.CachedNameServer.Prune(System.Nullable{System.DateTime})
+  name.vb: Prune(Nullable(Of DateTime))
+  fullName: Makaretu.Dns.Resolving.CachedNameServer.Prune(System.Nullable<System.DateTime>)
+  fullName.vb: Makaretu.Dns.Resolving.CachedNameServer.Prune(System.Nullable(Of System.DateTime))
+  nameWithType: CachedNameServer.Prune(Nullable<DateTime>)
+  nameWithType.vb: CachedNameServer.Prune(Nullable(Of DateTime))
+- uid: Makaretu.Dns.Resolving.CachedNameServer.Prune*
+  name: Prune
+  href: api/Makaretu.Dns.Resolving.CachedNameServer.html#Makaretu_Dns_Resolving_CachedNameServer_Prune_
+  commentId: Overload:Makaretu.Dns.Resolving.CachedNameServer.Prune
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.CachedNameServer.Prune
+  nameWithType: CachedNameServer.Prune
+- uid: Makaretu.Dns.Resolving.CachedNameServer.PruneContinuously(System.TimeSpan)
+  name: PruneContinuously(TimeSpan)
+  href: api/Makaretu.Dns.Resolving.CachedNameServer.html#Makaretu_Dns_Resolving_CachedNameServer_PruneContinuously_System_TimeSpan_
+  commentId: M:Makaretu.Dns.Resolving.CachedNameServer.PruneContinuously(System.TimeSpan)
+  fullName: Makaretu.Dns.Resolving.CachedNameServer.PruneContinuously(System.TimeSpan)
+  nameWithType: CachedNameServer.PruneContinuously(TimeSpan)
+- uid: Makaretu.Dns.Resolving.CachedNameServer.PruneContinuously*
+  name: PruneContinuously
+  href: api/Makaretu.Dns.Resolving.CachedNameServer.html#Makaretu_Dns_Resolving_CachedNameServer_PruneContinuously_
+  commentId: Overload:Makaretu.Dns.Resolving.CachedNameServer.PruneContinuously
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.CachedNameServer.PruneContinuously
+  nameWithType: CachedNameServer.PruneContinuously
 - uid: Makaretu.Dns.Resolving.Catalog
   name: Catalog
   href: api/Makaretu.Dns.Resolving.Catalog.html
