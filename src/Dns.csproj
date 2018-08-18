@@ -17,7 +17,7 @@
     <Title>DNS Object Model</Title>
     <Description>DNS data model with serializer/deserializer for the wire and master file format.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/richardschneider/net-dns/releases</PackageReleaseNotes>
     <Copyright>© 2018 Richard Schneider</Copyright>
     <PackageTags>dns</PackageTags>
     <IncludeSymbols>True</IncludeSymbols>
