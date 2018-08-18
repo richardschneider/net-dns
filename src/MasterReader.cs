@@ -125,6 +125,49 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Read hex encoded RDATA.
+        /// </summary>
+        /// <returns>
+        ///   A byte array containing the RDATA.
+        /// </returns>
+        /// <remarks>
+        ///   See <see href="https://tools.ietf.org/html/rfc3597#section-5"/> for all
+        ///   the details.
+        /// </remarks>
+        public byte[] ReadResourceData()
+        {
+            var leadin = ReadToken();
+            if (leadin != "#")
+                throw new FormatException($"Expected RDATA leadin '\\#', not '{leadin}'.");
+            var length = ReadUInt32();
+            if (length == 0)
+                return new byte[0];
+
+            // Get the hex string.
+            var sb = new StringBuilder();
+            while (sb.Length < length * 2)
+            {
+                var word = ReadToken();
+                if (word.Length == 0)
+                    break;
+                if (word.Length % 2 != 0)
+                    throw new FormatException($"The hex word ('{word}') must have an even number of digits.");
+                sb.Append(word);
+            }
+            if (sb.Length != length * 2)
+                throw new FormatException("Wrong number of RDATA hex digits.");
+
+            // Convert hex string into byte array.
+            var bytes = new byte[length];
+            for (int i = 0; i < length * 2; i += 2)
+            {
+                bytes[i / 2] = Convert.ToByte(sb.ToString(i, 2), 16);
+            }
+
+            return bytes;
+        }
+
+        /// <summary>
         ///   Read a resource record.
         /// </summary>
         /// <returns>
@@ -290,6 +333,7 @@ namespace Makaretu.Dns
                     c = text.Read();
                     // TODO: \DDD
                     sb.Append((char)c);
+                    skipWhitespace = false;
                     continue;
                 }
 

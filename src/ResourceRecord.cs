@@ -339,13 +339,18 @@ namespace Makaretu.Dns
         /// <remarks>
         ///   Derived classes should implement this method.
         ///   <para>
-        ///   By default, this will write the base64 encoding of
-        ///   the <see cref="GetData">RDATA</see>.
+        ///   By default, this will write the hex encoding of
+        ///   the <see cref="GetData">RDATA</see> preceeded by
+        ///   "\#" and the number integer bytes.
         ///   </para>
         /// </remarks>
         protected virtual void WriteData(TextWriter writer)
         {
-            writer.Write(Convert.ToBase64String(GetData()));
+            var rdata = GetData();
+            writer.Write("\\# ");
+            writer.Write(rdata.Length);
+            writer.Write(' ');
+            writer.Write(BitConverter.ToString(rdata).Replace("-", ""));
         }
 
         /// <summary>

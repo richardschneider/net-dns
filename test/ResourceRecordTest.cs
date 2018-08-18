@@ -141,7 +141,7 @@ namespace Makaretu.Dns
                 Name = "x.emanon.org",
                 Type = DnsType.A
             };
-            Assert.AreEqual("x.emanon.org IN A", a.ToString());
+            Assert.AreEqual("x.emanon.org IN A \\# 0", a.ToString());
 
             a = new ResourceRecord
             {
@@ -149,7 +149,7 @@ namespace Makaretu.Dns
                 Type = DnsType.A,
                 Class = Class.CH
             };
-            Assert.AreEqual("x.emanon.org CH A", a.ToString());
+            Assert.AreEqual("x.emanon.org CH A \\# 0", a.ToString());
 
             a = new ResourceRecord
             {
@@ -157,7 +157,7 @@ namespace Makaretu.Dns
                 Type = DnsType.A,
                 TTL = TimeSpan.FromSeconds(123)
             };
-            Assert.AreEqual("x.emanon.org 123 IN A", a.ToString());
+            Assert.AreEqual("x.emanon.org 123 IN A \\# 0", a.ToString());
         }
 
         [TestMethod]
@@ -192,7 +192,7 @@ namespace Makaretu.Dns
                 Class = (Class)1234,
                 Type = DnsType.A
             };
-            Assert.AreEqual("x.emanon.org CLASS1234 A", a.ToString());
+            Assert.AreEqual("x.emanon.org CLASS1234 A \\# 0", a.ToString());
         }
 
         [TestMethod]
@@ -203,7 +203,7 @@ namespace Makaretu.Dns
                 Name = "x.emanon.org",
                 Type = (DnsType)1234
             };
-            Assert.AreEqual("x.emanon.org IN TYPE1234", a.ToString());
+            Assert.AreEqual("x.emanon.org IN TYPE1234 \\# 0", a.ToString());
         }
     }
 }

@@ -44,5 +44,23 @@ namespace Makaretu.Dns
             Assert.IsFalse(a.Equals(null));
         }
 
+        [TestMethod]
+        public void Roundtrip_Master()
+        {
+            var a = new UnknownRecord
+            {
+                Name = "a.example",
+                Class = (Class)32,
+                Type = (DnsType)731,
+                Data = new byte[] { 0xab, 0xcd, 0xef, 0x01, 0x23, 0x45 }
+            };
+            var b = (UnknownRecord)new ResourceRecord().Read(a.ToString());
+            Assert.AreEqual(a.Name, b.Name);
+            Assert.AreEqual(a.Class, b.Class);
+            Assert.AreEqual(a.Type, b.Type);
+            Assert.AreEqual(a.TTL, b.TTL);
+            CollectionAssert.AreEqual(a.Data, b.Data);
+        }
+
     }
 }

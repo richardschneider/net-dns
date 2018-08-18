@@ -23,6 +23,12 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
+        internal override void ReadData(MasterReader reader)
+        {
+            Data = reader.ReadResourceData();
+        }
+
+        /// <inheritdoc />
         protected override void WriteData(DnsWriter writer)
         {
             writer.WriteBytes(Data);

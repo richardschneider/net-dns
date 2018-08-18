@@ -39,7 +39,7 @@ namespace Makaretu.Dns
         /// <inheritdoc />
         internal override void ReadData(MasterReader reader)
         {
-            Data = Convert.FromBase64String(reader.ReadString());
+            Data = reader.ReadResourceData();
         }
 
         /// <inheritdoc />

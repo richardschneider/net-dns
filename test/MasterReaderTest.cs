@@ -74,7 +74,7 @@ namespace Makaretu.Dns
         [TestMethod]
         public void ReadResourceWithUnknownType()
         {
-            var reader = new MasterReader(new StringReader("me CH TYPE1234"));
+            var reader = new MasterReader(new StringReader("me CH TYPE1234 \\# 0"));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("me", resource.Name);
             Assert.AreEqual(Class.CH, resource.Class);
@@ -184,6 +184,58 @@ emanon.org A 127.0.0.1
                 resources.Add(r);
             }
             Assert.AreEqual(15, resources.Count);
+        }
+
+        [TestMethod]
+        public void ReadResourceData()
+        {
+            var reader = new MasterReader(new StringReader("\\# 0"));
+            var rdata = reader.ReadResourceData();
+            Assert.AreEqual(0, rdata.Length);
+
+            reader = new MasterReader(new StringReader("\\# 3 abcdef"));
+            rdata = reader.ReadResourceData();
+            CollectionAssert.AreEqual(new byte[] { 0xab, 0xcd, 0xef }, rdata);
+
+            reader = new MasterReader(new StringReader("\\# 3 ab cd ef"));
+            rdata = reader.ReadResourceData();
+            CollectionAssert.AreEqual(new byte[] { 0xab, 0xcd, 0xef }, rdata);
+
+            reader = new MasterReader(new StringReader("\\# 3 abcd (\r\n  ef )"));
+            rdata = reader.ReadResourceData();
+            CollectionAssert.AreEqual(new byte[] { 0xab, 0xcd, 0xef }, rdata);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FormatException))]
+        public void ReadResourceData_MissingLeadin()
+        {
+            var reader = new MasterReader(new StringReader("0"));
+            var _ = reader.ReadResourceData();
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FormatException))]
+        public void ReadResourceData_BadHex_BadDigit()
+        {
+            var reader = new MasterReader(new StringReader("\\# 3 ab cd ez"));
+            var _ = reader.ReadResourceData();
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FormatException))]
+        public void ReadResourceData_BadHex_NotEven()
+        {
+            var reader = new MasterReader(new StringReader("\\# 3 ab cd e"));
+            var _ = reader.ReadResourceData();
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FormatException))]
+        public void ReadResourceData_BadHex_TooFew()
+        {
+            var reader = new MasterReader(new StringReader("\\# 3 abcd"));
+            var _ = reader.ReadResourceData();
         }
     }
 }
