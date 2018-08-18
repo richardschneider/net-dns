@@ -8,7 +8,7 @@ namespace Makaretu.Dns
 {
     /// <summary>
     ///   Contains the the next owner name and the set of RR
-    ///   types present at the NSEC RR's owner name [RFC3845].  T
+    ///   types present at the NSEC RR's owner name [RFC3845].
     /// </summary>
     public class NSECRecord : ResourceRecord
     {

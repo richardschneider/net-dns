@@ -15,6 +15,7 @@ The following resource records are implemented
 - [HINFO](xref:Makaretu.Dns.HINFORecord) Host Info
 - [MX](xref:Makaretu.Dns.MXRecord) Mail Exchange
 - [NS](xref:Makaretu.Dns.NSRecord) Name Server
+- [NSEC](xref:Makaretu.Dns.NSECRecord) Next Secure
 - [NULL](xref:Makaretu.Dns.NULLRecord) EXPERIMENTAL
 - [OPT](xref:Makaretu.Dns.OPTRecord) Extension mechanism for DNS
 - [PTR](xref:Makaretu.Dns.PTRRecord) Domain Name Pointer
