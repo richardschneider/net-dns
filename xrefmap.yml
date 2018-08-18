@@ -1539,6 +1539,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.MasterReader.ReadIPAddress
   nameWithType: MasterReader.ReadIPAddress
+- uid: Makaretu.Dns.MasterReader.ReadResourceData
+  name: ReadResourceData()
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadResourceData
+  commentId: M:Makaretu.Dns.MasterReader.ReadResourceData
+  fullName: Makaretu.Dns.MasterReader.ReadResourceData()
+  nameWithType: MasterReader.ReadResourceData()
+- uid: Makaretu.Dns.MasterReader.ReadResourceData*
+  name: ReadResourceData
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadResourceData_
+  commentId: Overload:Makaretu.Dns.MasterReader.ReadResourceData
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.ReadResourceData
+  nameWithType: MasterReader.ReadResourceData
 - uid: Makaretu.Dns.MasterReader.ReadResourceRecord
   name: ReadResourceRecord()
   href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadResourceRecord
