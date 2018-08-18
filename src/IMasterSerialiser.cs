@@ -10,6 +10,10 @@ namespace Makaretu.Dns
     /// </summary>
     /// <remarks>
     ///   The "mater file format" is the text representation of a <see cref="ResourceRecord"/>.
+    ///   It is also referred to as the "presentation format".
+    ///   See <see href="https://tools.ietf.org/html/rfc1035">RFC 1035 - 5 Master File</see>
+    ///   and <see href="https://tools.ietf.org/html/rfc3597">RFC 3597 - Handling of Unknown DNS Resource Record (RR) Types</see>
+    ///   for more details.
     /// </remarks>
     public interface IMasterSerialiser
     {
