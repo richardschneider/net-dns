@@ -182,5 +182,18 @@ namespace Makaretu.Dns
             Assert.IsFalse(rr.IsExpired(DateTime.Now + TimeSpan.FromSeconds(-3)));
             Assert.IsTrue(rr.IsExpired(DateTime.Now + TimeSpan.FromSeconds(3)));
         }
+
+        [TestMethod]
+        public void Stringing_UnknownClass()
+        {
+            var a = new ResourceRecord
+            {
+                Name = "x.emanon.org",
+                Class = (Class)1234,
+                Type = DnsType.A
+            };
+            Assert.AreEqual("x.emanon.org CLASS1234 A", a.ToString());
+
+        }
     }
 }

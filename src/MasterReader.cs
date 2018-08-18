@@ -191,6 +191,11 @@ namespace Makaretu.Dns
                 }
 
                 // Is CLASS?
+                if (token.StartsWith("CLASS"))
+                {
+                    klass = (Class)ushort.Parse(token.Substring(5), CultureInfo.InvariantCulture);
+                    continue;
+                }
                 if (Enum.TryParse<Class>(token, out Class k))
                 {
                     klass = k;

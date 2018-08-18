@@ -310,10 +310,17 @@ namespace Makaretu.Dns
                 writer.Write((int)TTL.TotalSeconds);
                 writer.Write(' ');
             }
+
+            if (!Enum.IsDefined(typeof(Class), Class))
+            {
+                writer.Write("CLASS");
+            }
             writer.Write(Class);
             writer.Write(' ');
+
             writer.Write(Type);
             writer.Write(' ');
+
             WriteData(writer);
             writer.Write("\r\n");
         }
