@@ -318,6 +318,10 @@ namespace Makaretu.Dns
             writer.Write(Class);
             writer.Write(' ');
 
+            if (!Enum.IsDefined(typeof(DnsType), Type))
+            {
+                writer.Write("TYPE");
+            }
             writer.Write(Type);
             writer.Write(' ');
 

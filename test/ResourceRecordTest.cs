@@ -193,7 +193,17 @@ namespace Makaretu.Dns
                 Type = DnsType.A
             };
             Assert.AreEqual("x.emanon.org CLASS1234 A", a.ToString());
+        }
 
+        [TestMethod]
+        public void Stringing_UnknownType()
+        {
+            var a = new ResourceRecord
+            {
+                Name = "x.emanon.org",
+                Type = (DnsType)1234
+            };
+            Assert.AreEqual("x.emanon.org IN TYPE1234", a.ToString());
         }
     }
 }

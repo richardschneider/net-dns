@@ -72,6 +72,17 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void ReadResourceWithUnknownType()
+        {
+            var reader = new MasterReader(new StringReader("me CH TYPE1234"));
+            var resource = reader.ReadResourceRecord();
+            Assert.AreEqual("me", resource.Name);
+            Assert.AreEqual(Class.CH, resource.Class);
+            Assert.AreEqual(1234, (int)resource.Type);
+            Assert.IsInstanceOfType(resource, typeof(UnknownRecord));
+        }
+
+        [TestMethod]
         public void ReadResourceWithComment()
         {
             var reader = new MasterReader(new StringReader("; comment\r\nme A 127.0.0.1"));

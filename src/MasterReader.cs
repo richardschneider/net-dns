@@ -184,6 +184,11 @@ namespace Makaretu.Dns
                 }
 
                 // Is TYPE?
+                if (token.StartsWith("TYPE"))
+                {
+                    type = (DnsType)ushort.Parse(token.Substring(4), CultureInfo.InvariantCulture);
+                    continue;
+                }
                 if (Enum.TryParse<DnsType>(token, out DnsType t))
                 {
                     type = t;
