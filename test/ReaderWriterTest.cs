@@ -23,6 +23,8 @@ namespace Makaretu.Dns
             writer.WriteUInt16(ushort.MaxValue);
             writer.WriteUInt32(uint.MaxValue);
             writer.WriteBytes(someBytes);
+            writer.WriteByteLengthPrefixedBytes(someBytes);
+            writer.WriteByteLengthPrefixedBytes(null);
             writer.WriteIPAddress(IPAddress.Parse("127.0.0.1"));
             writer.WriteIPAddress(IPAddress.Parse("2406:e001:13c7:1:7173:ef8:852f:25cb"));
 
@@ -34,6 +36,8 @@ namespace Makaretu.Dns
             Assert.AreEqual(ushort.MaxValue, reader.ReadUInt16());
             Assert.AreEqual(uint.MaxValue, reader.ReadUInt32());
             CollectionAssert.AreEqual(someBytes, reader.ReadBytes(3));
+            CollectionAssert.AreEqual(someBytes, reader.ReadByteLengthPrefixedBytes());
+            CollectionAssert.AreEqual(new byte[0], reader.ReadByteLengthPrefixedBytes());
             Assert.AreEqual(IPAddress.Parse("127.0.0.1"), reader.ReadIPAddress());
             Assert.AreEqual(IPAddress.Parse("2406:e001:13c7:1:7173:ef8:852f:25cb"), reader.ReadIPAddress(16));
         }
@@ -68,6 +72,14 @@ namespace Makaretu.Dns
             var ms = new MemoryStream(new byte[] { 10, 1 });
             var reader = new DnsReader(ms);
             ExceptionAssert.Throws<EndOfStreamException>(() => reader.ReadString());
+        }
+
+        [TestMethod]
+        public void BytePrefixedArray_TooBig()
+        {
+            var bytes = new byte[byte.MaxValue + 1];
+            var writer = new DnsWriter(new MemoryStream());
+            ExceptionAssert.Throws<ArgumentException>(() => writer.WriteByteLengthPrefixedBytes(bytes));
         }
 
         [TestMethod]
