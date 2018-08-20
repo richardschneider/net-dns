@@ -177,6 +177,13 @@ namespace Makaretu.Dns
         NSEC = 47,
 
         /// <summary>
+        ///   Authenticated next secure owner.
+        /// </summary>
+        /// <seealso href="https://tools.ietf.org/html/rfc5155"/>
+        /// <seealso cref="NSEC3Record"/>
+        NSEC3 = 50,
+
+        /// <summary>
         /// A request for a transfer of an entire zone.
         /// </summary>
         /// <seealso href="https://tools.ietf.org/html/rfc1035">RFC 1035</seealso>

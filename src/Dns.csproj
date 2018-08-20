@@ -30,6 +30,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="SimpleBase" Version="1.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="Resolving/RootHints" />
   </ItemGroup>
 

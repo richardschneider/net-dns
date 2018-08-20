@@ -1,5 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using SimpleBase;
+using System;
+using System.Linq;
 using System.Globalization;
 using System.IO;
 using System.Net;
@@ -44,6 +45,17 @@ namespace Makaretu.Dns
         ///   for a domain name.
         /// </remarks>
         public string Origin { get; set; } = String.Empty;
+
+        /// <summary>
+        ///   Read a byte.
+        /// </summary>
+        /// <returns>
+        ///   The number as a byte.
+        /// </returns>
+        public byte ReadByte()
+        {
+            return byte.Parse(ReadToken(), CultureInfo.InvariantCulture);
+        }
 
         /// <summary>
         ///   Read an unsigned short.
@@ -175,13 +187,14 @@ namespace Makaretu.Dns
                 throw new FormatException("Wrong number of RDATA hex digits.");
 
             // Convert hex string into byte array.
-            var bytes = new byte[length];
-            for (int i = 0; i < length * 2; i += 2)
+            try
             {
-                bytes[i / 2] = Convert.ToByte(sb.ToString(i, 2), 16);
+                return Base16.Decode(sb.ToString());
             }
-
-            return bytes;
+            catch (InvalidOperationException e)
+            {
+                throw new FormatException(e.Message);
+            }
         }
 
         /// <summary>
@@ -237,7 +250,7 @@ namespace Makaretu.Dns
                     defaultTTL = ttl = ReadTimeSpan();
                     continue;
                 }
-                if (Char.IsDigit(token[0]))
+                if (token.All(c => Char.IsDigit(c)))
                 {
                     ttl = TimeSpan.FromSeconds(uint.Parse(token));
                     continue;

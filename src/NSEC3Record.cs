@@ -1,0 +1,147 @@
+﻿using SimpleBase;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+
+namespace Makaretu.Dns
+{
+    /// <summary>
+    ///   Authenticated denial of existence for DNS Resource Record Sets
+    /// </summary>
+    public class NSEC3Record : ResourceRecord
+    {
+        /// <summary>
+        ///   Creates a new instance of the <see cref="NSEC3Record"/> class.
+        /// </summary>
+        public NSEC3Record() : base()
+        {
+            Type = DnsType.NSEC3;
+        }
+
+        /// <summary>
+        ///   The cryptographic hash algorithm used to create the <see cref="NextHashedOwnerName"/>.
+        /// </summary>
+        /// <value>
+        ///   One of the <see cref="DigestType"/> value.
+        /// </value>
+        public DigestType HashAlgorithm { get; set; }
+
+        /// <summary>
+        ///  TODO
+        /// </summary>
+        public byte Flags { get; set; }
+
+        /// <summary>
+        ///   Number of times to perform the <see cref="HashAlgorithm"/>.
+        /// </summary>
+        public ushort Iterations { get; set; }
+
+        /// <summary>
+        ///   Appended to the original owner name before hashing.
+        /// </summary>
+        /// <remarks>
+        ///   Used to defend against pre-calculated dictionary attacks.
+        /// </remarks>
+        public byte[] Salt { get; set; }
+
+        /// <summary>
+        ///   The next hashed owner name that has authoritative data.
+        /// </summary>
+        public byte[] NextHashedOwnerName { get; set; }
+
+        /// <summary>
+        ///   The sequence of RR types present at the NSEC3 RR's owner name.
+        /// </summary>
+        /// <value>
+        ///   Defaults to the empty list.
+        /// </value>
+        public List<DnsType> Types { get; set; } = new List<DnsType>();
+
+        /// <inheritdoc />
+        protected override void ReadData(DnsReader reader, int length)
+        {
+            var end = reader.Position + length;
+
+            HashAlgorithm = (DigestType)reader.ReadByte();
+            Flags = reader.ReadByte();
+            Iterations = reader.ReadUInt16();
+            Salt = reader.ReadByteLengthPrefixedBytes();
+            NextHashedOwnerName = reader.ReadByteLengthPrefixedBytes();
+
+            while (reader.Position < end)
+            {
+                Types.AddRange(reader.ReadBitmap().Select(t => (DnsType)t));
+            }
+        }
+
+        /// <inheritdoc />
+        protected override void WriteData(DnsWriter writer)
+        {
+            writer.WriteByte((byte)HashAlgorithm);
+            writer.WriteByte(Flags);
+            writer.WriteUInt16(Iterations);
+            writer.WriteByteLengthPrefixedBytes(Salt);
+            writer.WriteByteLengthPrefixedBytes(NextHashedOwnerName);
+            writer.WriteBitmap(Types.Select(t => (ushort)t));
+        }
+
+        internal override void ReadData(MasterReader reader)
+        {
+            HashAlgorithm = (DigestType)reader.ReadByte();
+            Flags = reader.ReadByte();
+            Iterations = reader.ReadUInt16();
+
+            var salt = reader.ReadString();
+            if (salt != "-")
+                Salt = Base16.Decode(salt);
+
+            NextHashedOwnerName = Base32.ExtendedHex.Decode(reader.ReadString());
+
+            while (!reader.IsEndOfLine())
+            {
+                Types.Add(reader.ReadDnsType());
+            }
+        }
+
+        /// <inheritdoc />
+        protected override void WriteData(TextWriter writer)
+        {
+            writer.Write((ushort)HashAlgorithm);
+            writer.Write(' ');
+            writer.Write((byte)Flags);
+            writer.Write(' ');
+            writer.Write(Iterations);
+            writer.Write(' ');
+
+            if (Salt == null || Salt.Length == 0)
+            {
+                writer.Write('-');
+            }
+            else
+            {
+                writer.Write(Base16.EncodeLower(Salt));
+            }
+            writer.Write(' ');
+
+            writer.Write(Base32.ExtendedHex.Encode(NextHashedOwnerName, padding: false).ToLowerInvariant());
+            writer.Write(' ');
+
+            bool next = false;
+            foreach (var type in Types)
+            {
+                if (next)
+                {
+                    writer.Write(' ');
+                }
+                if (!Enum.IsDefined(typeof(DnsType), type))
+                {
+                    writer.Write("TYPE");
+                }
+                writer.Write(type);
+                next = true;
+            }
+        }
+    }
+}
