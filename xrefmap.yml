@@ -530,6 +530,19 @@ references:
   commentId: F:Makaretu.Dns.DnsReader.Position
   fullName: Makaretu.Dns.DnsReader.Position
   nameWithType: DnsReader.Position
+- uid: Makaretu.Dns.DnsReader.ReadBitmap
+  name: ReadBitmap()
+  href: api/Makaretu.Dns.DnsReader.html#Makaretu_Dns_DnsReader_ReadBitmap
+  commentId: M:Makaretu.Dns.DnsReader.ReadBitmap
+  fullName: Makaretu.Dns.DnsReader.ReadBitmap()
+  nameWithType: DnsReader.ReadBitmap()
+- uid: Makaretu.Dns.DnsReader.ReadBitmap*
+  name: ReadBitmap
+  href: api/Makaretu.Dns.DnsReader.html#Makaretu_Dns_DnsReader_ReadBitmap_
+  commentId: Overload:Makaretu.Dns.DnsReader.ReadBitmap
+  isSpec: "True"
+  fullName: Makaretu.Dns.DnsReader.ReadBitmap
+  nameWithType: DnsReader.ReadBitmap
 - uid: Makaretu.Dns.DnsReader.ReadByte
   name: ReadByte()
   href: api/Makaretu.Dns.DnsReader.html#Makaretu_Dns_DnsReader_ReadByte
@@ -871,6 +884,22 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DnsWriter.PushLengthPrefixedScope
   nameWithType: DnsWriter.PushLengthPrefixedScope
+- uid: Makaretu.Dns.DnsWriter.WriteBitmap(System.Collections.Generic.IEnumerable{System.UInt16})
+  name: WriteBitmap(IEnumerable<UInt16>)
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteBitmap_System_Collections_Generic_IEnumerable_System_UInt16__
+  commentId: M:Makaretu.Dns.DnsWriter.WriteBitmap(System.Collections.Generic.IEnumerable{System.UInt16})
+  name.vb: WriteBitmap(IEnumerable(Of UInt16))
+  fullName: Makaretu.Dns.DnsWriter.WriteBitmap(System.Collections.Generic.IEnumerable<System.UInt16>)
+  fullName.vb: Makaretu.Dns.DnsWriter.WriteBitmap(System.Collections.Generic.IEnumerable(Of System.UInt16))
+  nameWithType: DnsWriter.WriteBitmap(IEnumerable<UInt16>)
+  nameWithType.vb: DnsWriter.WriteBitmap(IEnumerable(Of UInt16))
+- uid: Makaretu.Dns.DnsWriter.WriteBitmap*
+  name: WriteBitmap
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteBitmap_
+  commentId: Overload:Makaretu.Dns.DnsWriter.WriteBitmap
+  isSpec: "True"
+  fullName: Makaretu.Dns.DnsWriter.WriteBitmap
+  nameWithType: DnsWriter.WriteBitmap
 - uid: Makaretu.Dns.DnsWriter.WriteBytes(System.Byte[])
   name: WriteBytes(Byte[])
   href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteBytes_System_Byte___
@@ -1513,6 +1542,19 @@ references:
   commentId: F:Makaretu.Dns.MasterReader.Position
   fullName: Makaretu.Dns.MasterReader.Position
   nameWithType: MasterReader.Position
+- uid: Makaretu.Dns.MasterReader.ReadDnsType
+  name: ReadDnsType()
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadDnsType
+  commentId: M:Makaretu.Dns.MasterReader.ReadDnsType
+  fullName: Makaretu.Dns.MasterReader.ReadDnsType()
+  nameWithType: MasterReader.ReadDnsType()
+- uid: Makaretu.Dns.MasterReader.ReadDnsType*
+  name: ReadDnsType
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadDnsType_
+  commentId: Overload:Makaretu.Dns.MasterReader.ReadDnsType
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.ReadDnsType
+  nameWithType: MasterReader.ReadDnsType
 - uid: Makaretu.Dns.MasterReader.ReadDomainName
   name: ReadDomainName()
   href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadDomainName
@@ -2118,25 +2160,31 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.NSECRecord.ReadData
   nameWithType: NSECRecord.ReadData
-- uid: Makaretu.Dns.NSECRecord.TypeBitmaps
-  name: TypeBitmaps
-  href: api/Makaretu.Dns.NSECRecord.html#Makaretu_Dns_NSECRecord_TypeBitmaps
-  commentId: P:Makaretu.Dns.NSECRecord.TypeBitmaps
-  fullName: Makaretu.Dns.NSECRecord.TypeBitmaps
-  nameWithType: NSECRecord.TypeBitmaps
-- uid: Makaretu.Dns.NSECRecord.TypeBitmaps*
-  name: TypeBitmaps
-  href: api/Makaretu.Dns.NSECRecord.html#Makaretu_Dns_NSECRecord_TypeBitmaps_
-  commentId: Overload:Makaretu.Dns.NSECRecord.TypeBitmaps
+- uid: Makaretu.Dns.NSECRecord.Types
+  name: Types
+  href: api/Makaretu.Dns.NSECRecord.html#Makaretu_Dns_NSECRecord_Types
+  commentId: P:Makaretu.Dns.NSECRecord.Types
+  fullName: Makaretu.Dns.NSECRecord.Types
+  nameWithType: NSECRecord.Types
+- uid: Makaretu.Dns.NSECRecord.Types*
+  name: Types
+  href: api/Makaretu.Dns.NSECRecord.html#Makaretu_Dns_NSECRecord_Types_
+  commentId: Overload:Makaretu.Dns.NSECRecord.Types
   isSpec: "True"
-  fullName: Makaretu.Dns.NSECRecord.TypeBitmaps
-  nameWithType: NSECRecord.TypeBitmaps
+  fullName: Makaretu.Dns.NSECRecord.Types
+  nameWithType: NSECRecord.Types
 - uid: Makaretu.Dns.NSECRecord.WriteData(Makaretu.Dns.DnsWriter)
   name: WriteData(DnsWriter)
   href: api/Makaretu.Dns.NSECRecord.html#Makaretu_Dns_NSECRecord_WriteData_Makaretu_Dns_DnsWriter_
   commentId: M:Makaretu.Dns.NSECRecord.WriteData(Makaretu.Dns.DnsWriter)
   fullName: Makaretu.Dns.NSECRecord.WriteData(Makaretu.Dns.DnsWriter)
   nameWithType: NSECRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.NSECRecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.NSECRecord.html#Makaretu_Dns_NSECRecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.NSECRecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.NSECRecord.WriteData(System.IO.TextWriter)
+  nameWithType: NSECRecord.WriteData(TextWriter)
 - uid: Makaretu.Dns.NSECRecord.WriteData*
   name: WriteData
   href: api/Makaretu.Dns.NSECRecord.html#Makaretu_Dns_NSECRecord_WriteData_
