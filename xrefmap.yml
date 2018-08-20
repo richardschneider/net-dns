@@ -305,6 +305,24 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.CNAMERecord.WriteData
   nameWithType: CNAMERecord.WriteData
+- uid: Makaretu.Dns.DigestType
+  name: DigestType
+  href: api/Makaretu.Dns.DigestType.html
+  commentId: T:Makaretu.Dns.DigestType
+  fullName: Makaretu.Dns.DigestType
+  nameWithType: DigestType
+- uid: Makaretu.Dns.DigestType.Sha1
+  name: Sha1
+  href: api/Makaretu.Dns.DigestType.html#Makaretu_Dns_DigestType_Sha1
+  commentId: F:Makaretu.Dns.DigestType.Sha1
+  fullName: Makaretu.Dns.DigestType.Sha1
+  nameWithType: DigestType.Sha1
+- uid: Makaretu.Dns.DigestType.Sha256
+  name: Sha256
+  href: api/Makaretu.Dns.DigestType.html#Makaretu_Dns_DigestType_Sha256
+  commentId: F:Makaretu.Dns.DigestType.Sha256
+  fullName: Makaretu.Dns.DigestType.Sha256
+  nameWithType: DigestType.Sha256
 - uid: Makaretu.Dns.DNAMERecord
   name: DNAMERecord
   href: api/Makaretu.Dns.DNAMERecord.html
@@ -556,6 +574,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DnsReader.ReadByte
   nameWithType: DnsReader.ReadByte
+- uid: Makaretu.Dns.DnsReader.ReadByteLengthPrefixedBytes
+  name: ReadByteLengthPrefixedBytes()
+  href: api/Makaretu.Dns.DnsReader.html#Makaretu_Dns_DnsReader_ReadByteLengthPrefixedBytes
+  commentId: M:Makaretu.Dns.DnsReader.ReadByteLengthPrefixedBytes
+  fullName: Makaretu.Dns.DnsReader.ReadByteLengthPrefixedBytes()
+  nameWithType: DnsReader.ReadByteLengthPrefixedBytes()
+- uid: Makaretu.Dns.DnsReader.ReadByteLengthPrefixedBytes*
+  name: ReadByteLengthPrefixedBytes
+  href: api/Makaretu.Dns.DnsReader.html#Makaretu_Dns_DnsReader_ReadByteLengthPrefixedBytes_
+  commentId: Overload:Makaretu.Dns.DnsReader.ReadByteLengthPrefixedBytes
+  isSpec: "True"
+  fullName: Makaretu.Dns.DnsReader.ReadByteLengthPrefixedBytes
+  nameWithType: DnsReader.ReadByteLengthPrefixedBytes
 - uid: Makaretu.Dns.DnsReader.ReadBytes(System.Int32)
   name: ReadBytes(Int32)
   href: api/Makaretu.Dns.DnsReader.html#Makaretu_Dns_DnsReader_ReadBytes_System_Int32_
@@ -773,6 +804,18 @@ references:
   commentId: F:Makaretu.Dns.DnsType.NSEC
   fullName: Makaretu.Dns.DnsType.NSEC
   nameWithType: DnsType.NSEC
+- uid: Makaretu.Dns.DnsType.NSEC3
+  name: NSEC3
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_NSEC3
+  commentId: F:Makaretu.Dns.DnsType.NSEC3
+  fullName: Makaretu.Dns.DnsType.NSEC3
+  nameWithType: DnsType.NSEC3
+- uid: Makaretu.Dns.DnsType.NSEC3PARAM
+  name: NSEC3PARAM
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_NSEC3PARAM
+  commentId: F:Makaretu.Dns.DnsType.NSEC3PARAM
+  fullName: Makaretu.Dns.DnsType.NSEC3PARAM
+  nameWithType: DnsType.NSEC3PARAM
 - uid: Makaretu.Dns.DnsType.NULL
   name: "NULL"
   href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_NULL
@@ -900,6 +943,35 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DnsWriter.WriteBitmap
   nameWithType: DnsWriter.WriteBitmap
+- uid: Makaretu.Dns.DnsWriter.WriteByte(System.Byte)
+  name: WriteByte(Byte)
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteByte_System_Byte_
+  commentId: M:Makaretu.Dns.DnsWriter.WriteByte(System.Byte)
+  fullName: Makaretu.Dns.DnsWriter.WriteByte(System.Byte)
+  nameWithType: DnsWriter.WriteByte(Byte)
+- uid: Makaretu.Dns.DnsWriter.WriteByte*
+  name: WriteByte
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteByte_
+  commentId: Overload:Makaretu.Dns.DnsWriter.WriteByte
+  isSpec: "True"
+  fullName: Makaretu.Dns.DnsWriter.WriteByte
+  nameWithType: DnsWriter.WriteByte
+- uid: Makaretu.Dns.DnsWriter.WriteByteLengthPrefixedBytes(System.Byte[])
+  name: WriteByteLengthPrefixedBytes(Byte[])
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteByteLengthPrefixedBytes_System_Byte___
+  commentId: M:Makaretu.Dns.DnsWriter.WriteByteLengthPrefixedBytes(System.Byte[])
+  name.vb: WriteByteLengthPrefixedBytes(Byte())
+  fullName: Makaretu.Dns.DnsWriter.WriteByteLengthPrefixedBytes(System.Byte[])
+  fullName.vb: Makaretu.Dns.DnsWriter.WriteByteLengthPrefixedBytes(System.Byte())
+  nameWithType: DnsWriter.WriteByteLengthPrefixedBytes(Byte[])
+  nameWithType.vb: DnsWriter.WriteByteLengthPrefixedBytes(Byte())
+- uid: Makaretu.Dns.DnsWriter.WriteByteLengthPrefixedBytes*
+  name: WriteByteLengthPrefixedBytes
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteByteLengthPrefixedBytes_
+  commentId: Overload:Makaretu.Dns.DnsWriter.WriteByteLengthPrefixedBytes
+  isSpec: "True"
+  fullName: Makaretu.Dns.DnsWriter.WriteByteLengthPrefixedBytes
+  nameWithType: DnsWriter.WriteByteLengthPrefixedBytes
 - uid: Makaretu.Dns.DnsWriter.WriteBytes(System.Byte[])
   name: WriteBytes(Byte[])
   href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteBytes_System_Byte___
@@ -1542,6 +1614,19 @@ references:
   commentId: F:Makaretu.Dns.MasterReader.Position
   fullName: Makaretu.Dns.MasterReader.Position
   nameWithType: MasterReader.Position
+- uid: Makaretu.Dns.MasterReader.ReadByte
+  name: ReadByte()
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadByte
+  commentId: M:Makaretu.Dns.MasterReader.ReadByte
+  fullName: Makaretu.Dns.MasterReader.ReadByte()
+  nameWithType: MasterReader.ReadByte()
+- uid: Makaretu.Dns.MasterReader.ReadByte*
+  name: ReadByte
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadByte_
+  commentId: Overload:Makaretu.Dns.MasterReader.ReadByte
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.ReadByte
+  nameWithType: MasterReader.ReadByte
 - uid: Makaretu.Dns.MasterReader.ReadDnsType
   name: ReadDnsType()
   href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadDnsType
@@ -2115,6 +2200,238 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.MXRecord.WriteData
   nameWithType: MXRecord.WriteData
+- uid: Makaretu.Dns.NSEC3PARAMRecord
+  name: NSEC3PARAMRecord
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html
+  commentId: T:Makaretu.Dns.NSEC3PARAMRecord
+  fullName: Makaretu.Dns.NSEC3PARAMRecord
+  nameWithType: NSEC3PARAMRecord
+- uid: Makaretu.Dns.NSEC3PARAMRecord.#ctor
+  name: NSEC3PARAMRecord()
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord__ctor
+  commentId: M:Makaretu.Dns.NSEC3PARAMRecord.#ctor
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.NSEC3PARAMRecord()
+  nameWithType: NSEC3PARAMRecord.NSEC3PARAMRecord()
+- uid: Makaretu.Dns.NSEC3PARAMRecord.#ctor*
+  name: NSEC3PARAMRecord
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord__ctor_
+  commentId: Overload:Makaretu.Dns.NSEC3PARAMRecord.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.NSEC3PARAMRecord
+  nameWithType: NSEC3PARAMRecord.NSEC3PARAMRecord
+- uid: Makaretu.Dns.NSEC3PARAMRecord.Flags
+  name: Flags
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_Flags
+  commentId: P:Makaretu.Dns.NSEC3PARAMRecord.Flags
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.Flags
+  nameWithType: NSEC3PARAMRecord.Flags
+- uid: Makaretu.Dns.NSEC3PARAMRecord.Flags*
+  name: Flags
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_Flags_
+  commentId: Overload:Makaretu.Dns.NSEC3PARAMRecord.Flags
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.Flags
+  nameWithType: NSEC3PARAMRecord.Flags
+- uid: Makaretu.Dns.NSEC3PARAMRecord.HashAlgorithm
+  name: HashAlgorithm
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_HashAlgorithm
+  commentId: P:Makaretu.Dns.NSEC3PARAMRecord.HashAlgorithm
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.HashAlgorithm
+  nameWithType: NSEC3PARAMRecord.HashAlgorithm
+- uid: Makaretu.Dns.NSEC3PARAMRecord.HashAlgorithm*
+  name: HashAlgorithm
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_HashAlgorithm_
+  commentId: Overload:Makaretu.Dns.NSEC3PARAMRecord.HashAlgorithm
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.HashAlgorithm
+  nameWithType: NSEC3PARAMRecord.HashAlgorithm
+- uid: Makaretu.Dns.NSEC3PARAMRecord.Iterations
+  name: Iterations
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_Iterations
+  commentId: P:Makaretu.Dns.NSEC3PARAMRecord.Iterations
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.Iterations
+  nameWithType: NSEC3PARAMRecord.Iterations
+- uid: Makaretu.Dns.NSEC3PARAMRecord.Iterations*
+  name: Iterations
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_Iterations_
+  commentId: Overload:Makaretu.Dns.NSEC3PARAMRecord.Iterations
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.Iterations
+  nameWithType: NSEC3PARAMRecord.Iterations
+- uid: Makaretu.Dns.NSEC3PARAMRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  name: ReadData(DnsReader, Int32)
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_
+  commentId: M:Makaretu.Dns.NSEC3PARAMRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
+  nameWithType: NSEC3PARAMRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.NSEC3PARAMRecord.ReadData*
+  name: ReadData
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_ReadData_
+  commentId: Overload:Makaretu.Dns.NSEC3PARAMRecord.ReadData
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.ReadData
+  nameWithType: NSEC3PARAMRecord.ReadData
+- uid: Makaretu.Dns.NSEC3PARAMRecord.Salt
+  name: Salt
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_Salt
+  commentId: P:Makaretu.Dns.NSEC3PARAMRecord.Salt
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.Salt
+  nameWithType: NSEC3PARAMRecord.Salt
+- uid: Makaretu.Dns.NSEC3PARAMRecord.Salt*
+  name: Salt
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_Salt_
+  commentId: Overload:Makaretu.Dns.NSEC3PARAMRecord.Salt
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.Salt
+  nameWithType: NSEC3PARAMRecord.Salt
+- uid: Makaretu.Dns.NSEC3PARAMRecord.WriteData(Makaretu.Dns.DnsWriter)
+  name: WriteData(DnsWriter)
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_WriteData_Makaretu_Dns_DnsWriter_
+  commentId: M:Makaretu.Dns.NSEC3PARAMRecord.WriteData(Makaretu.Dns.DnsWriter)
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.WriteData(Makaretu.Dns.DnsWriter)
+  nameWithType: NSEC3PARAMRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.NSEC3PARAMRecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.NSEC3PARAMRecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.WriteData(System.IO.TextWriter)
+  nameWithType: NSEC3PARAMRecord.WriteData(TextWriter)
+- uid: Makaretu.Dns.NSEC3PARAMRecord.WriteData*
+  name: WriteData
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_WriteData_
+  commentId: Overload:Makaretu.Dns.NSEC3PARAMRecord.WriteData
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.WriteData
+  nameWithType: NSEC3PARAMRecord.WriteData
+- uid: Makaretu.Dns.NSEC3Record
+  name: NSEC3Record
+  href: api/Makaretu.Dns.NSEC3Record.html
+  commentId: T:Makaretu.Dns.NSEC3Record
+  fullName: Makaretu.Dns.NSEC3Record
+  nameWithType: NSEC3Record
+- uid: Makaretu.Dns.NSEC3Record.#ctor
+  name: NSEC3Record()
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record__ctor
+  commentId: M:Makaretu.Dns.NSEC3Record.#ctor
+  fullName: Makaretu.Dns.NSEC3Record.NSEC3Record()
+  nameWithType: NSEC3Record.NSEC3Record()
+- uid: Makaretu.Dns.NSEC3Record.#ctor*
+  name: NSEC3Record
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record__ctor_
+  commentId: Overload:Makaretu.Dns.NSEC3Record.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3Record.NSEC3Record
+  nameWithType: NSEC3Record.NSEC3Record
+- uid: Makaretu.Dns.NSEC3Record.Flags
+  name: Flags
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_Flags
+  commentId: P:Makaretu.Dns.NSEC3Record.Flags
+  fullName: Makaretu.Dns.NSEC3Record.Flags
+  nameWithType: NSEC3Record.Flags
+- uid: Makaretu.Dns.NSEC3Record.Flags*
+  name: Flags
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_Flags_
+  commentId: Overload:Makaretu.Dns.NSEC3Record.Flags
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3Record.Flags
+  nameWithType: NSEC3Record.Flags
+- uid: Makaretu.Dns.NSEC3Record.HashAlgorithm
+  name: HashAlgorithm
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_HashAlgorithm
+  commentId: P:Makaretu.Dns.NSEC3Record.HashAlgorithm
+  fullName: Makaretu.Dns.NSEC3Record.HashAlgorithm
+  nameWithType: NSEC3Record.HashAlgorithm
+- uid: Makaretu.Dns.NSEC3Record.HashAlgorithm*
+  name: HashAlgorithm
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_HashAlgorithm_
+  commentId: Overload:Makaretu.Dns.NSEC3Record.HashAlgorithm
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3Record.HashAlgorithm
+  nameWithType: NSEC3Record.HashAlgorithm
+- uid: Makaretu.Dns.NSEC3Record.Iterations
+  name: Iterations
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_Iterations
+  commentId: P:Makaretu.Dns.NSEC3Record.Iterations
+  fullName: Makaretu.Dns.NSEC3Record.Iterations
+  nameWithType: NSEC3Record.Iterations
+- uid: Makaretu.Dns.NSEC3Record.Iterations*
+  name: Iterations
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_Iterations_
+  commentId: Overload:Makaretu.Dns.NSEC3Record.Iterations
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3Record.Iterations
+  nameWithType: NSEC3Record.Iterations
+- uid: Makaretu.Dns.NSEC3Record.NextHashedOwnerName
+  name: NextHashedOwnerName
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_NextHashedOwnerName
+  commentId: P:Makaretu.Dns.NSEC3Record.NextHashedOwnerName
+  fullName: Makaretu.Dns.NSEC3Record.NextHashedOwnerName
+  nameWithType: NSEC3Record.NextHashedOwnerName
+- uid: Makaretu.Dns.NSEC3Record.NextHashedOwnerName*
+  name: NextHashedOwnerName
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_NextHashedOwnerName_
+  commentId: Overload:Makaretu.Dns.NSEC3Record.NextHashedOwnerName
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3Record.NextHashedOwnerName
+  nameWithType: NSEC3Record.NextHashedOwnerName
+- uid: Makaretu.Dns.NSEC3Record.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  name: ReadData(DnsReader, Int32)
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_ReadData_Makaretu_Dns_DnsReader_System_Int32_
+  commentId: M:Makaretu.Dns.NSEC3Record.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  fullName: Makaretu.Dns.NSEC3Record.ReadData(Makaretu.Dns.DnsReader, System.Int32)
+  nameWithType: NSEC3Record.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.NSEC3Record.ReadData*
+  name: ReadData
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_ReadData_
+  commentId: Overload:Makaretu.Dns.NSEC3Record.ReadData
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3Record.ReadData
+  nameWithType: NSEC3Record.ReadData
+- uid: Makaretu.Dns.NSEC3Record.Salt
+  name: Salt
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_Salt
+  commentId: P:Makaretu.Dns.NSEC3Record.Salt
+  fullName: Makaretu.Dns.NSEC3Record.Salt
+  nameWithType: NSEC3Record.Salt
+- uid: Makaretu.Dns.NSEC3Record.Salt*
+  name: Salt
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_Salt_
+  commentId: Overload:Makaretu.Dns.NSEC3Record.Salt
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3Record.Salt
+  nameWithType: NSEC3Record.Salt
+- uid: Makaretu.Dns.NSEC3Record.Types
+  name: Types
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_Types
+  commentId: P:Makaretu.Dns.NSEC3Record.Types
+  fullName: Makaretu.Dns.NSEC3Record.Types
+  nameWithType: NSEC3Record.Types
+- uid: Makaretu.Dns.NSEC3Record.Types*
+  name: Types
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_Types_
+  commentId: Overload:Makaretu.Dns.NSEC3Record.Types
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3Record.Types
+  nameWithType: NSEC3Record.Types
+- uid: Makaretu.Dns.NSEC3Record.WriteData(Makaretu.Dns.DnsWriter)
+  name: WriteData(DnsWriter)
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_WriteData_Makaretu_Dns_DnsWriter_
+  commentId: M:Makaretu.Dns.NSEC3Record.WriteData(Makaretu.Dns.DnsWriter)
+  fullName: Makaretu.Dns.NSEC3Record.WriteData(Makaretu.Dns.DnsWriter)
+  nameWithType: NSEC3Record.WriteData(DnsWriter)
+- uid: Makaretu.Dns.NSEC3Record.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.NSEC3Record.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.NSEC3Record.WriteData(System.IO.TextWriter)
+  nameWithType: NSEC3Record.WriteData(TextWriter)
+- uid: Makaretu.Dns.NSEC3Record.WriteData*
+  name: WriteData
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_WriteData_
+  commentId: Overload:Makaretu.Dns.NSEC3Record.WriteData
+  isSpec: "True"
+  fullName: Makaretu.Dns.NSEC3Record.WriteData
+  nameWithType: NSEC3Record.WriteData
 - uid: Makaretu.Dns.NSECRecord
   name: NSECRecord
   href: api/Makaretu.Dns.NSECRecord.html
