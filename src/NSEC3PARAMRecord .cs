@@ -8,20 +8,20 @@ using System.Text;
 namespace Makaretu.Dns
 {
     /// <summary>
-    ///   Authenticated denial of existence for DNS Resource Record Sets.
+    ///   Parameters needed by authoritative servers to calculate hashed owner names.
     /// </summary>
-    public class NSEC3Record : ResourceRecord
+    public class NSEC3PARAMRecord : ResourceRecord
     {
         /// <summary>
-        ///   Creates a new instance of the <see cref="NSEC3Record"/> class.
+        ///   Creates a new instance of the <see cref="NSEC3PARAMRecord"/> class.
         /// </summary>
-        public NSEC3Record() : base()
+        public NSEC3PARAMRecord() : base()
         {
-            Type = DnsType.NSEC3;
+            Type = DnsType.NSEC3PARAM;
         }
 
         /// <summary>
-        ///   The cryptographic hash algorithm used to create the <see cref="NextHashedOwnerName"/>.
+        ///   The cryptographic hash algorithm used to create the hashed owner name.
         /// </summary>
         /// <value>
         ///   One of the <see cref="DigestType"/> value.
@@ -46,19 +46,6 @@ namespace Makaretu.Dns
         /// </remarks>
         public byte[] Salt { get; set; }
 
-        /// <summary>
-        ///   The next hashed owner name that has authoritative data.
-        /// </summary>
-        public byte[] NextHashedOwnerName { get; set; }
-
-        /// <summary>
-        ///   The sequence of RR types present at the NSEC3 RR's owner name.
-        /// </summary>
-        /// <value>
-        ///   Defaults to the empty list.
-        /// </value>
-        public List<DnsType> Types { get; set; } = new List<DnsType>();
-
         /// <inheritdoc />
         protected override void ReadData(DnsReader reader, int length)
         {
@@ -68,12 +55,6 @@ namespace Makaretu.Dns
             Flags = reader.ReadByte();
             Iterations = reader.ReadUInt16();
             Salt = reader.ReadByteLengthPrefixedBytes();
-            NextHashedOwnerName = reader.ReadByteLengthPrefixedBytes();
-
-            while (reader.Position < end)
-            {
-                Types.AddRange(reader.ReadBitmap().Select(t => (DnsType)t));
-            }
         }
 
         /// <inheritdoc />
@@ -83,8 +64,6 @@ namespace Makaretu.Dns
             writer.WriteByte(Flags);
             writer.WriteUInt16(Iterations);
             writer.WriteByteLengthPrefixedBytes(Salt);
-            writer.WriteByteLengthPrefixedBytes(NextHashedOwnerName);
-            writer.WriteBitmap(Types.Select(t => (ushort)t));
         }
 
         internal override void ReadData(MasterReader reader)
@@ -96,13 +75,6 @@ namespace Makaretu.Dns
             var salt = reader.ReadString();
             if (salt != "-")
                 Salt = Base16.Decode(salt);
-
-            NextHashedOwnerName = Base32.ExtendedHex.Decode(reader.ReadString());
-
-            while (!reader.IsEndOfLine())
-            {
-                Types.Add(reader.ReadDnsType());
-            }
         }
 
         /// <inheritdoc />
@@ -122,25 +94,6 @@ namespace Makaretu.Dns
             else
             {
                 writer.Write(Base16.EncodeLower(Salt));
-            }
-            writer.Write(' ');
-
-            writer.Write(Base32.ExtendedHex.Encode(NextHashedOwnerName, padding: false).ToLowerInvariant());
-            writer.Write(' ');
-
-            bool next = false;
-            foreach (var type in Types)
-            {
-                if (next)
-                {
-                    writer.Write(' ');
-                }
-                if (!Enum.IsDefined(typeof(DnsType), type))
-                {
-                    writer.Write("TYPE");
-                }
-                writer.Write(type);
-                next = true;
             }
         }
     }

@@ -184,6 +184,13 @@ namespace Makaretu.Dns
         NSEC3 = 50,
 
         /// <summary>
+        ///   Parameters needed by authoritative servers to calculate hashed owner names.
+        /// </summary>
+        /// <seealso href="https://tools.ietf.org/html/rfc5155#section-4"/>
+        /// <seealso cref="NSEC3PARAMRecord"/>
+        NSEC3PARAM = 51,
+
+        /// <summary>
         /// A request for a transfer of an entire zone.
         /// </summary>
         /// <seealso href="https://tools.ietf.org/html/rfc1035">RFC 1035</seealso>

@@ -33,6 +33,7 @@ namespace Makaretu.Dns
             Register<MXRecord>();
             Register<NSECRecord>();
             Register<NSEC3Record>();
+            Register<NSEC3PARAMRecord>();
             Register<NSRecord>();
             Register<NULLRecord>();
             Register<OPTRecord>();
