@@ -78,6 +78,18 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Read the bytes with a length prefix.
+        /// </summary>
+        /// <returns>
+        ///   The next N bytes.
+        /// </returns>
+        public byte[] ReadByteLengthPrefixedBytes()
+        {
+            int length = ReadByte();
+            return ReadBytes(length);
+        }
+
+        /// <summary>
         ///   Read an unsigned short.
         /// </summary>
         /// <returns>

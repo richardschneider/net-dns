@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleBase;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -350,7 +351,7 @@ namespace Makaretu.Dns
             writer.Write("\\# ");
             writer.Write(rdata.Length);
             writer.Write(' ');
-            writer.Write(BitConverter.ToString(rdata).Replace("-", ""));
+            writer.Write(Base16.EncodeLower(rdata));
         }
 
         /// <summary>

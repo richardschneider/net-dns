@@ -72,9 +72,20 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Write a byte.
+        /// </summary>
+        public void WriteByte(byte value)
+        {
+            stream.WriteByte(value);
+            ++Position;
+        }
+
+        /// <summary>
         ///   Write a sequence of bytes.
         /// </summary>
-        /// <param name="bytes"></param>
+        /// <param name="bytes">
+        ///   A sequence of bytes to write.
+        /// </param>
         public void WriteBytes(byte[] bytes)
         {
             if (bytes != null)
@@ -82,6 +93,22 @@ namespace Makaretu.Dns
                 stream.Write(bytes, 0, bytes.Length);
                 Position += bytes.Length;
             }
+        }
+
+        /// <summary>
+        ///   Write a sequence of bytes prefixed with the length as a byte.
+        /// </summary>
+        /// <param name="bytes">
+        ///   A sequence of bytes to write.
+        /// </param>
+        public void WriteByteLengthPrefixedBytes(byte[] bytes)
+        {
+            var length = bytes?.Length ?? 0;
+            if (length > byte.MaxValue)
+                throw new ArgumentException($"Bytes length can not exceed {byte.MaxValue}.");
+
+            WriteByte((byte)length);
+            WriteBytes(bytes);
         }
 
         /// <summary>
