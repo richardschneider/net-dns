@@ -125,6 +125,23 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Read a DNS Type.
+        /// </summary>
+        /// <remarks>
+        ///   Either the name of a <see cref="DnsType"/> or
+        ///   the string "TYPEx".
+        /// </remarks>
+        public DnsType ReadDnsType()
+        {
+            var token = ReadToken();
+            if (token.StartsWith("TYPE"))
+            {
+                return (DnsType)ushort.Parse(token.Substring(4), CultureInfo.InvariantCulture);
+            }
+            return (DnsType)Enum.Parse(typeof(DnsType), token);
+        }
+
+        /// <summary>
         ///   Read hex encoded RDATA.
         /// </summary>
         /// <returns>

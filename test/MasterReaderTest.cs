@@ -237,5 +237,30 @@ emanon.org A 127.0.0.1
             var reader = new MasterReader(new StringReader("\\# 3 abcd"));
             var _ = reader.ReadResourceData();
         }
+
+        [TestMethod]
+        public void ReadType()
+        {
+            var reader = new MasterReader(new StringReader("A TYPE1 MX"));
+            Assert.AreEqual(DnsType.A, reader.ReadDnsType());
+            Assert.AreEqual(DnsType.A, reader.ReadDnsType());
+            Assert.AreEqual(DnsType.MX, reader.ReadDnsType());
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception), AllowDerivedTypes = true)]
+        public void ReadType_BadName()
+        {
+            var reader = new MasterReader(new StringReader("BADNAME"));
+            reader.ReadDnsType();
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FormatException))]
+        public void ReadType_BadDigit()
+        {
+            var reader = new MasterReader(new StringReader("TYPEX"));
+            reader.ReadDnsType();
+        }
     }
 }

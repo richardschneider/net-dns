@@ -116,5 +116,30 @@ namespace Makaretu.Dns
             Assert.AreEqual("", reader.ReadDomainName());
             Assert.AreEqual("abc", reader.ReadString());
         }
+
+        [TestMethod]
+        public void Bitmap()
+        {
+            // From https://tools.ietf.org/html/rfc3845#section-2.3
+            var wire = new byte[]
+            {
+                0x00, 0x06, 0x40, 0x01, 0x00, 0x00, 0x00, 0x03,
+                0x04, 0x1b, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x20
+            };
+            var ms = new MemoryStream(wire, false);
+            var reader = new DnsReader(ms);
+            var first = new ushort[] { 1, 15, 46, 47 };
+            var second = new ushort[] { 1234 };
+            CollectionAssert.AreEqual(first, reader.ReadBitmap());
+            CollectionAssert.AreEqual(second, reader.ReadBitmap());
+
+            ms = new MemoryStream();
+            var writer = new DnsWriter(ms);
+            writer.WriteBitmap(new ushort[] { 1, 15, 46, 47, 1234 });
+            CollectionAssert.AreEqual(wire, ms.ToArray());
+        }
     }
 }

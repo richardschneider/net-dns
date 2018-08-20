@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Collections;
 
 namespace Makaretu.Dns
 {
@@ -194,6 +196,73 @@ namespace Makaretu.Dns
         public void WriteIPAddress(IPAddress value)
         {
             WriteBytes(value.GetAddressBytes());
+        }
+
+        /// <summary>
+        ///   Write the bitmap(s) for the values.
+        /// </summary>
+        /// <param name="values">
+        ///   The sequence of values to encode into a bitmap.
+        /// </param>
+        public void WriteBitmap(IEnumerable<ushort> values)
+        {
+            var windows = values
+                // Convert values into Window and Mask
+                .Select(v =>
+                {
+                    var w = new { Window = v / 256, Mask = new BitArray(256) };
+                    w.Mask[v & 0xff] = true;
+                    return w;
+                })
+                // Group by Window and merge the Masks
+                .GroupBy(w => w.Window)
+                .Select(g => new
+                {
+                    Window = g.Key,
+                    Mask = g.Select(w => w.Mask).Aggregate((a, b) => a.Or(b))
+                })
+                .OrderBy(w => w.Window)
+                // TODO: Trim trailing zeros
+                .ToArray();
+
+            foreach (var window in windows)
+            {
+                // BitArray to byte array and remoove trailing zeros.
+                var mask = ToBytes(window.Mask, true).ToList();
+                for (int i = mask.Count - 1; i > 0; --i)
+                {
+                    if (mask[i] != 0)
+                        break;
+                    mask.RemoveAt(i);
+                }
+
+                stream.WriteByte((byte)window.Window);
+                stream.WriteByte((byte)mask.Count);
+                Position += 2;
+                WriteBytes(mask.ToArray());
+            }
+        }
+
+        static IEnumerable<Byte> ToBytes(BitArray bits, bool MSB = false)
+        {
+            int bitCount = 7;
+            int outByte = 0;
+
+            foreach (bool bitValue in bits)
+            {
+                if (bitValue)
+                    outByte |= MSB ? 1 << bitCount : 1 << (7 - bitCount);
+                if (bitCount == 0)
+                {
+                    yield return (byte)outByte;
+                    bitCount = 8;
+                    outByte = 0;
+                }
+                bitCount--;
+            }
+            // Last partially decoded byte
+            if (bitCount < 7)
+                yield return (byte)outByte;
         }
     }
 }

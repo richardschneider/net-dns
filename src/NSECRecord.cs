@@ -24,27 +24,66 @@ namespace Makaretu.Dns
         ///   The next owner name that has authoritative data or contains a
         ///   delegation point NS RRset
         /// </summary>
-        public string NextOwnerName { get; set; }
+        /// <remarks>
+        ///   Defaults to the empty string.
+        /// </remarks>
+        public string NextOwnerName { get; set; } = String.Empty;
 
         /// <summary>
-        ///   Identifies the RRset types that exist at the NSEC RR's owner name.
+        ///   The sequence of RR types present at the NSEC RR's owner name.
         /// </summary>
-        public byte[] TypeBitmaps { get; set; }
+        /// <value>
+        ///   Defaults to the empty list.
+        /// </value>
+        public List<DnsType> Types { get; set; } = new List<DnsType>();
 
         /// <inheritdoc />
         protected override void ReadData(DnsReader reader, int length)
         {
+            var end = reader.Position + length;
             NextOwnerName = reader.ReadDomainName();
-            var tbLength = reader.ReadUInt16();
-            TypeBitmaps = reader.ReadBytes(tbLength);
+            while (reader.Position < end)
+            {
+                Types.AddRange(reader.ReadBitmap().Select(t => (DnsType)t));
+            }
         }
 
         /// <inheritdoc />
         protected override void WriteData(DnsWriter writer)
         {
-            writer.WriteDomainName(NextOwnerName);
-            writer.WriteUInt16((ushort)TypeBitmaps.Length);
-            writer.WriteBytes(TypeBitmaps);
+            writer.WriteDomainName(NextOwnerName, uncompressed: true);
+            writer.WriteBitmap(Types.Select(t => (ushort)t));
+        }
+
+        internal override void ReadData(MasterReader reader)
+        {
+            NextOwnerName = reader.ReadDomainName();
+            while (!reader.IsEndOfLine())
+            {
+                Types.Add(reader.ReadDnsType());
+            }
+        }
+
+        /// <inheritdoc />
+        protected override void WriteData(TextWriter writer)
+        {
+            writer.Write(NextOwnerName);
+            writer.Write(' ');
+
+            bool next = false;
+            foreach (var type in Types)
+            {
+                if (next)
+                {
+                    writer.Write(' ');
+                }
+                if (!Enum.IsDefined(typeof(DnsType), type))
+                {
+                    writer.Write("TYPE");
+                }
+                writer.Write(type);
+                next = true;
+            }
         }
     }
 }

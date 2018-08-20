@@ -219,5 +219,35 @@ namespace Makaretu.Dns
             var address = ReadBytes(length);
             return new IPAddress(address);
         }
+
+        /// <summary>
+        ///   Reads a bitmap.
+        /// </summary>
+        /// <returns>
+        ///   The sequence of values encoded by the bitmap.
+        /// </returns>
+        /// <remarks>
+        ///   <see href="https://tools.ietf.org/html/rfc3845#section-2.1.2"/> for the
+        ///   encoding details.
+        /// </remarks>
+        public List<ushort> ReadBitmap()
+        {
+            var values = new List<ushort>();
+            var block = ReadByte();
+            var length = ReadByte();
+            int offset = block * 256;
+            for (int i = 0; i < length; ++i, offset += 8)
+            {
+                var bits = ReadByte();
+                for (int bit = 0; bit < 8; ++bit)
+                {
+                    if ((bits & (1 << Math.Abs(bit - 7))) != 0)
+                    {
+                        values.Add((ushort)(offset + bit));
+                    }
+                }
+            }
+            return values;
+        }
     }
 }
