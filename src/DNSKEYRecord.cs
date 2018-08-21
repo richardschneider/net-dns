@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Makaretu.Dns
@@ -53,7 +54,7 @@ namespace Makaretu.Dns
         ///   Calculates the key tag.
         /// </summary>
         /// <remarks>
-        ///   <see cref="https://tools.ietf.org/html/rfc4034#appendix-B"/> for the details.
+        ///   <see href="https://tools.ietf.org/html/rfc4034#appendix-B"/> for the details.
         /// </remarks>
         public ushort KeyTag()
         {
@@ -67,6 +68,36 @@ namespace Makaretu.Dns
             }
             ac += (ac >> 16) & 0xFFFF;
             return (ushort) (ac & 0xFFFF);
+        }
+
+        /// <summary>
+        ///   Create a delegation signer from the key.
+        /// </summary>
+        /// <returns>
+        ///   A <see cref="DSRecord"/> that refers to this key.
+        /// </returns>
+        public DSRecord CreateDSRecord()
+        {
+            byte[] digest;
+            using (var ms = new MemoryStream())
+            using (var hasher = SHA1.Create())
+            {
+                var writer = new DnsWriter(ms);
+                writer.WriteDomainName(CanonicalName, uncompressed: true);
+                this.WriteData(writer);
+                ms.Position = 0;
+                digest = hasher.ComputeHash(ms);
+            }
+            return new DSRecord
+            {
+                Algorithm = Algorithm,
+                Class = Class,
+                Digest = digest,
+                HashAlgorithm = DigestType.Sha1,
+                KeyTag = KeyTag(),
+                Name = Name,
+                TTL = TTL
+            };
         }
 
         /// <inheritdoc />

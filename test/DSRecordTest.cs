@@ -21,7 +21,7 @@ namespace Makaretu.Dns
                 KeyTag = 60485,
                 Algorithm = SecurityAlgorithm.RSASHA1,
                 HashAlgorithm = DigestType.Sha1,
-                Digest = Base16.Decode("2BB183AF5F22588179A53B0AAD1A292118")
+                Digest = Base16.Decode("2BB183AF5F22588179A53B0A98631FAD1A292118")
             };
             var b = (DSRecord)new ResourceRecord().Read(a.ToByteArray());
             Assert.AreEqual(a.Name, b.Name);
@@ -44,7 +44,7 @@ namespace Makaretu.Dns
                 KeyTag = 60485,
                 Algorithm = SecurityAlgorithm.RSASHA1,
                 HashAlgorithm = DigestType.Sha1,
-                Digest = Base16.Decode("2BB183AF5F22588179A53B0AAD1A292118")
+                Digest = Base16.Decode("2BB183AF5F22588179A53B0A98631FAD1A292118")
             };
             var b = (DSRecord)new ResourceRecord().Read(a.ToString());
             Assert.AreEqual(a.Name, b.Name);

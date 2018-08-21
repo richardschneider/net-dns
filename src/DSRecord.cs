@@ -10,6 +10,10 @@ namespace Makaretu.Dns
     /// <summary>
     ///   Delegation Signer.
     /// </summary>
+    /// <remarks>
+    ///   The <see cref="DNSKEYRecord.CreateDSRecord"/> can be used to
+    ///   create <see cref="DSRecord"/> from a <see cref="DNSKEYRecord"/>.
+    /// </remarks>
     public class DSRecord : ResourceRecord
     {
         /// <summary>

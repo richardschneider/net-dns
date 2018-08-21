@@ -205,5 +205,12 @@ namespace Makaretu.Dns
             };
             Assert.AreEqual("x.emanon.org IN TYPE1234 \\# 0", a.ToString());
         }
+
+        [TestMethod]
+        public void CanonicalName()
+        {
+            var rr = new ResourceRecord { Name = "x.EmAnOn.OrG" };
+            Assert.AreEqual("x.emanon.org", rr.CanonicalName);
+        }
     }
 }

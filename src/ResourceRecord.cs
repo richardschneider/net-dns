@@ -44,6 +44,21 @@ namespace Makaretu.Dns
         public string Name { get; set; }
 
         /// <summary>
+        ///   The canonical form of the owner name.
+        /// </summary>
+        /// <remarks>
+        ///   All uppercase US-ASCII letters in the <see cref="Name"/> are
+        ///   replaced by the corresponding lowercase US-ASCII letters.
+        /// </remarks>
+        public string CanonicalName
+        {
+            get
+            {
+                return Name.ToLowerInvariant();
+            }
+        }
+
+        /// <summary>
         ///    One of the RR TYPE codes.
         /// </summary>
         public DnsType Type { get; set; }
