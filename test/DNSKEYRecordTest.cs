@@ -59,5 +59,28 @@ namespace Makaretu.Dns
             CollectionAssert.AreEqual(a.PublicKey, b.PublicKey);
         }
 
+        [TestMethod]
+        public void KeyTag()
+        {
+            // From https://tools.ietf.org/html/rfc4034#section-5.4
+            var a = new DNSKEYRecord
+            {
+                Name = "dskey.example.com",
+                TTL = TimeSpan.FromSeconds(86400),
+                Flags = 256,
+                Algorithm = SecurityAlgorithm.RSASHA1,
+                PublicKey = Convert.FromBase64String(
+                    @"AQOeiiR0GOMYkDshWoSKz9Xz
+                      fwJr1AYtsmx3TGkJaNXVbfi/
+                      2pHm822aJ5iI9BMzNXxeYCmZ
+                      DRD99WYwYqUSdjMmmAphXdvx
+                      egXd/M5+X7OrzKBaMbCVdFLU
+                      Uh6DhweJBjEVv5f2wwjM9Xzc
+                      nOf+EPbtG9DMBmADjFDc2w/r
+                      ljwvFw==")
+            };
+            Assert.AreEqual(60485, a.KeyTag());
+        }
+
     }
 }

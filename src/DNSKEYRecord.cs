@@ -49,6 +49,26 @@ namespace Makaretu.Dns
         /// </remarks>
         public byte[] PublicKey { get; set; }
 
+        /// <summary>
+        ///   Calculates the key tag.
+        /// </summary>
+        /// <remarks>
+        ///   <see cref="https://tools.ietf.org/html/rfc4034#appendix-B"/> for the details.
+        /// </remarks>
+        public ushort KeyTag()
+        {
+            var key = this.GetData();
+            var length = key.Length;
+            int ac = 0;
+
+            for (var i = 0; i < length; ++i)
+            {
+                ac += (i & 1) == 1 ? key[i] : key[i] << 8;
+            }
+            ac += (ac >> 16) & 0xFFFF;
+            return (ushort) (ac & 0xFFFF);
+        }
+
         /// <inheritdoc />
         protected override void ReadData(DnsReader reader, int length)
         {
