@@ -112,6 +112,18 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Read bytes encoded in base-64.
+        /// </summary>
+        /// <returns>
+        ///   The bytes.
+        /// </returns>
+        public byte[] ReadBase64String()
+        {
+            // TODO: must handle embedded space and CRLFs inside of parens.
+            return Convert.FromBase64String(ReadToken());
+        }
+
+        /// <summary>
         ///   Read a time span (interval)
         /// </summary>
         /// <returns>

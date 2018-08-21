@@ -177,6 +177,13 @@ namespace Makaretu.Dns
         NSEC = 47,
 
         /// <summary>
+        ///   Public key cryptography to sign and authenticate resource records.
+        /// </summary>
+        /// <seealso href="https://tools.ietf.org/html/rfc4034#section-2.1"/>
+        /// <seealso cref="DNSKEYRecord"/>
+        DNSKEY = 48,
+
+        /// <summary>
         ///   Authenticated next secure owner.
         /// </summary>
         /// <seealso href="https://tools.ietf.org/html/rfc5155"/>

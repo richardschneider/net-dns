@@ -12,6 +12,7 @@ The following resource records are implemented
 - [AFSDB](xref:Makaretu.Dns.AFSDBRecord) AFS Database
 - [CNAME](xref:Makaretu.Dns.CNAMERecord) Alias
 - [DNAME](xref:Makaretu.Dns.DNAMERecord) Alias for a name and all its subnames
+- [DNSKEY](xref:Makaretu.Dns.DNSKEYRecord) Public Key
 - [HINFO](xref:Makaretu.Dns.HINFORecord) Host Info
 - [MX](xref:Makaretu.Dns.MXRecord) Mail Exchange
 - [NS](xref:Makaretu.Dns.NSRecord) Name Server
