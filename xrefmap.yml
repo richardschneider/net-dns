@@ -431,6 +431,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DNSKEYRecord.Algorithm
   nameWithType: DNSKEYRecord.Algorithm
+- uid: Makaretu.Dns.DNSKEYRecord.CreateDSRecord
+  name: CreateDSRecord()
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_CreateDSRecord
+  commentId: M:Makaretu.Dns.DNSKEYRecord.CreateDSRecord
+  fullName: Makaretu.Dns.DNSKEYRecord.CreateDSRecord()
+  nameWithType: DNSKEYRecord.CreateDSRecord()
+- uid: Makaretu.Dns.DNSKEYRecord.CreateDSRecord*
+  name: CreateDSRecord
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_CreateDSRecord_
+  commentId: Overload:Makaretu.Dns.DNSKEYRecord.CreateDSRecord
+  isSpec: "True"
+  fullName: Makaretu.Dns.DNSKEYRecord.CreateDSRecord
+  nameWithType: DNSKEYRecord.CreateDSRecord
 - uid: Makaretu.Dns.DNSKEYRecord.Flags
   name: Flags
   href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_Flags
@@ -444,6 +457,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DNSKEYRecord.Flags
   nameWithType: DNSKEYRecord.Flags
+- uid: Makaretu.Dns.DNSKEYRecord.KeyTag
+  name: KeyTag()
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_KeyTag
+  commentId: M:Makaretu.Dns.DNSKEYRecord.KeyTag
+  fullName: Makaretu.Dns.DNSKEYRecord.KeyTag()
+  nameWithType: DNSKEYRecord.KeyTag()
+- uid: Makaretu.Dns.DNSKEYRecord.KeyTag*
+  name: KeyTag
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_KeyTag_
+  commentId: Overload:Makaretu.Dns.DNSKEYRecord.KeyTag
+  isSpec: "True"
+  fullName: Makaretu.Dns.DNSKEYRecord.KeyTag
+  nameWithType: DNSKEYRecord.KeyTag
 - uid: Makaretu.Dns.DNSKEYRecord.Protocol
   name: Protocol
   href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_Protocol
@@ -3705,6 +3731,19 @@ references:
   commentId: T:Makaretu.Dns.ResourceRecord
   fullName: Makaretu.Dns.ResourceRecord
   nameWithType: ResourceRecord
+- uid: Makaretu.Dns.ResourceRecord.CanonicalName
+  name: CanonicalName
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_CanonicalName
+  commentId: P:Makaretu.Dns.ResourceRecord.CanonicalName
+  fullName: Makaretu.Dns.ResourceRecord.CanonicalName
+  nameWithType: ResourceRecord.CanonicalName
+- uid: Makaretu.Dns.ResourceRecord.CanonicalName*
+  name: CanonicalName
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_CanonicalName_
+  commentId: Overload:Makaretu.Dns.ResourceRecord.CanonicalName
+  isSpec: "True"
+  fullName: Makaretu.Dns.ResourceRecord.CanonicalName
+  nameWithType: ResourceRecord.CanonicalName
 - uid: Makaretu.Dns.ResourceRecord.Class
   name: Class
   href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Class
