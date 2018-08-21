@@ -853,6 +853,12 @@ references:
   commentId: F:Makaretu.Dns.DnsType.DNSKEY
   fullName: Makaretu.Dns.DnsType.DNSKEY
   nameWithType: DnsType.DNSKEY
+- uid: Makaretu.Dns.DnsType.DS
+  name: DS
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_DS
+  commentId: F:Makaretu.Dns.DnsType.DS
+  fullName: Makaretu.Dns.DnsType.DS
+  nameWithType: DnsType.DS
 - uid: Makaretu.Dns.DnsType.HINFO
   name: HINFO
   href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_HINFO
@@ -1187,6 +1193,109 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DnsWriter.WriteUInt32
   nameWithType: DnsWriter.WriteUInt32
+- uid: Makaretu.Dns.DSRecord
+  name: DSRecord
+  href: api/Makaretu.Dns.DSRecord.html
+  commentId: T:Makaretu.Dns.DSRecord
+  fullName: Makaretu.Dns.DSRecord
+  nameWithType: DSRecord
+- uid: Makaretu.Dns.DSRecord.#ctor
+  name: DSRecord()
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord__ctor
+  commentId: M:Makaretu.Dns.DSRecord.#ctor
+  fullName: Makaretu.Dns.DSRecord.DSRecord()
+  nameWithType: DSRecord.DSRecord()
+- uid: Makaretu.Dns.DSRecord.#ctor*
+  name: DSRecord
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord__ctor_
+  commentId: Overload:Makaretu.Dns.DSRecord.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Dns.DSRecord.DSRecord
+  nameWithType: DSRecord.DSRecord
+- uid: Makaretu.Dns.DSRecord.Algorithm
+  name: Algorithm
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_Algorithm
+  commentId: P:Makaretu.Dns.DSRecord.Algorithm
+  fullName: Makaretu.Dns.DSRecord.Algorithm
+  nameWithType: DSRecord.Algorithm
+- uid: Makaretu.Dns.DSRecord.Algorithm*
+  name: Algorithm
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_Algorithm_
+  commentId: Overload:Makaretu.Dns.DSRecord.Algorithm
+  isSpec: "True"
+  fullName: Makaretu.Dns.DSRecord.Algorithm
+  nameWithType: DSRecord.Algorithm
+- uid: Makaretu.Dns.DSRecord.Digest
+  name: Digest
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_Digest
+  commentId: P:Makaretu.Dns.DSRecord.Digest
+  fullName: Makaretu.Dns.DSRecord.Digest
+  nameWithType: DSRecord.Digest
+- uid: Makaretu.Dns.DSRecord.Digest*
+  name: Digest
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_Digest_
+  commentId: Overload:Makaretu.Dns.DSRecord.Digest
+  isSpec: "True"
+  fullName: Makaretu.Dns.DSRecord.Digest
+  nameWithType: DSRecord.Digest
+- uid: Makaretu.Dns.DSRecord.HashAlgorithm
+  name: HashAlgorithm
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_HashAlgorithm
+  commentId: P:Makaretu.Dns.DSRecord.HashAlgorithm
+  fullName: Makaretu.Dns.DSRecord.HashAlgorithm
+  nameWithType: DSRecord.HashAlgorithm
+- uid: Makaretu.Dns.DSRecord.HashAlgorithm*
+  name: HashAlgorithm
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_HashAlgorithm_
+  commentId: Overload:Makaretu.Dns.DSRecord.HashAlgorithm
+  isSpec: "True"
+  fullName: Makaretu.Dns.DSRecord.HashAlgorithm
+  nameWithType: DSRecord.HashAlgorithm
+- uid: Makaretu.Dns.DSRecord.KeyTag
+  name: KeyTag
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_KeyTag
+  commentId: P:Makaretu.Dns.DSRecord.KeyTag
+  fullName: Makaretu.Dns.DSRecord.KeyTag
+  nameWithType: DSRecord.KeyTag
+- uid: Makaretu.Dns.DSRecord.KeyTag*
+  name: KeyTag
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_KeyTag_
+  commentId: Overload:Makaretu.Dns.DSRecord.KeyTag
+  isSpec: "True"
+  fullName: Makaretu.Dns.DSRecord.KeyTag
+  nameWithType: DSRecord.KeyTag
+- uid: Makaretu.Dns.DSRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  name: ReadData(DnsReader, Int32)
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_
+  commentId: M:Makaretu.Dns.DSRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  fullName: Makaretu.Dns.DSRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
+  nameWithType: DSRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.DSRecord.ReadData*
+  name: ReadData
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_ReadData_
+  commentId: Overload:Makaretu.Dns.DSRecord.ReadData
+  isSpec: "True"
+  fullName: Makaretu.Dns.DSRecord.ReadData
+  nameWithType: DSRecord.ReadData
+- uid: Makaretu.Dns.DSRecord.WriteData(Makaretu.Dns.DnsWriter)
+  name: WriteData(DnsWriter)
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_WriteData_Makaretu_Dns_DnsWriter_
+  commentId: M:Makaretu.Dns.DSRecord.WriteData(Makaretu.Dns.DnsWriter)
+  fullName: Makaretu.Dns.DSRecord.WriteData(Makaretu.Dns.DnsWriter)
+  nameWithType: DSRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.DSRecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.DSRecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.DSRecord.WriteData(System.IO.TextWriter)
+  nameWithType: DSRecord.WriteData(TextWriter)
+- uid: Makaretu.Dns.DSRecord.WriteData*
+  name: WriteData
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_WriteData_
+  commentId: Overload:Makaretu.Dns.DSRecord.WriteData
+  isSpec: "True"
+  fullName: Makaretu.Dns.DSRecord.WriteData
+  nameWithType: DSRecord.WriteData
 - uid: Makaretu.Dns.EdnsKeepaliveOption
   name: EdnsKeepaliveOption
   href: api/Makaretu.Dns.EdnsKeepaliveOption.html
