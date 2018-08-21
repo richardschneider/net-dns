@@ -30,6 +30,7 @@ namespace Makaretu.Dns
             Register<CNAMERecord>();
             Register<DNAMERecord>();
             Register<DNSKEYRecord>();
+            Register<DSRecord>();
             Register<HINFORecord>();
             Register<MXRecord>();
             Register<NSECRecord>();

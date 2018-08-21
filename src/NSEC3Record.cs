@@ -108,7 +108,7 @@ namespace Makaretu.Dns
         /// <inheritdoc />
         protected override void WriteData(TextWriter writer)
         {
-            writer.Write((ushort)HashAlgorithm);
+            writer.Write((byte)HashAlgorithm);
             writer.Write(' ');
             writer.Write((byte)Flags);
             writer.Write(' ');

@@ -164,6 +164,12 @@ namespace Makaretu.Dns
         OPT = 41,
 
         /// <summary>
+        ///   Delegation Signer.
+        /// </summary>
+        /// <seealso href="https://tools.ietf.org/html/rfc4034#section-5"/>
+        DS = 43,
+
+        /// <summary>
         /// RRSIG rfc3755.
         /// </summary>
         /// <seealso href="https://tools.ietf.org/html/rfc3755">RFC 3755</seealso>
