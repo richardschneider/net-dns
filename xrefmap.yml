@@ -311,6 +311,12 @@ references:
   commentId: T:Makaretu.Dns.DigestType
   fullName: Makaretu.Dns.DigestType
   nameWithType: DigestType
+- uid: Makaretu.Dns.DigestType.GostR34_11_94
+  name: GostR34_11_94
+  href: api/Makaretu.Dns.DigestType.html#Makaretu_Dns_DigestType_GostR34_11_94
+  commentId: F:Makaretu.Dns.DigestType.GostR34_11_94
+  fullName: Makaretu.Dns.DigestType.GostR34_11_94
+  nameWithType: DigestType.GostR34_11_94
 - uid: Makaretu.Dns.DigestType.Sha1
   name: Sha1
   href: api/Makaretu.Dns.DigestType.html#Makaretu_Dns_DigestType_Sha1
@@ -323,6 +329,12 @@ references:
   commentId: F:Makaretu.Dns.DigestType.Sha256
   fullName: Makaretu.Dns.DigestType.Sha256
   nameWithType: DigestType.Sha256
+- uid: Makaretu.Dns.DigestType.Sha384
+  name: Sha384
+  href: api/Makaretu.Dns.DigestType.html#Makaretu_Dns_DigestType_Sha384
+  commentId: F:Makaretu.Dns.DigestType.Sha384
+  fullName: Makaretu.Dns.DigestType.Sha384
+  nameWithType: DigestType.Sha384
 - uid: Makaretu.Dns.DNAMERecord
   name: DNAMERecord
   href: api/Makaretu.Dns.DNAMERecord.html
@@ -387,6 +399,109 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DNAMERecord.WriteData
   nameWithType: DNAMERecord.WriteData
+- uid: Makaretu.Dns.DNSKEYRecord
+  name: DNSKEYRecord
+  href: api/Makaretu.Dns.DNSKEYRecord.html
+  commentId: T:Makaretu.Dns.DNSKEYRecord
+  fullName: Makaretu.Dns.DNSKEYRecord
+  nameWithType: DNSKEYRecord
+- uid: Makaretu.Dns.DNSKEYRecord.#ctor
+  name: DNSKEYRecord()
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord__ctor
+  commentId: M:Makaretu.Dns.DNSKEYRecord.#ctor
+  fullName: Makaretu.Dns.DNSKEYRecord.DNSKEYRecord()
+  nameWithType: DNSKEYRecord.DNSKEYRecord()
+- uid: Makaretu.Dns.DNSKEYRecord.#ctor*
+  name: DNSKEYRecord
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord__ctor_
+  commentId: Overload:Makaretu.Dns.DNSKEYRecord.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Dns.DNSKEYRecord.DNSKEYRecord
+  nameWithType: DNSKEYRecord.DNSKEYRecord
+- uid: Makaretu.Dns.DNSKEYRecord.Algorithm
+  name: Algorithm
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_Algorithm
+  commentId: P:Makaretu.Dns.DNSKEYRecord.Algorithm
+  fullName: Makaretu.Dns.DNSKEYRecord.Algorithm
+  nameWithType: DNSKEYRecord.Algorithm
+- uid: Makaretu.Dns.DNSKEYRecord.Algorithm*
+  name: Algorithm
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_Algorithm_
+  commentId: Overload:Makaretu.Dns.DNSKEYRecord.Algorithm
+  isSpec: "True"
+  fullName: Makaretu.Dns.DNSKEYRecord.Algorithm
+  nameWithType: DNSKEYRecord.Algorithm
+- uid: Makaretu.Dns.DNSKEYRecord.Flags
+  name: Flags
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_Flags
+  commentId: P:Makaretu.Dns.DNSKEYRecord.Flags
+  fullName: Makaretu.Dns.DNSKEYRecord.Flags
+  nameWithType: DNSKEYRecord.Flags
+- uid: Makaretu.Dns.DNSKEYRecord.Flags*
+  name: Flags
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_Flags_
+  commentId: Overload:Makaretu.Dns.DNSKEYRecord.Flags
+  isSpec: "True"
+  fullName: Makaretu.Dns.DNSKEYRecord.Flags
+  nameWithType: DNSKEYRecord.Flags
+- uid: Makaretu.Dns.DNSKEYRecord.Protocol
+  name: Protocol
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_Protocol
+  commentId: P:Makaretu.Dns.DNSKEYRecord.Protocol
+  fullName: Makaretu.Dns.DNSKEYRecord.Protocol
+  nameWithType: DNSKEYRecord.Protocol
+- uid: Makaretu.Dns.DNSKEYRecord.Protocol*
+  name: Protocol
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_Protocol_
+  commentId: Overload:Makaretu.Dns.DNSKEYRecord.Protocol
+  isSpec: "True"
+  fullName: Makaretu.Dns.DNSKEYRecord.Protocol
+  nameWithType: DNSKEYRecord.Protocol
+- uid: Makaretu.Dns.DNSKEYRecord.PublicKey
+  name: PublicKey
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_PublicKey
+  commentId: P:Makaretu.Dns.DNSKEYRecord.PublicKey
+  fullName: Makaretu.Dns.DNSKEYRecord.PublicKey
+  nameWithType: DNSKEYRecord.PublicKey
+- uid: Makaretu.Dns.DNSKEYRecord.PublicKey*
+  name: PublicKey
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_PublicKey_
+  commentId: Overload:Makaretu.Dns.DNSKEYRecord.PublicKey
+  isSpec: "True"
+  fullName: Makaretu.Dns.DNSKEYRecord.PublicKey
+  nameWithType: DNSKEYRecord.PublicKey
+- uid: Makaretu.Dns.DNSKEYRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  name: ReadData(DnsReader, Int32)
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_
+  commentId: M:Makaretu.Dns.DNSKEYRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
+  fullName: Makaretu.Dns.DNSKEYRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
+  nameWithType: DNSKEYRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.DNSKEYRecord.ReadData*
+  name: ReadData
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_ReadData_
+  commentId: Overload:Makaretu.Dns.DNSKEYRecord.ReadData
+  isSpec: "True"
+  fullName: Makaretu.Dns.DNSKEYRecord.ReadData
+  nameWithType: DNSKEYRecord.ReadData
+- uid: Makaretu.Dns.DNSKEYRecord.WriteData(Makaretu.Dns.DnsWriter)
+  name: WriteData(DnsWriter)
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_WriteData_Makaretu_Dns_DnsWriter_
+  commentId: M:Makaretu.Dns.DNSKEYRecord.WriteData(Makaretu.Dns.DnsWriter)
+  fullName: Makaretu.Dns.DNSKEYRecord.WriteData(Makaretu.Dns.DnsWriter)
+  nameWithType: DNSKEYRecord.WriteData(DnsWriter)
+- uid: Makaretu.Dns.DNSKEYRecord.WriteData(System.IO.TextWriter)
+  name: WriteData(TextWriter)
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_WriteData_System_IO_TextWriter_
+  commentId: M:Makaretu.Dns.DNSKEYRecord.WriteData(System.IO.TextWriter)
+  fullName: Makaretu.Dns.DNSKEYRecord.WriteData(System.IO.TextWriter)
+  nameWithType: DNSKEYRecord.WriteData(TextWriter)
+- uid: Makaretu.Dns.DNSKEYRecord.WriteData*
+  name: WriteData
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_WriteData_
+  commentId: Overload:Makaretu.Dns.DNSKEYRecord.WriteData
+  isSpec: "True"
+  fullName: Makaretu.Dns.DNSKEYRecord.WriteData
+  nameWithType: DNSKEYRecord.WriteData
 - uid: Makaretu.Dns.DnsObject
   name: DnsObject
   href: api/Makaretu.Dns.DnsObject.html
@@ -732,6 +847,12 @@ references:
   commentId: F:Makaretu.Dns.DnsType.DNAME
   fullName: Makaretu.Dns.DnsType.DNAME
   nameWithType: DnsType.DNAME
+- uid: Makaretu.Dns.DnsType.DNSKEY
+  name: DNSKEY
+  href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_DNSKEY
+  commentId: F:Makaretu.Dns.DnsType.DNSKEY
+  fullName: Makaretu.Dns.DnsType.DNSKEY
+  nameWithType: DnsType.DNSKEY
 - uid: Makaretu.Dns.DnsType.HINFO
   name: HINFO
   href: api/Makaretu.Dns.DnsType.html#Makaretu_Dns_DnsType_HINFO
@@ -1614,6 +1735,19 @@ references:
   commentId: F:Makaretu.Dns.MasterReader.Position
   fullName: Makaretu.Dns.MasterReader.Position
   nameWithType: MasterReader.Position
+- uid: Makaretu.Dns.MasterReader.ReadBase64String
+  name: ReadBase64String()
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadBase64String
+  commentId: M:Makaretu.Dns.MasterReader.ReadBase64String
+  fullName: Makaretu.Dns.MasterReader.ReadBase64String()
+  nameWithType: MasterReader.ReadBase64String()
+- uid: Makaretu.Dns.MasterReader.ReadBase64String*
+  name: ReadBase64String
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadBase64String_
+  commentId: Overload:Makaretu.Dns.MasterReader.ReadBase64String
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.ReadBase64String
+  nameWithType: MasterReader.ReadBase64String
 - uid: Makaretu.Dns.MasterReader.ReadByte
   name: ReadByte()
   href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadByte
@@ -3814,6 +3948,114 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.RPRecord.WriteData
   nameWithType: RPRecord.WriteData
+- uid: Makaretu.Dns.SecurityAlgorithm
+  name: SecurityAlgorithm
+  href: api/Makaretu.Dns.SecurityAlgorithm.html
+  commentId: T:Makaretu.Dns.SecurityAlgorithm
+  fullName: Makaretu.Dns.SecurityAlgorithm
+  nameWithType: SecurityAlgorithm
+- uid: Makaretu.Dns.SecurityAlgorithm.DELETE
+  name: DELETE
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_DELETE
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.DELETE
+  fullName: Makaretu.Dns.SecurityAlgorithm.DELETE
+  nameWithType: SecurityAlgorithm.DELETE
+- uid: Makaretu.Dns.SecurityAlgorithm.DH
+  name: DH
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_DH
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.DH
+  fullName: Makaretu.Dns.SecurityAlgorithm.DH
+  nameWithType: SecurityAlgorithm.DH
+- uid: Makaretu.Dns.SecurityAlgorithm.DSA
+  name: DSA
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_DSA
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.DSA
+  fullName: Makaretu.Dns.SecurityAlgorithm.DSA
+  nameWithType: SecurityAlgorithm.DSA
+- uid: Makaretu.Dns.SecurityAlgorithm.DSANSEC3SHA1
+  name: DSANSEC3SHA1
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_DSANSEC3SHA1
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.DSANSEC3SHA1
+  fullName: Makaretu.Dns.SecurityAlgorithm.DSANSEC3SHA1
+  nameWithType: SecurityAlgorithm.DSANSEC3SHA1
+- uid: Makaretu.Dns.SecurityAlgorithm.ECCGOST
+  name: ECCGOST
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_ECCGOST
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.ECCGOST
+  fullName: Makaretu.Dns.SecurityAlgorithm.ECCGOST
+  nameWithType: SecurityAlgorithm.ECCGOST
+- uid: Makaretu.Dns.SecurityAlgorithm.ECDSAP256SHA256
+  name: ECDSAP256SHA256
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_ECDSAP256SHA256
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.ECDSAP256SHA256
+  fullName: Makaretu.Dns.SecurityAlgorithm.ECDSAP256SHA256
+  nameWithType: SecurityAlgorithm.ECDSAP256SHA256
+- uid: Makaretu.Dns.SecurityAlgorithm.ECDSAP384SHA384
+  name: ECDSAP384SHA384
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_ECDSAP384SHA384
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.ECDSAP384SHA384
+  fullName: Makaretu.Dns.SecurityAlgorithm.ECDSAP384SHA384
+  nameWithType: SecurityAlgorithm.ECDSAP384SHA384
+- uid: Makaretu.Dns.SecurityAlgorithm.ED25519
+  name: ED25519
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_ED25519
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.ED25519
+  fullName: Makaretu.Dns.SecurityAlgorithm.ED25519
+  nameWithType: SecurityAlgorithm.ED25519
+- uid: Makaretu.Dns.SecurityAlgorithm.ED448
+  name: ED448
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_ED448
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.ED448
+  fullName: Makaretu.Dns.SecurityAlgorithm.ED448
+  nameWithType: SecurityAlgorithm.ED448
+- uid: Makaretu.Dns.SecurityAlgorithm.INDIRECT
+  name: INDIRECT
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_INDIRECT
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.INDIRECT
+  fullName: Makaretu.Dns.SecurityAlgorithm.INDIRECT
+  nameWithType: SecurityAlgorithm.INDIRECT
+- uid: Makaretu.Dns.SecurityAlgorithm.PRIVATEDNS
+  name: PRIVATEDNS
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_PRIVATEDNS
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.PRIVATEDNS
+  fullName: Makaretu.Dns.SecurityAlgorithm.PRIVATEDNS
+  nameWithType: SecurityAlgorithm.PRIVATEDNS
+- uid: Makaretu.Dns.SecurityAlgorithm.PRIVATEOID
+  name: PRIVATEOID
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_PRIVATEOID
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.PRIVATEOID
+  fullName: Makaretu.Dns.SecurityAlgorithm.PRIVATEOID
+  nameWithType: SecurityAlgorithm.PRIVATEOID
+- uid: Makaretu.Dns.SecurityAlgorithm.RSAMD5
+  name: RSAMD5
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_RSAMD5
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.RSAMD5
+  fullName: Makaretu.Dns.SecurityAlgorithm.RSAMD5
+  nameWithType: SecurityAlgorithm.RSAMD5
+- uid: Makaretu.Dns.SecurityAlgorithm.RSASHA1
+  name: RSASHA1
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_RSASHA1
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.RSASHA1
+  fullName: Makaretu.Dns.SecurityAlgorithm.RSASHA1
+  nameWithType: SecurityAlgorithm.RSASHA1
+- uid: Makaretu.Dns.SecurityAlgorithm.RSASHA1NSEC3SHA1
+  name: RSASHA1NSEC3SHA1
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_RSASHA1NSEC3SHA1
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.RSASHA1NSEC3SHA1
+  fullName: Makaretu.Dns.SecurityAlgorithm.RSASHA1NSEC3SHA1
+  nameWithType: SecurityAlgorithm.RSASHA1NSEC3SHA1
+- uid: Makaretu.Dns.SecurityAlgorithm.RSASHA256
+  name: RSASHA256
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_RSASHA256
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.RSASHA256
+  fullName: Makaretu.Dns.SecurityAlgorithm.RSASHA256
+  nameWithType: SecurityAlgorithm.RSASHA256
+- uid: Makaretu.Dns.SecurityAlgorithm.RSASHA512
+  name: RSASHA512
+  href: api/Makaretu.Dns.SecurityAlgorithm.html#Makaretu_Dns_SecurityAlgorithm_RSASHA512
+  commentId: F:Makaretu.Dns.SecurityAlgorithm.RSASHA512
+  fullName: Makaretu.Dns.SecurityAlgorithm.RSASHA512
+  nameWithType: SecurityAlgorithm.RSASHA512
 - uid: Makaretu.Dns.SOARecord
   name: SOARecord
   href: api/Makaretu.Dns.SOARecord.html
