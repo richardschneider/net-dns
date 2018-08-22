@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.DNSKEYRecord.html",
-          "hash": "JHadhjjVoWqgiNEJsVyNmw=="
+          "hash": "WnyS+rjBgy4obba8a6EV1A=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.DSRecord.html",
-          "hash": "A0KIIKmlEHbNusNuYl5nKg=="
+          "hash": "cxSkIWUXuLZoIz3J1aNECA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Makaretu.Dns.DigestRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Makaretu.Dns.DigestRegistry.html",
+          "hash": "o247uvhQzKXxPUWSdRpEUg=="
         }
       },
       "is_incremental": false,
@@ -681,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.html",
-          "hash": "ZnDyhwpm6GeJidrZrX+uIg=="
+          "hash": "fgPivKK2NItHgfC/qYRMwQ=="
         }
       },
       "is_incremental": false,
@@ -693,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ANgTfSntFlUIIOhuWkNJGA=="
+          "hash": "9Ox0r6kvz8A7pkyBwT9yxw=="
         }
       },
       "is_incremental": false,
@@ -850,14 +862,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -866,6 +870,14 @@
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }

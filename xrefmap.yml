@@ -305,6 +305,31 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.CNAMERecord.WriteData
   nameWithType: CNAMERecord.WriteData
+- uid: Makaretu.Dns.DigestRegistry
+  name: DigestRegistry
+  href: api/Makaretu.Dns.DigestRegistry.html
+  commentId: T:Makaretu.Dns.DigestRegistry
+  fullName: Makaretu.Dns.DigestRegistry
+  nameWithType: DigestRegistry
+- uid: Makaretu.Dns.DigestRegistry.Create(Makaretu.Dns.DigestType)
+  name: Create(DigestType)
+  href: api/Makaretu.Dns.DigestRegistry.html#Makaretu_Dns_DigestRegistry_Create_Makaretu_Dns_DigestType_
+  commentId: M:Makaretu.Dns.DigestRegistry.Create(Makaretu.Dns.DigestType)
+  fullName: Makaretu.Dns.DigestRegistry.Create(Makaretu.Dns.DigestType)
+  nameWithType: DigestRegistry.Create(DigestType)
+- uid: Makaretu.Dns.DigestRegistry.Create*
+  name: Create
+  href: api/Makaretu.Dns.DigestRegistry.html#Makaretu_Dns_DigestRegistry_Create_
+  commentId: Overload:Makaretu.Dns.DigestRegistry.Create
+  isSpec: "True"
+  fullName: Makaretu.Dns.DigestRegistry.Create
+  nameWithType: DigestRegistry.Create
+- uid: Makaretu.Dns.DigestRegistry.Digests
+  name: Digests
+  href: api/Makaretu.Dns.DigestRegistry.html#Makaretu_Dns_DigestRegistry_Digests
+  commentId: F:Makaretu.Dns.DigestRegistry.Digests
+  fullName: Makaretu.Dns.DigestRegistry.Digests
+  nameWithType: DigestRegistry.Digests
 - uid: Makaretu.Dns.DigestType
   name: DigestType
   href: api/Makaretu.Dns.DigestType.html
@@ -431,12 +456,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DNSKEYRecord.Algorithm
   nameWithType: DNSKEYRecord.Algorithm
-- uid: Makaretu.Dns.DNSKEYRecord.CreateDSRecord
-  name: CreateDSRecord()
-  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_CreateDSRecord
-  commentId: M:Makaretu.Dns.DNSKEYRecord.CreateDSRecord
-  fullName: Makaretu.Dns.DNSKEYRecord.CreateDSRecord()
-  nameWithType: DNSKEYRecord.CreateDSRecord()
+- uid: Makaretu.Dns.DNSKEYRecord.CreateDSRecord(Makaretu.Dns.DigestType)
+  name: CreateDSRecord(DigestType)
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_CreateDSRecord_Makaretu_Dns_DigestType_
+  commentId: M:Makaretu.Dns.DNSKEYRecord.CreateDSRecord(Makaretu.Dns.DigestType)
+  fullName: Makaretu.Dns.DNSKEYRecord.CreateDSRecord(Makaretu.Dns.DigestType)
+  nameWithType: DNSKEYRecord.CreateDSRecord(DigestType)
 - uid: Makaretu.Dns.DNSKEYRecord.CreateDSRecord*
   name: CreateDSRecord
   href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_CreateDSRecord_
