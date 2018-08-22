@@ -262,5 +262,31 @@ emanon.org A 127.0.0.1
             var reader = new MasterReader(new StringReader("TYPEX"));
             reader.ReadDnsType();
         }
+
+        [TestMethod]
+        public void ReadMultipleStrings()
+        {
+            var expected = new List<string> { "abc", "def", "ghi" };
+            var reader = new MasterReader(new StringReader("abc def (\r\nghi)\r\n"));
+            var actual = new List<string>();
+            while (!reader.IsEndOfLine())
+            {
+                actual.Add(reader.ReadString());
+            }
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReadMultipleStrings2()
+        {
+            var expected = new List<string> { "abc", "def", "ghi", "jkl"};
+            var reader = new MasterReader(new StringReader("abc def (\r\nghi) jkl   \r\n"));
+            var actual = new List<string>();
+            while (!reader.IsEndOfLine())
+            {
+                actual.Add(reader.ReadString());
+            }
+            CollectionAssert.AreEqual(expected, actual);
+        }
     }
 }

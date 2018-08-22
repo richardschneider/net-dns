@@ -16,6 +16,7 @@ namespace Makaretu.Dns
         TextReader text;
         TimeSpan? defaultTTL = null;
         string defaultDomainName = null;
+        int parenLevel = 0;
 
         /// <summary>
         ///   The reader relative position within the stream.
@@ -322,8 +323,27 @@ namespace Makaretu.Dns
         /// </summary>
         public bool IsEndOfLine()
         {
-            // TODO: Handle parens
             int c;
+            while (parenLevel > 0)
+            {
+                while ((c = text.Peek()) >= 0)
+                {
+                    if (c == ' ' || c == '\t' || c == '\r' || c == '\n')
+                    {
+                        text.Read();
+                        continue;
+                    }
+                    if (c == ')')
+                    {
+                        --parenLevel;
+                        text.Read();
+                        break;
+                    }
+                    return false;
+                }
+
+            }
+
             while ((c = text.Peek()) >= 0)
             {
                 if (c == ' ' || c == '\t')
@@ -392,8 +412,14 @@ namespace Makaretu.Dns
                 }
 
                 // Ignore parens.
-                if (c == '(' || c == ')')
+                if (c == '(')
                 {
+                    ++parenLevel;
+                    c = ' ';
+                }
+                if (c == ')')
+                {
+                    --parenLevel;
                     c = ' ';
                 }
 
