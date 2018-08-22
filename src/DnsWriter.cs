@@ -249,12 +249,11 @@ namespace Makaretu.Dns
                     Mask = g.Select(w => w.Mask).Aggregate((a, b) => a.Or(b))
                 })
                 .OrderBy(w => w.Window)
-                // TODO: Trim trailing zeros
                 .ToArray();
 
             foreach (var window in windows)
             {
-                // BitArray to byte array and remoove trailing zeros.
+                // BitArray to byte array and remove trailing zeros.
                 var mask = ToBytes(window.Mask, true).ToList();
                 for (int i = mask.Count - 1; i > 0; --i)
                 {

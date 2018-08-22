@@ -118,10 +118,19 @@ namespace Makaretu.Dns
         /// <returns>
         ///   The bytes.
         /// </returns>
+        /// <remarks>
+        ///   This must be the last field in the RDATA because the string
+        ///   can contain embedded spaces.
+        /// </remarks>
         public byte[] ReadBase64String()
         {
-            // TODO: must handle embedded space and CRLFs inside of parens.
-            return Convert.FromBase64String(ReadToken());
+            // Handle embedded space and CRLFs inside of parens.
+            var sb = new StringBuilder();
+            while (!IsEndOfLine())
+            {
+                sb.Append(ReadToken());
+            }
+            return Convert.FromBase64String(sb.ToString());
         }
 
         /// <summary>

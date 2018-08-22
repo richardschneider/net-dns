@@ -76,8 +76,14 @@ namespace Makaretu.Dns
             KeyTag = reader.ReadUInt16();
             Algorithm = (SecurityAlgorithm)reader.ReadByte();
             HashAlgorithm = (DigestType)reader.ReadByte();
-            // TODO: Whitespace is allowed within the hexadecimal text.
-            Digest = Base16.Decode(reader.ReadString());
+
+            // Whitespace is allowed within the hexadecimal text.
+            var sb = new StringBuilder();
+            while (!reader.IsEndOfLine())
+            {
+                sb.Append(reader.ReadString());
+            }
+            Digest = Base16.Decode(sb.ToString());
         }
 
         /// <inheritdoc />

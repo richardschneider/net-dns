@@ -288,5 +288,20 @@ emanon.org A 127.0.0.1
             }
             CollectionAssert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ReadBase64String()
+        {
+            var expected = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+
+            var reader = new MasterReader(new StringReader("AAECAwQFBgcICQoLDA0ODw=="));
+            CollectionAssert.AreEqual(expected, reader.ReadBase64String());
+
+            reader = new MasterReader(new StringReader("AAECAwQFBg  cICQoLDA0ODw=="));
+            CollectionAssert.AreEqual(expected, reader.ReadBase64String());
+
+            reader = new MasterReader(new StringReader("AAECAwQFBg  (\r\n  cICQo\r\n  LDA0ODw\r\n== )"));
+            CollectionAssert.AreEqual(expected, reader.ReadBase64String());
+        }
     }
 }
