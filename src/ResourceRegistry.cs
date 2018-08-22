@@ -16,7 +16,7 @@ namespace Makaretu.Dns
         ///   All the resource records.
         /// </summary>
         /// <remarks>
-        ///   The key is the DNS Resource Record TYPE.
+        ///   The key is the DNS Resource Record type, <see cref="DnsType"/>.
         ///   The value is a function that returns a new <see cref="ResourceRecord"/>.
         /// </remarks>
         public static Dictionary<DnsType, Func<ResourceRecord>> Records;
@@ -63,6 +63,28 @@ namespace Makaretu.Dns
                 throw new ArgumentException("The RR TYPE is not defined.", "TYPE");
             }
             Records.Add(rr.Type, () => new T());
+        }
+
+        /// <summary>
+        ///   Gets the resource record for the <see cref="DnsType"/>.
+        /// </summary>
+        /// <param name="type">
+        ///   One of the <see cref="DnsType"/> values.
+        /// </param>
+        /// <returns>
+        ///   A new instance derived from <see cref="ResourceRecord"/>.
+        /// </returns>
+        /// <remarks>
+        ///   When the <paramref name="type"/> is not implemented, a new
+        ///   of <see cref="UnknownRecord"/> is returned.
+        /// </remarks>
+        public static ResourceRecord Create(DnsType type)
+        {
+            if (Records.TryGetValue(type, out Func<ResourceRecord> maker))
+            {
+                return maker();
+            }
+            return new UnknownRecord();
         }
 
     }

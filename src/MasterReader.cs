@@ -301,15 +301,7 @@ namespace Makaretu.Dns
             defaultDomainName = domainName;
 
             // Create the specific resource record based on the type.
-            ResourceRecord resource;
-            if (ResourceRegistry.Records.TryGetValue(type.Value, out Func<ResourceRecord> maker))
-            {
-                resource = maker();
-            }
-            else
-            {
-                resource = new UnknownRecord();
-            }
+            var resource = ResourceRegistry.Create(type.Value);
             resource.Name = MakeAbsoluteDomainName(domainName);
             resource.Type = type.Value;
             resource.Class = klass;

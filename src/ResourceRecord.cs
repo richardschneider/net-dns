@@ -157,15 +157,7 @@ namespace Makaretu.Dns
 
             // Find a specific class for the TYPE or default
             // to UnknownRecord.
-            ResourceRecord specific;
-            if (ResourceRegistry.Records.TryGetValue(Type, out Func<ResourceRecord> maker))
-            {
-                specific = maker();
-            }
-            else
-            {
-                specific = new UnknownRecord();
-            }
+            var specific = ResourceRegistry.Create(Type); 
             specific.Name = Name;
             specific.Type = Type;
             specific.Class = Class;

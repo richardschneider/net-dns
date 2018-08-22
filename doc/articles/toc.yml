@@ -3,6 +3,8 @@
 - name: Resource Records
   href: rr.md
   items:
+    - name: Registry
+      href: rr-registry.md
     - name: Equality
       href: rr-equality.md
 - name: Extended DNS
