@@ -73,14 +73,17 @@ namespace Makaretu.Dns
         /// <summary>
         ///   Create a delegation signer from the key.
         /// </summary>
+        /// <param name="digestType">
+        ///   The digest algorithm to use.  Defaults to <see cref="DigestType.Sha1"/>.
+        /// </param>
         /// <returns>
         ///   A <see cref="DSRecord"/> that refers to this key.
         /// </returns>
-        public DSRecord CreateDSRecord()
+        public DSRecord CreateDSRecord(DigestType digestType = DigestType.Sha1)
         {
             byte[] digest;
             using (var ms = new MemoryStream())
-            using (var hasher = SHA1.Create())
+            using (var hasher = DigestRegistry.Create(digestType))
             {
                 var writer = new DnsWriter(ms);
                 writer.WriteDomainName(CanonicalName, uncompressed: true);
