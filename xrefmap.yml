@@ -4022,6 +4022,19 @@ references:
   commentId: T:Makaretu.Dns.ResourceRegistry
   fullName: Makaretu.Dns.ResourceRegistry
   nameWithType: ResourceRegistry
+- uid: Makaretu.Dns.ResourceRegistry.Create(Makaretu.Dns.DnsType)
+  name: Create(DnsType)
+  href: api/Makaretu.Dns.ResourceRegistry.html#Makaretu_Dns_ResourceRegistry_Create_Makaretu_Dns_DnsType_
+  commentId: M:Makaretu.Dns.ResourceRegistry.Create(Makaretu.Dns.DnsType)
+  fullName: Makaretu.Dns.ResourceRegistry.Create(Makaretu.Dns.DnsType)
+  nameWithType: ResourceRegistry.Create(DnsType)
+- uid: Makaretu.Dns.ResourceRegistry.Create*
+  name: Create
+  href: api/Makaretu.Dns.ResourceRegistry.html#Makaretu_Dns_ResourceRegistry_Create_
+  commentId: Overload:Makaretu.Dns.ResourceRegistry.Create
+  isSpec: "True"
+  fullName: Makaretu.Dns.ResourceRegistry.Create
+  nameWithType: ResourceRegistry.Create
 - uid: Makaretu.Dns.ResourceRegistry.Records
   name: Records
   href: api/Makaretu.Dns.ResourceRegistry.html#Makaretu_Dns_ResourceRegistry_Records

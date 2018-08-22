@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.MasterReader.html",
-          "hash": "nMcEfrO+AWAwD/caCdzukQ=="
+          "hash": "qNwmuoIMuVTFqGwnzp7RvQ=="
         }
       },
       "is_incremental": false,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.ResourceRecord.html",
-          "hash": "q50zNcClstwQiE4YNTWcTQ=="
+          "hash": "I21ofpSp54CGiMVlSwXWqg=="
         }
       },
       "is_incremental": false,
@@ -573,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.ResourceRegistry.html",
-          "hash": "VJNsfeFqjOtrgGmmCUjyoQ=="
+          "hash": "L/aPIS9L7tTLZdGQh1s2nw=="
         }
       },
       "is_incremental": false,
@@ -773,6 +773,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/rr-registry.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/rr-registry.html",
+          "hash": "2axEuM7bXc0BeQOYmwx2eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/rr.md",
       "output": {
         ".html": {
@@ -789,7 +801,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "EagEEOc0fUqJ1eo/nydeOg=="
+          "hash": "Q65jZFRuQ+BD9U345YCG5Q=="
         }
       },
       "is_incremental": false,
@@ -862,22 +874,22 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
