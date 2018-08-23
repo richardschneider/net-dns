@@ -36,6 +36,23 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Determines if canonical records are produced.
+        /// </summary>
+        /// <value>
+        ///   <b>true</b> to produce canonical records; otherwise <b>false</b>.
+        ///   Defaults to false.
+        /// </value>
+        /// <remarks>
+        ///   When enabled, the following rules are applied
+        ///   <list type="bullet">
+        ///   <item><description>Domain names are uncompressed</description></item>
+        ///   <item><description>Domain names are converted to US-ASCII lowercase</description></item>
+        ///   </list>
+        /// </remarks>
+        /// <seealso href="https://tools.ietf.org/html/rfc4034#section-6.2"/>
+        public bool CanonicalForm { get; set; }
+
+        /// <summary>
         ///   Start a length prefixed stream.
         /// </summary>
         /// <remarks>
@@ -142,6 +159,7 @@ namespace Makaretu.Dns
         /// <param name="uncompressed">
         ///   Determines if the <paramref name="name"/> must be uncompressed.  The
         ///   defaultl is false (allow compression).
+        ///   <see cref="CanonicalForm"/> overrides this value.
         /// </param>
         /// <remarks>
         ///   A domain name is represented as a sequence of labels, where
@@ -158,6 +176,12 @@ namespace Makaretu.Dns
                 stream.WriteByte(0); // terminating byte
                 ++Position;
                 return;
+            }
+
+            if (CanonicalForm)
+            {
+                uncompressed = true;
+                name = name.ToLowerInvariant();
             }
 
             var labels = name.Split('.');

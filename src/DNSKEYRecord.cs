@@ -35,7 +35,7 @@ namespace Makaretu.Dns
         public byte Protocol { get; set; } = 3;
 
         /// <summary>
-        ///   Identifies the public key's cryptographic algorithm
+        ///   Identifies the public key's cryptographic algorithm.
         /// </summary>
         /// <remarks>
         ///    Determines the format of the<see cref="PublicKey"/>.
@@ -53,6 +53,9 @@ namespace Makaretu.Dns
         /// <summary>
         ///   Calculates the key tag.
         /// </summary>
+        /// <value>
+        ///   A non-unique identifier for the public key.
+        /// </value>
         /// <remarks>
         ///   <see href="https://tools.ietf.org/html/rfc4034#appendix-B"/> for the details.
         /// </remarks>

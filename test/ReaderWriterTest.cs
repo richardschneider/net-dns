@@ -116,6 +116,21 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void CanonicalDomainName()
+        {
+            var ms = new MemoryStream();
+            var writer = new DnsWriter(ms) { CanonicalForm = true };
+            writer.WriteDomainName("FOO");
+            writer.WriteDomainName("FOO");
+            Assert.AreEqual(5 * 2, writer.Position);
+
+            ms.Position = 0;
+            var reader = new DnsReader(ms);
+            Assert.AreEqual("foo", reader.ReadDomainName());
+            Assert.AreEqual("foo", reader.ReadDomainName());
+        }
+
+        [TestMethod]
         public void NullDomainName()
         {
             var ms = new MemoryStream();
