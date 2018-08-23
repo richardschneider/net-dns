@@ -1073,6 +1073,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DnsWriter.DnsWriter
   nameWithType: DnsWriter.DnsWriter
+- uid: Makaretu.Dns.DnsWriter.CanonicalForm
+  name: CanonicalForm
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_CanonicalForm
+  commentId: P:Makaretu.Dns.DnsWriter.CanonicalForm
+  fullName: Makaretu.Dns.DnsWriter.CanonicalForm
+  nameWithType: DnsWriter.CanonicalForm
+- uid: Makaretu.Dns.DnsWriter.CanonicalForm*
+  name: CanonicalForm
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_CanonicalForm_
+  commentId: Overload:Makaretu.Dns.DnsWriter.CanonicalForm
+  isSpec: "True"
+  fullName: Makaretu.Dns.DnsWriter.CanonicalForm
+  nameWithType: DnsWriter.CanonicalForm
 - uid: Makaretu.Dns.DnsWriter.PopLengthPrefixedScope
   name: PopLengthPrefixedScope()
   href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_PopLengthPrefixedScope
