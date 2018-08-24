@@ -241,5 +241,32 @@ a._http._tcp SRV 0 5 80 mail
             Assert.IsTrue(root.Authoritative);
             Assert.IsTrue(root.Resources.OfType<NSRecord>().Any());
         }
+
+        [TestMethod]
+        public void CanonicalOrder()
+        {
+            var catalog = new Catalog();
+            catalog.Add(AddressRecord.Create("*.z.example", IPAddress.Loopback));
+            catalog.Add(AddressRecord.Create("a.example", IPAddress.Loopback));
+            catalog.Add(AddressRecord.Create("yljkjljk.a.example", IPAddress.Loopback));
+            catalog.Add(AddressRecord.Create("Z.a.example", IPAddress.Loopback));
+            catalog.Add(AddressRecord.Create("zABC.a.EXAMPLE", IPAddress.Loopback));
+            catalog.Add(AddressRecord.Create("z.example", IPAddress.Loopback));
+            catalog.Add(AddressRecord.Create("\x01.z.example", IPAddress.Loopback));
+            catalog.Add(AddressRecord.Create("\x80.z.example", IPAddress.Loopback));
+            catalog.Add(AddressRecord.Create("example", IPAddress.Loopback));
+
+            var expected = new string[]
+            {
+                "example", "a.example", "yljkjljk.a.example",
+                "Z.a.example", "zABC.a.EXAMPLE", "z.example",
+                "\x01.z.example", "*.z.example", "\x80.z.example"
+            };
+            var actual = catalog
+                .NodesInCanonicalOrder()
+                .Select(node => node.Name)
+                .ToArray();
+            CollectionAssert.AreEqual(expected, actual);
+        }
     }
 }

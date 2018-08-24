@@ -31,9 +31,6 @@ namespace Makaretu.Dns.Resolving
         {
         }
 
-        // TODO: Parents(Node)
-        // TODO: Children(Node)
-
         /// <summary>
         ///   Include the zone information.
         /// </summary>
@@ -162,6 +159,23 @@ namespace Makaretu.Dns.Resolving
             var root = this[""];
             root.Authoritative = true;
             return root;
+        }
+
+
+        /// <summary>
+        ///   Get a sequence of nodes in canonical order.
+        /// </summary>
+        /// <returns>
+        ///   A sequence of nodes in canonical order.
+        /// </returns>
+        /// <remarks>
+        ///   Node names are converted to US-ASCII lowercase and
+        ///   then sorted by their reversed labels.
+        /// </remarks>
+        public IEnumerable<Node> NodesInCanonicalOrder()
+        {
+            return this.Values
+                .OrderBy(node => String.Join(".", node.Name.ToLowerInvariant().Split('.').Reverse()));
         }
     }
 }
