@@ -131,5 +131,22 @@ namespace Makaretu.Dns
             Assert.AreEqual(3740, dnskey.KeyTag());
         }
 
+        [TestMethod]
+        public void FromECDsaP256()
+        {
+            // From https://tools.ietf.org/html/rfc6605#section-6.1
+            var privateKey = Convert.FromBase64String("GU6SnQ/Ou+xC5RumuIUIuJZteXT2z0O/ok1s38Et6mQ=");
+            var dnsPublicKey = Convert.FromBase64String("GojIhhXUN/u4v54ZQqGSnyhWJwaubCvTmeexv7bR6edbkrSqQpF64cYbcB7wNcP+e+MAnLr+Wi9xMWyQLc8NAA==");
+
+            // TODO: Create the public key
+            ECDsa publicKey = ECDsa.Create();
+
+            var dnskey = new DNSKEYRecord(publicKey);
+            Assert.AreEqual(256, dnskey.Flags);
+            Assert.AreEqual(3, dnskey.Protocol);
+            Assert.AreEqual(SecurityAlgorithm.ECDSAP256SHA256, dnskey.Algorithm);
+            CollectionAssert.AreEqual(dnsPublicKey, dnskey.PublicKey);
+            Assert.AreEqual(3740, dnskey.KeyTag());
+        }
     }
 }

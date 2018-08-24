@@ -49,6 +49,19 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Creates a new instance of the <see cref="DNSKEYRecord"/> class
+        ///   from the specified ECDSA key.
+        /// </summary>
+        /// <param name="key">
+        ///   A public or private ECDSA key.
+        /// </param>
+        public DNSKEYRecord(ECDsa key)
+            : this()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         ///  TODO
         /// </summary>
         public ushort Flags { get; set; }
