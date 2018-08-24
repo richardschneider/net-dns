@@ -76,13 +76,15 @@ namespace Makaretu.Dns
             switch (p.Curve.Oid.FriendlyName)
             {
                 case "nistP256":
+                case "ECDSA_P256":
                     Algorithm = SecurityAlgorithm.ECDSAP256SHA256;
                     break;
                 case "nistP384":
+                case "ECDSA_P384":
                     Algorithm = SecurityAlgorithm.ECDSAP384SHA384;
                     break;
                 default:
-                    throw new ArgumentException($"ECDSA curve '{p.Curve.Oid.FriendlyName}'.");
+                    throw new ArgumentException($"ECDSA curve '{p.Curve.Oid.FriendlyName} is not known'.");
             }
 
             // ECDSA public keys consist of a single value, called "Q" in FIPS 186-3.
