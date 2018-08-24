@@ -363,7 +363,7 @@ create <a class="xref" href="Makaretu.Dns.DSRecord.html">DSRecord</a> from a <a 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void ReadData(DnsReader reader, int length)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void ReadData(DnsReader reader, int length)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -396,6 +396,40 @@ create <a class="xref" href="Makaretu.Dns.DSRecord.html">DSRecord</a> from a <a 
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DSRecord_ReadData_Makaretu_Dns_MasterReader_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DSRecord.ReadData(Makaretu.Dns.MasterReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DSRecord.cs/#L74">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DSRecord_ReadData_" data-uid="Makaretu.Dns.DSRecord.ReadData*"></a>
+  <h4 id="Makaretu_Dns_DSRecord_ReadData_Makaretu_Dns_MasterReader_" data-uid="Makaretu.Dns.DSRecord.ReadData(Makaretu.Dns.MasterReader)">ReadData(MasterReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ReadData(MasterReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.MasterReader.html">MasterReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_MasterReader_">ResourceRecord.ReadData(MasterReader)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DSRecord_WriteData_Makaretu_Dns_DnsWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DSRecord.WriteData(Makaretu.Dns.DnsWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -408,7 +442,7 @@ create <a class="xref" href="Makaretu.Dns.DSRecord.html">DSRecord</a> from a <a 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void WriteData(DnsWriter writer)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void WriteData(DnsWriter writer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -448,7 +482,7 @@ the resource record.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void WriteData(TextWriter writer)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void WriteData(TextWriter writer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

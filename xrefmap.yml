@@ -77,6 +77,12 @@ references:
   commentId: M:Makaretu.Dns.AddressRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.AddressRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: AddressRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.AddressRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.AddressRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.AddressRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: AddressRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.AddressRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_ReadData_
@@ -128,6 +134,12 @@ references:
   commentId: M:Makaretu.Dns.AFSDBRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.AFSDBRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: AFSDBRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.AFSDBRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.AFSDBRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.AFSDBRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: AFSDBRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.AFSDBRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.AFSDBRecord.html#Makaretu_Dns_AFSDBRecord_ReadData_
@@ -266,6 +278,12 @@ references:
   commentId: M:Makaretu.Dns.CNAMERecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.CNAMERecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: CNAMERecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.CNAMERecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.CNAMERecord.html#Makaretu_Dns_CNAMERecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.CNAMERecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.CNAMERecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: CNAMERecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.CNAMERecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.CNAMERecord.html#Makaretu_Dns_CNAMERecord_ReadData_
@@ -385,6 +403,12 @@ references:
   commentId: M:Makaretu.Dns.DNAMERecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.DNAMERecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: DNAMERecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.DNAMERecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.DNAMERecord.html#Makaretu_Dns_DNAMERecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.DNAMERecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.DNAMERecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: DNAMERecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.DNAMERecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.DNAMERecord.html#Makaretu_Dns_DNAMERecord_ReadData_
@@ -527,6 +551,12 @@ references:
   commentId: M:Makaretu.Dns.DNSKEYRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.DNSKEYRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: DNSKEYRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.DNSKEYRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.DNSKEYRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.DNSKEYRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: DNSKEYRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.DNSKEYRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_ReadData_
@@ -1334,6 +1364,12 @@ references:
   commentId: M:Makaretu.Dns.DSRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.DSRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: DSRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.DSRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.DSRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.DSRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: DSRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.DSRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord_ReadData_
@@ -1748,6 +1784,12 @@ references:
   commentId: M:Makaretu.Dns.HINFORecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.HINFORecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: HINFORecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.HINFORecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.HINFORecord.html#Makaretu_Dns_HINFORecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.HINFORecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.HINFORecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: HINFORecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.HINFORecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.HINFORecord.html#Makaretu_Dns_HINFORecord_ReadData_
@@ -2481,6 +2523,12 @@ references:
   commentId: M:Makaretu.Dns.MXRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.MXRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: MXRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.MXRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.MXRecord.html#Makaretu_Dns_MXRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.MXRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.MXRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: MXRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.MXRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.MXRecord.html#Makaretu_Dns_MXRecord_ReadData_
@@ -2571,6 +2619,12 @@ references:
   commentId: M:Makaretu.Dns.NSEC3PARAMRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.NSEC3PARAMRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: NSEC3PARAMRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.NSEC3PARAMRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.NSEC3PARAMRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.NSEC3PARAMRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: NSEC3PARAMRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.NSEC3PARAMRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.NSEC3PARAMRecord.html#Makaretu_Dns_NSEC3PARAMRecord_ReadData_
@@ -2687,6 +2741,12 @@ references:
   commentId: M:Makaretu.Dns.NSEC3Record.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.NSEC3Record.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: NSEC3Record.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.NSEC3Record.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.NSEC3Record.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.NSEC3Record.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: NSEC3Record.ReadData(MasterReader)
 - uid: Makaretu.Dns.NSEC3Record.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.NSEC3Record.html#Makaretu_Dns_NSEC3Record_ReadData_
@@ -2777,6 +2837,12 @@ references:
   commentId: M:Makaretu.Dns.NSECRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.NSECRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: NSECRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.NSECRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.NSECRecord.html#Makaretu_Dns_NSECRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.NSECRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.NSECRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: NSECRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.NSECRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.NSECRecord.html#Makaretu_Dns_NSECRecord_ReadData_
@@ -2854,6 +2920,12 @@ references:
   commentId: M:Makaretu.Dns.NSRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.NSRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: NSRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.NSRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.NSRecord.html#Makaretu_Dns_NSRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.NSRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.NSRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: NSRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.NSRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.NSRecord.html#Makaretu_Dns_NSRecord_ReadData_
@@ -2918,6 +2990,12 @@ references:
   commentId: M:Makaretu.Dns.NULLRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.NULLRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: NULLRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.NULLRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.NULLRecord.html#Makaretu_Dns_NULLRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.NULLRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.NULLRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: NULLRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.NULLRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.NULLRecord.html#Makaretu_Dns_NULLRecord_ReadData_
@@ -3086,6 +3164,12 @@ references:
   commentId: M:Makaretu.Dns.PTRRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.PTRRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: PTRRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.PTRRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.PTRRecord.html#Makaretu_Dns_PTRRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.PTRRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.PTRRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: PTRRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.PTRRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.PTRRecord.html#Makaretu_Dns_PTRRecord_ReadData_
@@ -3958,6 +4042,12 @@ references:
   commentId: M:Makaretu.Dns.ResourceRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.ResourceRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: ResourceRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.ResourceRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.ResourceRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.ResourceRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: ResourceRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.ResourceRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_ReadData_
@@ -4121,6 +4211,12 @@ references:
   commentId: M:Makaretu.Dns.RPRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.RPRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: RPRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.RPRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.RPRecord.html#Makaretu_Dns_RPRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.RPRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.RPRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: RPRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.RPRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.RPRecord.html#Makaretu_Dns_RPRecord_ReadData_
@@ -4345,6 +4441,12 @@ references:
   commentId: M:Makaretu.Dns.SOARecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.SOARecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: SOARecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.SOARecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.SOARecord.html#Makaretu_Dns_SOARecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.SOARecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.SOARecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: SOARecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.SOARecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.SOARecord.html#Makaretu_Dns_SOARecord_ReadData_
@@ -4461,6 +4563,12 @@ references:
   commentId: M:Makaretu.Dns.SRVRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.SRVRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: SRVRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.SRVRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.SRVRecord.html#Makaretu_Dns_SRVRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.SRVRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.SRVRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: SRVRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.SRVRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.SRVRecord.html#Makaretu_Dns_SRVRecord_ReadData_
@@ -4538,6 +4646,12 @@ references:
   commentId: M:Makaretu.Dns.TXTRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.TXTRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: TXTRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.TXTRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.TXTRecord.html#Makaretu_Dns_TXTRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.TXTRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.TXTRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: TXTRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.TXTRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.TXTRecord.html#Makaretu_Dns_TXTRecord_ReadData_
@@ -4647,6 +4761,12 @@ references:
   commentId: M:Makaretu.Dns.UnknownRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)
   fullName: Makaretu.Dns.UnknownRecord.ReadData(Makaretu.Dns.DnsReader, System.Int32)
   nameWithType: UnknownRecord.ReadData(DnsReader, Int32)
+- uid: Makaretu.Dns.UnknownRecord.ReadData(Makaretu.Dns.MasterReader)
+  name: ReadData(MasterReader)
+  href: api/Makaretu.Dns.UnknownRecord.html#Makaretu_Dns_UnknownRecord_ReadData_Makaretu_Dns_MasterReader_
+  commentId: M:Makaretu.Dns.UnknownRecord.ReadData(Makaretu.Dns.MasterReader)
+  fullName: Makaretu.Dns.UnknownRecord.ReadData(Makaretu.Dns.MasterReader)
+  nameWithType: UnknownRecord.ReadData(MasterReader)
 - uid: Makaretu.Dns.UnknownRecord.ReadData*
   name: ReadData
   href: api/Makaretu.Dns.UnknownRecord.html#Makaretu_Dns_UnknownRecord_ReadData_

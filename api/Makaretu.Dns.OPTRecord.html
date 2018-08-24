@@ -149,6 +149,9 @@
       <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_MasterReader_">ResourceRecord.Read(MasterReader)</a>
     </div>
     <div>
+      <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_MasterReader_">ResourceRecord.ReadData(MasterReader)</a>
+    </div>
+    <div>
       <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_CreationTime">DnsObject.CreationTime</a>
     </div>
     <div>
@@ -439,7 +442,7 @@ the version.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void ReadData(DnsReader reader, int length)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void ReadData(DnsReader reader, int length)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -484,7 +487,7 @@ the version.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void WriteData(DnsWriter writer)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void WriteData(DnsWriter writer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
