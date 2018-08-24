@@ -15,7 +15,7 @@ namespace Makaretu.Dns
     public static class DigestRegistry
     {
         /// <summary>
-        ///   All the hashing algorithms..
+        ///   All the hashing algorithms.
         /// </summary>
         /// <remarks>
         ///   The key is the <see cref="DigestType"/>.

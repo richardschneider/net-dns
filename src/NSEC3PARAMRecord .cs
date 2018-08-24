@@ -66,6 +66,7 @@ namespace Makaretu.Dns
             writer.WriteByteLengthPrefixedBytes(Salt);
         }
 
+        /// <inheritdoc />
         public override void ReadData(MasterReader reader)
         {
             HashAlgorithm = (DigestType)reader.ReadByte();

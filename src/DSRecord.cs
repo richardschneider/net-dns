@@ -10,10 +10,6 @@ namespace Makaretu.Dns
     /// <summary>
     ///   Delegation Signer.
     /// </summary>
-    /// <remarks>
-    ///   The <see cref="DNSKEYRecord.CreateDSRecord"/> can be used to
-    ///   create <see cref="DSRecord"/> from a <see cref="DNSKEYRecord"/>.
-    /// </remarks>
     public class DSRecord : ResourceRecord
     {
         /// <summary>
@@ -25,7 +21,39 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
-        ///   The ID of the referenced <see cref="DNSKEYRecord"/>.
+        ///   Creates a new instance of the <see cref="DSRecord"/> class
+        ///   from the specified <see cref="DNSKEYRecord"/>.
+        /// </summary>
+        /// <param name="key">
+        ///   The dns key to use.
+        /// </param>
+        /// <param name="digestType">
+        ///   The digest algorithm to use.  Defaults to <see cref="DigestType.Sha1"/>.
+        /// </param>
+        public DSRecord(DNSKEYRecord key, DigestType digestType = DigestType.Sha1) 
+            : this()
+        {
+            byte[] digest;
+            using (var ms = new MemoryStream())
+            using (var hasher = DigestRegistry.Create(digestType))
+            {
+                var writer = new DnsWriter(ms) { CanonicalForm = true };
+                writer.WriteDomainName(key.Name);
+                key.WriteData(writer);
+                ms.Position = 0;
+                digest = hasher.ComputeHash(ms);
+            }
+            Algorithm = key.Algorithm;
+            Class = key.Class;
+            KeyTag = key.KeyTag();
+            Name = key.Name;
+            TTL = key.TTL;
+            Digest = digest;
+            HashAlgorithm = DigestType.Sha1;
+        }
+
+        /// <summary>
+        ///   The tag of the referenced <see cref="DNSKEYRecord"/>.
         /// </summary>
         public ushort KeyTag { get; set; }
 
@@ -71,6 +99,7 @@ namespace Makaretu.Dns
             writer.WriteBytes(Digest);
         }
 
+        /// <inheritdoc />
         public override void ReadData(MasterReader reader)
         {
             KeyTag = reader.ReadUInt16();

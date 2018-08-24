@@ -57,5 +57,36 @@ namespace Makaretu.Dns
             CollectionAssert.AreEqual(a.Digest, b.Digest);
         }
 
+        [TestMethod]
+        public void FromDNSKEY()
+        {
+            // From https://tools.ietf.org/html/rfc4034#section-5.4
+            var key = new DNSKEYRecord
+            {
+                Name = "dskey.example.com",
+                TTL = TimeSpan.FromSeconds(86400),
+                Flags = 256,
+                Algorithm = SecurityAlgorithm.RSASHA1,
+                PublicKey = Convert.FromBase64String(
+                    @"AQOeiiR0GOMYkDshWoSKz9Xz
+                      fwJr1AYtsmx3TGkJaNXVbfi/
+                      2pHm822aJ5iI9BMzNXxeYCmZ
+                      DRD99WYwYqUSdjMmmAphXdvx
+                      egXd/M5+X7OrzKBaMbCVdFLU
+                      Uh6DhweJBjEVv5f2wwjM9Xzc
+                      nOf+EPbtG9DMBmADjFDc2w/r
+                      ljwvFw==")
+            };
+            var ds = new DSRecord(key);
+            Assert.AreEqual(key.Name, ds.Name);
+            Assert.AreEqual(key.Class, ds.Class);
+            Assert.AreEqual(DnsType.DS, ds.Type);
+            Assert.AreEqual(key.TTL, ds.TTL);
+            Assert.AreEqual(60485, ds.KeyTag);
+            Assert.AreEqual(SecurityAlgorithm.RSASHA1, ds.Algorithm);
+            Assert.AreEqual(DigestType.Sha1, ds.HashAlgorithm);
+            CollectionAssert.AreEqual(Base16.Decode("2BB183AF5F22588179A53B0A98631FAD1A292118"), ds.Digest);
+        }
+
     }
 }

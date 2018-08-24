@@ -73,39 +73,6 @@ namespace Makaretu.Dns
             return (ushort) (ac & 0xFFFF);
         }
 
-        /// <summary>
-        ///   Create a delegation signer from the key.
-        /// </summary>
-        /// <param name="digestType">
-        ///   The digest algorithm to use.  Defaults to <see cref="DigestType.Sha1"/>.
-        /// </param>
-        /// <returns>
-        ///   A <see cref="DSRecord"/> that refers to this key.
-        /// </returns>
-        public DSRecord CreateDSRecord(DigestType digestType = DigestType.Sha1)
-        {
-            byte[] digest;
-            using (var ms = new MemoryStream())
-            using (var hasher = DigestRegistry.Create(digestType))
-            {
-                var writer = new DnsWriter(ms);
-                writer.WriteDomainName(CanonicalName, uncompressed: true);
-                this.WriteData(writer);
-                ms.Position = 0;
-                digest = hasher.ComputeHash(ms);
-            }
-            return new DSRecord
-            {
-                Algorithm = Algorithm,
-                Class = Class,
-                Digest = digest,
-                HashAlgorithm = DigestType.Sha1,
-                KeyTag = KeyTag(),
-                Name = Name,
-                TTL = TTL
-            };
-        }
-
         /// <inheritdoc />
         public override void ReadData(DnsReader reader, int length)
         {
@@ -126,6 +93,7 @@ namespace Makaretu.Dns
             writer.WriteBytes(PublicKey);
         }
 
+        /// <inheritdoc />
         public override void ReadData(MasterReader reader)
         {
             Flags = reader.ReadUInt16();

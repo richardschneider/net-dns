@@ -87,6 +87,7 @@ namespace Makaretu.Dns
             writer.WriteBitmap(Types.Select(t => (ushort)t));
         }
 
+        /// <inheritdoc />
         public override void ReadData(MasterReader reader)
         {
             HashAlgorithm = (DigestType)reader.ReadByte();

@@ -8,7 +8,10 @@ namespace Makaretu.Dns
     ///  Identities the cryptographic digest algorithm used by the resource records.
     /// </summary>
     /// <remarks>
-    ///   The values are maintained by IANA at <see href="https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml#ds-rr-types-1"/>
+    ///   The values are maintained by IANA at <see href="https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml#ds-rr-types-1"/>.
+    ///   <para>
+    ///   Implemented digest algorithms are obtained from the <see cref="DigestRegistry"/>.
+    ///   </para>
     /// </remarks>
     /// <seealso cref="ResourceRecord"/>
     /// <seealso href="https://www.ietf.org/rfc/rfc4034.txt">RFC 4035</seealso>
