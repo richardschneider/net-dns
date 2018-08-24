@@ -52,7 +52,7 @@ namespace Makaretu.Dns
         public byte[] Digest { get; set; }
 
         /// <inheritdoc />
-        protected override void ReadData(DnsReader reader, int length)
+        public override void ReadData(DnsReader reader, int length)
         {
             var end = reader.Position + length;
 
@@ -63,7 +63,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        protected override void WriteData(DnsWriter writer)
+        public override void WriteData(DnsWriter writer)
         {
             writer.WriteUInt16(KeyTag);
             writer.WriteByte((byte)Algorithm);
@@ -71,7 +71,7 @@ namespace Makaretu.Dns
             writer.WriteBytes(Digest);
         }
 
-        internal override void ReadData(MasterReader reader)
+        public override void ReadData(MasterReader reader)
         {
             KeyTag = reader.ReadUInt16();
             Algorithm = (SecurityAlgorithm)reader.ReadByte();
@@ -87,7 +87,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        protected override void WriteData(TextWriter writer)
+        public override void WriteData(TextWriter writer)
         {
             writer.Write(KeyTag);
             writer.Write(' ');

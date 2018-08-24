@@ -81,7 +81,7 @@ namespace Makaretu.Dns
         public TimeSpan Minimum { get; set; }
 
         /// <inheritdoc />
-        protected override void ReadData(DnsReader reader, int length)
+        public override void ReadData(DnsReader reader, int length)
         {
             PrimaryName = reader.ReadDomainName();
             Mailbox = reader.ReadDomainName();
@@ -93,7 +93,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        internal override void ReadData(MasterReader reader)
+        public override void ReadData(MasterReader reader)
         {
             PrimaryName = reader.ReadDomainName();
             Mailbox = reader.ReadDomainName();
@@ -105,7 +105,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        protected override void WriteData(DnsWriter writer)
+        public override void WriteData(DnsWriter writer)
         {
             writer.WriteDomainName(PrimaryName);
             writer.WriteDomainName(Mailbox);
@@ -117,7 +117,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        protected override void WriteData(TextWriter writer)
+        public override void WriteData(TextWriter writer)
         {
             writer.Write(PrimaryName);
             writer.Write(' ');

@@ -29,7 +29,7 @@ namespace Makaretu.Dns
         public List<string> Strings { get; set; } = new List<string>();
 
         /// <inheritdoc />
-        protected override void ReadData(DnsReader reader, int length)
+        public override void ReadData(DnsReader reader, int length)
         {
             while (length > 0)
             {
@@ -40,7 +40,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        internal override void ReadData(MasterReader reader)
+        public override void ReadData(MasterReader reader)
         {
             while (!reader.IsEndOfLine())
             {
@@ -51,7 +51,7 @@ namespace Makaretu.Dns
 
 
         /// <inheritdoc />
-        protected override void WriteData(DnsWriter writer)
+        public override void WriteData(DnsWriter writer)
         {
             foreach (var s in Strings)
             {
@@ -60,7 +60,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        protected override void WriteData(TextWriter writer)
+        public override void WriteData(TextWriter writer)
         {
             bool next = false;
             foreach (var s in Strings)

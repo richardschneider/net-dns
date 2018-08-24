@@ -181,7 +181,7 @@ namespace Makaretu.Dns
         /// <remarks>
         ///   Derived classes must implement this method.
         /// </remarks>
-        protected virtual void ReadData(DnsReader reader, int length)
+        public virtual void ReadData(DnsReader reader, int length)
         {
         }
 
@@ -207,7 +207,7 @@ namespace Makaretu.Dns
         /// <remarks>
         ///   Derived classes must implement this method.
         /// </remarks>
-        protected virtual void WriteData(DnsWriter writer)
+        public virtual void WriteData(DnsWriter writer)
         {
         }
 
@@ -352,7 +352,7 @@ namespace Makaretu.Dns
         ///   "\#" and the number integer bytes.
         ///   </para>
         /// </remarks>
-        protected virtual void WriteData(TextWriter writer)
+        public virtual void WriteData(TextWriter writer)
         {
             var rdata = GetData();
             writer.Write("\\# ");
@@ -386,7 +386,7 @@ namespace Makaretu.Dns
         /// <remarks>
         ///   Derived classes must implement this method.
         /// </remarks>
-        internal virtual void ReadData(MasterReader reader)
+        public virtual void ReadData(MasterReader reader)
         {
         }
 

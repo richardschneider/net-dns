@@ -47,7 +47,7 @@ namespace Makaretu.Dns
         public byte[] Salt { get; set; }
 
         /// <inheritdoc />
-        protected override void ReadData(DnsReader reader, int length)
+        public override void ReadData(DnsReader reader, int length)
         {
             var end = reader.Position + length;
 
@@ -58,7 +58,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        protected override void WriteData(DnsWriter writer)
+        public override void WriteData(DnsWriter writer)
         {
             writer.WriteByte((byte)HashAlgorithm);
             writer.WriteByte(Flags);
@@ -66,7 +66,7 @@ namespace Makaretu.Dns
             writer.WriteByteLengthPrefixedBytes(Salt);
         }
 
-        internal override void ReadData(MasterReader reader)
+        public override void ReadData(MasterReader reader)
         {
             HashAlgorithm = (DigestType)reader.ReadByte();
             Flags = reader.ReadByte();
@@ -78,7 +78,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        protected override void WriteData(TextWriter writer)
+        public override void WriteData(TextWriter writer)
         {
             writer.Write((ushort)HashAlgorithm);
             writer.Write(' ');

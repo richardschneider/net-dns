@@ -39,25 +39,25 @@ namespace Makaretu.Dns
 
 
         /// <inheritdoc />
-        protected override void ReadData(DnsReader reader, int length)
+        public override void ReadData(DnsReader reader, int length)
         {
             Authority = reader.ReadDomainName();
         }
 
         /// <inheritdoc />
-        internal override void ReadData(MasterReader reader)
+        public override void ReadData(MasterReader reader)
         {
             Authority = reader.ReadDomainName();
         }
 
         /// <inheritdoc />
-        protected override void WriteData(DnsWriter writer)
+        public override void WriteData(DnsWriter writer)
         {
             writer.WriteDomainName(Authority);
         }
 
         /// <inheritdoc />
-        protected override void WriteData(TextWriter writer)
+        public override void WriteData(TextWriter writer)
         {
             writer.Write(Authority);
         }

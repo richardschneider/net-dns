@@ -57,7 +57,7 @@ namespace Makaretu.Dns
         public string Target { get; set; }
 
         /// <inheritdoc />
-        protected override void ReadData(DnsReader reader, int length)
+        public override void ReadData(DnsReader reader, int length)
         {
             Priority = reader.ReadUInt16();
             Weight = reader.ReadUInt16();
@@ -66,7 +66,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        internal override void ReadData(MasterReader reader)
+        public override void ReadData(MasterReader reader)
         {
             Priority = reader.ReadUInt16();
             Weight = reader.ReadUInt16();
@@ -75,7 +75,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        protected override void WriteData(DnsWriter writer)
+        public override void WriteData(DnsWriter writer)
         {
             writer.WriteUInt16(Priority);
             writer.WriteUInt16(Weight);
@@ -84,7 +84,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        protected override void WriteData(TextWriter writer)
+        public override void WriteData(TextWriter writer)
         {
             writer.Write(Priority);
             writer.Write(' ');
