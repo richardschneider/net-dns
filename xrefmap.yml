@@ -480,19 +480,6 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DNSKEYRecord.Algorithm
   nameWithType: DNSKEYRecord.Algorithm
-- uid: Makaretu.Dns.DNSKEYRecord.CreateDSRecord(Makaretu.Dns.DigestType)
-  name: CreateDSRecord(DigestType)
-  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_CreateDSRecord_Makaretu_Dns_DigestType_
-  commentId: M:Makaretu.Dns.DNSKEYRecord.CreateDSRecord(Makaretu.Dns.DigestType)
-  fullName: Makaretu.Dns.DNSKEYRecord.CreateDSRecord(Makaretu.Dns.DigestType)
-  nameWithType: DNSKEYRecord.CreateDSRecord(DigestType)
-- uid: Makaretu.Dns.DNSKEYRecord.CreateDSRecord*
-  name: CreateDSRecord
-  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_CreateDSRecord_
-  commentId: Overload:Makaretu.Dns.DNSKEYRecord.CreateDSRecord
-  isSpec: "True"
-  fullName: Makaretu.Dns.DNSKEYRecord.CreateDSRecord
-  nameWithType: DNSKEYRecord.CreateDSRecord
 - uid: Makaretu.Dns.DNSKEYRecord.Flags
   name: Flags
   href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_Flags
@@ -1299,6 +1286,12 @@ references:
   commentId: M:Makaretu.Dns.DSRecord.#ctor
   fullName: Makaretu.Dns.DSRecord.DSRecord()
   nameWithType: DSRecord.DSRecord()
+- uid: Makaretu.Dns.DSRecord.#ctor(Makaretu.Dns.DNSKEYRecord,Makaretu.Dns.DigestType)
+  name: DSRecord(DNSKEYRecord, DigestType)
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord__ctor_Makaretu_Dns_DNSKEYRecord_Makaretu_Dns_DigestType_
+  commentId: M:Makaretu.Dns.DSRecord.#ctor(Makaretu.Dns.DNSKEYRecord,Makaretu.Dns.DigestType)
+  fullName: Makaretu.Dns.DSRecord.DSRecord(Makaretu.Dns.DNSKEYRecord, Makaretu.Dns.DigestType)
+  nameWithType: DSRecord.DSRecord(DNSKEYRecord, DigestType)
 - uid: Makaretu.Dns.DSRecord.#ctor*
   name: DSRecord
   href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord__ctor_
