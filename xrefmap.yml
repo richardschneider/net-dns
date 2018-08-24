@@ -329,12 +329,24 @@ references:
   commentId: T:Makaretu.Dns.DigestRegistry
   fullName: Makaretu.Dns.DigestRegistry
   nameWithType: DigestRegistry
+- uid: Makaretu.Dns.DigestRegistry.Algorithms
+  name: Algorithms
+  href: api/Makaretu.Dns.DigestRegistry.html#Makaretu_Dns_DigestRegistry_Algorithms
+  commentId: F:Makaretu.Dns.DigestRegistry.Algorithms
+  fullName: Makaretu.Dns.DigestRegistry.Algorithms
+  nameWithType: DigestRegistry.Algorithms
 - uid: Makaretu.Dns.DigestRegistry.Create(Makaretu.Dns.DigestType)
   name: Create(DigestType)
   href: api/Makaretu.Dns.DigestRegistry.html#Makaretu_Dns_DigestRegistry_Create_Makaretu_Dns_DigestType_
   commentId: M:Makaretu.Dns.DigestRegistry.Create(Makaretu.Dns.DigestType)
   fullName: Makaretu.Dns.DigestRegistry.Create(Makaretu.Dns.DigestType)
   nameWithType: DigestRegistry.Create(DigestType)
+- uid: Makaretu.Dns.DigestRegistry.Create(Makaretu.Dns.SecurityAlgorithm)
+  name: Create(SecurityAlgorithm)
+  href: api/Makaretu.Dns.DigestRegistry.html#Makaretu_Dns_DigestRegistry_Create_Makaretu_Dns_SecurityAlgorithm_
+  commentId: M:Makaretu.Dns.DigestRegistry.Create(Makaretu.Dns.SecurityAlgorithm)
+  fullName: Makaretu.Dns.DigestRegistry.Create(Makaretu.Dns.SecurityAlgorithm)
+  nameWithType: DigestRegistry.Create(SecurityAlgorithm)
 - uid: Makaretu.Dns.DigestRegistry.Create*
   name: Create
   href: api/Makaretu.Dns.DigestRegistry.html#Makaretu_Dns_DigestRegistry_Create_
@@ -378,6 +390,12 @@ references:
   commentId: F:Makaretu.Dns.DigestType.Sha384
   fullName: Makaretu.Dns.DigestType.Sha384
   nameWithType: DigestType.Sha384
+- uid: Makaretu.Dns.DigestType.Sha512
+  name: Sha512
+  href: api/Makaretu.Dns.DigestType.html#Makaretu_Dns_DigestType_Sha512
+  commentId: F:Makaretu.Dns.DigestType.Sha512
+  fullName: Makaretu.Dns.DigestType.Sha512
+  nameWithType: DigestType.Sha512
 - uid: Makaretu.Dns.DNAMERecord
   name: DNAMERecord
   href: api/Makaretu.Dns.DNAMERecord.html
@@ -1286,12 +1304,12 @@ references:
   commentId: M:Makaretu.Dns.DSRecord.#ctor
   fullName: Makaretu.Dns.DSRecord.DSRecord()
   nameWithType: DSRecord.DSRecord()
-- uid: Makaretu.Dns.DSRecord.#ctor(Makaretu.Dns.DNSKEYRecord,Makaretu.Dns.DigestType)
-  name: DSRecord(DNSKEYRecord, DigestType)
-  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord__ctor_Makaretu_Dns_DNSKEYRecord_Makaretu_Dns_DigestType_
-  commentId: M:Makaretu.Dns.DSRecord.#ctor(Makaretu.Dns.DNSKEYRecord,Makaretu.Dns.DigestType)
-  fullName: Makaretu.Dns.DSRecord.DSRecord(Makaretu.Dns.DNSKEYRecord, Makaretu.Dns.DigestType)
-  nameWithType: DSRecord.DSRecord(DNSKEYRecord, DigestType)
+- uid: Makaretu.Dns.DSRecord.#ctor(Makaretu.Dns.DNSKEYRecord)
+  name: DSRecord(DNSKEYRecord)
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord__ctor_Makaretu_Dns_DNSKEYRecord_
+  commentId: M:Makaretu.Dns.DSRecord.#ctor(Makaretu.Dns.DNSKEYRecord)
+  fullName: Makaretu.Dns.DSRecord.DSRecord(Makaretu.Dns.DNSKEYRecord)
+  nameWithType: DSRecord.DSRecord(DNSKEYRecord)
 - uid: Makaretu.Dns.DSRecord.#ctor*
   name: DSRecord
   href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord__ctor_
