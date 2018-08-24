@@ -27,5 +27,19 @@ namespace Makaretu.Dns
         {
             DigestRegistry.Create(DigestType.GostR34_11_94);
         }
+
+        [TestMethod]
+        public void RsaSha256()
+        {
+            var hasher = DigestRegistry.Create(SecurityAlgorithm.RSASHA256);
+            Assert.IsInstanceOfType(hasher, typeof(HashAlgorithm));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NotImplementedException))]
+        public void EccGost()
+        {
+            DigestRegistry.Create(SecurityAlgorithm.ECCGOST);
+        }
     }
 }

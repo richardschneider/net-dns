@@ -27,15 +27,12 @@ namespace Makaretu.Dns
         /// <param name="key">
         ///   The dns key to use.
         /// </param>
-        /// <param name="digestType">
-        ///   The digest algorithm to use.  Defaults to <see cref="DigestType.Sha1"/>.
-        /// </param>
-        public DSRecord(DNSKEYRecord key, DigestType digestType = DigestType.Sha1) 
+        public DSRecord(DNSKEYRecord key) 
             : this()
         {
             byte[] digest;
             using (var ms = new MemoryStream())
-            using (var hasher = DigestRegistry.Create(digestType))
+            using (var hasher = DigestRegistry.Create(key.Algorithm))
             {
                 var writer = new DnsWriter(ms) { CanonicalForm = true };
                 writer.WriteDomainName(key.Name);

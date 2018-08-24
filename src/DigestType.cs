@@ -36,5 +36,10 @@ namespace Makaretu.Dns
         /// SHA-384
         /// </summary>
         Sha384 = 4,
+
+        /// <summary>
+        /// SHA-512 (not in IANA registry)
+        /// </summary>
+        Sha512 = 5,
     }
 }
