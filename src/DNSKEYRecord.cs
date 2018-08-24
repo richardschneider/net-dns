@@ -22,6 +22,33 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Creates a new instance of the <see cref="DNSKEYRecord"/> class
+        ///   from the specified RSA key.
+        /// </summary>
+        /// <param name="key">
+        ///   A public or private RSA key.
+        /// </param>
+        /// <param name="algorithm">
+        ///   The security algorithm to use.  Only RSA types are allowed.
+        /// </param>
+        public DNSKEYRecord(RSA key, SecurityAlgorithm algorithm)
+            : this()
+        {
+            Flags = 256; // TODO: define an enum
+            Algorithm = algorithm; // TODO check for RSA algorithm
+
+            using (var ms = new MemoryStream())
+            {
+                var p = key.ExportParameters(includePrivateParameters: false);
+                // TODO: length > 255
+                ms.WriteByte((byte)p.Exponent.Length);
+                ms.Write(p.Exponent, 0, p.Exponent.Length);
+                ms.Write(p.Modulus, 0, p.Modulus.Length);
+                PublicKey = ms.ToArray();
+            }
+        }
+
+        /// <summary>
         ///  TODO
         /// </summary>
         public ushort Flags { get; set; }

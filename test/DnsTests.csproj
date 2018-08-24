@@ -18,4 +18,8 @@
     <ProjectReference Include="..\src\Dns.csproj" />
   </ItemGroup>
 
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.1'">
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
+  </ItemGroup>
+
 </Project>

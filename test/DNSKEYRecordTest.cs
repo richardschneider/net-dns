@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
 
 namespace Makaretu.Dns
 {
@@ -80,6 +81,54 @@ namespace Makaretu.Dns
                       ljwvFw==")
             };
             Assert.AreEqual(60485, a.KeyTag());
+        }
+
+        [TestMethod]
+        public void FromRsaSha256()
+        {
+            // From https://tools.ietf.org/html/rfc5702#section-6.1
+            var modulus = Convert.FromBase64String("wVwaxrHF2CK64aYKRUibLiH30KpPuPBjel7E8ZydQW1HYWHfoGmidzC2RnhwCC293hCzw+TFR2nqn8OVSY5t2Q==");
+            var publicExponent = Convert.FromBase64String("AQAB");
+            var dnsPublicKey = Convert.FromBase64String("AwEAAcFcGsaxxdgiuuGmCkVImy4h99CqT7jwY3pexPGcnUFtR2Fh36BponcwtkZ4cAgtvd4Qs8PkxUdp6p/DlUmObdk=");
+
+            var parameters = new RSAParameters()
+            {
+                Exponent = publicExponent,
+                Modulus = modulus,
+            };
+            var publicKey = RSA.Create();
+            publicKey.ImportParameters(parameters);
+
+            var dnskey = new DNSKEYRecord(publicKey, SecurityAlgorithm.RSASHA256);
+            Assert.AreEqual(256, dnskey.Flags);
+            Assert.AreEqual(3, dnskey.Protocol);
+            Assert.AreEqual(SecurityAlgorithm.RSASHA256, dnskey.Algorithm);
+            CollectionAssert.AreEqual(dnsPublicKey, dnskey.PublicKey);
+            Assert.AreEqual(9033, dnskey.KeyTag());
+        }
+
+        [TestMethod]
+        public void FromRsaSha512()
+        {
+            // From https://tools.ietf.org/html/rfc5702#section-6.2
+            var modulus = Convert.FromBase64String("0eg1M5b563zoq4k5ZEOnWmd2/BvpjzedJVdfIsDcMuuhE5SQ3pfQ7qmdaeMlC6Nf8DKGoUPGPXe06cP27/WRODtxXquSUytkO0kJDk8KX8PtA0+yBWwy7UnZDyCkynO00Uuk8HPVtZeMO1pHtlAGVnc8VjXZlNKdyit99waaE4s=");
+            var publicExponent = Convert.FromBase64String("AQAB");
+            var dnsPublicKey = Convert.FromBase64String("AwEAAdHoNTOW+et86KuJOWRDp1pndvwb6Y83nSVXXyLA3DLroROUkN6X0O6pnWnjJQujX/AyhqFDxj13tOnD9u/1kTg7cV6rklMrZDtJCQ5PCl/D7QNPsgVsMu1J2Q8gpMpztNFLpPBz1bWXjDtaR7ZQBlZ3PFY12ZTSncorffcGmhOL");
+
+            var parameters = new RSAParameters()
+            {
+                Exponent = publicExponent,
+                Modulus = modulus,
+            };
+            var publicKey = RSA.Create();
+            publicKey.ImportParameters(parameters);
+
+            var dnskey = new DNSKEYRecord(publicKey, SecurityAlgorithm.RSASHA512);
+            Assert.AreEqual(256, dnskey.Flags);
+            Assert.AreEqual(3, dnskey.Protocol);
+            Assert.AreEqual(SecurityAlgorithm.RSASHA512, dnskey.Algorithm);
+            CollectionAssert.AreEqual(dnsPublicKey, dnskey.PublicKey);
+            Assert.AreEqual(3740, dnskey.KeyTag());
         }
 
     }
