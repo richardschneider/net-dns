@@ -245,16 +245,18 @@ a._http._tcp SRV 0 5 80 mail
         [TestMethod]
         public void CanonicalOrder()
         {
-            var catalog = new Catalog();
-            catalog.Add(AddressRecord.Create("*.z.example", IPAddress.Loopback));
-            catalog.Add(AddressRecord.Create("a.example", IPAddress.Loopback));
-            catalog.Add(AddressRecord.Create("yljkjljk.a.example", IPAddress.Loopback));
-            catalog.Add(AddressRecord.Create("Z.a.example", IPAddress.Loopback));
-            catalog.Add(AddressRecord.Create("zABC.a.EXAMPLE", IPAddress.Loopback));
-            catalog.Add(AddressRecord.Create("z.example", IPAddress.Loopback));
-            catalog.Add(AddressRecord.Create("!.z.example", IPAddress.Loopback));
-            catalog.Add(AddressRecord.Create("~.z.example", IPAddress.Loopback));
-            catalog.Add(AddressRecord.Create("example", IPAddress.Loopback));
+            var catalog = new Catalog
+            {
+                AddressRecord.Create("*.z.example", IPAddress.Loopback),
+                AddressRecord.Create("a.example", IPAddress.Loopback),
+                AddressRecord.Create("yljkjljk.a.example", IPAddress.Loopback),
+                AddressRecord.Create("Z.a.example", IPAddress.Loopback),
+                AddressRecord.Create("zABC.a.EXAMPLE", IPAddress.Loopback),
+                AddressRecord.Create("z.example", IPAddress.Loopback),
+                AddressRecord.Create("!.z.example", IPAddress.Loopback),
+                AddressRecord.Create("~.z.example", IPAddress.Loopback),
+                AddressRecord.Create("example", IPAddress.Loopback)
+            };
 
             var expected = new string[]
             {
