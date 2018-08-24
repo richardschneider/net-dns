@@ -62,6 +62,12 @@ namespace Makaretu.Dns
         /// <exception cref="CryptographicException">
         ///   <paramref name="key"/> is not valid.
         /// </exception>
+        /// <remarks>
+        ///   <note>
+        ///   ECDSA key support is <b>NOT available</b> for NETSTANDARD14 nor NET45.
+        ///   It is available for NETSTANDARD2, NET472 or greater.
+        ///   </note>
+        /// </remarks>
         public DNSKEYRecord(ECDsa key)
             : this()
         {
@@ -115,6 +121,10 @@ namespace Makaretu.Dns
         /// <summary>
         ///   Identifies the public key's cryptographic algorithm.
         /// </summary>
+        /// <value>
+        ///   Identifies the type of key (RSA, ECDSA, ...) and the
+        ///   hashing algorithm.
+        /// </value>
         /// <remarks>
         ///    Determines the format of the<see cref="PublicKey"/>.
         /// </remarks>
@@ -123,9 +133,9 @@ namespace Makaretu.Dns
         /// <summary>
         ///   The public key material.
         /// </summary>
-        /// <remarks>
-        ///   The format depends on the <see cref="Algorithm"/> of the key being stored.
-        /// </remarks>
+        /// <value>
+        ///   The format depends on the key <see cref="Algorithm"/>.
+        /// </value>
         public byte[] PublicKey { get; set; }
 
         /// <summary>
