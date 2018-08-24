@@ -3295,6 +3295,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Resolving.Catalog.IncludeZone
   nameWithType: Catalog.IncludeZone
+- uid: Makaretu.Dns.Resolving.Catalog.NodesInCanonicalOrder
+  name: NodesInCanonicalOrder()
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_NodesInCanonicalOrder
+  commentId: M:Makaretu.Dns.Resolving.Catalog.NodesInCanonicalOrder
+  fullName: Makaretu.Dns.Resolving.Catalog.NodesInCanonicalOrder()
+  nameWithType: Catalog.NodesInCanonicalOrder()
+- uid: Makaretu.Dns.Resolving.Catalog.NodesInCanonicalOrder*
+  name: NodesInCanonicalOrder
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_NodesInCanonicalOrder_
+  commentId: Overload:Makaretu.Dns.Resolving.Catalog.NodesInCanonicalOrder
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.Catalog.NodesInCanonicalOrder
+  nameWithType: Catalog.NodesInCanonicalOrder
 - uid: Makaretu.Dns.Resolving.Catalog.RemoveZone(System.String)
   name: RemoveZone(String)
   href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_RemoveZone_System_String_
