@@ -21,6 +21,9 @@ namespace Makaretu.Dns
         /// <summary>
         ///   RSA/MD5 (deprecated)
         /// </summary>
+        /// <remarks>
+        ///   Must not be implemented according to <see href="https://tools.ietf.org/html/rfc6944">RFC 6944</see>.
+        /// </remarks>
         RSAMD5 = 1,
 
         /// <summary>
