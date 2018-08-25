@@ -48,6 +48,63 @@ namespace Makaretu.Dns
             }
         }
 
+#if (!NETSTANDARD14 && !NET45)
+        /// <summary>
+        ///   Creates a new instance of the <see cref="DNSKEYRecord"/> class
+        ///   from the specified ECDSA key.
+        /// </summary>
+        /// <param name="key">
+        ///   A public or private ECDSA key.
+        /// </param>
+        /// <exception cref="ArgumentException">
+        ///   <paramref name="key"/> is not named nistP256 nor nist384.
+        /// </exception>
+        /// <exception cref="CryptographicException">
+        ///   <paramref name="key"/> is not valid.
+        /// </exception>
+        /// <remarks>
+        ///   <note>
+        ///   ECDSA key support is <b>NOT available</b> for NETSTANDARD14 nor NET45.
+        ///   It is available for NETSTANDARD2, NET472 or greater.
+        ///   </note>
+        /// </remarks>
+        public DNSKEYRecord(ECDsa key)
+            : this()
+        {
+            var p = key.ExportParameters(includePrivateParameters: false);
+            p.Validate();
+
+            Flags = 256; // TODO: define an enum
+
+            if (!p.Curve.IsNamed)
+                throw new ArgumentException("Only named ECDSA curves are allowed.");
+            // TODO: Need a security algorithm registry
+            switch (p.Curve.Oid.FriendlyName)
+            {
+                case "nistP256":
+                case "ECDSA_P256":
+                    Algorithm = SecurityAlgorithm.ECDSAP256SHA256;
+                    break;
+                case "nistP384":
+                case "ECDSA_P384":
+                    Algorithm = SecurityAlgorithm.ECDSAP384SHA384;
+                    break;
+                default:
+                    throw new ArgumentException($"ECDSA curve '{p.Curve.Oid.FriendlyName} is not known'.");
+            }
+
+            // ECDSA public keys consist of a single value, called "Q" in FIPS 186-3.
+            // In DNSSEC keys, Q is a simple bit string that represents the
+            // uncompressed form of a curve point, "x | y".
+            using (var ms = new MemoryStream())
+            {
+                ms.Write(p.Q.X, 0, p.Q.X.Length);
+                ms.Write(p.Q.Y, 0, p.Q.Y.Length);
+                PublicKey = ms.ToArray();
+            }
+        }
+#endif
+
         /// <summary>
         ///  TODO
         /// </summary>
@@ -64,6 +121,10 @@ namespace Makaretu.Dns
         /// <summary>
         ///   Identifies the public key's cryptographic algorithm.
         /// </summary>
+        /// <value>
+        ///   Identifies the type of key (RSA, ECDSA, ...) and the
+        ///   hashing algorithm.
+        /// </value>
         /// <remarks>
         ///    Determines the format of the<see cref="PublicKey"/>.
         /// </remarks>
@@ -72,9 +133,9 @@ namespace Makaretu.Dns
         /// <summary>
         ///   The public key material.
         /// </summary>
-        /// <remarks>
-        ///   The format depends on the <see cref="Algorithm"/> of the key being stored.
-        /// </remarks>
+        /// <value>
+        ///   The format depends on the key <see cref="Algorithm"/>.
+        /// </value>
         public byte[] PublicKey { get; set; }
 
         /// <summary>

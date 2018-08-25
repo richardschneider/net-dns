@@ -115,7 +115,7 @@ namespace Makaretu.Dns
             var publicExponent = Convert.FromBase64String("AQAB");
             var dnsPublicKey = Convert.FromBase64String("AwEAAdHoNTOW+et86KuJOWRDp1pndvwb6Y83nSVXXyLA3DLroROUkN6X0O6pnWnjJQujX/AyhqFDxj13tOnD9u/1kTg7cV6rklMrZDtJCQ5PCl/D7QNPsgVsMu1J2Q8gpMpztNFLpPBz1bWXjDtaR7ZQBlZ3PFY12ZTSncorffcGmhOL");
 
-            var parameters = new RSAParameters()
+            var parameters = new RSAParameters
             {
                 Exponent = publicExponent,
                 Modulus = modulus,
@@ -131,5 +131,80 @@ namespace Makaretu.Dns
             Assert.AreEqual(3740, dnskey.KeyTag());
         }
 
+        [TestMethod]
+        public void FromECDsaP256()
+        {
+#if (NET45 || NETCOREAPP1_1)
+            Assert.Inconclusive("ECDsa is not available.");
+#else
+            // From https://tools.ietf.org/html/rfc6605#section-6.1
+            var privateKey = Convert.FromBase64String("GU6SnQ/Ou+xC5RumuIUIuJZteXT2z0O/ok1s38Et6mQ=");
+            var dnsPublicKey = Convert.FromBase64String("GojIhhXUN/u4v54ZQqGSnyhWJwaubCvTmeexv7bR6edbkrSqQpF64cYbcB7wNcP+e+MAnLr+Wi9xMWyQLc8NAA==");
+            var qx = new byte[32];
+            var qy = new byte[32];
+            Array.Copy(dnsPublicKey, 0, qx, 0, 32);
+            Array.Copy(dnsPublicKey, 32, qy, 0, 32);
+
+            // TODO: Create the public key
+            var parameters = new ECParameters
+            {
+                Curve = ECCurve.NamedCurves.nistP256,
+                Q = new ECPoint
+                {
+                    X = qx,
+                    Y = qy,
+                }
+            };
+            ECDsa publicKey = ECDsa.Create(parameters);
+
+            var dnskey = new DNSKEYRecord(publicKey)
+            {
+                Flags = 257
+            };
+            Assert.AreEqual(257, dnskey.Flags);
+            Assert.AreEqual(3, dnskey.Protocol);
+            Assert.AreEqual(SecurityAlgorithm.ECDSAP256SHA256, dnskey.Algorithm);
+            CollectionAssert.AreEqual(dnsPublicKey, dnskey.PublicKey);
+            Assert.AreEqual(55648, dnskey.KeyTag());
+#endif
+        }
+
+        [TestMethod]
+        public void FromECDsaP384()
+        {
+#if (NET45 || NETCOREAPP1_1)
+            Assert.Inconclusive("ECDsa is not available.");
+#else
+            // From https://tools.ietf.org/html/rfc6605#section-6.2
+            var privateKey = Convert.FromBase64String("WURgWHCcYIYUPWgeLmiPY2DJJk02vgrmTfitxgqcL4vwW7BOrbawVmVe0d9V94SR");
+            var dnsPublicKey = Convert.FromBase64String("xKYaNhWdGOfJ+nPrL8/arkwf2EY3MDJ+SErKivBVSum1w/egsXvSADtNJhyem5RCOpgQ6K8X1DRSEkrbYQ+OB+v8/uX45NBwY8rp65F6Glur8I/mlVNgF6W/qTI37m40");
+            var qx = new byte[48];
+            var qy = new byte[48];
+            Array.Copy(dnsPublicKey, 0, qx, 0, 48);
+            Array.Copy(dnsPublicKey, 48, qy, 0, 48);
+
+            // TODO: Create the public key
+            var parameters = new ECParameters
+            {
+                Curve = ECCurve.NamedCurves.nistP384,
+                Q = new ECPoint
+                {
+                    X = qx,
+                    Y = qy,
+                }
+            };
+            ECDsa publicKey = ECDsa.Create(parameters);
+
+            var dnskey = new DNSKEYRecord(publicKey)
+            {
+                Flags = 257
+            };
+            Assert.AreEqual(257, dnskey.Flags);
+            Assert.AreEqual(3, dnskey.Protocol);
+            Assert.AreEqual(SecurityAlgorithm.ECDSAP384SHA384, dnskey.Algorithm);
+            CollectionAssert.AreEqual(dnsPublicKey, dnskey.PublicKey);
+            Assert.AreEqual(10771, dnskey.KeyTag());
+#endif
+        }
     }
 }
