@@ -214,6 +214,68 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DNSKEYRecord__ctor_System_Security_Cryptography_ECDsa_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DNSKEYRecord.%23ctor(System.Security.Cryptography.ECDsa)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L71">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DNSKEYRecord__ctor_" data-uid="Makaretu.Dns.DNSKEYRecord.#ctor*"></a>
+  <h4 id="Makaretu_Dns_DNSKEYRecord__ctor_System_Security_Cryptography_ECDsa_" data-uid="Makaretu.Dns.DNSKEYRecord.#ctor(System.Security.Cryptography.ECDsa)">DNSKEYRecord(ECDsa)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Makaretu.Dns.DNSKEYRecord.html">DNSKEYRecord</a> class
+from the specified ECDSA key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DNSKEYRecord(ECDsa key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.security.cryptography.ecdsa">ECDsa</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>A public or private ECDSA key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_DNSKEYRecord__ctor_System_Security_Cryptography_ECDsa__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+ECDSA key support is <strong>NOT available</strong> for NETSTANDARD14 nor NET45.
+It is available for NETSTANDARD2, NET472 or greater.
+</p></div>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">key</code> is not named nistP256 nor nist384.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.security.cryptography.cryptographicexception">CryptographicException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">key</code> is not valid.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DNSKEYRecord__ctor_System_Security_Cryptography_RSA_Makaretu_Dns_SecurityAlgorithm_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DNSKEYRecord.%23ctor(System.Security.Cryptography.RSA%2CMakaretu.Dns.SecurityAlgorithm)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -260,7 +322,7 @@ from the specified RSA key.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DNSKEYRecord_Algorithm.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DNSKEYRecord.Algorithm%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L70">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L131">View Source</a>
   </span>
   <a id="Makaretu_Dns_DNSKEYRecord_Algorithm_" data-uid="Makaretu.Dns.DNSKEYRecord.Algorithm*"></a>
   <h4 id="Makaretu_Dns_DNSKEYRecord_Algorithm" data-uid="Makaretu.Dns.DNSKEYRecord.Algorithm">Algorithm</h4>
@@ -282,7 +344,9 @@ from the specified RSA key.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Makaretu.Dns.SecurityAlgorithm.html">SecurityAlgorithm</a></td>
-        <td></td>
+        <td><p>Identifies the type of key (RSA, ECDSA, ...) and the
+hashing algorithm.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -294,7 +358,7 @@ from the specified RSA key.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DNSKEYRecord_Flags.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DNSKEYRecord.Flags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L54">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L111">View Source</a>
   </span>
   <a id="Makaretu_Dns_DNSKEYRecord_Flags_" data-uid="Makaretu.Dns.DNSKEYRecord.Flags*"></a>
   <h4 id="Makaretu_Dns_DNSKEYRecord_Flags" data-uid="Makaretu.Dns.DNSKEYRecord.Flags">Flags</h4>
@@ -325,7 +389,7 @@ from the specified RSA key.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DNSKEYRecord_Protocol.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DNSKEYRecord.Protocol%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L62">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L119">View Source</a>
   </span>
   <a id="Makaretu_Dns_DNSKEYRecord_Protocol_" data-uid="Makaretu.Dns.DNSKEYRecord.Protocol*"></a>
   <h4 id="Makaretu_Dns_DNSKEYRecord_Protocol" data-uid="Makaretu.Dns.DNSKEYRecord.Protocol">Protocol</h4>
@@ -357,7 +421,7 @@ from the specified RSA key.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DNSKEYRecord_PublicKey.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DNSKEYRecord.PublicKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L78">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L139">View Source</a>
   </span>
   <a id="Makaretu_Dns_DNSKEYRecord_PublicKey_" data-uid="Makaretu.Dns.DNSKEYRecord.PublicKey*"></a>
   <h4 id="Makaretu_Dns_DNSKEYRecord_PublicKey" data-uid="Makaretu.Dns.DNSKEYRecord.PublicKey">PublicKey</h4>
@@ -379,13 +443,11 @@ from the specified RSA key.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
-        <td></td>
+        <td><p>The format depends on the key <a class="xref" href="Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_Algorithm">Algorithm</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Makaretu_Dns_DNSKEYRecord_PublicKey_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The format depends on the <a class="xref" href="Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord_Algorithm">Algorithm</a> of the key being stored.</p>
-</div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -393,7 +455,7 @@ from the specified RSA key.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DNSKEYRecord_KeyTag.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DNSKEYRecord.KeyTag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L89">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L150">View Source</a>
   </span>
   <a id="Makaretu_Dns_DNSKEYRecord_KeyTag_" data-uid="Makaretu.Dns.DNSKEYRecord.KeyTag*"></a>
   <h4 id="Makaretu_Dns_DNSKEYRecord_KeyTag" data-uid="Makaretu.Dns.DNSKEYRecord.KeyTag">KeyTag()</h4>
@@ -428,7 +490,7 @@ from the specified RSA key.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DNSKEYRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DNSKEYRecord.ReadData(Makaretu.Dns.DnsReader%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L104">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L165">View Source</a>
   </span>
   <a id="Makaretu_Dns_DNSKEYRecord_ReadData_" data-uid="Makaretu.Dns.DNSKEYRecord.ReadData*"></a>
   <h4 id="Makaretu_Dns_DNSKEYRecord_ReadData_Makaretu_Dns_DnsReader_System_Int32_" data-uid="Makaretu.Dns.DNSKEYRecord.ReadData(Makaretu.Dns.DnsReader,System.Int32)">ReadData(DnsReader, Int32)</h4>
@@ -473,7 +535,7 @@ from the specified RSA key.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DNSKEYRecord_ReadData_Makaretu_Dns_MasterReader_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DNSKEYRecord.ReadData(Makaretu.Dns.MasterReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L124">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L185">View Source</a>
   </span>
   <a id="Makaretu_Dns_DNSKEYRecord_ReadData_" data-uid="Makaretu.Dns.DNSKEYRecord.ReadData*"></a>
   <h4 id="Makaretu_Dns_DNSKEYRecord_ReadData_Makaretu_Dns_MasterReader_" data-uid="Makaretu.Dns.DNSKEYRecord.ReadData(Makaretu.Dns.MasterReader)">ReadData(MasterReader)</h4>
@@ -513,7 +575,7 @@ the resource record <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makar
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DNSKEYRecord_WriteData_Makaretu_Dns_DnsWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DNSKEYRecord.WriteData(Makaretu.Dns.DnsWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L115">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L176">View Source</a>
   </span>
   <a id="Makaretu_Dns_DNSKEYRecord_WriteData_" data-uid="Makaretu.Dns.DNSKEYRecord.WriteData*"></a>
   <h4 id="Makaretu_Dns_DNSKEYRecord_WriteData_Makaretu_Dns_DnsWriter_" data-uid="Makaretu.Dns.DNSKEYRecord.WriteData(Makaretu.Dns.DnsWriter)">WriteData(DnsWriter)</h4>
@@ -552,7 +614,7 @@ the resource record <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makar
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DNSKEYRecord_WriteData_System_IO_TextWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DNSKEYRecord.WriteData(System.IO.TextWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L133">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DNSKEYRecord.cs/#L194">View Source</a>
   </span>
   <a id="Makaretu_Dns_DNSKEYRecord_WriteData_" data-uid="Makaretu.Dns.DNSKEYRecord.WriteData*"></a>
   <h4 id="Makaretu_Dns_DNSKEYRecord_WriteData_System_IO_TextWriter_" data-uid="Makaretu.Dns.DNSKEYRecord.WriteData(System.IO.TextWriter)">WriteData(TextWriter)</h4>

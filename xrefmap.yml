@@ -478,6 +478,12 @@ references:
   commentId: M:Makaretu.Dns.DNSKEYRecord.#ctor
   fullName: Makaretu.Dns.DNSKEYRecord.DNSKEYRecord()
   nameWithType: DNSKEYRecord.DNSKEYRecord()
+- uid: Makaretu.Dns.DNSKEYRecord.#ctor(System.Security.Cryptography.ECDsa)
+  name: DNSKEYRecord(ECDsa)
+  href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord__ctor_System_Security_Cryptography_ECDsa_
+  commentId: M:Makaretu.Dns.DNSKEYRecord.#ctor(System.Security.Cryptography.ECDsa)
+  fullName: Makaretu.Dns.DNSKEYRecord.DNSKEYRecord(System.Security.Cryptography.ECDsa)
+  nameWithType: DNSKEYRecord.DNSKEYRecord(ECDsa)
 - uid: Makaretu.Dns.DNSKEYRecord.#ctor(System.Security.Cryptography.RSA,Makaretu.Dns.SecurityAlgorithm)
   name: DNSKEYRecord(RSA, SecurityAlgorithm)
   href: api/Makaretu.Dns.DNSKEYRecord.html#Makaretu_Dns_DNSKEYRecord__ctor_System_Security_Cryptography_RSA_Makaretu_Dns_SecurityAlgorithm_

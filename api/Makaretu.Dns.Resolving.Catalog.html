@@ -86,9 +86,11 @@
     <h5>Implements</h5>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="Makaretu.Dns.Resolving.Node.html">Node</a>&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="Makaretu.Dns.Resolving.Node.html">Node</a>&gt;&gt;</div>
-    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="Makaretu.Dns.Resolving.Node.html">Node</a>&gt;&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.idictionary">IDictionary</a></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="Makaretu.Dns.Resolving.Node.html">Node</a>&gt;</div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="Makaretu.Dns.Resolving.Node.html">Node</a>&gt;&gt;</div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="Makaretu.Dns.Resolving.Node.html">Node</a>&gt;&gt;</div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
   </div>
   <div class="inheritedMembers">
@@ -125,6 +127,12 @@
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2.getoradd#System_Collections_Concurrent_ConcurrentDictionary_2_GetOrAdd__0__1_">ConcurrentDictionary&lt;String, Node&gt;.GetOrAdd(String, Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2.getoradd#System_Collections_Concurrent_ConcurrentDictionary_2_GetOrAdd__1__0_System_Func__0___0__1____0_">ConcurrentDictionary&lt;String, Node&gt;.GetOrAdd&lt;TArg&gt;(String, Func&lt;String, TArg, Node&gt;, TArg)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2.addorupdate#System_Collections_Concurrent_ConcurrentDictionary_2_AddOrUpdate__1__0_System_Func__0___0__1__System_Func__0__1___0__1____0_">ConcurrentDictionary&lt;String, Node&gt;.AddOrUpdate&lt;TArg&gt;(String, Func&lt;String, TArg, Node&gt;, Func&lt;String, Node, TArg, Node&gt;, TArg)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2.addorupdate#System_Collections_Concurrent_ConcurrentDictionary_2_AddOrUpdate__0_System_Func__0__1__System_Func__0__1__1__">ConcurrentDictionary&lt;String, Node&gt;.AddOrUpdate(String, Func&lt;String, Node&gt;, Func&lt;String, Node, Node&gt;)</a>
@@ -184,7 +192,13 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2.keys#System_Collections_Concurrent_ConcurrentDictionary_2_Keys">ConcurrentDictionary&lt;String, Node&gt;.Keys</a>
     </div>
     <div>
+      <span class="xref">System.Collections.Concurrent.ConcurrentDictionary&lt;System.String, Makaretu.Dns.Resolving.Node&gt;.System.Collections.Generic.IReadOnlyDictionary&lt;System.String, Makaretu.Dns.Resolving.Node&gt;.Keys</span>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2.values#System_Collections_Concurrent_ConcurrentDictionary_2_Values">ConcurrentDictionary&lt;String, Node&gt;.Values</a>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Concurrent.ConcurrentDictionary&lt;System.String, Makaretu.Dns.Resolving.Node&gt;.System.Collections.Generic.IReadOnlyDictionary&lt;System.String, Makaretu.Dns.Resolving.Node&gt;.Values</span>
     </div>
     <div>
       <span class="xref">System.Collections.Concurrent.ConcurrentDictionary&lt;System.String, Makaretu.Dns.Resolving.Node&gt;.System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String, Makaretu.Dns.Resolving.Node&gt;&gt;.IsReadOnly</span>
@@ -236,7 +250,7 @@
   <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
   <h5 id="Makaretu_Dns_Resolving_Catalog_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Catalog : ConcurrentDictionary&lt;string, Node&gt;, IDictionary&lt;string, Node&gt;, ICollection&lt;KeyValuePair&lt;string, Node&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, Node&gt;&gt;, IDictionary, ICollection, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Catalog : ConcurrentDictionary&lt;string, Node&gt;, IDictionary&lt;string, Node&gt;, ICollection&lt;KeyValuePair&lt;string, Node&gt;&gt;, IDictionary, ICollection, IReadOnlyDictionary&lt;string, Node&gt;, IReadOnlyCollection&lt;KeyValuePair&lt;string, Node&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, Node&gt;&gt;, IEnumerable</code></pre>
   </div>
   <h5 id="Makaretu_Dns_Resolving_Catalog_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>This is a portion of the DNS distribute database.
@@ -488,13 +502,19 @@ then sorted by their reversed labels.</p>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">System.Collections.Generic.ICollection&lt;T&gt;</a>
   </div>
   <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">System.Collections.Generic.IEnumerable&lt;T&gt;</a>
-  </div>
-  <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.idictionary">System.Collections.IDictionary</a>
   </div>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.icollection">System.Collections.ICollection</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">System.Collections.Generic.IEnumerable&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">System.Collections.IEnumerable</a>
