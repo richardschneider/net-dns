@@ -44,7 +44,9 @@ namespace Makaretu.Dns
             Algorithms.Add(SecurityAlgorithm.RSASHA1, DigestType.Sha1);
             Algorithms.Add(SecurityAlgorithm.RSASHA256, DigestType.Sha256);
             Algorithms.Add(SecurityAlgorithm.RSASHA512, DigestType.Sha512);
+            Algorithms.Add(SecurityAlgorithm.RSASHA1NSEC3SHA1, DigestType.Sha1);
             Algorithms.Add(SecurityAlgorithm.DSA, DigestType.Sha1);
+            Algorithms.Add(SecurityAlgorithm.DSANSEC3SHA1, DigestType.Sha1);
             Algorithms.Add(SecurityAlgorithm.ECDSAP256SHA256, DigestType.Sha256);
             Algorithms.Add(SecurityAlgorithm.ECDSAP384SHA384, DigestType.Sha384);
         }
