@@ -2116,6 +2116,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.MasterReader.ReadUInt32
   nameWithType: MasterReader.ReadUInt32
+- uid: Makaretu.Dns.MasterReader.ReadUnixSeconds32
+  name: ReadUnixSeconds32()
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadUnixSeconds32
+  commentId: M:Makaretu.Dns.MasterReader.ReadUnixSeconds32
+  fullName: Makaretu.Dns.MasterReader.ReadUnixSeconds32()
+  nameWithType: MasterReader.ReadUnixSeconds32()
+- uid: Makaretu.Dns.MasterReader.ReadUnixSeconds32*
+  name: ReadUnixSeconds32
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadUnixSeconds32_
+  commentId: Overload:Makaretu.Dns.MasterReader.ReadUnixSeconds32
+  isSpec: "True"
+  fullName: Makaretu.Dns.MasterReader.ReadUnixSeconds32
+  nameWithType: MasterReader.ReadUnixSeconds32
 - uid: Makaretu.Dns.Message
   name: Message
   href: api/Makaretu.Dns.Message.html
