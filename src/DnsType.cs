@@ -170,9 +170,9 @@ namespace Makaretu.Dns
         DS = 43,
 
         /// <summary>
-        /// RRSIG rfc3755.
+        /// Signature for a RRSET with a particular name, class, and type.
         /// </summary>
-        /// <seealso href="https://tools.ietf.org/html/rfc3755">RFC 3755</seealso>
+        /// <seealso href="https://tools.ietf.org/html/rfc4034#section-3"/>
         RRSIG = 46,
 
         /// <summary>

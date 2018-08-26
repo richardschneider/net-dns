@@ -24,6 +24,7 @@ The following resource records are implemented
 - [OPT](xref:Makaretu.Dns.OPTRecord) Extension mechanism for DNS
 - [PTR](xref:Makaretu.Dns.PTRRecord) Domain Name Pointer
 - [RP](xref:Makaretu.Dns.RPRecord) Responsible Person
+- [RRSIG](xref:Makaretu.Dns.RRSIG) Signature for a RRSET
 - [SOA](xref:Makaretu.Dns.SOARecord) Start Of Authority
 - [SRV](xref:Makaretu.Dns.SRVRecord) Servers
 - [TXT](xref:Makaretu.Dns.TXTRecord) Freeform text
