@@ -24,13 +24,13 @@ DNS data model with serializer/deserializer for the wire and "master file" forma
   - [RFC 2136](https://tools.ietf.org/html/rfc2136) Dynamic Updates (DNS UPDATE)
   - [RFC 3225](https://tools.ietf.org/html/rfc3225) Indicating Resolver Support of DNSSEC
   - [RFC 3599](https://tools.ietf.org/html/rfc3596) DNS Extensions to Support IPv6
-  - [RFC 4034](https://tools.ietf.org/html/rfc4034) Resource Records for the DNS Security Extensions
+  - [RFC 4034](https://tools.ietf.org/html/rfc4034) Resource Records for the DNS Security Extensions (DNSSEC)
   - [RFC 5001](https://tools.ietf.org/html/rfc5001) DNS Name Server Identifier (NSID) Option
   - [RFC 6672](https://tools.ietf.org/html/rfc6672) DNAME Redirection in the DNS
   - [RFC 6891](https://tools.ietf.org/html/rfc6891) Extension Mechanisms for DNS (EDNS(0))
   - [RFC 7828](https://tools.ietf.org/html/rfc7828) The edns-tcp-keepalive EDNS0 Option
   - [RFC 7830](https://tools.ietf.org/html/rfc7830) The EDNS(0) Padding Option
-- Targets .Net Framework 4.5 and .NET Standard 1.4 and 2.0
+- Targets .Net Framework 4.5 and 4.7.2 and .NET Standard 1.4 and 2.0
 - CI on Travis (Ubuntu Trusty and OSX) and AppVeyor (Windows Server 2016)
 
 ## Getting started.

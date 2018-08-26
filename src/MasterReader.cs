@@ -13,6 +13,8 @@ namespace Makaretu.Dns
     /// </summary>
     public class MasterReader
     {
+        static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
         TextReader text;
         TimeSpan? defaultTTL = null;
         string defaultDomainName = null;
@@ -173,6 +175,33 @@ namespace Makaretu.Dns
                 return (DnsType)ushort.Parse(token.Substring(4), CultureInfo.InvariantCulture);
             }
             return (DnsType)Enum.Parse(typeof(DnsType), token);
+        }
+
+        /// <summary>
+        ///   Read the number of seonds since the unix epoch.
+        /// </summary>
+        /// <returns>
+        ///   A 32 bit integer.
+        /// </returns>
+        /// <remarks>
+        ///   The unix epoch starts at 00:00:00 on 1 January 1970 UTC.
+        ///   With 32 bits, time will end at 3:14:08 on 19 January 2038 UTC.
+        ///   <para>
+        ///   The seconds can also be formatted at "yyyyMMddHHmmss".
+        ///   </para>
+        /// </remarks>
+        public uint  ReadUnixSeconds32()
+        {
+            var token = ReadToken();
+            if (token.Length == 14)
+            {
+                var date = DateTime.ParseExact(token, "yyyyMMddHHmmss", CultureInfo.InvariantCulture, 
+                    DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);
+                var seconds = (date - UnixEpoch).TotalSeconds;
+                return Convert.ToUInt32(seconds);
+            }
+
+            return uint.Parse(token, CultureInfo.InvariantCulture);
         }
 
         /// <summary>

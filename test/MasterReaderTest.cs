@@ -303,5 +303,15 @@ emanon.org A 127.0.0.1
             reader = new MasterReader(new StringReader("AAECAwQFBg  (\r\n  cICQo\r\n  LDA0ODw\r\n== )"));
             CollectionAssert.AreEqual(expected, reader.ReadBase64String());
         }
+
+        [TestMethod]
+        public void ReadUnixSeconds32()
+        {
+            uint expected = 1095292800;
+
+            var reader = new MasterReader(new StringReader("1095292800 20040916000000"));
+            Assert.AreEqual(expected, reader.ReadUnixSeconds32());
+            Assert.AreEqual(expected, reader.ReadUnixSeconds32());
+        }
     }
 }

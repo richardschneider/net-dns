@@ -64,7 +64,7 @@ namespace Makaretu.Dns
         /// <value>
         ///   Number of seconds since 1970-0-01T00:00:00Z.
         /// </value>
-        public ushort SignatureExpiration { get; set; }
+        public uint SignatureExpiration { get; set; }
 
         /// <summary>
         ///   The start date for the <see cref="Signature"/>.
@@ -72,7 +72,7 @@ namespace Makaretu.Dns
         /// <value>
         ///   Number of seconds since 1970-0-01T00:00:00Z.
         /// </value>
-        public ushort SignatureInception { get; set; }
+        public uint SignatureInception { get; set; }
 
         /// <summary>
         ///   The key tag of the <see cref="DNSKEYRecord"/> that 
@@ -106,8 +106,8 @@ namespace Makaretu.Dns
             Algorithm = (SecurityAlgorithm)reader.ReadByte();
             Labels = reader.ReadByte();
             OriginalTTL = reader.ReadTimeSpan();
-            SignatureExpiration = reader.ReadUInt16();
-            SignatureInception = reader.ReadUInt16();
+            SignatureExpiration = reader.ReadUInt32();
+            SignatureInception = reader.ReadUInt32();
             KeyTag = reader.ReadUInt16();
             SignerName = reader.ReadDomainName();
             Signature = reader.ReadBytes(end - reader.Position);
@@ -120,8 +120,8 @@ namespace Makaretu.Dns
             writer.WriteByte((byte)Algorithm);
             writer.WriteByte(Labels);
             writer.WriteTimeSpan(OriginalTTL);
-            writer.WriteUInt16(SignatureExpiration);
-            writer.WriteUInt16(SignatureInception);
+            writer.WriteUInt32(SignatureExpiration);
+            writer.WriteUInt32(SignatureInception);
             writer.WriteUInt16(KeyTag);
             writer.WriteDomainName(SignerName, uncompressed: true);
             writer.WriteBytes(Signature);
@@ -134,9 +134,8 @@ namespace Makaretu.Dns
             Algorithm = (SecurityAlgorithm)reader.ReadByte();
             Labels = reader.ReadByte();
             OriginalTTL = reader.ReadTimeSpan();
-            // TODO: Handle YYYYMMDDHHmmSS
-            SignatureExpiration = reader.ReadUInt16();
-            SignatureInception = reader.ReadUInt16();
+            SignatureExpiration = reader.ReadUnixSeconds32();
+            SignatureInception = reader.ReadUnixSeconds32();
             KeyTag = reader.ReadUInt16();
             SignerName = reader.ReadDomainName();
             Signature = reader.ReadBase64String();
