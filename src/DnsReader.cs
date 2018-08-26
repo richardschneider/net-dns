@@ -11,6 +11,8 @@ namespace Makaretu.Dns
     /// </summary>
     public class DnsReader
     {
+        static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
         Stream stream;
         readonly Dictionary<int, string> names = new Dictionary<int, string>();
 
@@ -121,6 +123,26 @@ namespace Makaretu.Dns
             value = value << 8 | ReadByte();
             value = value << 8 | ReadByte();
             return (uint)value;
+        }
+
+        /// <summary>
+        ///   Read an unsigned long from 48 bits.
+        /// </summary>
+        /// <returns>
+        ///   The six byte little-endian value as an unsigned long.
+        /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
+        public ulong ReadUInt48()
+        {
+            ulong value = ReadByte();
+            value = value << 8 | ReadByte();
+            value = value << 8 | ReadByte();
+            value = value << 8 | ReadByte();
+            value = value << 8 | ReadByte();
+            value = value << 8 | ReadByte();
+            return value;
         }
 
         /// <summary>
@@ -260,6 +282,23 @@ namespace Makaretu.Dns
                 }
             }
             return values;
+        }
+
+        /// <summary>
+        ///   Read a <see cref="DateTime"/> than is represented in
+        ///   seconds (48 bits) from the Unix epoch. 
+        /// </summary>
+        /// <returns>
+        ///   A <see cref="DateTime"/> in <see cref="DateTimeKind.Utc"/>.
+        /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
+        /// <returns></returns>
+        public DateTime ReadDateTime48()
+        {
+            var seconds = ReadUInt48();
+            return UnixEpoch.AddSeconds(seconds);
         }
     }
 }

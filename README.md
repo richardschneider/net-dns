@@ -22,6 +22,7 @@ DNS data model with serializer/deserializer for the wire and "master file" forma
   - [RFC 1183](https://tools.ietf.org/html/rfc1183) New DNS RR Definitions
   - [RFC 1996](https://tools.ietf.org/html/rfc1996) Zone Changes (DNS NOTIFY)
   - [RFC 2136](https://tools.ietf.org/html/rfc2136) Dynamic Updates (DNS UPDATE)
+  - [RFC 2845](https://tools.ietf.org/html/rfc2845) Secret Key Transaction Authentication for DNS (TSIG)
   - [RFC 3225](https://tools.ietf.org/html/rfc3225) Indicating Resolver Support of DNSSEC
   - [RFC 3599](https://tools.ietf.org/html/rfc3596) DNS Extensions to Support IPv6
   - [RFC 4034](https://tools.ietf.org/html/rfc4034) Resource Records for the DNS Security Extensions (DNSSEC)

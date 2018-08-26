@@ -13,7 +13,11 @@ namespace Makaretu.Dns
     /// </summary>
     public class DnsWriter
     {
-        const int maxPointer = 0x3FFF; 
+        const int maxPointer = 0x3FFF;
+        const ulong uint48MaxValue = 0XFFFFFFFFFFFFul;
+        static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
+
         Stream stream;
         Dictionary<string, int> pointers = new Dictionary<string, int>();
         Stack<Stream> scopes = new Stack<Stream>();
@@ -151,6 +155,25 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Write an unsigned long in 48 bits.
+        /// </summary>
+        public void WriteUInt48(ulong value)
+        {
+            if (value > uint48MaxValue)
+            {
+                throw new ArgumentException("Value is greater than 48 bits.");
+            }
+
+            stream.WriteByte((byte)(value >> 40));
+            stream.WriteByte((byte)(value >> 32));
+            stream.WriteByte((byte)(value >> 24));
+            stream.WriteByte((byte)(value >> 16));
+            stream.WriteByte((byte)(value >> 8));
+            stream.WriteByte((byte)value);
+            Position += 4;
+        }
+
+        /// <summary>
         ///   Write a domain name.
         /// </summary>
         /// <param name="name">
@@ -241,6 +264,27 @@ namespace Makaretu.Dns
         public void WriteTimeSpan32(TimeSpan value)
         {
             WriteUInt32((uint)value.TotalSeconds);
+        }
+
+        /// <summary>
+        ///   Write a date/time.
+        /// </summary>
+        /// <param name="value">
+        ///   The <see cref="DateTime"/> to write.
+        /// </param>
+        /// <exception cref="ArgumentException">
+        ///   <paramref name="value"/> seconds cannot be represented
+        ///   in 48 bits.
+        /// </exception>
+        /// <remarks>
+        ///   Write the <paramref name="value"/> as the number seconds
+        ///   since the Unix epoch.  The seconds is represented as 48-bit
+        ///   unsigned int
+        /// </remarks>
+        public void WriteDateTime48(DateTime value)
+        {
+            var seconds = (value - UnixEpoch).TotalSeconds;
+            WriteUInt48(Convert.ToUInt64(seconds));
         }
 
         /// <summary>

@@ -73,6 +73,21 @@ namespace Makaretu.Dns
         ///   Invalid version.
         /// </summary>
         BadVersion = 16,
+
+        /// <summary>
+        ///   Invalid signature.
+        /// </summary>
+        BadSignature = 16,
+
+        /// <summary>
+        ///   Invalid key.
+        /// </summary>
+        BadKey = 17,
+
+        /// <summary>
+        /// Invalid date/time.
+        /// </summary>
+        BadTime = 18,
     }
 
 }

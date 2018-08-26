@@ -161,18 +161,21 @@ namespace Makaretu.Dns
         /// Option record.
         /// </summary>
         /// <seealso href="https://tools.ietf.org/html/rfc6891">RFC 6891</seealso>
+        /// <see cref="OPTRecord"/>
         OPT = 41,
 
         /// <summary>
         ///   Delegation Signer.
         /// </summary>
         /// <seealso href="https://tools.ietf.org/html/rfc4034#section-5"/>
+        /// <see cref="DSRecord"/>
         DS = 43,
 
         /// <summary>
         /// Signature for a RRSET with a particular name, class, and type.
         /// </summary>
         /// <seealso href="https://tools.ietf.org/html/rfc4034#section-3"/>
+        /// <seealso cref="RRSIGRecord"/>
         RRSIG = 46,
 
         /// <summary>
@@ -202,6 +205,13 @@ namespace Makaretu.Dns
         /// <seealso href="https://tools.ietf.org/html/rfc5155#section-4"/>
         /// <seealso cref="NSEC3PARAMRecord"/>
         NSEC3PARAM = 51,
+
+        /// <summary>
+        ///  Transactional Signature.
+        /// </summary>
+        /// <seealso href="https://tools.ietf.org/html/rfc2845"/>
+        /// <seealso cref="TSIGRecord"/>
+        TSIG = 250,
 
         /// <summary>
         /// A request for a transfer of an entire zone.
