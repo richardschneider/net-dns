@@ -852,19 +852,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DnsReader.ReadString
   nameWithType: DnsReader.ReadString
-- uid: Makaretu.Dns.DnsReader.ReadTimeSpan
-  name: ReadTimeSpan()
-  href: api/Makaretu.Dns.DnsReader.html#Makaretu_Dns_DnsReader_ReadTimeSpan
-  commentId: M:Makaretu.Dns.DnsReader.ReadTimeSpan
-  fullName: Makaretu.Dns.DnsReader.ReadTimeSpan()
-  nameWithType: DnsReader.ReadTimeSpan()
-- uid: Makaretu.Dns.DnsReader.ReadTimeSpan*
-  name: ReadTimeSpan
-  href: api/Makaretu.Dns.DnsReader.html#Makaretu_Dns_DnsReader_ReadTimeSpan_
-  commentId: Overload:Makaretu.Dns.DnsReader.ReadTimeSpan
+- uid: Makaretu.Dns.DnsReader.ReadTimeSpan32
+  name: ReadTimeSpan32()
+  href: api/Makaretu.Dns.DnsReader.html#Makaretu_Dns_DnsReader_ReadTimeSpan32
+  commentId: M:Makaretu.Dns.DnsReader.ReadTimeSpan32
+  fullName: Makaretu.Dns.DnsReader.ReadTimeSpan32()
+  nameWithType: DnsReader.ReadTimeSpan32()
+- uid: Makaretu.Dns.DnsReader.ReadTimeSpan32*
+  name: ReadTimeSpan32
+  href: api/Makaretu.Dns.DnsReader.html#Makaretu_Dns_DnsReader_ReadTimeSpan32_
+  commentId: Overload:Makaretu.Dns.DnsReader.ReadTimeSpan32
   isSpec: "True"
-  fullName: Makaretu.Dns.DnsReader.ReadTimeSpan
-  nameWithType: DnsReader.ReadTimeSpan
+  fullName: Makaretu.Dns.DnsReader.ReadTimeSpan32
+  nameWithType: DnsReader.ReadTimeSpan32
 - uid: Makaretu.Dns.DnsReader.ReadUInt16
   name: ReadUInt16()
   href: api/Makaretu.Dns.DnsReader.html#Makaretu_Dns_DnsReader_ReadUInt16
@@ -1265,19 +1265,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DnsWriter.WriteString
   nameWithType: DnsWriter.WriteString
-- uid: Makaretu.Dns.DnsWriter.WriteTimeSpan(System.TimeSpan)
-  name: WriteTimeSpan(TimeSpan)
-  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteTimeSpan_System_TimeSpan_
-  commentId: M:Makaretu.Dns.DnsWriter.WriteTimeSpan(System.TimeSpan)
-  fullName: Makaretu.Dns.DnsWriter.WriteTimeSpan(System.TimeSpan)
-  nameWithType: DnsWriter.WriteTimeSpan(TimeSpan)
-- uid: Makaretu.Dns.DnsWriter.WriteTimeSpan*
-  name: WriteTimeSpan
-  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteTimeSpan_
-  commentId: Overload:Makaretu.Dns.DnsWriter.WriteTimeSpan
+- uid: Makaretu.Dns.DnsWriter.WriteTimeSpan32(System.TimeSpan)
+  name: WriteTimeSpan32(TimeSpan)
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteTimeSpan32_System_TimeSpan_
+  commentId: M:Makaretu.Dns.DnsWriter.WriteTimeSpan32(System.TimeSpan)
+  fullName: Makaretu.Dns.DnsWriter.WriteTimeSpan32(System.TimeSpan)
+  nameWithType: DnsWriter.WriteTimeSpan32(TimeSpan)
+- uid: Makaretu.Dns.DnsWriter.WriteTimeSpan32*
+  name: WriteTimeSpan32
+  href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteTimeSpan32_
+  commentId: Overload:Makaretu.Dns.DnsWriter.WriteTimeSpan32
   isSpec: "True"
-  fullName: Makaretu.Dns.DnsWriter.WriteTimeSpan
-  nameWithType: DnsWriter.WriteTimeSpan
+  fullName: Makaretu.Dns.DnsWriter.WriteTimeSpan32
+  nameWithType: DnsWriter.WriteTimeSpan32
 - uid: Makaretu.Dns.DnsWriter.WriteUInt16(System.UInt16)
   name: WriteUInt16(UInt16)
   href: api/Makaretu.Dns.DnsWriter.html#Makaretu_Dns_DnsWriter_WriteUInt16_System_UInt16_
@@ -2077,19 +2077,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.MasterReader.ReadString
   nameWithType: MasterReader.ReadString
-- uid: Makaretu.Dns.MasterReader.ReadTimeSpan
-  name: ReadTimeSpan()
-  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadTimeSpan
-  commentId: M:Makaretu.Dns.MasterReader.ReadTimeSpan
-  fullName: Makaretu.Dns.MasterReader.ReadTimeSpan()
-  nameWithType: MasterReader.ReadTimeSpan()
-- uid: Makaretu.Dns.MasterReader.ReadTimeSpan*
-  name: ReadTimeSpan
-  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadTimeSpan_
-  commentId: Overload:Makaretu.Dns.MasterReader.ReadTimeSpan
+- uid: Makaretu.Dns.MasterReader.ReadTimeSpan32
+  name: ReadTimeSpan32()
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadTimeSpan32
+  commentId: M:Makaretu.Dns.MasterReader.ReadTimeSpan32
+  fullName: Makaretu.Dns.MasterReader.ReadTimeSpan32()
+  nameWithType: MasterReader.ReadTimeSpan32()
+- uid: Makaretu.Dns.MasterReader.ReadTimeSpan32*
+  name: ReadTimeSpan32
+  href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadTimeSpan32_
+  commentId: Overload:Makaretu.Dns.MasterReader.ReadTimeSpan32
   isSpec: "True"
-  fullName: Makaretu.Dns.MasterReader.ReadTimeSpan
-  nameWithType: MasterReader.ReadTimeSpan
+  fullName: Makaretu.Dns.MasterReader.ReadTimeSpan32
+  nameWithType: MasterReader.ReadTimeSpan32
 - uid: Makaretu.Dns.MasterReader.ReadUInt16
   name: ReadUInt16()
   href: api/Makaretu.Dns.MasterReader.html#Makaretu_Dns_MasterReader_ReadUInt16
