@@ -136,12 +136,12 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
-        ///   Read a time span (interval)
+        ///   Read a time span (interval) in 32-bit secods.
         /// </summary>
         /// <returns>
         ///   A <see cref="TimeSpan"/> with second resolution.
         /// </returns>
-        public TimeSpan ReadTimeSpan()
+        public TimeSpan ReadTimeSpan32()
         {
             return TimeSpan.FromSeconds(ReadUInt32());
         }
@@ -298,7 +298,7 @@ namespace Makaretu.Dns
                 // Is TTL?
                 if (token == "$TTL")
                 {
-                    defaultTTL = ttl = ReadTimeSpan();
+                    defaultTTL = ttl = ReadTimeSpan32();
                     continue;
                 }
                 if (token.All(c => Char.IsDigit(c)))

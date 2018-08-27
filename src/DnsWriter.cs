@@ -230,12 +230,15 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
-        ///   Write a time span.
+        ///   Write a time span with 32-bits.
         /// </summary>
+        /// <param name="value">
+        ///   The number of non-negative seconds.
+        /// </param>
         /// <remarks>
-        ///   Represented as 32-bit unsigned int (in seconds).
+        ///   The interval is represented as the number of seconds in two bytes.
         /// </remarks>
-        public void WriteTimeSpan(TimeSpan value)
+        public void WriteTimeSpan32(TimeSpan value)
         {
             WriteUInt32((uint)value.TotalSeconds);
         }

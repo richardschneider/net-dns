@@ -105,7 +105,7 @@ namespace Makaretu.Dns
             TypeCovered = (DnsType)reader.ReadUInt16();
             Algorithm = (SecurityAlgorithm)reader.ReadByte();
             Labels = reader.ReadByte();
-            OriginalTTL = reader.ReadTimeSpan();
+            OriginalTTL = reader.ReadTimeSpan32();
             SignatureExpiration = reader.ReadUInt32();
             SignatureInception = reader.ReadUInt32();
             KeyTag = reader.ReadUInt16();
@@ -119,7 +119,7 @@ namespace Makaretu.Dns
             writer.WriteUInt16((ushort)TypeCovered);
             writer.WriteByte((byte)Algorithm);
             writer.WriteByte(Labels);
-            writer.WriteTimeSpan(OriginalTTL);
+            writer.WriteTimeSpan32(OriginalTTL);
             writer.WriteUInt32(SignatureExpiration);
             writer.WriteUInt32(SignatureInception);
             writer.WriteUInt16(KeyTag);
@@ -133,7 +133,7 @@ namespace Makaretu.Dns
             TypeCovered = reader.ReadDnsType();
             Algorithm = (SecurityAlgorithm)reader.ReadByte();
             Labels = reader.ReadByte();
-            OriginalTTL = reader.ReadTimeSpan();
+            OriginalTTL = reader.ReadTimeSpan32();
             SignatureExpiration = reader.ReadUnixSeconds32();
             SignatureInception = reader.ReadUnixSeconds32();
             KeyTag = reader.ReadUInt16();

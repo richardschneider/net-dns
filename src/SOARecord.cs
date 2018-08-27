@@ -86,10 +86,10 @@ namespace Makaretu.Dns
             PrimaryName = reader.ReadDomainName();
             Mailbox = reader.ReadDomainName();
             SerialNumber = reader.ReadUInt32();
-            Refresh = reader.ReadTimeSpan();
-            Retry = reader.ReadTimeSpan();
-            Expire = reader.ReadTimeSpan();
-            Minimum = reader.ReadTimeSpan();
+            Refresh = reader.ReadTimeSpan32();
+            Retry = reader.ReadTimeSpan32();
+            Expire = reader.ReadTimeSpan32();
+            Minimum = reader.ReadTimeSpan32();
         }
 
         /// <inheritdoc />
@@ -98,10 +98,10 @@ namespace Makaretu.Dns
             PrimaryName = reader.ReadDomainName();
             Mailbox = reader.ReadDomainName();
             SerialNumber = reader.ReadUInt32();
-            Refresh = reader.ReadTimeSpan();
-            Retry = reader.ReadTimeSpan();
-            Expire = reader.ReadTimeSpan();
-            Minimum = reader.ReadTimeSpan();
+            Refresh = reader.ReadTimeSpan32();
+            Retry = reader.ReadTimeSpan32();
+            Expire = reader.ReadTimeSpan32();
+            Minimum = reader.ReadTimeSpan32();
         }
 
         /// <inheritdoc />
@@ -110,10 +110,10 @@ namespace Makaretu.Dns
             writer.WriteDomainName(PrimaryName);
             writer.WriteDomainName(Mailbox);
             writer.WriteUInt32(SerialNumber);
-            writer.WriteTimeSpan(Refresh);
-            writer.WriteTimeSpan(Retry);
-            writer.WriteTimeSpan(Expire);
-            writer.WriteTimeSpan(Minimum);
+            writer.WriteTimeSpan32(Refresh);
+            writer.WriteTimeSpan32(Retry);
+            writer.WriteTimeSpan32(Expire);
+            writer.WriteTimeSpan32(Minimum);
         }
 
         /// <inheritdoc />

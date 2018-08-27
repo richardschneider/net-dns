@@ -83,10 +83,6 @@ namespace Makaretu.Dns
         ///    Zero values are interpreted to mean that the RR can only be
         ///    used for the transaction in progress, and should not be
         ///    cached.
-        ///    
-        ///    For example, SOA records are always distributed
-        ///    with a zero TTL to prohibit caching. Zero values can
-        ///    also be used for extremely volatile data.
         /// </remarks>
         /// <seealso cref="DefaultTTL"/>
         public TimeSpan TTL { get; set; } = DefaultTTL;
@@ -152,7 +148,7 @@ namespace Makaretu.Dns
             Name = reader.ReadDomainName();
             Type = (DnsType)reader.ReadUInt16();
             Class = (Class)reader.ReadUInt16();
-            TTL = reader.ReadTimeSpan();
+            TTL = reader.ReadTimeSpan32();
             int length = reader.ReadUInt16();
 
             // Find a specific class for the TYPE or default
@@ -191,7 +187,7 @@ namespace Makaretu.Dns
             writer.WriteDomainName(Name);
             writer.WriteUInt16((ushort)Type);
             writer.WriteUInt16((ushort)Class);
-            writer.WriteTimeSpan(TTL);
+            writer.WriteTimeSpan32(TTL);
 
             writer.PushLengthPrefixedScope();
             WriteData(writer);

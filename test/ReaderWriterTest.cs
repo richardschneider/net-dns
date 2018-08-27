@@ -19,7 +19,7 @@ namespace Makaretu.Dns
             var writer = new DnsWriter(ms);
             writer.WriteDomainName("emanon.org");
             writer.WriteString("alpha");
-            writer.WriteTimeSpan(TimeSpan.FromHours(3));
+            writer.WriteTimeSpan32(TimeSpan.FromHours(3));
             writer.WriteUInt16(ushort.MaxValue);
             writer.WriteUInt32(uint.MaxValue);
             writer.WriteBytes(someBytes);
@@ -32,7 +32,7 @@ namespace Makaretu.Dns
             var reader = new DnsReader(ms);
             Assert.AreEqual("emanon.org", reader.ReadDomainName());
             Assert.AreEqual("alpha", reader.ReadString());
-            Assert.AreEqual(TimeSpan.FromHours(3), reader.ReadTimeSpan());
+            Assert.AreEqual(TimeSpan.FromHours(3), reader.ReadTimeSpan32());
             Assert.AreEqual(ushort.MaxValue, reader.ReadUInt16());
             Assert.AreEqual(uint.MaxValue, reader.ReadUInt32());
             CollectionAssert.AreEqual(someBytes, reader.ReadBytes(3));

@@ -197,7 +197,7 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
-        ///   Read a time span (interval)
+        ///   Read a time span (interval) with 32-bits.
         /// </summary>
         /// <returns>
         ///   A <see cref="TimeSpan"/> with second resolution.
@@ -208,7 +208,7 @@ namespace Makaretu.Dns
         /// <remarks>
         ///   The interval is represented as the number of seconds in two bytes.
         /// </remarks>
-        public TimeSpan ReadTimeSpan()
+        public TimeSpan ReadTimeSpan32()
         {
             return TimeSpan.FromSeconds(ReadUInt32());
         }
