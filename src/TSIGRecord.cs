@@ -16,6 +16,8 @@ namespace Makaretu.Dns
     /// </remarks>
     public class TSIGRecord : ResourceRecord
     {
+        static readonly byte[] NoData = new byte[0];
+
         /// <summary>
         ///  The <see cref="Algorithm"/> name for HMACMD5.
         /// </summary>
@@ -31,6 +33,8 @@ namespace Makaretu.Dns
             TTL = TimeSpan.Zero;
             var now = DateTime.UtcNow;
             TimeSigned = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second, now.Kind);
+            Fudge = TimeSpan.FromSeconds(300);
+            OtherData = NoData;
         }
 
         /// <summary>
@@ -47,15 +51,59 @@ namespace Makaretu.Dns
         /// <value>
         ///   Must be in <see cref="DateTimeKind.Utc"/>.
         ///   Resolution in seconds.
-        ///   Defaults to <see cref="DateTime.UtcNow"/> less the milliseconds/
+        ///   Defaults to <see cref="DateTime.UtcNow"/> less the milliseconds.
         /// </value>
         public DateTime TimeSigned { get; set; }
+
+        /// <summary>
+        ///   The message authentication code.
+        /// </summary>
+        /// <value>
+        ///   The format depends on the <see cref="Algorithm"/>.
+        /// </value>
+        /// <remarks>
+        ///   See <see href="https://tools.ietf.org/html/rfc2845#section-3">Protocol Operation</see>
+        ///   for details on generating the MAC.
+        /// </remarks>
+        public byte[] MAC { get; set; }
+
+        /// <summary>
+        ///    Permitted error in <see cref="TimeSigned"/>.
+        /// </summary>
+        /// <value>
+        ///   Defaults to 300 seconds.
+        /// </value>
+        public TimeSpan Fudge { get; set; }
+
+        /// <summary>
+        ///   The Original <see cref="Message.Id"/>.
+        /// </summary>
+        public ushort OriginalMessageId { get; set; }
+
+        /// <summary>
+        ///   Expanded error code for TSIG.
+        /// </summary>
+        /// <value>
+        ///   <see cref="MessageStatus.NoError"/>, <see cref="MessageStatus.BadSignature"/>
+        ///   <see cref="MessageStatus.BadKey"/> or <see cref="MessageStatus.BadTime"/>.
+        /// </value>
+        public MessageStatus Error { get; set; }
+
+        /// <summary>
+        ///   Other data.
+        /// </summary>
+        public byte[] OtherData { get; set; }
 
         /// <inheritdoc />
         public override void ReadData(DnsReader reader, int length)
         {
             Algorithm = reader.ReadDomainName();
             TimeSigned = reader.ReadDateTime48();
+            Fudge = reader.ReadTimeSpan16();
+            MAC = reader.ReadUInt16LengthPrefixedBytes();
+            OriginalMessageId = reader.ReadUInt16();
+            Error = (MessageStatus)reader.ReadUInt16();
+            OtherData = reader.ReadUInt16LengthPrefixedBytes();
         }
 
         /// <inheritdoc />
@@ -63,6 +111,11 @@ namespace Makaretu.Dns
         {
             writer.WriteDomainName(Algorithm);
             writer.WriteDateTime48(TimeSigned);
+            writer.WriteTimeSpan16(Fudge);
+            writer.WriteUint16LengthPrefixedBytes(MAC);
+            writer.WriteUInt16(OriginalMessageId);
+            writer.WriteUInt16((ushort)Error);
+            writer.WriteUint16LengthPrefixedBytes(OtherData);
         }
 
         /// <inheritdoc />
@@ -76,6 +129,11 @@ namespace Makaretu.Dns
                 CultureInfo.InvariantCulture,
                 DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal
             );
+            Fudge = reader.ReadTimeSpan16();
+            MAC = Convert.FromBase64String(reader.ReadString());
+            OriginalMessageId = reader.ReadUInt16();
+            Error = (MessageStatus)reader.ReadUInt16();
+            OtherData = Convert.FromBase64String(reader.ReadString());
         }
 
         /// <inheritdoc />
@@ -85,6 +143,15 @@ namespace Makaretu.Dns
             writer.Write(' ');
             writer.Write(TimeSigned.ToUniversalTime().ToString("yyyyMMddHHmmss", CultureInfo.InvariantCulture));
             writer.Write(' ');
+            writer.Write((ushort)Fudge.TotalSeconds);
+            writer.Write(' ');
+            writer.Write(Convert.ToBase64String(MAC));
+            writer.Write(' ');
+            writer.Write(OriginalMessageId);
+            writer.Write(' ');
+            writer.Write((ushort)Error);
+            writer.Write(' ');
+            writer.Write(Convert.ToBase64String(OtherData ?? NoData));
         }
     }
 

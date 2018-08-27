@@ -154,7 +154,7 @@ namespace Makaretu.Dns
             writer.Write(' ');
             writer.Write(Labels);
             writer.Write(' ');
-            writer.Write((int)OriginalTTL.TotalSeconds);
+            writer.Write((uint)OriginalTTL.TotalSeconds);
             writer.Write(' ');
             writer.Write(SignatureExpiration);
             writer.Write(' ');

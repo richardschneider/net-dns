@@ -133,6 +133,22 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Write a sequence of bytes prefixed with the length as a unint16.
+        /// </summary>
+        /// <param name="bytes">
+        ///   A sequence of bytes to write.
+        /// </param>
+        public void WriteUint16LengthPrefixedBytes(byte[] bytes)
+        {
+            var length = bytes?.Length ?? 0;
+            if (length > ushort.MaxValue)
+                throw new ArgumentException($"Bytes length can not exceed {ushort.MaxValue}.");
+
+            WriteUInt16((ushort)length);
+            WriteBytes(bytes);
+        }
+
+        /// <summary>
         ///   Write an unsigned short.
         /// </summary>
         public void WriteUInt16(ushort value)
@@ -253,13 +269,27 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
-        ///   Write a time span with 32-bits.
+        ///   Write a time span with 16-bits.
         /// </summary>
         /// <param name="value">
         ///   The number of non-negative seconds.
         /// </param>
         /// <remarks>
         ///   The interval is represented as the number of seconds in two bytes.
+        /// </remarks>
+        public void WriteTimeSpan16(TimeSpan value)
+        {
+            WriteUInt16((ushort)value.TotalSeconds);
+        }
+
+        /// <summary>
+        ///   Write a time span with 32-bits.
+        /// </summary>
+        /// <param name="value">
+        ///   The number of non-negative seconds.
+        /// </param>
+        /// <remarks>
+        ///   The interval is represented as the number of seconds in four bytes.
         /// </remarks>
         public void WriteTimeSpan32(TimeSpan value)
         {
