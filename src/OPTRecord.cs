@@ -105,7 +105,7 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
-        ///   The DNSSEC OK bit as defined by [RFC3225].
+        ///   The DNSSEC OK bit as defined by RFC3225.
         /// </summary>
         /// <value>
         ///   Defaults to <b>false</b>.

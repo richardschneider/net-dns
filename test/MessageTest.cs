@@ -234,5 +234,23 @@ namespace Makaretu.Dns
             Assert.AreEqual(1, msg.AuthorityRecords.Count);
             Assert.IsFalse(msg.TC);
         }
+
+        [TestMethod]
+        public void UseDnsSecurity()
+        {
+            var expected = new Message().UseDnsSecurity();
+            var opt = expected.AdditionalRecords.OfType<OPTRecord>().Single();
+            Assert.IsTrue(opt.DO, "dnssec ok");
+        }
+
+        [TestMethod]
+        public void UseDnsSecurity_OPT_Exists()
+        {
+            var expected = new Message();
+            expected.AdditionalRecords.Add(new OPTRecord());
+            expected.UseDnsSecurity();
+            var opt = expected.AdditionalRecords.OfType<OPTRecord>().Single();
+            Assert.IsTrue(opt.DO, "dnssec ok");
+        }
     }
 }

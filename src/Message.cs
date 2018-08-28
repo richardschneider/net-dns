@@ -275,6 +275,29 @@ namespace Makaretu.Dns
             }
         }
 
+        /// <summary>
+        ///   Enables DNS Security Extensions (DNSSEC) for the message.
+        /// </summary>
+        /// <returns>
+        ///   The <see cref="Message"/> for a fluent design.
+        /// </returns>
+        /// <remarks>
+        ///   Sets <see cref="OPTRecord.DO"/> to <b>true</b>.  Adds an <see cref="OPTRecord"/> to
+        ///   <see cref="AdditionalRecords"/> if not already present.
+        /// </remarks>
+        public Message UseDnsSecurity()
+        {
+            var opt = AdditionalRecords.OfType<OPTRecord>().FirstOrDefault();
+            if (opt == null)
+            {
+                opt = new OPTRecord();
+                AdditionalRecords.Add(opt);
+            }
+            opt.DO = true;
+
+            return this;
+        }
+
         /// <inheritdoc />
         public override IDnsSerialiser Read(DnsReader reader)
         {
