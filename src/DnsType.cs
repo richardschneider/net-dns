@@ -207,6 +207,13 @@ namespace Makaretu.Dns
         NSEC3PARAM = 51,
 
         /// <summary>
+        ///   Shared secret key.
+        /// </summary>
+        /// <seealso href="https://tools.ietf.org/html/rfc2930"/>
+        /// <seealso cref="TKEYRecord"/>
+        TKEY = 249,
+
+        /// <summary>
         ///  Transactional Signature.
         /// </summary>
         /// <seealso href="https://tools.ietf.org/html/rfc2845"/>

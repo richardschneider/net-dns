@@ -27,6 +27,7 @@ The following resource records are implemented
 - [RRSIG](xref:Makaretu.Dns.RRSIG) Signature for a RRSET
 - [SOA](xref:Makaretu.Dns.SOARecord) Start Of Authority
 - [SRV](xref:Makaretu.Dns.SRVRecord) Servers
+- [TKEY](xref:Makaretu.Dns.TKEYRecord) Shared Secret Key
 - [TSIG](xref:Makaretu.Dns.TSIGRecord) Transactional Signature
 - [TXT](xref:Makaretu.Dns.TXTRecord) Freeform text
 

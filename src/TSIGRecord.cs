@@ -24,6 +24,36 @@ namespace Makaretu.Dns
         public const string HMACMD5 = "HMAC-MD5.SIG-ALG.REG.INT";
 
         /// <summary>
+        ///  The <see cref="Algorithm"/> name for GSSTSIG.
+        /// </summary>
+        public const string GSSTSIG = "gss-tsig";
+
+        /// <summary>
+        ///  The <see cref="Algorithm"/> name for HMACSHA1.
+        /// </summary>
+        public const string HMACSHA1 = "hmac-sha1";
+
+        /// <summary>
+        ///  The <see cref="Algorithm"/> name for HMACSHA224.
+        /// </summary>
+        public const string HMACSHA224 = "hmac-sha224";
+
+        /// <summary>
+        ///  The <see cref="Algorithm"/> name for HMACSHA256.
+        /// </summary>
+        public const string HMACSHA256 = "hmac-sha256";
+
+        /// <summary>
+        ///  The <see cref="Algorithm"/> name for HMACSHA384.
+        /// </summary>
+        public const string HMACSHA384 = "hmac-sha384";
+
+        /// <summary>
+        ///  The <see cref="Algorithm"/> name for HMACSHA512.
+        /// </summary>
+        public const string HMACSHA512 = "hmac-sha512";
+
+        /// <summary>
         ///   Creates a new instance of the <see cref="TSIGRecord"/> class.
         /// </summary>
         public TSIGRecord() : base()
