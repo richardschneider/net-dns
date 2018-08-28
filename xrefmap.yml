@@ -2536,6 +2536,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Message.Truncate
   nameWithType: Message.Truncate
+- uid: Makaretu.Dns.Message.UseDnsSecurity
+  name: UseDnsSecurity()
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_UseDnsSecurity
+  commentId: M:Makaretu.Dns.Message.UseDnsSecurity
+  fullName: Makaretu.Dns.Message.UseDnsSecurity()
+  nameWithType: Message.UseDnsSecurity()
+- uid: Makaretu.Dns.Message.UseDnsSecurity*
+  name: UseDnsSecurity
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_UseDnsSecurity_
+  commentId: Overload:Makaretu.Dns.Message.UseDnsSecurity
+  isSpec: "True"
+  fullName: Makaretu.Dns.Message.UseDnsSecurity
+  nameWithType: Message.UseDnsSecurity
 - uid: Makaretu.Dns.Message.Write(Makaretu.Dns.DnsWriter)
   name: Write(DnsWriter)
   href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_Write_Makaretu_Dns_DnsWriter_

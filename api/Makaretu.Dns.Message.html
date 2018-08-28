@@ -776,7 +776,7 @@ transmission channel.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_Read_Makaretu_Dns_DnsReader_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.Read(Makaretu.Dns.DnsReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L279">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L302">View Source</a>
   </span>
   <a id="Makaretu_Dns_Message_Read_" data-uid="Makaretu.Dns.Message.Read*"></a>
   <h4 id="Makaretu_Dns_Message_Read_Makaretu_Dns_DnsReader_" data-uid="Makaretu.Dns.Message.Read(Makaretu.Dns.DnsReader)">Read(DnsReader)</h4>
@@ -870,10 +870,46 @@ If it is still too big, then the <a class="xref" href="Makaretu.Dns.Message.html
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_UseDnsSecurity.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.UseDnsSecurity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L288">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_Message_UseDnsSecurity_" data-uid="Makaretu.Dns.Message.UseDnsSecurity*"></a>
+  <h4 id="Makaretu_Dns_Message_UseDnsSecurity" data-uid="Makaretu.Dns.Message.UseDnsSecurity">UseDnsSecurity()</h4>
+  <div class="markdown level1 summary"><p>Enables DNS Security Extensions (DNSSEC) for the message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Message UseDnsSecurity()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.Message.html">Message</a></td>
+        <td><p>The <a class="xref" href="Makaretu.Dns.Message.html">Message</a> for a fluent design.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_Message_UseDnsSecurity_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Sets <a class="xref" href="Makaretu.Dns.OPTRecord.html#Makaretu_Dns_OPTRecord_DO">DO</a> to <strong>true</strong>.  Adds an <a class="xref" href="Makaretu.Dns.OPTRecord.html">OPTRecord</a> to
+<a class="xref" href="Makaretu.Dns.Message.html#Makaretu_Dns_Message_AdditionalRecords">AdditionalRecords</a> if not already present.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_Write_Makaretu_Dns_DnsWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.Write(Makaretu.Dns.DnsWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L320">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L343">View Source</a>
   </span>
   <a id="Makaretu_Dns_Message_Write_" data-uid="Makaretu.Dns.Message.Write*"></a>
   <h4 id="Makaretu_Dns_Message_Write_Makaretu_Dns_DnsWriter_" data-uid="Makaretu.Dns.Message.Write(Makaretu.Dns.DnsWriter)">Write(DnsWriter)</h4>

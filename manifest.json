@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.Message.html",
-          "hash": "wTMMb1vHdOGFg9MXKmJZCw=="
+          "hash": "5bEj01Efh81wtABOgaN0Gw=="
         }
       },
       "is_incremental": false,
@@ -441,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.OPTRecord.html",
-          "hash": "ypYamii+8gw66PwHpwwsIQ=="
+          "hash": "XH4D+JVCJ/Wx9ufJ2t2nEA=="
         }
       },
       "is_incremental": false,
@@ -930,11 +930,11 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
