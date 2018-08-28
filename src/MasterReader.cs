@@ -136,7 +136,18 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
-        ///   Read a time span (interval) in 32-bit secods.
+        ///   Read a time span (interval) in 16-bit seconds.
+        /// </summary>
+        /// <returns>
+        ///   A <see cref="TimeSpan"/> with second resolution.
+        /// </returns>
+        public TimeSpan ReadTimeSpan16()
+        {
+            return TimeSpan.FromSeconds(ReadUInt16());
+        }
+
+        /// <summary>
+        ///   Read a time span (interval) in 32-bit seconds.
         /// </summary>
         /// <returns>
         ///   A <see cref="TimeSpan"/> with second resolution.
@@ -195,7 +206,10 @@ namespace Makaretu.Dns
             var token = ReadToken();
             if (token.Length == 14)
             {
-                var date = DateTime.ParseExact(token, "yyyyMMddHHmmss", CultureInfo.InvariantCulture, 
+                var date = DateTime.ParseExact(
+                    token, 
+                    "yyyyMMddHHmmss",
+                    CultureInfo.InvariantCulture, 
                     DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);
                 var seconds = (date - UnixEpoch).TotalSeconds;
                 return Convert.ToUInt32(seconds);
@@ -313,7 +327,7 @@ namespace Makaretu.Dns
                     type = (DnsType)ushort.Parse(token.Substring(4), CultureInfo.InvariantCulture);
                     continue;
                 }
-                if (Enum.TryParse<DnsType>(token, out DnsType t))
+                if (token.ToLowerInvariant() != "any" && Enum.TryParse<DnsType>(token, out DnsType t))
                 {
                     type = t;
                     continue;

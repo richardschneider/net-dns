@@ -73,6 +73,36 @@ namespace Makaretu.Dns
         ///   Invalid version.
         /// </summary>
         BadVersion = 16,
+
+        /// <summary>
+        ///   Invalid signature (TSIG).
+        /// </summary>
+        BadSignature = 16,
+
+        /// <summary>
+        ///   Invalid key (TSIG).
+        /// </summary>
+        BadKey = 17,
+
+        /// <summary>
+        /// Invalid date/time (TSIG).
+        /// </summary>
+        BadTime = 18,
+
+        /// <summary>
+        ///   Bad TKEY mode (TKEY).
+        /// </summary>
+        BADMODE = 19,
+
+        /// <summary>
+        ///   Duplicate key name (TKEY).
+        /// </summary>
+        BADNAME = 20,
+
+        /// <summary>
+        ///   Algorithm not supported (TKEY).
+        /// </summary>
+        BADALG = 21,
     }
 
 }

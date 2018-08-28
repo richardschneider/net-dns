@@ -11,6 +11,8 @@ namespace Makaretu.Dns
     /// </summary>
     public class DnsReader
     {
+        static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
         Stream stream;
         readonly Dictionary<int, string> names = new Dictionary<int, string>();
 
@@ -78,7 +80,7 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
-        ///   Read the bytes with a length prefix.
+        ///   Read the bytes with a byte length prefix.
         /// </summary>
         /// <returns>
         ///   The next N bytes.
@@ -86,6 +88,18 @@ namespace Makaretu.Dns
         public byte[] ReadByteLengthPrefixedBytes()
         {
             int length = ReadByte();
+            return ReadBytes(length);
+        }
+
+        /// <summary>
+        ///   Read the bytes with an uint16 length prefix.
+        /// </summary>
+        /// <returns>
+        ///   The next N bytes.
+        /// </returns>
+        public byte[] ReadUInt16LengthPrefixedBytes()
+        {
+            int length = ReadUInt16();
             return ReadBytes(length);
         }
 
@@ -121,6 +135,26 @@ namespace Makaretu.Dns
             value = value << 8 | ReadByte();
             value = value << 8 | ReadByte();
             return (uint)value;
+        }
+
+        /// <summary>
+        ///   Read an unsigned long from 48 bits.
+        /// </summary>
+        /// <returns>
+        ///   The six byte little-endian value as an unsigned long.
+        /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
+        public ulong ReadUInt48()
+        {
+            ulong value = ReadByte();
+            value = value << 8 | ReadByte();
+            value = value << 8 | ReadByte();
+            value = value << 8 | ReadByte();
+            value = value << 8 | ReadByte();
+            value = value << 8 | ReadByte();
+            return value;
         }
 
         /// <summary>
@@ -197,7 +231,7 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
-        ///   Read a time span (interval) with 32-bits.
+        ///   Read a time span (interval) with 16-bits.
         /// </summary>
         /// <returns>
         ///   A <see cref="TimeSpan"/> with second resolution.
@@ -207,6 +241,23 @@ namespace Makaretu.Dns
         /// </exception>
         /// <remarks>
         ///   The interval is represented as the number of seconds in two bytes.
+        /// </remarks>
+        public TimeSpan ReadTimeSpan16()
+        {
+            return TimeSpan.FromSeconds(ReadUInt16());
+        }
+
+        /// <summary>
+        ///   Read a time span (interval) with 32-bits.
+        /// </summary>
+        /// <returns>
+        ///   A <see cref="TimeSpan"/> with second resolution.
+        /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
+        /// <remarks>
+        ///   The interval is represented as the number of seconds in four bytes.
         /// </remarks>
         public TimeSpan ReadTimeSpan32()
         {
@@ -260,6 +311,23 @@ namespace Makaretu.Dns
                 }
             }
             return values;
+        }
+
+        /// <summary>
+        ///   Read a <see cref="DateTime"/> that is represented in
+        ///   seconds (48 bits) from the Unix epoch. 
+        /// </summary>
+        /// <returns>
+        ///   A <see cref="DateTime"/> in <see cref="DateTimeKind.Utc"/>.
+        /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
+        /// <returns></returns>
+        public DateTime ReadDateTime48()
+        {
+            var seconds = ReadUInt48();
+            return UnixEpoch.AddSeconds(seconds);
         }
     }
 }

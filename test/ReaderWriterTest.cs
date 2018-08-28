@@ -15,6 +15,8 @@ namespace Makaretu.Dns
         public void Roundtrip()
         {
             var someBytes = new byte[] { 1, 2, 3 };
+            var someDate = new DateTime(1997, 1, 21, 3, 4, 5, DateTimeKind.Utc);
+            
             var ms = new MemoryStream();
             var writer = new DnsWriter(ms);
             writer.WriteDomainName("emanon.org");
@@ -22,11 +24,13 @@ namespace Makaretu.Dns
             writer.WriteTimeSpan32(TimeSpan.FromHours(3));
             writer.WriteUInt16(ushort.MaxValue);
             writer.WriteUInt32(uint.MaxValue);
+            writer.WriteUInt48(0XFFFFFFFFFFFFul);
             writer.WriteBytes(someBytes);
             writer.WriteByteLengthPrefixedBytes(someBytes);
             writer.WriteByteLengthPrefixedBytes(null);
             writer.WriteIPAddress(IPAddress.Parse("127.0.0.1"));
             writer.WriteIPAddress(IPAddress.Parse("2406:e001:13c7:1:7173:ef8:852f:25cb"));
+            writer.WriteDateTime48(someDate);
 
             ms.Position = 0;
             var reader = new DnsReader(ms);
@@ -35,11 +39,13 @@ namespace Makaretu.Dns
             Assert.AreEqual(TimeSpan.FromHours(3), reader.ReadTimeSpan32());
             Assert.AreEqual(ushort.MaxValue, reader.ReadUInt16());
             Assert.AreEqual(uint.MaxValue, reader.ReadUInt32());
+            Assert.AreEqual(0XFFFFFFFFFFFFul, reader.ReadUInt48());
             CollectionAssert.AreEqual(someBytes, reader.ReadBytes(3));
             CollectionAssert.AreEqual(someBytes, reader.ReadByteLengthPrefixedBytes());
             CollectionAssert.AreEqual(new byte[0], reader.ReadByteLengthPrefixedBytes());
             Assert.AreEqual(IPAddress.Parse("127.0.0.1"), reader.ReadIPAddress());
             Assert.AreEqual(IPAddress.Parse("2406:e001:13c7:1:7173:ef8:852f:25cb"), reader.ReadIPAddress(16));
+            Assert.AreEqual(someDate, reader.ReadDateTime48());
         }
 
         [TestMethod]
@@ -167,6 +173,25 @@ namespace Makaretu.Dns
             var writer = new DnsWriter(ms);
             writer.WriteBitmap(new ushort[] { 1, 15, 46, 47, 1234 });
             CollectionAssert.AreEqual(wire, ms.ToArray());
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Uint48TooBig()
+        {
+            var ms = new MemoryStream();
+            var writer = new DnsWriter(ms);
+            writer.WriteUInt48(0X1FFFFFFFFFFFFul);
+        }
+
+        [TestMethod]
+        public void ReadDateTime48()
+        {
+            // From https://tools.ietf.org/html/rfc2845 section 3.3
+            var expected = new DateTime(1997, 1, 21, 0, 0, 0, DateTimeKind.Utc);
+            var ms = new MemoryStream(new byte[] { 0x00, 0x00, 0x32, 0xe4, 0x07, 0x00 });
+            var reader = new DnsReader(ms);
+            Assert.AreEqual(expected, reader.ReadDateTime48());
         }
     }
 }
