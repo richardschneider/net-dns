@@ -65,7 +65,7 @@ namespace Makaretu.Dns
             {
                 Name = "dskey.example.com",
                 TTL = TimeSpan.FromSeconds(86400),
-                Flags = 256,
+                Flags = DNSKEYFlags.ZoneKey,
                 Algorithm = SecurityAlgorithm.RSASHA1,
                 PublicKey = Convert.FromBase64String(
                     @"AQOeiiR0GOMYkDshWoSKz9Xz

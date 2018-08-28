@@ -34,7 +34,6 @@ namespace Makaretu.Dns
         public DNSKEYRecord(RSA key, SecurityAlgorithm algorithm)
             : this()
         {
-            Flags = 256; // TODO: define an enum
             Algorithm = algorithm; // TODO check for RSA algorithm
 
             using (var ms = new MemoryStream())
@@ -74,8 +73,6 @@ namespace Makaretu.Dns
             var p = key.ExportParameters(includePrivateParameters: false);
             p.Validate();
 
-            Flags = 256; // TODO: define an enum
-
             if (!p.Curve.IsNamed)
                 throw new ArgumentException("Only named ECDSA curves are allowed.");
             // TODO: Need a security algorithm registry
@@ -106,9 +103,9 @@ namespace Makaretu.Dns
 #endif
 
         /// <summary>
-        ///  TODO
+        ///  Identifies the intended usage of the key.
         /// </summary>
-        public ushort Flags { get; set; }
+        public DNSKEYFlags Flags { get; set; }
 
         /// <summary>
         ///   Must be three.
@@ -166,7 +163,7 @@ namespace Makaretu.Dns
         {
             var end = reader.Position + length;
 
-            Flags = reader.ReadUInt16();
+            Flags = (DNSKEYFlags)reader.ReadUInt16();
             Protocol = reader.ReadByte();
             Algorithm = (SecurityAlgorithm)reader.ReadByte();
             PublicKey = reader.ReadBytes(end - reader.Position);
@@ -175,7 +172,7 @@ namespace Makaretu.Dns
         /// <inheritdoc />
         public override void WriteData(DnsWriter writer)
         {
-            writer.WriteUInt16(Flags);
+            writer.WriteUInt16((ushort)Flags);
             writer.WriteByte(Protocol);
             writer.WriteByte((byte)Algorithm);
             writer.WriteBytes(PublicKey);
@@ -184,7 +181,7 @@ namespace Makaretu.Dns
         /// <inheritdoc />
         public override void ReadData(MasterReader reader)
         {
-            Flags = reader.ReadUInt16();
+            Flags = (DNSKEYFlags)reader.ReadUInt16();
             Protocol = reader.ReadByte();
             Algorithm = (SecurityAlgorithm)reader.ReadByte();
             PublicKey = reader.ReadBase64String();
@@ -193,7 +190,7 @@ namespace Makaretu.Dns
         /// <inheritdoc />
         public override void WriteData(TextWriter writer)
         {
-            writer.Write(Flags);
+            writer.Write((ushort)Flags);
             writer.Write(' ');
             writer.Write(Protocol);
             writer.Write(' ');

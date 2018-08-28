@@ -30,6 +30,7 @@ namespace Makaretu.Dns
         public DSRecord(DNSKEYRecord key) 
             : this()
         {
+            // TODO: Key must have Secure Entry Point
             byte[] digest;
             using (var ms = new MemoryStream())
             using (var hasher = DigestRegistry.Create(key.Algorithm))
