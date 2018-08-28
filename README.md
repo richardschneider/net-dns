@@ -102,7 +102,8 @@ msg.AdditionalRecords.Add(new ARecord
 
 - [net-mdns](https://github.com/richardschneider/net-mdns) - client and server for multicast DNS
 - [net-udns](https://github.com/richardschneider/net-udns) - client for unicast DNS, DNS over HTTPS (DOH) and DNS over TLS (DOT)
-
+- [DNSSEC](https://www.icann.org/resources/pages/dnssec-qaa-2014-01-29-en) -  What Is It and Why Is It Important?
+ 
 # License
 Copyright © 2018 Richard Schneider (makaretu@gmail.com)
 

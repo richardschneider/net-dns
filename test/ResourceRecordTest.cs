@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -211,6 +212,18 @@ namespace Makaretu.Dns
         {
             var rr = new ResourceRecord { Name = "x.EmAnOn.OrG" };
             Assert.AreEqual("x.emanon.org", rr.CanonicalName);
+        }
+
+        [TestMethod]
+        public void RDATA_Underflow()
+        {
+            // CNAME with extra byte.
+            var ms = new MemoryStream(Convert.FromBase64String("A2ZvbwAABQABAAFRgAAKB3Vua25vd24A/w=="));
+            ms.Position = 0;
+            ExceptionAssert.Throws<InvalidDataException>(() =>
+            {
+                var _ = new ResourceRecord().Read(ms);
+            });
         }
     }
 }

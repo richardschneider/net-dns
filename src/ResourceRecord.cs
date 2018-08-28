@@ -160,7 +160,12 @@ namespace Makaretu.Dns
             specific.TTL = TTL;
 
             // Read the specific properties of the resource record.
+            var end = reader.Position + length;
             specific.ReadData(reader, length);
+            if (reader.Position != end)
+            {
+                throw new InvalidDataException("Found extra data while decoding RDATA.");
+            }
 
             return specific;
         }
