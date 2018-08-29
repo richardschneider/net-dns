@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Message Truncation | DNS Model </title>
+    <title>Wire Format | DNS Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Message Truncation | DNS Model ">
+    <meta name="title" content="Wire Format | DNS Model ">
     <meta name="generator" content="docfx 2.38.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,14 +67,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="message-truncation">Message Truncation</h1>
+<h1 id="wire-format">Wire Format</h1>
 
-<p>A <a class="xref" href="../api/Makaretu.Dns.Message.html">DNS message</a> is typically sent over UDP which has a maximum packet size. 
-<a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_Truncate_">Truncate</a> is used to adjust the message response to fit into the packet size, 
-by removing <a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AdditionalRecords">additional records</a> and then 
-<a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AuthorityRecords">authority records</a>.</p>
-<p>If it is still too big, then the <a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_TC">TC bit</a> is set and the 
-client is expected to send the query again over TCP.</p>
+<p>TODO</p>
 </article>
           </div>
           
@@ -83,7 +78,7 @@ client is expected to send the query again over TCP.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-dns/blob/master/doc/articles/truncate.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/doc/articles/rr-wire.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
