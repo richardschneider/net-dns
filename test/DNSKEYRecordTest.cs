@@ -100,6 +100,7 @@ namespace Makaretu.Dns
             publicKey.ImportParameters(parameters);
 
             var dnskey = new DNSKEYRecord(publicKey, SecurityAlgorithm.RSASHA256);
+            dnskey.Flags = DNSKEYFlags.ZoneKey;
             Assert.AreEqual(DNSKEYFlags.ZoneKey, dnskey.Flags);
             Assert.AreEqual(3, dnskey.Protocol);
             Assert.AreEqual(SecurityAlgorithm.RSASHA256, dnskey.Algorithm);
@@ -124,6 +125,7 @@ namespace Makaretu.Dns
             publicKey.ImportParameters(parameters);
 
             var dnskey = new DNSKEYRecord(publicKey, SecurityAlgorithm.RSASHA512);
+            dnskey.Flags = DNSKEYFlags.ZoneKey;
             Assert.AreEqual(DNSKEYFlags.ZoneKey, dnskey.Flags);
             Assert.AreEqual(3, dnskey.Protocol);
             Assert.AreEqual(SecurityAlgorithm.RSASHA512, dnskey.Algorithm);
@@ -197,9 +199,9 @@ namespace Makaretu.Dns
 
             var dnskey = new DNSKEYRecord(publicKey)
             {
-                Flags = DNSKEYFlags.ZoneKey
+                Flags = DNSKEYFlags.ZoneKey | DNSKEYFlags.SecureEntryPoint
             };
-            Assert.AreEqual(DNSKEYFlags.ZoneKey, dnskey.Flags);
+            Assert.AreEqual(DNSKEYFlags.ZoneKey | DNSKEYFlags.SecureEntryPoint, dnskey.Flags);
             Assert.AreEqual(3, dnskey.Protocol);
             Assert.AreEqual(SecurityAlgorithm.ECDSAP384SHA384, dnskey.Algorithm);
             CollectionAssert.AreEqual(dnsPublicKey, dnskey.PublicKey);

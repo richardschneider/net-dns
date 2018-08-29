@@ -27,10 +27,30 @@ namespace Makaretu.Dns
         /// <param name="key">
         ///   The dns key to use.
         /// </param>
-        public DSRecord(DNSKEYRecord key) 
+        /// <param name="force">
+        ///   If <b>true</b>, key usage checks are ignored.
+        /// </param>
+        /// <exception cref="ArgumentException">
+        ///   Both <see cref="DNSKEYFlags.ZoneKey"/> and <see cref="DNSKEYFlags.SecureEntryPoint"/>
+        ///   must be set.
+        /// </exception>
+        /// <exception cref="ArgumentOutOfRangeException">
+        ///   The <see cref="ResourceRecord.Name"/> of the <paramref name="key"/> is missing.
+        /// </exception>
+        public DSRecord(DNSKEYRecord key, bool force = false) 
             : this()
         {
-            // TODO: Key must have Secure Entry Point
+            // Check the key.
+            if (!force)
+            {
+                if ((key.Flags & DNSKEYFlags.ZoneKey) == DNSKEYFlags.None)
+                    throw new ArgumentException("ZoneKey must be set.", "key");
+                if ((key.Flags & DNSKEYFlags.SecureEntryPoint) == DNSKEYFlags.None)
+                    throw new ArgumentException("SecureEntryPoint must be set.", "key");
+                if (string.IsNullOrWhiteSpace(key.Name))
+                    throw new ArgumentOutOfRangeException("The name is missing.", "key");
+            }
+
             byte[] digest;
             using (var ms = new MemoryStream())
             using (var hasher = DigestRegistry.Create(key.Algorithm))
