@@ -41,7 +41,7 @@ namespace Makaretu.Dns
             {
                 Name = name,
                 Type = type,
-                Class = Class.ANY,
+                Class = DnsClass.ANY,
                 TTL = TimeSpan.Zero
             };
             this.Add(rr);
@@ -141,7 +141,7 @@ namespace Makaretu.Dns
             {
                 Name = name,
                 Type = type,
-                Class = Class.None,
+                Class = DnsClass.None,
                 TTL = TimeSpan.Zero
             };
             this.Add(rr);

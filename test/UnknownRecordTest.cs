@@ -50,7 +50,7 @@ namespace Makaretu.Dns
             var a = new UnknownRecord
             {
                 Name = "a.example",
-                Class = (Class)32,
+                Class = (DnsClass)32,
                 Type = (DnsType)731,
                 Data = new byte[] { 0xab, 0xcd, 0xef, 0x01, 0x23, 0x45 }
             };

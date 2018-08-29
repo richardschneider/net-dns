@@ -42,7 +42,7 @@ namespace Makaretu.Dns
             var reader = new MasterReader(new StringReader("me A 127.0.0.1"));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("me", resource.Name);
-            Assert.AreEqual(Class.IN, resource.Class);
+            Assert.AreEqual(DnsClass.IN, resource.Class);
             Assert.AreEqual(DnsType.A, resource.Type);
             Assert.AreEqual(ResourceRecord.DefaultTTL, resource.TTL);
             Assert.IsInstanceOfType(resource, typeof(ARecord));
@@ -54,7 +54,7 @@ namespace Makaretu.Dns
             var reader = new MasterReader(new StringReader("me CH 63 A 127.0.0.1"));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("me", resource.Name);
-            Assert.AreEqual(Class.CH, resource.Class);
+            Assert.AreEqual(DnsClass.CH, resource.Class);
             Assert.AreEqual(DnsType.A, resource.Type);
             Assert.AreEqual(TimeSpan.FromSeconds(63), resource.TTL);
             Assert.IsInstanceOfType(resource, typeof(ARecord));
@@ -77,7 +77,7 @@ namespace Makaretu.Dns
             var reader = new MasterReader(new StringReader("me CH TYPE1234 \\# 0"));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("me", resource.Name);
-            Assert.AreEqual(Class.CH, resource.Class);
+            Assert.AreEqual(DnsClass.CH, resource.Class);
             Assert.AreEqual(1234, (int)resource.Type);
             Assert.IsInstanceOfType(resource, typeof(UnknownRecord));
         }
@@ -88,7 +88,7 @@ namespace Makaretu.Dns
             var reader = new MasterReader(new StringReader("; comment\r\nme A 127.0.0.1"));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("me", resource.Name);
-            Assert.AreEqual(Class.IN, resource.Class);
+            Assert.AreEqual(DnsClass.IN, resource.Class);
             Assert.AreEqual(DnsType.A, resource.Type);
             Assert.AreEqual(ResourceRecord.DefaultTTL, resource.TTL);
             Assert.IsInstanceOfType(resource, typeof(ARecord));
@@ -104,7 +104,7 @@ $ORIGIN emanon.org. ; no such place\r\n
             var reader = new MasterReader(new StringReader(text));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("emanon.org", resource.Name);
-            Assert.AreEqual(Class.IN, resource.Class);
+            Assert.AreEqual(DnsClass.IN, resource.Class);
             Assert.AreEqual(DnsType.PTR, resource.Type);
             Assert.AreEqual(ResourceRecord.DefaultTTL, resource.TTL);
             Assert.IsInstanceOfType(resource, typeof(PTRRecord));
@@ -120,7 +120,7 @@ emanon.org PTR localhost
             var reader = new MasterReader(new StringReader(text));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("emanon.org", resource.Name);
-            Assert.AreEqual(Class.IN, resource.Class);
+            Assert.AreEqual(DnsClass.IN, resource.Class);
             Assert.AreEqual(DnsType.PTR, resource.Type);
             Assert.AreEqual(TimeSpan.FromMinutes(2), resource.TTL);
             Assert.IsInstanceOfType(resource, typeof(PTRRecord));
@@ -136,14 +136,14 @@ emanon.org A 127.0.0.1
             var reader = new MasterReader(new StringReader(text));
             var a = reader.ReadResourceRecord();
             Assert.AreEqual("emanon.org", a.Name);
-            Assert.AreEqual(Class.IN, a.Class);
+            Assert.AreEqual(DnsClass.IN, a.Class);
             Assert.AreEqual(DnsType.A, a.Type);
             Assert.AreEqual(ResourceRecord.DefaultTTL, a.TTL);
             Assert.IsInstanceOfType(a, typeof(ARecord));
 
             var aaaa = reader.ReadResourceRecord();
             Assert.AreEqual("emanon.org", aaaa.Name);
-            Assert.AreEqual(Class.IN, aaaa.Class);
+            Assert.AreEqual(DnsClass.IN, aaaa.Class);
             Assert.AreEqual(DnsType.AAAA, aaaa.Type);
             Assert.AreEqual(ResourceRecord.DefaultTTL, aaaa.TTL);
             Assert.IsInstanceOfType(aaaa, typeof(AAAARecord));

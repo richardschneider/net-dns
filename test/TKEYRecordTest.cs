@@ -16,7 +16,7 @@ namespace Makaretu.Dns
         {
             var tsig = new TKEYRecord();
             Assert.AreEqual(DnsType.TKEY, tsig.Type);
-            Assert.AreEqual(Class.ANY, tsig.Class);
+            Assert.AreEqual(DnsClass.ANY, tsig.Class);
             Assert.AreEqual(TimeSpan.Zero, tsig.TTL);
         }
 

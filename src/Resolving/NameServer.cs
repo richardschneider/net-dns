@@ -139,11 +139,11 @@ namespace Makaretu.Dns.Resolving
             }
 
             // https://tools.ietf.org/html/rfc1034#section-3.7.1
-            response.AA |= node.Authoritative && question.Class != Class.ANY;
+            response.AA |= node.Authoritative && question.Class != DnsClass.ANY;
 
             //  Find the resources that match the question.
             var resources = node.Resources
-                .Where(r => question.Class == Class.ANY || r.Class == question.Class)
+                .Where(r => question.Class == DnsClass.ANY || r.Class == question.Class)
                 .Where(r => question.Type == DnsType.ANY || r.Type == question.Type)
                 .Where(r => node.Authoritative || !r.IsExpired(question.CreationTime))
                 .ToArray();
@@ -251,7 +251,7 @@ namespace Makaretu.Dns.Resolving
             response.AdditionalRecords.AddRange(records);
         }
 
-        void FindAddresses(string name, Class klass, Message response)
+        void FindAddresses(string name, DnsClass klass, Message response)
         {
             var question = new Question();
 

@@ -61,7 +61,7 @@ namespace Makaretu.Dns
         /// </remarks>
         public UpdateResourceList DeleteResource(ResourceRecord resource)
         {
-            resource.Class = Class.None;
+            resource.Class = DnsClass.None;
             resource.TTL = TimeSpan.Zero;
             this.Add(resource);
             return this;
@@ -89,7 +89,7 @@ namespace Makaretu.Dns
             var resource = new ResourceRecord
             {
                 Name = name,
-                Class = Class.ANY,
+                Class = DnsClass.ANY,
                 Type = DnsType.ANY,
                 TTL = TimeSpan.Zero
             };
@@ -120,7 +120,7 @@ namespace Makaretu.Dns
             var resource = new ResourceRecord
             {
                 Name = name,
-                Class = Class.ANY,
+                Class = DnsClass.ANY,
                 Type = type,
                 TTL = TimeSpan.Zero
             };

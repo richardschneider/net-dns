@@ -16,7 +16,7 @@ namespace Makaretu.Dns
             var rr = new ARecord
             {
                 Name = "local",
-                Class = Class.IN,
+                Class = DnsClass.IN,
                 Address = IPAddress.Parse("127.0.0.0")
             };
             var updates = new UpdateResourceList()
@@ -38,7 +38,7 @@ namespace Makaretu.Dns
                 .DeleteResource("www.example.org");
             var p = updates.First() as ResourceRecord;
             Assert.IsNotNull(p);
-            Assert.AreEqual(Class.ANY, p.Class);
+            Assert.AreEqual(DnsClass.ANY, p.Class);
             Assert.AreEqual("www.example.org", p.Name);
             Assert.AreEqual(TimeSpan.Zero, p.TTL);
             Assert.AreEqual(DnsType.ANY, p.Type);
@@ -52,7 +52,7 @@ namespace Makaretu.Dns
                 .DeleteResource("www.example.org", DnsType.A);
             var p = updates.First() as ResourceRecord;
             Assert.IsNotNull(p);
-            Assert.AreEqual(Class.ANY, p.Class);
+            Assert.AreEqual(DnsClass.ANY, p.Class);
             Assert.AreEqual("www.example.org", p.Name);
             Assert.AreEqual(TimeSpan.Zero, p.TTL);
             Assert.AreEqual(DnsType.A, p.Type);
@@ -66,7 +66,7 @@ namespace Makaretu.Dns
                 .DeleteResource<ARecord>("www.example.org");
             var p = updates.First() as ResourceRecord;
             Assert.IsNotNull(p);
-            Assert.AreEqual(Class.ANY, p.Class);
+            Assert.AreEqual(DnsClass.ANY, p.Class);
             Assert.AreEqual("www.example.org", p.Name);
             Assert.AreEqual(TimeSpan.Zero, p.TTL);
             Assert.AreEqual(DnsType.A, p.Type);
@@ -79,14 +79,14 @@ namespace Makaretu.Dns
             var rr = new ARecord
             {
                 Name = "local",
-                Class = Class.IN,
+                Class = DnsClass.IN,
                 Address = IPAddress.Parse("127.0.0.0")
             };
             var updates = new UpdateResourceList()
                 .DeleteResource(rr);
             var p = updates.First() as ResourceRecord;
             Assert.IsNotNull(p);
-            Assert.AreEqual(Class.None, p.Class);
+            Assert.AreEqual(DnsClass.None, p.Class);
             Assert.AreEqual(rr.Name, p.Name);
             Assert.AreEqual(TimeSpan.Zero, p.TTL);
             Assert.AreEqual(rr.Type, p.Type);

@@ -277,7 +277,7 @@ namespace Makaretu.Dns
         ///   A missing domain name will use the previous record's domain name.
         ///   </para>
         ///   <para>
-        ///   Defaults the <see cref="ResourceRecord.Class"/> to <see cref="Class.IN"/>.
+        ///   Defaults the <see cref="ResourceRecord.Class"/> to <see cref="DnsClass.IN"/>.
         ///   Defaults the <see cref="ResourceRecord.TTL"/>  to either the "$TTL" or
         ///   the <see cref="ResourceRecord.DefaultTTL"/>.
         ///   </para>
@@ -285,7 +285,7 @@ namespace Makaretu.Dns
         public ResourceRecord ReadResourceRecord()
         {
             string domainName = defaultDomainName;
-            Class klass = Class.IN;
+            DnsClass klass = DnsClass.IN;
             TimeSpan? ttl = defaultTTL;
             DnsType? type = null;
 
@@ -336,10 +336,10 @@ namespace Makaretu.Dns
                 // Is CLASS?
                 if (token.StartsWith("CLASS"))
                 {
-                    klass = (Class)ushort.Parse(token.Substring(5), CultureInfo.InvariantCulture);
+                    klass = (DnsClass)ushort.Parse(token.Substring(5), CultureInfo.InvariantCulture);
                     continue;
                 }
-                if (Enum.TryParse<Class>(token, out Class k))
+                if (Enum.TryParse<DnsClass>(token, out DnsClass k))
                 {
                     klass = k;
                     continue;

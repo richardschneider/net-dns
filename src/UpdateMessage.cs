@@ -98,12 +98,12 @@ namespace Makaretu.Dns
         /// </summary>
         /// <value>
         ///   Defaults to the empty zone.  <see cref="Question.Name"/> is <b>null</b>,
-        ///   <see cref="Question.Class"/> is <see cref="Class.IN"/> and
+        ///   <see cref="Question.Class"/> is <see cref="DnsClass.IN"/> and
         ///   <see cref="Question.Type"/> is SOA (6).
         /// </value>
         public Question Zone { get; set; } = new Question
         {
-            Class = Class.IN,
+            Class = DnsClass.IN,
             Type = DnsType.SOA
         };
 

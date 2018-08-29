@@ -56,7 +56,7 @@ namespace Makaretu.Dns
         public ushort RequestorPayloadSize
         {
             get { return (ushort)Class; }
-            set { Class = (Class)value; }
+            set { Class = (DnsClass)value; }
         }
 
         /// <summary>

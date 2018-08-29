@@ -24,7 +24,7 @@ namespace Makaretu.Dns
         public TKEYRecord() : base()
         {
             Type = DnsType.TKEY;
-            Class = Class.ANY;
+            Class = DnsClass.ANY;
             TTL = TimeSpan.Zero;
             var now = DateTime.UtcNow;
             OtherData = NoData;

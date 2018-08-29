@@ -65,7 +65,7 @@ namespace Makaretu.Dns.Resolving
         public async Task Missing_Class()
         {
             var resolver = new NameServer { Catalog = dotcom };
-            var question = new Question { Name = "ns.example.com", Class = Class.CH };
+            var question = new Question { Name = "ns.example.com", Class = DnsClass.CH };
             var response = await resolver.ResolveAsync(question);
 
             Assert.IsTrue(response.IsResponse);
@@ -89,7 +89,7 @@ namespace Makaretu.Dns.Resolving
         public async Task AnyClass()
         {
             var resolver = new NameServer { Catalog = dotcom };
-            var question = new Question { Name = "ns.example.com", Class = Class.ANY, Type = DnsType.A };
+            var question = new Question { Name = "ns.example.com", Class = DnsClass.ANY, Type = DnsType.A };
             var response = await resolver.ResolveAsync(question);
 
             Assert.IsTrue(response.IsResponse);

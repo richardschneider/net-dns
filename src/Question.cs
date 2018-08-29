@@ -31,16 +31,16 @@ namespace Makaretu.Dns
         ///   A two octet code that specifies the class of the query.
         /// </summary>
         /// <value>
-        ///   Defaults to <see cref="Class.IN"/>.
+        ///   Defaults to <see cref="DnsClass.IN"/>.
         /// </value>
-        public Class Class { get; set; } = Class.IN;
+        public DnsClass Class { get; set; } = DnsClass.IN;
 
         /// <inheritdoc />
         public override IDnsSerialiser Read(DnsReader reader)
         {
             Name = reader.ReadDomainName();
             Type = (DnsType)reader.ReadUInt16();
-            Class = (Class)reader.ReadUInt16();
+            Class = (DnsClass)reader.ReadUInt16();
 
             return this;
         }

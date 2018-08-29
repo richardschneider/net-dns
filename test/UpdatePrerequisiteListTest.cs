@@ -17,7 +17,7 @@ namespace Makaretu.Dns
                 .MustExist("www.example.org");
             var p = prerequisites.First() as ResourceRecord;
             Assert.IsNotNull(p);
-            Assert.AreEqual(Class.ANY, p.Class);
+            Assert.AreEqual(DnsClass.ANY, p.Class);
             Assert.AreEqual("www.example.org", p.Name);
             Assert.AreEqual(TimeSpan.Zero, p.TTL);
             Assert.AreEqual(DnsType.ANY, p.Type);
@@ -31,7 +31,7 @@ namespace Makaretu.Dns
                 .MustExist("www.example.org", DnsType.A);
             var p = prerequisites.First() as ResourceRecord;
             Assert.IsNotNull(p);
-            Assert.AreEqual(Class.ANY, p.Class);
+            Assert.AreEqual(DnsClass.ANY, p.Class);
             Assert.AreEqual("www.example.org", p.Name);
             Assert.AreEqual(TimeSpan.Zero, p.TTL);
             Assert.AreEqual(DnsType.A, p.Type);
@@ -45,7 +45,7 @@ namespace Makaretu.Dns
                 .MustExist<ARecord>("www.example.org");
             var p = prerequisites.First() as ResourceRecord;
             Assert.IsNotNull(p);
-            Assert.AreEqual(Class.ANY, p.Class);
+            Assert.AreEqual(DnsClass.ANY, p.Class);
             Assert.AreEqual("www.example.org", p.Name);
             Assert.AreEqual(TimeSpan.Zero, p.TTL);
             Assert.AreEqual(DnsType.A, p.Type);
@@ -58,7 +58,7 @@ namespace Makaretu.Dns
             var rr = new ARecord
             {
                 Name = "local",
-                Class = Class.IN,
+                Class = DnsClass.IN,
                 Address = IPAddress.Parse("127.0.0.0")
             };
             var prerequisites = new UpdatePrerequisiteList()
@@ -80,7 +80,7 @@ namespace Makaretu.Dns
                 .MustNotExist("www.example.org");
             var p = prerequisites.First() as ResourceRecord;
             Assert.IsNotNull(p);
-            Assert.AreEqual(Class.None, p.Class);
+            Assert.AreEqual(DnsClass.None, p.Class);
             Assert.AreEqual("www.example.org", p.Name);
             Assert.AreEqual(TimeSpan.Zero, p.TTL);
             Assert.AreEqual(DnsType.ANY, p.Type);
@@ -94,7 +94,7 @@ namespace Makaretu.Dns
                 .MustNotExist("www.example.org", DnsType.A);
             var p = prerequisites.First() as ResourceRecord;
             Assert.IsNotNull(p);
-            Assert.AreEqual(Class.None, p.Class);
+            Assert.AreEqual(DnsClass.None, p.Class);
             Assert.AreEqual("www.example.org", p.Name);
             Assert.AreEqual(TimeSpan.Zero, p.TTL);
             Assert.AreEqual(DnsType.A, p.Type);
@@ -108,7 +108,7 @@ namespace Makaretu.Dns
                 .MustNotExist<ARecord>("www.example.org");
             var p = prerequisites.First() as ResourceRecord;
             Assert.IsNotNull(p);
-            Assert.AreEqual(Class.None, p.Class);
+            Assert.AreEqual(DnsClass.None, p.Class);
             Assert.AreEqual("www.example.org", p.Name);
             Assert.AreEqual(TimeSpan.Zero, p.TTL);
             Assert.AreEqual(DnsType.A, p.Type);

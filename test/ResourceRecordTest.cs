@@ -16,7 +16,7 @@ namespace Makaretu.Dns
         public void Defaults()
         {
             var rr = new ResourceRecord();
-            Assert.AreEqual(Class.IN, rr.Class);
+            Assert.AreEqual(DnsClass.IN, rr.Class);
             Assert.AreEqual(ResourceRecord.DefaultTTL, rr.TTL);
         }
 
@@ -54,7 +54,7 @@ namespace Makaretu.Dns
             var a = new ResourceRecord
             {
                 Name = "emanon.org",
-                Class = Class.CH,
+                Class = DnsClass.CH,
                 Type = (DnsType)0xFFFF,
                 TTL = TimeSpan.FromDays(2)
             };
@@ -74,21 +74,21 @@ namespace Makaretu.Dns
             var a0 = new ResourceRecord
             {
                 Name = "alpha",
-                Class = Class.IN,
+                Class = DnsClass.IN,
                 Type = DnsType.A,
                 TTL = TimeSpan.FromSeconds(1)
             };
             var a1 = new ResourceRecord
             {
                 Name = "alpha",
-                Class = Class.IN,
+                Class = DnsClass.IN,
                 Type = DnsType.A,
                 TTL = TimeSpan.FromSeconds(2)
             };
             var b = new ResourceRecord
             {
                 Name = "beta",
-                Class = Class.IN,
+                Class = DnsClass.IN,
                 Type = DnsType.A,
                 TTL = TimeSpan.FromSeconds(1)
             };
@@ -148,7 +148,7 @@ namespace Makaretu.Dns
             {
                 Name = "x.emanon.org",
                 Type = DnsType.A,
-                Class = Class.CH
+                Class = DnsClass.CH
             };
             Assert.AreEqual("x.emanon.org CH A \\# 0", a.ToString());
 
@@ -190,7 +190,7 @@ namespace Makaretu.Dns
             var a = new ResourceRecord
             {
                 Name = "x.emanon.org",
-                Class = (Class)1234,
+                Class = (DnsClass)1234,
                 Type = DnsType.A
             };
             Assert.AreEqual("x.emanon.org CLASS1234 A \\# 0", a.ToString());

@@ -40,7 +40,7 @@ namespace Makaretu.Dns
             var question = msg.Questions.First();
             Assert.AreEqual("appletv.local", question.Name);
             Assert.AreEqual(DnsType.A, question.Type);
-            Assert.AreEqual(Class.IN, question.Class);
+            Assert.AreEqual(DnsClass.IN, question.Class);
         }
 
         /// <summary>

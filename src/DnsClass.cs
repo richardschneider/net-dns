@@ -5,9 +5,12 @@ using System.Text;
 namespace Makaretu.Dns
 {
     /// <summary>
-    ///   CLASS fields appear in resource records.
+    ///  Identifies the network of the <see cref="ResourceRecord"/>.
     /// </summary>
-    public enum Class : ushort
+    /// <remarks>
+    ///   The values are maintained by IANA at <see href="https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-2"/>.
+    /// </remarks>
+    public enum DnsClass : ushort
     {
         /// <summary>
         ///   The Internet.

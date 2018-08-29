@@ -16,7 +16,7 @@ namespace Makaretu.Dns
         {
             var tsig = new TSIGRecord();
             Assert.AreEqual(DnsType.TSIG, tsig.Type);
-            Assert.AreEqual(Class.ANY, tsig.Class);
+            Assert.AreEqual(DnsClass.ANY, tsig.Class);
             Assert.AreEqual(TimeSpan.Zero, tsig.TTL);
             Assert.AreEqual(DateTimeKind.Utc, tsig.TimeSigned.Kind);
             Assert.AreEqual(0, tsig.TimeSigned.Millisecond);

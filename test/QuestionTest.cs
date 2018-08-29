@@ -16,7 +16,7 @@ namespace Makaretu.Dns
             var a = new Question
             {
                 Name = "emanon.org",
-                Class = Class.CH,
+                Class = DnsClass.CH,
                 Type = DnsType.MX
             };
             var b = (Question)new Question().Read(a.ToByteArray());

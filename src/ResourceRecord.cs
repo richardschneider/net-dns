@@ -67,9 +67,9 @@ namespace Makaretu.Dns
         ///    One of the RR CLASS codes.
         /// </summary>
         /// <value>
-        ///   Defaults to <see cref="Class.IN"/>.
+        ///   Defaults to <see cref="DnsClass.IN"/>.
         /// </value>
-        public Class Class { get; set; } = Class.IN;
+        public DnsClass Class { get; set; } = DnsClass.IN;
 
         /// <summary>
         ///    Specifies the time interval
@@ -147,7 +147,7 @@ namespace Makaretu.Dns
             // Read standard properties of a resource record.
             Name = reader.ReadDomainName();
             Type = (DnsType)reader.ReadUInt16();
-            Class = (Class)reader.ReadUInt16();
+            Class = (DnsClass)reader.ReadUInt16();
             TTL = reader.ReadTimeSpan32();
             int length = reader.ReadUInt16();
 
@@ -320,7 +320,7 @@ namespace Makaretu.Dns
                 writer.Write(' ');
             }
 
-            if (!Enum.IsDefined(typeof(Class), Class))
+            if (!Enum.IsDefined(typeof(DnsClass), Class))
             {
                 writer.Write("CLASS");
             }

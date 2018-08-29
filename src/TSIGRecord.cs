@@ -59,7 +59,7 @@ namespace Makaretu.Dns
         public TSIGRecord() : base()
         {
             Type = DnsType.TSIG;
-            Class = Class.ANY;
+            Class = DnsClass.ANY;
             TTL = TimeSpan.Zero;
             var now = DateTime.UtcNow;
             TimeSigned = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second, now.Kind);
