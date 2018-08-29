@@ -466,6 +466,30 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DNAMERecord.WriteData
   nameWithType: DNAMERecord.WriteData
+- uid: Makaretu.Dns.DNSKEYFlags
+  name: DNSKEYFlags
+  href: api/Makaretu.Dns.DNSKEYFlags.html
+  commentId: T:Makaretu.Dns.DNSKEYFlags
+  fullName: Makaretu.Dns.DNSKEYFlags
+  nameWithType: DNSKEYFlags
+- uid: Makaretu.Dns.DNSKEYFlags.None
+  name: None
+  href: api/Makaretu.Dns.DNSKEYFlags.html#Makaretu_Dns_DNSKEYFlags_None
+  commentId: F:Makaretu.Dns.DNSKEYFlags.None
+  fullName: Makaretu.Dns.DNSKEYFlags.None
+  nameWithType: DNSKEYFlags.None
+- uid: Makaretu.Dns.DNSKEYFlags.SecureEntryPoint
+  name: SecureEntryPoint
+  href: api/Makaretu.Dns.DNSKEYFlags.html#Makaretu_Dns_DNSKEYFlags_SecureEntryPoint
+  commentId: F:Makaretu.Dns.DNSKEYFlags.SecureEntryPoint
+  fullName: Makaretu.Dns.DNSKEYFlags.SecureEntryPoint
+  nameWithType: DNSKEYFlags.SecureEntryPoint
+- uid: Makaretu.Dns.DNSKEYFlags.ZoneKey
+  name: ZoneKey
+  href: api/Makaretu.Dns.DNSKEYFlags.html#Makaretu_Dns_DNSKEYFlags_ZoneKey
+  commentId: F:Makaretu.Dns.DNSKEYFlags.ZoneKey
+  fullName: Makaretu.Dns.DNSKEYFlags.ZoneKey
+  nameWithType: DNSKEYFlags.ZoneKey
 - uid: Makaretu.Dns.DNSKEYRecord
   name: DNSKEYRecord
   href: api/Makaretu.Dns.DNSKEYRecord.html
@@ -1435,12 +1459,12 @@ references:
   commentId: M:Makaretu.Dns.DSRecord.#ctor
   fullName: Makaretu.Dns.DSRecord.DSRecord()
   nameWithType: DSRecord.DSRecord()
-- uid: Makaretu.Dns.DSRecord.#ctor(Makaretu.Dns.DNSKEYRecord)
-  name: DSRecord(DNSKEYRecord)
-  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord__ctor_Makaretu_Dns_DNSKEYRecord_
-  commentId: M:Makaretu.Dns.DSRecord.#ctor(Makaretu.Dns.DNSKEYRecord)
-  fullName: Makaretu.Dns.DSRecord.DSRecord(Makaretu.Dns.DNSKEYRecord)
-  nameWithType: DSRecord.DSRecord(DNSKEYRecord)
+- uid: Makaretu.Dns.DSRecord.#ctor(Makaretu.Dns.DNSKEYRecord,System.Boolean)
+  name: DSRecord(DNSKEYRecord, Boolean)
+  href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord__ctor_Makaretu_Dns_DNSKEYRecord_System_Boolean_
+  commentId: M:Makaretu.Dns.DSRecord.#ctor(Makaretu.Dns.DNSKEYRecord,System.Boolean)
+  fullName: Makaretu.Dns.DSRecord.DSRecord(Makaretu.Dns.DNSKEYRecord, System.Boolean)
+  nameWithType: DSRecord.DSRecord(DNSKEYRecord, Boolean)
 - uid: Makaretu.Dns.DSRecord.#ctor*
   name: DSRecord
   href: api/Makaretu.Dns.DSRecord.html#Makaretu_Dns_DSRecord__ctor_

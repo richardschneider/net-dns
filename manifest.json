@@ -89,11 +89,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Makaretu.Dns.DNSKEYFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Makaretu.Dns.DNSKEYFlags.html",
+          "hash": "gtKxgLw4DGzbE/5dWCAH/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Makaretu.Dns.DNSKEYRecord.yml",
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.DNSKEYRecord.html",
-          "hash": "NVHH3quSPcF1twyadPbS+A=="
+          "hash": "n/S3UY63JoCyt0SnqbrUYg=="
         }
       },
       "is_incremental": false,
@@ -105,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.DSRecord.html",
-          "hash": "75MH/IlGE3RBSKXrvhNdvA=="
+          "hash": "eeJonOBuBmkTXE1ZOxd4zw=="
         }
       },
       "is_incremental": false,
@@ -741,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.html",
-          "hash": "U7hmI/shtADRkSTFK4FAgw=="
+          "hash": "dvkkZ0J+IyDn8hBZV0QlYQ=="
         }
       },
       "is_incremental": false,
@@ -753,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "m+qUMEvfkOs7Fph7dxuNew=="
+          "hash": "oOvFfqWXHmfPh7yfbCv5jA=="
         }
       },
       "is_incremental": false,
