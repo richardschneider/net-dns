@@ -65,18 +65,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.Class.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.Class.html",
-          "hash": "d5QB96bzCEegBZo7D6Elmw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Makaretu.Dns.DNAMERecord.yml",
       "output": {
         ".html": {
@@ -142,6 +130,18 @@
         ".html": {
           "relative_path": "api/Makaretu.Dns.DigestType.html",
           "hash": "4swqhoTGF1lMyGYJqHoX4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Makaretu.Dns.DnsClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Makaretu.Dns.DnsClass.html",
+          "hash": "V8003L3AetoADZnEaXUI4w=="
         }
       },
       "is_incremental": false,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.MasterReader.html",
-          "hash": "cgZSzSjIZVAbc/HkuFkNDw=="
+          "hash": "pgFbT0S0Nh86PyRncYsChA=="
         }
       },
       "is_incremental": false,
@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.Question.html",
-          "hash": "3/AecgP0tJqd7cDtn4hI6g=="
+          "hash": "fLX0Uyrly6+OnkqZXb86mg=="
         }
       },
       "is_incremental": false,
@@ -597,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.ResourceRecord.html",
-          "hash": "CM6i9FHdKl30/xMO3c2kCA=="
+          "hash": "+k2wuYDbb9WcXxGv+/NPpA=="
         }
       },
       "is_incremental": false,
@@ -717,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.UpdateMessage.html",
-          "hash": "6uoO3de9wCkqKJLGADuxnQ=="
+          "hash": "B8duTyXX3bJ53604KYxKAg=="
         }
       },
       "is_incremental": false,
@@ -753,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.html",
-          "hash": "dvkkZ0J+IyDn8hBZV0QlYQ=="
+          "hash": "ZT91wm+ju7waGnSpGESGLw=="
         }
       },
       "is_incremental": false,
@@ -765,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "oOvFfqWXHmfPh7yfbCv5jA=="
+          "hash": "UlNgBV36iMPtCd7XqUoLRg=="
         }
       },
       "is_incremental": false,

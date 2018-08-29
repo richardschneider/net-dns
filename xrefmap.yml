@@ -211,48 +211,6 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.ARecord.ARecord
   nameWithType: ARecord.ARecord
-- uid: Makaretu.Dns.Class
-  name: Class
-  href: api/Makaretu.Dns.Class.html
-  commentId: T:Makaretu.Dns.Class
-  fullName: Makaretu.Dns.Class
-  nameWithType: Class
-- uid: Makaretu.Dns.Class.ANY
-  name: ANY
-  href: api/Makaretu.Dns.Class.html#Makaretu_Dns_Class_ANY
-  commentId: F:Makaretu.Dns.Class.ANY
-  fullName: Makaretu.Dns.Class.ANY
-  nameWithType: Class.ANY
-- uid: Makaretu.Dns.Class.CH
-  name: CH
-  href: api/Makaretu.Dns.Class.html#Makaretu_Dns_Class_CH
-  commentId: F:Makaretu.Dns.Class.CH
-  fullName: Makaretu.Dns.Class.CH
-  nameWithType: Class.CH
-- uid: Makaretu.Dns.Class.CS
-  name: CS
-  href: api/Makaretu.Dns.Class.html#Makaretu_Dns_Class_CS
-  commentId: F:Makaretu.Dns.Class.CS
-  fullName: Makaretu.Dns.Class.CS
-  nameWithType: Class.CS
-- uid: Makaretu.Dns.Class.HS
-  name: HS
-  href: api/Makaretu.Dns.Class.html#Makaretu_Dns_Class_HS
-  commentId: F:Makaretu.Dns.Class.HS
-  fullName: Makaretu.Dns.Class.HS
-  nameWithType: Class.HS
-- uid: Makaretu.Dns.Class.IN
-  name: IN
-  href: api/Makaretu.Dns.Class.html#Makaretu_Dns_Class_IN
-  commentId: F:Makaretu.Dns.Class.IN
-  fullName: Makaretu.Dns.Class.IN
-  nameWithType: Class.IN
-- uid: Makaretu.Dns.Class.None
-  name: None
-  href: api/Makaretu.Dns.Class.html#Makaretu_Dns_Class_None
-  commentId: F:Makaretu.Dns.Class.None
-  fullName: Makaretu.Dns.Class.None
-  nameWithType: Class.None
 - uid: Makaretu.Dns.CNAMERecord
   name: CNAMERecord
   href: api/Makaretu.Dns.CNAMERecord.html
@@ -466,6 +424,48 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DNAMERecord.WriteData
   nameWithType: DNAMERecord.WriteData
+- uid: Makaretu.Dns.DnsClass
+  name: DnsClass
+  href: api/Makaretu.Dns.DnsClass.html
+  commentId: T:Makaretu.Dns.DnsClass
+  fullName: Makaretu.Dns.DnsClass
+  nameWithType: DnsClass
+- uid: Makaretu.Dns.DnsClass.ANY
+  name: ANY
+  href: api/Makaretu.Dns.DnsClass.html#Makaretu_Dns_DnsClass_ANY
+  commentId: F:Makaretu.Dns.DnsClass.ANY
+  fullName: Makaretu.Dns.DnsClass.ANY
+  nameWithType: DnsClass.ANY
+- uid: Makaretu.Dns.DnsClass.CH
+  name: CH
+  href: api/Makaretu.Dns.DnsClass.html#Makaretu_Dns_DnsClass_CH
+  commentId: F:Makaretu.Dns.DnsClass.CH
+  fullName: Makaretu.Dns.DnsClass.CH
+  nameWithType: DnsClass.CH
+- uid: Makaretu.Dns.DnsClass.CS
+  name: CS
+  href: api/Makaretu.Dns.DnsClass.html#Makaretu_Dns_DnsClass_CS
+  commentId: F:Makaretu.Dns.DnsClass.CS
+  fullName: Makaretu.Dns.DnsClass.CS
+  nameWithType: DnsClass.CS
+- uid: Makaretu.Dns.DnsClass.HS
+  name: HS
+  href: api/Makaretu.Dns.DnsClass.html#Makaretu_Dns_DnsClass_HS
+  commentId: F:Makaretu.Dns.DnsClass.HS
+  fullName: Makaretu.Dns.DnsClass.HS
+  nameWithType: DnsClass.HS
+- uid: Makaretu.Dns.DnsClass.IN
+  name: IN
+  href: api/Makaretu.Dns.DnsClass.html#Makaretu_Dns_DnsClass_IN
+  commentId: F:Makaretu.Dns.DnsClass.IN
+  fullName: Makaretu.Dns.DnsClass.IN
+  nameWithType: DnsClass.IN
+- uid: Makaretu.Dns.DnsClass.None
+  name: None
+  href: api/Makaretu.Dns.DnsClass.html#Makaretu_Dns_DnsClass_None
+  commentId: F:Makaretu.Dns.DnsClass.None
+  fullName: Makaretu.Dns.DnsClass.None
+  nameWithType: DnsClass.None
 - uid: Makaretu.Dns.DNSKEYFlags
   name: DNSKEYFlags
   href: api/Makaretu.Dns.DNSKEYFlags.html
