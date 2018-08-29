@@ -3,10 +3,21 @@
 - name: Resource Records
   href: rr.md
   items:
+    - name: Wire Format
+      href: rr-wire.md
+    - name: Presentation Format
+      href: rr-presentation.md
     - name: Registry
       href: rr-registry.md
     - name: Equality
       href: rr-equality.md
+- name: DNS Security
+  href: dnssec.md
+  items:
+    - name: Resource Records
+      href: rr-dnssec.md
+    - name: Cryptography
+      href: crypto.md
 - name: Extended DNS
   href: edns.md
   items:
@@ -14,8 +25,15 @@
       href: eoption.md
     - name: Opcode
       href: eopcode.md
-- name: Message Truncation
-  href: truncate.md
+- name: Message
+  href: message.md
+  items:
+    - name: Wire Format
+      href: msg-wire.md
+    - name: Truncation
+      href: truncate.md
+- name: Resolving
+  href: resolving.md
 - name: Class Reference
   href: ../api/Makaretu.Dns.yml
   
