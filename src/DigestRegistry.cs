@@ -10,6 +10,9 @@ namespace Makaretu.Dns
     /// <summary>
     ///   Registry of implemented <see cref="DigestType"/>.
     /// </summary>
+    /// <remarks>
+    ///   IANA maintains a list of all known types at <see href="https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml#ds-rr-types-1"/>.
+    /// </remarks>
     /// <see cref="DigestType"/>
     /// <see cref="HashAlgorithm"/>
     public static class DigestRegistry

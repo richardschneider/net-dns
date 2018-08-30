@@ -4,7 +4,9 @@ The [resource registry](xref:Makaretu.Dns.ResourceRegistry) contains the known r
 
 ## Creating
 
-The [Create](xref:Makaretu.Dns.ResourceRegistry.Create*) method creates a record with the specified [DnsType](xref:Makaretu.Dns.DnsType).
+The [Create](xref:Makaretu.Dns.ResourceRegistry.Create*) method creates a 
+new instance of a [resource record](xref:Makaretu.Dns.ResourceRecord) with the 
+specified [DnsType](xref:Makaretu.Dns.DnsType).
 
 ```csharp
 var rr = ResourceRegistry.Create(DnsType.NS);
