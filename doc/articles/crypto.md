@@ -22,3 +22,8 @@ public class ShaX : HashAlgorithm
 DigestRegisty.Digests.Add(DigestType.ShaX, () => ShaX.Create());
 
 ```
+
+### Security Registry
+
+The [security registry](xref:Makaretu.Dns.SecurityAlgorithmRegistry) contains the implemented signing 
+algorithms.

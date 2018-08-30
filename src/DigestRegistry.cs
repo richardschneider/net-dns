@@ -26,15 +26,6 @@ namespace Makaretu.Dns
         /// </remarks>
         public static Dictionary<DigestType, Func<HashAlgorithm>> Digests;
 
-        /// <summary>
-        ///   Defined hashing algorithm for the <see cref="SecurityAlgorithm"/>.
-        /// </summary>
-        /// <remarks>
-        ///   The key is the <see cref="SecurityAlgorithm"/>.
-        ///   The value is the <see cref="DigestType"/>.
-        /// </remarks>
-        public static Dictionary<SecurityAlgorithm, DigestType> Algorithms;
-
         static DigestRegistry()
         {
             Digests = new Dictionary<DigestType, Func<HashAlgorithm>>();
@@ -42,16 +33,6 @@ namespace Makaretu.Dns
             Digests.Add(DigestType.Sha256, () => SHA256.Create());
             Digests.Add(DigestType.Sha384, () => SHA384.Create());
             Digests.Add(DigestType.Sha512, () => SHA512.Create());
-
-            Algorithms = new Dictionary<SecurityAlgorithm, DigestType>();
-            Algorithms.Add(SecurityAlgorithm.RSASHA1, DigestType.Sha1);
-            Algorithms.Add(SecurityAlgorithm.RSASHA256, DigestType.Sha256);
-            Algorithms.Add(SecurityAlgorithm.RSASHA512, DigestType.Sha512);
-            Algorithms.Add(SecurityAlgorithm.RSASHA1NSEC3SHA1, DigestType.Sha1);
-            Algorithms.Add(SecurityAlgorithm.DSA, DigestType.Sha1);
-            Algorithms.Add(SecurityAlgorithm.DSANSEC3SHA1, DigestType.Sha1);
-            Algorithms.Add(SecurityAlgorithm.ECDSAP256SHA256, DigestType.Sha256);
-            Algorithms.Add(SecurityAlgorithm.ECDSAP384SHA384, DigestType.Sha384);
         }
 
         /// <summary>
@@ -87,16 +68,13 @@ namespace Makaretu.Dns
         ///   for the <paramref name="algorithm"/>.
         /// </returns>
         /// <exception cref="NotImplementedException">
-        ///   When the <see cref="HashAlgorithm"/> for <paramref name="algorithm"/> 
-        ///   is not defined.
+        ///   When the <paramref name="algorithm"/> or its <see cref="HashAlgorithm"/>
+        ///   is not implemented.
         /// </exception>
         public static HashAlgorithm Create(SecurityAlgorithm algorithm)
         {
-            if (Algorithms.TryGetValue(algorithm, out DigestType digestType))
-            {
-                return Create(digestType);
-            }
-            throw new NotImplementedException($"The digest type for the algorithm '{algorithm}' is not defined.");
+            var metadata = SecurityAlgorithmRegistry.GetMetadata(algorithm);
+            return Create(metadata.HashAlgorithm);
         }
     }
 }

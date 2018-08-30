@@ -9,8 +9,11 @@ namespace Makaretu.Dns
     /// </summary>
     /// <remarks>
     ///   The values are maintained by IANA at <see href="https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml#dns-sec-alg-numbers-1"/>
+    ///   <para>
+    ///   Implemented security algorithms are obtained from the <see cref="SecurityAlgorithmRegistry"/>.
+    ///   </para>
     /// </remarks>
-    /// <seealso cref="ResourceRecord"/>
+    /// <seealso cref="DNSKEYRecord"/>
     public enum SecurityAlgorithm : byte
     {
         /// <summary>
