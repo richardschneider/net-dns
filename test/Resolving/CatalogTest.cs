@@ -52,7 +52,7 @@ a._http._tcp SRV 0 5 80 mail
         public void IncludeZone()
         {
             var catalog = new Catalog();
-            var reader = new MasterReader(new StringReader(exampleDotComZoneText));
+            var reader = new PresentationReader(new StringReader(exampleDotComZoneText));
             var zone = catalog.IncludeZone(reader);
             Assert.AreEqual("example.com", zone.Name);
             Assert.IsTrue(zone.Authoritative);
@@ -72,11 +72,11 @@ a._http._tcp SRV 0 5 80 mail
         public void IncludeZone_AlreadyExists()
         {
             var catalog = new Catalog();
-            var reader = new MasterReader(new StringReader(exampleDotComZoneText));
+            var reader = new PresentationReader(new StringReader(exampleDotComZoneText));
             var zone = catalog.IncludeZone(reader);
             Assert.AreEqual("example.com", zone.Name);
 
-            reader = new MasterReader(new StringReader(exampleDotComZoneText));
+            reader = new PresentationReader(new StringReader(exampleDotComZoneText));
             ExceptionAssert.Throws<InvalidDataException>(() => catalog.IncludeZone(reader));
         }
 
@@ -84,7 +84,7 @@ a._http._tcp SRV 0 5 80 mail
         public void IncludeZone_NoResources()
         {
             var catalog = new Catalog();
-            var reader = new MasterReader(new StringReader(""));
+            var reader = new PresentationReader(new StringReader(""));
             ExceptionAssert.Throws<InvalidDataException>(() => catalog.IncludeZone(reader));
         }
 
@@ -93,7 +93,7 @@ a._http._tcp SRV 0 5 80 mail
         {
             var text = "foo.org A 127.0.0.1";
             var catalog = new Catalog();
-            var reader = new MasterReader(new StringReader(text));
+            var reader = new PresentationReader(new StringReader(text));
             ExceptionAssert.Throws<InvalidDataException>(() => catalog.IncludeZone(reader));
         }
 
@@ -102,7 +102,7 @@ a._http._tcp SRV 0 5 80 mail
         {
             var text = exampleDotOrgZoneText + " not.in.zone. A 127.0.0.1 ; bad";
             var catalog = new Catalog();
-            var reader = new MasterReader(new StringReader(text));
+            var reader = new PresentationReader(new StringReader(text));
             ExceptionAssert.Throws<InvalidDataException>(() => catalog.IncludeZone(reader));
         }
 
@@ -111,11 +111,11 @@ a._http._tcp SRV 0 5 80 mail
         {
             var catalog = new Catalog();
 
-            var reader = new MasterReader(new StringReader(exampleDotComZoneText));
+            var reader = new PresentationReader(new StringReader(exampleDotComZoneText));
             var zone = catalog.IncludeZone(reader);
             Assert.AreEqual("example.com", zone.Name);
 
-            reader = new MasterReader(new StringReader(exampleDotOrgZoneText));
+            reader = new PresentationReader(new StringReader(exampleDotOrgZoneText));
             zone = catalog.IncludeZone(reader);
             Assert.AreEqual("example.org", zone.Name);
         }
@@ -125,12 +125,12 @@ a._http._tcp SRV 0 5 80 mail
         {
             var catalog = new Catalog();
 
-            var reader = new MasterReader(new StringReader(exampleDotComZoneText));
+            var reader = new PresentationReader(new StringReader(exampleDotComZoneText));
             var zone = catalog.IncludeZone(reader);
             Assert.AreEqual("example.com", zone.Name);
             Assert.AreEqual(7, catalog.Count);
 
-            reader = new MasterReader(new StringReader(exampleDotOrgZoneText));
+            reader = new PresentationReader(new StringReader(exampleDotOrgZoneText));
             zone = catalog.IncludeZone(reader);
             Assert.AreEqual("example.org", zone.Name);
             Assert.AreEqual(7 + 7, catalog.Count);
@@ -146,7 +146,7 @@ a._http._tcp SRV 0 5 80 mail
         public void NamesAreCaseInsenstive()
         {
             var catalog = new Catalog();
-            var reader = new MasterReader(new StringReader(exampleDotComZoneText));
+            var reader = new PresentationReader(new StringReader(exampleDotComZoneText));
             catalog.IncludeZone(reader);
 
             Assert.IsTrue(catalog.ContainsKey("EXAMPLE.COM"));

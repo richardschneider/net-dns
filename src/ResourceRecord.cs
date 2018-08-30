@@ -15,7 +15,7 @@ namespace Makaretu.Dns
     ///   resource records. When reading, if the registry does not contain
     ///   the record, then an <see cref="UnknownRecord"/> is used.
     /// </remarks>
-    public class ResourceRecord : DnsObject, IMasterSerialiser
+    public class ResourceRecord : DnsObject, IPresentationSerialiser
     {
         /// <summary>
         ///   The default time interval that a resource record maybe cached.
@@ -290,7 +290,7 @@ namespace Makaretu.Dns
         ///   Returns the textual representation.
         /// </summary>
         /// <returns>
-        ///   The "master file format" of this resource record. 
+        ///   The presentation format of this resource record. 
         /// </returns>
         public override string ToString()
         {
@@ -364,15 +364,18 @@ namespace Makaretu.Dns
 
         /// <summary>
         ///   Create a new <see cref="ResourceRecord"/> from the
-        ///   master file format.
+        ///   specified string.
         /// </summary>
-        public ResourceRecord Read(string masterText)
+        /// <param name="text">
+        ///   The presentation format.
+        /// </param>
+        public ResourceRecord Read(string text)
         {
-            return Read(new MasterReader(new StringReader(masterText)));
+            return Read(new PresentationReader(new StringReader(text)));
         }
 
         /// <inheritdoc />
-        public ResourceRecord Read(MasterReader reader)
+        public ResourceRecord Read(PresentationReader reader)
         {
             return reader.ReadResourceRecord();
         }
@@ -387,7 +390,7 @@ namespace Makaretu.Dns
         /// <remarks>
         ///   Derived classes must implement this method.
         /// </remarks>
-        public virtual void ReadData(MasterReader reader)
+        public virtual void ReadData(PresentationReader reader)
         {
         }
 

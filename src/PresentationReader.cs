@@ -9,13 +9,13 @@ using System.Text;
 namespace Makaretu.Dns
 {
     /// <summary>
-    ///   Methods to read DNS data items encoded in the master file format.
+    ///   Methods to read DNS data items encoded in the presentation (text) format.
     /// </summary>
-    public class MasterReader
+    public class PresentationReader
     {
         static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
-        TextReader text;
+        System.IO.TextReader text;
         TimeSpan? defaultTTL = null;
         string defaultDomainName = null;
         int parenLevel = 0;
@@ -26,13 +26,13 @@ namespace Makaretu.Dns
         public int Position;
 
         /// <summary>
-        ///   Creates a new instance of the <see cref="MasterReader"/> using the
-        ///   specified <see cref="TextReader"/>.
+        ///   Creates a new instance of the <see cref="PresentationReader"/> using the
+        ///   specified <see cref="System.IO.TextReader"/>.
         /// </summary>
         /// <param name="text">
         ///   The source for data items.
         /// </param>
-        public MasterReader(TextReader text)
+        public PresentationReader(System.IO.TextReader text)
         {
             this.text = text;
         }

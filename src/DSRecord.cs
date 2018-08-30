@@ -118,7 +118,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void ReadData(MasterReader reader)
+        public override void ReadData(PresentationReader reader)
         {
             KeyTag = reader.ReadUInt16();
             Algorithm = (SecurityAlgorithm)reader.ReadByte();

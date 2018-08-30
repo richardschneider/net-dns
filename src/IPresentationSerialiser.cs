@@ -6,16 +6,20 @@ using System.Text;
 namespace Makaretu.Dns
 {
     /// <summary>
-    ///   Master file serialisation of a resource record.
+    ///   Presentation format serialisation of a resource record.
     /// </summary>
     /// <remarks>
-    ///   The "mater file format" is the text representation of a <see cref="ResourceRecord"/>.
-    ///   It is also referred to as the "presentation format".
+    ///   The text representation of a <see cref="ResourceRecord"/>.
+    ///   It is also referred to as the "master file format".
     ///   See <see href="https://tools.ietf.org/html/rfc1035">RFC 1035 - 5 Master File</see>
     ///   and <see href="https://tools.ietf.org/html/rfc3597">RFC 3597 - Handling of Unknown DNS Resource Record (RR) Types</see>
     ///   for more details.
+    ///   <para>
+    ///   The <see cref="ResourceRecord"/> adds helper methods to
+    ///   deal with a <see cref="String"/>.
+    ///   </para>
     /// </remarks>
-    public interface IMasterSerialiser
+    public interface IPresentationSerialiser
     {
 
         /// <summary>
@@ -31,7 +35,7 @@ namespace Makaretu.Dns
         ///   Reading a <see cref="ResourceRecord"/> will return a new instance that
         ///   is type specific
         /// </remarks>
-        ResourceRecord Read(MasterReader reader);
+        ResourceRecord Read(PresentationReader reader);
 
         /// <summary>
         ///  Writes the text representation of a resource record.

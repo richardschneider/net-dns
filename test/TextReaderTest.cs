@@ -9,12 +9,12 @@ namespace Makaretu.Dns
 {
 
     [TestClass]
-    public class MasterReaderTest
+    public class TextReaderTest
     {
         [TestMethod]
         public void ReadString()
         {
-            var reader = new MasterReader(new StringReader("  alpha   beta   omega"));
+            var reader = new PresentationReader(new StringReader("  alpha   beta   omega"));
             Assert.AreEqual("alpha", reader.ReadString());
             Assert.AreEqual("beta", reader.ReadString());
             Assert.AreEqual("omega", reader.ReadString());
@@ -23,7 +23,7 @@ namespace Makaretu.Dns
         [TestMethod]
         public void ReadQuotedStrings()
         {
-            var reader = new MasterReader(new StringReader("  \"a b c\"  \"x y z\""));
+            var reader = new PresentationReader(new StringReader("  \"a b c\"  \"x y z\""));
             Assert.AreEqual("a b c", reader.ReadString());
             Assert.AreEqual("x y z", reader.ReadString());
         }
@@ -31,7 +31,7 @@ namespace Makaretu.Dns
         [TestMethod]
         public void ReadEscapedStrings()
         {
-            var reader = new MasterReader(new StringReader("  alpha\\ beta   omega"));
+            var reader = new PresentationReader(new StringReader("  alpha\\ beta   omega"));
             Assert.AreEqual("alpha beta", reader.ReadString());
             Assert.AreEqual("omega", reader.ReadString());
         }
@@ -39,7 +39,7 @@ namespace Makaretu.Dns
         [TestMethod]
         public void ReadResource()
         {
-            var reader = new MasterReader(new StringReader("me A 127.0.0.1"));
+            var reader = new PresentationReader(new StringReader("me A 127.0.0.1"));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("me", resource.Name);
             Assert.AreEqual(DnsClass.IN, resource.Class);
@@ -51,7 +51,7 @@ namespace Makaretu.Dns
         [TestMethod]
         public void ReadResourceWithClassAndTTL()
         {
-            var reader = new MasterReader(new StringReader("me CH 63 A 127.0.0.1"));
+            var reader = new PresentationReader(new StringReader("me CH 63 A 127.0.0.1"));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("me", resource.Name);
             Assert.AreEqual(DnsClass.CH, resource.Class);
@@ -63,7 +63,7 @@ namespace Makaretu.Dns
         [TestMethod]
         public void ReadResourceWithUnknownClass()
         {
-            var reader = new MasterReader(new StringReader("me CLASS1234 A 127.0.0.1"));
+            var reader = new PresentationReader(new StringReader("me CLASS1234 A 127.0.0.1"));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("me", resource.Name);
             Assert.AreEqual(1234, (int)resource.Class);
@@ -74,7 +74,7 @@ namespace Makaretu.Dns
         [TestMethod]
         public void ReadResourceWithUnknownType()
         {
-            var reader = new MasterReader(new StringReader("me CH TYPE1234 \\# 0"));
+            var reader = new PresentationReader(new StringReader("me CH TYPE1234 \\# 0"));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("me", resource.Name);
             Assert.AreEqual(DnsClass.CH, resource.Class);
@@ -85,7 +85,7 @@ namespace Makaretu.Dns
         [TestMethod]
         public void ReadResourceWithComment()
         {
-            var reader = new MasterReader(new StringReader("; comment\r\nme A 127.0.0.1"));
+            var reader = new PresentationReader(new StringReader("; comment\r\nme A 127.0.0.1"));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("me", resource.Name);
             Assert.AreEqual(DnsClass.IN, resource.Class);
@@ -101,7 +101,7 @@ namespace Makaretu.Dns
 $ORIGIN emanon.org. ; no such place\r\n
 @ PTR localhost
 ";
-            var reader = new MasterReader(new StringReader(text));
+            var reader = new PresentationReader(new StringReader(text));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("emanon.org", resource.Name);
             Assert.AreEqual(DnsClass.IN, resource.Class);
@@ -117,7 +117,7 @@ $ORIGIN emanon.org. ; no such place\r\n
 $TTL 120 ; 2 minutes\r\n
 emanon.org PTR localhost
 ";
-            var reader = new MasterReader(new StringReader(text));
+            var reader = new PresentationReader(new StringReader(text));
             var resource = reader.ReadResourceRecord();
             Assert.AreEqual("emanon.org", resource.Name);
             Assert.AreEqual(DnsClass.IN, resource.Class);
@@ -133,7 +133,7 @@ emanon.org PTR localhost
 emanon.org A 127.0.0.1
            AAAA ::1
 ";
-            var reader = new MasterReader(new StringReader(text));
+            var reader = new PresentationReader(new StringReader(text));
             var a = reader.ReadResourceRecord();
             Assert.AreEqual("emanon.org", a.Name);
             Assert.AreEqual(DnsClass.IN, a.Class);
@@ -172,7 +172,7 @@ emanon.org A 127.0.0.1
  mail2         IN  A     192.0.2.4             ; IPv4 address for mail2.example.com
  mail3         IN  A     192.0.2.5             ; IPv4 address for mail3.example.com
 ";
-            var reader = new MasterReader(new StringReader(text));
+            var reader = new PresentationReader(new StringReader(text));
             var resources = new List<ResourceRecord>();
             while (true)
             {
@@ -189,19 +189,19 @@ emanon.org A 127.0.0.1
         [TestMethod]
         public void ReadResourceData()
         {
-            var reader = new MasterReader(new StringReader("\\# 0"));
+            var reader = new PresentationReader(new StringReader("\\# 0"));
             var rdata = reader.ReadResourceData();
             Assert.AreEqual(0, rdata.Length);
 
-            reader = new MasterReader(new StringReader("\\# 3 abcdef"));
+            reader = new PresentationReader(new StringReader("\\# 3 abcdef"));
             rdata = reader.ReadResourceData();
             CollectionAssert.AreEqual(new byte[] { 0xab, 0xcd, 0xef }, rdata);
 
-            reader = new MasterReader(new StringReader("\\# 3 ab cd ef"));
+            reader = new PresentationReader(new StringReader("\\# 3 ab cd ef"));
             rdata = reader.ReadResourceData();
             CollectionAssert.AreEqual(new byte[] { 0xab, 0xcd, 0xef }, rdata);
 
-            reader = new MasterReader(new StringReader("\\# 3 abcd (\r\n  ef )"));
+            reader = new PresentationReader(new StringReader("\\# 3 abcd (\r\n  ef )"));
             rdata = reader.ReadResourceData();
             CollectionAssert.AreEqual(new byte[] { 0xab, 0xcd, 0xef }, rdata);
         }
@@ -210,7 +210,7 @@ emanon.org A 127.0.0.1
         [ExpectedException(typeof(FormatException))]
         public void ReadResourceData_MissingLeadin()
         {
-            var reader = new MasterReader(new StringReader("0"));
+            var reader = new PresentationReader(new StringReader("0"));
             var _ = reader.ReadResourceData();
         }
 
@@ -218,7 +218,7 @@ emanon.org A 127.0.0.1
         [ExpectedException(typeof(FormatException))]
         public void ReadResourceData_BadHex_BadDigit()
         {
-            var reader = new MasterReader(new StringReader("\\# 3 ab cd ez"));
+            var reader = new PresentationReader(new StringReader("\\# 3 ab cd ez"));
             var _ = reader.ReadResourceData();
         }
 
@@ -226,7 +226,7 @@ emanon.org A 127.0.0.1
         [ExpectedException(typeof(FormatException))]
         public void ReadResourceData_BadHex_NotEven()
         {
-            var reader = new MasterReader(new StringReader("\\# 3 ab cd e"));
+            var reader = new PresentationReader(new StringReader("\\# 3 ab cd e"));
             var _ = reader.ReadResourceData();
         }
 
@@ -234,14 +234,14 @@ emanon.org A 127.0.0.1
         [ExpectedException(typeof(FormatException))]
         public void ReadResourceData_BadHex_TooFew()
         {
-            var reader = new MasterReader(new StringReader("\\# 3 abcd"));
+            var reader = new PresentationReader(new StringReader("\\# 3 abcd"));
             var _ = reader.ReadResourceData();
         }
 
         [TestMethod]
         public void ReadType()
         {
-            var reader = new MasterReader(new StringReader("A TYPE1 MX"));
+            var reader = new PresentationReader(new StringReader("A TYPE1 MX"));
             Assert.AreEqual(DnsType.A, reader.ReadDnsType());
             Assert.AreEqual(DnsType.A, reader.ReadDnsType());
             Assert.AreEqual(DnsType.MX, reader.ReadDnsType());
@@ -251,7 +251,7 @@ emanon.org A 127.0.0.1
         [ExpectedException(typeof(Exception), AllowDerivedTypes = true)]
         public void ReadType_BadName()
         {
-            var reader = new MasterReader(new StringReader("BADNAME"));
+            var reader = new PresentationReader(new StringReader("BADNAME"));
             reader.ReadDnsType();
         }
 
@@ -259,7 +259,7 @@ emanon.org A 127.0.0.1
         [ExpectedException(typeof(FormatException))]
         public void ReadType_BadDigit()
         {
-            var reader = new MasterReader(new StringReader("TYPEX"));
+            var reader = new PresentationReader(new StringReader("TYPEX"));
             reader.ReadDnsType();
         }
 
@@ -267,7 +267,7 @@ emanon.org A 127.0.0.1
         public void ReadMultipleStrings()
         {
             var expected = new List<string> { "abc", "def", "ghi" };
-            var reader = new MasterReader(new StringReader("abc def (\r\nghi)\r\n"));
+            var reader = new PresentationReader(new StringReader("abc def (\r\nghi)\r\n"));
             var actual = new List<string>();
             while (!reader.IsEndOfLine())
             {
@@ -280,7 +280,7 @@ emanon.org A 127.0.0.1
         public void ReadMultipleStrings2()
         {
             var expected = new List<string> { "abc", "def", "ghi", "jkl"};
-            var reader = new MasterReader(new StringReader("abc def (\r\nghi) jkl   \r\n"));
+            var reader = new PresentationReader(new StringReader("abc def (\r\nghi) jkl   \r\n"));
             var actual = new List<string>();
             while (!reader.IsEndOfLine())
             {
@@ -294,13 +294,13 @@ emanon.org A 127.0.0.1
         {
             var expected = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
 
-            var reader = new MasterReader(new StringReader("AAECAwQFBgcICQoLDA0ODw=="));
+            var reader = new PresentationReader(new StringReader("AAECAwQFBgcICQoLDA0ODw=="));
             CollectionAssert.AreEqual(expected, reader.ReadBase64String());
 
-            reader = new MasterReader(new StringReader("AAECAwQFBg  cICQoLDA0ODw=="));
+            reader = new PresentationReader(new StringReader("AAECAwQFBg  cICQoLDA0ODw=="));
             CollectionAssert.AreEqual(expected, reader.ReadBase64String());
 
-            reader = new MasterReader(new StringReader("AAECAwQFBg  (\r\n  cICQo\r\n  LDA0ODw\r\n== )"));
+            reader = new PresentationReader(new StringReader("AAECAwQFBg  (\r\n  cICQo\r\n  LDA0ODw\r\n== )"));
             CollectionAssert.AreEqual(expected, reader.ReadBase64String());
         }
 
@@ -309,7 +309,7 @@ emanon.org A 127.0.0.1
         {
             uint expected = 1095292800;
 
-            var reader = new MasterReader(new StringReader("1095292800 20040916000000"));
+            var reader = new PresentationReader(new StringReader("1095292800 20040916000000"));
             Assert.AreEqual(expected, reader.ReadUnixSeconds32());
             Assert.AreEqual(expected, reader.ReadUnixSeconds32());
         }

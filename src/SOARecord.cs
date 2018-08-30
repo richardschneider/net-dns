@@ -93,7 +93,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void ReadData(MasterReader reader)
+        public override void ReadData(PresentationReader reader)
         {
             PrimaryName = reader.ReadDomainName();
             Mailbox = reader.ReadDomainName();

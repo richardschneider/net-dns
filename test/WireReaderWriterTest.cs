@@ -9,7 +9,7 @@ namespace Makaretu.Dns
 {
 
     [TestClass]
-    public class ReaderWriterTest
+    public class WireReaderWriterTest
     {
         [TestMethod]
         public void Roundtrip()

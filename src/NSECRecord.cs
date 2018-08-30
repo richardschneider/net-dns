@@ -56,7 +56,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void ReadData(MasterReader reader)
+        public override void ReadData(PresentationReader reader)
         {
             NextOwnerName = reader.ReadDomainName();
             while (!reader.IsEndOfLine())

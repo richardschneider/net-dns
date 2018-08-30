@@ -43,7 +43,7 @@ namespace Makaretu.Dns.Resolving
         /// <remarks>
         ///   All included nodes are marked as <see cref="Node.Authoritative"/>.
         /// </remarks>
-        public Node IncludeZone(MasterReader reader)
+        public Node IncludeZone(PresentationReader reader)
         {
             // Read the resources.
             var resources = new List<ResourceRecord>();
@@ -148,7 +148,7 @@ namespace Makaretu.Dns.Resolving
             var assembly = typeof(Catalog).GetTypeInfo().Assembly;
             using (var hints = assembly.GetManifestResourceStream("Makaretu.Dns.Resolving.RootHints"))
             {
-                var reader = new MasterReader(new StreamReader(hints));
+                var reader = new PresentationReader(new StreamReader(hints));
                 ResourceRecord r;
                 while (null != (r = reader.ReadResourceRecord()))
                 {

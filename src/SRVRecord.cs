@@ -66,7 +66,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void ReadData(MasterReader reader)
+        public override void ReadData(PresentationReader reader)
         {
             Priority = reader.ReadUInt16();
             Weight = reader.ReadUInt16();

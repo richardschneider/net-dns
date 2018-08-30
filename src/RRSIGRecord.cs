@@ -128,7 +128,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void ReadData(MasterReader reader)
+        public override void ReadData(PresentationReader reader)
         {
             TypeCovered = reader.ReadDnsType();
             Algorithm = (SecurityAlgorithm)reader.ReadByte();

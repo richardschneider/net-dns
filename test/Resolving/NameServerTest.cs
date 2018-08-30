@@ -17,8 +17,8 @@ namespace Makaretu.Dns.Resolving
 
         public NameServerTest()
         {
-            dotcom.IncludeZone(new MasterReader(new StringReader(CatalogTest.exampleDotComZoneText)));
-            dotorg.IncludeZone(new MasterReader(new StringReader(CatalogTest.exampleDotOrgZoneText)));
+            dotcom.IncludeZone(new PresentationReader(new StringReader(CatalogTest.exampleDotComZoneText)));
+            dotorg.IncludeZone(new PresentationReader(new StringReader(CatalogTest.exampleDotOrgZoneText)));
         }
 
         [TestMethod]
