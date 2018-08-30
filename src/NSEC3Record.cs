@@ -10,6 +10,9 @@ namespace Makaretu.Dns
     /// <summary>
     ///   Authenticated denial of existence for DNS Resource Record Sets.
     /// </summary>
+    /// <remarks>
+    ///   Defined by <see href="https://tools.ietf.org/html/rfc5155#section-3">RFC 5155 - DNS Security (DNSSEC) Hashed Authenticated Denial of Existence</see>.
+    /// </remarks>
     public class NSEC3Record : ResourceRecord
     {
         /// <summary>
@@ -29,9 +32,9 @@ namespace Makaretu.Dns
         public DigestType HashAlgorithm { get; set; }
 
         /// <summary>
-        ///  TODO
+        ///  Indicates different processing.
         /// </summary>
-        public byte Flags { get; set; }
+        public NSEC3Flags Flags { get; set; }
 
         /// <summary>
         ///   Number of times to perform the <see cref="HashAlgorithm"/>.
@@ -65,7 +68,7 @@ namespace Makaretu.Dns
             var end = reader.Position + length;
 
             HashAlgorithm = (DigestType)reader.ReadByte();
-            Flags = reader.ReadByte();
+            Flags = (NSEC3Flags)reader.ReadByte();
             Iterations = reader.ReadUInt16();
             Salt = reader.ReadByteLengthPrefixedBytes();
             NextHashedOwnerName = reader.ReadByteLengthPrefixedBytes();
@@ -80,7 +83,7 @@ namespace Makaretu.Dns
         public override void WriteData(DnsWriter writer)
         {
             writer.WriteByte((byte)HashAlgorithm);
-            writer.WriteByte(Flags);
+            writer.WriteByte((byte)Flags);
             writer.WriteUInt16(Iterations);
             writer.WriteByteLengthPrefixedBytes(Salt);
             writer.WriteByteLengthPrefixedBytes(NextHashedOwnerName);
@@ -91,7 +94,7 @@ namespace Makaretu.Dns
         public override void ReadData(MasterReader reader)
         {
             HashAlgorithm = (DigestType)reader.ReadByte();
-            Flags = reader.ReadByte();
+            Flags = (NSEC3Flags)reader.ReadByte();
             Iterations = reader.ReadUInt16();
 
             var salt = reader.ReadString();

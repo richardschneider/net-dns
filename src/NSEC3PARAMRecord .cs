@@ -10,6 +10,9 @@ namespace Makaretu.Dns
     /// <summary>
     ///   Parameters needed by authoritative servers to calculate hashed owner names.
     /// </summary>
+    /// <remarks>
+    ///   Defined by <see href="https://tools.ietf.org/html/rfc5155#section-4">RFC 5155 - DNS Security (DNSSEC) Hashed Authenticated Denial of Existence</see>.
+    /// </remarks>
     public class NSEC3PARAMRecord : ResourceRecord
     {
         /// <summary>
@@ -29,7 +32,7 @@ namespace Makaretu.Dns
         public DigestType HashAlgorithm { get; set; }
 
         /// <summary>
-        ///  TODO
+        ///   Not used, must be zero.
         /// </summary>
         public byte Flags { get; set; }
 
