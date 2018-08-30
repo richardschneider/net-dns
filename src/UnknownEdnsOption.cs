@@ -21,13 +21,13 @@ namespace Makaretu.Dns
         public byte[] Data { get; set; }
 
         /// <inheritdoc />
-        public override void ReadData(DnsReader reader, int length)
+        public override void ReadData(WireReader reader, int length)
         {
             Data = reader.ReadBytes(length);
         }
 
         /// <inheritdoc />
-        public override void WriteData(DnsWriter writer)
+        public override void WriteData(WireWriter writer)
         {
             writer.WriteBytes(Data);
         }

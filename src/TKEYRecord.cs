@@ -86,7 +86,7 @@ namespace Makaretu.Dns
         public byte[] OtherData { get; set; }
 
         /// <inheritdoc />
-        public override void ReadData(DnsReader reader, int length)
+        public override void ReadData(WireReader reader, int length)
         {
             Algorithm = reader.ReadDomainName();
             Inception = reader.ReadUInt32();
@@ -98,7 +98,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(DnsWriter writer)
+        public override void WriteData(WireWriter writer)
         {
             writer.WriteDomainName(Algorithm);
             writer.WriteUInt32(Inception);

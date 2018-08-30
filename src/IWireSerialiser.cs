@@ -7,7 +7,7 @@ namespace Makaretu.Dns
     /// <summary>
     ///   Wire format serialisation of a DNS object.
     /// </summary>
-    public interface IDnsSerialiser
+    public interface IWireSerialiser
     {
         /// <summary>
         ///   Reads the DNS object that is encoded in the wire format.
@@ -23,7 +23,7 @@ namespace Makaretu.Dns
         ///   is type specific unless the <see cref="ResourceRecord.GetDataLength">RDLENGTH</see>
         ///   is zero.
         /// </remarks>
-        IDnsSerialiser Read(DnsReader reader);
+        IWireSerialiser Read(WireReader reader);
 
         /// <summary>
         ///   Writes the DNS object encoded in the wire format.
@@ -31,6 +31,6 @@ namespace Makaretu.Dns
         /// <param name="writer">
         ///   The destination of the DNS object.
         /// </param>
-        void Write(DnsWriter writer);
+        void Write(WireWriter writer);
     }
 }

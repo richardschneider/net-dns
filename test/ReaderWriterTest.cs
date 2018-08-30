@@ -18,7 +18,7 @@ namespace Makaretu.Dns
             var someDate = new DateTime(1997, 1, 21, 3, 4, 5, DateTimeKind.Utc);
             
             var ms = new MemoryStream();
-            var writer = new DnsWriter(ms);
+            var writer = new WireWriter(ms);
             writer.WriteDomainName("emanon.org");
             writer.WriteString("alpha");
             writer.WriteTimeSpan32(TimeSpan.FromHours(3));
@@ -33,7 +33,7 @@ namespace Makaretu.Dns
             writer.WriteDateTime48(someDate);
 
             ms.Position = 0;
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             Assert.AreEqual("emanon.org", reader.ReadDomainName());
             Assert.AreEqual("alpha", reader.ReadString());
             Assert.AreEqual(TimeSpan.FromHours(3), reader.ReadTimeSpan32());
@@ -52,7 +52,7 @@ namespace Makaretu.Dns
         public void BufferOverflow_Byte()
         {
             var ms = new MemoryStream(new byte[0]);
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             ExceptionAssert.Throws<EndOfStreamException>(() => reader.ReadByte());
         }
 
@@ -60,7 +60,7 @@ namespace Makaretu.Dns
         public void BufferOverflow_Bytes()
         {
             var ms = new MemoryStream(new byte[] { 1, 2 });
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             ExceptionAssert.Throws<EndOfStreamException>(() => reader.ReadBytes(3));
         }
 
@@ -68,7 +68,7 @@ namespace Makaretu.Dns
         public void BufferOverflow_DomainName()
         {
             var ms = new MemoryStream(new byte[] { 1, (byte)'a' });
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             ExceptionAssert.Throws<EndOfStreamException>(() => reader.ReadDomainName());
         }
 
@@ -76,7 +76,7 @@ namespace Makaretu.Dns
         public void BufferOverflow_String()
         {
             var ms = new MemoryStream(new byte[] { 10, 1 });
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             ExceptionAssert.Throws<EndOfStreamException>(() => reader.ReadString());
         }
 
@@ -84,7 +84,7 @@ namespace Makaretu.Dns
         public void BytePrefixedArray_TooBig()
         {
             var bytes = new byte[byte.MaxValue + 1];
-            var writer = new DnsWriter(new MemoryStream());
+            var writer = new WireWriter(new MemoryStream());
             ExceptionAssert.Throws<ArgumentException>(() => writer.WriteByteLengthPrefixedBytes(bytes));
         }
 
@@ -92,7 +92,7 @@ namespace Makaretu.Dns
         public void LengthPrefixedScope()
         {
             var ms = new MemoryStream();
-            var writer = new DnsWriter(ms);
+            var writer = new WireWriter(ms);
             writer.WriteString("abc");
             writer.PushLengthPrefixedScope();
             writer.WriteDomainName("a");
@@ -100,7 +100,7 @@ namespace Makaretu.Dns
             writer.PopLengthPrefixedScope();
 
             ms.Position = 0;
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             Assert.AreEqual("abc", reader.ReadString());
             Assert.AreEqual(5, reader.ReadUInt16());
             Assert.AreEqual("a", reader.ReadDomainName());
@@ -111,12 +111,12 @@ namespace Makaretu.Dns
         public void EmptyDomainName()
         {
             var ms = new MemoryStream();
-            var writer = new DnsWriter(ms);
+            var writer = new WireWriter(ms);
             writer.WriteDomainName("");
             writer.WriteString("abc");
 
             ms.Position = 0;
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             Assert.AreEqual("", reader.ReadDomainName());
             Assert.AreEqual("abc", reader.ReadString());
         }
@@ -125,13 +125,13 @@ namespace Makaretu.Dns
         public void CanonicalDomainName()
         {
             var ms = new MemoryStream();
-            var writer = new DnsWriter(ms) { CanonicalForm = true };
+            var writer = new WireWriter(ms) { CanonicalForm = true };
             writer.WriteDomainName("FOO");
             writer.WriteDomainName("FOO");
             Assert.AreEqual(5 * 2, writer.Position);
 
             ms.Position = 0;
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             Assert.AreEqual("foo", reader.ReadDomainName());
             Assert.AreEqual("foo", reader.ReadDomainName());
         }
@@ -140,12 +140,12 @@ namespace Makaretu.Dns
         public void NullDomainName()
         {
             var ms = new MemoryStream();
-            var writer = new DnsWriter(ms);
+            var writer = new WireWriter(ms);
             writer.WriteDomainName(null);
             writer.WriteString("abc");
 
             ms.Position = 0;
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             Assert.AreEqual("", reader.ReadDomainName());
             Assert.AreEqual("abc", reader.ReadString());
         }
@@ -163,14 +163,14 @@ namespace Makaretu.Dns
                 0x00, 0x00, 0x00, 0x00, 0x20
             };
             var ms = new MemoryStream(wire, false);
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             var first = new ushort[] { 1, 15, 46, 47 };
             var second = new ushort[] { 1234 };
             CollectionAssert.AreEqual(first, reader.ReadBitmap());
             CollectionAssert.AreEqual(second, reader.ReadBitmap());
 
             ms = new MemoryStream();
-            var writer = new DnsWriter(ms);
+            var writer = new WireWriter(ms);
             writer.WriteBitmap(new ushort[] { 1, 15, 46, 47, 1234 });
             CollectionAssert.AreEqual(wire, ms.ToArray());
         }
@@ -180,7 +180,7 @@ namespace Makaretu.Dns
         public void Uint48TooBig()
         {
             var ms = new MemoryStream();
-            var writer = new DnsWriter(ms);
+            var writer = new WireWriter(ms);
             writer.WriteUInt48(0X1FFFFFFFFFFFFul);
         }
 
@@ -190,7 +190,7 @@ namespace Makaretu.Dns
             // From https://tools.ietf.org/html/rfc2845 section 3.3
             var expected = new DateTime(1997, 1, 21, 0, 0, 0, DateTimeKind.Utc);
             var ms = new MemoryStream(new byte[] { 0x00, 0x00, 0x32, 0xe4, 0x07, 0x00 });
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             Assert.AreEqual(expected, reader.ReadDateTime48());
         }
     }

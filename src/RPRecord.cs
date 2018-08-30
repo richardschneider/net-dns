@@ -40,7 +40,7 @@ namespace Makaretu.Dns
         public string TextName { get; set; } = "";
 
         /// <inheritdoc />
-        public override void ReadData(DnsReader reader, int length)
+        public override void ReadData(WireReader reader, int length)
         {
             Mailbox = reader.ReadDomainName();
             TextName = reader.ReadDomainName();
@@ -54,7 +54,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(DnsWriter writer)
+        public override void WriteData(WireWriter writer)
         {
             writer.WriteDomainName(Mailbox);
             writer.WriteDomainName(TextName);

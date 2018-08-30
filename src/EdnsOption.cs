@@ -45,7 +45,7 @@ namespace Makaretu.Dns
         /// <remarks>
         ///   Derived classes must implement this method.
         /// </remarks>
-        public abstract void ReadData(DnsReader reader, int length);
+        public abstract void ReadData(WireReader reader, int length);
 
         /// <summary>
         ///   Write the data that is specific to the resource record <see cref="EdnsOption.Type"/>.
@@ -56,7 +56,7 @@ namespace Makaretu.Dns
         /// <remarks>
         ///   Derived classes must implement this method.
         /// </remarks>
-        public abstract void WriteData(DnsWriter writer);
+        public abstract void WriteData(WireWriter writer);
 
     }
 }

@@ -55,7 +55,7 @@ namespace Makaretu.Dns
             using (var ms = new MemoryStream())
             using (var hasher = DigestRegistry.Create(key.Algorithm))
             {
-                var writer = new DnsWriter(ms) { CanonicalForm = true };
+                var writer = new WireWriter(ms) { CanonicalForm = true };
                 writer.WriteDomainName(key.Name);
                 key.WriteData(writer);
                 ms.Position = 0;
@@ -98,7 +98,7 @@ namespace Makaretu.Dns
         public byte[] Digest { get; set; }
 
         /// <inheritdoc />
-        public override void ReadData(DnsReader reader, int length)
+        public override void ReadData(WireReader reader, int length)
         {
             var end = reader.Position + length;
 
@@ -109,7 +109,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(DnsWriter writer)
+        public override void WriteData(WireWriter writer)
         {
             writer.WriteUInt16(KeyTag);
             writer.WriteByte((byte)Algorithm);

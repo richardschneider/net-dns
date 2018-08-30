@@ -155,7 +155,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override IDnsSerialiser Read(DnsReader reader)
+        public override IWireSerialiser Read(WireReader reader)
         {
             Id = reader.ReadUInt16();
             var flags = reader.ReadUInt16();
@@ -191,7 +191,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void Write(DnsWriter writer)
+        public override void Write(WireWriter writer)
         {
             writer.WriteUInt16(Id);
             var flags =

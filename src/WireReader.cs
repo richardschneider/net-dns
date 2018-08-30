@@ -7,9 +7,9 @@ using System.Text;
 namespace Makaretu.Dns
 {
     /// <summary>
-    ///   Methods to read DNS data items.
+    ///   Methods to read DNS wire formatted data items.
     /// </summary>
-    public class DnsReader
+    public class WireReader
     {
         static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
@@ -22,13 +22,13 @@ namespace Makaretu.Dns
         public int Position;
 
         /// <summary>
-        ///   Creates a new instance of the <see cref="DnsReader"/> on the
+        ///   Creates a new instance of the <see cref="WireReader"/> on the
         ///   specified <see cref="Stream"/>.
         /// </summary>
         /// <param name="stream">
         ///   The source for data items.
         /// </param>
-        public DnsReader(Stream stream)
+        public WireReader(Stream stream)
         {
             this.stream = stream;
         }

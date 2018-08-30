@@ -116,7 +116,7 @@ namespace Makaretu.Dns
         {
             using (var ms = new MemoryStream())
             {
-                var writer = new DnsWriter(ms);
+                var writer = new WireWriter(ms);
                 this.WriteData(writer);
                 return (int) ms.Length;
             }
@@ -135,14 +135,14 @@ namespace Makaretu.Dns
         {
             using (var ms = new MemoryStream())
             {
-                var writer = new DnsWriter(ms);
+                var writer = new WireWriter(ms);
                 this.WriteData(writer);
                 return ms.ToArray();
             }
         }
 
         /// <inheritdoc />
-        public override IDnsSerialiser Read(DnsReader reader)
+        public override IWireSerialiser Read(WireReader reader)
         {
             // Read standard properties of a resource record.
             Name = reader.ReadDomainName();
@@ -182,12 +182,12 @@ namespace Makaretu.Dns
         /// <remarks>
         ///   Derived classes must implement this method.
         /// </remarks>
-        public virtual void ReadData(DnsReader reader, int length)
+        public virtual void ReadData(WireReader reader, int length)
         {
         }
 
         /// <inheritdoc />
-        public override void Write(DnsWriter writer)
+        public override void Write(WireWriter writer)
         {
             writer.WriteDomainName(Name);
             writer.WriteUInt16((ushort)Type);
@@ -208,7 +208,7 @@ namespace Makaretu.Dns
         /// <remarks>
         ///   Derived classes must implement this method.
         /// </remarks>
-        public virtual void WriteData(DnsWriter writer)
+        public virtual void WriteData(WireWriter writer)
         {
         }
 

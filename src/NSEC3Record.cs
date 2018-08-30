@@ -63,7 +63,7 @@ namespace Makaretu.Dns
         public List<DnsType> Types { get; set; } = new List<DnsType>();
 
         /// <inheritdoc />
-        public override void ReadData(DnsReader reader, int length)
+        public override void ReadData(WireReader reader, int length)
         {
             var end = reader.Position + length;
 
@@ -80,7 +80,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(DnsWriter writer)
+        public override void WriteData(WireWriter writer)
         {
             writer.WriteByte((byte)HashAlgorithm);
             writer.WriteByte((byte)Flags);

@@ -34,7 +34,7 @@ namespace Makaretu.Dns
         public TimeSpan? Timeout { get; set; }
 
         /// <inheritdoc />
-        public override void ReadData(DnsReader reader, int length)
+        public override void ReadData(WireReader reader, int length)
         {
             if (length == 0) {
                 Timeout = null;
@@ -44,7 +44,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(DnsWriter writer)
+        public override void WriteData(WireWriter writer)
         {
             if (Timeout.HasValue)
             {

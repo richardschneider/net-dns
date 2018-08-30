@@ -15,7 +15,7 @@ namespace Makaretu.Dns
         public void Writing()
         {
             var ms = new MemoryStream();
-            var writer = new DnsWriter(ms);
+            var writer = new WireWriter(ms);
             writer.WriteDomainName("a");
             writer.WriteDomainName("b");
             writer.WriteDomainName("b");
@@ -33,7 +33,7 @@ namespace Makaretu.Dns
         public void Writing_Labels()
         {
             var ms = new MemoryStream();
-            var writer = new DnsWriter(ms);
+            var writer = new WireWriter(ms);
             writer.WriteDomainName("a.b.c");
             writer.WriteDomainName("a.b.c");
             writer.WriteDomainName("b.c");
@@ -55,14 +55,14 @@ namespace Makaretu.Dns
         public void Writing_Past_MaxPointer()
         {
             var ms = new MemoryStream();
-            var writer = new DnsWriter(ms);
+            var writer = new WireWriter(ms);
             writer.WriteBytes(new byte[0x4000]);
             writer.WriteDomainName("a");
             writer.WriteDomainName("b");
             writer.WriteDomainName("b");
 
             ms.Position = 0;
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             reader.ReadBytes(0x4000);
             Assert.AreEqual("a", reader.ReadDomainName());
             Assert.AreEqual("b", reader.ReadDomainName());
@@ -81,7 +81,7 @@ namespace Makaretu.Dns
                 0x01, (byte)'x', 0xC0, 0x02,
             };
             var ms = new MemoryStream(bytes);
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             Assert.AreEqual("a.b.c", reader.ReadDomainName());
             Assert.AreEqual("a.b.c", reader.ReadDomainName());
             Assert.AreEqual("b.c", reader.ReadDomainName());
@@ -99,7 +99,7 @@ namespace Makaretu.Dns
                 0XC0, 3
             };
             var ms = new MemoryStream(bytes);
-            var reader = new DnsReader(ms);
+            var reader = new WireReader(ms);
             Assert.AreEqual("a", reader.ReadDomainName());
             Assert.AreEqual("b", reader.ReadDomainName());
             Assert.AreEqual("b", reader.ReadDomainName());

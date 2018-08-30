@@ -41,7 +41,7 @@ namespace Makaretu.Dns
 
 
         /// <inheritdoc />
-        public override void ReadData(DnsReader reader, int length)
+        public override void ReadData(WireReader reader, int length)
         {
             Subtype = reader.ReadUInt16();
             Target = reader.ReadDomainName();
@@ -55,7 +55,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(DnsWriter writer)
+        public override void WriteData(WireWriter writer)
         {
             writer.WriteUInt16(Subtype);
             writer.WriteDomainName(Target);

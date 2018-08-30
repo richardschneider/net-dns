@@ -8,7 +8,11 @@ namespace Makaretu.Dns
     /// <summary>
     ///   Base class for all DNS objects.
     /// </summary>
-    public abstract class DnsObject : IDnsSerialiser
+    /// <remarks>
+    ///   Provides helper methods for <see cref="IWireSerialiser">wire serialisation</see>,
+    ///   cloning and caching.
+    /// </remarks>
+    public abstract class DnsObject : IWireSerialiser
 #if !NETSTANDARD14
         , ICloneable
 #endif
@@ -32,7 +36,7 @@ namespace Makaretu.Dns
         /// </returns>
         public int Length()
         {
-            var writer = new DnsWriter(Stream.Null);
+            var writer = new WireWriter(Stream.Null);
             Write(writer);
 
             return writer.Position;
@@ -82,7 +86,7 @@ namespace Makaretu.Dns
         /// <param name="buffer">
         ///   The source for the DNS object.
         /// </param>
-        public IDnsSerialiser Read(byte[] buffer)
+        public IWireSerialiser Read(byte[] buffer)
         {
             return Read(buffer, 0, buffer.Length);
         }
@@ -99,11 +103,11 @@ namespace Makaretu.Dns
         /// <param name="count">
         ///   The number of bytes in the <paramref name="buffer"/>.
         /// </param>
-        public IDnsSerialiser Read(byte[] buffer, int offset, int count)
+        public IWireSerialiser Read(byte[] buffer, int offset, int count)
         {
             using (var ms = new MemoryStream(buffer, offset, count, false))
             {
-                return Read(new DnsReader(ms));
+                return Read(new WireReader(ms));
             }
         }
 
@@ -113,13 +117,13 @@ namespace Makaretu.Dns
         /// <param name="stream">
         ///   The source for the DNS object.
         /// </param>
-        public IDnsSerialiser Read(Stream stream)
+        public IWireSerialiser Read(Stream stream)
         {
-            return Read(new DnsReader(stream));
+            return Read(new WireReader(stream));
         }
 
         /// <inheritdoc />
-        public abstract IDnsSerialiser Read(DnsReader reader);
+        public abstract IWireSerialiser Read(WireReader reader);
 
         /// <summary>
         ///   Writes the DNS object to a byte array.
@@ -144,11 +148,11 @@ namespace Makaretu.Dns
         /// </param>
         public void Write(Stream stream)
         {
-            Write(new DnsWriter(stream));
+            Write(new WireWriter(stream));
         }
 
         /// <inheritdoc />
-        public abstract void Write(DnsWriter writer);
+        public abstract void Write(WireWriter writer);
 
         /// <summary>
         ///   Determines if the two domain names are equal.

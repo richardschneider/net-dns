@@ -98,7 +98,7 @@ namespace Makaretu.Dns
         public byte[] Signature { get; set; }
 
         /// <inheritdoc />
-        public override void ReadData(DnsReader reader, int length)
+        public override void ReadData(WireReader reader, int length)
         {
             var end = reader.Position + length;
 
@@ -114,7 +114,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(DnsWriter writer)
+        public override void WriteData(WireWriter writer)
         {
             writer.WriteUInt16((ushort)TypeCovered);
             writer.WriteByte((byte)Algorithm);

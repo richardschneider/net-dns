@@ -36,7 +36,7 @@ namespace Makaretu.Dns
         public DnsClass Class { get; set; } = DnsClass.IN;
 
         /// <inheritdoc />
-        public override IDnsSerialiser Read(DnsReader reader)
+        public override IWireSerialiser Read(WireReader reader)
         {
             Name = reader.ReadDomainName();
             Type = (DnsType)reader.ReadUInt16();
@@ -46,7 +46,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void Write(DnsWriter writer)
+        public override void Write(WireWriter writer)
         {
             writer.WriteDomainName(Name);
             writer.WriteUInt16((ushort)Type);

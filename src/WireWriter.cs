@@ -9,9 +9,9 @@ using System.Collections;
 namespace Makaretu.Dns
 {
     /// <summary>
-    ///   Methods to write DNS data items.
+    ///   Methods to write DNS wire formatted data items.
     /// </summary>
-    public class DnsWriter
+    public class WireWriter
     {
         const int maxPointer = 0x3FFF;
         const ulong uint48MaxValue = 0XFFFFFFFFFFFFul;
@@ -28,13 +28,13 @@ namespace Makaretu.Dns
         public int Position;
 
         /// <summary>
-        ///   Creates a new instance of the <see cref="DnsWriter"/> on the
+        ///   Creates a new instance of the <see cref="WireWriter"/> on the
         ///   specified <see cref="Stream"/>.
         /// </summary>
         /// <param name="stream">
         ///   The destination for data items.
         /// </param>
-        public DnsWriter(Stream stream)
+        public WireWriter(Stream stream)
         {
             this.stream = stream;
         }

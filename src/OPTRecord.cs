@@ -136,7 +136,7 @@ namespace Makaretu.Dns
         public List<EdnsOption> Options { get; set; } = new List<EdnsOption>();
 
         /// <inheritdoc />
-        public override void ReadData(DnsReader reader, int length)
+        public override void ReadData(WireReader reader, int length)
         {
             var end = reader.Position + length;
             while (reader.Position < end)
@@ -159,7 +159,7 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(DnsWriter writer)
+        public override void WriteData(WireWriter writer)
         {
             foreach (var option in Options)
             {
