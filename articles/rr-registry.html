@@ -69,12 +69,14 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="registry">Registry</h1>
 
-<p>The <a class="xref" href="../api/Makaretu.Dns.ResourceRegistry.html">resource registry</a> contains the known resource records. </p>
+<p>The <a href="xref:Makaretu.Dns.ResourceRegistry">resource registry</a> contains the known resource records. </p>
 <h2 id="creating">Creating</h2>
-<p>The <a class="xref" href="../api/Makaretu.Dns.ResourceRegistry.html#Makaretu_Dns_ResourceRegistry_Create_">Create</a> method creates a record with the specified <a class="xref" href="../api/Makaretu.Dns.DnsType.html">DnsType</a>.</p>
+<p>The <a href="xref:Makaretu.Dns.ResourceRegistry.Create*">Create</a> method creates a 
+new instance of a <a href="xref:Makaretu.Dns.ResourceRecord">resource record</a> with the 
+specified <a href="xref:Makaretu.Dns.DnsType">DnsType</a>.</p>
 <pre><code class="lang-csharp">var rr = ResourceRegistry.Create(DnsType.NS);
 </code></pre><h2 id="registering">Registering</h2>
-<p>The <a class="xref" href="../api/Makaretu.Dns.ResourceRegistry.html#Makaretu_Dns_ResourceRegistry_Register_">Register</a> method adds a new resource record type.</p>
+<p>The <a href="xref:Makaretu.Dns.ResourceRegistry.Register*">Register</a> method adds a new resource record type.</p>
 <pre><code class="lang-csharp">public class XRecord : ResourceRecord
 {
     public XRecord() : base()

@@ -4,852 +4,105 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.AAAARecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.AAAARecord.html",
-          "hash": "ocTej6zgkvZFb6rN0vXJSQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.AFSDBRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.AFSDBRecord.html",
-          "hash": "347hIcR4i+78jXTRJXmh4g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.ARecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.ARecord.html",
-          "hash": "zOyVdg0DCO4+ZTm6ghZ6NQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.AddressRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.AddressRecord.html",
-          "hash": "TfCC+4nMwYHuyoXCi25ejg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.CNAMERecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.CNAMERecord.html",
-          "hash": "J8EdGxDdnVZ+k9OCWpMMBA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.DNAMERecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.DNAMERecord.html",
-          "hash": "xLkAk+6MNGfBaKi8U++57Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.DNSKEYFlags.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.DNSKEYFlags.html",
-          "hash": "gtKxgLw4DGzbE/5dWCAH/A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.DNSKEYRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.DNSKEYRecord.html",
-          "hash": "n/S3UY63JoCyt0SnqbrUYg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.DSRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.DSRecord.html",
-          "hash": "eeJonOBuBmkTXE1ZOxd4zw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.DigestRegistry.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.DigestRegistry.html",
-          "hash": "tKHg6ClLYoDLOib+VzGe6g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.DigestType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.DigestType.html",
-          "hash": "4swqhoTGF1lMyGYJqHoX4Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.DnsClass.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.DnsClass.html",
-          "hash": "V8003L3AetoADZnEaXUI4w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.DnsObject.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.DnsObject.html",
-          "hash": "RjZJOs+CaSkWeL0Lr6sTqg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.DnsReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.DnsReader.html",
-          "hash": "b1asVV08pnvzsI6/h2Opxw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.DnsType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.DnsType.html",
-          "hash": "Jp46sUIPha5b+Qyw0dQE7A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.DnsWriter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.DnsWriter.html",
-          "hash": "DYUgJilk75KSiR2g0OJ26Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.EdnsKeepaliveOption.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.EdnsKeepaliveOption.html",
-          "hash": "VeIPPl2crASf6u2TnbKPWQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.EdnsNSIDOption.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.EdnsNSIDOption.html",
-          "hash": "RncFzZcXB/tVJzV2Ldd9bg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.EdnsOption.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.EdnsOption.html",
-          "hash": "sAU0ggTF5GIKmkOTaSnNOA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.EdnsOptionRegistry.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.EdnsOptionRegistry.html",
-          "hash": "fhtljjoWybhLNp6PLaLtoA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.EdnsOptionType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.EdnsOptionType.html",
-          "hash": "CVSRKq3atEq0IKeqHov+UQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.EdnsPaddingOption.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.EdnsPaddingOption.html",
-          "hash": "jItBgAaeQUDEzBWLbsM+GA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.HINFORecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.HINFORecord.html",
-          "hash": "fo6EZKv/OQDKXBGP+Fl1cw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.IDnsSerialiser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.IDnsSerialiser.html",
-          "hash": "Z24k8d9bvu/cCfRQoOhRgw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.IMasterSerialiser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.IMasterSerialiser.html",
-          "hash": "kt3A2dHDVxuQSU6YlDjAvA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.IResolver.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.IResolver.html",
-          "hash": "LPnoE9rUDT7dliSRA5e/sQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.KeyExchangeMode.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.KeyExchangeMode.html",
-          "hash": "IH1H2Vc3rN41fdv4Y5f95A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.MXRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.MXRecord.html",
-          "hash": "HmJ2wDKwXrdFH/V1PQdmWg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.MasterReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.MasterReader.html",
-          "hash": "pgFbT0S0Nh86PyRncYsChA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.Message.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.Message.html",
-          "hash": "5bEj01Efh81wtABOgaN0Gw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.MessageOperation.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.MessageOperation.html",
-          "hash": "s6Gmb2smQKhR7q9KVyOftQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.MessageStatus.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.MessageStatus.html",
-          "hash": "eyCmgxcV/AlAZrvf7Ur4Lg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.NSEC3PARAMRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.NSEC3PARAMRecord.html",
-          "hash": "Ii8FUlYQyQqTBkVJBRECdA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.NSEC3Record.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.NSEC3Record.html",
-          "hash": "EDwVZU/RoC0IdJi2PgRdTA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.NSECRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.NSECRecord.html",
-          "hash": "lbHvgchbrHPut7FtIbmgIw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.NSRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.NSRecord.html",
-          "hash": "yRoftSV+SrLiaGh/TNJsZQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.NULLRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.NULLRecord.html",
-          "hash": "dDqQH4R/OektnD0qx0TLQQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.OPTRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.OPTRecord.html",
-          "hash": "XH4D+JVCJ/Wx9ufJ2t2nEA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.PTRRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.PTRRecord.html",
-          "hash": "mJyycNPhf/+6oeVaDJALPg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.Question.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.Question.html",
-          "hash": "fLX0Uyrly6+OnkqZXb86mg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.RPRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.RPRecord.html",
-          "hash": "tcHNyfmlIf26/STAJoQ3sw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.RRSIGRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.RRSIGRecord.html",
-          "hash": "T4IxSrhfvUfDJIe8wj2EBQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.Resolving.CachedNameServer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.Resolving.CachedNameServer.html",
-          "hash": "R+20G4N0LIKA2Fo6jhmf6g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.Resolving.Catalog.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.Resolving.Catalog.html",
-          "hash": "1KMnLPb1lsfM5H9kaNLQmw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.Resolving.ConcurrentSet-1.KeyEnumerator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.Resolving.ConcurrentSet-1.KeyEnumerator.html",
-          "hash": "XHPAFqK4me2ZUHM4GA1ceg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.Resolving.ConcurrentSet-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.Resolving.ConcurrentSet-1.html",
-          "hash": "/T8iK3bf93C+hUegulpduw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.Resolving.NameServer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.Resolving.NameServer.html",
-          "hash": "aeGfDpUP9AoH4QJIa65bgw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.Resolving.Node.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.Resolving.Node.html",
-          "hash": "pIL2cBTPcL5Ho5Ry7d1t9Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.Resolving.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.Resolving.html",
-          "hash": "0MBwoScw7YYSlrFYBaw4BQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.ResourceRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.ResourceRecord.html",
-          "hash": "+k2wuYDbb9WcXxGv+/NPpA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.ResourceRegistry.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.ResourceRegistry.html",
-          "hash": "C1z8WTPFDbIBjk/4HctYZQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.SOARecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.SOARecord.html",
-          "hash": "XAfRNIQQB/jkSBDN+dgPMg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.SRVRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.SRVRecord.html",
-          "hash": "EJG3wNQXpZUW1hLiUkZGQw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.SecurityAlgorithm.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.SecurityAlgorithm.html",
-          "hash": "TTkf/iHQ/gBdnyEIgdpoVQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.TKEYRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.TKEYRecord.html",
-          "hash": "yjjwWq9oPNpZEHOx6ITzCQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.TSIGRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.TSIGRecord.html",
-          "hash": "OgSwW7L2xy2CvQR/1Czitw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.TXTRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.TXTRecord.html",
-          "hash": "qmL4cd8oZYWSXhTsZ16jng=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.UnknownEdnsOption.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.UnknownEdnsOption.html",
-          "hash": "yggqEQ+pGr7Pmk91cnVqag=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.UnknownRecord.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.UnknownRecord.html",
-          "hash": "919OVJZbYV6+noaBgPh78Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.UpdateMessage.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.UpdateMessage.html",
-          "hash": "B8duTyXX3bJ53604KYxKAg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.UpdatePrerequisiteList.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.UpdatePrerequisiteList.html",
-          "hash": "RZWvRnIlQr5F2gmPU9UMTw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.UpdateResourceList.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.UpdateResourceList.html",
-          "hash": "KoCvLQj5QEqW8cT6wMoFkQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Makaretu.Dns.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Makaretu.Dns.html",
-          "hash": "ZT91wm+ju7waGnSpGESGLw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "api/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/toc.html",
-          "hash": "UlNgBV36iMPtCd7XqUoLRg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/crypto.md",
       "output": {
         ".html": {
           "relative_path": "articles/crypto.html",
-          "hash": "5KysJ1yOg8oWAjovTHbdtA=="
+          "hash": "3SoEA2VDIi5Egj4E472+1Q=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/dnssec.md",
       "output": {
         ".html": {
           "relative_path": "articles/dnssec.html",
-          "hash": "cuZy+JYk4eIz8qdlU34OeQ=="
+          "hash": "5Tzlne6H9mU1jwcvpay6eg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/edns.md",
       "output": {
         ".html": {
           "relative_path": "articles/edns.html",
-          "hash": "onVY5IXAEqJuESZE1fgR8w=="
+          "hash": "0dST2a59XK2ehi45QxXrSw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/eopcode.md",
       "output": {
         ".html": {
           "relative_path": "articles/eopcode.html",
-          "hash": "xVZ4YBurSZak5WRGIcxGBw=="
+          "hash": "7wpjEvdHqhrDCKVGtiZ/Mg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/eoption.md",
       "output": {
         ".html": {
           "relative_path": "articles/eoption.html",
-          "hash": "DepvGVNuX5vZVZbdW1A0Aw=="
+          "hash": "4Nx1FKccOEPRG9YitCIWRA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/intro.md",
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "COPh2Dwu3EUPyUQZWJIfMw=="
+          "hash": "LyqXGo79ZrRDrthupPulvw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/message.md",
       "output": {
         ".html": {
           "relative_path": "articles/message.html",
-          "hash": "tLLRFaf3opnI6rVIhYhjtQ=="
+          "hash": "vXK2q/eFBU9KP7RZgarS4Q=="
         }
       },
       "is_incremental": false,
@@ -880,24 +133,30 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/rr-dnssec.md",
       "output": {
         ".html": {
           "relative_path": "articles/rr-dnssec.html",
-          "hash": "jIVE7W+k5AiokxalRYwG4g=="
+          "hash": "UTUtGXODv7S77eN1tCR7qA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/rr-equality.md",
       "output": {
         ".html": {
           "relative_path": "articles/rr-equality.html",
-          "hash": "yNPWzMWU/d3EVhFmyynUyA=="
+          "hash": "ik/2WTsLK/L3QaMPZC3zBg=="
         }
       },
       "is_incremental": false,
@@ -916,12 +175,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/rr-registry.md",
       "output": {
         ".html": {
           "relative_path": "articles/rr-registry.html",
-          "hash": "2axEuM7bXc0BeQOYmwx2eg=="
+          "hash": "DgZ+lvfzlr/a0IKUyMLJnQ=="
         }
       },
       "is_incremental": false,
@@ -940,36 +202,45 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/rr.md",
       "output": {
         ".html": {
           "relative_path": "articles/rr.html",
-          "hash": "yV/PGPjoADKEQ124C03+Eg=="
+          "hash": "2vF/bohB9XK1EX/TFoa8/w=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "uXZPV6PHRSSAcKbxrchyZg=="
+          "hash": "xvqhW6rD8mSrnK0Fzq0fqQ=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/truncate.md",
       "output": {
         ".html": {
           "relative_path": "articles/truncate.html",
-          "hash": "GBK04q5MobYFaiZVfOGzbg=="
+          "hash": "5q+x545MVS1zWLOFeFvOYQ=="
         }
       },
       "is_incremental": false,
@@ -998,12 +269,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "k3WdZR3hhsGCx3XIecP9lw=="
+          "hash": "INVAU4wuzGMkr9YH5Xacng=="
         }
       },
       "is_incremental": false,
@@ -1015,7 +289,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "DqRSR5tqfPD8YluoVcdpKA=="
+          "hash": "z2Zx7yezrt6JjTsNkN6e+Q=="
         }
       },
       "is_incremental": false,
@@ -1030,22 +304,18 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
