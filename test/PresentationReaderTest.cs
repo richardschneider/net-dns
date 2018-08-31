@@ -9,7 +9,7 @@ namespace Makaretu.Dns
 {
 
     [TestClass]
-    public class TextReaderTest
+    public class PresentationReaderTest
     {
         [TestMethod]
         public void ReadString()
@@ -34,6 +34,20 @@ namespace Makaretu.Dns
             var reader = new PresentationReader(new StringReader("  alpha\\ beta   omega"));
             Assert.AreEqual("alpha beta", reader.ReadString());
             Assert.AreEqual("omega", reader.ReadString());
+        }
+
+        [TestMethod]
+        public void ReadOctalEscapedString()
+        {
+            var reader = new PresentationReader(new StringReader("a\\142c"));
+            Assert.AreEqual("abc", reader.ReadString());
+        }
+
+        [TestMethod]
+        public void ReadInvalidOctalEscapedString()
+        {
+            var reader = new PresentationReader(new StringReader("a\\200c"));
+            ExceptionAssert.Throws<FormatException>(() => reader.ReadString());
         }
 
         [TestMethod]

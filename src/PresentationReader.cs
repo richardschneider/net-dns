@@ -436,8 +436,25 @@ namespace Makaretu.Dns
                 // Handle escaped character.
                 if (c == '\\')
                 {
-                    c = text.Read();
-                    // TODO: \DDD
+                    // Handle octal escapes \DDD
+                    int ndigits = 0;
+                    int oc = 0;
+                    for (; ndigits <= 3; ++ndigits) {
+                        c = text.Peek();
+                        if ('0' <= c && c <= '7')
+                        {
+                            text.Read();
+                            oc = (oc << 3) | (c - '0');
+                            if (oc > 0x7F)
+                                throw new FormatException("Invalid octal value.");
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    c = (ndigits > 0) ? oc : text.Read();
+
                     sb.Append((char)c);
                     skipWhitespace = false;
                     continue;
