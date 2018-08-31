@@ -34,12 +34,23 @@ namespace Makaretu.Dns
         public DNSKEYRecord(RSA key, SecurityAlgorithm algorithm)
             : this()
         {
-            Algorithm = algorithm; // TODO check for RSA algorithm
+            switch (algorithm)
+            {
+                case SecurityAlgorithm.RSAMD5:
+                case SecurityAlgorithm.RSASHA1:
+                case SecurityAlgorithm.RSASHA1NSEC3SHA1:
+                case SecurityAlgorithm.RSASHA256:
+                case SecurityAlgorithm.RSASHA512:
+                    break;
+
+                default:
+                    throw new ArgumentException($"Security algorithm '{algorithm}' is not allowed for a RSA key.");
+            }
+            Algorithm = algorithm;
 
             using (var ms = new MemoryStream())
             {
                 var p = key.ExportParameters(includePrivateParameters: false);
-                // TODO: length > 255
                 ms.WriteByte((byte)p.Exponent.Length);
                 ms.Write(p.Exponent, 0, p.Exponent.Length);
                 ms.Write(p.Modulus, 0, p.Modulus.Length);
