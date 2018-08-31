@@ -349,8 +349,6 @@ namespace Makaretu.Dns
                 domainName = token;
             }
 
-            // TODO: Check attributes
-
             defaultDomainName = domainName;
 
             // Create the specific resource record based on the type.
