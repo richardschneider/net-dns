@@ -28,6 +28,11 @@ namespace Makaretu.Dns
             ///   The cryptographic hash algorithm to use.
             /// </summary>
             public DigestType HashAlgorithm { get; set; }
+
+            /// <summary>
+            ///   Other names associated with the algorithm.
+            /// </summary>
+            public string[] OtherNames { get; set; } = new string[0];
         }
 
         /// <summary>
@@ -62,10 +67,12 @@ namespace Makaretu.Dns
             Algorithms.Add(SecurityAlgorithm.ECDSAP256SHA256, new Metadata
             {
                 HashAlgorithm = DigestType.Sha256,
+                OtherNames = new string[] { "nistP256", "ECDSA_P256" },
             });
             Algorithms.Add(SecurityAlgorithm.ECDSAP384SHA384, new Metadata
             {
                 HashAlgorithm = DigestType.Sha384,
+                OtherNames = new string[] { "nistP384", "ECDSA_P384" },
             });
 
             Algorithms.Add(SecurityAlgorithm.RSASHA1NSEC3SHA1, Algorithms[SecurityAlgorithm.RSASHA1]);

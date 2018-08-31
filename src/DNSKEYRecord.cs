@@ -86,19 +86,13 @@ namespace Makaretu.Dns
 
             if (!p.Curve.IsNamed)
                 throw new ArgumentException("Only named ECDSA curves are allowed.");
-            // TODO: Need a security algorithm registry
-            switch (p.Curve.Oid.FriendlyName)
+            Algorithm = SecurityAlgorithmRegistry.Algorithms
+                .Where(alg => alg.Value.OtherNames.Contains(p.Curve.Oid.FriendlyName))
+                .Select(alg => alg.Key)
+                .FirstOrDefault();
+            if (Algorithm == (SecurityAlgorithm)0)
             {
-                case "nistP256":
-                case "ECDSA_P256":
-                    Algorithm = SecurityAlgorithm.ECDSAP256SHA256;
-                    break;
-                case "nistP384":
-                case "ECDSA_P384":
-                    Algorithm = SecurityAlgorithm.ECDSAP384SHA384;
-                    break;
-                default:
-                    throw new ArgumentException($"ECDSA curve '{p.Curve.Oid.FriendlyName} is not known'.");
+                throw new ArgumentException($"ECDSA curve '{p.Curve.Oid.FriendlyName} is not known'.");
             }
 
             // ECDSA public keys consist of a single value, called "Q" in FIPS 186-3.
