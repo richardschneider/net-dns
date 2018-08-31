@@ -122,11 +122,14 @@ namespace Makaretu.Dns
         /// <param name="bytes">
         ///   A sequence of bytes to write.
         /// </param>
+        /// <exception cref="ArgumentException">
+        ///   When the length is greater than <see cref="byte.MaxValue"/>.
+        /// </exception>
         public void WriteByteLengthPrefixedBytes(byte[] bytes)
         {
             var length = bytes?.Length ?? 0;
             if (length > byte.MaxValue)
-                throw new ArgumentException($"Bytes length can not exceed {byte.MaxValue}.");
+                throw new ArgumentException($"Length can not exceed {byte.MaxValue}.", "bytes");
 
             WriteByte((byte)length);
             WriteBytes(bytes);
@@ -138,6 +141,9 @@ namespace Makaretu.Dns
         /// <param name="bytes">
         ///   A sequence of bytes to write.
         /// </param>
+        /// <exception cref="ArgumentException">
+        ///   When the length is greater than <see cref="ushort.MaxValue"/>.
+        /// </exception>
         public void WriteUint16LengthPrefixedBytes(byte[] bytes)
         {
             var length = bytes?.Length ?? 0;
@@ -186,7 +192,7 @@ namespace Makaretu.Dns
             stream.WriteByte((byte)(value >> 16));
             stream.WriteByte((byte)(value >> 8));
             stream.WriteByte((byte)value);
-            Position += 4;
+            Position += 6;
         }
 
         /// <summary>
@@ -200,6 +206,9 @@ namespace Makaretu.Dns
         ///   defaultl is false (allow compression).
         ///   <see cref="CanonicalForm"/> overrides this value.
         /// </param>
+        /// <exception cref="ArgumentException">
+        ///   When a label length is greater than 63 or is not ASCII.
+        /// </exception>
         /// <remarks>
         ///   A domain name is represented as a sequence of labels, where
         ///   each label consists of a length octet followed by that
@@ -227,9 +236,8 @@ namespace Makaretu.Dns
             for (var i = 0; i < labels.Length; ++i)
             {
                 var label = labels[i];
-                var bytes = Encoding.UTF8.GetBytes(label);
-                if (bytes.Length > 63)
-                    throw new InvalidDataException($"Label '{label}' cannot exceed 63 octets.");
+                if (label.Length > 63)
+                    throw new ArgumentException($"Label '{label}' cannot exceed 63 octets.");
 
                 // Check for qualified name already used.
                 var qn = string.Join(".", labels, i, labels.Length - i);
@@ -244,9 +252,7 @@ namespace Makaretu.Dns
                 }
 
                 // Add the label
-                stream.WriteByte((byte)bytes.Length);
-                stream.Write(bytes, 0, bytes.Length);
-                Position += bytes.Length + 1;
+                WriteString(label);
             }
 
             stream.WriteByte(0); // terminating byte
@@ -256,16 +262,23 @@ namespace Makaretu.Dns
         /// <summary>
         ///   Write a string.
         /// </summary>
+        /// <exception cref="ArgumentException">
+        ///   When the length is greater than <see cref="byte.MaxValue"/> or
+        ///   the string is not ASCII.
+        /// </exception>
         /// <remarks>
-        ///   Strings are encoded with a length prefixed byte.  All strings are treated
-        ///   as UTF-8.
+        ///   Strings are encoded with a length prefixed byte.  All strings must be
+        ///   ASCII.
         /// </remarks>
         public void WriteString(string value)
         {
-            var bytes = Encoding.UTF8.GetBytes(value);
-            stream.WriteByte((byte)bytes.Length);
-            stream.Write(bytes, 0, bytes.Length);
-            Position += bytes.Length + 1;
+            if (value.Any(c => c > 0x7F))
+            {
+                throw new ArgumentException("Only ASCII characters are allowed.");
+            }
+
+            var bytes = Encoding.ASCII.GetBytes(value);
+            WriteByteLengthPrefixedBytes(bytes);
         }
 
         /// <summary>

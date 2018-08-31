@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -166,6 +167,9 @@ namespace Makaretu.Dns
         /// <exception cref="EndOfStreamException">
         ///   When no more data is available.
         /// </exception>
+        /// <exception cref="InvalidDataException">
+        ///   Only ASCII characters are allowed.
+        /// </exception>
         /// <remarks>
         ///   A domain name is represented as a sequence of labels, where
         ///   each label consists of a length octet followed by that
@@ -197,7 +201,11 @@ namespace Makaretu.Dns
 
             // Read current label and remaining labels.
             var buffer = ReadBytes(length);
-            var name = Encoding.UTF8.GetString(buffer, 0, length);
+            if (buffer.Any(c => c > 0x7F))
+            {
+                throw new InvalidDataException("Only ASCII characters are allowed.");
+            }
+            var name = Encoding.ASCII.GetString(buffer, 0, length);
             var remainingLabels = ReadDomainName();
             if (remainingLabels != string.Empty)
             {
@@ -214,8 +222,7 @@ namespace Makaretu.Dns
         ///   Read a string.
         /// </summary>
         /// <remarks>
-        ///   Strings are encoded with a length prefixed byte.  All strings are treated
-        ///   as UTF-8.
+        ///   Strings are encoded with a length prefixed byte.  All strings are ASCII.
         /// </remarks>
         /// <returns>
         ///   The string.
@@ -223,11 +230,17 @@ namespace Makaretu.Dns
         /// <exception cref="EndOfStreamException">
         ///   When no more data is available.
         /// </exception>
+        /// <exception cref="InvalidDataException">
+        ///   Only ASCII characters are allowed.
+        /// </exception>
         public string ReadString()
         {
-            var length = ReadByte();
-            var buffer = ReadBytes(length);
-            return Encoding.UTF8.GetString(buffer, 0, length);
+            var bytes = ReadByteLengthPrefixedBytes();
+            if (bytes.Any(c => c > 0x7F))
+            {
+                throw new InvalidDataException("Only ASCII characters are allowed.");
+            }
+            return Encoding.ASCII.GetString(bytes);
         }
 
         /// <summary>

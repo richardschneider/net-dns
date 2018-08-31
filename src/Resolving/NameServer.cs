@@ -42,7 +42,6 @@ namespace Makaretu.Dns.Resolving
         {
             var response = request.CreateResponse();
 
-            // TODO: Run all questions in parallel.
             foreach (var question in request.Questions)
             {
                 await ResolveAsync(question, response, cancel);

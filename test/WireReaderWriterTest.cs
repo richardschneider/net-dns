@@ -193,5 +193,30 @@ namespace Makaretu.Dns
             var reader = new WireReader(ms);
             Assert.AreEqual(expected, reader.ReadDateTime48());
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void WriteString_NotAscii()
+        {
+            var writer = new WireWriter(Stream.Null);
+            writer.WriteString("δοκιμή"); // test in Greek
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void WriteString_TooBig()
+        {
+            var writer = new WireWriter(Stream.Null);
+            writer.WriteString(new string('a', 0x100));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidDataException))]
+        public void ReadString_NotAscii()
+        {
+            var ms = new MemoryStream(new byte[] { 1, 0xFF });
+            var reader = new WireReader(ms);
+            reader.ReadString();
+        }
     }
 }
