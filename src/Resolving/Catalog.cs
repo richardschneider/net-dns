@@ -101,7 +101,7 @@ namespace Makaretu.Dns.Resolving
         }
 
         /// <summary>
-        ///   Adds the resource record to the catalog. 
+        ///   Add or update the resource record to the catalog. 
         /// </summary>
         /// <param name="resource">
         ///   The <see cref="ResourceRecord.Name"/> is also the name of the node.
@@ -110,8 +110,13 @@ namespace Makaretu.Dns.Resolving
         ///   Indicates if the <paramref name="resource"/> is authoritative or cached.
         /// </param>
         /// <returns>
-        ///   The <see cref="Node"/> that was created or update.
+        ///   The <see cref="Node"/> that was created or updated.
         /// </returns>
+        /// <remarks>
+        ///   If the <paramref name="resource"/> already exists, then update the
+        ///   non-equality properties <see cref="ResourceRecord.TTL"/>
+        ///   and <see cref="DnsObject.CreationTime"/>.
+        /// </remarks>
         public Node Add(ResourceRecord resource, bool authoritative = false)
         {
             var node = this.AddOrUpdate(
@@ -124,7 +129,6 @@ namespace Makaretu.Dns.Resolving
             // properties TTL and CreationTime.
             if (!node.Resources.Add(resource))
             {
-                // TODO: not very efficient.
                 node.Resources.Remove(resource);
                 node.Resources.Add(resource);
             }
