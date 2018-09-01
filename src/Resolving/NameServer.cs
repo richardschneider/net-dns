@@ -163,8 +163,6 @@ namespace Makaretu.Dns.Resolving
                 return FindAnswerAsync(question, response, cancel);
             }
 
-            // TODO: https://tools.ietf.org/html/rfc1034#section-4.3.3 Wildcards
-
             // Nothing more can be done.
             return Task.FromResult(false);
         }
