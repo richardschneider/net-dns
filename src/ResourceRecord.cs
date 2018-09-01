@@ -294,12 +294,12 @@ namespace Makaretu.Dns
         /// </returns>
         public override string ToString()
         {
-            using (var writer = new StringWriter())
+            using (var s = new StringWriter())
             {
-                Write(writer);
+                Write(new PresentationWriter(s));
 
                 // Trim trailing whitespaces (tab, space, cr, lf, ...)
-                var sb = writer.GetStringBuilder();
+                var sb = s.GetStringBuilder();
                 while (sb.Length > 0 && Char.IsWhiteSpace(sb[sb.Length-1]))
                 {
                     --sb.Length;
@@ -310,32 +310,18 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public void Write(TextWriter writer)
+        public void Write(PresentationWriter writer)
         {
-            writer.Write(Name);
-            writer.Write(' ');
+            writer.WriteDomainName(Name);
             if (TTL != DefaultTTL)
             {
-                writer.Write((int)TTL.TotalSeconds);
-                writer.Write(' ');
+                writer.WriteTimeSpan32(TTL);
             }
+            writer.WriteDnsClass(Class);
+            writer.WriteDnsType(Type);
 
-            if (!Enum.IsDefined(typeof(DnsClass), Class))
-            {
-                writer.Write("CLASS");
-            }
-            writer.Write(Class);
-            writer.Write(' ');
-
-            if (!Enum.IsDefined(typeof(DnsType), Type))
-            {
-                writer.Write("TYPE");
-            }
-            writer.Write(Type);
-            writer.Write(' ');
-
-            WriteData(writer);
-            writer.Write("\r\n");
+            WriteData(writer.text); // TODO: use PresentationWriter
+            writer.WriteEndOfLine();
         }
 
         /// <summary>

@@ -43,6 +43,6 @@ namespace Makaretu.Dns
         /// <param name="writer">
         ///   The destination of the <see cref="ResourceRecord"/>.
         /// </param>
-        void Write(TextWriter writer);
+        void Write(PresentationWriter writer);
     }
 }
