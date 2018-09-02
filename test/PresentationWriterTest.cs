@@ -123,8 +123,8 @@ namespace Makaretu.Dns
             var text = new StringWriter();
             var writer = new PresentationWriter(text);
             writer.WriteDateTime(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc));
-            writer.WriteDateTime(DateTime.MaxValue, appendSpace: false);
-            Assert.AreEqual("19700101000000 99991231105959", text.ToString());
+            writer.WriteDateTime(DateTime.SpecifyKind(DateTime.MaxValue, DateTimeKind.Utc), appendSpace: false);
+            Assert.AreEqual("19700101000000 99991231235959", text.ToString());
         }
 
         [TestMethod]
