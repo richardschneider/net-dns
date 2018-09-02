@@ -11,6 +11,9 @@ namespace Makaretu.Dns
     [TestClass]
     public class WireReaderWriterTest
     {
+        static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+        const ulong uint48MaxValue = 0XFFFFFFFFFFFFul;
+
         [TestMethod]
         public void Roundtrip()
         {
@@ -30,6 +33,7 @@ namespace Makaretu.Dns
             writer.WriteByteLengthPrefixedBytes(null);
             writer.WriteIPAddress(IPAddress.Parse("127.0.0.1"));
             writer.WriteIPAddress(IPAddress.Parse("2406:e001:13c7:1:7173:ef8:852f:25cb"));
+            writer.WriteDateTime32(someDate);
             writer.WriteDateTime48(someDate);
 
             ms.Position = 0;
@@ -45,6 +49,7 @@ namespace Makaretu.Dns
             CollectionAssert.AreEqual(new byte[0], reader.ReadByteLengthPrefixedBytes());
             Assert.AreEqual(IPAddress.Parse("127.0.0.1"), reader.ReadIPAddress());
             Assert.AreEqual(IPAddress.Parse("2406:e001:13c7:1:7173:ef8:852f:25cb"), reader.ReadIPAddress(16));
+            Assert.AreEqual(someDate, reader.ReadDateTime32());
             Assert.AreEqual(someDate, reader.ReadDateTime48());
         }
 
@@ -218,5 +223,19 @@ namespace Makaretu.Dns
             var reader = new WireReader(ms);
             reader.ReadString();
         }
+
+        [TestMethod]
+        public void WriteDateTime32_TooManySeconds()
+        {
+            var writer = new WireWriter(Stream.Null);
+            writer.WriteDateTime32(UnixEpoch);
+            writer.WriteDateTime32(UnixEpoch.AddSeconds(uint.MaxValue));
+
+            ExceptionAssert.Throws<OverflowException>(() =>
+            {
+                writer.WriteDateTime32(UnixEpoch.AddSeconds((long)(uint.MaxValue) + 1));
+            });
+        }
+
     }
 }

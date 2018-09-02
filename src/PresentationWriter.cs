@@ -216,6 +216,20 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Write a date/time.
+        /// </summary>
+        /// <param name="value">
+        ///   The <see cref="DateTime"/>. Resolution is seconds.
+        /// </param>
+        /// <param name="appendSpace">
+        ///   Write a space after the value.
+        /// </param>
+        public void WriteDateTime(DateTime value, bool appendSpace = true)
+        {
+            WriteString(value.ToUniversalTime().ToString("yyyyMMddHHmmss", CultureInfo.InvariantCulture), appendSpace);
+        }
+
+        /// <summary>
         ///   Write an Internet address.
         /// </summary>
         /// <param name="value">

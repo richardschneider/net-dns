@@ -315,7 +315,28 @@ namespace Makaretu.Dns
         /// <param name="value">
         ///   The <see cref="DateTime"/> to write.
         /// </param>
-        /// <exception cref="ArgumentException">
+        /// <exception cref="OverflowException">
+        ///   <paramref name="value"/> seconds cannot be represented
+        ///   in 32 bits.
+        /// </exception>
+        /// <remarks>
+        ///   Write the <paramref name="value"/> as the number seconds
+        ///   since the Unix epoch.  The seconds is represented as 32-bit
+        ///   unsigned int
+        /// </remarks>
+        public void WriteDateTime32(DateTime value)
+        {
+            var seconds = (value - UnixEpoch).TotalSeconds;
+            WriteUInt32(Convert.ToUInt32(seconds));
+        }
+
+        /// <summary>
+        ///   Write a date/time.
+        /// </summary>
+        /// <param name="value">
+        ///   The <see cref="DateTime"/> to write.
+        /// </param>
+        /// <exception cref="OverflowException">
         ///   <paramref name="value"/> seconds cannot be represented
         ///   in 48 bits.
         /// </exception>

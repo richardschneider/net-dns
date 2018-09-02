@@ -219,6 +219,31 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Read a date/time.
+        /// </summary>
+        /// <returns>
+        ///   The <see cref="DateTime"/>.
+        /// </returns>
+        /// <remarks>
+        ///   Allows a <see cref="DateTime"/> in the form "yyyyMMddHHmmss" or
+        ///   the number of seconds since the unix epoch (00:00:00 on 1 January 1970 UTC).
+        /// </remarks>
+        public DateTime ReadDateTime()
+        {
+            var token = ReadToken();
+            if (token.Length == 14)
+            {
+                return DateTime.ParseExact(
+                    token,
+                    "yyyyMMddHHmmss",
+                    CultureInfo.InvariantCulture,
+                    DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);
+            }
+
+            return UnixEpoch.AddSeconds(ulong.Parse(token, CultureInfo.InvariantCulture));
+        }
+
+        /// <summary>
         ///   Read hex encoded RDATA.
         /// </summary>
         /// <returns>

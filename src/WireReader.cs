@@ -328,6 +328,22 @@ namespace Makaretu.Dns
 
         /// <summary>
         ///   Read a <see cref="DateTime"/> that is represented in
+        ///   seconds (32 bits) from the Unix epoch. 
+        /// </summary>
+        /// <returns>
+        ///   A <see cref="DateTime"/> in <see cref="DateTimeKind.Utc"/>.
+        /// </returns>
+        /// <exception cref="EndOfStreamException">
+        ///   When no more data is available.
+        /// </exception>
+        public DateTime ReadDateTime32()
+        {
+            var seconds = ReadUInt32();
+            return UnixEpoch.AddSeconds(seconds);
+        }
+
+        /// <summary>
+        ///   Read a <see cref="DateTime"/> that is represented in
         ///   seconds (48 bits) from the Unix epoch. 
         /// </summary>
         /// <returns>
@@ -336,7 +352,6 @@ namespace Makaretu.Dns
         /// <exception cref="EndOfStreamException">
         ///   When no more data is available.
         /// </exception>
-        /// <returns></returns>
         public DateTime ReadDateTime48()
         {
             var seconds = ReadUInt48();

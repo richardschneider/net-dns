@@ -327,5 +327,15 @@ emanon.org A 127.0.0.1
             Assert.AreEqual(expected, reader.ReadUnixSeconds32());
             Assert.AreEqual(expected, reader.ReadUnixSeconds32());
         }
+
+        [TestMethod]
+        public void ReadDateTime()
+        {
+            DateTime expected = new DateTime(2004, 9, 16);
+
+            var reader = new PresentationReader(new StringReader("1095292800 20040916000000"));
+            Assert.AreEqual(expected, reader.ReadDateTime());
+            Assert.AreEqual(expected, reader.ReadDateTime());
+        }
     }
 }
