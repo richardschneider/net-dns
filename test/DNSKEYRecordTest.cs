@@ -109,6 +109,28 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void FromRsaSha256_BadAlgorithm()
+        {
+            // From https://tools.ietf.org/html/rfc5702#section-6.1
+            var modulus = Convert.FromBase64String("wVwaxrHF2CK64aYKRUibLiH30KpPuPBjel7E8ZydQW1HYWHfoGmidzC2RnhwCC293hCzw+TFR2nqn8OVSY5t2Q==");
+            var publicExponent = Convert.FromBase64String("AQAB");
+            var dnsPublicKey = Convert.FromBase64String("AwEAAcFcGsaxxdgiuuGmCkVImy4h99CqT7jwY3pexPGcnUFtR2Fh36BponcwtkZ4cAgtvd4Qs8PkxUdp6p/DlUmObdk=");
+
+            var parameters = new RSAParameters()
+            {
+                Exponent = publicExponent,
+                Modulus = modulus,
+            };
+            var publicKey = RSA.Create();
+            publicKey.ImportParameters(parameters);
+
+            ExceptionAssert.Throws<ArgumentException>(() =>
+            {
+                var _ = new DNSKEYRecord(publicKey, SecurityAlgorithm.ECDSAP256SHA256);
+            });
+        }
+
+        [TestMethod]
         public void FromRsaSha512()
         {
             // From https://tools.ietf.org/html/rfc5702#section-6.2
