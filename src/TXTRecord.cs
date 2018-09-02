@@ -60,18 +60,16 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(TextWriter writer)
+        public override void WriteData(PresentationWriter writer)
         {
             bool next = false;
             foreach (var s in Strings)
             {
                 if (next)
                 {
-                    writer.Write(' ');
+                    writer.WriteSpace();
                 }
-                writer.Write('"');
-                writer.Write(s.Replace("\\", "\\\\").Replace("\"", "\\\""));
-                writer.Write('"');
+                writer.WriteString(s, appendSpace: false);
                 next = true;
             }
         }

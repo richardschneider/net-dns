@@ -294,12 +294,12 @@ namespace Makaretu.Dns
         /// </returns>
         public override string ToString()
         {
-            using (var writer = new StringWriter())
+            using (var s = new StringWriter())
             {
-                Write(writer);
+                Write(new PresentationWriter(s));
 
                 // Trim trailing whitespaces (tab, space, cr, lf, ...)
-                var sb = writer.GetStringBuilder();
+                var sb = s.GetStringBuilder();
                 while (sb.Length > 0 && Char.IsWhiteSpace(sb[sb.Length-1]))
                 {
                     --sb.Length;
@@ -310,32 +310,18 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public void Write(TextWriter writer)
+        public void Write(PresentationWriter writer)
         {
-            writer.Write(Name);
-            writer.Write(' ');
+            writer.WriteDomainName(Name);
             if (TTL != DefaultTTL)
             {
-                writer.Write((int)TTL.TotalSeconds);
-                writer.Write(' ');
+                writer.WriteTimeSpan32(TTL);
             }
-
-            if (!Enum.IsDefined(typeof(DnsClass), Class))
-            {
-                writer.Write("CLASS");
-            }
-            writer.Write(Class);
-            writer.Write(' ');
-
-            if (!Enum.IsDefined(typeof(DnsType), Type))
-            {
-                writer.Write("TYPE");
-            }
-            writer.Write(Type);
-            writer.Write(' ');
+            writer.WriteDnsClass(Class);
+            writer.WriteDnsType(Type);
 
             WriteData(writer);
-            writer.Write("\r\n");
+            writer.WriteEndOfLine();
         }
 
         /// <summary>
@@ -353,13 +339,14 @@ namespace Makaretu.Dns
         ///   "\#" and the number integer bytes.
         ///   </para>
         /// </remarks>
-        public virtual void WriteData(TextWriter writer)
+        public virtual void WriteData(PresentationWriter writer)
         {
             var rdata = GetData();
-            writer.Write("\\# ");
-            writer.Write(rdata.Length);
-            writer.Write(' ');
-            writer.Write(Base16.EncodeLower(rdata));
+            var hasData = rdata.Length > 0;
+            writer.WriteStringUnencoded("\\#");
+            writer.WriteUInt32((uint)rdata.Length, appendSpace: hasData);
+            if (hasData)
+                writer.WriteBase16String(rdata, appendSpace: false);
         }
 
         /// <summary>

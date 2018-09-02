@@ -117,21 +117,15 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(TextWriter writer)
+        public override void WriteData(PresentationWriter writer)
         {
-            writer.Write(PrimaryName);
-            writer.Write(' ');
-            writer.Write(Mailbox);
-            writer.Write(' ');
-            writer.Write(SerialNumber);
-            writer.Write(' ');
-            writer.Write((int)Refresh.TotalSeconds);
-            writer.Write(' ');
-            writer.Write((int)Retry.TotalSeconds);
-            writer.Write(' ');
-            writer.Write((int)Expire.TotalSeconds);
-            writer.Write(' ');
-            writer.Write((int)Minimum.TotalSeconds);
+            writer.WriteDomainName(PrimaryName);
+            writer.WriteDomainName(Mailbox);
+            writer.WriteUInt32(SerialNumber);
+            writer.WriteTimeSpan32(Refresh);
+            writer.WriteTimeSpan32(Retry);
+            writer.WriteTimeSpan32(Expire);
+            writer.WriteTimeSpan32(Minimum, appendSpace: false);
         }
 
     }

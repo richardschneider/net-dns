@@ -64,11 +64,10 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(TextWriter writer)
+        public override void WriteData(PresentationWriter writer)
         {
-            writer.Write(Preference);
-            writer.Write(' ');
-            writer.Write(Exchange);
+            writer.WriteUInt16(Preference);
+            writer.WriteDomainName(Exchange, appendSpace: false);
         }
 
     }

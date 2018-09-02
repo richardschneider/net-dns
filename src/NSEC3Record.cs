@@ -110,40 +110,31 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(TextWriter writer)
+        public override void WriteData(PresentationWriter writer)
         {
-            writer.Write((byte)HashAlgorithm);
-            writer.Write(' ');
-            writer.Write((byte)Flags);
-            writer.Write(' ');
-            writer.Write(Iterations);
-            writer.Write(' ');
+            writer.WriteByte((byte)HashAlgorithm);
+            writer.WriteByte((byte)Flags);
+            writer.WriteUInt16(Iterations);
 
             if (Salt == null || Salt.Length == 0)
             {
-                writer.Write('-');
+                writer.WriteString("-");
             }
             else
             {
-                writer.Write(Base16.EncodeLower(Salt));
+                writer.WriteBase16String(Salt);
             }
-            writer.Write(' ');
 
-            writer.Write(Base32.ExtendedHex.Encode(NextHashedOwnerName, padding: false).ToLowerInvariant());
-            writer.Write(' ');
+            writer.WriteString(Base32.ExtendedHex.Encode(NextHashedOwnerName, padding: false).ToLowerInvariant());
 
             bool next = false;
             foreach (var type in Types)
             {
                 if (next)
                 {
-                    writer.Write(' ');
+                    writer.WriteSpace();
                 }
-                if (!Enum.IsDefined(typeof(DnsType), type))
-                {
-                    writer.Write("TYPE");
-                }
-                writer.Write(type);
+                writer.WriteDnsType(type, appendSpace: false);
                 next = true;
             }
         }

@@ -122,21 +122,15 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(TextWriter writer)
+        public override void WriteData(PresentationWriter writer)
         {
-            writer.Write(Algorithm);
-            writer.Write(' ');
-            writer.Write(Inception);
-            writer.Write(' ');
-            writer.Write(Expiration);
-            writer.Write(' ');
-            writer.Write((ushort)Mode);
-            writer.Write(' ');
-            writer.Write((ushort)Error);
-            writer.Write(' ');
-            writer.Write(Convert.ToBase64String(Key));
-            writer.Write(' ');
-            writer.Write(Convert.ToBase64String(OtherData ?? NoData));
+            writer.WriteDomainName(Algorithm);
+            writer.WriteUInt32(Inception);
+            writer.WriteUInt32(Expiration);
+            writer.WriteUInt16((ushort)Mode);
+            writer.WriteUInt16((ushort)Error);
+            writer.WriteBase64String(Key);
+            writer.WriteBase64String(OtherData ?? NoData, appendSpace: false);
         }
     }
 

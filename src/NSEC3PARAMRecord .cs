@@ -82,22 +82,19 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(TextWriter writer)
+        public override void WriteData(PresentationWriter writer)
         {
-            writer.Write((ushort)HashAlgorithm);
-            writer.Write(' ');
-            writer.Write((byte)Flags);
-            writer.Write(' ');
-            writer.Write(Iterations);
-            writer.Write(' ');
+            writer.WriteByte((byte)HashAlgorithm);
+            writer.WriteByte((byte)Flags);
+            writer.WriteUInt16(Iterations);
 
             if (Salt == null || Salt.Length == 0)
             {
-                writer.Write('-');
+                writer.WriteString("-");
             }
             else
             {
-                writer.Write(Base16.EncodeLower(Salt));
+                writer.WriteBase16String(Salt, appendSpace: false);
             }
         }
     }

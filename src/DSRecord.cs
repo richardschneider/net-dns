@@ -134,15 +134,12 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(TextWriter writer)
+        public override void WriteData(PresentationWriter writer)
         {
-            writer.Write(KeyTag);
-            writer.Write(' ');
-            writer.Write((byte)Algorithm);
-            writer.Write(' ');
-            writer.Write((byte)HashAlgorithm);
-            writer.Write(' ');
-            writer.Write(Base16.EncodeLower(Digest));
+            writer.WriteUInt16(KeyTag);
+            writer.WriteByte((byte)Algorithm);
+            writer.WriteByte((byte)HashAlgorithm);
+            writer.WriteBase16String(Digest, appendSpace: false);
         }
     }
 }
