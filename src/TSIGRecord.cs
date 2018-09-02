@@ -152,13 +152,7 @@ namespace Makaretu.Dns
         public override void ReadData(PresentationReader reader)
         {
             Algorithm = reader.ReadDomainName();
-            TimeSigned = DateTime.ParseExact
-            (
-                reader.ReadString(),
-                "yyyyMMddHHmmss",
-                CultureInfo.InvariantCulture,
-                DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal
-            );
+            TimeSigned = reader.ReadDateTime();
             Fudge = reader.ReadTimeSpan16();
             MAC = Convert.FromBase64String(reader.ReadString());
             OriginalMessageId = reader.ReadUInt16();
@@ -170,7 +164,7 @@ namespace Makaretu.Dns
         public override void WriteData(PresentationWriter writer)
         {
             writer.WriteDomainName(Algorithm);
-            writer.WriteString(TimeSigned.ToUniversalTime().ToString("yyyyMMddHHmmss", CultureInfo.InvariantCulture));
+            writer.WriteDateTime(TimeSigned);
             writer.WriteTimeSpan16(Fudge);
             writer.WriteBase64String(MAC);
             writer.WriteUInt16(OriginalMessageId);

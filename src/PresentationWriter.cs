@@ -219,7 +219,7 @@ namespace Makaretu.Dns
         ///   Write a date/time.
         /// </summary>
         /// <param name="value">
-        ///   The <see cref="DateTime"/>. Resolution is seconds.
+        ///   The UTC <see cref="DateTime"/>. Resolution is seconds.
         /// </param>
         /// <param name="appendSpace">
         ///   Write a space after the value.
