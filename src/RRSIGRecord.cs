@@ -142,29 +142,17 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(TextWriter writer)
+        public override void WriteData(PresentationWriter writer)
         {
-            if (!Enum.IsDefined(typeof(DnsType), TypeCovered))
-            {
-                writer.Write("TYPE");
-            }
-            writer.Write(TypeCovered);
-            writer.Write(' ');
-            writer.Write((byte)Algorithm);
-            writer.Write(' ');
-            writer.Write(Labels);
-            writer.Write(' ');
-            writer.Write((uint)OriginalTTL.TotalSeconds);
-            writer.Write(' ');
-            writer.Write(SignatureExpiration);
-            writer.Write(' ');
-            writer.Write(SignatureInception);
-            writer.Write(' ');
-            writer.Write(KeyTag);
-            writer.Write(' ');
-            writer.Write(SignerName);
-            writer.Write(' ');
-            writer.Write(Convert.ToBase64String(Signature));
+            writer.WriteDnsType(TypeCovered);
+            writer.WriteByte((byte)Algorithm);
+            writer.WriteByte(Labels);
+            writer.WriteTimeSpan32(OriginalTTL);
+            writer.WriteUInt32(SignatureExpiration);
+            writer.WriteUInt32(SignatureInception);
+            writer.WriteUInt16(KeyTag);
+            writer.WriteDomainName(SignerName);
+            writer.WriteBase64String(Signature, appendSpace: false);
         }
     }
 

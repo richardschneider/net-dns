@@ -84,15 +84,12 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(TextWriter writer)
+        public override void WriteData(PresentationWriter writer)
         {
-            writer.Write(Priority);
-            writer.Write(' ');
-            writer.Write(Weight);
-            writer.Write(' ');
-            writer.Write(Port);
-            writer.Write(' ');
-            writer.Write(Target);
+            writer.WriteUInt16(Priority);
+            writer.WriteUInt16(Weight);
+            writer.WriteUInt16(Port);
+            writer.WriteDomainName(Target, appendSpace: false);
         }
 
     }

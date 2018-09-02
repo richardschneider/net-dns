@@ -320,7 +320,7 @@ namespace Makaretu.Dns
             writer.WriteDnsClass(Class);
             writer.WriteDnsType(Type);
 
-            WriteData(writer.text); // TODO: use PresentationWriter
+            WriteData(writer);
             writer.WriteEndOfLine();
         }
 
@@ -339,13 +339,14 @@ namespace Makaretu.Dns
         ///   "\#" and the number integer bytes.
         ///   </para>
         /// </remarks>
-        public virtual void WriteData(TextWriter writer)
+        public virtual void WriteData(PresentationWriter writer)
         {
             var rdata = GetData();
-            writer.Write("\\# ");
-            writer.Write(rdata.Length);
-            writer.Write(' ');
-            writer.Write(Base16.EncodeLower(rdata));
+            var hasData = rdata.Length > 0;
+            writer.WriteStringUnencoded("\\#");
+            writer.WriteUInt32((uint)rdata.Length, appendSpace: hasData);
+            if (hasData)
+                writer.WriteBase16String(rdata, appendSpace: false);
         }
 
         /// <summary>

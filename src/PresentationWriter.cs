@@ -15,7 +15,7 @@ namespace Makaretu.Dns
     {
         static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
-        public TextWriter text; // TODO: remove public
+        TextWriter text;
 
         /// <summary>
         ///   Creates a new instance of the <see cref="PresentationWriter"/> using the
@@ -43,6 +43,22 @@ namespace Makaretu.Dns
         public void WriteEndOfLine()
         {
             text.Write("\r\n");
+        }
+
+        /// <summary>
+        ///   Write an byte.
+        /// </summary>
+        /// <param name="value">
+        ///   The value to write.
+        /// </param>
+        /// <param name="appendSpace">
+        ///   Write a space after the value.
+        /// </param>
+        public void WriteByte(byte value, bool appendSpace = true)
+        {
+            text.Write(value);
+            if (appendSpace)
+                WriteSpace();
         }
 
         /// <summary>
@@ -86,6 +102,9 @@ namespace Makaretu.Dns
         /// <param name="appendSpace">
         ///   Write a space after the value.
         /// </param>
+        /// <remarks>
+        ///   Quotes and escapes are added as needned.
+        /// </remarks>
         public void WriteString(string value, bool appendSpace = true)
         {
             bool needQuote = false;
@@ -108,6 +127,25 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Write a string.
+        /// </summary>
+        /// <param name="value">
+        ///   An ASCII string.
+        /// </param>
+        /// <param name="appendSpace">
+        ///   Write a space after the value.
+        /// </param>
+        /// <remarks>
+        ///   Quotes and escapes are NOT added.
+        /// </remarks>
+        public void WriteStringUnencoded(string value, bool appendSpace = true)
+        {
+            text.Write(value);
+            if (appendSpace)
+                WriteSpace();
+        }
+
+        /// <summary>
         ///   Write a domain name.
         /// </summary>
         /// <param name="value">
@@ -119,6 +157,20 @@ namespace Makaretu.Dns
         public void WriteDomainName(string value, bool appendSpace = true)
         {
             WriteString(value, appendSpace);
+        }
+
+        /// <summary>
+        ///   Write bytes encoded in base-16.
+        /// </summary>
+        /// <param name="value">
+        ///   The value to write.
+        /// </param>
+        /// <param name="appendSpace">
+        ///   Write a space after the value.
+        /// </param>
+        public void WriteBase16String(byte[] value, bool appendSpace = true)
+        {
+            WriteString(Base16.EncodeLower(value), appendSpace);
         }
 
         /// <summary>

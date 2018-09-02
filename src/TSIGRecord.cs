@@ -167,21 +167,15 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(TextWriter writer)
+        public override void WriteData(PresentationWriter writer)
         {
-            writer.Write(Algorithm);
-            writer.Write(' ');
-            writer.Write(TimeSigned.ToUniversalTime().ToString("yyyyMMddHHmmss", CultureInfo.InvariantCulture));
-            writer.Write(' ');
-            writer.Write((ushort)Fudge.TotalSeconds);
-            writer.Write(' ');
-            writer.Write(Convert.ToBase64String(MAC));
-            writer.Write(' ');
-            writer.Write(OriginalMessageId);
-            writer.Write(' ');
-            writer.Write((ushort)Error);
-            writer.Write(' ');
-            writer.Write(Convert.ToBase64String(OtherData ?? NoData));
+            writer.WriteDomainName(Algorithm);
+            writer.WriteString(TimeSigned.ToUniversalTime().ToString("yyyyMMddHHmmss", CultureInfo.InvariantCulture));
+            writer.WriteTimeSpan16(Fudge);
+            writer.WriteBase64String(MAC);
+            writer.WriteUInt16(OriginalMessageId);
+            writer.WriteUInt16((ushort)Error);
+            writer.WriteBase64String(OtherData ?? NoData, appendSpace: false);
         }
     }
 

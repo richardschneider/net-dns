@@ -193,15 +193,12 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(TextWriter writer)
+        public override void WriteData(PresentationWriter writer)
         {
-            writer.Write((ushort)Flags);
-            writer.Write(' ');
-            writer.Write(Protocol);
-            writer.Write(' ');
-            writer.Write((byte)Algorithm);
-            writer.Write(' ');
-            writer.Write(Convert.ToBase64String(PublicKey));
+            writer.WriteUInt16((ushort)Flags);
+            writer.WriteByte(Protocol);
+            writer.WriteByte((byte)Algorithm);
+            writer.WriteBase64String(PublicKey, appendSpace: false);
         }
     }
 }

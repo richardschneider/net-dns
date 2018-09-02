@@ -57,9 +57,9 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(TextWriter writer)
+        public override void WriteData(PresentationWriter writer)
         {
-            writer.Write(Authority);
+            writer.WriteDomainName(Authority, appendSpace: false);
         }
 
     }

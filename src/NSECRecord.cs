@@ -66,23 +66,18 @@ namespace Makaretu.Dns
         }
 
         /// <inheritdoc />
-        public override void WriteData(TextWriter writer)
+        public override void WriteData(PresentationWriter writer)
         {
-            writer.Write(NextOwnerName);
-            writer.Write(' ');
+            writer.WriteDomainName(NextOwnerName);
 
             bool next = false;
             foreach (var type in Types)
             {
                 if (next)
                 {
-                    writer.Write(' ');
+                    writer.WriteSpace();
                 }
-                if (!Enum.IsDefined(typeof(DnsType), type))
-                {
-                    writer.Write("TYPE");
-                }
-                writer.Write(type);
+                writer.WriteDnsType(type, appendSpace: false);
                 next = true;
             }
         }

@@ -12,6 +12,16 @@ namespace Makaretu.Dns
     public class PresentationWriterTest
     {
         [TestMethod]
+        public void WriteByte()
+        {
+            var text = new StringWriter();
+            var writer = new PresentationWriter(text);
+            writer.WriteByte(byte.MaxValue);
+            writer.WriteByte(1, appendSpace: false);
+            Assert.AreEqual("255 1", text.ToString());
+        }
+
+        [TestMethod]
         public void WriteUInt16()
         {
             var text = new StringWriter();
@@ -48,6 +58,16 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void WriteStringUnencoded()
+        {
+            var text = new StringWriter();
+            var writer = new PresentationWriter(text);
+            writer.WriteStringUnencoded("\\a");
+            writer.WriteStringUnencoded("\\b", appendSpace: false);
+            Assert.AreEqual("\\a \\b", text.ToString());
+        }
+
+        [TestMethod]
         public void WriteDomainName()
         {
             var text = new StringWriter();
@@ -55,6 +75,16 @@ namespace Makaretu.Dns
             writer.WriteString("alpha.com");
             writer.WriteString("omega.com", appendSpace: false);
             Assert.AreEqual("alpha.com omega.com", text.ToString());
+        }
+
+        [TestMethod]
+        public void WriteBase16String()
+        {
+            var text = new StringWriter();
+            var writer = new PresentationWriter(text);
+            writer.WriteBase16String(new byte[] { 1, 2, 3 });
+            writer.WriteBase16String(new byte[] { 1, 2, 3 }, appendSpace: false);
+            Assert.AreEqual("010203 010203", text.ToString());
         }
 
         [TestMethod]
