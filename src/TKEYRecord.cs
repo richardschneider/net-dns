@@ -47,17 +47,17 @@ namespace Makaretu.Dns
         ///   The start date for the <see cref="Key"/>.
         /// </summary>
         /// <value>
-        ///   Number of seconds since 1970-0-01T00:00:00Z.
+        ///   Resolution in seconds.
         /// </value>
-        public uint Inception { get; set; }
+        public DateTime Inception { get; set; }
 
         /// <summary>
         ///   The end date for the <see cref="Key"/>.
         /// </summary>
         /// <value>
-        ///   Number of seconds since 1970-0-01T00:00:00Z.
+        ///   Resolution in seconds.
         /// </value>
-        public uint Expiration { get; set; }
+        public DateTime Expiration { get; set; }
 
         /// <summary>
         ///   The key exchange algorithm.
@@ -89,8 +89,8 @@ namespace Makaretu.Dns
         public override void ReadData(WireReader reader, int length)
         {
             Algorithm = reader.ReadDomainName();
-            Inception = reader.ReadUInt32();
-            Expiration = reader.ReadUInt32();
+            Inception = reader.ReadDateTime32();
+            Expiration = reader.ReadDateTime32();
             Mode = (KeyExchangeMode)reader.ReadUInt16();
             Error = (MessageStatus)reader.ReadUInt16();
             Key = reader.ReadUInt16LengthPrefixedBytes();
@@ -101,8 +101,8 @@ namespace Makaretu.Dns
         public override void WriteData(WireWriter writer)
         {
             writer.WriteDomainName(Algorithm);
-            writer.WriteUInt32(Inception);
-            writer.WriteUInt32(Expiration);
+            writer.WriteDateTime32(Inception);
+            writer.WriteDateTime32(Expiration);
             writer.WriteUInt16((ushort)Mode);
             writer.WriteUInt16((ushort)Error);
             writer.WriteUint16LengthPrefixedBytes(Key);
@@ -113,8 +113,8 @@ namespace Makaretu.Dns
         public override void ReadData(PresentationReader reader)
         {
             Algorithm = reader.ReadDomainName();
-            Inception = reader.ReadUnixSeconds32();
-            Expiration = reader.ReadUnixSeconds32();
+            Inception = reader.ReadDateTime();
+            Expiration = reader.ReadDateTime();
             Mode = (KeyExchangeMode)reader.ReadUInt16();
             Error = (MessageStatus)reader.ReadUInt16();
             Key = Convert.FromBase64String(reader.ReadString());
@@ -125,8 +125,8 @@ namespace Makaretu.Dns
         public override void WriteData(PresentationWriter writer)
         {
             writer.WriteDomainName(Algorithm);
-            writer.WriteUInt32(Inception);
-            writer.WriteUInt32(Expiration);
+            writer.WriteDateTime(Inception);
+            writer.WriteDateTime(Expiration);
             writer.WriteUInt16((ushort)Mode);
             writer.WriteUInt16((ushort)Error);
             writer.WriteBase64String(Key);

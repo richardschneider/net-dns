@@ -23,12 +23,13 @@ namespace Makaretu.Dns
         [TestMethod]
         public void Roundtrip()
         {
+            var now = new DateTime(2018, 8, 13, 23, 59, 59, DateTimeKind.Utc);
             var a = new TKEYRecord
             {
                 Name = "host.example.com",
                 Algorithm = TSIGRecord.HMACSHA1,
-                Inception = 1,
-                Expiration = 2,
+                Inception = now,
+                Expiration = now.AddSeconds(15),
                 Mode = KeyExchangeMode.DiffieHellman,
                 Key = new byte[] { 1, 2, 3, 4 },
                 Error = MessageStatus.BadTime,
@@ -51,12 +52,13 @@ namespace Makaretu.Dns
         [TestMethod]
         public void Roundtrip_Master()
         {
+            var now = new DateTime(2018, 8, 13, 23, 59, 59, DateTimeKind.Utc);
             var a = new TKEYRecord
             {
                 Name = "host.example.com",
                 Algorithm = TSIGRecord.HMACSHA1,
-                Inception = 1,
-                Expiration = 2,
+                Inception = now,
+                Expiration = now.AddSeconds(15),
                 Mode = KeyExchangeMode.DiffieHellman,
                 Key = new byte[] { 1, 2, 3, 4 },
                 Error = MessageStatus.BadTime,
