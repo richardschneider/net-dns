@@ -14,6 +14,7 @@ namespace Makaretu.Dns
         [TestMethod]
         public void Roundtrip()
         {
+            var now = new DateTime(2018, 8, 13, 23, 59, 59);
             var a = new RRSIGRecord
             {
                 Name = "host.example.com",
@@ -22,8 +23,8 @@ namespace Makaretu.Dns
                 Algorithm = SecurityAlgorithm.RSASHA1,
                 Labels = 3,
                 OriginalTTL = TimeSpan.FromDays(2),
-                SignatureExpiration = 100,
-                SignatureInception = 1,
+                SignatureExpiration = now.AddMinutes(15),
+                SignatureInception = now,
                 KeyTag = 2642,
                 SignerName = "example.com",
                 Signature = new byte[] { 1, 2, 3}
@@ -37,8 +38,8 @@ namespace Makaretu.Dns
             Assert.AreEqual(a.Algorithm, b.Algorithm);
             Assert.AreEqual(a.Labels, b.Labels);
             Assert.AreEqual(a.OriginalTTL, b.OriginalTTL);
-            Assert.AreEqual(a.SignatureExpiration, b.SignatureExpiration);
-            Assert.AreEqual(a.SignatureInception, b.SignatureInception);
+            Assert.AreEqual(a.SignatureExpiration.ToUniversalTime(), b.SignatureExpiration);
+            Assert.AreEqual(a.SignatureInception.ToUniversalTime(), b.SignatureInception);
             Assert.AreEqual(a.KeyTag, b.KeyTag);
             Assert.AreEqual(a.SignerName, b.SignerName);
             CollectionAssert.AreEqual(a.Signature, b.Signature);
@@ -47,6 +48,7 @@ namespace Makaretu.Dns
         [TestMethod]
         public void Roundtrip_Master()
         {
+            var now = new DateTime(2018, 8, 13, 23, 59, 59);
             var a = new RRSIGRecord
             {
                 Name = "host.example.com",
@@ -55,8 +57,8 @@ namespace Makaretu.Dns
                 Algorithm = SecurityAlgorithm.RSASHA1,
                 Labels = 3,
                 OriginalTTL = TimeSpan.FromDays(2),
-                SignatureExpiration = 100,
-                SignatureInception = 1,
+                SignatureExpiration = now.AddMinutes(15),
+                SignatureInception = now,
                 KeyTag = 2642,
                 SignerName = "example.com",
                 Signature = new byte[] { 1, 2, 3 }
@@ -70,8 +72,8 @@ namespace Makaretu.Dns
             Assert.AreEqual(a.Algorithm, b.Algorithm);
             Assert.AreEqual(a.Labels, b.Labels);
             Assert.AreEqual(a.OriginalTTL, b.OriginalTTL);
-            Assert.AreEqual(a.SignatureExpiration, b.SignatureExpiration);
-            Assert.AreEqual(a.SignatureInception, b.SignatureInception);
+            Assert.AreEqual(a.SignatureExpiration.ToUniversalTime(), b.SignatureExpiration);
+            Assert.AreEqual(a.SignatureInception.ToUniversalTime(), b.SignatureInception);
             Assert.AreEqual(a.KeyTag, b.KeyTag);
             Assert.AreEqual(a.SignerName, b.SignerName);
             CollectionAssert.AreEqual(a.Signature, b.Signature);

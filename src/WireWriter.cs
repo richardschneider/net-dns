@@ -313,7 +313,7 @@ namespace Makaretu.Dns
         ///   Write a date/time.
         /// </summary>
         /// <param name="value">
-        ///   The <see cref="DateTime"/> to write.
+        ///   The <see cref="DateTime"/> in UTC to write.
         /// </param>
         /// <exception cref="OverflowException">
         ///   <paramref name="value"/> seconds cannot be represented
@@ -326,7 +326,7 @@ namespace Makaretu.Dns
         /// </remarks>
         public void WriteDateTime32(DateTime value)
         {
-            var seconds = (value - UnixEpoch).TotalSeconds;
+            var seconds = (value.ToUniversalTime() - UnixEpoch).TotalSeconds;
             WriteUInt32(Convert.ToUInt32(seconds));
         }
 
@@ -334,7 +334,7 @@ namespace Makaretu.Dns
         ///   Write a date/time.
         /// </summary>
         /// <param name="value">
-        ///   The <see cref="DateTime"/> to write.
+        ///   The <see cref="DateTime"/> in UTC to write.
         /// </param>
         /// <exception cref="OverflowException">
         ///   <paramref name="value"/> seconds cannot be represented
@@ -347,7 +347,7 @@ namespace Makaretu.Dns
         /// </remarks>
         public void WriteDateTime48(DateTime value)
         {
-            var seconds = (value - UnixEpoch).TotalSeconds;
+            var seconds = (value.ToUniversalTime() - UnixEpoch).TotalSeconds;
             WriteUInt48(Convert.ToUInt64(seconds));
         }
 

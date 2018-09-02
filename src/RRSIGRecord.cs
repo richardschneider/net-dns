@@ -62,17 +62,17 @@ namespace Makaretu.Dns
         ///   The end date for the <see cref="Signature"/>.
         /// </summary>
         /// <value>
-        ///   Number of seconds since 1970-0-01T00:00:00Z.
+        ///   The resolution is 1 second.
         /// </value>
-        public uint SignatureExpiration { get; set; }
+        public DateTime SignatureExpiration { get; set; }
 
         /// <summary>
         ///   The start date for the <see cref="Signature"/>.
         /// </summary>
         /// <value>
-        ///   Number of seconds since 1970-0-01T00:00:00Z.
+        ///   The resolution is 1 second.
         /// </value>
-        public uint SignatureInception { get; set; }
+        public DateTime SignatureInception { get; set; }
 
         /// <summary>
         ///   The key tag of the <see cref="DNSKEYRecord"/> that 
@@ -106,8 +106,8 @@ namespace Makaretu.Dns
             Algorithm = (SecurityAlgorithm)reader.ReadByte();
             Labels = reader.ReadByte();
             OriginalTTL = reader.ReadTimeSpan32();
-            SignatureExpiration = reader.ReadUInt32();
-            SignatureInception = reader.ReadUInt32();
+            SignatureExpiration = reader.ReadDateTime32();
+            SignatureInception = reader.ReadDateTime32();
             KeyTag = reader.ReadUInt16();
             SignerName = reader.ReadDomainName();
             Signature = reader.ReadBytes(end - reader.Position);
@@ -120,8 +120,8 @@ namespace Makaretu.Dns
             writer.WriteByte((byte)Algorithm);
             writer.WriteByte(Labels);
             writer.WriteTimeSpan32(OriginalTTL);
-            writer.WriteUInt32(SignatureExpiration);
-            writer.WriteUInt32(SignatureInception);
+            writer.WriteDateTime32(SignatureExpiration);
+            writer.WriteDateTime32(SignatureInception);
             writer.WriteUInt16(KeyTag);
             writer.WriteDomainName(SignerName, uncompressed: true);
             writer.WriteBytes(Signature);
@@ -134,8 +134,8 @@ namespace Makaretu.Dns
             Algorithm = (SecurityAlgorithm)reader.ReadByte();
             Labels = reader.ReadByte();
             OriginalTTL = reader.ReadTimeSpan32();
-            SignatureExpiration = reader.ReadUnixSeconds32();
-            SignatureInception = reader.ReadUnixSeconds32();
+            SignatureExpiration = reader.ReadDateTime();
+            SignatureInception = reader.ReadDateTime();
             KeyTag = reader.ReadUInt16();
             SignerName = reader.ReadDomainName();
             Signature = reader.ReadBase64String();
@@ -148,8 +148,8 @@ namespace Makaretu.Dns
             writer.WriteByte((byte)Algorithm);
             writer.WriteByte(Labels);
             writer.WriteTimeSpan32(OriginalTTL);
-            writer.WriteUInt32(SignatureExpiration);
-            writer.WriteUInt32(SignatureInception);
+            writer.WriteDateTime(SignatureExpiration);
+            writer.WriteDateTime(SignatureInception);
             writer.WriteUInt16(KeyTag);
             writer.WriteDomainName(SignerName);
             writer.WriteBase64String(Signature, appendSpace: false);
