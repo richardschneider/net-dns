@@ -1,0 +1,1223 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ResourceRecord
+   | DNS Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ResourceRecord
+   | DNS Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Makaretu.Dns.ResourceRecord">
+  
+  
+  <h1 id="Makaretu_Dns_ResourceRecord" data-uid="Makaretu.Dns.ResourceRecord" class="text-break">Class ResourceRecord
+  </h1>
+  <div class="markdown level0 summary"><p>Contains some information on the named resource.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="Makaretu.Dns.DnsObject.html">DnsObject</a></div>
+    <div class="level2"><span class="xref">ResourceRecord</span></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.AddressRecord.html">AddressRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.AFSDBRecord.html">AFSDBRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.CNAMERecord.html">CNAMERecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.DNAMERecord.html">DNAMERecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.DNSKEYRecord.html">DNSKEYRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.DSRecord.html">DSRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.HINFORecord.html">HINFORecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.MXRecord.html">MXRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.NSEC3PARAMRecord.html">NSEC3PARAMRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.NSEC3Record.html">NSEC3Record</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.NSECRecord.html">NSECRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.NSRecord.html">NSRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.NULLRecord.html">NULLRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.OPTRecord.html">OPTRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.PTRRecord.html">PTRRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.RPRecord.html">RPRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.RRSIGRecord.html">RRSIGRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.SOARecord.html">SOARecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.SRVRecord.html">SRVRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.TKEYRecord.html">TKEYRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.TSIGRecord.html">TSIGRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.TXTRecord.html">TXTRecord</a></div>
+      <div class="level3"><a class="xref" href="Makaretu.Dns.UnknownRecord.html">UnknownRecord</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Makaretu.Dns.IWireSerialiser.html">IWireSerialiser</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
+    <div><a class="xref" href="Makaretu.Dns.IPresentationSerialiser.html">IPresentationSerialiser</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_CreationTime">DnsObject.CreationTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Length">DnsObject.Length()</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Clone">DnsObject.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Clone__1">DnsObject.Clone&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_System_Byte___">DnsObject.Read(Byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_System_Byte___System_Int32_System_Int32_">DnsObject.Read(Byte[], Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_System_IO_Stream_">DnsObject.Read(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_ToByteArray">DnsObject.ToByteArray()</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Write_System_IO_Stream_">DnsObject.Write(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_NamesEquals_System_String_System_String_">DnsObject.NamesEquals(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Makaretu.Dns.html">Makaretu.Dns</a></h6>
+  <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
+  <h5 id="Makaretu_Dns_ResourceRecord_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ResourceRecord : DnsObject, IWireSerialiser, ICloneable, IPresentationSerialiser</code></pre>
+  </div>
+  <h5 id="Makaretu_Dns_ResourceRecord_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The <a class="xref" href="Makaretu.Dns.ResourceRegistry.html">ResourceRegistry</a> contains the metadata on known
+resource records. When reading, if the registry does not contain
+the record, then an <a class="xref" href="Makaretu.Dns.UnknownRecord.html">UnknownRecord</a> is used.</p>
+</div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_DefaultHostTTL.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.DefaultHostTTL%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L38">View Source</a>
+  </span>
+  <h4 id="Makaretu_Dns_ResourceRecord_DefaultHostTTL" data-uid="Makaretu.Dns.ResourceRecord.DefaultHostTTL">DefaultHostTTL</h4>
+  <div class="markdown level1 summary"><p>The default time interval that a resource record containing
+a host name maybe cached.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TimeSpan DefaultHostTTL</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><p>Defaults to 1 day.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_ResourceRecord_DefaultHostTTL_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Host names are in A, AAAA, and HINFO records.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_DefaultTTL.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.DefaultTTL%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L26">View Source</a>
+  </span>
+  <h4 id="Makaretu_Dns_ResourceRecord_DefaultTTL" data-uid="Makaretu.Dns.ResourceRecord.DefaultTTL">DefaultTTL</h4>
+  <div class="markdown level1 summary"><p>The default time interval that a resource record maybe cached.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TimeSpan DefaultTTL</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><p>Defaults to 1 day.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_CanonicalName.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.CanonicalName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L53">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_CanonicalName_" data-uid="Makaretu.Dns.ResourceRecord.CanonicalName*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_CanonicalName" data-uid="Makaretu.Dns.ResourceRecord.CanonicalName">CanonicalName</h4>
+  <div class="markdown level1 summary"><p>The canonical form of the owner name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CanonicalName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_ResourceRecord_CanonicalName_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>All uppercase US-ASCII letters in the <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Name">Name</a> are
+replaced by the corresponding lowercase US-ASCII letters.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Class.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Class%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L72">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_Class_" data-uid="Makaretu.Dns.ResourceRecord.Class*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_Class" data-uid="Makaretu.Dns.ResourceRecord.Class">Class</h4>
+  <div class="markdown level1 summary"><p>One of the RR CLASS codes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DnsClass Class { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DnsClass.html">DnsClass</a></td>
+        <td><p>Defaults to <a class="xref" href="Makaretu.Dns.DnsClass.html#Makaretu_Dns_DnsClass_IN">IN</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Name.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L44">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_Name_" data-uid="Makaretu.Dns.ResourceRecord.Name*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_Name" data-uid="Makaretu.Dns.ResourceRecord.Name">Name</h4>
+  <div class="markdown level1 summary"><p>An owner name, i.e., the name of the node to which this
+resource record pertains.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_TTL.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.TTL%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L88">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_TTL_" data-uid="Makaretu.Dns.ResourceRecord.TTL*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_TTL" data-uid="Makaretu.Dns.ResourceRecord.TTL">TTL</h4>
+  <div class="markdown level1 summary"><p>Specifies the time interval
+that the resource record may be cached before the source
+of the information should again be consulted. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan TTL { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><p>The resolution is 1 second. Defaults to 1 day.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_ResourceRecord_TTL_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Zero values are interpreted to mean that the RR can only be
+used for the transaction in progress, and should not be
+cached.</p>
+</div>
+  <h5 id="Makaretu_Dns_ResourceRecord_TTL_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_DefaultTTL">DefaultTTL</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Type.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L64">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_Type_" data-uid="Makaretu.Dns.ResourceRecord.Type*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_Type" data-uid="Makaretu.Dns.ResourceRecord.Type">Type</h4>
+  <div class="markdown level1 summary"><p>One of the RR TYPE codes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DnsType Type { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DnsType.html">DnsType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L230">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_Equals_" data-uid="Makaretu.Dns.ResourceRecord.Equals*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_Equals_System_Object_" data-uid="Makaretu.Dns.ResourceRecord.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Determines if the specified object is equal to the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The object to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><strong>true</strong> if the specified object is equal to the current object; otherwise, <strong>false</strong>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a></div>
+  <h5 id="Makaretu_Dns_ResourceRecord_Equals_System_Object__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Two Resource Records are considered equal if their <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Name">Name</a>, 
+<a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Class">Class</a>, <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Type">Type</a> and <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_GetData">GetData()</a>
+are equal. Note that the <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_TTL">TTL</a> field is explicitly 
+excluded from the comparison.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_GetData.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.GetData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L134">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_GetData_" data-uid="Makaretu.Dns.ResourceRecord.GetData*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_GetData" data-uid="Makaretu.Dns.ResourceRecord.GetData">GetData()</h4>
+  <div class="markdown level1 summary"><p>The resource specific data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] GetData()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><p>A byte array, never <strong>null</strong>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_ResourceRecord_GetData_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is referred to as the <code>RDATA</code> in the DNS spec.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_GetDataLength.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.GetDataLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L115">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_GetDataLength_" data-uid="Makaretu.Dns.ResourceRecord.GetDataLength*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_GetDataLength" data-uid="Makaretu.Dns.ResourceRecord.GetDataLength">GetDataLength()</h4>
+  <div class="markdown level1 summary"><p>The length of the resource specific data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetDataLength()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>Number of bytes to represent the resource specific data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_ResourceRecord_GetDataLength_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is referred to as the <code>RDLENGTH</code> in the DNS spec.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_GetHashCode.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L279">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_GetHashCode_" data-uid="Makaretu.Dns.ResourceRecord.GetHashCode*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_GetHashCode" data-uid="Makaretu.Dns.ResourceRecord.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_IsExpired_System_Nullable_System_DateTime__.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.IsExpired(System.Nullable%7BSystem.DateTime%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L100">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_IsExpired_" data-uid="Makaretu.Dns.ResourceRecord.IsExpired*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_IsExpired_System_Nullable_System_DateTime__" data-uid="Makaretu.Dns.ResourceRecord.IsExpired(System.Nullable{System.DateTime})">IsExpired(Nullable&lt;DateTime&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines if the <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_TTL">TTL</a> has expired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsExpired(DateTime? from = default(DateTime? ))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a>&gt;</td>
+        <td><span class="parametername">from</span></td>
+        <td><p>The time to compare against.  If <strong>null</strong>, the default value, then
+<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime.now#System_DateTime_Now">Now</a> is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><strong>true</strong> if the resource is no longer valid; otherwise <strong>false</strong>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_PresentationReader_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Read(Makaretu.Dns.PresentationReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L365">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_Read_" data-uid="Makaretu.Dns.ResourceRecord.Read*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_PresentationReader_" data-uid="Makaretu.Dns.ResourceRecord.Read(Makaretu.Dns.PresentationReader)">Read(PresentationReader)</h4>
+  <div class="markdown level1 summary"><p>Reads the text representation of a resource record.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ResourceRecord Read(PresentationReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.PresentationReader.html">PresentationReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td><p>The source of the <a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a></td>
+        <td><p>The final resource record.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_PresentationReader__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Reading a <a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a> will return a new instance that
+is type specific</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_WireReader_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Read(Makaretu.Dns.WireReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L145">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_Read_" data-uid="Makaretu.Dns.ResourceRecord.Read*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_WireReader_" data-uid="Makaretu.Dns.ResourceRecord.Read(Makaretu.Dns.WireReader)">Read(WireReader)</h4>
+  <div class="markdown level1 summary"><p>Reads the DNS object that is encoded in the wire format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IWireSerialiser Read(WireReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.WireReader.html">WireReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td><p>The source of the DNS object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.IWireSerialiser.html">IWireSerialiser</a></td>
+        <td><p>The final DNS object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_Makaretu_Dns_WireReader_">DnsObject.Read(WireReader)</a></div>
+  <h5 id="Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_WireReader__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Reading a <a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a> will return a new instance that
+is type specific unless the <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_GetDataLength">GetDataLength()</a>
+is zero.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Read_System_String_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Read(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L359">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_Read_" data-uid="Makaretu.Dns.ResourceRecord.Read*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_Read_System_String_" data-uid="Makaretu.Dns.ResourceRecord.Read(System.String)">Read(String)</h4>
+  <div class="markdown level1 summary"><p>Create a new <a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a> from the
+specified string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ResourceRecord Read(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The presentation format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_PresentationReader_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.ReadData(Makaretu.Dns.PresentationReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L380">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_ReadData_" data-uid="Makaretu.Dns.ResourceRecord.ReadData*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_PresentationReader_" data-uid="Makaretu.Dns.ResourceRecord.ReadData(Makaretu.Dns.PresentationReader)">ReadData(PresentationReader)</h4>
+  <div class="markdown level1 summary"><p>Read the textual representation of the data that is specific to 
+the resource record <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Type">Type</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ReadData(PresentationReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.PresentationReader.html">PresentationReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td><p>The source of the resource record&apos;s data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_PresentationReader__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Derived classes must implement this method.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_WireReader_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.ReadData(Makaretu.Dns.WireReader%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L185">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_ReadData_" data-uid="Makaretu.Dns.ResourceRecord.ReadData*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_WireReader_System_Int32_" data-uid="Makaretu.Dns.ResourceRecord.ReadData(Makaretu.Dns.WireReader,System.Int32)">ReadData(WireReader, Int32)</h4>
+  <div class="markdown level1 summary"><p>Read the data that is specific to the resource record <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Type">Type</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ReadData(WireReader reader, int length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.WireReader.html">WireReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td><p>The source of the resource record&apos;s data.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">length</span></td>
+        <td><p>The length, in bytes, of the data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_WireReader_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Derived classes must implement this method.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_ToString.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L295">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_ToString_" data-uid="Makaretu.Dns.ResourceRecord.ToString*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_ToString" data-uid="Makaretu.Dns.ResourceRecord.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns the textual representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The presentation format of this resource record. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Write_Makaretu_Dns_PresentationWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Write(Makaretu.Dns.PresentationWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L313">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_Write_" data-uid="Makaretu.Dns.ResourceRecord.Write*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_Write_Makaretu_Dns_PresentationWriter_" data-uid="Makaretu.Dns.ResourceRecord.Write(Makaretu.Dns.PresentationWriter)">Write(PresentationWriter)</h4>
+  <div class="markdown level1 summary"><p>Writes the text representation of a resource record.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Write(PresentationWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.PresentationWriter.html">PresentationWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>The destination of the <a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Write_Makaretu_Dns_WireWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Write(Makaretu.Dns.WireWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L190">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_Write_" data-uid="Makaretu.Dns.ResourceRecord.Write*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_Write_Makaretu_Dns_WireWriter_" data-uid="Makaretu.Dns.ResourceRecord.Write(Makaretu.Dns.WireWriter)">Write(WireWriter)</h4>
+  <div class="markdown level1 summary"><p>Writes the DNS object encoded in the wire format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Write(WireWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.WireWriter.html">WireWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>The destination of the DNS object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Write_Makaretu_Dns_WireWriter_">DnsObject.Write(WireWriter)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_WriteData_Makaretu_Dns_PresentationWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.WriteData(Makaretu.Dns.PresentationWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L342">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_WriteData_" data-uid="Makaretu.Dns.ResourceRecord.WriteData*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_WriteData_Makaretu_Dns_PresentationWriter_" data-uid="Makaretu.Dns.ResourceRecord.WriteData(Makaretu.Dns.PresentationWriter)">WriteData(PresentationWriter)</h4>
+  <div class="markdown level1 summary"><p>Write the textual representation of the data that is specific to 
+the resource record.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void WriteData(PresentationWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.PresentationWriter.html">PresentationWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>The destination for the resource record&apos;s data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_ResourceRecord_WriteData_Makaretu_Dns_PresentationWriter__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Derived classes should implement this method.
+<p>
+By default, this will write the hex encoding of
+the <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_GetData">GetData()</a> preceeded by
+&quot;#&quot; and the number integer bytes.
+</p></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_WriteData_Makaretu_Dns_WireWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.WriteData(Makaretu.Dns.WireWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L211">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_WriteData_" data-uid="Makaretu.Dns.ResourceRecord.WriteData*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_WriteData_Makaretu_Dns_WireWriter_" data-uid="Makaretu.Dns.ResourceRecord.WriteData(Makaretu.Dns.WireWriter)">WriteData(WireWriter)</h4>
+  <div class="markdown level1 summary"><p>Write the data that is specific to the resource record <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void WriteData(WireWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.WireWriter.html">WireWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>The destination for the DNS object&apos;s data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_ResourceRecord_WriteData_Makaretu_Dns_WireWriter__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Derived classes must implement this method.</p>
+</div>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_op_Equality_Makaretu_Dns_ResourceRecord_Makaretu_Dns_ResourceRecord_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.op_Equality(Makaretu.Dns.ResourceRecord%2CMakaretu.Dns.ResourceRecord)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L251">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_op_Equality_" data-uid="Makaretu.Dns.ResourceRecord.op_Equality*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_op_Equality_Makaretu_Dns_ResourceRecord_Makaretu_Dns_ResourceRecord_" data-uid="Makaretu.Dns.ResourceRecord.op_Equality(Makaretu.Dns.ResourceRecord,Makaretu.Dns.ResourceRecord)">Equality(ResourceRecord, ResourceRecord)</h4>
+  <div class="markdown level1 summary"><p>Value equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(ResourceRecord a, ResourceRecord b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_ResourceRecord_op_Equality_Makaretu_Dns_ResourceRecord_Makaretu_Dns_ResourceRecord__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Two Resource Records are considered equal if their <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Name">Name</a>, 
+<a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Class">Class</a>, <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Type">Type</a> and data fields
+are equal. Note that the <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_TTL">TTL</a> field is explicitly 
+excluded from the comparison.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_op_Inequality_Makaretu_Dns_ResourceRecord_Makaretu_Dns_ResourceRecord_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.op_Inequality(Makaretu.Dns.ResourceRecord%2CMakaretu.Dns.ResourceRecord)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L269">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_ResourceRecord_op_Inequality_" data-uid="Makaretu.Dns.ResourceRecord.op_Inequality*"></a>
+  <h4 id="Makaretu_Dns_ResourceRecord_op_Inequality_Makaretu_Dns_ResourceRecord_Makaretu_Dns_ResourceRecord_" data-uid="Makaretu.Dns.ResourceRecord.op_Inequality(Makaretu.Dns.ResourceRecord,Makaretu.Dns.ResourceRecord)">Inequality(ResourceRecord, ResourceRecord)</h4>
+  <div class="markdown level1 summary"><p>Value inequality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(ResourceRecord a, ResourceRecord b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.ResourceRecord.html">ResourceRecord</a></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_ResourceRecord_op_Inequality_Makaretu_Dns_ResourceRecord_Makaretu_Dns_ResourceRecord__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Two Resource Records are considered equal if their <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Name">Name</a>, 
+<a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Class">Class</a>, <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_Type">Type</a> and data fields
+are equal. Note that the <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_ResourceRecord_TTL">TTL</a> field is explicitly 
+excluded from the comparison.</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Makaretu.Dns.IWireSerialiser.html">IWireSerialiser</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icloneable">System.ICloneable</a>
+  </div>
+  <div>
+      <a class="xref" href="Makaretu.Dns.IPresentationSerialiser.html">IPresentationSerialiser</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

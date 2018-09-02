@@ -8,7 +8,7 @@
     <title>Message Truncation | DNS Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Message Truncation | DNS Model ">
-    <meta name="generator" content="docfx 2.38.1.0">
+    <meta name="generator" content="docfx 1.0.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -69,11 +69,11 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="message-truncation">Message Truncation</h1>
 
-<p>A <a href="xref:Makaretu.Dns.Message">DNS message</a> is typically sent over UDP which has a maximum packet size. 
-<a href="xref:Makaretu.Dns.Message.Truncate*">Truncate</a> is used to adjust the message response to fit into the packet size, 
-by removing <a href="xref:Makaretu.Dns.Message.AdditionalRecords">additional records</a> and then 
-<a href="xref:Makaretu.Dns.Message.AuthorityRecords">authority records</a>.</p>
-<p>If it is still too big, then the <a href="xref:Makaretu.Dns.Message.TC">TC bit</a> is set and the 
+<p>A <a class="xref" href="../api/Makaretu.Dns.Message.html">DNS message</a> is typically sent over UDP which has a maximum packet size. 
+<a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_Truncate_">Truncate</a> is used to adjust the message response to fit into the packet size, 
+by removing <a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AdditionalRecords">additional records</a> and then 
+<a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AuthorityRecords">authority records</a>.</p>
+<p>If it is still too big, then the <a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_TC">TC bit</a> is set and the 
 client is expected to send the query again over TCP.</p>
 </article>
           </div>

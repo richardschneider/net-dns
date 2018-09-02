@@ -1,0 +1,909 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class WireWriter
+   | DNS Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class WireWriter
+   | DNS Model ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Makaretu.Dns.WireWriter">
+  
+  
+  <h1 id="Makaretu_Dns_WireWriter" data-uid="Makaretu.Dns.WireWriter" class="text-break">Class WireWriter
+  </h1>
+  <div class="markdown level0 summary"><p>Methods to write DNS wire formatted data items.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">WireWriter</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Makaretu.Dns.html">Makaretu.Dns</a></h6>
+  <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
+  <h5 id="Makaretu_Dns_WireWriter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class WireWriter</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter__ctor_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.%23ctor(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L37">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter__ctor_" data-uid="Makaretu.Dns.WireWriter.#ctor*"></a>
+  <h4 id="Makaretu_Dns_WireWriter__ctor_System_IO_Stream_" data-uid="Makaretu.Dns.WireWriter.#ctor(System.IO.Stream)">WireWriter(Stream)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Makaretu.Dns.WireWriter.html">WireWriter</a> on the
+specified <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WireWriter(Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The destination for data items.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_Position.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.Position%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L28">View Source</a>
+  </span>
+  <h4 id="Makaretu_Dns_WireWriter_Position" data-uid="Makaretu.Dns.WireWriter.Position">Position</h4>
+  <div class="markdown level1 summary"><p>The writer relative position within the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Position</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_CanonicalForm.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.CanonicalForm%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L57">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_CanonicalForm_" data-uid="Makaretu.Dns.WireWriter.CanonicalForm*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_CanonicalForm" data-uid="Makaretu.Dns.WireWriter.CanonicalForm">CanonicalForm</h4>
+  <div class="markdown level1 summary"><p>Determines if canonical records are produced.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanonicalForm { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><strong>true</strong> to produce canonical records; otherwise <strong>false</strong>.
+Defaults to false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_WireWriter_CanonicalForm_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When enabled, the following rules are applied
+<ul><li>Domain names are uncompressed</li><li>Domain names are converted to US-ASCII lowercase</li></ul></p>
+</div>
+  <h5 id="Makaretu_Dns_WireWriter_CanonicalForm_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span><a href="https://tools.ietf.org/html/rfc4034#section-6.2">https://tools.ietf.org/html/rfc4034#section-6.2</a></span></div>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_PopLengthPrefixedScope.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.PopLengthPrefixedScope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L82">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_PopLengthPrefixedScope_" data-uid="Makaretu.Dns.WireWriter.PopLengthPrefixedScope*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_PopLengthPrefixedScope" data-uid="Makaretu.Dns.WireWriter.PopLengthPrefixedScope">PopLengthPrefixedScope()</h4>
+  <div class="markdown level1 summary"><p>Start a length prefixed stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort PopLengthPrefixedScope()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_WireWriter_PopLengthPrefixedScope_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A memory stream is created for writing.  When it is popped,
+the memory stream&apos;s position is writen as an UInt16 and its
+contents are copied to the current stream.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_PushLengthPrefixedScope.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.PushLengthPrefixedScope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L67">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_PushLengthPrefixedScope_" data-uid="Makaretu.Dns.WireWriter.PushLengthPrefixedScope*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_PushLengthPrefixedScope" data-uid="Makaretu.Dns.WireWriter.PushLengthPrefixedScope">PushLengthPrefixedScope()</h4>
+  <div class="markdown level1 summary"><p>Start a length prefixed stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushLengthPrefixedScope()</code></pre>
+  </div>
+  <h5 id="Makaretu_Dns_WireWriter_PushLengthPrefixedScope_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A memory stream is created for writing.  When it is popped,
+the memory stream&apos;s position is writen as an UInt16 and its
+contents are copied to the current stream.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteBitmap_System_Collections_Generic_IEnumerable_System_UInt16__.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteBitmap(System.Collections.Generic.IEnumerable%7BSystem.UInt16%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L348">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteBitmap_" data-uid="Makaretu.Dns.WireWriter.WriteBitmap*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteBitmap_System_Collections_Generic_IEnumerable_System_UInt16__" data-uid="Makaretu.Dns.WireWriter.WriteBitmap(System.Collections.Generic.IEnumerable{System.UInt16})">WriteBitmap(IEnumerable&lt;UInt16&gt;)</h4>
+  <div class="markdown level1 summary"><p>Write the bitmap(s) for the values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteBitmap(IEnumerable&lt;ushort&gt; values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint16">UInt16</a>&gt;</td>
+        <td><span class="parametername">values</span></td>
+        <td><p>The sequence of values to encode into a bitmap.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteByte_System_Byte_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteByte(System.Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L98">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteByte_" data-uid="Makaretu.Dns.WireWriter.WriteByte*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteByte_System_Byte_" data-uid="Makaretu.Dns.WireWriter.WriteByte(System.Byte)">WriteByte(Byte)</h4>
+  <div class="markdown level1 summary"><p>Write a byte.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteByte(byte value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteByteLengthPrefixedBytes_System_Byte___.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteByteLengthPrefixedBytes(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L128">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteByteLengthPrefixedBytes_" data-uid="Makaretu.Dns.WireWriter.WriteByteLengthPrefixedBytes*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteByteLengthPrefixedBytes_System_Byte___" data-uid="Makaretu.Dns.WireWriter.WriteByteLengthPrefixedBytes(System.Byte[])">WriteByteLengthPrefixedBytes(Byte[])</h4>
+  <div class="markdown level1 summary"><p>Write a sequence of bytes prefixed with the length as a byte.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteByteLengthPrefixedBytes(byte[] bytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">bytes</span></td>
+        <td><p>A sequence of bytes to write.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>When the length is greater than <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte.maxvalue">MaxValue</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteBytes_System_Byte___.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteBytes(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L110">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteBytes_" data-uid="Makaretu.Dns.WireWriter.WriteBytes*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteBytes_System_Byte___" data-uid="Makaretu.Dns.WireWriter.WriteBytes(System.Byte[])">WriteBytes(Byte[])</h4>
+  <div class="markdown level1 summary"><p>Write a sequence of bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteBytes(byte[] bytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">bytes</span></td>
+        <td><p>A sequence of bytes to write.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteDateTime48_System_DateTime_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteDateTime48(System.DateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L327">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteDateTime48_" data-uid="Makaretu.Dns.WireWriter.WriteDateTime48*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteDateTime48_System_DateTime_" data-uid="Makaretu.Dns.WireWriter.WriteDateTime48(System.DateTime)">WriteDateTime48(DateTime)</h4>
+  <div class="markdown level1 summary"><p>Write a date/time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteDateTime48(DateTime value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a> to write.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_WireWriter_WriteDateTime48_System_DateTime__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Write the <code data-dev-comment-type="paramref" class="paramref">value</code> as the number seconds
+since the Unix epoch.  The seconds is represented as 48-bit
+unsigned int</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> seconds cannot be represented
+in 48 bits.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteDomainName_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteDomainName(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L220">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteDomainName_" data-uid="Makaretu.Dns.WireWriter.WriteDomainName*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteDomainName_System_String_System_Boolean_" data-uid="Makaretu.Dns.WireWriter.WriteDomainName(System.String,System.Boolean)">WriteDomainName(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Write a domain name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteDomainName(string name, bool uncompressed = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name to write.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">uncompressed</span></td>
+        <td><p>Determines if the <code data-dev-comment-type="paramref" class="paramref">name</code> must be uncompressed.  The
+defaultl is false (allow compression).
+<a class="xref" href="Makaretu.Dns.WireWriter.html#Makaretu_Dns_WireWriter_CanonicalForm">CanonicalForm</a> overrides this value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_WireWriter_WriteDomainName_System_String_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A domain name is represented as a sequence of labels, where
+each label consists of a length octet followed by that
+number of octets.The domain name terminates with the
+zero length octet for the null label of the root. Note
+that this field may be an odd number of octets; no
+padding is used.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>When a label length is greater than 63 or is not ASCII.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteIPAddress_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteIPAddress(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L337">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteIPAddress_" data-uid="Makaretu.Dns.WireWriter.WriteIPAddress*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteIPAddress_System_Net_IPAddress_" data-uid="Makaretu.Dns.WireWriter.WriteIPAddress(System.Net.IPAddress)">WriteIPAddress(IPAddress)</h4>
+  <div class="markdown level1 summary"><p>Write an IP address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteIPAddress(IPAddress value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteString_System_String_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteString(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L273">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteString_" data-uid="Makaretu.Dns.WireWriter.WriteString*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteString_System_String_" data-uid="Makaretu.Dns.WireWriter.WriteString(System.String)">WriteString(String)</h4>
+  <div class="markdown level1 summary"><p>Write a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteString(string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_WireWriter_WriteString_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Strings are encoded with a length prefixed byte.  All strings must be
+ASCII.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>When the length is greater than <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte.maxvalue">MaxValue</a> or
+the string is not ASCII.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteTimeSpan16_System_TimeSpan_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteTimeSpan16(System.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L293">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteTimeSpan16_" data-uid="Makaretu.Dns.WireWriter.WriteTimeSpan16*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteTimeSpan16_System_TimeSpan_" data-uid="Makaretu.Dns.WireWriter.WriteTimeSpan16(System.TimeSpan)">WriteTimeSpan16(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Write a time span with 16-bits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteTimeSpan16(TimeSpan value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The number of non-negative seconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_WireWriter_WriteTimeSpan16_System_TimeSpan__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The interval is represented as the number of seconds in two bytes.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteTimeSpan32_System_TimeSpan_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteTimeSpan32(System.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L307">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteTimeSpan32_" data-uid="Makaretu.Dns.WireWriter.WriteTimeSpan32*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteTimeSpan32_System_TimeSpan_" data-uid="Makaretu.Dns.WireWriter.WriteTimeSpan32(System.TimeSpan)">WriteTimeSpan32(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Write a time span with 32-bits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteTimeSpan32(TimeSpan value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The number of non-negative seconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_WireWriter_WriteTimeSpan32_System_TimeSpan__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The interval is represented as the number of seconds in four bytes.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteUInt16_System_UInt16_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteUInt16(System.UInt16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L160">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteUInt16_" data-uid="Makaretu.Dns.WireWriter.WriteUInt16*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteUInt16_System_UInt16_" data-uid="Makaretu.Dns.WireWriter.WriteUInt16(System.UInt16)">WriteUInt16(UInt16)</h4>
+  <div class="markdown level1 summary"><p>Write an unsigned short.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteUInt16(ushort value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteUint16LengthPrefixedBytes_System_Byte___.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteUint16LengthPrefixedBytes(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L147">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteUint16LengthPrefixedBytes_" data-uid="Makaretu.Dns.WireWriter.WriteUint16LengthPrefixedBytes*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteUint16LengthPrefixedBytes_System_Byte___" data-uid="Makaretu.Dns.WireWriter.WriteUint16LengthPrefixedBytes(System.Byte[])">WriteUint16LengthPrefixedBytes(Byte[])</h4>
+  <div class="markdown level1 summary"><p>Write a sequence of bytes prefixed with the length as a unint16.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteUint16LengthPrefixedBytes(byte[] bytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">bytes</span></td>
+        <td><p>A sequence of bytes to write.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>When the length is greater than <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint16.maxvalue">MaxValue</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteUInt32_System_UInt32_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteUInt32(System.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L170">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteUInt32_" data-uid="Makaretu.Dns.WireWriter.WriteUInt32*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteUInt32_System_UInt32_" data-uid="Makaretu.Dns.WireWriter.WriteUInt32(System.UInt32)">WriteUInt32(UInt32)</h4>
+  <div class="markdown level1 summary"><p>Write an unsigned int.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteUInt32(uint value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteUInt48_System_UInt64_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteUInt48(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L182">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteUInt48_" data-uid="Makaretu.Dns.WireWriter.WriteUInt48*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteUInt48_System_UInt64_" data-uid="Makaretu.Dns.WireWriter.WriteUInt48(System.UInt64)">WriteUInt48(UInt64)</h4>
+  <div class="markdown level1 summary"><p>Write an unsigned long in 48 bits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteUInt48(ulong value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

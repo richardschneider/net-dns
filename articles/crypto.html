@@ -8,7 +8,7 @@
     <title>Cryptography | DNS Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Cryptography | DNS Model ">
-    <meta name="generator" content="docfx 2.38.1.0">
+    <meta name="generator" content="docfx 1.0.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,12 +70,12 @@
 <h1 id="cryptography">Cryptography</h1>
 
 <p>DNSSEC uses secure hashes and asymmetric keys to sign and authenticate 
-<a href="xref:Makaretu.Dns.ResourceRecord">resource records</a>.  The 
-<a href="xref:Makaretu.Dns.RRSIGRecord">RRSIG</a> is used to sign a group of resources of
-the same <a href="xref:Makaretu.Dns.DnsType">type</a>.  The 
-<a href="xref:Makaretu.Dns.DNSKEYRecord">DNSKEY</a> is used to verify the signature.</p>
+<a class="xref" href="../api/Makaretu.Dns.ResourceRecord.html">resource records</a>.  The 
+<a class="xref" href="../api/Makaretu.Dns.RRSIGRecord.html">RRSIG</a> is used to sign a group of resources of
+the same <a class="xref" href="../api/Makaretu.Dns.DnsType.html">type</a>.  The 
+<a class="xref" href="../api/Makaretu.Dns.DNSKEYRecord.html">DNSKEY</a> is used to verify the signature.</p>
 <h3 id="digest-registry">Digest Registry</h3>
-<p>The <a href="xref:Makaretu.Dns.DigestRegistry">digest registry</a> contains the implemented hash 
+<p>The <a class="xref" href="../api/Makaretu.Dns.DigestRegistry.html">digest registry</a> contains the implemented hash 
 algorithms (Sha1, Sha256, Sha384 and Sha512).</p>
 <p>To support a new digest type create its implementation and add it to registry.</p>
 <pre><code class="lang-csharp">public class ShaX : HashAlgorithm
@@ -85,7 +85,7 @@ algorithms (Sha1, Sha256, Sha384 and Sha512).</p>
 
 DigestRegisty.Digests.Add(DigestType.ShaX, () =&gt; ShaX.Create());
 </code></pre><h3 id="security-registry">Security Registry</h3>
-<p>The <a href="xref:Makaretu.Dns.SecurityAlgorithmRegistry">security registry</a> contains the implemented signing 
+<p>The <a class="xref" href="../api/Makaretu.Dns.SecurityAlgorithmRegistry.html">security registry</a> contains the implemented signing 
 algorithms.</p>
 </article>
           </div>
