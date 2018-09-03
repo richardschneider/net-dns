@@ -270,5 +270,38 @@ a._http._tcp SRV 0 5 80 mail
                 .ToArray();
             CollectionAssert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Include()
+        {
+            var dig = @"
+; <<>> DiG 9.9.5-3ubuntu0.15-Ubuntu <<>> +dnssec +split=8 +all com DNSKEY
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 33952
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags: do; udp: 512
+;; QUESTION SECTION:
+;com.				IN	DNSKEY
+
+;; ANSWER SECTION:
+com.			54254	IN	DNSKEY	256 3 8 AQPeabgR 6Fgrk5FS LilDYUed wsHA0HH2 2e8+Zp/u vp4aj1dV DAy5C9bk RA+xot3s G1KaT5hv goE7eNV9 3F7pBW9r vVE3A/BN vJbLXxKh kAJV5KMF C10NRcdb +xF+sM4X TMPESPrY wTLUEpSF ntMIVLAt UzLaBo6Y pTVR20os gGgc3Q==  ; ZSK; alg = RSASHA256; key id = 46475
+com.			54254	IN	DNSKEY	257 3 8 AQPDzldN mMvZFX4N cNJ0uEnK Dg7tmv/F 3MyQR0lp BmVcNcsI szxNFxsB fKNW9JYC Yqpik836 6LE7VbIc NRzfp2h9 OO8HRl+H +E08zauK 8k7evWEm u/6od+2b oggPoiEf GNyvNPaS I7FOIroD snw/tagg zHRX1Z7S OiOiPWPN IwSUyWOZ 79VmcQ1G LkC6NlYv G3HwYmyn Qv6oFwGv /KELSw7Z SdrbTQ0H XvZbqMUI 7BaMskmv gm1G7oKZ 1YiF7O9i oVNc0+7A SbqmZN7Z 98EGU/Qh 2K/BgUe8 Hs0XVcdP KrtyYnoQ Hd2ynKPc MMlTEih2 /2HDHjRP J2aywIpK Nnv4oPo/  ; KSK; alg = RSASHA256; key id = 30909
+com.			54254	IN	RRSIG	DNSKEY 8 1 86400 20180909182533 20180825182033 30909 com. k2uOB+mv 1Fu2Uy+g Y/vF4xQB oyUo8dgg 4d491Z6C Pi551Lh2 /oTWxVQX fWzE8rUk VBCNPkSH sC0BtInK 8iUOqqoE TDDt8wp3 u6zqzc3t 8nXBPIBD G9RIbciY HwxIQWWJ x55J5fcT Hv51nKqK jHCU0Tfr N95Lqg79 qwesU0E3 HP7Lvq9K UppCgnDx nYDxQqz4 Unq3F4Ts 1T+/lwNF xkUs2jY6 EGwIgNjW 0gpAJJJd bsd0pbsi Sn21ydMz pL+gpPru 0zQKHn67 r5kDUMxQ FnRd691C ZLUAWLBK 0NxSfXYS Xj+VjKAa 7WHgvNoU YPDfK216 4XKibHsb +BOAkj2X Aa04XA==
+
+;; Query time: 1 msec
+;; SERVER: 172.17.0.1#53(172.17.0.1)
+;; WHEN: Mon Sep 03 01:31:04 UTC 2018
+;; MSG SIZE  rcvd: 743
+";
+            var catalog = new Catalog();
+            var reader = new PresentationReader(new StringReader(dig));
+            catalog.Include(reader);
+            Assert.IsTrue(catalog.ContainsKey("com"));
+            var node = catalog["COM"];
+            Assert.AreEqual(3, node.Resources.Count);
+        }
     }
 }

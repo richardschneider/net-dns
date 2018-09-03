@@ -108,6 +108,7 @@ namespace Makaretu.Dns.Resolving
         /// </param>
         /// <param name="authoritative">
         ///   Indicates if the <paramref name="resource"/> is authoritative or cached.
+        ///   Only used when a <see cref="Node"/> is created.
         /// </param>
         /// <returns>
         ///   The <see cref="Node"/> that was created or updated.
@@ -165,6 +166,28 @@ namespace Makaretu.Dns.Resolving
             return root;
         }
 
+        /// <summary>
+        ///   Include the resource records.
+        /// </summary>
+        /// <param name="reader">
+        ///   The source of the resource records.
+        /// </param>
+        /// <param name="authoritative">
+        ///   Indicates if a <see cref="ResourceRecord"/> is authoritative or cached.
+        ///   Only used when a <see cref="Node"/> is created.
+        /// </param>
+        public void Include(PresentationReader reader, bool authoritative = false)
+        {
+            while (true)
+            {
+                var r = reader.ReadResourceRecord();
+                if (r == null)
+                {
+                    break;
+                }
+                Add(r, authoritative);
+            }
+        }
 
         /// <summary>
         ///   Get a sequence of nodes in canonical order.
