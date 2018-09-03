@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class WireWriter
    | DNS Model ">
-    <meta name="generator" content="docfx 1.0.0.0">
+    <meta name="generator" content="docfx 2.39.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -287,7 +287,7 @@ contents are copied to the current stream.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteBitmap_System_Collections_Generic_IEnumerable_System_UInt16__.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteBitmap(System.Collections.Generic.IEnumerable%7BSystem.UInt16%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L348">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L369">View Source</a>
   </span>
   <a id="Makaretu_Dns_WireWriter_WriteBitmap_" data-uid="Makaretu.Dns.WireWriter.WriteBitmap*"></a>
   <h4 id="Makaretu_Dns_WireWriter_WriteBitmap_System_Collections_Generic_IEnumerable_System_UInt16__" data-uid="Makaretu.Dns.WireWriter.WriteBitmap(System.Collections.Generic.IEnumerable{System.UInt16})">WriteBitmap(IEnumerable&lt;UInt16&gt;)</h4>
@@ -435,10 +435,66 @@ contents are copied to the current stream.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteDateTime48_System_DateTime_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteDateTime48(System.DateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteDateTime32_System_DateTime_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteDateTime32(System.DateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L327">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_WireWriter_WriteDateTime32_" data-uid="Makaretu.Dns.WireWriter.WriteDateTime32*"></a>
+  <h4 id="Makaretu_Dns_WireWriter_WriteDateTime32_System_DateTime_" data-uid="Makaretu.Dns.WireWriter.WriteDateTime32(System.DateTime)">WriteDateTime32(DateTime)</h4>
+  <div class="markdown level1 summary"><p>Write a date/time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteDateTime32(DateTime value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a> in UTC to write.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_WireWriter_WriteDateTime32_System_DateTime__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Write the <code data-dev-comment-type="paramref" class="paramref">value</code> as the number seconds
+since the Unix epoch.  The seconds is represented as 32-bit
+unsigned int</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.overflowexception">OverflowException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> seconds cannot be represented
+in 32 bits.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteDateTime48_System_DateTime_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteDateTime48(System.DateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L348">View Source</a>
   </span>
   <a id="Makaretu_Dns_WireWriter_WriteDateTime48_" data-uid="Makaretu.Dns.WireWriter.WriteDateTime48*"></a>
   <h4 id="Makaretu_Dns_WireWriter_WriteDateTime48_System_DateTime_" data-uid="Makaretu.Dns.WireWriter.WriteDateTime48(System.DateTime)">WriteDateTime48(DateTime)</h4>
@@ -462,7 +518,7 @@ contents are copied to the current stream.</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td><span class="parametername">value</span></td>
-        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a> to write.</p>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a> in UTC to write.</p>
 </td>
       </tr>
     </tbody>
@@ -482,7 +538,7 @@ unsigned int</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.overflowexception">OverflowException</a></td>
         <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> seconds cannot be represented
 in 48 bits.</p>
 </td>
@@ -560,7 +616,7 @@ padding is used.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_WireWriter_WriteIPAddress_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.WireWriter.WriteIPAddress(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L337">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/WireWriter.cs/#L358">View Source</a>
   </span>
   <a id="Makaretu_Dns_WireWriter_WriteIPAddress_" data-uid="Makaretu.Dns.WireWriter.WriteIPAddress*"></a>
   <h4 id="Makaretu_Dns_WireWriter_WriteIPAddress_System_Net_IPAddress_" data-uid="Makaretu.Dns.WireWriter.WriteIPAddress(System.Net.IPAddress)">WriteIPAddress(IPAddress)</h4>

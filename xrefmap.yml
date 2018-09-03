@@ -2801,6 +2801,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.PresentationReader.ReadByte
   nameWithType: PresentationReader.ReadByte
+- uid: Makaretu.Dns.PresentationReader.ReadDateTime
+  name: ReadDateTime()
+  href: api/Makaretu.Dns.PresentationReader.html#Makaretu_Dns_PresentationReader_ReadDateTime
+  commentId: M:Makaretu.Dns.PresentationReader.ReadDateTime
+  fullName: Makaretu.Dns.PresentationReader.ReadDateTime()
+  nameWithType: PresentationReader.ReadDateTime()
+- uid: Makaretu.Dns.PresentationReader.ReadDateTime*
+  name: ReadDateTime
+  href: api/Makaretu.Dns.PresentationReader.html#Makaretu_Dns_PresentationReader_ReadDateTime_
+  commentId: Overload:Makaretu.Dns.PresentationReader.ReadDateTime
+  isSpec: "True"
+  fullName: Makaretu.Dns.PresentationReader.ReadDateTime
+  nameWithType: PresentationReader.ReadDateTime
 - uid: Makaretu.Dns.PresentationReader.ReadDnsType
   name: ReadDnsType()
   href: api/Makaretu.Dns.PresentationReader.html#Makaretu_Dns_PresentationReader_ReadDnsType
@@ -2931,19 +2944,6 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.PresentationReader.ReadUInt32
   nameWithType: PresentationReader.ReadUInt32
-- uid: Makaretu.Dns.PresentationReader.ReadUnixSeconds32
-  name: ReadUnixSeconds32()
-  href: api/Makaretu.Dns.PresentationReader.html#Makaretu_Dns_PresentationReader_ReadUnixSeconds32
-  commentId: M:Makaretu.Dns.PresentationReader.ReadUnixSeconds32
-  fullName: Makaretu.Dns.PresentationReader.ReadUnixSeconds32()
-  nameWithType: PresentationReader.ReadUnixSeconds32()
-- uid: Makaretu.Dns.PresentationReader.ReadUnixSeconds32*
-  name: ReadUnixSeconds32
-  href: api/Makaretu.Dns.PresentationReader.html#Makaretu_Dns_PresentationReader_ReadUnixSeconds32_
-  commentId: Overload:Makaretu.Dns.PresentationReader.ReadUnixSeconds32
-  isSpec: "True"
-  fullName: Makaretu.Dns.PresentationReader.ReadUnixSeconds32
-  nameWithType: PresentationReader.ReadUnixSeconds32
 - uid: Makaretu.Dns.PresentationWriter
   name: PresentationWriter
   href: api/Makaretu.Dns.PresentationWriter.html
@@ -3008,6 +3008,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.PresentationWriter.WriteByte
   nameWithType: PresentationWriter.WriteByte
+- uid: Makaretu.Dns.PresentationWriter.WriteDateTime(System.DateTime,System.Boolean)
+  name: WriteDateTime(DateTime, Boolean)
+  href: api/Makaretu.Dns.PresentationWriter.html#Makaretu_Dns_PresentationWriter_WriteDateTime_System_DateTime_System_Boolean_
+  commentId: M:Makaretu.Dns.PresentationWriter.WriteDateTime(System.DateTime,System.Boolean)
+  fullName: Makaretu.Dns.PresentationWriter.WriteDateTime(System.DateTime, System.Boolean)
+  nameWithType: PresentationWriter.WriteDateTime(DateTime, Boolean)
+- uid: Makaretu.Dns.PresentationWriter.WriteDateTime*
+  name: WriteDateTime
+  href: api/Makaretu.Dns.PresentationWriter.html#Makaretu_Dns_PresentationWriter_WriteDateTime_
+  commentId: Overload:Makaretu.Dns.PresentationWriter.WriteDateTime
+  isSpec: "True"
+  fullName: Makaretu.Dns.PresentationWriter.WriteDateTime
+  nameWithType: PresentationWriter.WriteDateTime
 - uid: Makaretu.Dns.PresentationWriter.WriteDnsClass(Makaretu.Dns.DnsClass,System.Boolean)
   name: WriteDnsClass(DnsClass, Boolean)
   href: api/Makaretu.Dns.PresentationWriter.html#Makaretu_Dns_PresentationWriter_WriteDnsClass_Makaretu_Dns_DnsClass_System_Boolean_
@@ -3391,6 +3404,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Resolving.Catalog.Add
   nameWithType: Catalog.Add
+- uid: Makaretu.Dns.Resolving.Catalog.Include(Makaretu.Dns.PresentationReader,System.Boolean)
+  name: Include(PresentationReader, Boolean)
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_Include_Makaretu_Dns_PresentationReader_System_Boolean_
+  commentId: M:Makaretu.Dns.Resolving.Catalog.Include(Makaretu.Dns.PresentationReader,System.Boolean)
+  fullName: Makaretu.Dns.Resolving.Catalog.Include(Makaretu.Dns.PresentationReader, System.Boolean)
+  nameWithType: Catalog.Include(PresentationReader, Boolean)
+- uid: Makaretu.Dns.Resolving.Catalog.Include*
+  name: Include
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_Include_
+  commentId: Overload:Makaretu.Dns.Resolving.Catalog.Include
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.Catalog.Include
+  nameWithType: Catalog.Include
 - uid: Makaretu.Dns.Resolving.Catalog.IncludeRootHints
   name: IncludeRootHints()
   href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeRootHints
@@ -5780,6 +5806,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.WireReader.ReadBytes
   nameWithType: WireReader.ReadBytes
+- uid: Makaretu.Dns.WireReader.ReadDateTime32
+  name: ReadDateTime32()
+  href: api/Makaretu.Dns.WireReader.html#Makaretu_Dns_WireReader_ReadDateTime32
+  commentId: M:Makaretu.Dns.WireReader.ReadDateTime32
+  fullName: Makaretu.Dns.WireReader.ReadDateTime32()
+  nameWithType: WireReader.ReadDateTime32()
+- uid: Makaretu.Dns.WireReader.ReadDateTime32*
+  name: ReadDateTime32
+  href: api/Makaretu.Dns.WireReader.html#Makaretu_Dns_WireReader_ReadDateTime32_
+  commentId: Overload:Makaretu.Dns.WireReader.ReadDateTime32
+  isSpec: "True"
+  fullName: Makaretu.Dns.WireReader.ReadDateTime32
+  nameWithType: WireReader.ReadDateTime32
 - uid: Makaretu.Dns.WireReader.ReadDateTime48
   name: ReadDateTime48()
   href: api/Makaretu.Dns.WireReader.html#Makaretu_Dns_WireReader_ReadDateTime48
@@ -6035,6 +6074,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.WireWriter.WriteBytes
   nameWithType: WireWriter.WriteBytes
+- uid: Makaretu.Dns.WireWriter.WriteDateTime32(System.DateTime)
+  name: WriteDateTime32(DateTime)
+  href: api/Makaretu.Dns.WireWriter.html#Makaretu_Dns_WireWriter_WriteDateTime32_System_DateTime_
+  commentId: M:Makaretu.Dns.WireWriter.WriteDateTime32(System.DateTime)
+  fullName: Makaretu.Dns.WireWriter.WriteDateTime32(System.DateTime)
+  nameWithType: WireWriter.WriteDateTime32(DateTime)
+- uid: Makaretu.Dns.WireWriter.WriteDateTime32*
+  name: WriteDateTime32
+  href: api/Makaretu.Dns.WireWriter.html#Makaretu_Dns_WireWriter_WriteDateTime32_
+  commentId: Overload:Makaretu.Dns.WireWriter.WriteDateTime32
+  isSpec: "True"
+  fullName: Makaretu.Dns.WireWriter.WriteDateTime32
+  nameWithType: WireWriter.WriteDateTime32
 - uid: Makaretu.Dns.WireWriter.WriteDateTime48(System.DateTime)
   name: WriteDateTime48(DateTime)
   href: api/Makaretu.Dns.WireWriter.html#Makaretu_Dns_WireWriter_WriteDateTime48_System_DateTime_
