@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.DSRecord.html",
-          "hash": "Zt9h8DRIFl/uFM15B3oPUA=="
+          "hash": "LONuvx6VbZHEDQVouJBetA=="
         }
       },
       "is_incremental": false,
@@ -905,11 +905,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/msg-wire.md",
+      "source_relative_path": "articles/presentation.md",
       "output": {
         ".html": {
-          "relative_path": "articles/msg-wire.html",
-          "hash": "DA1ZxD3VUmO0U2AhB6F8Og=="
+          "relative_path": "articles/presentation.html",
+          "hash": "Fz1DlmaiopRWnY5niizQxw=="
         }
       },
       "is_incremental": false,
@@ -953,35 +953,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/rr-presentation.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/rr-presentation.html",
-          "hash": "GUcetQI+b6yw4l3jqQjFjw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/rr-registry.md",
       "output": {
         ".html": {
           "relative_path": "articles/rr-registry.html",
           "hash": "nsgvvIJMJCZG6uoCKIbklQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/rr-wire.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/rr-wire.html",
-          "hash": "i8OJaeMldgMGVYx/+8oe9w=="
         }
       },
       "is_incremental": false,
@@ -1005,7 +981,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "uXZPV6PHRSSAcKbxrchyZg=="
+          "hash": "od3mJI95c1ULJrYzKW2+1Q=="
         }
       },
       "is_incremental": false,
@@ -1018,6 +994,18 @@
         ".html": {
           "relative_path": "articles/truncate.html",
           "hash": "oR+/a65XNUR27qAqG1Xlbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/wire.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/wire.html",
+          "hash": "01Iy230f0/QCAP4zFw6+7Q=="
         }
       },
       "is_incremental": false,
@@ -1078,12 +1066,9 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "TocDocumentProcessor": {
@@ -1091,9 +1076,12 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ResourceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }

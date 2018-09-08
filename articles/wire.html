@@ -69,7 +69,14 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="wire-format">Wire Format</h1>
 
-<p>TODO</p>
+<p>The wire format is the binary representation of a <a class="xref" href="../api/Makaretu.Dns.DnsObject.html">DNS object</a>; 
+typically a <a href="message.html">Message</a> or a <a href="rr.html">Resource Record</a>.  The Write and Read methods, 
+defined in <a class="xref" href="../api/Makaretu.Dns.IWireSerialiser.html">IWireSerialiser</a>, are used to serialize and 
+deserialise a DNS object.  </p>
+<p>The <a class="xref" href="../api/Makaretu.Dns.WireWriter.html">WireWriter</a> and 
+<a class="xref" href="../api/Makaretu.Dns.WireReader.html">WireReader</a> classes are used to encode and decode data types. 
+Convenience methods to support a byte array or stream are 
+also defined.</p>
 </article>
           </div>
           
@@ -78,7 +85,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-dns/blob/master/doc/articles/msg-wire.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/doc/articles/wire.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
