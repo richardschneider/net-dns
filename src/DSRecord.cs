@@ -10,6 +10,9 @@ namespace Makaretu.Dns
     /// <summary>
     ///   Delegation Signer.
     /// </summary>
+    /// <remarks>
+    ///   Defined in <see href="https://tools.ietf.org/html/rfc4034#section-5">RFC 4034 section 5</see>.
+    /// </remarks>
     public class DSRecord : ResourceRecord
     {
         /// <summary>

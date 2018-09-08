@@ -3,10 +3,6 @@
 - name: Resource Records
   href: rr.md
   items:
-    - name: Wire Format
-      href: rr-wire.md
-    - name: Presentation Format
-      href: rr-presentation.md
     - name: Registry
       href: rr-registry.md
     - name: Equality
@@ -28,10 +24,12 @@
 - name: Message
   href: message.md
   items:
-    - name: Wire Format
-      href: msg-wire.md
     - name: Truncation
       href: truncate.md
+- name: Wire Format
+  href: wire.md
+- name: Presentation Format
+  href: presentation.md
 - name: Resolving
   href: resolving.md
 - name: Class Reference
