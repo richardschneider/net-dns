@@ -7,13 +7,13 @@ using System.Text;
 namespace Makaretu.Dns
 {
     /// <summary>
-    ///   Contains some information on an EDNS option.
+    ///   Contains some information on an Extended DNS option.
     /// </summary>
     /// <remarks>
     ///   EdnsOptions are found in the <see cref="OPTRecord"/>.
     ///   <para>
     ///   The <see cref="EdnsOptionRegistry"/> contains the metadata on known
-    ///   resource records. When reading, if the registry does not contain
+    ///   EDNS options. When reading, if the registry does not contain
     ///   the record, then an <see cref="UnknownEdnsOption"/> is used.
     ///   </para>
     /// </remarks>

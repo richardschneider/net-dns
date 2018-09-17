@@ -10,8 +10,10 @@ namespace Makaretu.Dns
     /// </summary>
     /// <remarks>
     ///  Padding is used to frustrate size-based correlation of the encrypted message.
+    ///  <para>
+    ///  Defined in <see href="https://tools.ietf.org/html/rfc7830">RFC 7830 - The EDNS(0) Padding Option</see>
+    ///  </para>
     /// </remarks>
-    /// <seealso href="https://tools.ietf.org/html/rfc7830"/>
     public class EdnsPaddingOption : EdnsOption
     {
         /// <summary>

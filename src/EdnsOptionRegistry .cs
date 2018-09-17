@@ -27,6 +27,9 @@ namespace Makaretu.Dns
             Register<EdnsPaddingOption>();
             Register<EdnsNSIDOption>();
             Register<EdnsKeepaliveOption>();
+            Register<EdnsDAUOption>();
+            Register<EdnsDHUOption>();
+            Register<EdnsN3UOption>();
         }
 
         /// <summary>
