@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EdnsOption
    | DNS Model ">
-    <meta name="generator" content="docfx 2.39.1.0">
+    <meta name="generator" content="docfx 2.39.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,14 +73,17 @@
   
   <h1 id="Makaretu_Dns_EdnsOption" data-uid="Makaretu.Dns.EdnsOption" class="text-break">Class EdnsOption
   </h1>
-  <div class="markdown level0 summary"><p>Contains some information on an EDNS option.</p>
+  <div class="markdown level0 summary"><p>Contains some information on an Extended DNS option.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">EdnsOption</span></div>
+      <div class="level2"><a class="xref" href="Makaretu.Dns.EdnsDAUOption.html">EdnsDAUOption</a></div>
+      <div class="level2"><a class="xref" href="Makaretu.Dns.EdnsDHUOption.html">EdnsDHUOption</a></div>
       <div class="level2"><a class="xref" href="Makaretu.Dns.EdnsKeepaliveOption.html">EdnsKeepaliveOption</a></div>
+      <div class="level2"><a class="xref" href="Makaretu.Dns.EdnsN3UOption.html">EdnsN3UOption</a></div>
       <div class="level2"><a class="xref" href="Makaretu.Dns.EdnsNSIDOption.html">EdnsNSIDOption</a></div>
       <div class="level2"><a class="xref" href="Makaretu.Dns.EdnsPaddingOption.html">EdnsPaddingOption</a></div>
       <div class="level2"><a class="xref" href="Makaretu.Dns.UnknownEdnsOption.html">UnknownEdnsOption</a></div>
@@ -119,7 +122,7 @@
   <div class="markdown level0 remarks"><p>EdnsOptions are found in the <a class="xref" href="Makaretu.Dns.OPTRecord.html">OPTRecord</a>.
 <p>
 The <a class="xref" href="Makaretu.Dns.EdnsOptionRegistry.html">EdnsOptionRegistry</a> contains the metadata on known
-resource records. When reading, if the registry does not contain
+EDNS options. When reading, if the registry does not contain
 the record, then an <a class="xref" href="Makaretu.Dns.UnknownEdnsOption.html">UnknownEdnsOption</a> is used.
 </p></p>
 </div>
