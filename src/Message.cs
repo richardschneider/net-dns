@@ -214,7 +214,7 @@ namespace Makaretu.Dns
         /// <value>
         ///   A list of authority resource records.
         /// </value>
-        public List<ResourceRecord> AuthorityRecords { get; } = new List<ResourceRecord>();
+        public List<ResourceRecord> AuthorityRecords { get; set;  } = new List<ResourceRecord>();
 
         /// <summary>
         ///   The list of additional records.

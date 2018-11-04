@@ -49,10 +49,19 @@ namespace Makaretu.Dns.Resolving
                     break;
             }
 
-            // Remove duplicate answers.
+            if (response.Answers.Count > 0)
+            {
+                response.Status = MessageStatus.NoError;
+            }
+
+            // Remove duplicate records.
             if (response.Answers.Count > 1)
             {
                 response.Answers = response.Answers.Distinct().ToList();
+            }
+            if (response.AuthorityRecords.Count > 1)
+            {
+                response.AuthorityRecords = response.AuthorityRecords.Distinct().ToList();
             }
 
             // Remove additional records that are also answers.
