@@ -218,6 +218,7 @@ namespace Makaretu.Dns.Resolving
             Assert.AreEqual(MessageStatus.NoError, response.Status);
             Assert.IsTrue(response.AA);
             Assert.AreEqual(2, response.Answers.Count);
+            Assert.AreEqual(1, response.AuthorityRecords.Count);
         }
 
         [TestMethod]

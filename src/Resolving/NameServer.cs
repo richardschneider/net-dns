@@ -54,10 +54,14 @@ namespace Makaretu.Dns.Resolving
                 response.Status = MessageStatus.NoError;
             }
 
-            // Remove duplicate answers.
+            // Remove duplicate records.
             if (response.Answers.Count > 1)
             {
                 response.Answers = response.Answers.Distinct().ToList();
+            }
+            if (response.AuthorityRecords.Count > 1)
+            {
+                response.AuthorityRecords = response.AuthorityRecords.Distinct().ToList();
             }
 
             // Remove additional records that are also answers.
