@@ -49,6 +49,11 @@ namespace Makaretu.Dns.Resolving
                     break;
             }
 
+            if (response.Answers.Count > 0)
+            {
+                response.Status = MessageStatus.NoError;
+            }
+
             // Remove duplicate answers.
             if (response.Answers.Count > 1)
             {
