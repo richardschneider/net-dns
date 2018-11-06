@@ -404,7 +404,7 @@ namespace Makaretu.Dns
             }
         }
 
-        static IEnumerable<Byte> ToBytes(BitArray bits, bool MSB = false)
+        static IEnumerable<byte> ToBytes(BitArray bits, bool MSB = false)
         {
             int bitCount = 7;
             int outByte = 0;

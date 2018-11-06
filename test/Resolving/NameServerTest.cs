@@ -1,10 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Makaretu.Dns.Resolving
 {
@@ -191,7 +188,7 @@ namespace Makaretu.Dns.Resolving
         [TestMethod]
         public async Task MultipleQuestions_AnswerAll()
         {
-            var resolver = new NameServer { Catalog = dotcom, AnswerAllQuestions = true};
+            var resolver = new NameServer { Catalog = dotcom, AnswerAllQuestions = true };
             var request = new Message();
             request.Questions.Add(new Question { Name = "ns.example.com", Type = DnsType.A });
             request.Questions.Add(new Question { Name = "ns.example.com", Type = DnsType.AAAA });
@@ -350,7 +347,7 @@ namespace Makaretu.Dns.Resolving
         [TestMethod]
         public async Task AdditionalRecords_NoDuplicates()
         {
-            var resolver = new NameServer { Catalog = dotorg,  AnswerAllQuestions = true };
+            var resolver = new NameServer { Catalog = dotorg, AnswerAllQuestions = true };
             var request = new Message();
             request.Questions.Add(new Question { Name = "example.org", Type = DnsType.NS });
             request.Questions.Add(new Question { Name = "ns1.example.org", Type = DnsType.A });
