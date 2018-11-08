@@ -197,7 +197,9 @@ namespace Makaretu.Dns.Resolving
         void AddAdditionalRecords(Message response)
         {
             var extras = new Message();
-            var resources = response.Answers.Concat(response.AuthorityRecords);
+            var resources = response.Answers
+                .Concat(response.AdditionalRecords)
+                .Concat(response.AuthorityRecords);
             var question = new Question();
             bool _;
             foreach (var resource in resources)
@@ -249,12 +251,19 @@ namespace Makaretu.Dns.Resolving
                 }
             }
 
-            // Add additional record with no duplication.
-            var records = extras.Answers
+            // Add extras with no duplication.
+            extras.Answers = extras.Answers
                 .Where(a => !response.Answers.Contains(a))
                 .Where(a => !response.AdditionalRecords.Contains(a))
-                .Distinct();
-            response.AdditionalRecords.AddRange(records);
+                .Distinct()
+                .ToList();
+            response.AdditionalRecords.AddRange(extras.Answers);
+
+            // Add additionals for any extras.
+            if (extras.Answers.Count > 0)
+            {
+                AddAdditionalRecords(response);
+            }
         }
 
         void FindAddresses(string name, DnsClass klass, Message response)

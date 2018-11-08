@@ -252,9 +252,10 @@ namespace Makaretu.Dns.Resolving
             Assert.IsTrue(response.AA);
             Assert.AreEqual(1, response.Answers.Count);
 
-            Assert.AreEqual(2, response.AdditionalRecords.Count);
+            Assert.AreEqual(3, response.AdditionalRecords.Count);
             Assert.IsTrue(response.AdditionalRecords.Any(a => a.Type == DnsType.SRV));
             Assert.IsTrue(response.AdditionalRecords.Any(a => a.Type == DnsType.TXT));
+            Assert.IsTrue(response.AdditionalRecords.Any(a => a.Type == DnsType.A));
         }
 
         [TestMethod]
