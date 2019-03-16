@@ -101,7 +101,9 @@ namespace Makaretu.Dns
                 TC = true,
                 RD = true,
                 RA = true,
-                Z = 7,
+                Z = 1,
+                AD = true,
+                CD = true,
                 Status = MessageStatus.Refused
             };
             var actual = new Message();
@@ -113,6 +115,8 @@ namespace Makaretu.Dns
             Assert.AreEqual(expected.RD, actual.RD);
             Assert.AreEqual(expected.RA, actual.RA);
             Assert.AreEqual(expected.Z, actual.Z);
+            Assert.AreEqual(expected.AD, actual.AD);
+            Assert.AreEqual(expected.CD, actual.CD);
             Assert.AreEqual(expected.Status, actual.Status);
         }
 

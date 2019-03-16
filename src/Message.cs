@@ -185,6 +185,33 @@ namespace Makaretu.Dns
         public int Z { get; set; }
 
         /// <summary>
+        ///   Authentic data.
+        /// </summary>
+        /// <value>
+        ///   <b>true</b> if the response data is authentic; otherwise, <b>false</b>.
+        /// </value>
+        /// <remarks>
+        ///   Only used in a response and indicates that
+        ///   all the data included in the <see cref="Answers"/> and 
+        ///   <see cref="AuthorityRecords"/> sections are authenticated by the 
+        ///   server according to its DNSSEC policies.
+        /// </remarks>
+        public bool AD { get; set; }
+
+        /// <summary>
+        ///   Checking disabled.
+        /// </summary>
+        /// <value>
+        ///   <b>true</b> if the query does not require 
+        ///   <see cref="AD">authenticated data</see>; otherwise, <b>false</b>.
+        /// </value>
+        /// <remarks>
+        ///   Only used in a query and indicates that pending (non-authenticated) 
+        ///   data is acceptable to the resolver sending the query.
+        /// </remarks>
+        public bool CD { get; set; }
+
+        /// <summary>
         ///     Response code - this 4 bit field is set as part of responses.
         /// </summary>
         /// <value>
@@ -309,7 +336,9 @@ namespace Makaretu.Dns
             RD = (flags & 0x0100) == 0x0100;
             RA = (flags & 0x0080) == 0x0080;
             opcode4 = (byte)((flags & 0x7800) >> 11);
-            Z = (flags & 0x0070) >> 4;
+            Z = (flags & 0x0040) >> 6;
+            AD = (flags & 0x0020) == 0x0020;
+            CD = (flags & 0x0010) == 0x0010;
             Status = (MessageStatus)(flags & 0x000F);
             var qdcount = reader.ReadUInt16();
             var ancount = reader.ReadUInt16();
@@ -350,7 +379,9 @@ namespace Makaretu.Dns
                 (Convert.ToInt32(TC) << 9) |
                 (Convert.ToInt32(RD) << 8) |
                 (Convert.ToInt32(RA) << 7) |
-                ((Z & 0x7) << 4) |
+                ((Z & 0x1) << 6) |
+                (Convert.ToInt32(AD) << 5) |
+                (Convert.ToInt32(CD) << 4) |
                 ((ushort)Status & 0xf);
             writer.WriteUInt16((ushort)flags);
             writer.WriteUInt16((ushort)Questions.Count);
