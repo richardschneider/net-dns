@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -392,6 +393,62 @@ namespace Makaretu.Dns
             foreach (var r in Answers) r.Write(writer);
             foreach (var r in AuthorityRecords) r.Write(writer);
             foreach (var r in AdditionalRecords) r.Write(writer);
+        }
+
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            using (var s = new StringWriter())
+            {
+                s.Write(";; Header:");
+                if (QR) s.Write(" QR");
+                if (AA) s.Write(" AA");
+                if (TC) s.Write(" TC");
+                if (RD) s.Write(" RD");
+                if (AD) s.Write(" AD");
+                if (CD) s.Write(" CD");
+                s.Write(" RCODE=");
+                s.Write(Status);
+                s.WriteLine();
+
+                s.WriteLine();
+                s.WriteLine(";; Question");
+                if (Questions.Count == 0)
+                {
+                    s.WriteLine(";;  (empty)");
+                }
+                else
+                {
+                    foreach (var q in Questions)
+                    {
+                        s.WriteLine(q.ToString());
+                    }
+                }
+
+                Stringify(s, "Answer", Answers);
+                Stringify(s, "Authority", AuthorityRecords);
+                Stringify(s, "Additional", AdditionalRecords);
+
+                return s.ToString();
+            }
+        }
+
+        void Stringify(StringWriter s, string title, List<ResourceRecord> records)
+        {
+            s.WriteLine();
+            s.Write(";; ");
+            s.WriteLine(title);
+            if (records.Count == 0)
+            {
+                s.WriteLine(";;  (empty)");
+            }
+            else
+            {
+                foreach (var r in records)
+                {
+                    s.WriteLine(r.ToString());
+                }
+            }
         }
     }
 }

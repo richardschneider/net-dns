@@ -52,5 +52,17 @@ namespace Makaretu.Dns
             writer.WriteUInt16((ushort)Type);
             writer.WriteUInt16((ushort)Class);
         }
+
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            var s = new StringBuilder();
+            s.Append(Name);
+            s.Append(' ');
+            s.Append(Class);
+            s.Append(' ');
+            s.Append(Type);
+            return s.ToString();
+        }
     }
 }

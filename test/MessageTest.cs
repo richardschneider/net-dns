@@ -256,5 +256,27 @@ namespace Makaretu.Dns
             var opt = expected.AdditionalRecords.OfType<OPTRecord>().Single();
             Assert.IsTrue(opt.DO, "dnssec ok");
         }
+
+        [TestMethod]
+        public void Stringify()
+        {
+            var m = new Message
+            {
+                AA = true,
+                QR = true,
+                Id = 1234
+            };
+            m.Questions.Add(new Question { Name = "emanon.org", Type=DnsType.A });
+            m.Answers.Add(new ARecord { Name = "emanon.org", Address = IPAddress.Parse("127.0.0.1") });
+            m.AuthorityRecords.Add(new SOARecord
+            {
+                Name = "emanon.org",
+                PrimaryName = "erehwon",
+                Mailbox = "hostmaster.emanon.org"
+            });
+
+            var text = m.ToString();
+            Console.WriteLine(text);
+        }
     }
 }
