@@ -32,6 +32,11 @@
   href: presentation.md
 - name: Resolving
   href: resolving.md
+  items:
+    - name: Catalog
+      href: catalog.md
+    - name: Name Server
+      href: name-server.md
 - name: Class Reference
   href: ../api/Makaretu.Dns.yml
   

@@ -16,7 +16,8 @@ namespace Makaretu.Dns.Resolving
     ///   This is a portion of the DNS distribute database.
     ///   <para>
     ///   The key is the case insensitive <see cref="Node.Name"/> and the value is a <see cref="Node"/>.
-    ///   </para>    /// </remarks>
+    ///   </para>
+    /// </remarks>
     public class Catalog : ConcurrentDictionary<string, Node>
     {
         /// <summary>
