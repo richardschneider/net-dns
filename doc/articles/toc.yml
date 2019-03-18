@@ -24,12 +24,19 @@
 - name: Message
   href: message.md
   items:
+    - name: Wire Format
+      href: wire.md
     - name: Truncation
       href: truncate.md
-- name: Wire Format
-  href: wire.md
-- name: Presentation Format
-  href: presentation.md
+- name: Master File
+  href: master-file.md
+  items:
+    - name: Loading
+    - name: Presentation Format
+      href: presentation.md
+      items:
+        - name: Directives
+        - name: Resource Records
 - name: Resolving
   href: resolving.md
   items:

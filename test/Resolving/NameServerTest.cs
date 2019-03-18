@@ -164,7 +164,7 @@ namespace Makaretu.Dns.Resolving
             request.Questions.Add(new Question { Name = "ns.example.com", Type = DnsType.A });
             request.Questions.Add(new Question { Name = "ns.example.com", Type = DnsType.AAAA });
             var response = await resolver.ResolveAsync(request);
-
+            Console.WriteLine(response);
             Assert.IsTrue(response.IsResponse);
             Assert.AreEqual(MessageStatus.NoError, response.Status);
             Assert.IsTrue(response.AA);

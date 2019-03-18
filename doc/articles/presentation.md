@@ -7,3 +7,5 @@ deserialise a record.
 
 The [PresentationWriter](xref:Makaretu.Dns.PresentationWriter) and 
 [PresentationReader](xref:Makaretu.Dns.PresentationReader) classes are used to encode and decode data types. 
+
+

@@ -63,6 +63,18 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void ReadResourceWithNameOfType()
+        {
+            var reader = new PresentationReader(new StringReader("A AAAA 127.0.0.1"));
+            var resource = reader.ReadResourceRecord();
+            Assert.AreEqual("A", resource.Name);
+            Assert.AreEqual(DnsClass.IN, resource.Class);
+            Assert.AreEqual(DnsType.A, resource.Type);
+            Assert.AreEqual(ResourceRecord.DefaultTTL, resource.TTL);
+            Assert.IsInstanceOfType(resource, typeof(ARecord));
+        }
+
+        [TestMethod]
         public void ReadResourceWithClassAndTTL()
         {
             var reader = new PresentationReader(new StringReader("me CH 63 A 127.0.0.1"));

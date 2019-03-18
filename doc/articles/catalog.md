@@ -7,5 +7,5 @@ Each [Node](xref:Makaretu.Dns.Resolving.Node) contains the
 
 ## Zone
 
-DNZ zones are represented by a Catalog and can be loaded from a [master file](presentation.md) 
+DNS zones are represented by a Catalog and can be loaded from a [master file](master-file.md) 
 with the [IncludeZone()](xref:Makaretu.Dns.Resolving.Catalog.IncludeZone*) method.
