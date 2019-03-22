@@ -1862,6 +1862,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Message.AA
   nameWithType: Message.AA
+- uid: Makaretu.Dns.Message.AD
+  name: AD
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AD
+  commentId: P:Makaretu.Dns.Message.AD
+  fullName: Makaretu.Dns.Message.AD
+  nameWithType: Message.AD
+- uid: Makaretu.Dns.Message.AD*
+  name: AD
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AD_
+  commentId: Overload:Makaretu.Dns.Message.AD
+  isSpec: "True"
+  fullName: Makaretu.Dns.Message.AD
+  nameWithType: Message.AD
 - uid: Makaretu.Dns.Message.AdditionalRecords
   name: AdditionalRecords
   href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AdditionalRecords
@@ -1901,6 +1914,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Message.AuthorityRecords
   nameWithType: Message.AuthorityRecords
+- uid: Makaretu.Dns.Message.CD
+  name: CD
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_CD
+  commentId: P:Makaretu.Dns.Message.CD
+  fullName: Makaretu.Dns.Message.CD
+  nameWithType: Message.CD
+- uid: Makaretu.Dns.Message.CD*
+  name: CD
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_CD_
+  commentId: Overload:Makaretu.Dns.Message.CD
+  isSpec: "True"
+  fullName: Makaretu.Dns.Message.CD
+  nameWithType: Message.CD
 - uid: Makaretu.Dns.Message.CreateResponse
   name: CreateResponse()
   href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_CreateResponse
@@ -2069,6 +2095,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Message.TC
   nameWithType: Message.TC
+- uid: Makaretu.Dns.Message.ToString
+  name: ToString()
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_ToString
+  commentId: M:Makaretu.Dns.Message.ToString
+  fullName: Makaretu.Dns.Message.ToString()
+  nameWithType: Message.ToString()
+- uid: Makaretu.Dns.Message.ToString*
+  name: ToString
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_ToString_
+  commentId: Overload:Makaretu.Dns.Message.ToString
+  isSpec: "True"
+  fullName: Makaretu.Dns.Message.ToString
+  nameWithType: Message.ToString
 - uid: Makaretu.Dns.Message.Truncate(System.Int32)
   name: Truncate(Int32)
   href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_Truncate_System_Int32_
@@ -3505,6 +3544,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Question.Read
   nameWithType: Question.Read
+- uid: Makaretu.Dns.Question.ToString
+  name: ToString()
+  href: api/Makaretu.Dns.Question.html#Makaretu_Dns_Question_ToString
+  commentId: M:Makaretu.Dns.Question.ToString
+  fullName: Makaretu.Dns.Question.ToString()
+  nameWithType: Question.ToString()
+- uid: Makaretu.Dns.Question.ToString*
+  name: ToString
+  href: api/Makaretu.Dns.Question.html#Makaretu_Dns_Question_ToString_
+  commentId: Overload:Makaretu.Dns.Question.ToString
+  isSpec: "True"
+  fullName: Makaretu.Dns.Question.ToString
+  nameWithType: Question.ToString
 - uid: Makaretu.Dns.Question.Type
   name: Type
   href: api/Makaretu.Dns.Question.html#Makaretu_Dns_Question_Type

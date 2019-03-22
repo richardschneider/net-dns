@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Resolving | DNS Model </title>
+    <title>Master File | DNS Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Resolving | DNS Model ">
+    <meta name="title" content="Master File | DNS Model ">
     <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,38 +67,26 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="resolving">Resolving</h1>
+<h1 id="master-file">Master File</h1>
 
-<p>The <a class="xref" href="../api/Makaretu.Dns.IResolver.html">IResolver</a> interface defines the
-<strong>ResolveAsync</strong> method that is used to answer a <a href="message.html">query message</a>.</p>
-<h2 id="resolvers">Resolvers</h2>
-<p>The following resolvers are available</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="name-server.html">NameServer</a></td>
-<td>Finds an answer in a <a href="catalog.html">Catalog</a></td>
-</tr>
-</tbody>
-</table>
+<p>A <code>master file</code> is a text file consisting or directives and resource records in 
+the <a href="presentation.html">presentation format</a>. Comments start with 
+a semi-colon (<code>;</code>) and blank lines are allowed.  The file is typically used to define 
+a DNS Zone.</p>
 <h2 id="example">Example</h2>
-<p>Getting the IPv4 addresses of <code>ns.example.com</code></p>
-<pre><code class="lang-csharp">IResolver resolver = ...
+<pre><code>; Set zone name and default timeout
+$ORIGIN example.org.
+$TTL 3600
 
-var query = new Message();
-query.Questions.Add(new Question { Name = &quot;ns.example.com&quot;, Type = DnsType.A });
-var answer = await resolver.ResolveAsync(request);
-</code></pre><p>The answer is</p>
-<pre><code>;; Header: QR AA RCODE=NoError
+@    SOA   ns1 username.example.org. ( 2007120710 1 2 4 1 )
+     NS    ns1
+     NS    ns2
+     MX    10 mail
 
-;; Answer
-ns.example.com 3600 IN A 192.0.2.2
+; Host addresses
+ns1  A     192.0.2.1
+ns2  A     192.0.2.2
+mail A     192.0.2.3
 </code></pre></article>
           </div>
           
@@ -107,7 +95,7 @@ ns.example.com 3600 IN A 192.0.2.2
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-dns/blob/master/doc/articles/resolving.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/doc/articles/master-file.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

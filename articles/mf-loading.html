@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Resolving | DNS Model </title>
+    <title>Master File Loading | DNS Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Resolving | DNS Model ">
+    <meta name="title" content="Master File Loading | DNS Model ">
     <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,38 +67,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="resolving">Resolving</h1>
+<h1 id="master-file-loading">Master File Loading</h1>
 
-<p>The <a class="xref" href="../api/Makaretu.Dns.IResolver.html">IResolver</a> interface defines the
-<strong>ResolveAsync</strong> method that is used to answer a <a href="message.html">query message</a>.</p>
-<h2 id="resolvers">Resolvers</h2>
-<p>The following resolvers are available</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="name-server.html">NameServer</a></td>
-<td>Finds an answer in a <a href="catalog.html">Catalog</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="example">Example</h2>
-<p>Getting the IPv4 addresses of <code>ns.example.com</code></p>
-<pre><code class="lang-csharp">IResolver resolver = ...
-
-var query = new Message();
-query.Questions.Add(new Question { Name = &quot;ns.example.com&quot;, Type = DnsType.A });
-var answer = await resolver.ResolveAsync(request);
-</code></pre><p>The answer is</p>
-<pre><code>;; Header: QR AA RCODE=NoError
-
-;; Answer
-ns.example.com 3600 IN A 192.0.2.2
+<p>A <a href="catalog.html">Catalog</a> is used to represent a <code>master file</code>. 
+The <a class="xref" href="../api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeZone_">IncludeZone()</a> method loads the data 
+into memory.</p>
+<pre><code class="lang-csharp">
 </code></pre></article>
           </div>
           
@@ -107,7 +81,7 @@ ns.example.com 3600 IN A 192.0.2.2
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/net-dns/blob/master/doc/articles/resolving.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/doc/articles/mf-loading.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
