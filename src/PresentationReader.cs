@@ -384,14 +384,14 @@ namespace Makaretu.Dns
                 {
                     if (c == ' ' || c == '\t' || c == '\r' || c == '\n')
                     {
-                        text.Read();
+                        c = text.Read();
                         previousChar = c;
                         continue;
                     }
                     if (c == ')')
                     {
                         --parenLevel;
-                        text.Read();
+                        c = text.Read();
                         previousChar = c;
                         break;
                     }
@@ -404,7 +404,7 @@ namespace Makaretu.Dns
             {
                 if (c == ' ' || c == '\t')
                 {
-                    text.Read();
+                    c = text.Read();
                     previousChar = c;
                     continue;
                 }
@@ -417,6 +417,9 @@ namespace Makaretu.Dns
                 previousChar = c;
                 return false;
             }
+
+            // At EOF, assume end of line
+            previousChar = '\n';
             return true;
         }
 
