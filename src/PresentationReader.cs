@@ -20,6 +20,8 @@ namespace Makaretu.Dns
         string defaultDomainName = null;
         int parenLevel = 0;
         int previousChar = '\n';  // Assume a newline
+        bool eolSeen = false;
+
         /// <summary>
         ///   Indicates that the token is at the begining of the line without
         ///   any leading whitespace.
@@ -400,6 +402,9 @@ namespace Makaretu.Dns
 
             }
 
+            if (eolSeen)
+                return true;
+
             while ((c = text.Peek()) >= 0)
             {
                 // Skip space or tab.
@@ -424,6 +429,8 @@ namespace Makaretu.Dns
             bool skipWhitespace = true;
             bool inquote = false;
             bool incomment = false;
+            eolSeen = false;
+
             while ((c = text.Read()) >= 0)
             {
                 // Comments are terminated by a newline.
@@ -517,6 +524,7 @@ namespace Makaretu.Dns
                 if (Char.IsWhiteSpace((char)c))
                 {
                     previousChar = c;
+                    eolSeen = c == '\r' || c == '\n';
                     break;
                 }
 

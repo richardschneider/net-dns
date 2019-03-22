@@ -328,6 +328,45 @@ mail3         IN  A     192.0.2.5             ; IPv4 address for mail3.example.c
         }
 
         [TestMethod]
+        public void ReadMultipleStrings3()
+        {
+            var expected = new List<string> { "abc", "def", "ghi" };
+            var reader = new PresentationReader(new StringReader("abc def (\rghi)\r"));
+            var actual = new List<string>();
+            while (!reader.IsEndOfLine())
+            {
+                actual.Add(reader.ReadString());
+            }
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReadMultipleStrings_LF()
+        {
+            var expected = new List<string> { "abc", "def" };
+            var reader = new PresentationReader(new StringReader("abc def\rghi"));
+            var actual = new List<string>();
+            while (!reader.IsEndOfLine())
+            {
+                actual.Add(reader.ReadString());
+            }
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReadMultipleStrings_CRLF()
+        {
+            var expected = new List<string> { "abc", "def" };
+            var reader = new PresentationReader(new StringReader("abc def\r\nghi"));
+            var actual = new List<string>();
+            while (!reader.IsEndOfLine())
+            {
+                actual.Add(reader.ReadString());
+            }
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ReadBase64String()
         {
             var expected = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
