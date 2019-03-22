@@ -126,7 +126,7 @@ ai.example.    3600 IN A   192.0.2.9
                               1rnF6Eav2zpZB3byI6yo2bwY8MNkr4A7cL9T
                               cMmDwV/hWFKsbGBsj8xSCN/caEL2CWY/5XP2
                               sZM6QjBBLmukH30+w1z3h8PUP2o= )
-                3600 NSEC b.example.A HINFO AAAA RRSIG NSEC
+                3600 NSEC b.example. A HINFO AAAA RRSIG NSEC
                 3600 RRSIG NSEC 5 2 3600 20040509183619 (
                               20040409183619 38519 example.
                               QoshyPevLcJ/xcRpEtMft1uoIrcrieVcc9pG
@@ -136,7 +136,7 @@ ai.example.    3600 IN A   192.0.2.9
                               AhS+JOVfDI/79QtyTI0SaDWcg8U= )
 b.example.     3600 IN NS  ns1.b.example.
                3600 IN NS  ns2.b.example.
-               3600 NSEC ns1.example.NS RRSIG NSEC
+               3600 NSEC ns1.example. NS RRSIG NSEC
                3600 RRSIG NSEC 5 2 3600 20040509183619 (
                               20040409183619 38519 example.
                               GNuxHn844wfmUhPzGWKJCPY5ttEX/RfjDoOx
@@ -154,7 +154,7 @@ ns1.example.   3600 IN A   192.0.2.1
                               im5FVpHtbFisdjyPq84bhTv8vrXt5AB1wNB+
                               +iAqvIfdgW4sFNC6oADb1hK8QNauw9VePJhK
                               v/iVXSYC0b7mPSU+EOlknFpVECs= )
-               3600 NSEC ns2.example.A RRSIG NSEC
+               3600 NSEC ns2.example. A RRSIG NSEC
                3600 RRSIG NSEC 5 2 3600 20040509183619 (
                               20040409183619 38519 example.
                               I4hj+Kt6+8rCcHcUdolks2S+Wzri9h3fHas8
@@ -170,7 +170,7 @@ ns2.example.   3600 IN A   192.0.2.2
                               yfPGQPC8KzGdE3vt5snFEAoE1Vn3mQqtu7SO
                               6amIjk13Kj/jyJ4nGmdRIc/3cM3ipXFhNTKq
                               rdhx8SZ0yy4ObIRzIzvBFLiSS8o = )
-               3600 NSEC  *.w.example.A RRSIG NSEC
+               3600 NSEC  *.w.example. A RRSIG NSEC
                3600 RRSIG NSEC 5 2 3600 20040509183619 (
                               20040409183619 38519 example.
                               N0QzHvaJf5NRw1rE9uxS1Ltb2LZ73Qb9bKGE
@@ -202,7 +202,7 @@ x.w.example.   3600 IN MX  1 xx.example.
                               H3U1qaYnDoN1DrWqmi9RJe4FoObkbcdm7P3I
                               kx70ePCoFgRz1Yq+bVVXCvGuAU4xALv3W/Y1
                               jNSlwZ2mSWKHfxFQxPtLj8s32+k= )
-               3600 NSEC x.y.w.example.MX RRSIG NSEC
+               3600 NSEC x.y.w.example. MX RRSIG NSEC
                3600 RRSIG NSEC 5 3 3600 20040509183619 (
                               20040409183619 38519 example.
                               aRbpHftxggzgMXdDlym9SsADqMZovZZl2QWK
@@ -218,7 +218,7 @@ x.y.w.example. 3600 IN MX  1 xx.example.
                               q1ub4q3SZgcbLMgexxIW3Va//LVrxkP6Xupq
                               GtOB9prkK54QTl/qZTXfMQpW480YOvVknhvb
                               +gLcMZBnHJ326nb/TOOmrqNmQQE= )
-               3600 NSEC xx.example.MX RRSIG NSEC
+               3600 NSEC xx.example. MX RRSIG NSEC
                3600 RRSIG NSEC 5 4 3600 20040509183619 (
                               20040409183619 38519 example.
                               OvE6WUzN2ziieJcvKPWbCAyXyP6ef8cr6Csp
@@ -250,7 +250,7 @@ xx.example.    3600 IN A   192.0.2.10
                               ulyQkssz2QHrVrPuTMS22knudCiwP4LWpVTr
                               U4zfeA+rDz9stmSBP/4PekH/x2IoAYnwctd/
                               xS9cL2QgW7FChw16mzlkH6/vsfs= )
-               3600 NSEC example.A HINFO AAAA RRSIG NSEC
+               3600 NSEC example. A HINFO AAAA RRSIG NSEC
                3600 RRSIG NSEC 5 2 3600 20040509183619 (
                               20040409183619 38519 example.
                               ZFWUln6Avc8bmGl5GFjD3BwT530DUZKHNuoY
