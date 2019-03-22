@@ -35,7 +35,7 @@ DNS data model with serializer/deserializer for the wire and "master file" forma
 - Targets .Net Framework 4.5 and 4.7.2 and .NET Standard 1.4 and 2.0
 - CI on Travis (Ubuntu Trusty and OSX) and AppVeyor (Windows Server 2016)
 
-## Getting started.
+## Getting started
 
 Published releases are available on [NuGet](https://www.nuget.org/packages/Makaretu.Dns/).  To install, run the following command in the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
 
