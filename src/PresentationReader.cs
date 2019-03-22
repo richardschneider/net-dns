@@ -402,6 +402,7 @@ namespace Makaretu.Dns
 
             while ((c = text.Peek()) >= 0)
             {
+                // Skip space or tab.
                 if (c == ' ' || c == '\t')
                 {
                     c = text.Read();
@@ -409,17 +410,10 @@ namespace Makaretu.Dns
                     continue;
                 }
 
-                if (c == '\r' || c == '\n' || c == ';')
-                {
-                    previousChar = c;
-                    return true;
-                }
-                previousChar = c;
-                return false;
+                return c == '\r' || c == '\n' || c == ';';
             }
 
-            // At EOF, assume end of line
-            previousChar = '\n';
+            // EOF is end of line
             return true;
         }
 
