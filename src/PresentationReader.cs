@@ -19,6 +19,12 @@ namespace Makaretu.Dns
         TimeSpan? defaultTTL = null;
         string defaultDomainName = null;
         int parenLevel = 0;
+        int previousChar = '\n';  // Assume a newline
+        /// <summary>
+        ///   Indicates that the token is at the begining of the line without
+        ///   any leading whitespace.
+        /// </summary>
+        bool tokenStartsNewLine = false;
 
         /// <summary>
         ///   The reader relative position within the stream.
@@ -32,7 +38,7 @@ namespace Makaretu.Dns
         /// <param name="text">
         ///   The source for data items.
         /// </param>
-        public PresentationReader(System.IO.TextReader text)
+        public PresentationReader(TextReader text)
         {
             this.text = text;
         }
@@ -292,24 +298,28 @@ namespace Makaretu.Dns
                     return null;
                 }
 
-                // Is origin?
-                if (token == "$ORIGIN")
+                // Domain names and directives must be at the start of a line.
+                if (tokenStartsNewLine)
                 {
-                    Origin = ReadToken();
-                    continue;
-                }
-                if (token == "@")
-                {
-                    domainName = Origin;
+                    switch (token)
+                    {
+                        case "$ORIGIN":
+                            Origin = ReadToken();
+                            break;
+                        case "$TTL":
+                            defaultTTL = ttl = ReadTimeSpan32();
+                            break;
+                        case "@":
+                            domainName = Origin;
+                            break;
+                        default:
+                            domainName = token;
+                            break;
+                    }
                     continue;
                 }
 
                 // Is TTL?
-                if (token == "$TTL")
-                {
-                    defaultTTL = ttl = ReadTimeSpan32();
-                    continue;
-                }
                 if (token.All(c => Char.IsDigit(c)))
                 {
                     ttl = TimeSpan.FromSeconds(uint.Parse(token));
@@ -340,8 +350,7 @@ namespace Makaretu.Dns
                     continue;
                 }
 
-                // Must be domain name.
-                domainName = token;
+                throw new InvalidDataException($"Unknown token '{token}', expected a Class, Type or TTL.");
             }
 
             defaultDomainName = domainName;
@@ -376,12 +385,14 @@ namespace Makaretu.Dns
                     if (c == ' ' || c == '\t' || c == '\r' || c == '\n')
                     {
                         text.Read();
+                        previousChar = c;
                         continue;
                     }
                     if (c == ')')
                     {
                         --parenLevel;
                         text.Read();
+                        previousChar = c;
                         break;
                     }
                     return false;
@@ -394,13 +405,16 @@ namespace Makaretu.Dns
                 if (c == ' ' || c == '\t')
                 {
                     text.Read();
+                    previousChar = c;
                     continue;
                 }
 
                 if (c == '\r' || c == '\n' || c == ';')
                 {
+                    previousChar = c;
                     return true;
                 }
+                previousChar = c;
                 return false;
             }
             return true;
@@ -423,12 +437,15 @@ namespace Makaretu.Dns
                         incomment = false;
                         skipWhitespace = true;
                     }
+                    previousChar = c;
                     continue;
                 }
 
                 // Handle escaped character.
                 if (c == '\\')
                 {
+                    previousChar = c;
+
                     // Handle octal escapes \DDD
                     int ndigits = 0;
                     int oc = 0;
@@ -450,6 +467,7 @@ namespace Makaretu.Dns
 
                     sb.Append((char)c);
                     skipWhitespace = false;
+                    previousChar = (char)c;
                     continue;
                 }
 
@@ -465,11 +483,13 @@ namespace Makaretu.Dns
                     {
                         sb.Append((char)c);
                     }
+                    previousChar = c;
                     continue;
                 }
                 if (c == '"')
                 {
                     inquote = true;
+                    previousChar = c;
                     continue;
                 }
 
@@ -485,17 +505,21 @@ namespace Makaretu.Dns
                     c = ' ';
                 }
 
-                // Skip whitespace.
+                // Skip leading whitespace.
                 if (skipWhitespace)
                 {
                     if (Char.IsWhiteSpace((char)c))
                     {
+                        previousChar = c;
                         continue;
                     }
                     skipWhitespace = false;
                 }
+
+                // Trailing whitespace, ends the token.
                 if (Char.IsWhiteSpace((char)c))
                 {
+                    previousChar = c;
                     break;
                 }
 
@@ -503,11 +527,17 @@ namespace Makaretu.Dns
                 if (c == ';')
                 {
                     incomment = true;
+                    previousChar = c;
                     continue;
-
                 }
 
+                // Default handling, use the character as part of the token.
+                if (sb.Length == 0)
+                {
+                    tokenStartsNewLine = previousChar == '\r' || previousChar == '\n';
+                }
                 sb.Append((char)c);
+                previousChar = c;
             }
 
             return sb.ToString();
