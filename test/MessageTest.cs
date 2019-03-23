@@ -258,6 +258,22 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void Dnssec_Bit()
+        {
+            var message = new Message();
+            Assert.IsFalse(message.DO);
+            Assert.AreEqual(0, message.AdditionalRecords.OfType<OPTRecord>().Count());
+
+            message.DO = false;
+            Assert.IsFalse(message.DO);
+            Assert.AreEqual(1, message.AdditionalRecords.OfType<OPTRecord>().Count());
+
+            message.DO = true;
+            Assert.IsTrue(message.DO);
+            Assert.AreEqual(1, message.AdditionalRecords.OfType<OPTRecord>().Count());
+        }
+
+        [TestMethod]
         public void Stringify()
         {
             var m = new Message

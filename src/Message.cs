@@ -213,6 +213,37 @@ namespace Makaretu.Dns
         public bool CD { get; set; }
 
         /// <summary>
+        ///   Indicates that DNS Security Extensions (DNSSEC) are supported.
+        /// </summary>
+        /// <value>
+        ///   <b>true</b> if DNSSEC is supported; otherwise, <b>false</b>.
+        /// </value>
+        /// <remarks>
+        ///   The <b>DO</b> bit is actually in the <see cref="OPTRecord"/>, when setting
+        ///   the record will is added to <see cref="AdditionalRecords"/> if not already present.
+        /// </remarks>
+        /// <seealso cref="UseDnsSecurity"/>
+        /// <seealso href="https://tools.ietf.org/html/rfc3225"/>
+        public bool DO
+        {
+            get
+            {
+                var opt = AdditionalRecords.OfType<OPTRecord>().FirstOrDefault();
+                return opt?.DO ?? false;
+            }
+            set
+            {
+                var opt = AdditionalRecords.OfType<OPTRecord>().FirstOrDefault();
+                if (opt == null)
+                {
+                    opt = new OPTRecord();
+                    AdditionalRecords.Add(opt);
+                }
+                opt.DO = value;
+            }
+        }
+
+        /// <summary>
         ///     Response code - this 4 bit field is set as part of responses.
         /// </summary>
         /// <value>
@@ -313,16 +344,10 @@ namespace Makaretu.Dns
         ///   Sets <see cref="OPTRecord.DO"/> to <b>true</b>.  Adds an <see cref="OPTRecord"/> to
         ///   <see cref="AdditionalRecords"/> if not already present.
         /// </remarks>
+        /// <seealso cref="DO"/>
         public Message UseDnsSecurity()
         {
-            var opt = AdditionalRecords.OfType<OPTRecord>().FirstOrDefault();
-            if (opt == null)
-            {
-                opt = new OPTRecord();
-                AdditionalRecords.Add(opt);
-            }
-            opt.DO = true;
-
+            DO = true;
             return this;
         }
 
