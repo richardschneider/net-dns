@@ -217,7 +217,7 @@ namespace Makaretu.Dns.Resolving
             Assert.AreEqual(MessageStatus.NoError, response.Status);
             Assert.IsTrue(response.AA);
             Assert.AreEqual(2, response.Answers.Count);
-            Assert.AreEqual(1, response.AuthorityRecords.Count);
+            Assert.AreEqual(3, response.AuthorityRecords.Count);
         }
 
         [TestMethod]
@@ -233,7 +233,7 @@ namespace Makaretu.Dns.Resolving
             Assert.IsTrue(response.AA);
             Assert.AreEqual(1, response.Answers.Count);
 
-            Assert.AreEqual(1, response.AdditionalRecords.Count);
+            Assert.AreEqual(2, response.AdditionalRecords.Count);
             Assert.AreEqual(DnsType.A, response.AdditionalRecords[0].Type);
             Assert.AreEqual("ns1.example.org", response.AdditionalRecords[0].Name);
         }
@@ -251,7 +251,6 @@ namespace Makaretu.Dns.Resolving
             Assert.IsTrue(response.AA);
             Assert.AreEqual(1, response.Answers.Count);
 
-            Assert.AreEqual(3, response.AdditionalRecords.Count);
             Assert.IsTrue(response.AdditionalRecords.Any(a => a.Type == DnsType.SRV));
             Assert.IsTrue(response.AdditionalRecords.Any(a => a.Type == DnsType.TXT));
             Assert.IsTrue(response.AdditionalRecords.Any(a => a.Type == DnsType.A));
@@ -287,7 +286,7 @@ namespace Makaretu.Dns.Resolving
             Assert.IsTrue(response.AA);
             Assert.AreEqual(1, response.Answers.Count);
 
-            Assert.AreEqual(1, response.AdditionalRecords.Count);
+            Assert.AreEqual(2, response.AdditionalRecords.Count);
             Assert.AreEqual(DnsType.A, response.AdditionalRecords[0].Type);
             Assert.AreEqual("ns1.example.org", response.AdditionalRecords[0].Name);
         }
@@ -305,7 +304,6 @@ namespace Makaretu.Dns.Resolving
             Assert.IsTrue(response.AA);
             Assert.AreEqual(1, response.Answers.Count);
 
-            Assert.AreEqual(2, response.AdditionalRecords.Count);
             Assert.IsTrue(response.AdditionalRecords.OfType<TXTRecord>().Any());
             Assert.IsTrue(response.AdditionalRecords.OfType<ARecord>().Any());
         }
@@ -324,8 +322,8 @@ namespace Makaretu.Dns.Resolving
             Assert.AreEqual(1, response.Answers.Count);
             Assert.IsTrue(response.Answers.All(r => r.Type == DnsType.A));
 
-            Assert.AreEqual(1, response.AdditionalRecords.Count);
-            Assert.IsTrue(response.AdditionalRecords.All(r => r.Type == DnsType.AAAA));
+            Assert.IsTrue(response.AdditionalRecords.Any(r => 
+                r.Name == "example.com" && r.Type == DnsType.AAAA));
         }
 
         [TestMethod]
@@ -342,8 +340,8 @@ namespace Makaretu.Dns.Resolving
             Assert.AreEqual(1, response.Answers.Count);
             Assert.IsTrue(response.Answers.All(r => r.Type == DnsType.AAAA));
 
-            Assert.AreEqual(1, response.AdditionalRecords.Count);
-            Assert.IsTrue(response.AdditionalRecords.All(r => r.Type == DnsType.A));
+            Assert.IsTrue(response.AdditionalRecords.Any(r =>
+                r.Name == "example.com" && r.Type == DnsType.A));
         }
 
         [TestMethod]

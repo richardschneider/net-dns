@@ -99,14 +99,28 @@ namespace Makaretu.Dns.Resolving
         public async Task<Message> ResolveAsync(Question question, Message response = null, CancellationToken cancel = default(CancellationToken))
         {
             response = response ?? new Message { QR = true };
+
+            // Get answer and details of the domain.
             bool found = await FindAnswerAsync(question, response, cancel);
+            var soa = FindAuthority(question.Name);
             if (!found && response.Status == MessageStatus.NoError)
+            {
                 response.Status = MessageStatus.NameError;
+            }
+
+            // Add the NS records for the answered domain into the
+            // the authority section.
+            if (found && soa != null)
+            {
+                var res = new Message();
+                var q = new Question { Name = soa.Name, Class = soa.Class, Type = DnsType.NS };
+                await FindAnswerAsync(q, res, cancel);
+                response.AuthorityRecords.AddRange(res.Answers.OfType<NSRecord>());
+            }
 
             // If a name error, then add the domain authority.
             if (response.Status == MessageStatus.NameError)
             {
-                SOARecord soa = FindAuthority(question.Name);
                 if (soa != null)
                 {
                     response.AuthorityRecords.Add(soa);

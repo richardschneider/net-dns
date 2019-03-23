@@ -65,6 +65,8 @@ namespace Makaretu.Dns.Resolving
         [TestMethod]
         public async Task SecureQueryHasSignature()
         {
+            // See https://tools.ietf.org/html/rfc4035#appendix-B.1
+
             var resolver = new NameServer { Catalog = example };
             var request = new Message().UseDnsSecurity();
             request.Questions.Add(new Question { Name = "x.w.example", Type = DnsType.MX });
@@ -74,9 +76,15 @@ namespace Makaretu.Dns.Resolving
             Assert.AreEqual(MessageStatus.NoError, response.Status);
             Assert.IsTrue(response.AA);
             Assert.IsTrue(response.DO);
+
             Assert.AreEqual(2, response.Answers.Count);
             Assert.AreEqual(1, response.Answers.OfType<MXRecord>().Count());
             Assert.AreEqual(1, response.Answers.OfType<RRSIGRecord>().Count());
+
+            Assert.AreEqual(3, response.AuthorityRecords.Count);
+            Assert.AreEqual(2, response.AuthorityRecords.OfType<NSRecord>().Count());
+            Assert.AreEqual(1, response.AuthorityRecords.OfType<RRSIGRecord>().Count());
+
         }
     }
 }
