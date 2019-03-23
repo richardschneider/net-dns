@@ -124,10 +124,13 @@ namespace Makaretu.Dns
         public void Response()
         {
             var query = new Message { Id = 1234, Opcode = MessageOperation.InverseQuery };
+            query.Questions.Add(new Question { Name = "foo.org", Type = DnsType.A });
             var response = query.CreateResponse();
             Assert.IsTrue(response.IsResponse);
             Assert.AreEqual(query.Id, response.Id);
             Assert.AreEqual(query.Opcode, response.Opcode);
+            Assert.AreEqual(1, response.Questions.Count);
+            Assert.AreEqual(query.Questions[0], response.Questions[0]);
         }
 
         [TestMethod]

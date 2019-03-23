@@ -291,12 +291,14 @@ namespace Makaretu.Dns
         /// </returns>
         public Message CreateResponse()
         {
-            return new Message
+            var response = new Message
             {
                 Id = Id,
                 Opcode = Opcode,
-                QR = true
+                QR = true,
             };
+            response.Questions.AddRange(Questions);
+            return response;
         }
 
         /// <summary>
