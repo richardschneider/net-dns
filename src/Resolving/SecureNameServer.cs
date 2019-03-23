@@ -53,7 +53,6 @@ namespace Makaretu.Dns.Resolving
             {
                 var signatures = new Message();
                 var question = new Question { Name = need.Name, Class = need.Class, Type = DnsType.RRSIG };
-                Console.WriteLine(question);
                 if (!await FindAnswerAsync(question, signatures, CancellationToken.None))
                 {
                     continue;
