@@ -10,7 +10,7 @@ namespace Makaretu.Dns.Resolving
     /// <summary>
     ///   Anwsers questions from the local <see cref="Catalog"/>.
     /// </summary>
-    public class NameServer : IResolver
+    public partial class NameServer : IResolver
     {
         /// <summary>
         ///   Information about some portion of the DNS database.
@@ -72,7 +72,7 @@ namespace Makaretu.Dns.Resolving
                     .ToList();
             }
 
-            return response;
+            return await AddSecurityExtensionsAsync(request, response);
         }
 
         /// <summary>
