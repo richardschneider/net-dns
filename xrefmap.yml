@@ -1940,6 +1940,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Message.CreateResponse
   nameWithType: Message.CreateResponse
+- uid: Makaretu.Dns.Message.DO
+  name: DO
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_DO
+  commentId: P:Makaretu.Dns.Message.DO
+  fullName: Makaretu.Dns.Message.DO
+  nameWithType: Message.DO
+- uid: Makaretu.Dns.Message.DO*
+  name: DO
+  href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_DO_
+  commentId: Overload:Makaretu.Dns.Message.DO
+  isSpec: "True"
+  fullName: Makaretu.Dns.Message.DO
+  nameWithType: Message.DO
 - uid: Makaretu.Dns.Message.Id
   name: Id
   href: api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_Id

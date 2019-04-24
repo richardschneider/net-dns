@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Message
    | DNS Model ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.42.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -299,7 +299,7 @@ server according to its DNSSEC policies.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_AdditionalRecords.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.AdditionalRecords%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L253">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L284">View Source</a>
   </span>
   <a id="Makaretu_Dns_Message_AdditionalRecords_" data-uid="Makaretu.Dns.Message.AdditionalRecords*"></a>
   <h4 id="Makaretu_Dns_Message_AdditionalRecords" data-uid="Makaretu.Dns.Message.AdditionalRecords">AdditionalRecords</h4>
@@ -331,7 +331,7 @@ server according to its DNSSEC policies.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_Answers.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.Answers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L237">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L268">View Source</a>
   </span>
   <a id="Makaretu_Dns_Message_Answers_" data-uid="Makaretu.Dns.Message.Answers*"></a>
   <h4 id="Makaretu_Dns_Message_Answers" data-uid="Makaretu.Dns.Message.Answers">Answers</h4>
@@ -363,7 +363,7 @@ server according to its DNSSEC policies.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_AuthorityRecords.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.AuthorityRecords%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L245">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L276">View Source</a>
   </span>
   <a id="Makaretu_Dns_Message_AuthorityRecords_" data-uid="Makaretu.Dns.Message.AuthorityRecords*"></a>
   <h4 id="Makaretu_Dns_Message_AuthorityRecords" data-uid="Makaretu.Dns.Message.AuthorityRecords">AuthorityRecords</h4>
@@ -427,6 +427,47 @@ server according to its DNSSEC policies.</p>
   <div class="markdown level1 remarks"><p>Only used in a query and indicates that pending (non-authenticated) 
 data is acceptable to the resolver sending the query.</p>
 </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_DO.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.DO%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L227">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_Message_DO_" data-uid="Makaretu.Dns.Message.DO*"></a>
+  <h4 id="Makaretu_Dns_Message_DO" data-uid="Makaretu.Dns.Message.DO">DO</h4>
+  <div class="markdown level1 summary"><p>Indicates that DNS Security Extensions (DNSSEC) are supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DO { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><strong>true</strong> if DNSSEC is supported; otherwise, <strong>false</strong>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_Message_DO_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <strong>DO</strong> bit is actually in the <a class="xref" href="Makaretu.Dns.OPTRecord.html">OPTRecord</a>, when setting
+the record will is added to <a class="xref" href="Makaretu.Dns.Message.html#Makaretu_Dns_Message_AdditionalRecords">AdditionalRecords</a> if not already present.</p>
+</div>
+  <h5 id="Makaretu_Dns_Message_DO_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Makaretu.Dns.Message.html#Makaretu_Dns_Message_UseDnsSecurity">UseDnsSecurity()</a></div>
+      <div><span><a href="https://tools.ietf.org/html/rfc3225">https://tools.ietf.org/html/rfc3225</a></span></div>
+  </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_Id.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -611,7 +652,7 @@ exist.
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_Questions.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.Questions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L229">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L260">View Source</a>
   </span>
   <a id="Makaretu_Dns_Message_Questions_" data-uid="Makaretu.Dns.Message.Questions*"></a>
   <h4 id="Makaretu_Dns_Message_Questions" data-uid="Makaretu.Dns.Message.Questions">Questions</h4>
@@ -712,7 +753,7 @@ the name server to pursue the query recursively.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_Status.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.Status%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L221">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L252">View Source</a>
   </span>
   <a id="Makaretu_Dns_Message_Status_" data-uid="Makaretu.Dns.Message.Status*"></a>
   <h4 id="Makaretu_Dns_Message_Status" data-uid="Makaretu.Dns.Message.Status">Status</h4>
@@ -816,7 +857,7 @@ transmission channel.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_CreateResponse.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.CreateResponse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L261">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L292">View Source</a>
   </span>
   <a id="Makaretu_Dns_Message_CreateResponse_" data-uid="Makaretu.Dns.Message.CreateResponse*"></a>
   <h4 id="Makaretu_Dns_Message_CreateResponse" data-uid="Makaretu.Dns.Message.CreateResponse">CreateResponse()</h4>
@@ -848,7 +889,7 @@ transmission channel.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_Read_Makaretu_Dns_WireReader_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.Read(Makaretu.Dns.WireReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L330">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L357">View Source</a>
   </span>
   <a id="Makaretu_Dns_Message_Read_" data-uid="Makaretu.Dns.Message.Read*"></a>
   <h4 id="Makaretu_Dns_Message_Read_Makaretu_Dns_WireReader_" data-uid="Makaretu.Dns.Message.Read(Makaretu.Dns.WireReader)">Read(WireReader)</h4>
@@ -905,7 +946,7 @@ is zero.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_ToString.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L399">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L426">View Source</a>
   </span>
   <a id="Makaretu_Dns_Message_ToString_" data-uid="Makaretu.Dns.Message.ToString*"></a>
   <h4 id="Makaretu_Dns_Message_ToString" data-uid="Makaretu.Dns.Message.ToString">ToString()</h4>
@@ -937,7 +978,7 @@ is zero.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_Truncate_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.Truncate(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L284">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L317">View Source</a>
   </span>
   <a id="Makaretu_Dns_Message_Truncate_" data-uid="Makaretu.Dns.Message.Truncate*"></a>
   <h4 id="Makaretu_Dns_Message_Truncate_System_Int32_" data-uid="Makaretu.Dns.Message.Truncate(System.Int32)">Truncate(Int32)</h4>
@@ -977,7 +1018,7 @@ If it is still too big, then the <a class="xref" href="Makaretu.Dns.Message.html
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_UseDnsSecurity.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.UseDnsSecurity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L316">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L350">View Source</a>
   </span>
   <a id="Makaretu_Dns_Message_UseDnsSecurity_" data-uid="Makaretu.Dns.Message.UseDnsSecurity*"></a>
   <h4 id="Makaretu_Dns_Message_UseDnsSecurity" data-uid="Makaretu.Dns.Message.UseDnsSecurity">UseDnsSecurity()</h4>
@@ -1008,12 +1049,16 @@ If it is still too big, then the <a class="xref" href="Makaretu.Dns.Message.html
   <div class="markdown level1 remarks"><p>Sets <a class="xref" href="Makaretu.Dns.OPTRecord.html#Makaretu_Dns_OPTRecord_DO">DO</a> to <strong>true</strong>.  Adds an <a class="xref" href="Makaretu.Dns.OPTRecord.html">OPTRecord</a> to
 <a class="xref" href="Makaretu.Dns.Message.html#Makaretu_Dns_Message_AdditionalRecords">AdditionalRecords</a> if not already present.</p>
 </div>
+  <h5 id="Makaretu_Dns_Message_UseDnsSecurity_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Makaretu.Dns.Message.html#Makaretu_Dns_Message_DO">DO</a></div>
+  </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_Message_Write_Makaretu_Dns_WireWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.Message.Write(Makaretu.Dns.WireWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L373">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/Message.cs/#L400">View Source</a>
   </span>
   <a id="Makaretu_Dns_Message_Write_" data-uid="Makaretu.Dns.Message.Write*"></a>
   <h4 id="Makaretu_Dns_Message_Write_Makaretu_Dns_WireWriter_" data-uid="Makaretu.Dns.Message.Write(Makaretu.Dns.WireWriter)">Write(WireWriter)</h4>
