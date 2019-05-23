@@ -44,5 +44,11 @@ namespace Makaretu.Dns
             writer.WriteBytes(Padding);
         }
 
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $";   Padding = {(Padding == null ? "null" : Padding.Length.ToString())}";
+        }
+
     }
 }

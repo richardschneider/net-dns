@@ -66,5 +66,11 @@ namespace Makaretu.Dns
             }
         }
 
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $";   DAU = {String.Join(", ", Algorithms)}";
+        }
+
     }
 }

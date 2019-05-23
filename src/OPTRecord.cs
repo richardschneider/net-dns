@@ -171,5 +171,18 @@ namespace Makaretu.Dns
             }
         }
 
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine($"; EDNS: version: {Version}, udp {RequestorPayloadSize}");
+            //; EDNS: version: 0, flags:; MBZ: 0005 , udp: 4000
+
+            foreach (var option in Options)
+            {
+                sb.AppendLine(option.ToString());
+            }
+            return sb.ToString();
+        }
     }
 }
