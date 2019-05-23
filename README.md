@@ -11,6 +11,7 @@ DNS data model with serializer/deserializer for the wire and "master file" forma
 ## Features
 
 - Serialization for the wire and master file formats
+- Pretty printing of messages
 - Supports compressed domain names
 - Supports multiple strings in TXT records
 - Supports the extended 12-bit RCODE

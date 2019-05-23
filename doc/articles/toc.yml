@@ -28,6 +28,8 @@
       href: wire.md
     - name: Truncation
       href: truncate.md
+    - name: Pretty Print
+      href: pretty-print.md
 - name: Master File
   href: master-file.md
   items:
