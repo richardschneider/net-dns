@@ -1149,6 +1149,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.EdnsDAUOption.ReadData
   nameWithType: EdnsDAUOption.ReadData
+- uid: Makaretu.Dns.EdnsDAUOption.ToString
+  name: ToString()
+  href: api/Makaretu.Dns.EdnsDAUOption.html#Makaretu_Dns_EdnsDAUOption_ToString
+  commentId: M:Makaretu.Dns.EdnsDAUOption.ToString
+  fullName: Makaretu.Dns.EdnsDAUOption.ToString()
+  nameWithType: EdnsDAUOption.ToString()
+- uid: Makaretu.Dns.EdnsDAUOption.ToString*
+  name: ToString
+  href: api/Makaretu.Dns.EdnsDAUOption.html#Makaretu_Dns_EdnsDAUOption_ToString_
+  commentId: Overload:Makaretu.Dns.EdnsDAUOption.ToString
+  isSpec: "True"
+  fullName: Makaretu.Dns.EdnsDAUOption.ToString
+  nameWithType: EdnsDAUOption.ToString
 - uid: Makaretu.Dns.EdnsDAUOption.WriteData(Makaretu.Dns.WireWriter)
   name: WriteData(WireWriter)
   href: api/Makaretu.Dns.EdnsDAUOption.html#Makaretu_Dns_EdnsDAUOption_WriteData_Makaretu_Dns_WireWriter_
@@ -1220,6 +1233,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.EdnsDHUOption.ReadData
   nameWithType: EdnsDHUOption.ReadData
+- uid: Makaretu.Dns.EdnsDHUOption.ToString
+  name: ToString()
+  href: api/Makaretu.Dns.EdnsDHUOption.html#Makaretu_Dns_EdnsDHUOption_ToString
+  commentId: M:Makaretu.Dns.EdnsDHUOption.ToString
+  fullName: Makaretu.Dns.EdnsDHUOption.ToString()
+  nameWithType: EdnsDHUOption.ToString()
+- uid: Makaretu.Dns.EdnsDHUOption.ToString*
+  name: ToString
+  href: api/Makaretu.Dns.EdnsDHUOption.html#Makaretu_Dns_EdnsDHUOption_ToString_
+  commentId: Overload:Makaretu.Dns.EdnsDHUOption.ToString
+  isSpec: "True"
+  fullName: Makaretu.Dns.EdnsDHUOption.ToString
+  nameWithType: EdnsDHUOption.ToString
 - uid: Makaretu.Dns.EdnsDHUOption.WriteData(Makaretu.Dns.WireWriter)
   name: WriteData(WireWriter)
   href: api/Makaretu.Dns.EdnsDHUOption.html#Makaretu_Dns_EdnsDHUOption_WriteData_Makaretu_Dns_WireWriter_
@@ -1278,6 +1304,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.EdnsKeepaliveOption.Timeout
   nameWithType: EdnsKeepaliveOption.Timeout
+- uid: Makaretu.Dns.EdnsKeepaliveOption.ToString
+  name: ToString()
+  href: api/Makaretu.Dns.EdnsKeepaliveOption.html#Makaretu_Dns_EdnsKeepaliveOption_ToString
+  commentId: M:Makaretu.Dns.EdnsKeepaliveOption.ToString
+  fullName: Makaretu.Dns.EdnsKeepaliveOption.ToString()
+  nameWithType: EdnsKeepaliveOption.ToString()
+- uid: Makaretu.Dns.EdnsKeepaliveOption.ToString*
+  name: ToString
+  href: api/Makaretu.Dns.EdnsKeepaliveOption.html#Makaretu_Dns_EdnsKeepaliveOption_ToString_
+  commentId: Overload:Makaretu.Dns.EdnsKeepaliveOption.ToString
+  isSpec: "True"
+  fullName: Makaretu.Dns.EdnsKeepaliveOption.ToString
+  nameWithType: EdnsKeepaliveOption.ToString
 - uid: Makaretu.Dns.EdnsKeepaliveOption.WriteData(Makaretu.Dns.WireWriter)
   name: WriteData(WireWriter)
   href: api/Makaretu.Dns.EdnsKeepaliveOption.html#Makaretu_Dns_EdnsKeepaliveOption_WriteData_Makaretu_Dns_WireWriter_
@@ -1349,6 +1388,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.EdnsN3UOption.ReadData
   nameWithType: EdnsN3UOption.ReadData
+- uid: Makaretu.Dns.EdnsN3UOption.ToString
+  name: ToString()
+  href: api/Makaretu.Dns.EdnsN3UOption.html#Makaretu_Dns_EdnsN3UOption_ToString
+  commentId: M:Makaretu.Dns.EdnsN3UOption.ToString
+  fullName: Makaretu.Dns.EdnsN3UOption.ToString()
+  nameWithType: EdnsN3UOption.ToString()
+- uid: Makaretu.Dns.EdnsN3UOption.ToString*
+  name: ToString
+  href: api/Makaretu.Dns.EdnsN3UOption.html#Makaretu_Dns_EdnsN3UOption_ToString_
+  commentId: Overload:Makaretu.Dns.EdnsN3UOption.ToString
+  isSpec: "True"
+  fullName: Makaretu.Dns.EdnsN3UOption.ToString
+  nameWithType: EdnsN3UOption.ToString
 - uid: Makaretu.Dns.EdnsN3UOption.WriteData(Makaretu.Dns.WireWriter)
   name: WriteData(WireWriter)
   href: api/Makaretu.Dns.EdnsN3UOption.html#Makaretu_Dns_EdnsN3UOption_WriteData_Makaretu_Dns_WireWriter_
@@ -1628,6 +1680,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.EdnsPaddingOption.ReadData
   nameWithType: EdnsPaddingOption.ReadData
+- uid: Makaretu.Dns.EdnsPaddingOption.ToString
+  name: ToString()
+  href: api/Makaretu.Dns.EdnsPaddingOption.html#Makaretu_Dns_EdnsPaddingOption_ToString
+  commentId: M:Makaretu.Dns.EdnsPaddingOption.ToString
+  fullName: Makaretu.Dns.EdnsPaddingOption.ToString()
+  nameWithType: EdnsPaddingOption.ToString()
+- uid: Makaretu.Dns.EdnsPaddingOption.ToString*
+  name: ToString
+  href: api/Makaretu.Dns.EdnsPaddingOption.html#Makaretu_Dns_EdnsPaddingOption_ToString_
+  commentId: Overload:Makaretu.Dns.EdnsPaddingOption.ToString
+  isSpec: "True"
+  fullName: Makaretu.Dns.EdnsPaddingOption.ToString
+  nameWithType: EdnsPaddingOption.ToString
 - uid: Makaretu.Dns.EdnsPaddingOption.WriteData(Makaretu.Dns.WireWriter)
   name: WriteData(WireWriter)
   href: api/Makaretu.Dns.EdnsPaddingOption.html#Makaretu_Dns_EdnsPaddingOption_WriteData_Makaretu_Dns_WireWriter_
@@ -2963,6 +3028,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.OPTRecord.RequestorPayloadSize
   nameWithType: OPTRecord.RequestorPayloadSize
+- uid: Makaretu.Dns.OPTRecord.ToString
+  name: ToString()
+  href: api/Makaretu.Dns.OPTRecord.html#Makaretu_Dns_OPTRecord_ToString
+  commentId: M:Makaretu.Dns.OPTRecord.ToString
+  fullName: Makaretu.Dns.OPTRecord.ToString()
+  nameWithType: OPTRecord.ToString()
+- uid: Makaretu.Dns.OPTRecord.ToString*
+  name: ToString
+  href: api/Makaretu.Dns.OPTRecord.html#Makaretu_Dns_OPTRecord_ToString_
+  commentId: Overload:Makaretu.Dns.OPTRecord.ToString
+  isSpec: "True"
+  fullName: Makaretu.Dns.OPTRecord.ToString
+  nameWithType: OPTRecord.ToString
 - uid: Makaretu.Dns.OPTRecord.Version
   name: Version
   href: api/Makaretu.Dns.OPTRecord.html#Makaretu_Dns_OPTRecord_Version
