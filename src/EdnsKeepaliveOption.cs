@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -36,11 +37,17 @@ namespace Makaretu.Dns
         /// <inheritdoc />
         public override void ReadData(WireReader reader, int length)
         {
-            if (length == 0) {
-                Timeout = null;
-                return;
+            switch (length)
+            {
+                case 0:
+                    Timeout = null;
+                    break;
+                case 2:
+                    Timeout = TimeSpan.FromMilliseconds(reader.ReadUInt16());
+                    break;
+                default:
+                    throw new InvalidDataException($"Invalid EdnsKeepAlive length of '{length}'.");
             }
-            Timeout = TimeSpan.FromTicks(reader.ReadUInt16() * TimeSpan.TicksPerMillisecond * 100);
         }
 
         /// <inheritdoc />
@@ -48,7 +55,7 @@ namespace Makaretu.Dns
         {
             if (Timeout.HasValue)
             {
-                writer.WriteUInt16((ushort)(Timeout.Value.Ticks / TimeSpan.TicksPerMillisecond / 100));
+                writer.WriteUInt16((ushort)Timeout.Value.TotalMilliseconds);
             }
         }
 
