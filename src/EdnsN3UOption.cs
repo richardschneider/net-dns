@@ -67,5 +67,11 @@ namespace Makaretu.Dns
             }
         }
 
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $";   N3U = {String.Join(", ", Algorithms)}";
+        }
+
     }
 }

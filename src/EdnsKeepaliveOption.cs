@@ -59,5 +59,11 @@ namespace Makaretu.Dns
             }
         }
 
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $";   Keepalive = {Timeout}";
+        }
+
     }
 }

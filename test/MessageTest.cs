@@ -297,5 +297,19 @@ namespace Makaretu.Dns
             var text = m.ToString();
             Console.WriteLine(text);
         }
+
+        [TestMethod]
+        public void Stringify_Edns()
+        {
+            var sample = "AH6FDwEAAAEAAAAAAAEEaXBmcwJpbwAAEAABAAApBQAAAAAAAFoACwAC1MAADABQ8bbi5IwN3llzr84N11j2dG7+7lE5aBzanfc1yvO3LcgvS0TuT3Xvz6yVWcVBa8YnFwehfSyT6YiaCEaV2BNlvIIG3YwUCCX4Dh6kpA9WmDI=";
+            var buffer1 = Convert.FromBase64String(sample);
+            var buffer2 = new byte[buffer1.Length - 2];
+            Array.Copy(buffer1, 2, buffer2, 0, buffer2.Length);
+            var m = new Message();
+            m.Read(buffer2);
+
+            var text = m.ToString();
+            Console.WriteLine(text);
+        }
     }
 }
