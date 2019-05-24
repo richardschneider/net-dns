@@ -43,7 +43,7 @@ namespace Makaretu.Dns
                     Timeout = null;
                     break;
                 case 2:
-                    Timeout = TimeSpan.FromMilliseconds(reader.ReadUInt16());
+                    Timeout = TimeSpan.FromMilliseconds((int)reader.ReadUInt16() * 100);
                     break;
                 default:
                     throw new InvalidDataException($"Invalid EdnsKeepAlive length of '{length}'.");
@@ -55,7 +55,7 @@ namespace Makaretu.Dns
         {
             if (Timeout.HasValue)
             {
-                writer.WriteUInt16((ushort)Timeout.Value.TotalMilliseconds);
+                writer.WriteUInt16((ushort)(Timeout.Value.TotalMilliseconds / 100));
             }
         }
 
