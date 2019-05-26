@@ -16,16 +16,16 @@ that are used to validate the answers.
 ```csharp
 // Request the IPv6 addresses for "example.com"
 // RD is "recursion desired"
-// UseDnsSecurity() enables signed answers.
+// DO enables signed answers.
 var query = new Message()
 {
     RD = true,
+    DO = true,
     Questions =
     {
         new Question { Name = "example.com", Type = DnsType.AAAA }
     }
-}
-    .UseDnsSecurity();
+};
 
 // Get an answer.
 var response = await resolver.ResolveAsync(query);

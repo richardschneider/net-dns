@@ -220,7 +220,7 @@ namespace Makaretu.Dns
         /// </value>
         /// <remarks>
         ///   The <b>DO</b> bit is actually in the <see cref="OPTRecord"/>, when setting
-        ///   the record will is added to <see cref="AdditionalRecords"/> if not already present.
+        ///   the record is added to <see cref="AdditionalRecords"/> if not already present.
         /// </remarks>
         /// <seealso cref="UseDnsSecurity"/>
         /// <seealso href="https://tools.ietf.org/html/rfc3225"/>
