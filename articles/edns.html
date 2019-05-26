@@ -8,7 +8,7 @@
     <title>Extended DNS | DNS Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Extended DNS | DNS Model ">
-    <meta name="generator" content="docfx 2.42.3.0">
+    <meta name="generator" content="docfx 2.42.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,22 @@
 The <a class="xref" href="../api/Makaretu.Dns.OPTRecord.html">OPT resource record</a>, 
 in the <a class="xref" href="../api/Makaretu.Dns.Message.html#Makaretu_Dns_Message_AdditionalRecords">additional records</a> section, 
 is used to supply the <a class="xref" href="../api/Makaretu.Dns.EdnsOption.html">options</a>.</p>
-</article>
+<pre><code class="lang-csharp">var msg = new Message
+{
+    RD = true,
+    AdditionalRecords = new List&lt;ResourceRecord&gt;
+    {
+        new OPTRecord
+        {
+            RequestorPayloadSize = 512,
+            Options = new List&lt;EdnsOption&gt;
+            {
+                new EdnsKeepaliveOption { Timeout = TimeSpan.FromSeconds(30) }
+            }
+        }
+    }
+};
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

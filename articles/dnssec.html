@@ -8,7 +8,7 @@
     <title>DNSSEC | DNS Model </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="DNSSEC | DNS Model ">
-    <meta name="generator" content="docfx 2.42.3.0">
+    <meta name="generator" content="docfx 2.42.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,16 +80,16 @@ The server will then responsd with the answers and also the
 that are used to validate the answers.</p>
 <pre><code class="lang-csharp">// Request the IPv6 addresses for &quot;example.com&quot;
 // RD is &quot;recursion desired&quot;
-// UseDnsSecurity() enables signed answers.
+// DO enables signed answers.
 var query = new Message()
 {
     RD = true,
+    DO = true,
     Questions =
     {
         new Question { Name = &quot;example.com&quot;, Type = DnsType.AAAA }
     }
-}
-    .UseDnsSecurity();
+};
 
 // Get an answer.
 var response = await resolver.ResolveAsync(query);
