@@ -3792,6 +3792,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Resolving.Catalog.Include
   nameWithType: Catalog.Include
+- uid: Makaretu.Dns.Resolving.Catalog.IncludeReverseLookupRecords
+  name: IncludeReverseLookupRecords()
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeReverseLookupRecords
+  commentId: M:Makaretu.Dns.Resolving.Catalog.IncludeReverseLookupRecords
+  fullName: Makaretu.Dns.Resolving.Catalog.IncludeReverseLookupRecords()
+  nameWithType: Catalog.IncludeReverseLookupRecords()
+- uid: Makaretu.Dns.Resolving.Catalog.IncludeReverseLookupRecords*
+  name: IncludeReverseLookupRecords
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeReverseLookupRecords_
+  commentId: Overload:Makaretu.Dns.Resolving.Catalog.IncludeReverseLookupRecords
+  isSpec: "True"
+  fullName: Makaretu.Dns.Resolving.Catalog.IncludeReverseLookupRecords
+  nameWithType: Catalog.IncludeReverseLookupRecords
 - uid: Makaretu.Dns.Resolving.Catalog.IncludeRootHints
   name: IncludeRootHints()
   href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeRootHints

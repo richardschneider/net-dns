@@ -76,6 +76,22 @@ Each <a class="xref" href="../api/Makaretu.Dns.Resolving.Node.html">Node</a> con
 <h2 id="zone">Zone</h2>
 <p>DNS zones are represented by a Catalog and can be loaded from a <a href="master-file.html">master file</a> 
 with the <a class="xref" href="../api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeZone_">IncludeZone()</a> method.</p>
+<h2 id="root-hints">Root hints</h2>
+<p>Use <a class="xref" href="../api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeRootHints">IncludeRootHints</a>
+to include the addresses of the root name servers.</p>
+<p>A DNS recursive resolver typically needs a &quot;root hints file&quot;. This file 
+contains the names and IP addresses of the authoritative name servers for the root zone, 
+so the software can bootstrap the DNS resolution process.</p>
+<h2 id="reverse-lookups">Reverse lookups</h2>
+<p>Use <a class="xref" href="../api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_IncludeReverseLookupRecords">IncludeReverseLookupRecords</a>
+to add PTR records for each authoritative A/AAAA record.</p>
+<p>A forward-confirmed reverse DNS (FCrDNS) verification can create a 
+form of authentication showing a valid relationship between the 
+owner of a domain name and the owner of the server that has been 
+given an IP address. While not very thorough, this validation is 
+strong enough to often be used for whitelisting purposes, 
+since spammers and phishers usually cannot achieve forward validation
+when they use zombie computers to forge domain records.</p>
 </article>
           </div>
           
