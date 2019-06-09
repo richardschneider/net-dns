@@ -304,5 +304,21 @@ com.			54254	IN	RRSIG	DNSKEY 8 1 86400 20180909182533 20180825182033 30909 com. 
             var node = catalog["COM"];
             Assert.AreEqual(3, node.Resources.Count);
         }
+
+        [TestMethod]
+        public void IncludeReverseLookupRecords()
+        {
+            var catalog = new Catalog();
+            var reader = new PresentationReader(new StringReader(exampleDotComZoneText));
+            var zone = catalog.IncludeZone(reader);
+            catalog.IncludeReverseLookupRecords();
+
+            Assert.IsTrue(catalog.ContainsKey("1.2.0.192.in-addr.arpa"));
+            Assert.IsTrue(catalog.ContainsKey("2.2.0.192.in-addr.arpa"));
+            Assert.IsTrue(catalog.ContainsKey("3.2.0.192.in-addr.arpa"));
+
+            Assert.IsTrue(catalog["1.2.0.192.in-addr.arpa"].Authoritative);
+        }
+
     }
 }

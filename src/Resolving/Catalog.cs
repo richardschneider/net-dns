@@ -205,5 +205,29 @@ namespace Makaretu.Dns.Resolving
             return this.Values
                 .OrderBy(node => String.Join(".", node.Name.ToLowerInvariant().Split('.').Reverse()));
         }
+
+        /// <summary>
+        ///   Add PTR records for each authoritative A/AAAA record.
+        /// </summary>
+        /// <remarks>
+        ///   This enables reverse DNS lookup of all address records.
+        /// </remarks>
+        public void IncludeReverseLookupRecords()
+        {
+            var addressRecords = this.Values
+                .Where(node => node.Authoritative)
+                .SelectMany(node => node.Resources.OfType<AddressRecord>());
+            foreach (var a in addressRecords)
+            {
+                var ptr = new PTRRecord
+                {
+                    Class = a.Class,
+                    Name = a.Address.GetArpaName(),
+                    DomainName = a.Name,
+                    TTL = a.TTL
+                };
+                Add(ptr, authoritative:  true);
+            }
+        }
     }
 }
