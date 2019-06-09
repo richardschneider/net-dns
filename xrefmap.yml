@@ -1789,6 +1789,25 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.HINFORecord.WriteData
   nameWithType: HINFORecord.WriteData
+- uid: Makaretu.Dns.IPAddressExtensions
+  name: IPAddressExtensions
+  href: api/Makaretu.Dns.IPAddressExtensions.html
+  commentId: T:Makaretu.Dns.IPAddressExtensions
+  fullName: Makaretu.Dns.IPAddressExtensions
+  nameWithType: IPAddressExtensions
+- uid: Makaretu.Dns.IPAddressExtensions.GetArpaName(System.Net.IPAddress)
+  name: GetArpaName(IPAddress)
+  href: api/Makaretu.Dns.IPAddressExtensions.html#Makaretu_Dns_IPAddressExtensions_GetArpaName_System_Net_IPAddress_
+  commentId: M:Makaretu.Dns.IPAddressExtensions.GetArpaName(System.Net.IPAddress)
+  fullName: Makaretu.Dns.IPAddressExtensions.GetArpaName(System.Net.IPAddress)
+  nameWithType: IPAddressExtensions.GetArpaName(IPAddress)
+- uid: Makaretu.Dns.IPAddressExtensions.GetArpaName*
+  name: GetArpaName
+  href: api/Makaretu.Dns.IPAddressExtensions.html#Makaretu_Dns_IPAddressExtensions_GetArpaName_
+  commentId: Overload:Makaretu.Dns.IPAddressExtensions.GetArpaName
+  isSpec: "True"
+  fullName: Makaretu.Dns.IPAddressExtensions.GetArpaName
+  nameWithType: IPAddressExtensions.GetArpaName
 - uid: Makaretu.Dns.IPresentationSerialiser
   name: IPresentationSerialiser
   href: api/Makaretu.Dns.IPresentationSerialiser.html

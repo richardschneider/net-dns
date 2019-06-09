@@ -293,6 +293,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Makaretu.Dns.IPAddressExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Makaretu.Dns.IPAddressExtensions.html",
+          "hash": "u2+by3z76EJbwfOlj3D4Mw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Makaretu.Dns.IPresentationSerialiser.yml",
       "output": {
         ".html": {
@@ -837,7 +849,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Makaretu.Dns.html",
-          "hash": "o04s9fDGgUxqnlfJSy+LSg=="
+          "hash": "3KUDetoewCOE1MtjgIlj3Q=="
         }
       },
       "is_incremental": false,
@@ -849,7 +861,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "kW7mAfN9V2JD3AFrqUoGdw=="
+          "hash": "7hvXPvL6O1eFjKrBulMBQQ=="
         }
       },
       "is_incremental": false,
@@ -1181,7 +1193,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 70,
+          "total_file_count": 71,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
