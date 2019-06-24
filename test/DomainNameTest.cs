@@ -109,5 +109,13 @@ namespace Makaretu.Dns
             Assert.AreNotEqual(a.GetHashCode(), other1.GetHashCode());
             Assert.AreNotEqual(a.GetHashCode(), other2.GetHashCode());
         }
+
+        [TestMethod]
+        public void ToCanonical()
+        {
+            var a = new DomainName("My.EXAMPLe.ORg");
+            Assert.AreEqual("My.EXAMPLe.ORg", a.ToString());
+            Assert.AreEqual("my.example.org", a.ToCanonical().ToString());
+        }
     }
 }

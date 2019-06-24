@@ -212,7 +212,7 @@ namespace Makaretu.Dns
                 name = name + "." + remainingLabels;
             }
 
-            // Add to compressed names
+            // Add to compressed names.
             names[pointer] = name;
 
             return name;

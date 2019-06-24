@@ -54,6 +54,36 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void Write_DomainName()
+        {
+            var ms = new MemoryStream();
+            var writer = new WireWriter(ms);
+            writer.WriteDomainName("a.b");
+
+            ms.Position = 0;
+            Assert.AreEqual(1, ms.ReadByte(), "length of 'a'");
+            Assert.AreEqual('a', (char)ms.ReadByte());
+            Assert.AreEqual(1, ms.ReadByte(), "length of 'b'");
+            Assert.AreEqual('b', (char)ms.ReadByte());
+            Assert.AreEqual(0, ms.ReadByte(), "trailing nul");
+        }
+
+        [TestMethod]
+        public void Write_EscapedDomainName()
+        {
+            var ms = new MemoryStream();
+            var writer = new WireWriter(ms);
+            writer.WriteDomainName(@"a\.b");
+
+            ms.Position = 0;
+            Assert.AreEqual(3, ms.ReadByte(), "length of 'a.b'");
+            Assert.AreEqual('a', (char)ms.ReadByte());
+            Assert.AreEqual('.', (char)ms.ReadByte());
+            Assert.AreEqual('b', (char)ms.ReadByte());
+            Assert.AreEqual(0, ms.ReadByte(), "trailing nul");
+        }
+
+        [TestMethod]
         public void BufferOverflow_Byte()
         {
             var ms = new MemoryStream(new byte[0]);
@@ -142,11 +172,25 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
-        public void NullDomainName()
+        public void NullDomainName_String()
         {
             var ms = new MemoryStream();
             var writer = new WireWriter(ms);
-            writer.WriteDomainName(null);
+            writer.WriteDomainName((string) null);
+            writer.WriteString("abc");
+
+            ms.Position = 0;
+            var reader = new WireReader(ms);
+            Assert.AreEqual("", reader.ReadDomainName());
+            Assert.AreEqual("abc", reader.ReadString());
+        }
+
+        [TestMethod]
+        public void NullDomainName_Class()
+        {
+            var ms = new MemoryStream();
+            var writer = new WireWriter(ms);
+            writer.WriteDomainName((DomainName)null);
             writer.WriteString("abc");
 
             ms.Position = 0;

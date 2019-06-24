@@ -76,6 +76,25 @@ namespace Makaretu.Dns
             return string.Join(dot, Labels.Select(label => label.Replace(dot, escapedDot)));
         }
 
+        /// <summary>
+        ///   Gets the canonical form of the domain name.
+        /// </summary>
+        /// <returns>
+        ///   A domain name in the canonical form.
+        /// </returns>
+        /// <remarks>
+        ///   All uppercase US-ASCII letters in the <see cref="Labels"/> are
+        ///   replaced by the corresponding lowercase US-ASCII letters.
+        /// </remarks>
+        public DomainName ToCanonical()
+        {
+            var labels = Labels
+                .Select(l => l.ToLowerInvariant())
+                .ToArray();
+            return new DomainName(labels);
+        }
+
+
         void Parse(string name)
         {
             Labels.Clear();

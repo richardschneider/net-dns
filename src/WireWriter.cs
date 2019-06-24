@@ -225,15 +225,27 @@ namespace Makaretu.Dns
                 ++Position;
                 return;
             }
+            WriteDomainName(new DomainName(name), uncompressed);
+        }
+
+        public void WriteDomainName(DomainName name, bool uncompressed = false)
+        {
+            if (name == null)
+            {
+                stream.WriteByte(0); // terminating byte
+                ++Position;
+                return;
+            }
 
             if (CanonicalForm)
             {
                 uncompressed = true;
-                name = name.ToLowerInvariant();
+                name = name.ToCanonical();
             }
 
-            var labels = name.Split('.');
-            for (var i = 0; i < labels.Length; ++i)
+            var labels = name.Labels.ToArray();
+            var n = labels.Length;
+            for (var i = 0; i < n; ++i)
             {
                 var label = labels[i];
                 if (label.Length > 63)
