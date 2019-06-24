@@ -15,7 +15,7 @@ namespace Makaretu.Dns
         static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
         Stream stream;
-        readonly Dictionary<int, string> names = new Dictionary<int, string>();
+        readonly Dictionary<int, List<string>> names = new Dictionary<int, List<string>>();
 
         /// <summary>
         ///   The reader relative position within the stream.
@@ -181,6 +181,13 @@ namespace Makaretu.Dns
         /// </remarks>
         public string ReadDomainName()
         {
+            var labels = ReadLabels();
+            var name = new DomainName(labels.ToArray());
+            return name.ToString();
+        }
+
+        List<string> ReadLabels()
+        {
             var pointer = Position;
             var length = ReadByte();
 
@@ -193,10 +200,11 @@ namespace Makaretu.Dns
                 return cname;
             }
 
+            var labels = new List<string>();
             // End of labels?
             if (length == 0)
             {
-                return string.Empty;
+                return labels;
             }
 
             // Read current label and remaining labels.
@@ -205,17 +213,13 @@ namespace Makaretu.Dns
             {
                 throw new InvalidDataException("Only ASCII characters are allowed.");
             }
-            var name = Encoding.ASCII.GetString(buffer, 0, length);
-            var remainingLabels = ReadDomainName();
-            if (remainingLabels != string.Empty)
-            {
-                name = name + "." + remainingLabels;
-            }
+            labels.Add(Encoding.ASCII.GetString(buffer, 0, length));
+            labels.AddRange(ReadLabels());
 
             // Add to compressed names.
-            names[pointer] = name;
+            names[pointer] = labels;
 
-            return name;
+            return labels;
         }
 
         /// <summary>

@@ -99,7 +99,7 @@ namespace Makaretu.Dns
         /// </returns>
         public bool IsExpired(DateTime? from = null)
         {
-            var now = from.HasValue ? from.Value : DateTime.Now;
+            var now = from ?? DateTime.Now;
             return CreationTime + TTL <= now;
         }
 
@@ -250,9 +250,9 @@ namespace Makaretu.Dns
         /// </remarks>
         public static bool operator ==(ResourceRecord a, ResourceRecord b)
         {
-            if (object.ReferenceEquals(a, b)) return true;
-            if (object.ReferenceEquals(a, null)) return false;
-            if (object.ReferenceEquals(b, null)) return false;
+            if (ReferenceEquals(a, b)) return true;
+            if (ReferenceEquals(a, null)) return false;
+            if (ReferenceEquals(b, null)) return false;
 
             return a.Equals(b);
         }
@@ -268,9 +268,9 @@ namespace Makaretu.Dns
         /// </remarks>
         public static bool operator !=(ResourceRecord a, ResourceRecord b)
         {
-            if (object.ReferenceEquals(a, b)) return false;
-            if (object.ReferenceEquals(a, null)) return true;
-            if (object.ReferenceEquals(b, null)) return true;
+            if (ReferenceEquals(a, b)) return false;
+            if (ReferenceEquals(a, null)) return true;
+            if (ReferenceEquals(b, null)) return true;
 
             return !a.Equals(b);
         }

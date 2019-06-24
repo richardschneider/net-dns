@@ -200,6 +200,20 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void Read_EscapedDotDomainName()
+        {
+            var domainName = @"a\.b";
+            var ms = new MemoryStream();
+            var writer = new WireWriter(ms);
+            writer.WriteDomainName(domainName);
+
+            ms.Position = 0;
+            var reader = new WireReader(ms);
+            var name = reader.ReadDomainName();
+            Assert.AreEqual(domainName, name);
+        }
+
+        [TestMethod]
         public void Bitmap()
         {
             // From https://tools.ietf.org/html/rfc3845#section-2.3

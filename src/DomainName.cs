@@ -41,6 +41,9 @@ namespace Makaretu.Dns
         ///   The name can contain backslash to escape a character.
         ///   See <see href="https://tools.ietf.org/html/rfc4343">RFC 4343</see> 
         ///   for the character escaping rules.
+        ///   <note>
+        ///   To use us backslash in a domain name (highly unusaual), you must use a double backslash.
+        ///   </note>
         /// </remarks>
         public DomainName(string name)
         {
