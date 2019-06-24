@@ -82,11 +82,13 @@ namespace Makaretu.Dns
             var a = new DomainName(@"my\.example.org");
             var b = new DomainName("my.example", "org");
             var c = new DomainName(@"my\046example.org");
+            var d = new DomainName(@"My\.EXAMPLe.ORg");
             var other1 = new DomainName("example.org");
             var other2 = new DomainName("org");
 
             Assert.AreEqual(a, b);
             Assert.AreEqual(a, c);
+            Assert.AreEqual(a, d);
             Assert.AreNotEqual(a, other1);
             Assert.AreNotEqual(a, other2);
         }
@@ -97,11 +99,13 @@ namespace Makaretu.Dns
             var a = new DomainName(@"my\.example.org");
             var b = new DomainName("my.example", "org");
             var c = new DomainName(@"my\046example.org");
+            var d = new DomainName(@"My\.EXAMPLe.ORg");
             var other1 = new DomainName("example.org");
             var other2 = new DomainName("org");
 
             Assert.AreEqual(a.GetHashCode(), b.GetHashCode());
             Assert.AreEqual(a.GetHashCode(), c.GetHashCode());
+            Assert.AreEqual(a.GetHashCode(), d.GetHashCode());
             Assert.AreNotEqual(a.GetHashCode(), other1.GetHashCode());
             Assert.AreNotEqual(a.GetHashCode(), other2.GetHashCode());
         }

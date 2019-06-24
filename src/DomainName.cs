@@ -11,7 +11,7 @@ namespace Makaretu.Dns
     /// conventionally delimited by dots, such as "example.org".
     /// </summary>
     /// <remarks>
-    ///   Equality is based on the number of and contents of <see cref="Labels"/>.
+    ///   Equality is based on the number of and the case-insenstive contents of <see cref="Labels"/>.
     /// </remarks>
     public class DomainName : IEquatable<DomainName>
     {
@@ -124,7 +124,7 @@ namespace Makaretu.Dns
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            return ToString().GetHashCode();
+            return ToString().ToLowerInvariant().GetHashCode();
         }
 
         /// <inheritdoc />
@@ -146,7 +146,7 @@ namespace Makaretu.Dns
             }
             for (var i = 0; i < n; ++i)
             {
-                if (this.Labels[i] != that.Labels[i])
+                if (!DnsObject.NamesEquals(this.Labels[i], that.Labels[i]))
                 {
                     return false;
                 }
