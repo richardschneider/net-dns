@@ -365,17 +365,19 @@ namespace Makaretu.Dns.Resolving
         [TestMethod]
         public async Task EscapedDotDomainName()
         {
-            var catalog = new Catalog();
-            catalog.Add(new ARecord
+            var catalog = new Catalog
             {
-                Name = "a.b",
-                Address = IPAddress.Parse("127.0.0.2")
-            });
-            catalog.Add(new ARecord
-            {
-                Name = @"a\.b",
-                Address = IPAddress.Parse("127.0.0.3")
-            });
+                new ARecord
+                {
+                    Name = "a.b",
+                    Address = IPAddress.Parse("127.0.0.2")
+                },
+                new ARecord
+                {
+                    Name = @"a\.b",
+                    Address = IPAddress.Parse("127.0.0.3")
+                }
+            };
             var resolver = new NameServer { Catalog = catalog };
 
             var request = new Message();
@@ -396,17 +398,19 @@ namespace Makaretu.Dns.Resolving
         [TestMethod]
         public async Task RoundTrip_EscapedDotDomainName()
         {
-            var catalog = new Catalog();
-            catalog.Add(new ARecord
+            var catalog = new Catalog
             {
-                Name = "a.b",
-                Address = IPAddress.Parse("127.0.0.2")
-            });
-            catalog.Add(new ARecord
-            {
-                Name = @"a\.b",
-                Address = IPAddress.Parse("127.0.0.3")
-            });
+                new ARecord
+                {
+                    Name = "a.b",
+                    Address = IPAddress.Parse("127.0.0.2")
+                },
+                new ARecord
+                {
+                    Name = @"a\.b",
+                    Address = IPAddress.Parse("127.0.0.3")
+                }
+            };
             var resolver = new NameServer { Catalog = catalog };
 
             var request = new Message();

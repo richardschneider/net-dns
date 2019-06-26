@@ -282,11 +282,12 @@ namespace Makaretu.Dns.Resolving
 
         void FindAddresses(string name, DnsClass klass, Message response)
         {
-            var question = new Question();
-
-            question.Name = name;
-            question.Class = klass;
-            question.Type = DnsType.A;
+            var question = new Question
+            {
+                Name = name,
+                Class = klass,
+                Type = DnsType.A
+            };
             var _ = FindAnswerAsync(question, response, default(CancellationToken)).Result;
 
             question.Type = DnsType.AAAA;

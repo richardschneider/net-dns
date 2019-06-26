@@ -117,5 +117,35 @@ namespace Makaretu.Dns
             Assert.AreEqual("My.EXAMPLe.ORg", a.ToString());
             Assert.AreEqual("my.example.org", a.ToCanonical().ToString());
         }
+
+        [TestMethod]
+        public void IsSubdomain()
+        {
+            var zone = new DomainName("example.org");
+            Assert.IsFalse(zone.IsSubdomain(zone));
+            Assert.IsTrue(new DomainName("a.example.org").IsSubdomain(zone));
+            Assert.IsTrue(new DomainName("a.b.example.org").IsSubdomain(zone));
+            Assert.IsTrue(new DomainName("a.Example.org").IsSubdomain(zone));
+            Assert.IsTrue(new DomainName("a.b.Example.ORG").IsSubdomain(zone));
+            Assert.IsFalse(new DomainName(@"a\.example.org").IsSubdomain(zone));
+            Assert.IsTrue(new DomainName(@"a\.b.example.org").IsSubdomain(zone));
+            Assert.IsTrue(new DomainName(@"a\.b.example.ORG").IsSubdomain(zone));
+            Assert.IsFalse(new DomainName("a.org").IsSubdomain(zone));
+            Assert.IsFalse(new DomainName("a.b.org").IsSubdomain(zone));
+        }
+
+        [TestMethod]
+        public void Parent()
+        {
+            var name = new DomainName(@"a.b\.c.example.org");
+            var expected = new DomainName(@"b\.c.example.org");
+            Assert.AreEqual(expected, name.Parent());
+
+            name = new DomainName("org");
+            expected = new DomainName("");
+            Assert.AreEqual(expected, name.Parent());
+
+            Assert.IsNull(expected.Parent());
+        }
     }
 }

@@ -207,7 +207,7 @@ namespace Makaretu.Dns
         ///   <see cref="CanonicalForm"/> overrides this value.
         /// </param>
         /// <exception cref="ArgumentException">
-        ///   When a label length is greater than 63 or is not ASCII.
+        ///   When a label length is greater than 63 octets.
         /// </exception>
         /// <remarks>
         ///   A domain name is represented as a sequence of labels, where
@@ -228,6 +228,28 @@ namespace Makaretu.Dns
             WriteDomainName(new DomainName(name), uncompressed);
         }
 
+        /// <summary>
+        ///   Write a domain name.
+        /// </summary>
+        /// <param name="name">
+        ///   The name to write.
+        /// </param>
+        /// <param name="uncompressed">
+        ///   Determines if the <paramref name="name"/> must be uncompressed.  The
+        ///   defaultl is false (allow compression).
+        ///   <see cref="CanonicalForm"/> overrides this value.
+        /// </param>
+        /// <exception cref="ArgumentException">
+        ///   When a label length is greater than 63 octets.
+        /// </exception>
+        /// <remarks>
+        ///   A domain name is represented as a sequence of labels, where
+        ///   each label consists of a length octet followed by that
+        ///   number of octets.The domain name terminates with the
+        ///   zero length octet for the null label of the root. Note
+        ///   that this field may be an odd number of octets; no
+        ///   padding is used.
+        /// </remarks>
         public void WriteDomainName(DomainName name, bool uncompressed = false)
         {
             if (name == null)

@@ -97,6 +97,54 @@ namespace Makaretu.Dns
             return new DomainName(labels);
         }
 
+        /// <summary>
+        ///   Determines if this domain name is a subdomain of another
+        ///   domain name.
+        /// </summary>
+        /// <param name="domain">
+        ///   Another domain.
+        /// </param>
+        /// <returns>
+        ///   <b>true</b> if this domain name is a subdomain of <paramref name="domain"/>.
+        /// </returns>
+        public bool IsSubdomain(DomainName domain)
+        {
+            if (domain == null)
+            {
+                return false;
+            }
+            if (Labels.Count <= domain.Labels.Count)
+            {
+                return false;
+            }
+            var i = Labels.Count - 1;
+            var j = domain.Labels.Count - 1;
+            for (; 0 <= j; --i, --j)
+            {
+                if (!DnsObject.NamesEquals(Labels[i], domain.Labels[j]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        /// <summary>
+        ///   Gets the parent's domain name.
+        /// </summary>
+        /// <returns>
+        ///   The domain name of the parent or <b>null</b> if
+        ///   there is no parent; e.g. this is the root.
+        /// </returns>
+        public DomainName Parent()
+        {
+            if (Labels.Count == 0)
+            {
+                return null;
+            }
+
+            return new DomainName(Labels.Skip(1).ToArray());
+        }
 
         void Parse(string name)
         {
