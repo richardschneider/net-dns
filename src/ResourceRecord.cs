@@ -233,8 +233,6 @@ namespace Makaretu.Dns
             var that = obj as ResourceRecord;
             if (that == null) return false;
 
-            // TODO: Maybe remove NameEquals because we have DomainName.Equals
-            // TODO: remove if (!DnsObject.NamesEquals(this.Name, that.Name)) return false;
             if (this.Name != that.Name) return false;
             if (this.Class != that.Class) return false;
             if (this.Type != that.Type) return false;
@@ -253,9 +251,11 @@ namespace Makaretu.Dns
         /// </remarks>
         public static bool operator ==(ResourceRecord a, ResourceRecord b)
         {
+#pragma warning disable IDE0041 // Null check can be simplified
             if (ReferenceEquals(a, b)) return true;
             if (ReferenceEquals(a, null)) return false;
             if (ReferenceEquals(b, null)) return false;
+#pragma warning restore IDE0041 // Null check can be simplified
 
             return a.Equals(b);
         }
@@ -271,9 +271,11 @@ namespace Makaretu.Dns
         /// </remarks>
         public static bool operator !=(ResourceRecord a, ResourceRecord b)
         {
+#pragma warning disable IDE0041 // Null check can be simplified
             if (ReferenceEquals(a, b)) return false;
             if (ReferenceEquals(a, null)) return true;
             if (ReferenceEquals(b, null)) return true;
+#pragma warning restore IDE0041 // Null check can be simplified
 
             return !a.Equals(b);
         }
