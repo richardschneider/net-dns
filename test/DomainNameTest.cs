@@ -198,6 +198,32 @@ namespace Makaretu.Dns
             Assert.AreEqual("x", c.Labels[1]);
             Assert.AreEqual("y", c.Labels[2]);
             Assert.AreEqual("z", c.Labels[3]);
-        } 
+        }
+
+        [TestMethod]
+        public void Rfc4343_Section_2()
+        {
+            Assert.AreEqual(new DomainName("foo.example.net."), new DomainName("Foo.ExamplE.net."));
+            Assert.AreEqual(new DomainName("69.2.0.192.in-addr.arpa."), new DomainName("69.2.0.192.in-ADDR.ARPA."));
+        }
+
+        [TestMethod]
+        public void Rfc4343_Section_21_Backslash()
+        {
+            var aslashb = new DomainName(@"a\\b");
+            Assert.AreEqual(1, aslashb.Labels.Count);
+            Assert.AreEqual(@"a\b", aslashb.Labels[0]);
+            Assert.AreEqual(@"a\092b", aslashb.ToString());
+
+            Assert.AreEqual(aslashb, new DomainName(@"a\092b"));
+        }
+
+        [TestMethod]
+        public void Rfc4343_Section_21_4Digits()
+        {
+            var a = new DomainName(@"a\\4");
+            var b = new DomainName(@"a\0924");
+            Assert.AreEqual(a, b);
+        }
     }
 }

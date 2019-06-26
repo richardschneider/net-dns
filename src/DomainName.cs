@@ -18,6 +18,8 @@ namespace Makaretu.Dns
         const string dot = ".";
         const char dotChar = '.';
         const string escapedDot = @"\.";
+        const string backslash = @"\";
+        const string escapedBackslash = @"\092";
 
         /// <summary>
         ///   The root name space.
@@ -107,11 +109,13 @@ namespace Makaretu.Dns
         ///   The concatenation of the <see cref="Labels"/> separated by a dot.
         /// </returns>
         /// <remarks>
-        ///   If a label contains a dot, then it is escaped with a backslash.
+        ///   If a label contains a dot or backslash, then it is escaped with a backslash.
         /// </remarks>
         public override string ToString()
         {
-            return string.Join(dot, Labels.Select(label => label.Replace(dot, escapedDot)));
+            return string.Join(dot, Labels.Select(label => label
+                .Replace(backslash, escapedBackslash)
+                .Replace(dot, escapedDot)));
         }
 
         /// <summary>
