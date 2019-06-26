@@ -25,9 +25,9 @@ namespace Makaretu.Dns
         ///   delegation point NS RRset
         /// </summary>
         /// <remarks>
-        ///   Defaults to the empty string.
+        ///   Defaults to the <see cref="DomainName.Root"/>.
         /// </remarks>
-        public DomainName NextOwnerName { get; set; } // TODO: = String.Empty;
+        public DomainName NextOwnerName { get; set; } = DomainName.Root;
 
         /// <summary>
         ///   The sequence of RR types present at the NSEC RR's owner name.

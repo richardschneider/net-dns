@@ -27,20 +27,17 @@ namespace Makaretu.Dns
         ///   The mailbox for the responsible person.
         /// </summary>
         /// <value>
-        ///   Defaults to "".
+        ///   Defaults to <see cref="DomainName.Root"/>.
         /// </value>
-        public DomainName Mailbox { get; set; } = new DomainName("");
+        public DomainName Mailbox { get; set; } = DomainName.Root;
 
         /// <summary>
         ///   The name of TXT records for the responsible person.
         /// </summary>
         /// <value>
-        ///   Defaults to "".
+        ///   Defaults to <see cref="DomainName.Root"/>.
         /// </value>
-        /// <remarks>
-        ///   TODO Is this really a domain name>
-        /// </remarks>
-        public DomainName TextName { get; set; } = new DomainName("");
+        public DomainName TextName { get; set; } = DomainName.Root;
 
         /// <inheritdoc />
         public override void ReadData(WireReader reader, int length)
