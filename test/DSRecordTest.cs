@@ -136,29 +136,5 @@ namespace Makaretu.Dns
             });
         }
 
-        [TestMethod]
-        public void FromDNSKEY_Missing_Name()
-        {
-            var key = new DNSKEYRecord
-            {
-                Name = "  ",
-                Flags = DNSKEYFlags.ZoneKey | DNSKEYFlags.SecureEntryPoint,
-                Algorithm = SecurityAlgorithm.RSASHA1,
-                PublicKey = Convert.FromBase64String(
-                    @"AQOeiiR0GOMYkDshWoSKz9Xz
-                      fwJr1AYtsmx3TGkJaNXVbfi/
-                      2pHm822aJ5iI9BMzNXxeYCmZ
-                      DRD99WYwYqUSdjMmmAphXdvx
-                      egXd/M5+X7OrzKBaMbCVdFLU
-                      Uh6DhweJBjEVv5f2wwjM9Xzc
-                      nOf+EPbtG9DMBmADjFDc2w/r
-                      ljwvFw==")
-            };
-            ExceptionAssert.Throws<ArgumentOutOfRangeException>(() =>
-            {
-                var ds = new DSRecord(key);
-            });
-        }
-
     }
 }

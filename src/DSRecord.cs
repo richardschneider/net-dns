@@ -50,8 +50,6 @@ namespace Makaretu.Dns
                     throw new ArgumentException("ZoneKey must be set.", "key");
                 if ((key.Flags & DNSKEYFlags.SecureEntryPoint) == DNSKEYFlags.None)
                     throw new ArgumentException("SecureEntryPoint must be set.", "key");
-                if (string.IsNullOrWhiteSpace(key.Name.ToString()))
-                    throw new ArgumentOutOfRangeException("The key name is missing.", "key");
             }
 
             byte[] digest;
