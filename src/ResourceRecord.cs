@@ -41,7 +41,7 @@ namespace Makaretu.Dns
         ///   An owner name, i.e., the name of the node to which this
         ///   resource record pertains.
         /// </summary>
-        public string Name { get; set; }
+        public DomainName Name { get; set; }
 
         /// <summary>
         ///   The canonical form of the owner name.
@@ -52,9 +52,10 @@ namespace Makaretu.Dns
         /// </remarks>
         public string CanonicalName
         {
+            // TOOD: Check usage.  Should not be used because its a string.
             get
             {
-                return Name.ToLowerInvariant();
+                return Name.ToCanonical().ToString();
             }
         }
 
@@ -232,7 +233,9 @@ namespace Makaretu.Dns
             var that = obj as ResourceRecord;
             if (that == null) return false;
 
-            if (!DnsObject.NamesEquals(this.Name, that.Name)) return false;
+            // TODO: Maybe remove NameEquals because we have DomainName.Equals
+            // TODO: remove if (!DnsObject.NamesEquals(this.Name, that.Name)) return false;
+            if (this.Name != that.Name) return false;
             if (this.Class != that.Class) return false;
             if (this.Type != that.Type) return false;
 
@@ -279,7 +282,7 @@ namespace Makaretu.Dns
         public override int GetHashCode()
         {
             return 
-                Name?.ToLowerInvariant().GetHashCode() ?? 0
+                Name?.GetHashCode() ?? 0
                 ^ Class.GetHashCode()
                 ^ Type.GetHashCode()
                 ^ GetData().Aggregate(0, (r, b) => r ^ b.GetHashCode());

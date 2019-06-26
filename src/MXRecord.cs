@@ -39,7 +39,7 @@ namespace Makaretu.Dns
         /// <value>
         ///   The name of an mail exchange.
         /// </value>
-        public string Exchange { get; set; }
+        public DomainName Exchange { get; set; }
 
 
         /// <inheritdoc />

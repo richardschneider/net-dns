@@ -27,7 +27,7 @@ namespace Makaretu.Dns
         /// <remarks>
         ///   Defaults to the empty string.
         /// </remarks>
-        public string NextOwnerName { get; set; } = String.Empty;
+        public DomainName NextOwnerName { get; set; } // TODO: = String.Empty;
 
         /// <summary>
         ///   The sequence of RR types present at the NSEC RR's owner name.

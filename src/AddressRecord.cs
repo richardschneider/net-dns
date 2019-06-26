@@ -41,7 +41,7 @@ namespace Makaretu.Dns
         ///   An <see cref="ARecord"/> or <see cref="AAAARecord"/> tha describes
         ///   the <paramref name="name"/> and <paramref name="address"/>.
         /// </returns>
-        public static AddressRecord Create(string name, IPAddress address)
+        public static AddressRecord Create(DomainName name, IPAddress address)
         {
             if (address.AddressFamily == AddressFamily.InterNetwork)
             {

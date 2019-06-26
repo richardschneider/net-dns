@@ -96,19 +96,21 @@ namespace Makaretu.Dns
         /// <returns>
         ///   The domain name as a string.
         /// </returns>
-        public string ReadDomainName()
+        public DomainName ReadDomainName()
         {
             return MakeAbsoluteDomainName(ReadToken());
         }
 
-        string MakeAbsoluteDomainName(string name)
+        DomainName MakeAbsoluteDomainName(string name)
         {
+            // TODO: Needs work with escaping dots.
+
             // If an absolute name.
             if (name.EndsWith("."))
-                return name.Substring(0, name.Length - 1);
+                return new DomainName(name.Substring(0, name.Length - 1));
 
             // Then its a relative name.
-            return (name + "." + Origin).TrimEnd('.');
+            return new DomainName((name + "." + Origin).TrimEnd('.'));
         }
 
         /// <summary>

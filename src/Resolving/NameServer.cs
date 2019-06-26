@@ -190,19 +190,17 @@ namespace Makaretu.Dns.Resolving
             return Task.FromResult(false);
         }
 
-        SOARecord FindAuthority(string domainName)
+        SOARecord FindAuthority(DomainName domainName)
         {
             var name = domainName;
-            while (true)
+            while (name != null)
             {
                 if (Catalog.TryGetValue(name, out Node node))
                 {
                     var soa = node.Resources.OfType<SOARecord>().FirstOrDefault();
                     if (soa != null) return soa;
                 }
-                var x = name.IndexOf('.');
-                if (x < 0) break;
-                name = name.Substring(x + 1);
+                name = name.Parent();
             }
 
             return null;
@@ -280,7 +278,7 @@ namespace Makaretu.Dns.Resolving
             }
         }
 
-        void FindAddresses(string name, DnsClass klass, Message response)
+        void FindAddresses(DomainName name, DnsClass klass, Message response)
         {
             var question = new Question
             {

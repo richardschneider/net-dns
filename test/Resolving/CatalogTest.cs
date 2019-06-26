@@ -259,7 +259,7 @@ mail3         IN  A     192.0.2.5             ; IPv4 address for mail3.example.c
                 AddressRecord.Create("example", IPAddress.Loopback)
             };
 
-            var expected = new string[]
+            var expected = new DomainName[]
             {
                 "example", "a.example", "yljkjljk.a.example",
                 "Z.a.example", "zABC.a.EXAMPLE", "z.example",

@@ -162,7 +162,7 @@ namespace Makaretu.Dns
         ///   Read a domain name.
         /// </summary>
         /// <returns>
-        ///   The domain name as a string.
+        ///   The domain name.
         /// </returns>
         /// <exception cref="EndOfStreamException">
         ///   When no more data is available.
@@ -179,11 +179,11 @@ namespace Makaretu.Dns
         ///   Compressed domain names are also supported.
         ///   </note>
         /// </remarks>
-        public string ReadDomainName()
+        public DomainName ReadDomainName()
         {
             var labels = ReadLabels();
             var name = new DomainName(labels.ToArray());
-            return name.ToString();
+            return name;
         }
 
         List<string> ReadLabels()

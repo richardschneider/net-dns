@@ -54,7 +54,7 @@ namespace Makaretu.Dns
         ///   address records for this name, the name MUST NOT be an alias (in
         ///   the sense of RFC 1034 or RFC 2181).
         /// </remarks>
-        public string Target { get; set; }
+        public DomainName Target { get; set; }
 
         /// <inheritdoc />
         public override void ReadData(WireReader reader, int length)

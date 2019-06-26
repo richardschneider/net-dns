@@ -64,6 +64,27 @@ namespace Makaretu.Dns
             Assert.AreEqual(@"my\.example.org", name.ToString());
         }
 
+
+        [TestMethod]
+        public void ImplicitParsingOfString()
+        {
+            DomainName name = @"my\046example.org";
+            Assert.AreEqual(2, name.Labels.Count);
+            Assert.AreEqual("my.example", name.Labels[0]);
+            Assert.AreEqual("org", name.Labels[1]);
+
+            name = @"my\.example.org";
+            Assert.AreEqual(2, name.Labels.Count);
+            Assert.AreEqual("my.example", name.Labels[0]);
+            Assert.AreEqual("org", name.Labels[1]);
+
+            name = @"my.example.org";
+            Assert.AreEqual(3, name.Labels.Count);
+            Assert.AreEqual("my", name.Labels[0]);
+            Assert.AreEqual("example", name.Labels[1]);
+            Assert.AreEqual("org", name.Labels[2]);
+        }
+
         [TestMethod]
         public void FromLabels()
         {
@@ -119,19 +140,37 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
-        public void IsSubdomain()
+        public void IsSubdomainOf()
         {
             var zone = new DomainName("example.org");
-            Assert.IsFalse(zone.IsSubdomain(zone));
-            Assert.IsTrue(new DomainName("a.example.org").IsSubdomain(zone));
-            Assert.IsTrue(new DomainName("a.b.example.org").IsSubdomain(zone));
-            Assert.IsTrue(new DomainName("a.Example.org").IsSubdomain(zone));
-            Assert.IsTrue(new DomainName("a.b.Example.ORG").IsSubdomain(zone));
-            Assert.IsFalse(new DomainName(@"a\.example.org").IsSubdomain(zone));
-            Assert.IsTrue(new DomainName(@"a\.b.example.org").IsSubdomain(zone));
-            Assert.IsTrue(new DomainName(@"a\.b.example.ORG").IsSubdomain(zone));
-            Assert.IsFalse(new DomainName("a.org").IsSubdomain(zone));
-            Assert.IsFalse(new DomainName("a.b.org").IsSubdomain(zone));
+            Assert.IsFalse(zone.IsSubdomainOf(zone));
+            Assert.IsTrue(new DomainName("a.example.org").IsSubdomainOf(zone));
+            Assert.IsTrue(new DomainName("a.b.example.org").IsSubdomainOf(zone));
+            Assert.IsTrue(new DomainName("a.Example.org").IsSubdomainOf(zone));
+            Assert.IsTrue(new DomainName("a.b.Example.ORG").IsSubdomainOf(zone));
+            Assert.IsFalse(new DomainName(@"a\.example.org").IsSubdomainOf(zone));
+            Assert.IsTrue(new DomainName(@"a\.b.example.org").IsSubdomainOf(zone));
+            Assert.IsTrue(new DomainName(@"a\.b.example.ORG").IsSubdomainOf(zone));
+            Assert.IsFalse(new DomainName("a.org").IsSubdomainOf(zone));
+            Assert.IsFalse(new DomainName("a.b.org").IsSubdomainOf(zone));
+        }
+
+        [TestMethod]
+        public void BelongsTo()
+        {
+            var zone = new DomainName("example.org");
+            Assert.IsTrue(zone.BelongsTo(zone));
+            Assert.IsTrue(new DomainName("ExamPLE.Org").BelongsTo(zone));
+            Assert.IsTrue(new DomainName("A.ExamPLE.Org").BelongsTo(zone));
+            Assert.IsTrue(new DomainName("a.example.org").BelongsTo(zone));
+            Assert.IsTrue(new DomainName("a.b.example.org").BelongsTo(zone));
+            Assert.IsTrue(new DomainName("a.Example.org").BelongsTo(zone));
+            Assert.IsTrue(new DomainName("a.b.Example.ORG").BelongsTo(zone));
+            Assert.IsFalse(new DomainName(@"a\.example.org").BelongsTo(zone));
+            Assert.IsTrue(new DomainName(@"a\.b.example.org").BelongsTo(zone));
+            Assert.IsTrue(new DomainName(@"a\.b.example.ORG").BelongsTo(zone));
+            Assert.IsFalse(new DomainName("a.org").BelongsTo(zone));
+            Assert.IsFalse(new DomainName("a.b.org").BelongsTo(zone));
         }
 
         [TestMethod]
@@ -147,5 +186,18 @@ namespace Makaretu.Dns
 
             Assert.IsNull(expected.Parent());
         }
+
+        [TestMethod]
+        public void Joining()
+        {
+            var a = new DomainName(@"foo\.bar");
+            var b = new DomainName("x.y.z");
+            var c = DomainName.Join(a, b);
+            Assert.AreEqual(4, c.Labels.Count);
+            Assert.AreEqual("foo.bar", c.Labels[0]);
+            Assert.AreEqual("x", c.Labels[1]);
+            Assert.AreEqual("y", c.Labels[2]);
+            Assert.AreEqual("z", c.Labels[3]);
+        } 
     }
 }

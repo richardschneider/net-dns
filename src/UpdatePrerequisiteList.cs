@@ -35,7 +35,7 @@ namespace Makaretu.Dns
         ///   condition from that of an actual RR whose RDLENGTH is naturally zero
         ///   (0) (e.g., NULL).  TTL is specified as zero(0).
         /// </remarks>
-        public UpdatePrerequisiteList MustExist(string name, DnsType type)
+        public UpdatePrerequisiteList MustExist(DomainName name, DnsType type)
         {
             var rr = new ResourceRecord
             {
@@ -65,7 +65,7 @@ namespace Makaretu.Dns
         ///   must be specified as ANY to differentiate this case from that of an
         ///   RRset existence test. TTL is specified as zero (0).
         /// </remarks>
-        public UpdatePrerequisiteList MustExist(string name)
+        public UpdatePrerequisiteList MustExist(DomainName name)
         {
             return MustExist(name, DnsType.ANY);
         }
@@ -90,7 +90,7 @@ namespace Makaretu.Dns
         ///   must be specified as ANY to differentiate this case from that of an
         ///   RRset existence test. TTL is specified as zero (0).
         /// </remarks>
-        public UpdatePrerequisiteList MustExist<T>(string name)
+        public UpdatePrerequisiteList MustExist<T>(DomainName name)
             where T : ResourceRecord, new()
         {
             return MustExist(name, new T().Type);
@@ -135,7 +135,7 @@ namespace Makaretu.Dns
         ///   naturally zero (0) (for example, the NULL RR).  TTL must be specified
         ///   as zero(0).
         /// </remarks>
-        public UpdatePrerequisiteList MustNotExist(string name, DnsType type)
+        public UpdatePrerequisiteList MustNotExist(DomainName name, DnsType type)
         {
             var rr = new ResourceRecord
             {
@@ -163,7 +163,7 @@ namespace Makaretu.Dns
         ///   must be specified as NONE. TYPE must be specified as ANY. TTL must
         ///   be specified as zero (0).
         /// </remarks>
-        public UpdatePrerequisiteList MustNotExist(string name)
+        public UpdatePrerequisiteList MustNotExist(DomainName name)
         {
             return MustNotExist(name, DnsType.ANY);
         }
@@ -188,7 +188,7 @@ namespace Makaretu.Dns
         ///   naturally zero (0) (for example, the NULL RR).  TTL must be specified
         ///   as zero(0).
         /// </remarks>
-        public UpdatePrerequisiteList MustNotExist<T>(string name)
+        public UpdatePrerequisiteList MustNotExist<T>(DomainName name)
             where T : ResourceRecord, new()
         {
             return MustNotExist(name, new T().Type);

@@ -8,8 +8,8 @@
     <DebugType>full</DebugType>
     
     <!-- developer build is always 0.42 -->
-    <AssemblyVersion>0.42</AssemblyVersion>
-    <Version>0.42</Version>
+    <AssemblyVersion>0.42.1</AssemblyVersion>
+    <Version>0.42.1</Version>
     
     <!-- Nuget specs -->
     <PackageId>Makaretu.Dns</PackageId>
@@ -18,7 +18,7 @@
     <Description>DNS data model with serializer/deserializer for the wire and master file format.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>https://github.com/richardschneider/net-dns/releases</PackageReleaseNotes>
-    <Copyright>© 2018 Richard Schneider</Copyright>
+    <Copyright>© 2018-2019 Richard Schneider</Copyright>
     <PackageTags>dns</PackageTags>
     <IncludeSymbols>True</IncludeSymbols>
     <PackageLicenseUrl>https://github.com/richardschneider/net-dns/blob/master/LICENSE</PackageLicenseUrl>

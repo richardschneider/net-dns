@@ -20,6 +20,22 @@ namespace Makaretu.Dns
         const string escapedDot = @"\.";
 
         /// <summary>
+        ///   The root name space.
+        /// </summary>
+        /// <value>
+        ///  The empty string.
+        /// </value>
+        /// <remarks>
+        ///   The DNS is a hierarchical naming system for computers, services, or any 
+        ///   resource participating in the Internet. The top of that hierarchy is 
+        ///   the root domain. The root domain does not have a formal name and its
+        ///   label in the DNS hierarchy is an empty string. 
+        /// </remarks>
+        public static DomainName Root = new DomainName(String.Empty);
+
+        List<string> labels = new List<string>();
+
+        /// <summary>
         ///   A sequence of labels that make up the domain name.
         /// </summary>
         /// <value>
@@ -28,7 +44,7 @@ namespace Makaretu.Dns
         /// <remarks>
         ///   The last label is the TLD (top level domain).
         /// </remarks>
-        public List<string> Labels { get; set; } = new List<string>();
+        public IReadOnlyList<string> Labels => labels;
 
         /// <summary>
         ///   Creates a new instance of the <see cref="DomainName"/> class from
@@ -62,7 +78,26 @@ namespace Makaretu.Dns
         /// </remarks>
         public DomainName(params string[] labels)
         {
-            Labels.AddRange(labels);
+            this.labels.AddRange(labels);
+        }
+
+        /// <summary>
+        ///   Combine multiple domain names to form one.
+        /// </summary>
+        /// <param name="names">
+        ///   The domain names to join.
+        /// </param>
+        /// <returns>
+        ///   A new domain containing all the <paramref name="names"/>.
+        /// </returns>
+        public static DomainName Join(params DomainName[] names)
+        {
+            var joinedName = new DomainName();
+            foreach (var name in names)
+            {
+                joinedName.labels.AddRange(name.Labels);
+            }
+            return joinedName;
         }
 
         /// <summary>
@@ -98,6 +133,22 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Determines if this domain name is a subdomain of or equals an another
+        ///   domain name.
+        /// </summary>
+        /// <param name="domain">
+        ///   Another domain.
+        /// </param>
+        /// <returns>
+        ///   <b>true</b> if this domain name is a subdomain of <paramref name="domain"/>
+        ///   or equals <paramref name="domain"/>.
+        /// </returns>
+        public bool BelongsTo(DomainName domain)
+        {
+            return this == domain || IsSubdomainOf(domain);
+        }
+
+        /// <summary>
         ///   Determines if this domain name is a subdomain of another
         ///   domain name.
         /// </summary>
@@ -107,21 +158,21 @@ namespace Makaretu.Dns
         /// <returns>
         ///   <b>true</b> if this domain name is a subdomain of <paramref name="domain"/>.
         /// </returns>
-        public bool IsSubdomain(DomainName domain)
+        public bool IsSubdomainOf(DomainName domain)
         {
             if (domain == null)
             {
                 return false;
             }
-            if (Labels.Count <= domain.Labels.Count)
+            if (labels.Count <= domain.labels.Count)
             {
                 return false;
             }
-            var i = Labels.Count - 1;
-            var j = domain.Labels.Count - 1;
+            var i = labels.Count - 1;
+            var j = domain.labels.Count - 1;
             for (; 0 <= j; --i, --j)
             {
-                if (!DnsObject.NamesEquals(Labels[i], domain.Labels[j]))
+                if (!DnsObject.NamesEquals(labels[i], domain.labels[j]))
                 {
                     return false;
                 }
@@ -138,17 +189,17 @@ namespace Makaretu.Dns
         /// </returns>
         public DomainName Parent()
         {
-            if (Labels.Count == 0)
+            if (labels.Count == 0)
             {
                 return null;
             }
 
-            return new DomainName(Labels.Skip(1).ToArray());
+            return new DomainName(labels.Skip(1).ToArray());
         }
 
         void Parse(string name)
         {
-            Labels.Clear();
+            labels.Clear();
             var label = new StringBuilder();
             var n = name.Length;
             for (int i = 0; i < n; ++i)
@@ -176,7 +227,7 @@ namespace Makaretu.Dns
                 // End of label?
                 if (c == dotChar)
                 {
-                    Labels.Add(label.ToString());
+                    labels.Add(label.ToString());
                     label.Clear();
                     continue;
                 }
@@ -186,7 +237,7 @@ namespace Makaretu.Dns
             }
             if (label.Length > 0)
             {
-                Labels.Add(label.ToString());
+                labels.Add(label.ToString());
             }
 
         }
@@ -209,14 +260,14 @@ namespace Makaretu.Dns
         /// <inheritdoc />
         public bool Equals(DomainName that)
         {
-            var n = this.Labels.Count;
-            if (n != that.Labels.Count)
+            var n = this.labels.Count;
+            if (n != that.labels.Count)
             {
                 return false;
             }
             for (var i = 0; i < n; ++i)
             {
-                if (!DnsObject.NamesEquals(this.Labels[i], that.Labels[i]))
+                if (!DnsObject.NamesEquals(this.labels[i], that.labels[i]))
                 {
                     return false;
                 }
@@ -242,6 +293,23 @@ namespace Makaretu.Dns
         public static bool operator !=(DomainName a, DomainName b)
         {
             return !(a == b);
+        }
+
+        /// <summary>
+        ///   Implicit casting of a <see cref="string"/> to a <see cref="DomainName"/>.
+        /// </summary>
+        /// <param name="s">
+        ///   A possibly escaped domain name.
+        /// </param>
+        /// <returns>
+        ///   A new <see cref="DomainName"/>
+        /// </returns>
+        /// <remarks>
+        ///    Equivalent to <code>new DomainName(s)</code>
+        /// </remarks>
+        static public implicit operator DomainName(string s)
+        {
+            return new DomainName(s);
         }
 
     }

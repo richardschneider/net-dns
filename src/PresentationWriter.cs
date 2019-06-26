@@ -160,6 +160,20 @@ namespace Makaretu.Dns
         }
 
         /// <summary>
+        ///   Write a domain name.
+        /// </summary>
+        /// <param name="value">
+        ///   The value to write.
+        /// </param>
+        /// <param name="appendSpace">
+        ///   Write a space after the value.
+        /// </param>
+        public void WriteDomainName(DomainName value, bool appendSpace = true)
+        {
+            WriteString(value.ToString(), appendSpace);
+        }
+
+        /// <summary>
         ///   Write bytes encoded in base-16.
         /// </summary>
         /// <param name="value">

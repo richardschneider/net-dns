@@ -73,7 +73,7 @@ namespace Makaretu.Dns
         /// <value>
         ///   Identifies the HMAC alogirthm.
         /// </value>
-        public string Algorithm { get; set; }
+        public DomainName Algorithm { get; set; }
 
         /// <summary>
         ///   When the record was signed.

@@ -37,7 +37,7 @@ namespace Makaretu.Dns
         /// <value>
         ///   The name of an AFS server.
         /// </value>
-        public string Target { get; set; }
+        public DomainName Target { get; set; }
 
 
         /// <inheritdoc />

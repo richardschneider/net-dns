@@ -87,7 +87,7 @@ namespace Makaretu.Dns
         ///   The owner name of the <see cref="DNSKEYRecord"/> that
         ///   validates the <see cref="Signature"/>.
         /// </summary>
-        public string SignerName { get; set; }
+        public DomainName SignerName { get; set; }
 
         /// <summary>
         ///   The cryptographic signature.

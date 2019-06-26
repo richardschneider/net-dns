@@ -29,7 +29,7 @@ namespace Makaretu.Dns
         /// <value>
         ///   Defaults to "".
         /// </value>
-        public string Mailbox { get; set; } = "";
+        public DomainName Mailbox { get; set; } = new DomainName("");
 
         /// <summary>
         ///   The name of TXT records for the responsible person.
@@ -37,7 +37,10 @@ namespace Makaretu.Dns
         /// <value>
         ///   Defaults to "".
         /// </value>
-        public string TextName { get; set; } = "";
+        /// <remarks>
+        ///   TODO Is this really a domain name>
+        /// </remarks>
+        public DomainName TextName { get; set; } = new DomainName("");
 
         /// <inheritdoc />
         public override void ReadData(WireReader reader, int length)

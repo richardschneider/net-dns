@@ -84,7 +84,7 @@ namespace Makaretu.Dns
         ///   this Update RR will be silently ignored by the primary master.
         ///   </para>
         /// </remarks>
-        public UpdateResourceList DeleteResource(string name)
+        public UpdateResourceList DeleteResource(DomainName name)
         {
             var resource = new ResourceRecord
             {
@@ -114,8 +114,8 @@ namespace Makaretu.Dns
         ///   this Update RR will be silently ignored by the primary master.
         ///   </para>
         /// </remarks>
-        /// <seealso cref="DeleteResource{T}(string)"/>
-        public UpdateResourceList DeleteResource(string name, DnsType type)
+        /// <seealso cref="DeleteResource{T}(DomainName)"/>
+        public UpdateResourceList DeleteResource(DomainName name, DnsType type)
         {
             var resource = new ResourceRecord
             {
@@ -147,8 +147,8 @@ namespace Makaretu.Dns
         ///   this Update RR will be silently ignored by the primary master.
         ///   </para>
         /// </remarks>
-        /// <seealso cref="DeleteResource(string, DnsType)"/>
-        public UpdateResourceList DeleteResource<T>(string name)
+        /// <seealso cref="DeleteResource(DomainName, DnsType)"/>
+        public UpdateResourceList DeleteResource<T>(DomainName name)
              where T : ResourceRecord, new()
         {
             return DeleteResource(name, new T().Type);
