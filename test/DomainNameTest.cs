@@ -225,5 +225,30 @@ namespace Makaretu.Dns
             var b = new DomainName(@"a\0924");
             Assert.AreEqual(a, b);
         }
+
+        [TestMethod]
+        public void Rfc4343_Section_22_SpacesAndDots()
+        {
+            var a = new DomainName(@"Donald\032E\.\032Eastlake\0323rd.example");
+            Assert.AreEqual(2, a.Labels.Count);
+            Assert.AreEqual("Donald E. Eastlake 3rd", a.Labels[0]);
+            Assert.AreEqual("example", a.Labels[1]);
+        }
+
+        [TestMethod]
+        public void Rfc4343_Section_22_Binary()
+        {
+            var a = new DomainName(@"a\000\\\255z.example");
+            Assert.AreEqual(2, a.Labels.Count);
+            Assert.AreEqual('a', a.Labels[0][0]);
+            Assert.AreEqual((char)0, a.Labels[0][1]);
+            Assert.AreEqual('\\', a.Labels[0][2]);
+            Assert.AreEqual((char)0xff, a.Labels[0][3]);
+            Assert.AreEqual('z', a.Labels[0][4]);
+            Assert.AreEqual("example", a.Labels[1]);
+
+            Assert.AreEqual(@"a\000\092\255z.example", a.ToString());
+            Assert.AreEqual(a, new DomainName(a.ToString()));
+        }
     }
 }

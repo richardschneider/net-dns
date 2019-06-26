@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace Makaretu.Dns
         const char dotChar = '.';
         const string escapedDot = @"\.";
         const string backslash = @"\";
+        const char backslashChar = '\\';
         const string escapedBackslash = @"\092";
 
         /// <summary>
@@ -113,9 +115,34 @@ namespace Makaretu.Dns
         /// </remarks>
         public override string ToString()
         {
-            return string.Join(dot, Labels.Select(label => label
-                .Replace(backslash, escapedBackslash)
-                .Replace(dot, escapedDot)));
+            return string.Join(dot, Labels.Select(EscapeLabel));
+        }
+
+        string EscapeLabel(string label)
+        {
+            var sb = new StringBuilder();
+            foreach (var c in label)
+            {
+                if (c == backslashChar)
+                {
+                    sb.Append(escapedBackslash);
+                }
+                else if (c == dotChar)
+                {
+                    sb.Append(escapedDot);
+                }
+                else if (c <= 32 || c > 0x7E)
+                {
+                    sb.Append(backslashChar);
+                    sb.Append(((int)c).ToString("000", CultureInfo.InvariantCulture));
+                }
+                else
+                {
+                    sb.Append(c);
+                }
+            }
+
+            return sb.ToString();
         }
 
         /// <summary>
