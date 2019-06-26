@@ -203,7 +203,7 @@ namespace Makaretu.Dns
             var j = domain.labels.Count - 1;
             for (; 0 <= j; --i, --j)
             {
-                if (!DnsObject.NamesEquals(labels[i], domain.labels[j]))
+                if (!LabelsEqual(labels[i], domain.labels[j]))
                 {
                     return false;
                 }
@@ -298,7 +298,7 @@ namespace Makaretu.Dns
             }
             for (var i = 0; i < n; ++i)
             {
-                if (!DnsObject.NamesEquals(this.labels[i], that.labels[i]))
+                if (!LabelsEqual(this.labels[i], that.labels[i]))
                 {
                     return false;
                 }
@@ -338,9 +338,30 @@ namespace Makaretu.Dns
         /// <remarks>
         ///    Equivalent to <code>new DomainName(s)</code>
         /// </remarks>
-        static public implicit operator DomainName(string s)
+        public static implicit operator DomainName(string s)
         {
             return new DomainName(s);
+        }
+
+        /// <summary>
+        ///   Determines if the two domain name labels are equal.
+        /// </summary>
+        /// <param name="a">A domain name label</param>
+        /// <param name="b">A domain name label</param>
+        /// <returns>
+        ///   <b>true</b> if <paramref name="a"/> and <paramref name="b"/> are
+        ///   considered equal.
+        /// </returns>
+        /// <remarks>
+        ///   Uses a case-insenstive algorithm, where 'A-Z' are equivalent to 'a-z'.
+        /// </remarks>
+        public static bool LabelsEqual(string a, string b)
+        {
+#if NETSTANDARD14
+            return a?.ToLowerInvariant() == b?.ToLowerInvariant();
+#else
+            return 0 == StringComparer.InvariantCultureIgnoreCase.Compare(a, b);
+#endif
         }
 
     }
