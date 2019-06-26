@@ -291,6 +291,10 @@ namespace Makaretu.Dns
         /// <inheritdoc />
         public bool Equals(DomainName that)
         {
+            if (that is null)
+            {
+                return false;
+            }
             var n = this.labels.Count;
             if (n != that.labels.Count)
             {

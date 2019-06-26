@@ -112,6 +112,28 @@ namespace Makaretu.Dns
             Assert.AreEqual(a, d);
             Assert.AreNotEqual(a, other1);
             Assert.AreNotEqual(a, other2);
+            Assert.AreNotEqual(a, null);
+
+            Assert.IsTrue(a == b);
+            Assert.IsTrue(a == c);
+            Assert.IsTrue(a == d);
+            Assert.IsFalse(a == other1);
+            Assert.IsFalse(a == other2);
+            Assert.IsFalse(a == null);
+
+            Assert.IsFalse(a != b);
+            Assert.IsFalse(a != c);
+            Assert.IsFalse(a != d);
+            Assert.IsTrue(a != other1);
+            Assert.IsTrue(a != other2);
+            Assert.IsTrue(a != null);
+
+            Assert.IsTrue(a.Equals(b));
+            Assert.IsTrue(a.Equals(c));
+            Assert.IsTrue(a.Equals(d));
+            Assert.IsFalse(a.Equals(other1));
+            Assert.IsFalse(a.Equals(other2));
+            Assert.IsFalse(a.Equals(null));
         }
 
         [TestMethod]
