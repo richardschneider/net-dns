@@ -154,23 +154,9 @@ namespace Makaretu.Dns
         /// <param name="appendSpace">
         ///   Write a space after the value.
         /// </param>
-        public void WriteDomainName(string value, bool appendSpace = true)
-        {
-            WriteString(value, appendSpace);
-        }
-
-        /// <summary>
-        ///   Write a domain name.
-        /// </summary>
-        /// <param name="value">
-        ///   The value to write.
-        /// </param>
-        /// <param name="appendSpace">
-        ///   Write a space after the value.
-        /// </param>
         public void WriteDomainName(DomainName value, bool appendSpace = true)
         {
-            WriteString(value.ToString(), appendSpace);
+            WriteStringUnencoded(value.ToString(), appendSpace);
         }
 
         /// <summary>
