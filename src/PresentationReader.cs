@@ -452,24 +452,25 @@ namespace Makaretu.Dns
                 {
                     previousChar = c;
 
-                    // Handle octal escapes \DDD
+                    // Handle decimal escapes \DDD
                     int ndigits = 0;
-                    int oc = 0;
-                    for (; ndigits <= 3; ++ndigits) {
+                    int ddd = 0;
+                    for (; ndigits <= 3; ++ndigits)
+                    {
                         c = text.Peek();
-                        if ('0' <= c && c <= '7')
+                        if ('0' <= c && c <= '9')
                         {
                             text.Read();
-                            oc = (oc << 3) | (c - '0');
-                            if (oc > 0x7F)
-                                throw new FormatException("Invalid octal value.");
+                            ddd = (ddd * 10) + (c - '0');
+                            if (ddd > 0xFF)
+                                throw new FormatException("Invalid value.");
                         }
                         else
                         {
                             break;
                         }
                     }
-                    c = (ndigits > 0) ? oc : text.Read();
+                    c = (ndigits > 0) ? ddd : text.Read();
 
                     sb.Append((char)c);
                     skipWhitespace = false;

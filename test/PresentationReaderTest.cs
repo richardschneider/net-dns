@@ -37,16 +37,16 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
-        public void ReadOctalEscapedString()
+        public void ReadDecimalEscapedString()
         {
-            var reader = new PresentationReader(new StringReader("a\\142c"));
+            var reader = new PresentationReader(new StringReader("a\\098c"));
             Assert.AreEqual("abc", reader.ReadString());
         }
 
         [TestMethod]
-        public void ReadInvalidOctalEscapedString()
+        public void ReadInvalidDecimalEscapedString()
         {
-            var reader = new PresentationReader(new StringReader("a\\200c"));
+            var reader = new PresentationReader(new StringReader("a\\256c"));
             ExceptionAssert.Throws<FormatException>(() => reader.ReadString());
         }
 
