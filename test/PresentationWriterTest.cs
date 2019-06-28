@@ -75,6 +75,20 @@ namespace Makaretu.Dns
             writer.WriteString("alpha.com");
             writer.WriteString("omega.com", appendSpace: false);
             Assert.AreEqual("alpha.com omega.com", text.ToString());
+
+            text = new StringWriter();
+            writer = new PresentationWriter(text);
+            writer.WriteDomainName(new DomainName("alpha.com"), false);
+            Assert.AreEqual("alpha.com", text.ToString());
+        }
+
+        [TestMethod]
+        public void WriteDomainName_Escaped()
+        {
+            var text = new StringWriter();
+            var writer = new PresentationWriter(text);
+            writer.WriteDomainName(new DomainName(@"dr\. smith.com"), false);
+            Assert.AreEqual(@"dr\.\032smith.com", text.ToString());
         }
 
         [TestMethod]
