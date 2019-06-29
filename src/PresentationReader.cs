@@ -313,6 +313,7 @@ namespace Makaretu.Dns
                             break;
                         case "@":
                             domainName = Origin;
+                            defaultDomainName = domainName;
                             break;
                         default:
                             domainName = MakeAbsoluteDomainName(token);
@@ -354,6 +355,11 @@ namespace Makaretu.Dns
                 }
 
                 throw new InvalidDataException($"Unknown token '{token}', expected a Class, Type or TTL.");
+            }
+
+            if (domainName == null)
+            { 
+                throw new InvalidDataException("Missing resource record name.");
             }
 
             // Create the specific resource record based on the type.

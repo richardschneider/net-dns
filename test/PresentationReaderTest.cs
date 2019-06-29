@@ -121,6 +121,13 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void ReadResourceMissingName()
+        {
+            var reader = new PresentationReader(new StringReader("  NS ns1"));
+            ExceptionAssert.Throws<InvalidDataException>(() => reader.ReadResourceRecord());
+        }
+
+        [TestMethod]
         public void ReadResourceWithComment()
         {
             var reader = new PresentationReader(new StringReader("; comment\r\nme A 127.0.0.1"));
