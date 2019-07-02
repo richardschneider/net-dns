@@ -455,11 +455,18 @@ namespace Makaretu.Dns
                 {
                     if (ignoreEscape)
                     {
+                        if (sb.Length == 0)
+                        {
+                            tokenStartsNewLine = previousChar == '\r' || previousChar == '\n';
+                        }
                         sb.Append((char)c);
+                        previousChar = c;
+
                         c = text.Read();
                         if (0 <= c)
                         {
                             sb.Append((char)c);
+                            previousChar = c;
                         }
                         continue;
                     }

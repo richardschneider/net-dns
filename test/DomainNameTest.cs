@@ -272,5 +272,12 @@ namespace Makaretu.Dns
             Assert.AreEqual(@"a\000\092\255z.example", a.ToString());
             Assert.AreEqual(a, new DomainName(a.ToString()));
         }
+
+        [TestMethod]
+        public void FormattedString()
+        {
+            var name = new DomainName(@"foo ~ \.bar-12A.org");
+            Assert.AreEqual(@"foo\032~\032\.bar-12A.org", name.ToString());
+        }
     }
 }
