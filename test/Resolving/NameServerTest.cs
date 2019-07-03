@@ -361,5 +361,69 @@ namespace Makaretu.Dns.Resolving
 
             Assert.AreEqual(0, response.AdditionalRecords.Count);
         }
+
+        [TestMethod]
+        public async Task EscapedDotDomainName()
+        {
+            var catalog = new Catalog
+            {
+                new ARecord
+                {
+                    Name = "a.b",
+                    Address = IPAddress.Parse("127.0.0.2")
+                },
+                new ARecord
+                {
+                    Name = @"a\.b",
+                    Address = IPAddress.Parse("127.0.0.3")
+                }
+            };
+            var resolver = new NameServer { Catalog = catalog };
+
+            var request = new Message();
+            request.Questions.Add(new Question { Name = "a.b", Type = DnsType.A });
+            var response = await resolver.ResolveAsync(request);
+            Assert.AreEqual(MessageStatus.NoError, response.Status);
+            var answer = response.Answers.OfType<ARecord>().First();
+            Assert.AreEqual("127.0.0.2", answer.Address.ToString());
+
+            request = new Message();
+            request.Questions.Add(new Question { Name = @"a\.b", Type = DnsType.A });
+            response = await resolver.ResolveAsync(request);
+            Assert.AreEqual(MessageStatus.NoError, response.Status);
+            answer = response.Answers.OfType<ARecord>().First();
+            Assert.AreEqual("127.0.0.3", answer.Address.ToString());
+        }
+
+        [TestMethod]
+        public async Task RoundTrip_EscapedDotDomainName()
+        {
+            var catalog = new Catalog
+            {
+                new ARecord
+                {
+                    Name = "a.b",
+                    Address = IPAddress.Parse("127.0.0.2")
+                },
+                new ARecord
+                {
+                    Name = @"a\.b",
+                    Address = IPAddress.Parse("127.0.0.3")
+                }
+            };
+            var resolver = new NameServer { Catalog = catalog };
+
+            var request = new Message();
+            request.Questions.Add(new Question { Name = @"a\.b", Type = DnsType.A });
+            var bin = request.ToByteArray();
+            var r1 = new Message();
+            r1.Read(bin);
+
+            var response = await resolver.ResolveAsync(r1);
+            Assert.AreEqual(MessageStatus.NoError, response.Status);
+            var answer = response.Answers.OfType<ARecord>().First();
+            Assert.AreEqual("127.0.0.3", answer.Address.ToString());
+
+        }
     }
 }

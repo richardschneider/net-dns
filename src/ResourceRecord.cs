@@ -41,7 +41,7 @@ namespace Makaretu.Dns
         ///   An owner name, i.e., the name of the node to which this
         ///   resource record pertains.
         /// </summary>
-        public string Name { get; set; }
+        public DomainName Name { get; set; }
 
         /// <summary>
         ///   The canonical form of the owner name.
@@ -52,9 +52,10 @@ namespace Makaretu.Dns
         /// </remarks>
         public string CanonicalName
         {
+            // TOOD: Check usage.  Should not be used because its a string.
             get
             {
-                return Name.ToLowerInvariant();
+                return Name.ToCanonical().ToString();
             }
         }
 
@@ -99,7 +100,7 @@ namespace Makaretu.Dns
         /// </returns>
         public bool IsExpired(DateTime? from = null)
         {
-            var now = from.HasValue ? from.Value : DateTime.Now;
+            var now = from ?? DateTime.Now;
             return CreationTime + TTL <= now;
         }
 
@@ -232,7 +233,7 @@ namespace Makaretu.Dns
             var that = obj as ResourceRecord;
             if (that == null) return false;
 
-            if (!DnsObject.NamesEquals(this.Name, that.Name)) return false;
+            if (this.Name != that.Name) return false;
             if (this.Class != that.Class) return false;
             if (this.Type != that.Type) return false;
 
@@ -250,9 +251,11 @@ namespace Makaretu.Dns
         /// </remarks>
         public static bool operator ==(ResourceRecord a, ResourceRecord b)
         {
-            if (object.ReferenceEquals(a, b)) return true;
-            if (object.ReferenceEquals(a, null)) return false;
-            if (object.ReferenceEquals(b, null)) return false;
+#pragma warning disable IDE0041 // Null check can be simplified
+            if (ReferenceEquals(a, b)) return true;
+            if (ReferenceEquals(a, null)) return false;
+            if (ReferenceEquals(b, null)) return false;
+#pragma warning restore IDE0041 // Null check can be simplified
 
             return a.Equals(b);
         }
@@ -268,9 +271,11 @@ namespace Makaretu.Dns
         /// </remarks>
         public static bool operator !=(ResourceRecord a, ResourceRecord b)
         {
-            if (object.ReferenceEquals(a, b)) return false;
-            if (object.ReferenceEquals(a, null)) return true;
-            if (object.ReferenceEquals(b, null)) return true;
+#pragma warning disable IDE0041 // Null check can be simplified
+            if (ReferenceEquals(a, b)) return false;
+            if (ReferenceEquals(a, null)) return true;
+            if (ReferenceEquals(b, null)) return true;
+#pragma warning restore IDE0041 // Null check can be simplified
 
             return !a.Equals(b);
         }
@@ -279,7 +284,7 @@ namespace Makaretu.Dns
         public override int GetHashCode()
         {
             return 
-                Name?.ToLowerInvariant().GetHashCode() ?? 0
+                Name?.GetHashCode() ?? 0
                 ^ Class.GetHashCode()
                 ^ Type.GetHashCode()
                 ^ GetData().Aggregate(0, (r, b) => r ^ b.GetHashCode());

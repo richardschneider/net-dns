@@ -17,18 +17,18 @@ namespace Makaretu.Dns.Resolving
         ///   The name of the node.
         /// </summary>
         /// <value>
-        ///   An absolute (fully qualified) name.  For example, "emanon.org".
+        ///   An absolute (fully qualified) domain name.  For example, "emanon.org".
         /// </value>
         /// <remarks>
         ///   All <see cref="Resources"/> must have a <see cref="ResourceRecord.Name"/> that
         ///   matches this value.
         /// </remarks>
-        public string Name { get; set; } = string.Empty;
+        public DomainName Name { get; set; } = DomainName.Root;
 
         /// <inheritdoc />
         public override string ToString()
         {
-            return Name;
+            return Name.ToString();
         }
 
         /// <summary>

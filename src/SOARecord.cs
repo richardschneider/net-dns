@@ -39,13 +39,13 @@ namespace Makaretu.Dns
         ///  The domain-name of the name server that was the
         ///  original or primary source of data for this zone.
         /// </summary>
-        public string PrimaryName { get; set; }
+        public DomainName PrimaryName { get; set; }
 
         /// <summary>
         ///  A domain-name which specifies the mailbox of the
         ///  person responsible for this zone.
         /// </summary>
-        public string Mailbox { get; set; }
+        public DomainName Mailbox { get; set; }
 
         /// <summary>
         ///  The unsigned 32 bit version number of the original copy

@@ -30,7 +30,7 @@ namespace Makaretu.Dns
         ///  A domain-name which points to some location in the
         ///  domain name space.
         /// </summary>
-        public string DomainName { get; set; }
+        public DomainName DomainName { get; set; }
 
 
         /// <inheritdoc />

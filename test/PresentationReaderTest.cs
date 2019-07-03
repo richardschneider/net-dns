@@ -37,16 +37,16 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
-        public void ReadOctalEscapedString()
+        public void ReadDecimalEscapedString()
         {
-            var reader = new PresentationReader(new StringReader("a\\142c"));
+            var reader = new PresentationReader(new StringReader("a\\098c"));
             Assert.AreEqual("abc", reader.ReadString());
         }
 
         [TestMethod]
-        public void ReadInvalidOctalEscapedString()
+        public void ReadInvalidDecimalEscapedString()
         {
-            var reader = new PresentationReader(new StringReader("a\\200c"));
+            var reader = new PresentationReader(new StringReader("a\\256c"));
             ExceptionAssert.Throws<FormatException>(() => reader.ReadString());
         }
 
@@ -121,6 +121,13 @@ namespace Makaretu.Dns
         }
 
         [TestMethod]
+        public void ReadResourceMissingName()
+        {
+            var reader = new PresentationReader(new StringReader("  NS ns1"));
+            ExceptionAssert.Throws<InvalidDataException>(() => reader.ReadResourceRecord());
+        }
+
+        [TestMethod]
         public void ReadResourceWithComment()
         {
             var reader = new PresentationReader(new StringReader("; comment\r\nme A 127.0.0.1"));
@@ -146,6 +153,23 @@ $ORIGIN emanon.org. ; no such place\r\n
             Assert.AreEqual(DnsType.PTR, resource.Type);
             Assert.AreEqual(ResourceRecord.DefaultTTL, resource.TTL);
             Assert.IsInstanceOfType(resource, typeof(PTRRecord));
+        }
+
+        [TestMethod]
+        public void ReadResourceWithEscapedOrigin()
+        {
+            var text = @"
+$ORIGIN emanon\.org. ; no such place\r\n
+@ PTR localhost
+";
+            var reader = new PresentationReader(new StringReader(text));
+            var resource = reader.ReadResourceRecord();
+            Assert.AreEqual(@"emanon\.org", resource.Name);
+            Assert.AreEqual(DnsClass.IN, resource.Class);
+            Assert.AreEqual(DnsType.PTR, resource.Type);
+            Assert.AreEqual(ResourceRecord.DefaultTTL, resource.TTL);
+            Assert.IsInstanceOfType(resource, typeof(PTRRecord));
+            Assert.AreEqual(1, resource.Name.Labels.Count);
         }
 
         [TestMethod]
@@ -185,6 +209,45 @@ emanon.org A 127.0.0.1
             Assert.AreEqual(DnsType.AAAA, aaaa.Type);
             Assert.AreEqual(ResourceRecord.DefaultTTL, aaaa.TTL);
             Assert.IsInstanceOfType(aaaa, typeof(AAAARecord));
+        }
+
+        [TestMethod]
+        public void ReadResourceWithPreviousEscapedDomain()
+        {
+            var text = @"
+emanon\126.org A 127.0.0.1
+           AAAA ::1
+";
+            var reader = new PresentationReader(new StringReader(text));
+            var a = reader.ReadResourceRecord();
+            Assert.AreEqual("emanon~.org", a.Name);
+            Assert.AreEqual(DnsClass.IN, a.Class);
+            Assert.AreEqual(DnsType.A, a.Type);
+            Assert.AreEqual(ResourceRecord.DefaultTTL, a.TTL);
+            Assert.IsInstanceOfType(a, typeof(ARecord));
+            Assert.AreEqual(2, a.Name.Labels.Count);
+
+            var aaaa = reader.ReadResourceRecord();
+            Assert.AreEqual("emanon~.org", aaaa.Name);
+            Assert.AreEqual(DnsClass.IN, aaaa.Class);
+            Assert.AreEqual(DnsType.AAAA, aaaa.Type);
+            Assert.AreEqual(ResourceRecord.DefaultTTL, aaaa.TTL);
+            Assert.IsInstanceOfType(aaaa, typeof(AAAARecord));
+            Assert.AreEqual(2, a.Name.Labels.Count);
+        }
+
+        [TestMethod]
+        public void ReadResourceWithLeadingEscapedDomainName()
+        {
+            var text = @"\126emanon.org A 127.0.0.1";
+            var reader = new PresentationReader(new StringReader(text));
+            var a = reader.ReadResourceRecord();
+            Assert.AreEqual("~emanon.org", a.Name);
+            Assert.AreEqual(DnsClass.IN, a.Class);
+            Assert.AreEqual(DnsType.A, a.Type);
+            Assert.AreEqual(ResourceRecord.DefaultTTL, a.TTL);
+            Assert.IsInstanceOfType(a, typeof(ARecord));
+            Assert.AreEqual(2, a.Name.Labels.Count);
         }
 
         [TestMethod]
@@ -390,5 +453,16 @@ mail3         IN  A     192.0.2.5             ; IPv4 address for mail3.example.c
             Assert.AreEqual(expected, reader.ReadDateTime());
             Assert.AreEqual(expected, reader.ReadDateTime());
         }
+
+        [TestMethod]
+        public void ReadDomainName_Escaped()
+        {
+            var foo = new DomainName("foo.com");
+            var drSmith = new DomainName(@"dr\. smith.com");
+            var reader = new PresentationReader(new StringReader(@"dr\.\032smith.com foo.com"));
+            Assert.AreEqual(drSmith, reader.ReadDomainName());
+            Assert.AreEqual(foo, reader.ReadDomainName());
+        }
+
     }
 }

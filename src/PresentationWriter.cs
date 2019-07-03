@@ -154,9 +154,9 @@ namespace Makaretu.Dns
         /// <param name="appendSpace">
         ///   Write a space after the value.
         /// </param>
-        public void WriteDomainName(string value, bool appendSpace = true)
+        public void WriteDomainName(DomainName value, bool appendSpace = true)
         {
-            WriteString(value, appendSpace);
+            WriteStringUnencoded(value.ToString(), appendSpace);
         }
 
         /// <summary>

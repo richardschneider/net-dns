@@ -17,7 +17,7 @@ namespace Makaretu.Dns
 
         System.IO.TextReader text;
         TimeSpan? defaultTTL = null;
-        string defaultDomainName = null;
+        DomainName defaultDomainName = null;
         int parenLevel = 0;
         int previousChar = '\n';  // Assume a newline
         bool eolSeen = false;
@@ -55,7 +55,7 @@ namespace Makaretu.Dns
         ///   <b>Origin</b> is used when the domain name "@" is used
         ///   for a domain name.
         /// </remarks>
-        public string Origin { get; set; } = String.Empty;
+        public DomainName Origin { get; set; } = DomainName.Root;
 
         /// <summary>
         ///   Read a byte.
@@ -96,19 +96,19 @@ namespace Makaretu.Dns
         /// <returns>
         ///   The domain name as a string.
         /// </returns>
-        public string ReadDomainName()
+        public DomainName ReadDomainName()
         {
-            return MakeAbsoluteDomainName(ReadToken());
+            return MakeAbsoluteDomainName(ReadToken(ignoreEscape: true));
         }
 
-        string MakeAbsoluteDomainName(string name)
+        DomainName MakeAbsoluteDomainName(string name)
         {
             // If an absolute name.
             if (name.EndsWith("."))
-                return name.Substring(0, name.Length - 1);
+                return new DomainName(name.Substring(0, name.Length - 1));
 
             // Then its a relative name.
-            return (name + "." + Origin).TrimEnd('.');
+            return DomainName.Join(new DomainName(name), Origin);
         }
 
         /// <summary>
@@ -287,14 +287,14 @@ namespace Makaretu.Dns
         /// </remarks>
         public ResourceRecord ReadResourceRecord()
         {
-            string domainName = defaultDomainName;
+            DomainName domainName = defaultDomainName;
             DnsClass klass = DnsClass.IN;
             TimeSpan? ttl = defaultTTL;
             DnsType? type = null;
 
             while (!type.HasValue)
             {
-                var token = ReadToken();
+                var token = ReadToken(ignoreEscape: true);
                 if (token == "")
                 {
                     return null;
@@ -306,16 +306,18 @@ namespace Makaretu.Dns
                     switch (token)
                     {
                         case "$ORIGIN":
-                            Origin = ReadToken();
+                            Origin = ReadDomainName();
                             break;
                         case "$TTL":
                             defaultTTL = ttl = ReadTimeSpan32();
                             break;
                         case "@":
                             domainName = Origin;
+                            defaultDomainName = domainName;
                             break;
                         default:
-                            domainName = token;
+                            domainName = MakeAbsoluteDomainName(token);
+                            defaultDomainName = domainName;
                             break;
                     }
                     continue;
@@ -355,11 +357,14 @@ namespace Makaretu.Dns
                 throw new InvalidDataException($"Unknown token '{token}', expected a Class, Type or TTL.");
             }
 
-            defaultDomainName = domainName;
+            if (domainName == null)
+            { 
+                throw new InvalidDataException("Missing resource record name.");
+            }
 
             // Create the specific resource record based on the type.
             var resource = ResourceRegistry.Create(type.Value);
-            resource.Name = MakeAbsoluteDomainName(domainName);
+            resource.Name = domainName;
             resource.Type = type.Value;
             resource.Class = klass;
             if (ttl.HasValue)
@@ -422,7 +427,7 @@ namespace Makaretu.Dns
             return true;
         }
 
-        string ReadToken()
+        string ReadToken(bool ignoreEscape = false)
         {
             var sb = new StringBuilder();
             int c;
@@ -448,26 +453,44 @@ namespace Makaretu.Dns
                 // Handle escaped character.
                 if (c == '\\')
                 {
+                    if (ignoreEscape)
+                    {
+                        if (sb.Length == 0)
+                        {
+                            tokenStartsNewLine = previousChar == '\r' || previousChar == '\n';
+                        }
+                        sb.Append((char)c);
+                        previousChar = c;
+
+                        c = text.Read();
+                        if (0 <= c)
+                        {
+                            sb.Append((char)c);
+                            previousChar = c;
+                        }
+                        continue;
+                    }
                     previousChar = c;
 
-                    // Handle octal escapes \DDD
+                    // Handle decimal escapes \DDD
                     int ndigits = 0;
-                    int oc = 0;
-                    for (; ndigits <= 3; ++ndigits) {
+                    int ddd = 0;
+                    for (; ndigits <= 3; ++ndigits)
+                    {
                         c = text.Peek();
-                        if ('0' <= c && c <= '7')
+                        if ('0' <= c && c <= '9')
                         {
                             text.Read();
-                            oc = (oc << 3) | (c - '0');
-                            if (oc > 0x7F)
-                                throw new FormatException("Invalid octal value.");
+                            ddd = (ddd * 10) + (c - '0');
+                            if (ddd > 0xFF)
+                                throw new FormatException("Invalid value.");
                         }
                         else
                         {
                             break;
                         }
                     }
-                    c = (ndigits > 0) ? oc : text.Read();
+                    c = (ndigits > 0) ? ddd : text.Read();
 
                     sb.Append((char)c);
                     skipWhitespace = false;

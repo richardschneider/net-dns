@@ -37,7 +37,7 @@ namespace Makaretu.Dns
         public OPTRecord() : base()
         {
             Type = DnsType.OPT;
-            Name = "";
+            Name = DomainName.Root;
             RequestorPayloadSize = 1280;
             TTL = TimeSpan.Zero;
         }

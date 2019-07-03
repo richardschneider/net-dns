@@ -12,7 +12,7 @@ namespace Makaretu.Dns
         /// <summary>
         ///    A domain name to query.
         /// </summary>
-        public string Name { get; set; }
+        public DomainName Name { get; set; }
 
         /// <summary>
         ///    A two octet code which specifies the type of the query.

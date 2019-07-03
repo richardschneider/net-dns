@@ -218,8 +218,10 @@ namespace Makaretu.Dns
         public void RDATA_Underflow()
         {
             // CNAME with extra byte.
-            var ms = new MemoryStream(Convert.FromBase64String("A2ZvbwAABQABAAFRgAAKB3Vua25vd24A/w=="));
-            ms.Position = 0;
+            var ms = new MemoryStream(Convert.FromBase64String("A2ZvbwAABQABAAFRgAAKB3Vua25vd24A/w=="))
+            {
+                Position = 0
+            };
             ExceptionAssert.Throws<InvalidDataException>(() =>
             {
                 var _ = new ResourceRecord().Read(ms);

@@ -18,20 +18,8 @@ namespace Makaretu.Dns.Resolving
     ///   The key is the case insensitive <see cref="Node.Name"/> and the value is a <see cref="Node"/>.
     ///   </para>
     /// </remarks>
-    public class Catalog : ConcurrentDictionary<string, Node>
+    public class Catalog : ConcurrentDictionary<DomainName, Node>
     {
-        /// <summary>
-        ///   Creates a new instance of the <see cref="Catalog"/> class.
-        /// </summary>
-        public Catalog() :
-#if NETSTANDARD14
-            base(StringComparer.OrdinalIgnoreCase)
-#else
-            base(StringComparer.InvariantCultureIgnoreCase)
-#endif
-        {
-        }
-
         /// <summary>
         ///   Include the zone information.
         /// </summary>
@@ -64,7 +52,7 @@ namespace Makaretu.Dns.Resolving
             if (resources[0].Type != DnsType.SOA)
                 throw new InvalidDataException("First resource record must be a SOA.");
             var soa = (SOARecord)resources[0];
-            if (resources.Any(r => !r.Name.EndsWith(soa.Name)))
+            if (resources.Any(r => !r.Name.BelongsTo(soa.Name)))
                 throw new InvalidDataException("All resource records must belong to the zone.");
 
             // Insert the nodes of the zone.
@@ -92,9 +80,9 @@ namespace Makaretu.Dns.Resolving
         /// <param name="name">
         ///   The name of the zone.
         /// </param>
-        public void RemoveZone(string name)
+        public void RemoveZone(DomainName name)
         {
-            var keys = Keys.Where(k => k.EndsWith(name));
+            var keys = Keys.Where(k => k.BelongsTo(name));
             foreach (var key in keys)
             {
                 TryRemove(key, out Node _);
@@ -162,7 +150,7 @@ namespace Makaretu.Dns.Resolving
                 }
             }
 
-            var root = this[""];
+            var root = this[new DomainName("")];
             root.Authoritative = true;
             return root;
         }
@@ -202,8 +190,13 @@ namespace Makaretu.Dns.Resolving
         /// </remarks>
         public IEnumerable<Node> NodesInCanonicalOrder()
         {
-            return this.Values
-                .OrderBy(node => String.Join(".", node.Name.ToLowerInvariant().Split('.').Reverse()));
+            return Values
+                .OrderBy(node =>
+                {
+                    var co = node.Name.ToCanonical().Labels.Reverse().ToArray();
+                    var coname = new DomainName(co);
+                    return coname.ToString();
+                });
         }
 
         /// <summary>
@@ -222,7 +215,7 @@ namespace Makaretu.Dns.Resolving
                 var ptr = new PTRRecord
                 {
                     Class = a.Class,
-                    Name = a.Address.GetArpaName(),
+                    Name = new DomainName(a.Address.GetArpaName()),
                     DomainName = a.Name,
                     TTL = a.TTL
                 };

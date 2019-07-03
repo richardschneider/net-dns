@@ -41,7 +41,7 @@ namespace Makaretu.Dns
         ///   using the TKEY RR is actually used to derive the algorithm specific key.
         /// </remarks>
         /// <seealso cref="TSIGRecord.Algorithm"/>
-        public string Algorithm { get; set; }
+        public DomainName Algorithm { get; set; }
 
         /// <summary>
         ///   The start date for the <see cref="Key"/>.

@@ -16,7 +16,7 @@ namespace Makaretu.Dns.Resolving
         {
             var node = new Node();
 
-            Assert.AreEqual("", node.Name);
+            Assert.AreEqual(DomainName.Root, node.Name);
             Assert.AreEqual(0, node.Resources.Count);
             Assert.AreEqual("", node.ToString());
         }

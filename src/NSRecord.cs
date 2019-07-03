@@ -35,7 +35,7 @@ namespace Makaretu.Dns
         ///   A domain-name which specifies a host which should be
         ///   authoritative for the specified class and domain.
         /// </summary>
-        public string Authority { get; set; }
+        public DomainName Authority { get; set; }
 
 
         /// <inheritdoc />
