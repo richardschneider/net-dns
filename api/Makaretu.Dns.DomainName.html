@@ -1,0 +1,927 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DomainName
+   | DNS Model </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DomainName
+   | DNS Model ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Makaretu.Dns.DomainName">
+  
+  
+  <h1 id="Makaretu_Dns_DomainName" data-uid="Makaretu.Dns.DomainName" class="text-break">Class DomainName
+  </h1>
+  <div class="markdown level0 summary"><p>A domain name consists of one or more parts, <a class="xref" href="Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Labels">Labels</a>, that are 
+conventionally delimited by dots, such as &quot;example.org&quot;.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">DomainName</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Makaretu.Dns.html">Makaretu.Dns</a></h6>
+  <h6><strong>Assembly</strong>: Makaretu.Dns.dll</h6>
+  <h5 id="Makaretu_Dns_DomainName_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DomainName : IEquatable&lt;DomainName&gt;</code></pre>
+  </div>
+  <h5 id="Makaretu_Dns_DomainName_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Equality is based on the number of and the case-insenstive contents of <a class="xref" href="Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Labels">Labels</a>.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName__ctor_System_String_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L68">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName__ctor_" data-uid="Makaretu.Dns.DomainName.#ctor*"></a>
+  <h4 id="Makaretu_Dns_DomainName__ctor_System_String_" data-uid="Makaretu.Dns.DomainName.#ctor(System.String)">DomainName(String)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a> class from
+the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DomainName(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The dot separated labels; such as &quot;example.org&quot;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_DomainName__ctor_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The name can contain backslash to escape a character.
+See <a href="https://tools.ietf.org/html/rfc4343">RFC 4343</a> 
+for the character escaping rules.
+<div class="NOTE"><h5>note</h5><p>
+To use us backslash in a domain name (highly unusaual), you must use a double backslash.
+</p></div></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName__ctor_System_String___.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.%23ctor(System.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L83">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName__ctor_" data-uid="Makaretu.Dns.DomainName.#ctor*"></a>
+  <h4 id="Makaretu_Dns_DomainName__ctor_System_String___" data-uid="Makaretu.Dns.DomainName.#ctor(System.String[])">DomainName(String[])</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a> class from
+the sequence of label.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DomainName(params string[] labels)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">labels</span></td>
+        <td><p>The <a class="xref" href="Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Labels">Labels</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_DomainName__ctor_System_String____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The labels are not parsed; character escaping is not performed.</p>
+</div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_Root.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.Root%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L38">View Source</a>
+  </span>
+  <h4 id="Makaretu_Dns_DomainName_Root" data-uid="Makaretu.Dns.DomainName.Root">Root</h4>
+  <div class="markdown level1 summary"><p>The root name space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DomainName Root</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
+        <td><p>The empty string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_DomainName_Root_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The DNS is a hierarchical naming system for computers, services, or any 
+resource participating in the Internet. The top of that hierarchy is 
+the root domain. The root domain does not have a formal name and its
+label in the DNS hierarchy is an empty string. </p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_Labels.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.Labels%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L51">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_Labels_" data-uid="Makaretu.Dns.DomainName.Labels*"></a>
+  <h4 id="Makaretu_Dns_DomainName_Labels" data-uid="Makaretu.Dns.DomainName.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>A sequence of labels that make up the domain name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>A sequece of strings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_DomainName_Labels_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The last label is the TLD (top level domain).</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_BelongsTo_Makaretu_Dns_DomainName_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.BelongsTo(Makaretu.Dns.DomainName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L177">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_BelongsTo_" data-uid="Makaretu.Dns.DomainName.BelongsTo*"></a>
+  <h4 id="Makaretu_Dns_DomainName_BelongsTo_Makaretu_Dns_DomainName_" data-uid="Makaretu.Dns.DomainName.BelongsTo(Makaretu.Dns.DomainName)">BelongsTo(DomainName)</h4>
+  <div class="markdown level1 summary"><p>Determines if this domain name is a subdomain of or equals an another
+domain name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BelongsTo(DomainName domain)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
+        <td><span class="parametername">domain</span></td>
+        <td><p>Another domain.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><strong>true</strong> if this domain name is a subdomain of <code data-dev-comment-type="paramref" class="paramref">domain</code>
+or equals <code data-dev-comment-type="paramref" class="paramref">domain</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_Equals_Makaretu_Dns_DomainName_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.Equals(Makaretu.Dns.DomainName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L292">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_Equals_" data-uid="Makaretu.Dns.DomainName.Equals*"></a>
+  <h4 id="Makaretu_Dns_DomainName_Equals_Makaretu_Dns_DomainName_" data-uid="Makaretu.Dns.DomainName.Equals(Makaretu.Dns.DomainName)">Equals(DomainName)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(DomainName that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L283">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_Equals_" data-uid="Makaretu.Dns.DomainName.Equals*"></a>
+  <h4 id="Makaretu_Dns_DomainName_Equals_System_Object_" data-uid="Makaretu.Dns.DomainName.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_GetHashCode.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L277">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_GetHashCode_" data-uid="Makaretu.Dns.DomainName.GetHashCode*"></a>
+  <h4 id="Makaretu_Dns_DomainName_GetHashCode" data-uid="Makaretu.Dns.DomainName.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_IsSubdomainOf_Makaretu_Dns_DomainName_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.IsSubdomainOf(Makaretu.Dns.DomainName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L192">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_IsSubdomainOf_" data-uid="Makaretu.Dns.DomainName.IsSubdomainOf*"></a>
+  <h4 id="Makaretu_Dns_DomainName_IsSubdomainOf_Makaretu_Dns_DomainName_" data-uid="Makaretu.Dns.DomainName.IsSubdomainOf(Makaretu.Dns.DomainName)">IsSubdomainOf(DomainName)</h4>
+  <div class="markdown level1 summary"><p>Determines if this domain name is a subdomain of another
+domain name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSubdomainOf(DomainName domain)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
+        <td><span class="parametername">domain</span></td>
+        <td><p>Another domain.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><strong>true</strong> if this domain name is a subdomain of <code data-dev-comment-type="paramref" class="paramref">domain</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_Join_Makaretu_Dns_DomainName___.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.Join(Makaretu.Dns.DomainName%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L97">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_Join_" data-uid="Makaretu.Dns.DomainName.Join*"></a>
+  <h4 id="Makaretu_Dns_DomainName_Join_Makaretu_Dns_DomainName___" data-uid="Makaretu.Dns.DomainName.Join(Makaretu.Dns.DomainName[])">Join(DomainName[])</h4>
+  <div class="markdown level1 summary"><p>Combine multiple domain names to form one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DomainName Join(params DomainName[] names)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a>[]</td>
+        <td><span class="parametername">names</span></td>
+        <td><p>The domain names to join.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
+        <td><p>A new domain containing all the <code data-dev-comment-type="paramref" class="paramref">names</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_LabelsEqual_System_String_System_String_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.LabelsEqual(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L362">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_LabelsEqual_" data-uid="Makaretu.Dns.DomainName.LabelsEqual*"></a>
+  <h4 id="Makaretu_Dns_DomainName_LabelsEqual_System_String_System_String_" data-uid="Makaretu.Dns.DomainName.LabelsEqual(System.String,System.String)">LabelsEqual(String, String)</h4>
+  <div class="markdown level1 summary"><p>Determines if the two domain name labels are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LabelsEqual(string a, string b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">a</span></td>
+        <td><p>A domain name label</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">b</span></td>
+        <td><p>A domain name label</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><strong>true</strong> if <code data-dev-comment-type="paramref" class="paramref">a</code> and <code data-dev-comment-type="paramref" class="paramref">b</code> are
+considered equal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_DomainName_LabelsEqual_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Uses a case-insenstive algorithm, where &apos;A-Z&apos; are equivalent to &apos;a-z&apos;.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_Parent.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.Parent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L221">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_Parent_" data-uid="Makaretu.Dns.DomainName.Parent*"></a>
+  <h4 id="Makaretu_Dns_DomainName_Parent" data-uid="Makaretu.Dns.DomainName.Parent">Parent()</h4>
+  <div class="markdown level1 summary"><p>Gets the parent&apos;s domain name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DomainName Parent()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
+        <td><p>The domain name of the parent or <strong>null</strong> if
+there is no parent; e.g. this is the root.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_ToCanonical.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.ToCanonical%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L158">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_ToCanonical_" data-uid="Makaretu.Dns.DomainName.ToCanonical*"></a>
+  <h4 id="Makaretu_Dns_DomainName_ToCanonical" data-uid="Makaretu.Dns.DomainName.ToCanonical">ToCanonical()</h4>
+  <div class="markdown level1 summary"><p>Gets the canonical form of the domain name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DomainName ToCanonical()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
+        <td><p>A domain name in the canonical form.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_DomainName_ToCanonical_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>All uppercase US-ASCII letters in the <a class="xref" href="Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Labels">Labels</a> are
+replaced by the corresponding lowercase US-ASCII letters.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_ToString.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L116">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_ToString_" data-uid="Makaretu.Dns.DomainName.ToString*"></a>
+  <h4 id="Makaretu_Dns_DomainName_ToString" data-uid="Makaretu.Dns.DomainName.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns the textual representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The concatenation of the <a class="xref" href="Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Labels">Labels</a> separated by a dot.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a></div>
+  <h5 id="Makaretu_Dns_DomainName_ToString_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If a label contains a dot or backslash, then it is escaped with a backslash.</p>
+</div>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_op_Equality_Makaretu_Dns_DomainName_Makaretu_Dns_DomainName_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.op_Equality(Makaretu.Dns.DomainName%2CMakaretu.Dns.DomainName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L316">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_op_Equality_" data-uid="Makaretu.Dns.DomainName.op_Equality*"></a>
+  <h4 id="Makaretu_Dns_DomainName_op_Equality_Makaretu_Dns_DomainName_Makaretu_Dns_DomainName_" data-uid="Makaretu.Dns.DomainName.op_Equality(Makaretu.Dns.DomainName,Makaretu.Dns.DomainName)">Equality(DomainName, DomainName)</h4>
+  <div class="markdown level1 summary"><p>Value equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(DomainName a, DomainName b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_op_Implicit_System_String__Makaretu_Dns_DomainName.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.op_Implicit(System.String)~Makaretu.Dns.DomainName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L345">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_op_Implicit_" data-uid="Makaretu.Dns.DomainName.op_Implicit*"></a>
+  <h4 id="Makaretu_Dns_DomainName_op_Implicit_System_String__Makaretu_Dns_DomainName" data-uid="Makaretu.Dns.DomainName.op_Implicit(System.String)~Makaretu.Dns.DomainName">Implicit(String to DomainName)</h4>
+  <div class="markdown level1 summary"><p>Implicit casting of a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a> to a <a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator DomainName(string s)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">s</span></td>
+        <td><p>A possibly escaped domain name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
+        <td><p>A new <a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Makaretu_Dns_DomainName_op_Implicit_System_String__Makaretu_Dns_DomainName_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Equivalent to <pre><code>new DomainName(s)</code></pre></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName_op_Inequality_Makaretu_Dns_DomainName_Makaretu_Dns_DomainName_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName.op_Inequality(Makaretu.Dns.DomainName%2CMakaretu.Dns.DomainName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L328">View Source</a>
+  </span>
+  <a id="Makaretu_Dns_DomainName_op_Inequality_" data-uid="Makaretu.Dns.DomainName.op_Inequality*"></a>
+  <h4 id="Makaretu_Dns_DomainName_op_Inequality_Makaretu_Dns_DomainName_Makaretu_Dns_DomainName_" data-uid="Makaretu.Dns.DomainName.op_Inequality(Makaretu.Dns.DomainName,Makaretu.Dns.DomainName)">Inequality(DomainName, DomainName)</h4>
+  <div class="markdown level1 summary"><p>Value inequality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(DomainName a, DomainName b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_DomainName.md&amp;value=---%0Auid%3A%20Makaretu.Dns.DomainName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/richardschneider/net-dns/blob/master/src/DomainName.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

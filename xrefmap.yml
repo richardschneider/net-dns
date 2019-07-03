@@ -58,12 +58,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.AddressRecord.Address
   nameWithType: AddressRecord.Address
-- uid: Makaretu.Dns.AddressRecord.Create(System.String,System.Net.IPAddress)
-  name: Create(String, IPAddress)
-  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_Create_System_String_System_Net_IPAddress_
-  commentId: M:Makaretu.Dns.AddressRecord.Create(System.String,System.Net.IPAddress)
-  fullName: Makaretu.Dns.AddressRecord.Create(System.String, System.Net.IPAddress)
-  nameWithType: AddressRecord.Create(String, IPAddress)
+- uid: Makaretu.Dns.AddressRecord.Create(Makaretu.Dns.DomainName,System.Net.IPAddress)
+  name: Create(DomainName, IPAddress)
+  href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_Create_Makaretu_Dns_DomainName_System_Net_IPAddress_
+  commentId: M:Makaretu.Dns.AddressRecord.Create(Makaretu.Dns.DomainName,System.Net.IPAddress)
+  fullName: Makaretu.Dns.AddressRecord.Create(Makaretu.Dns.DomainName, System.Net.IPAddress)
+  nameWithType: AddressRecord.Create(DomainName, IPAddress)
 - uid: Makaretu.Dns.AddressRecord.Create*
   name: Create
   href: api/Makaretu.Dns.AddressRecord.html#Makaretu_Dns_AddressRecord_Create_
@@ -672,19 +672,6 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.DnsObject.Length
   nameWithType: DnsObject.Length
-- uid: Makaretu.Dns.DnsObject.NamesEquals(System.String,System.String)
-  name: NamesEquals(String, String)
-  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_NamesEquals_System_String_System_String_
-  commentId: M:Makaretu.Dns.DnsObject.NamesEquals(System.String,System.String)
-  fullName: Makaretu.Dns.DnsObject.NamesEquals(System.String, System.String)
-  nameWithType: DnsObject.NamesEquals(String, String)
-- uid: Makaretu.Dns.DnsObject.NamesEquals*
-  name: NamesEquals
-  href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_NamesEquals_
-  commentId: Overload:Makaretu.Dns.DnsObject.NamesEquals
-  isSpec: "True"
-  fullName: Makaretu.Dns.DnsObject.NamesEquals
-  nameWithType: DnsObject.NamesEquals
 - uid: Makaretu.Dns.DnsObject.Read(Makaretu.Dns.WireReader)
   name: Read(WireReader)
   href: api/Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Read_Makaretu_Dns_WireReader_
@@ -976,6 +963,224 @@ references:
   commentId: F:Makaretu.Dns.DnsType.WKS
   fullName: Makaretu.Dns.DnsType.WKS
   nameWithType: DnsType.WKS
+- uid: Makaretu.Dns.DomainName
+  name: DomainName
+  href: api/Makaretu.Dns.DomainName.html
+  commentId: T:Makaretu.Dns.DomainName
+  fullName: Makaretu.Dns.DomainName
+  nameWithType: DomainName
+- uid: Makaretu.Dns.DomainName.#ctor(System.String)
+  name: DomainName(String)
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName__ctor_System_String_
+  commentId: M:Makaretu.Dns.DomainName.#ctor(System.String)
+  fullName: Makaretu.Dns.DomainName.DomainName(System.String)
+  nameWithType: DomainName.DomainName(String)
+- uid: Makaretu.Dns.DomainName.#ctor(System.String[])
+  name: DomainName(String[])
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName__ctor_System_String___
+  commentId: M:Makaretu.Dns.DomainName.#ctor(System.String[])
+  name.vb: DomainName(String())
+  fullName: Makaretu.Dns.DomainName.DomainName(System.String[])
+  fullName.vb: Makaretu.Dns.DomainName.DomainName(System.String())
+  nameWithType: DomainName.DomainName(String[])
+  nameWithType.vb: DomainName.DomainName(String())
+- uid: Makaretu.Dns.DomainName.#ctor*
+  name: DomainName
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName__ctor_
+  commentId: Overload:Makaretu.Dns.DomainName.#ctor
+  isSpec: "True"
+  fullName: Makaretu.Dns.DomainName.DomainName
+  nameWithType: DomainName.DomainName
+- uid: Makaretu.Dns.DomainName.BelongsTo(Makaretu.Dns.DomainName)
+  name: BelongsTo(DomainName)
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_BelongsTo_Makaretu_Dns_DomainName_
+  commentId: M:Makaretu.Dns.DomainName.BelongsTo(Makaretu.Dns.DomainName)
+  fullName: Makaretu.Dns.DomainName.BelongsTo(Makaretu.Dns.DomainName)
+  nameWithType: DomainName.BelongsTo(DomainName)
+- uid: Makaretu.Dns.DomainName.BelongsTo*
+  name: BelongsTo
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_BelongsTo_
+  commentId: Overload:Makaretu.Dns.DomainName.BelongsTo
+  isSpec: "True"
+  fullName: Makaretu.Dns.DomainName.BelongsTo
+  nameWithType: DomainName.BelongsTo
+- uid: Makaretu.Dns.DomainName.Equals(Makaretu.Dns.DomainName)
+  name: Equals(DomainName)
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Equals_Makaretu_Dns_DomainName_
+  commentId: M:Makaretu.Dns.DomainName.Equals(Makaretu.Dns.DomainName)
+  fullName: Makaretu.Dns.DomainName.Equals(Makaretu.Dns.DomainName)
+  nameWithType: DomainName.Equals(DomainName)
+- uid: Makaretu.Dns.DomainName.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Equals_System_Object_
+  commentId: M:Makaretu.Dns.DomainName.Equals(System.Object)
+  fullName: Makaretu.Dns.DomainName.Equals(System.Object)
+  nameWithType: DomainName.Equals(Object)
+- uid: Makaretu.Dns.DomainName.Equals*
+  name: Equals
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Equals_
+  commentId: Overload:Makaretu.Dns.DomainName.Equals
+  isSpec: "True"
+  fullName: Makaretu.Dns.DomainName.Equals
+  nameWithType: DomainName.Equals
+- uid: Makaretu.Dns.DomainName.GetHashCode
+  name: GetHashCode()
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_GetHashCode
+  commentId: M:Makaretu.Dns.DomainName.GetHashCode
+  fullName: Makaretu.Dns.DomainName.GetHashCode()
+  nameWithType: DomainName.GetHashCode()
+- uid: Makaretu.Dns.DomainName.GetHashCode*
+  name: GetHashCode
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_GetHashCode_
+  commentId: Overload:Makaretu.Dns.DomainName.GetHashCode
+  isSpec: "True"
+  fullName: Makaretu.Dns.DomainName.GetHashCode
+  nameWithType: DomainName.GetHashCode
+- uid: Makaretu.Dns.DomainName.IsSubdomainOf(Makaretu.Dns.DomainName)
+  name: IsSubdomainOf(DomainName)
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_IsSubdomainOf_Makaretu_Dns_DomainName_
+  commentId: M:Makaretu.Dns.DomainName.IsSubdomainOf(Makaretu.Dns.DomainName)
+  fullName: Makaretu.Dns.DomainName.IsSubdomainOf(Makaretu.Dns.DomainName)
+  nameWithType: DomainName.IsSubdomainOf(DomainName)
+- uid: Makaretu.Dns.DomainName.IsSubdomainOf*
+  name: IsSubdomainOf
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_IsSubdomainOf_
+  commentId: Overload:Makaretu.Dns.DomainName.IsSubdomainOf
+  isSpec: "True"
+  fullName: Makaretu.Dns.DomainName.IsSubdomainOf
+  nameWithType: DomainName.IsSubdomainOf
+- uid: Makaretu.Dns.DomainName.Join(Makaretu.Dns.DomainName[])
+  name: Join(DomainName[])
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Join_Makaretu_Dns_DomainName___
+  commentId: M:Makaretu.Dns.DomainName.Join(Makaretu.Dns.DomainName[])
+  name.vb: Join(DomainName())
+  fullName: Makaretu.Dns.DomainName.Join(Makaretu.Dns.DomainName[])
+  fullName.vb: Makaretu.Dns.DomainName.Join(Makaretu.Dns.DomainName())
+  nameWithType: DomainName.Join(DomainName[])
+  nameWithType.vb: DomainName.Join(DomainName())
+- uid: Makaretu.Dns.DomainName.Join*
+  name: Join
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Join_
+  commentId: Overload:Makaretu.Dns.DomainName.Join
+  isSpec: "True"
+  fullName: Makaretu.Dns.DomainName.Join
+  nameWithType: DomainName.Join
+- uid: Makaretu.Dns.DomainName.Labels
+  name: Labels
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Labels
+  commentId: P:Makaretu.Dns.DomainName.Labels
+  fullName: Makaretu.Dns.DomainName.Labels
+  nameWithType: DomainName.Labels
+- uid: Makaretu.Dns.DomainName.Labels*
+  name: Labels
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Labels_
+  commentId: Overload:Makaretu.Dns.DomainName.Labels
+  isSpec: "True"
+  fullName: Makaretu.Dns.DomainName.Labels
+  nameWithType: DomainName.Labels
+- uid: Makaretu.Dns.DomainName.LabelsEqual(System.String,System.String)
+  name: LabelsEqual(String, String)
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_LabelsEqual_System_String_System_String_
+  commentId: M:Makaretu.Dns.DomainName.LabelsEqual(System.String,System.String)
+  fullName: Makaretu.Dns.DomainName.LabelsEqual(System.String, System.String)
+  nameWithType: DomainName.LabelsEqual(String, String)
+- uid: Makaretu.Dns.DomainName.LabelsEqual*
+  name: LabelsEqual
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_LabelsEqual_
+  commentId: Overload:Makaretu.Dns.DomainName.LabelsEqual
+  isSpec: "True"
+  fullName: Makaretu.Dns.DomainName.LabelsEqual
+  nameWithType: DomainName.LabelsEqual
+- uid: Makaretu.Dns.DomainName.op_Equality(Makaretu.Dns.DomainName,Makaretu.Dns.DomainName)
+  name: Equality(DomainName, DomainName)
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_op_Equality_Makaretu_Dns_DomainName_Makaretu_Dns_DomainName_
+  commentId: M:Makaretu.Dns.DomainName.op_Equality(Makaretu.Dns.DomainName,Makaretu.Dns.DomainName)
+  fullName: Makaretu.Dns.DomainName.Equality(Makaretu.Dns.DomainName, Makaretu.Dns.DomainName)
+  nameWithType: DomainName.Equality(DomainName, DomainName)
+- uid: Makaretu.Dns.DomainName.op_Equality*
+  name: Equality
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_op_Equality_
+  commentId: Overload:Makaretu.Dns.DomainName.op_Equality
+  isSpec: "True"
+  fullName: Makaretu.Dns.DomainName.Equality
+  nameWithType: DomainName.Equality
+- uid: Makaretu.Dns.DomainName.op_Implicit(System.String)~Makaretu.Dns.DomainName
+  name: Implicit(String to DomainName)
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_op_Implicit_System_String__Makaretu_Dns_DomainName
+  commentId: M:Makaretu.Dns.DomainName.op_Implicit(System.String)~Makaretu.Dns.DomainName
+  name.vb: Widening(String to DomainName)
+  fullName: Makaretu.Dns.DomainName.Implicit(System.String to Makaretu.Dns.DomainName)
+  fullName.vb: Makaretu.Dns.DomainName.Widening(System.String to Makaretu.Dns.DomainName)
+  nameWithType: DomainName.Implicit(String to DomainName)
+  nameWithType.vb: DomainName.Widening(String to DomainName)
+- uid: Makaretu.Dns.DomainName.op_Implicit*
+  name: Implicit
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_op_Implicit_
+  commentId: Overload:Makaretu.Dns.DomainName.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Makaretu.Dns.DomainName.Implicit
+  fullName.vb: Makaretu.Dns.DomainName.Widening
+  nameWithType: DomainName.Implicit
+  nameWithType.vb: DomainName.Widening
+- uid: Makaretu.Dns.DomainName.op_Inequality(Makaretu.Dns.DomainName,Makaretu.Dns.DomainName)
+  name: Inequality(DomainName, DomainName)
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_op_Inequality_Makaretu_Dns_DomainName_Makaretu_Dns_DomainName_
+  commentId: M:Makaretu.Dns.DomainName.op_Inequality(Makaretu.Dns.DomainName,Makaretu.Dns.DomainName)
+  fullName: Makaretu.Dns.DomainName.Inequality(Makaretu.Dns.DomainName, Makaretu.Dns.DomainName)
+  nameWithType: DomainName.Inequality(DomainName, DomainName)
+- uid: Makaretu.Dns.DomainName.op_Inequality*
+  name: Inequality
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_op_Inequality_
+  commentId: Overload:Makaretu.Dns.DomainName.op_Inequality
+  isSpec: "True"
+  fullName: Makaretu.Dns.DomainName.Inequality
+  nameWithType: DomainName.Inequality
+- uid: Makaretu.Dns.DomainName.Parent
+  name: Parent()
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Parent
+  commentId: M:Makaretu.Dns.DomainName.Parent
+  fullName: Makaretu.Dns.DomainName.Parent()
+  nameWithType: DomainName.Parent()
+- uid: Makaretu.Dns.DomainName.Parent*
+  name: Parent
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Parent_
+  commentId: Overload:Makaretu.Dns.DomainName.Parent
+  isSpec: "True"
+  fullName: Makaretu.Dns.DomainName.Parent
+  nameWithType: DomainName.Parent
+- uid: Makaretu.Dns.DomainName.Root
+  name: Root
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Root
+  commentId: F:Makaretu.Dns.DomainName.Root
+  fullName: Makaretu.Dns.DomainName.Root
+  nameWithType: DomainName.Root
+- uid: Makaretu.Dns.DomainName.ToCanonical
+  name: ToCanonical()
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_ToCanonical
+  commentId: M:Makaretu.Dns.DomainName.ToCanonical
+  fullName: Makaretu.Dns.DomainName.ToCanonical()
+  nameWithType: DomainName.ToCanonical()
+- uid: Makaretu.Dns.DomainName.ToCanonical*
+  name: ToCanonical
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_ToCanonical_
+  commentId: Overload:Makaretu.Dns.DomainName.ToCanonical
+  isSpec: "True"
+  fullName: Makaretu.Dns.DomainName.ToCanonical
+  nameWithType: DomainName.ToCanonical
+- uid: Makaretu.Dns.DomainName.ToString
+  name: ToString()
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_ToString
+  commentId: M:Makaretu.Dns.DomainName.ToString
+  fullName: Makaretu.Dns.DomainName.ToString()
+  nameWithType: DomainName.ToString()
+- uid: Makaretu.Dns.DomainName.ToString*
+  name: ToString
+  href: api/Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_ToString_
+  commentId: Overload:Makaretu.Dns.DomainName.ToString
+  isSpec: "True"
+  fullName: Makaretu.Dns.DomainName.ToString
+  nameWithType: DomainName.ToString
 - uid: Makaretu.Dns.DSRecord
   name: DSRecord
   href: api/Makaretu.Dns.DSRecord.html
@@ -3409,12 +3614,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.PresentationWriter.WriteDnsType
   nameWithType: PresentationWriter.WriteDnsType
-- uid: Makaretu.Dns.PresentationWriter.WriteDomainName(System.String,System.Boolean)
-  name: WriteDomainName(String, Boolean)
-  href: api/Makaretu.Dns.PresentationWriter.html#Makaretu_Dns_PresentationWriter_WriteDomainName_System_String_System_Boolean_
-  commentId: M:Makaretu.Dns.PresentationWriter.WriteDomainName(System.String,System.Boolean)
-  fullName: Makaretu.Dns.PresentationWriter.WriteDomainName(System.String, System.Boolean)
-  nameWithType: PresentationWriter.WriteDomainName(String, Boolean)
+- uid: Makaretu.Dns.PresentationWriter.WriteDomainName(Makaretu.Dns.DomainName,System.Boolean)
+  name: WriteDomainName(DomainName, Boolean)
+  href: api/Makaretu.Dns.PresentationWriter.html#Makaretu_Dns_PresentationWriter_WriteDomainName_Makaretu_Dns_DomainName_System_Boolean_
+  commentId: M:Makaretu.Dns.PresentationWriter.WriteDomainName(Makaretu.Dns.DomainName,System.Boolean)
+  fullName: Makaretu.Dns.PresentationWriter.WriteDomainName(Makaretu.Dns.DomainName, System.Boolean)
+  nameWithType: PresentationWriter.WriteDomainName(DomainName, Boolean)
 - uid: Makaretu.Dns.PresentationWriter.WriteDomainName*
   name: WriteDomainName
   href: api/Makaretu.Dns.PresentationWriter.html#Makaretu_Dns_PresentationWriter_WriteDomainName_
@@ -3753,19 +3958,6 @@ references:
   commentId: T:Makaretu.Dns.Resolving.Catalog
   fullName: Makaretu.Dns.Resolving.Catalog
   nameWithType: Catalog
-- uid: Makaretu.Dns.Resolving.Catalog.#ctor
-  name: Catalog()
-  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog__ctor
-  commentId: M:Makaretu.Dns.Resolving.Catalog.#ctor
-  fullName: Makaretu.Dns.Resolving.Catalog.Catalog()
-  nameWithType: Catalog.Catalog()
-- uid: Makaretu.Dns.Resolving.Catalog.#ctor*
-  name: Catalog
-  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog__ctor_
-  commentId: Overload:Makaretu.Dns.Resolving.Catalog.#ctor
-  isSpec: "True"
-  fullName: Makaretu.Dns.Resolving.Catalog.Catalog
-  nameWithType: Catalog.Catalog
 - uid: Makaretu.Dns.Resolving.Catalog.Add(Makaretu.Dns.ResourceRecord,System.Boolean)
   name: Add(ResourceRecord, Boolean)
   href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_Add_Makaretu_Dns_ResourceRecord_System_Boolean_
@@ -3844,12 +4036,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.Resolving.Catalog.NodesInCanonicalOrder
   nameWithType: Catalog.NodesInCanonicalOrder
-- uid: Makaretu.Dns.Resolving.Catalog.RemoveZone(System.String)
-  name: RemoveZone(String)
-  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_RemoveZone_System_String_
-  commentId: M:Makaretu.Dns.Resolving.Catalog.RemoveZone(System.String)
-  fullName: Makaretu.Dns.Resolving.Catalog.RemoveZone(System.String)
-  nameWithType: Catalog.RemoveZone(String)
+- uid: Makaretu.Dns.Resolving.Catalog.RemoveZone(Makaretu.Dns.DomainName)
+  name: RemoveZone(DomainName)
+  href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_RemoveZone_Makaretu_Dns_DomainName_
+  commentId: M:Makaretu.Dns.Resolving.Catalog.RemoveZone(Makaretu.Dns.DomainName)
+  fullName: Makaretu.Dns.Resolving.Catalog.RemoveZone(Makaretu.Dns.DomainName)
+  nameWithType: Catalog.RemoveZone(DomainName)
 - uid: Makaretu.Dns.Resolving.Catalog.RemoveZone*
   name: RemoveZone
   href: api/Makaretu.Dns.Resolving.Catalog.html#Makaretu_Dns_Resolving_Catalog_RemoveZone_
@@ -6002,24 +6194,24 @@ references:
   commentId: T:Makaretu.Dns.UpdatePrerequisiteList
   fullName: Makaretu.Dns.UpdatePrerequisiteList
   nameWithType: UpdatePrerequisiteList
+- uid: Makaretu.Dns.UpdatePrerequisiteList.MustExist(Makaretu.Dns.DomainName)
+  name: MustExist(DomainName)
+  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustExist_Makaretu_Dns_DomainName_
+  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustExist(Makaretu.Dns.DomainName)
+  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustExist(Makaretu.Dns.DomainName)
+  nameWithType: UpdatePrerequisiteList.MustExist(DomainName)
+- uid: Makaretu.Dns.UpdatePrerequisiteList.MustExist(Makaretu.Dns.DomainName,Makaretu.Dns.DnsType)
+  name: MustExist(DomainName, DnsType)
+  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustExist_Makaretu_Dns_DomainName_Makaretu_Dns_DnsType_
+  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustExist(Makaretu.Dns.DomainName,Makaretu.Dns.DnsType)
+  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustExist(Makaretu.Dns.DomainName, Makaretu.Dns.DnsType)
+  nameWithType: UpdatePrerequisiteList.MustExist(DomainName, DnsType)
 - uid: Makaretu.Dns.UpdatePrerequisiteList.MustExist(Makaretu.Dns.ResourceRecord)
   name: MustExist(ResourceRecord)
   href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustExist_Makaretu_Dns_ResourceRecord_
   commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustExist(Makaretu.Dns.ResourceRecord)
   fullName: Makaretu.Dns.UpdatePrerequisiteList.MustExist(Makaretu.Dns.ResourceRecord)
   nameWithType: UpdatePrerequisiteList.MustExist(ResourceRecord)
-- uid: Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String)
-  name: MustExist(String)
-  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustExist_System_String_
-  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String)
-  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String)
-  nameWithType: UpdatePrerequisiteList.MustExist(String)
-- uid: Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String,Makaretu.Dns.DnsType)
-  name: MustExist(String, DnsType)
-  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustExist_System_String_Makaretu_Dns_DnsType_
-  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String,Makaretu.Dns.DnsType)
-  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustExist(System.String, Makaretu.Dns.DnsType)
-  nameWithType: UpdatePrerequisiteList.MustExist(String, DnsType)
 - uid: Makaretu.Dns.UpdatePrerequisiteList.MustExist*
   name: MustExist
   href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustExist_
@@ -6027,27 +6219,27 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.UpdatePrerequisiteList.MustExist
   nameWithType: UpdatePrerequisiteList.MustExist
-- uid: Makaretu.Dns.UpdatePrerequisiteList.MustExist``1(System.String)
-  name: MustExist<T>(String)
-  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustExist__1_System_String_
-  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustExist``1(System.String)
-  name.vb: MustExist(Of T)(String)
-  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustExist<T>(System.String)
-  fullName.vb: Makaretu.Dns.UpdatePrerequisiteList.MustExist(Of T)(System.String)
-  nameWithType: UpdatePrerequisiteList.MustExist<T>(String)
-  nameWithType.vb: UpdatePrerequisiteList.MustExist(Of T)(String)
-- uid: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String)
-  name: MustNotExist(String)
-  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustNotExist_System_String_
-  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String)
-  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String)
-  nameWithType: UpdatePrerequisiteList.MustNotExist(String)
-- uid: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String,Makaretu.Dns.DnsType)
-  name: MustNotExist(String, DnsType)
-  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustNotExist_System_String_Makaretu_Dns_DnsType_
-  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String,Makaretu.Dns.DnsType)
-  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(System.String, Makaretu.Dns.DnsType)
-  nameWithType: UpdatePrerequisiteList.MustNotExist(String, DnsType)
+- uid: Makaretu.Dns.UpdatePrerequisiteList.MustExist``1(Makaretu.Dns.DomainName)
+  name: MustExist<T>(DomainName)
+  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustExist__1_Makaretu_Dns_DomainName_
+  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustExist``1(Makaretu.Dns.DomainName)
+  name.vb: MustExist(Of T)(DomainName)
+  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustExist<T>(Makaretu.Dns.DomainName)
+  fullName.vb: Makaretu.Dns.UpdatePrerequisiteList.MustExist(Of T)(Makaretu.Dns.DomainName)
+  nameWithType: UpdatePrerequisiteList.MustExist<T>(DomainName)
+  nameWithType.vb: UpdatePrerequisiteList.MustExist(Of T)(DomainName)
+- uid: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(Makaretu.Dns.DomainName)
+  name: MustNotExist(DomainName)
+  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustNotExist_Makaretu_Dns_DomainName_
+  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(Makaretu.Dns.DomainName)
+  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(Makaretu.Dns.DomainName)
+  nameWithType: UpdatePrerequisiteList.MustNotExist(DomainName)
+- uid: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(Makaretu.Dns.DomainName,Makaretu.Dns.DnsType)
+  name: MustNotExist(DomainName, DnsType)
+  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustNotExist_Makaretu_Dns_DomainName_Makaretu_Dns_DnsType_
+  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(Makaretu.Dns.DomainName,Makaretu.Dns.DnsType)
+  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(Makaretu.Dns.DomainName, Makaretu.Dns.DnsType)
+  nameWithType: UpdatePrerequisiteList.MustNotExist(DomainName, DnsType)
 - uid: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist*
   name: MustNotExist
   href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustNotExist_
@@ -6055,15 +6247,15 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist
   nameWithType: UpdatePrerequisiteList.MustNotExist
-- uid: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist``1(System.String)
-  name: MustNotExist<T>(String)
-  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustNotExist__1_System_String_
-  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustNotExist``1(System.String)
-  name.vb: MustNotExist(Of T)(String)
-  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist<T>(System.String)
-  fullName.vb: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(Of T)(System.String)
-  nameWithType: UpdatePrerequisiteList.MustNotExist<T>(String)
-  nameWithType.vb: UpdatePrerequisiteList.MustNotExist(Of T)(String)
+- uid: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist``1(Makaretu.Dns.DomainName)
+  name: MustNotExist<T>(DomainName)
+  href: api/Makaretu.Dns.UpdatePrerequisiteList.html#Makaretu_Dns_UpdatePrerequisiteList_MustNotExist__1_Makaretu_Dns_DomainName_
+  commentId: M:Makaretu.Dns.UpdatePrerequisiteList.MustNotExist``1(Makaretu.Dns.DomainName)
+  name.vb: MustNotExist(Of T)(DomainName)
+  fullName: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist<T>(Makaretu.Dns.DomainName)
+  fullName.vb: Makaretu.Dns.UpdatePrerequisiteList.MustNotExist(Of T)(Makaretu.Dns.DomainName)
+  nameWithType: UpdatePrerequisiteList.MustNotExist<T>(DomainName)
+  nameWithType.vb: UpdatePrerequisiteList.MustNotExist(Of T)(DomainName)
 - uid: Makaretu.Dns.UpdateResourceList
   name: UpdateResourceList
   href: api/Makaretu.Dns.UpdateResourceList.html
@@ -6083,24 +6275,24 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.UpdateResourceList.AddResource
   nameWithType: UpdateResourceList.AddResource
+- uid: Makaretu.Dns.UpdateResourceList.DeleteResource(Makaretu.Dns.DomainName)
+  name: DeleteResource(DomainName)
+  href: api/Makaretu.Dns.UpdateResourceList.html#Makaretu_Dns_UpdateResourceList_DeleteResource_Makaretu_Dns_DomainName_
+  commentId: M:Makaretu.Dns.UpdateResourceList.DeleteResource(Makaretu.Dns.DomainName)
+  fullName: Makaretu.Dns.UpdateResourceList.DeleteResource(Makaretu.Dns.DomainName)
+  nameWithType: UpdateResourceList.DeleteResource(DomainName)
+- uid: Makaretu.Dns.UpdateResourceList.DeleteResource(Makaretu.Dns.DomainName,Makaretu.Dns.DnsType)
+  name: DeleteResource(DomainName, DnsType)
+  href: api/Makaretu.Dns.UpdateResourceList.html#Makaretu_Dns_UpdateResourceList_DeleteResource_Makaretu_Dns_DomainName_Makaretu_Dns_DnsType_
+  commentId: M:Makaretu.Dns.UpdateResourceList.DeleteResource(Makaretu.Dns.DomainName,Makaretu.Dns.DnsType)
+  fullName: Makaretu.Dns.UpdateResourceList.DeleteResource(Makaretu.Dns.DomainName, Makaretu.Dns.DnsType)
+  nameWithType: UpdateResourceList.DeleteResource(DomainName, DnsType)
 - uid: Makaretu.Dns.UpdateResourceList.DeleteResource(Makaretu.Dns.ResourceRecord)
   name: DeleteResource(ResourceRecord)
   href: api/Makaretu.Dns.UpdateResourceList.html#Makaretu_Dns_UpdateResourceList_DeleteResource_Makaretu_Dns_ResourceRecord_
   commentId: M:Makaretu.Dns.UpdateResourceList.DeleteResource(Makaretu.Dns.ResourceRecord)
   fullName: Makaretu.Dns.UpdateResourceList.DeleteResource(Makaretu.Dns.ResourceRecord)
   nameWithType: UpdateResourceList.DeleteResource(ResourceRecord)
-- uid: Makaretu.Dns.UpdateResourceList.DeleteResource(System.String)
-  name: DeleteResource(String)
-  href: api/Makaretu.Dns.UpdateResourceList.html#Makaretu_Dns_UpdateResourceList_DeleteResource_System_String_
-  commentId: M:Makaretu.Dns.UpdateResourceList.DeleteResource(System.String)
-  fullName: Makaretu.Dns.UpdateResourceList.DeleteResource(System.String)
-  nameWithType: UpdateResourceList.DeleteResource(String)
-- uid: Makaretu.Dns.UpdateResourceList.DeleteResource(System.String,Makaretu.Dns.DnsType)
-  name: DeleteResource(String, DnsType)
-  href: api/Makaretu.Dns.UpdateResourceList.html#Makaretu_Dns_UpdateResourceList_DeleteResource_System_String_Makaretu_Dns_DnsType_
-  commentId: M:Makaretu.Dns.UpdateResourceList.DeleteResource(System.String,Makaretu.Dns.DnsType)
-  fullName: Makaretu.Dns.UpdateResourceList.DeleteResource(System.String, Makaretu.Dns.DnsType)
-  nameWithType: UpdateResourceList.DeleteResource(String, DnsType)
 - uid: Makaretu.Dns.UpdateResourceList.DeleteResource*
   name: DeleteResource
   href: api/Makaretu.Dns.UpdateResourceList.html#Makaretu_Dns_UpdateResourceList_DeleteResource_
@@ -6108,15 +6300,15 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.UpdateResourceList.DeleteResource
   nameWithType: UpdateResourceList.DeleteResource
-- uid: Makaretu.Dns.UpdateResourceList.DeleteResource``1(System.String)
-  name: DeleteResource<T>(String)
-  href: api/Makaretu.Dns.UpdateResourceList.html#Makaretu_Dns_UpdateResourceList_DeleteResource__1_System_String_
-  commentId: M:Makaretu.Dns.UpdateResourceList.DeleteResource``1(System.String)
-  name.vb: DeleteResource(Of T)(String)
-  fullName: Makaretu.Dns.UpdateResourceList.DeleteResource<T>(System.String)
-  fullName.vb: Makaretu.Dns.UpdateResourceList.DeleteResource(Of T)(System.String)
-  nameWithType: UpdateResourceList.DeleteResource<T>(String)
-  nameWithType.vb: UpdateResourceList.DeleteResource(Of T)(String)
+- uid: Makaretu.Dns.UpdateResourceList.DeleteResource``1(Makaretu.Dns.DomainName)
+  name: DeleteResource<T>(DomainName)
+  href: api/Makaretu.Dns.UpdateResourceList.html#Makaretu_Dns_UpdateResourceList_DeleteResource__1_Makaretu_Dns_DomainName_
+  commentId: M:Makaretu.Dns.UpdateResourceList.DeleteResource``1(Makaretu.Dns.DomainName)
+  name.vb: DeleteResource(Of T)(DomainName)
+  fullName: Makaretu.Dns.UpdateResourceList.DeleteResource<T>(Makaretu.Dns.DomainName)
+  fullName.vb: Makaretu.Dns.UpdateResourceList.DeleteResource(Of T)(Makaretu.Dns.DomainName)
+  nameWithType: UpdateResourceList.DeleteResource<T>(DomainName)
+  nameWithType.vb: UpdateResourceList.DeleteResource(Of T)(DomainName)
 - uid: Makaretu.Dns.WireReader
   name: WireReader
   href: api/Makaretu.Dns.WireReader.html
@@ -6488,6 +6680,12 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.WireWriter.WriteDateTime48
   nameWithType: WireWriter.WriteDateTime48
+- uid: Makaretu.Dns.WireWriter.WriteDomainName(Makaretu.Dns.DomainName,System.Boolean)
+  name: WriteDomainName(DomainName, Boolean)
+  href: api/Makaretu.Dns.WireWriter.html#Makaretu_Dns_WireWriter_WriteDomainName_Makaretu_Dns_DomainName_System_Boolean_
+  commentId: M:Makaretu.Dns.WireWriter.WriteDomainName(Makaretu.Dns.DomainName,System.Boolean)
+  fullName: Makaretu.Dns.WireWriter.WriteDomainName(Makaretu.Dns.DomainName, System.Boolean)
+  nameWithType: WireWriter.WriteDomainName(DomainName, Boolean)
 - uid: Makaretu.Dns.WireWriter.WriteDomainName(System.String,System.Boolean)
   name: WriteDomainName(String, Boolean)
   href: api/Makaretu.Dns.WireWriter.html#Makaretu_Dns_WireWriter_WriteDomainName_System_String_System_Boolean_

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ResourceRecord
    | DNS Model ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -139,9 +139,6 @@
     </div>
     <div>
       <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Write_System_IO_Stream_">DnsObject.Write(Stream)</a>
-    </div>
-    <div>
-      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_NamesEquals_System_String_System_String_">DnsObject.NamesEquals(String, String)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
@@ -277,7 +274,7 @@ replaced by the corresponding lowercase US-ASCII letters.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Class.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Class%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L72">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L73">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_Class_" data-uid="Makaretu.Dns.ResourceRecord.Class*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_Class" data-uid="Makaretu.Dns.ResourceRecord.Class">Class</h4>
@@ -319,7 +316,7 @@ resource record pertains.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DomainName Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,7 +328,7 @@ resource record pertains.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -341,7 +338,7 @@ resource record pertains.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_TTL.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.TTL%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L88">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L89">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_TTL_" data-uid="Makaretu.Dns.ResourceRecord.TTL*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_TTL" data-uid="Makaretu.Dns.ResourceRecord.TTL">TTL</h4>
@@ -384,7 +381,7 @@ cached.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Type.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L64">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L65">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_Type_" data-uid="Makaretu.Dns.ResourceRecord.Type*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_Type" data-uid="Makaretu.Dns.ResourceRecord.Type">Type</h4>
@@ -417,7 +414,7 @@ cached.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L230">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L231">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_Equals_" data-uid="Makaretu.Dns.ResourceRecord.Equals*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_Equals_System_Object_" data-uid="Makaretu.Dns.ResourceRecord.Equals(System.Object)">Equals(Object)</h4>
@@ -475,7 +472,7 @@ excluded from the comparison.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_GetData.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.GetData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L134">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L135">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_GetData_" data-uid="Makaretu.Dns.ResourceRecord.GetData*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_GetData" data-uid="Makaretu.Dns.ResourceRecord.GetData">GetData()</h4>
@@ -510,7 +507,7 @@ excluded from the comparison.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_GetDataLength.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.GetDataLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L115">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L116">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_GetDataLength_" data-uid="Makaretu.Dns.ResourceRecord.GetDataLength*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_GetDataLength" data-uid="Makaretu.Dns.ResourceRecord.GetDataLength">GetDataLength()</h4>
@@ -545,7 +542,7 @@ excluded from the comparison.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_GetHashCode.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L279">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L284">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_GetHashCode_" data-uid="Makaretu.Dns.ResourceRecord.GetHashCode*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_GetHashCode" data-uid="Makaretu.Dns.ResourceRecord.GetHashCode">GetHashCode()</h4>
@@ -577,7 +574,7 @@ excluded from the comparison.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_IsExpired_System_Nullable_System_DateTime__.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.IsExpired(System.Nullable%7BSystem.DateTime%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L100">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L101">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_IsExpired_" data-uid="Makaretu.Dns.ResourceRecord.IsExpired*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_IsExpired_System_Nullable_System_DateTime__" data-uid="Makaretu.Dns.ResourceRecord.IsExpired(System.Nullable{System.DateTime})">IsExpired(Nullable&lt;DateTime&gt;)</h4>
@@ -628,7 +625,7 @@ excluded from the comparison.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_PresentationReader_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Read(Makaretu.Dns.PresentationReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L365">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L370">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_Read_" data-uid="Makaretu.Dns.ResourceRecord.Read*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_PresentationReader_" data-uid="Makaretu.Dns.ResourceRecord.Read(Makaretu.Dns.PresentationReader)">Read(PresentationReader)</h4>
@@ -682,7 +679,7 @@ is type specific</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_WireReader_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Read(Makaretu.Dns.WireReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L145">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L146">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_Read_" data-uid="Makaretu.Dns.ResourceRecord.Read*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_Read_Makaretu_Dns_WireReader_" data-uid="Makaretu.Dns.ResourceRecord.Read(Makaretu.Dns.WireReader)">Read(WireReader)</h4>
@@ -739,7 +736,7 @@ is zero.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Read_System_String_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Read(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L359">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L364">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_Read_" data-uid="Makaretu.Dns.ResourceRecord.Read*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_Read_System_String_" data-uid="Makaretu.Dns.ResourceRecord.Read(System.String)">Read(String)</h4>
@@ -789,7 +786,7 @@ specified string.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_PresentationReader_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.ReadData(Makaretu.Dns.PresentationReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L380">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L385">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_ReadData_" data-uid="Makaretu.Dns.ResourceRecord.ReadData*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_PresentationReader_" data-uid="Makaretu.Dns.ResourceRecord.ReadData(Makaretu.Dns.PresentationReader)">ReadData(PresentationReader)</h4>
@@ -827,7 +824,7 @@ the resource record <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makar
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_WireReader_System_Int32_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.ReadData(Makaretu.Dns.WireReader%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L185">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L186">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_ReadData_" data-uid="Makaretu.Dns.ResourceRecord.ReadData*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_ReadData_Makaretu_Dns_WireReader_System_Int32_" data-uid="Makaretu.Dns.ResourceRecord.ReadData(Makaretu.Dns.WireReader,System.Int32)">ReadData(WireReader, Int32)</h4>
@@ -870,7 +867,7 @@ the resource record <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makar
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_ToString.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L295">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L300">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_ToString_" data-uid="Makaretu.Dns.ResourceRecord.ToString*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_ToString" data-uid="Makaretu.Dns.ResourceRecord.ToString">ToString()</h4>
@@ -904,7 +901,7 @@ the resource record <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makar
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Write_Makaretu_Dns_PresentationWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Write(Makaretu.Dns.PresentationWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L313">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L318">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_Write_" data-uid="Makaretu.Dns.ResourceRecord.Write*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_Write_Makaretu_Dns_PresentationWriter_" data-uid="Makaretu.Dns.ResourceRecord.Write(Makaretu.Dns.PresentationWriter)">Write(PresentationWriter)</h4>
@@ -938,7 +935,7 @@ the resource record <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makar
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_Write_Makaretu_Dns_WireWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.Write(Makaretu.Dns.WireWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L190">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L191">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_Write_" data-uid="Makaretu.Dns.ResourceRecord.Write*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_Write_Makaretu_Dns_WireWriter_" data-uid="Makaretu.Dns.ResourceRecord.Write(Makaretu.Dns.WireWriter)">Write(WireWriter)</h4>
@@ -974,7 +971,7 @@ the resource record <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makar
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_WriteData_Makaretu_Dns_PresentationWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.WriteData(Makaretu.Dns.PresentationWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L342">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L347">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_WriteData_" data-uid="Makaretu.Dns.ResourceRecord.WriteData*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_WriteData_Makaretu_Dns_PresentationWriter_" data-uid="Makaretu.Dns.ResourceRecord.WriteData(Makaretu.Dns.PresentationWriter)">WriteData(PresentationWriter)</h4>
@@ -1017,7 +1014,7 @@ the <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_Resource
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_WriteData_Makaretu_Dns_WireWriter_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.WriteData(Makaretu.Dns.WireWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L211">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L212">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_WriteData_" data-uid="Makaretu.Dns.ResourceRecord.WriteData*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_WriteData_Makaretu_Dns_WireWriter_" data-uid="Makaretu.Dns.ResourceRecord.WriteData(Makaretu.Dns.WireWriter)">WriteData(WireWriter)</h4>
@@ -1056,7 +1053,7 @@ the <a class="xref" href="Makaretu.Dns.ResourceRecord.html#Makaretu_Dns_Resource
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_op_Equality_Makaretu_Dns_ResourceRecord_Makaretu_Dns_ResourceRecord_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.op_Equality(Makaretu.Dns.ResourceRecord%2CMakaretu.Dns.ResourceRecord)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L251">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L252">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_op_Equality_" data-uid="Makaretu.Dns.ResourceRecord.op_Equality*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_op_Equality_Makaretu_Dns_ResourceRecord_Makaretu_Dns_ResourceRecord_" data-uid="Makaretu.Dns.ResourceRecord.op_Equality(Makaretu.Dns.ResourceRecord,Makaretu.Dns.ResourceRecord)">Equality(ResourceRecord, ResourceRecord)</h4>
@@ -1115,7 +1112,7 @@ excluded from the comparison.</p>
     <a href="https://github.com/richardschneider/net-dns/new/master/apiSpec/new?filename=Makaretu_Dns_ResourceRecord_op_Inequality_Makaretu_Dns_ResourceRecord_Makaretu_Dns_ResourceRecord_.md&amp;value=---%0Auid%3A%20Makaretu.Dns.ResourceRecord.op_Inequality(Makaretu.Dns.ResourceRecord%2CMakaretu.Dns.ResourceRecord)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L269">View Source</a>
+    <a href="https://github.com/richardschneider/net-dns/blob/master/src/ResourceRecord.cs/#L272">View Source</a>
   </span>
   <a id="Makaretu_Dns_ResourceRecord_op_Inequality_" data-uid="Makaretu.Dns.ResourceRecord.op_Inequality*"></a>
   <h4 id="Makaretu_Dns_ResourceRecord_op_Inequality_Makaretu_Dns_ResourceRecord_Makaretu_Dns_ResourceRecord_" data-uid="Makaretu.Dns.ResourceRecord.op_Inequality(Makaretu.Dns.ResourceRecord,Makaretu.Dns.ResourceRecord)">Inequality(ResourceRecord, ResourceRecord)</h4>

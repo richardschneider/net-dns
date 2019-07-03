@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class NSECRecord
    | DNS Model ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -174,9 +174,6 @@ types present at the NSEC RR&apos;s owner name [RFC3845].</p>
       <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_Write_System_IO_Stream_">DnsObject.Write(Stream)</a>
     </div>
     <div>
-      <a class="xref" href="Makaretu.Dns.DnsObject.html#Makaretu_Dns_DnsObject_NamesEquals_System_String_System_String_">DnsObject.NamesEquals(String, String)</a>
-    </div>
-    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
     </div>
     <div>
@@ -230,7 +227,7 @@ delegation point NS RRset</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string NextOwnerName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DomainName NextOwnerName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,13 +239,13 @@ delegation point NS RRset</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="Makaretu.Dns.DomainName.html">DomainName</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 id="Makaretu_Dns_NSECRecord_NextOwnerName_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Defaults to the empty string.</p>
+  <div class="markdown level1 remarks"><p>Defaults to the <a class="xref" href="Makaretu.Dns.DomainName.html#Makaretu_Dns_DomainName_Root">Root</a>.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
