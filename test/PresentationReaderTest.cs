@@ -237,6 +237,20 @@ emanon\126.org A 127.0.0.1
         }
 
         [TestMethod]
+        public void ReadResourceWithLeadingEscapedDomainName()
+        {
+            var text = @"\126emanon.org A 127.0.0.1";
+            var reader = new PresentationReader(new StringReader(text));
+            var a = reader.ReadResourceRecord();
+            Assert.AreEqual("~emanon.org", a.Name);
+            Assert.AreEqual(DnsClass.IN, a.Class);
+            Assert.AreEqual(DnsType.A, a.Type);
+            Assert.AreEqual(ResourceRecord.DefaultTTL, a.TTL);
+            Assert.IsInstanceOfType(a, typeof(ARecord));
+            Assert.AreEqual(2, a.Name.Labels.Count);
+        }
+
+        [TestMethod]
         public void ReadZoneFile()
         {
             var text = @"
