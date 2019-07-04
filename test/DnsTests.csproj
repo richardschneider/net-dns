@@ -1,17 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net472;net45;netcoreapp2;netcoreapp1.1</TargetFrameworks>
+    <TargetFrameworks>net472;net45;netcoreapp2.1;netcoreapp1.1</TargetFrameworks>
 
     <IsPackable>false</IsPackable>
     <DebugType>full</DebugType>
     <RootNamespace>Makaretu.Dns</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <!-- https://github.com/tonerdo/coverlet -->
+    <!-- Do not collect by default -->
+    <CollectCoverage>false</CollectCoverage>
+    <CoverletOutputFormat>opencover</CoverletOutputFormat>
+    <!--<Exclude>[xunit.*]*</Exclude>-->
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
-    <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.1" PrivateAssets="all" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" PrivateAssets="all" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" PrivateAssets="all" />
+    <PackageReference Include="coverlet.msbuild" Version="2.6.2" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
