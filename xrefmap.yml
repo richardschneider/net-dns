@@ -5936,6 +5936,19 @@ references:
   isSpec: "True"
   fullName: Makaretu.Dns.UnknownEdnsOption.ReadData
   nameWithType: UnknownEdnsOption.ReadData
+- uid: Makaretu.Dns.UnknownEdnsOption.ToString
+  name: ToString()
+  href: api/Makaretu.Dns.UnknownEdnsOption.html#Makaretu_Dns_UnknownEdnsOption_ToString
+  commentId: M:Makaretu.Dns.UnknownEdnsOption.ToString
+  fullName: Makaretu.Dns.UnknownEdnsOption.ToString()
+  nameWithType: UnknownEdnsOption.ToString()
+- uid: Makaretu.Dns.UnknownEdnsOption.ToString*
+  name: ToString
+  href: api/Makaretu.Dns.UnknownEdnsOption.html#Makaretu_Dns_UnknownEdnsOption_ToString_
+  commentId: Overload:Makaretu.Dns.UnknownEdnsOption.ToString
+  isSpec: "True"
+  fullName: Makaretu.Dns.UnknownEdnsOption.ToString
+  nameWithType: UnknownEdnsOption.ToString
 - uid: Makaretu.Dns.UnknownEdnsOption.WriteData(Makaretu.Dns.WireWriter)
   name: WriteData(WireWriter)
   href: api/Makaretu.Dns.UnknownEdnsOption.html#Makaretu_Dns_UnknownEdnsOption_WriteData_Makaretu_Dns_WireWriter_
