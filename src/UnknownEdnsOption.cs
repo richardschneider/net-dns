@@ -32,5 +32,11 @@ namespace Makaretu.Dns
             writer.WriteBytes(Data);
         }
 
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $";   Type = {Type}; Data = {Convert.ToBase64String(Data)}";
+        }
+
     }
 }

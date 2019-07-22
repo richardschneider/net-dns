@@ -285,7 +285,7 @@ namespace Makaretu.Dns
                 QR = true,
                 Id = 1234
             };
-            m.Questions.Add(new Question { Name = "emanon.org", Type=DnsType.A });
+            m.Questions.Add(new Question { Name = "emanon.org", Type = DnsType.A });
             m.Answers.Add(new ARecord { Name = "emanon.org", Address = IPAddress.Parse("127.0.0.1") });
             m.AuthorityRecords.Add(new SOARecord
             {
@@ -311,5 +311,21 @@ namespace Makaretu.Dns
             var text = m.ToString();
             Console.WriteLine(text);
         }
+
+        [TestMethod]
+        public void AppleMessage()
+        {
+            // A MDNS query from an Apple Host.  It contains a UTF8 domain name
+            // and an EDNS OPT-4 option.
+            var sample = "AAAAAAAGAAAAAAABCF9ob21la2l0BF90Y3AFbG9jYWwAAAyAAQ9fY29tcGFuaW9uLWxpbmvAFQAMgAEIX2FpcnBsYXnAFQAMgAEFX3Jhb3DAFQAMgAEbQ2hyaXN0b3BoZXLigJlzIE1hY0Jvb2sgUHJvwCUAEIABDF9zbGVlcC1wcm94eQRfdWRwwBoADAABAAApBaAAABGUABIABAAOAJB6e4qbc5l4e4qbc5k=";
+            var buffer1 = Convert.FromBase64String(sample);
+            var m = new Message();
+            m.Read(buffer1);
+
+            Assert.AreEqual("Christopher’s MacBook Pro", m.Questions[4].Name.Labels[0]);
+            Assert.AreEqual("_homekit._tcp.local CLASS32769 PTR", m.Questions[0].ToString());
+        }
     }
+
 }
+
