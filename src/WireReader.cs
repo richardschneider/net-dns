@@ -209,11 +209,7 @@ namespace Makaretu.Dns
 
             // Read current label and remaining labels.
             var buffer = ReadBytes(length);
-            if (buffer.Any(c => c > 0x7F))
-            {
-                throw new InvalidDataException("Only ASCII characters are allowed.");
-            }
-            labels.Add(Encoding.ASCII.GetString(buffer, 0, length));
+            labels.Add(Encoding.UTF8.GetString(buffer, 0, length));
             labels.AddRange(ReadLabels());
 
             // Add to compressed names.

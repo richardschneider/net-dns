@@ -286,7 +286,8 @@ namespace Makaretu.Dns
                 }
 
                 // Add the label
-                WriteString(label);
+                var bytes = Encoding.UTF8.GetBytes(label);
+                WriteByteLengthPrefixedBytes(bytes);
             }
 
             stream.WriteByte(0); // terminating byte
