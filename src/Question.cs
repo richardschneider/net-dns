@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Makaretu.Dns
@@ -56,13 +57,14 @@ namespace Makaretu.Dns
         /// <inheritdoc />
         public override string ToString()
         {
-            var s = new StringBuilder();
-            s.Append(Name);
-            s.Append(' ');
-            s.Append(Class);
-            s.Append(' ');
-            s.Append(Type);
-            return s.ToString();
+            using (var s = new StringWriter())
+            {
+                var writer = new PresentationWriter(s);
+                writer.WriteDomainName(Name);
+                writer.WriteDnsClass(Class);
+                writer.WriteDnsType(Type, appendSpace: false);
+                return s.ToString();
+            }
         }
     }
 }

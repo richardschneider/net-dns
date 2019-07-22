@@ -285,7 +285,7 @@ namespace Makaretu.Dns
                 QR = true,
                 Id = 1234
             };
-            m.Questions.Add(new Question { Name = "emanon.org", Type=DnsType.A });
+            m.Questions.Add(new Question { Name = "emanon.org", Type = DnsType.A });
             m.Answers.Add(new ARecord { Name = "emanon.org", Address = IPAddress.Parse("127.0.0.1") });
             m.AuthorityRecords.Add(new SOARecord
             {
@@ -323,6 +323,9 @@ namespace Makaretu.Dns
             m.Read(buffer1);
 
             Assert.AreEqual("Christopher’s MacBook Pro", m.Questions[4].Name.Labels[0]);
+            Assert.AreEqual("_homekit._tcp.local CLASS32769 PTR", m.Questions[0].ToString());
         }
     }
+
 }
+
