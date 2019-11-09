@@ -10,7 +10,7 @@ namespace Makaretu.Dns
     ///   All communications inside of the domain protocol are carried in a single
     ///   format called a message.
     /// </summary>
-    public class Message : DnsObject
+    public partial class Message : DnsObject
     {
         /// <summary>
         ///   The least significant 4 bits of the opcode.
@@ -135,7 +135,7 @@ namespace Makaretu.Dns
         ///    authority for the domain name in question section.
         ///    
         ///    Note that the contents of the answer section may have
-        ///    multiple owner names because of aliases.The AA bit
+        ///    multiple owner names because of aliases. The AA bit
         ///    corresponds to the name which matches the query name, or
         ///    the first owner name in the answer section.
         /// </summary>
@@ -145,7 +145,7 @@ namespace Makaretu.Dns
         public bool AA { get; set; }
 
         /// <summary>
-        ///   TrunCation - specifies that this message was truncated
+        ///   Truncation - specifies that this message was truncated
         ///   due to length greater than that permitted on the
         ///   transmission channel.
         /// </summary>
@@ -168,7 +168,7 @@ namespace Makaretu.Dns
         public bool RD { get; set; }
 
         /// <summary>
-        ///    Recursion Available - this be is set or cleared in a
+        ///    Recursion Available - this bit is set or cleared in a
         ///    response, and denotes whether recursive query support is
         ///    available in the name server.
         /// </summary>
